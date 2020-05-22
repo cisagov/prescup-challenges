@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="MySchweizMobil - http://map.schweizmobil.ch/">
+  <metadata>
+    <name>frosty:9</name>
+    <bounds minlat="47.373187958899344" maxlat="47.3907255006348" minlon="7.4669411679390105" maxlon="7.542191527138277"></bounds>
+  </metadata>
+	<trk>
+		<name>9</name>
+		<desc>Length: 2.134 km (1.326 mi)</desc>
+		<trkseg>
+			<trkpt lat="64.0419164" lon="-21.9963026"></trkpt>
+			<trkpt lat="64.0464056" lon="-21.9963884"></trkpt>
+			<trkpt lat="64.0464056" lon="-21.9902945"></trkpt>
+			<trkpt lat="64.0461051" lon="-21.9890499"></trkpt>
+			<trkpt lat="64.045767" lon="-21.9879341"></trkpt>
+			<trkpt lat="64.0453162" lon="-21.9874191"></trkpt>
+			<trkpt lat="64.0447903" lon="-21.987462"></trkpt>
+			<trkpt lat="64.0443208" lon="-21.9881058"></trkpt>
+			<trkpt lat="64.0439668" lon="-21.9906348"></trkpt>
+			<trkpt lat="64.0439292" lon="-21.9932955"></trkpt>
+			<trkpt lat="64.0438917" lon="-21.9948834"></trkpt>
+			<trkpt lat="64.0438917" lon="-21.9961279"></trkpt>
+			<trkpt lat="64.0419945" lon="-21.9878882"></trkpt>
+			<trkpt lat="64.0416564" lon="-21.9859141"></trkpt>
+			<trkpt lat="64.0412995" lon="-21.9846266"></trkpt>
+		</trkseg>
+	</trk>
+</gpx>

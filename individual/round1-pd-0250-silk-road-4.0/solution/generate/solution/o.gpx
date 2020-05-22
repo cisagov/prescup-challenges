@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="MySchweizMobil - http://map.schweizmobil.ch/">
+  <metadata>
+    <name>frosty:2</name>
+    <bounds minlat="47.373187958899344" maxlat="47.3907255006348" minlon="7.4669411679390105" maxlon="7.542191527138277"></bounds>
+  </metadata>
+	<trk>
+		<name>2</name>
+		<desc>Length: 158.1 km (98.22 mi)</desc>
+		<trkseg>
+			<trkpt lat="30.5279621" lon="-97.8614044"></trkpt>
+			<trkpt lat="30.5202728" lon="-97.9026031"></trkpt>
+			<trkpt lat="30.5037091" lon="-97.9348755"></trkpt>
+			<trkpt lat="30.4747158" lon="-97.9712677"></trkpt>
+			<trkpt lat="30.4291375" lon="-98.0110931"></trkpt>
+			<trkpt lat="30.366951" lon="-98.0536652"></trkpt>
+			<trkpt lat="30.2999822" lon="-98.0708313"></trkpt>
+			<trkpt lat="30.2685562" lon="-98.0660248"></trkpt>
+			<trkpt lat="30.2240684" lon="-98.0619049"></trkpt>
+			<trkpt lat="30.1748118" lon="-98.0316925"></trkpt>
+			<trkpt lat="30.1463147" lon="-97.9925537"></trkpt>
+			<trkpt lat="30.1273121" lon="-97.9561615"></trkpt>
+			<trkpt lat="30.1142457" lon="-97.8792572"></trkpt>
+			<trkpt lat="30.1094939" lon="-97.8133392"></trkpt>
+			<trkpt lat="30.1136518" lon="-97.7192688"></trkpt>
+			<trkpt lat="30.121967" lon="-97.670517"></trkpt>
+			<trkpt lat="30.139783" lon="-97.6197052"></trkpt>
+			<trkpt lat="30.1742182" lon="-97.5517273"></trkpt>
+			<trkpt lat="30.2270349" lon="-97.5249481"></trkpt>
+			<trkpt lat="30.2857528" lon="-97.5132751"></trkpt>
+			<trkpt lat="30.3396948" lon="-97.519455"></trkpt>
+			<trkpt lat="30.3924226" lon="-97.5476074"></trkpt>
+			<trkpt lat="30.4474898" lon="-97.6066589"></trkpt>
+			<trkpt lat="30.4806335" lon="-97.6677704"></trkpt>
+			<trkpt lat="30.5025259" lon="-97.7275085"></trkpt>
+			<trkpt lat="30.5155406" lon="-97.7817535"></trkpt>
+			<trkpt lat="30.5279621" lon="-97.8243256"></trkpt>
+			<trkpt lat="30.5279621" lon="-97.852478"></trkpt>
+		</trkseg>
+	</trk>
+</gpx>

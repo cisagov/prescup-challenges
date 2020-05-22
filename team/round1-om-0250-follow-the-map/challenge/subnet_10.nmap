@@ -1,0 +1,1376 @@
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 13:57 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 172.168.10.108
+Host is up (0.00062s latency).
+All 1000 scanned ports on 172.168.10.108 are filtered
+
+Nmap scan report for 172.168.10.109
+Host is up (0.00084s latency).
+All 1000 scanned ports on 172.168.10.109 are filtered
+
+Nmap done: 256 IP addresses (2 hosts up) scanned in 45.24 seconds
+
+----------------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 12:11 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 172.168.10.109
+Host is up (0.0010s latency).
+Not shown: 996 filtered ports
+PORT    STATE  SERVICE     VERSION
+22/tcp  open   ssh         OpenSSH 4.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 80:35:e3:e1:a0:7b:b0:31:a2:4b:69:c2:b5:3f:26:da (DSA)
+|_  2048 f5:b7:79:02:ff:f8:7d:af:a2:3f:87:db:e0:ee:c0:5e (RSA)
+139/tcp open   netbios-ssn Samba smbd 3.X (workgroup: MYGROUP)
+445/tcp open   netbios-ssn Samba smbd 3.X (workgroup: MYGROUP)
+631/tcp closed ipp
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.27
+Network Distance: 3 hops
+
+Host script results:
+|_nbstat: NetBIOS name: WORKGROUP, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.21)
+|   NetBIOS computer name: 
+|   Workgroup: MYGROUP
+|_  System time: 2019-08-02T12:11:36-04:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smbv2-enabled: Server doesn't support SMBv2 protocol
+
+TRACEROUTE (using port 631/tcp)
+HOP RTT     ADDRESS
+1   0.64 ms 172.168.10.106
+2   0.69 ms 172.168.10.110
+3   1.17 ms 172.168.10.109
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 96.63 seconds
+
+----------------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 13:27 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 172.168.10.103
+Host is up (0.000072s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 172.168.10.104
+Host is up (0.00017s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+135/tcp open  msrpc
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+
+Nmap scan report for 172.168.10.105
+Host is up (0.00014s latency).
+Not shown: 985 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+88/tcp   open  kerberos-sec
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+389/tcp  open  ldap
+445/tcp  open  microsoft-ds
+464/tcp  open  kpasswd5
+593/tcp  open  http-rpc-epmap
+636/tcp  open  ldapssl
+1026/tcp open  LSA-or-nterm
+1028/tcp open  unknown
+1030/tcp open  iad1
+1037/tcp open  ams
+1043/tcp open  boinc
+1045/tcp open  fpitp
+
+
+Nmap done: 3 IP addresses (3 hosts up) scanned in 2.39 seconds
+
+----------------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 12:39 EDT
+NSE: Loaded 262 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 12:39
+NSE: [shodan-api] Error: Please specify your ShodanAPI key with the shodan-api.apikey argument
+NSE: [mtrace] A source IP must be provided through fromip argument.
+Completed NSE at 12:40, 10.04s elapsed
+Initiating NSE at 12:40
+Completed NSE at 12:40, 0.00s elapsed
+Initiating NSE at 12:40
+Completed NSE at 12:40, 0.00s elapsed
+Pre-scan script results:
+| targets-asn: 
+|_  targets-asn.asn is a mandatory parameter
+Initiating Ping Scan at 12:40
+Scanning 172.168.10.109 
+Completed Ping Scan at 12:40, 0.00s elapsed (1 total hosts)
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating SYN Stealth Scan at 12:40
+Scanning 172.168.10.109 [1000 ports]
+Discovered open port 445/tcp on 172.168.10.109
+Discovered open port 139/tcp on 172.168.10.109
+Discovered open port 22/tcp on 172.168.10.109
+Completed SYN Stealth Scan at 12:40, 11.27s elapsed (1000 total ports)
+Initiating UDP Scan at 12:40
+Scanning 172.168.10.109 [1000 ports]
+Increasing send delay for 172.168.10.109 from 0 to 50 due to max_successful_tryno increase to 5
+Increasing send delay for 172.168.10.109 from 50 to 100 due to 11 out of 13 dropped probes since last increase.
+Increasing send delay for 172.168.10.109 from 100 to 200 due to 11 out of 11 dropped probes since last increase.
+UDP Scan Timing: About 7.99% done; ETC: 12:46 (0:05:57 remaining)
+Increasing send delay for 172.168.10.109 from 200 to 400 due to 11 out of 11 dropped probes since last increase.
+Increasing send delay for 172.168.10.109 from 400 to 800 due to 11 out of 11 dropped probes since last increase.
+UDP Scan Timing: About 11.79% done; ETC: 12:48 (0:07:37 remaining)
+UDP Scan Timing: About 14.77% done; ETC: 12:50 (0:08:45 remaining)
+UDP Scan Timing: About 17.50% done; ETC: 12:51 (0:09:30 remaining)
+UDP Scan Timing: About 35.57% done; ETC: 12:54 (0:08:54 remaining)
+UDP Scan Timing: About 42.54% done; ETC: 12:54 (0:08:12 remaining)
+Discovered open port 53/udp on 172.168.10.109
+Discovered open port 137/udp on 172.168.10.109
+UDP Scan Timing: About 48.34% done; ETC: 12:54 (0:07:27 remaining)
+UDP Scan Timing: About 53.84% done; ETC: 12:54 (0:06:42 remaining)
+UDP Scan Timing: About 59.54% done; ETC: 12:54 (0:05:55 remaining)
+UDP Scan Timing: About 65.07% done; ETC: 12:54 (0:05:10 remaining)
+UDP Scan Timing: About 70.29% done; ETC: 12:55 (0:04:25 remaining)
+UDP Scan Timing: About 75.51% done; ETC: 12:55 (0:03:40 remaining)
+UDP Scan Timing: About 80.73% done; ETC: 12:55 (0:02:54 remaining)
+UDP Scan Timing: About 85.86% done; ETC: 12:55 (0:02:09 remaining)
+UDP Scan Timing: About 90.86% done; ETC: 12:55 (0:01:23 remaining)
+UDP Scan Timing: About 96.09% done; ETC: 12:55 (0:00:36 remaining)
+Completed UDP Scan at 12:56, 954.38s elapsed (1000 total ports)
+Initiating Service scan at 12:56
+Scanning 45 services on 172.168.10.109
+Completed Service scan at 12:57, 87.55s elapsed (45 services on 1 host)
+Initiating OS detection (try #1) against 172.168.10.109
+Initiating Traceroute at 12:57
+Completed Traceroute at 12:57, 0.01s elapsed
+NSE: Script scanning 172.168.10.109.
+Initiating NSE at 12:57
+Completed NSE at 12:59, 125.38s elapsed
+Initiating NSE at 12:59
+Completed NSE at 12:59, 2.28s elapsed
+Initiating NSE at 12:59
+Completed NSE at 12:59, 0.09s elapsed
+Nmap scan report for 172.168.10.109
+Host is up (0.00084s latency).
+Not shown: 1951 filtered ports
+PORT    STATE  SERVICE      VERSION
+22/tcp  open   ssh          OpenSSH 4.3 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_4.3
+| ssh-hostkey: 
+|   1024 80:35:e3:e1:a0:7b:b0:31:a2:4b:69:c2:b5:3f:26:da (DSA)
+|_  2048 f5:b7:79:02:ff:f8:7d:af:a2:3f:87:db:e0:ee:c0:5e (RSA)
+| ssh2-enum-algos: 
+|   kex_algorithms: (3)
+|       diffie-hellman-group-exchange-sha1
+|       diffie-hellman-group14-sha1
+|       diffie-hellman-group1-sha1
+|   server_host_key_algorithms: (2)
+|       ssh-rsa
+|       ssh-dss
+|   encryption_algorithms: (13)
+|       aes128-ctr
+|       aes192-ctr
+|       aes256-ctr
+|       arcfour256
+|       arcfour128
+|       aes128-cbc
+|       3des-cbc
+|       blowfish-cbc
+|       cast128-cbc
+|       aes192-cbc
+|       aes256-cbc
+|       arcfour
+|       rijndael-cbc@lysator.liu.se
+|   mac_algorithms: (6)
+|       hmac-md5
+|       hmac-sha1
+|       hmac-ripemd160
+|       hmac-ripemd160@openssh.com
+|       hmac-sha1-96
+|       hmac-md5-96
+|   compression_algorithms: (2)
+|       none
+|_      zlib@openssh.com
+139/tcp open   netbios-ssn  Samba smbd 3.X (workgroup: MYGROUP)
+445/tcp open   netbios-ssn  Samba smbd 3.X (workgroup: MYGROUP)
+631/tcp closed ipp
+53/udp  open   domain       ISC BIND 9.3.6-P1 (RedHat Enterprise Linux 5)
+| dns-nsid: 
+|_  bind.version: 9.3.6-P1-RedHat-9.3.6-4.P1.el5
+137/udp open   netbios-ns   Samba nmbd (workgroup: MYGROUP)
+139/udp closed netbios-ssn
+445/udp closed microsoft-ds
+631/udp closed ipp
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.27
+Uptime guess: 0.143 days (since Fri Aug  2 09:34:15 2019)
+Network Distance: 3 hops
+TCP Sequence Prediction: Difficulty=198 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: WORKGROUP; OS: Linux; CPE: cpe:/o:linux:linux_kernel:5
+
+Host script results:
+|_asn-query: No Servers
+|_fcrdns: FAIL (No PTR record)
+| firewalk: 
+| HOP  HOST       PROTOCOL  BLOCKED PORTS
+| 1    172.168.10.106  tcp       1,4
+|                 udp       88,1048
+| 2    172.168.10.110  tcp       3,6-7,9,13,17,19-20
+|_                udp       69,120,138,686,772,800,1645,1900
+|_hostmap-robtex: ERROR: Script execution failed (use -d to debug)
+|_ip-geolocation-geobytes: ERROR: Script execution failed (use -d to debug)
+|_ip-geolocation-geoplugin: ERROR: Script execution failed (use -d to debug)
+|_ip-geolocation-maxmind: ERROR: Script execution failed (use -d to debug)
+|_ipidseq: All zeros
+|_msrpc-enum: NT_STATUS_OBJECT_NAME_NOT_FOUND
+| nbstat: NetBIOS name: WORKGROUP, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   WORKGROUP<00>        Flags: <unique><active>
+|   WORKGROUP<03>        Flags: <unique><active>
+|   WORKGROUP<20>        Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   MYGROUP<00>          Flags: <group><active>
+|   MYGROUP<1d>          Flags: <unique><active>
+|_  MYGROUP<1e>          Flags: <group><active>
+|_path-mtu: PMTU == 1500
+| qscan: 
+| PORT  FAMILY  MEAN (us)  STDDEV  LOSS (%)
+| 22    0       855.00     177.40  0.0%
+| 53    0       0.00       -0.00   100.0%
+| 137   0       0.00       -0.00   100.0%
+| 139   0       849.20     103.76  0.0%
+| 445   0       811.50     168.82  0.0%
+|_631   0       863.40     130.63  0.0%
+| smb-mbenum: 
+|   Master Browser
+|     WORKGROUP  0.0  Samba Server Version 3.0.21
+|   Potential Browser
+|     WORKGROUP  0.0  Samba Server Version 3.0.21
+|   Print server
+|     WORKGROUP  0.0  Samba Server Version 3.0.21
+|   Server
+|     WORKGROUP  0.0  Samba Server Version 3.0.21
+|   Server service
+|     WORKGROUP  0.0  Samba Server Version 3.0.21
+|   Unix server
+|     WORKGROUP  0.0  Samba Server Version 3.0.21
+|   Windows NT/2000/XP/2003 server
+|     WORKGROUP  0.0  Samba Server Version 3.0.21
+|   Workstation
+|_    WORKGROUP  0.0  Samba Server Version 3.0.21
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.21)
+|   NetBIOS computer name: 
+|   Workgroup: MYGROUP
+|_  System time: 2019-08-02T12:57:43-04:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smbv2-enabled: Server doesn't support SMBv2 protocol
+| traceroute-geolocation: 
+|   HOP  RTT   ADDRESS     GEOLOCATION
+|   1    0.27  172.168.10.106   - ,- 
+|   2    0.63  172.168.10.110   - ,- 
+|_  3    0.96  172.168.10.109  - ,- 
+|_whois-domain: You should provide a domain name.
+|_whois-ip: ERROR: Script execution failed (use -d to debug)
+
+TRACEROUTE (using port 631/tcp)
+HOP RTT     ADDRESS
+1   0.27 ms 172.168.10.106
+2   0.63 ms 172.168.10.110
+3   0.96 ms 172.168.10.109
+
+NSE: Script Post-scanning.
+Initiating NSE at 12:59
+Completed NSE at 12:59, 0.00s elapsed
+Initiating NSE at 12:59
+Completed NSE at 12:59, 0.00s elapsed
+Initiating NSE at 12:59
+Completed NSE at 12:59, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1195.09 seconds
+           Raw packets sent: 3770 (145.180KB) | Rcvd: 1073 (60.450KB)
+
+----------------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 12:37 EDT
+NSE: Loaded 262 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 12:37
+NSE: [shodan-api] Error: Please specify your ShodanAPI key with the shodan-api.apikey argument
+NSE: [mtrace] A source IP must be provided through fromip argument.
+Completed NSE at 12:37, 10.07s elapsed
+Initiating NSE at 12:37
+Completed NSE at 12:37, 0.00s elapsed
+Initiating NSE at 12:37
+Completed NSE at 12:37, 0.00s elapsed
+Pre-scan script results:
+| targets-asn: 
+|_  targets-asn.asn is a mandatory parameter
+Initiating Ping Scan at 12:37
+Scanning 172.168.10.105 [7 ports]
+Completed Ping Scan at 12:37, 0.01s elapsed (1 total hosts)
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating SYN Stealth Scan at 12:37
+Scanning 172.168.10.105 [1000 ports]
+Discovered open port 22/tcp on 172.168.10.105
+Discovered open port 445/tcp on 172.168.10.105
+Discovered open port 139/tcp on 172.168.10.105
+Discovered open port 135/tcp on 172.168.10.105
+Discovered open port 1037/tcp on 172.168.10.105
+Discovered open port 1030/tcp on 172.168.10.105
+Discovered open port 88/tcp on 172.168.10.105
+Discovered open port 1028/tcp on 172.168.10.105
+Discovered open port 464/tcp on 172.168.10.105
+Discovered open port 1026/tcp on 172.168.10.105
+Discovered open port 389/tcp on 172.168.10.105
+Discovered open port 1043/tcp on 172.168.10.105
+Discovered open port 1045/tcp on 172.168.10.105
+Discovered open port 593/tcp on 172.168.10.105
+Discovered open port 636/tcp on 172.168.10.105
+Completed SYN Stealth Scan at 12:37, 0.08s elapsed (1000 total ports)
+Initiating UDP Scan at 12:37
+Scanning 172.168.10.105 [1000 ports]
+Discovered open port 1058/udp on 172.168.10.105
+Completed UDP Scan at 12:37, 1.22s elapsed (1000 total ports)
+Initiating Service scan at 12:37
+Scanning 34 services on 172.168.10.105
+Service scan Timing: About 55.88% done; ETC: 12:38 (0:00:42 remaining)
+Completed Service scan at 12:38, 92.55s elapsed (34 services on 1 host)
+Initiating OS detection (try #1) against 172.168.10.105
+Initiating Traceroute at 12:38
+Completed Traceroute at 12:38, 0.01s elapsed
+NSE: Script scanning 172.168.10.105.
+Initiating NSE at 12:38
+Completed NSE at 12:39, 25.89s elapsed
+Initiating NSE at 12:39
+Completed NSE at 12:39, 1.05s elapsed
+Initiating NSE at 12:39
+Completed NSE at 12:39, 0.13s elapsed
+Nmap scan report for 172.168.10.105
+Host is up (0.00049s latency).
+Not shown: 1967 closed ports
+PORT     STATE         SERVICE       VERSION
+22/tcp   open          ssh           OpenSSH 3.8.1p1 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_3.8.1p1
+| ssh-hostkey: 
+|   1024 ab:b6:11:60:cf:77:75:99:a0:09:8c:4b:0a:1a:21:01 (DSA)
+|_  1024 cb:ca:40:28:dd:10:80:1a:dc:91:29:81:a6:76:d0:fc (RSA)
+| ssh2-enum-algos: 
+|   kex_algorithms: (2)
+|       diffie-hellman-group-exchange-sha1
+|       diffie-hellman-group1-sha1
+|   server_host_key_algorithms: (2)
+|       ssh-rsa
+|       ssh-dss
+|   encryption_algorithms: (11)
+|       aes128-cbc
+|       3des-cbc
+|       blowfish-cbc
+|       cast128-cbc
+|       arcfour
+|       aes192-cbc
+|       aes256-cbc
+|       rijndael-cbc@lysator.liu.se
+|       aes128-ctr
+|       aes192-ctr
+|       aes256-ctr
+|   mac_algorithms: (6)
+|       hmac-md5
+|       hmac-sha1
+|       hmac-ripemd160
+|       hmac-ripemd160@openssh.com
+|       hmac-sha1-96
+|       hmac-md5-96
+|   compression_algorithms: (2)
+|       none
+|_      zlib
+88/tcp   open          kerberos-sec  (server time: 2019-08-02 16:37:28Z)
+135/tcp  open          msrpc         Microsoft Windows RPC
+139/tcp  open          netbios-ssn   Microsoft Windows 98 netbios-ssn
+389/tcp  open          ldap
+| ldap-rootdse: 
+| LDAP Results
+|   <ROOT>
+|       currentTime: 20190802163907.0Z
+|       subschemaSubentry: CN=Aggregate,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|       dsServiceName: CN=NTDS Settings,CN=SVC-WIN2K,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=EISENHOWER,DC=MIL
+|       namingContexts: CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|       namingContexts: CN=Configuration,DC=EISENHOWER,DC=MIL
+|       namingContexts: DC=EISENHOWER,DC=MIL
+|       defaultNamingContext: DC=EISENHOWER,DC=MIL
+|       schemaNamingContext: CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|       configurationNamingContext: CN=Configuration,DC=EISENHOWER,DC=MIL
+|       rootDomainNamingContext: DC=EISENHOWER,DC=MIL
+|       supportedControl: 1.2.840.113556.1.4.319
+|       supportedControl: 1.2.840.113556.1.4.801
+|       supportedControl: 1.2.840.113556.1.4.473
+|       supportedControl: 1.2.840.113556.1.4.528
+|       supportedControl: 1.2.840.113556.1.4.417
+|       supportedControl: 1.2.840.113556.1.4.619
+|       supportedControl: 1.2.840.113556.1.4.841
+|       supportedControl: 1.2.840.113556.1.4.529
+|       supportedControl: 1.2.840.113556.1.4.805
+|       supportedControl: 1.2.840.113556.1.4.521
+|       supportedControl: 1.2.840.113556.1.4.970
+|       supportedControl: 1.2.840.113556.1.4.1338
+|       supportedControl: 1.2.840.113556.1.4.474
+|       supportedControl: 1.2.840.113556.1.4.1339
+|       supportedControl: 1.2.840.113556.1.4.1340
+|       supportedControl: 1.2.840.113556.1.4.1413
+|       supportedLDAPVersion: 3
+|       supportedLDAPVersion: 2
+|       supportedLDAPPolicies: MaxPoolThreads
+|       supportedLDAPPolicies: MaxDatagramRecv
+|       supportedLDAPPolicies: MaxReceiveBuffer
+|       supportedLDAPPolicies: InitRecvTimeout
+|       supportedLDAPPolicies: MaxConnections
+|       supportedLDAPPolicies: MaxConnIdleTime
+|       supportedLDAPPolicies: MaxActiveQueries
+|       supportedLDAPPolicies: MaxPageSize
+|       supportedLDAPPolicies: MaxQueryDuration
+|       supportedLDAPPolicies: MaxTempTableSize
+|       supportedLDAPPolicies: MaxResultSetSize
+|       supportedLDAPPolicies: MaxNotificationPerConn
+|       highestCommittedUSN: 3147
+|       supportedSASLMechanisms: GSSAPI
+|       supportedSASLMechanisms: GSS-SPNEGO
+|       dnsHostName: SVC-WIN2K.EISENHOWER.MIL
+|       ldapServiceName: EISENHOWER.MIL:svc-win2k$@EISENHOWER.MIL
+|       serverName: CN=SVC-WIN2K,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=EISENHOWER,DC=MIL
+|       supportedCapabilities: 1.2.840.113556.1.4.800
+|       supportedCapabilities: 1.2.840.113556.1.4.1791
+|       isSynchronized: TRUE
+|_      isGlobalCatalogReady: TRUE
+| ldap-search: 
+|   Context: DC=EISENHOWER,DC=MIL
+|     dn: DC=EISENHOWER,DC=MIL
+|         masteredBy: CN=NTDS Settings,CN=SVC-WIN2K,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         auditingPolicy: 
+|         creationTime: 131104692955312500
+|         dc: EISENHOWER
+|         forceLogoff: -9223372036854775808
+|         fSMORoleOwner: CN=NTDS Settings,CN=SVC-WIN2K,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         gPLink: [LDAP://CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=EISENHOWER,DC=MIL;0]
+|         instanceType: 5
+|         isCriticalSystemObject: TRUE
+|         lockOutObservationWindow: -18000000000
+|         lockoutDuration: -18000000000
+|         lockoutThreshold: 0
+|         maxPwdAge: -37108517437440
+|         minPwdAge: 0
+|         minPwdLength: 0
+|         modifiedCount: 94
+|         modifiedCountAtLastProm: 0
+|         ms-DS-MachineAccountQuota: 10
+|         nextRid: 1001
+|         nTMixedDomain: 1
+|         distinguishedName: DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Domain-DNS,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: domain
+|         objectClass: domainDNS
+|         objectGUID: 8314508e-aa20-144f-b6ed-9a188b8a62
+|         objectSid: 3
+|         pwdHistoryLength: 1
+|         pwdProperties: 0
+|         name: EISENHOWER
+|         rIDManagerReference: CN=RID Manager$,CN=System,DC=EISENHOWER,DC=MIL
+|         serverState: 1
+|         subRefs: CN=Configuration,DC=EISENHOWER,DC=MIL
+|         systemFlags: -1946157056
+|         uASCompat: 1
+|         uSNChanged: 1558
+|         uSNCreated: 1154
+|         wellKnownObjects: B:32:18E2EA80684F11D2B9AA00C04F79F805:CN=Deleted Objects,DC=EISENHOWER,DC=MIL
+|         wellKnownObjects: B:32:2FBAC1870ADE11D297C400C04FD8D5CD:CN=Infrastructure,DC=EISENHOWER,DC=MIL
+|         wellKnownObjects: B:32:AB8153B7768811D1ADED00C04FD8D5CD:CN=LostAndFound,DC=EISENHOWER,DC=MIL
+|         wellKnownObjects: B:32:AB1D30F3768811D1ADED00C04FD8D5CD:CN=System,DC=EISENHOWER,DC=MIL
+|         wellKnownObjects: B:32:A361B2FFFFD211D1AA4B00C04FD7D83A:OU=Domain Controllers,DC=EISENHOWER,DC=MIL
+|         wellKnownObjects: B:32:AA312825768811D1ADED00C04FD8D5CD:CN=Computers,DC=EISENHOWER,DC=MIL
+|         wellKnownObjects: B:32:A9D1CA15768811D1ADED00C04FD8D5CD:CN=Users,DC=EISENHOWER,DC=MIL
+|         whenChanged: 2016/06/15 13:03:54 UTC
+|_        whenCreated: 2016/06/15 13:00:14 UTC
+445/tcp  open          microsoft-ds  Microsoft Windows 2000 microsoft-ds
+464/tcp  open          kpasswd5?
+593/tcp  open          ncacn_http    Microsoft Windows RPC over HTTP 1.0
+|_banner: ncacn_http/1.0
+636/tcp  open          tcpwrapped
+1026/tcp open          msrpc         Microsoft Windows RPC
+1028/tcp open          msrpc         Microsoft Windows RPC
+1030/tcp open          ncacn_http    Microsoft Windows RPC over HTTP 1.0
+|_banner: ncacn_http/1.0
+1037/tcp open          msrpc         Microsoft Windows RPC
+1043/tcp open          msrpc         Microsoft Windows RPC
+1045/tcp open          msrpc         Microsoft Windows RPC
+| ldap-rootdse: 
+| LDAP Results
+|   <ROOT>
+|       currentTime: 20190802163903.0Z
+|       subschemaSubentry: CN=Aggregate,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|       dsServiceName: CN=NTDS Settings,CN=SVC-WIN2K,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=EISENHOWER,DC=MIL
+|       namingContexts: CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|       namingContexts: CN=Configuration,DC=EISENHOWER,DC=MIL
+|       namingContexts: DC=EISENHOWER,DC=MIL
+|       defaultNamingContext: DC=EISENHOWER,DC=MIL
+|       schemaNamingContext: CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|       configurationNamingContext: CN=Configuration,DC=EISENHOWER,DC=MIL
+|       rootDomainNamingContext: DC=EISENHOWER,DC=MIL
+|       supportedControl: 1.2.840.113556.1.4.319
+|       supportedControl: 1.2.840.113556.1.4.801
+|       supportedControl: 1.2.840.113556.1.4.473
+|       supportedControl: 1.2.840.113556.1.4.528
+|       supportedControl: 1.2.840.113556.1.4.417
+|       supportedControl: 1.2.840.113556.1.4.619
+|       supportedControl: 1.2.840.113556.1.4.841
+|       supportedControl: 1.2.840.113556.1.4.529
+|       supportedControl: 1.2.840.113556.1.4.805
+|       supportedControl: 1.2.840.113556.1.4.521
+|       supportedControl: 1.2.840.113556.1.4.970
+|       supportedControl: 1.2.840.113556.1.4.1338
+|       supportedControl: 1.2.840.113556.1.4.474
+|       supportedControl: 1.2.840.113556.1.4.1339
+|       supportedControl: 1.2.840.113556.1.4.1340
+|       supportedControl: 1.2.840.113556.1.4.1413
+|       supportedLDAPVersion: 3
+|       supportedLDAPVersion: 2
+|       supportedLDAPPolicies: MaxPoolThreads
+|       supportedLDAPPolicies: MaxDatagramRecv
+|       supportedLDAPPolicies: MaxReceiveBuffer
+|       supportedLDAPPolicies: InitRecvTimeout
+|       supportedLDAPPolicies: MaxConnections
+|       supportedLDAPPolicies: MaxConnIdleTime
+|       supportedLDAPPolicies: MaxActiveQueries
+|       supportedLDAPPolicies: MaxPageSize
+|       supportedLDAPPolicies: MaxQueryDuration
+|       supportedLDAPPolicies: MaxTempTableSize
+|       supportedLDAPPolicies: MaxResultSetSize
+|       supportedLDAPPolicies: MaxNotificationPerConn
+|       highestCommittedUSN: 3147
+|       supportedSASLMechanisms: GSSAPI
+|       supportedSASLMechanisms: GSS-SPNEGO
+|       dnsHostName: SVC-WIN2K.EISENHOWER.MIL
+|       ldapServiceName: EISENHOWER.MIL:svc-win2k$@EISENHOWER.MIL
+|       serverName: CN=SVC-WIN2K,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=EISENHOWER,DC=MIL
+|       supportedCapabilities: 1.2.840.113556.1.4.800
+|       supportedCapabilities: 1.2.840.113556.1.4.1791
+|       isSynchronized: TRUE
+|_      isGlobalCatalogReady: TRUE
+| ldap-search: 
+|   Context: DC=EISENHOWER,DC=MIL
+|     dn: DC=EISENHOWER,DC=MIL
+|         masteredBy: CN=NTDS Settings,CN=SVC-WIN2K,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         dc: EISENHOWER
+|         gPLink: [LDAP://CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=EISENHOWER,DC=MIL;0]
+|         instanceType: 5
+|         distinguishedName: DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Domain-DNS,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: domain
+|         objectClass: domainDNS
+|         objectGUID: 8314508e-aa20-144f-b6ed-9a188b8a62
+|         objectSid: 3
+|         name: EISENHOWER
+|         subRefs: CN=Configuration,DC=EISENHOWER,DC=MIL
+|         uSNChanged: 1558
+|         uSNCreated: 1154
+|         wellKnownObjects: B:32:18E2EA80684F11D2B9AA00C04F79F805:CN=Deleted Objects,DC=EISENHOWER,DC=MIL
+|         wellKnownObjects: B:32:2FBAC1870ADE11D297C400C04FD8D5CD:CN=Infrastructure,DC=EISENHOWER,DC=MIL
+|         wellKnownObjects: B:32:AB8153B7768811D1ADED00C04FD8D5CD:CN=LostAndFound,DC=EISENHOWER,DC=MIL
+|         wellKnownObjects: B:32:AB1D30F3768811D1ADED00C04FD8D5CD:CN=System,DC=EISENHOWER,DC=MIL
+|         wellKnownObjects: B:32:A361B2FFFFD211D1AA4B00C04FD7D83A:OU=Domain Controllers,DC=EISENHOWER,DC=MIL
+|         wellKnownObjects: B:32:AA312825768811D1ADED00C04FD8D5CD:CN=Computers,DC=EISENHOWER,DC=MIL
+|         wellKnownObjects: B:32:A9D1CA15768811D1ADED00C04FD8D5CD:CN=Users,DC=EISENHOWER,DC=MIL
+|         whenChanged: 2016/06/15 13:03:54 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Everyone,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Everyone
+|         instanceType: 4
+|         distinguishedName: CN=Everyone,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: 2b65ecc1-cac4-04e-94f6-f84e1d92f2
+|         objectSid: 3
+|         name: Everyone
+|         uSNChanged: 1295
+|         uSNCreated: 1295
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Creator Owner,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Creator Owner
+|         instanceType: 4
+|         distinguishedName: CN=Creator Owner,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: 561cf3ba-fe0-4442-887a-c1d9e9ad56
+|         objectSid: 3
+|         name: Creator Owner
+|         uSNChanged: 1296
+|         uSNCreated: 1296
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Creator Group,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Creator Group
+|         instanceType: 4
+|         distinguishedName: CN=Creator Group,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: d834d73f-46f1-9c46-beb4-51eb0e743
+|         objectSid: 3
+|         name: Creator Group
+|         uSNChanged: 1297
+|         uSNCreated: 1297
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Self,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Self
+|         instanceType: 4
+|         distinguishedName: CN=Self,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: a925361b-c482-154d-b663-28de18d89
+|         objectSid: 3
+|         name: Self
+|         uSNChanged: 1298
+|         uSNCreated: 1298
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Authenticated Users,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Authenticated Users
+|         instanceType: 4
+|         distinguishedName: CN=Authenticated Users,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: 9ab4deda-b41-314c-8ffa-74af24b367
+|         objectSid: 3
+|         name: Authenticated Users
+|         uSNChanged: 1299
+|         uSNCreated: 1299
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Network,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Network
+|         instanceType: 4
+|         distinguishedName: CN=Network,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: 843874e9-cc8-bd41-949f-ba7ffa655
+|         objectSid: 3
+|         name: Network
+|         uSNChanged: 1300
+|         uSNCreated: 1300
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Batch,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Batch
+|         instanceType: 4
+|         distinguishedName: CN=Batch,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: 8668a439-f450-2444-9de0-c3ff3d2d6c
+|         objectSid: 3
+|         name: Batch
+|         uSNChanged: 1301
+|         uSNCreated: 1301
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Interactive,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Interactive
+|         instanceType: 4
+|         distinguishedName: CN=Interactive,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: 309c12b2-dfe0-846-9836-d4c888f6f9
+|         objectSid: 3
+|         name: Interactive
+|         uSNChanged: 1302
+|         uSNCreated: 1302
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Service,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Service
+|         instanceType: 4
+|         distinguishedName: CN=Service,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: 81f4c32e-dcd6-5c44-b985-4cbef7ab4d
+|         objectSid: 3
+|         name: Service
+|         uSNChanged: 1303
+|         uSNCreated: 1303
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Anonymous Logon,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Anonymous Logon
+|         instanceType: 4
+|         distinguishedName: CN=Anonymous Logon,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: 27f3fa58-e875-b348-ae50-19ca1b851d
+|         objectSid: 3
+|         name: Anonymous Logon
+|         uSNChanged: 1304
+|         uSNCreated: 1304
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Dialup,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Dialup
+|         instanceType: 4
+|         distinguishedName: CN=Dialup,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: 1e169915-4782-a843-9016-33e1b466eb
+|         objectSid: 3
+|         name: Dialup
+|         uSNChanged: 1305
+|         uSNCreated: 1305
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Proxy,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Proxy
+|         instanceType: 4
+|         distinguishedName: CN=Proxy,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: 177ce761-a813-5041-993f-566a12c752
+|         objectSid: 3
+|         name: Proxy
+|         uSNChanged: 1306
+|         uSNCreated: 1306
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Enterprise Domain Controllers,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Enterprise Domain Controllers
+|         instanceType: 4
+|         distinguishedName: CN=Enterprise Domain Controllers,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: 8cbef5d2-1426-dd44-a0b7-589da32827
+|         objectSid: 3
+|         name: Enterprise Domain Controllers
+|         uSNChanged: 1307
+|         uSNCreated: 1307
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Restricted,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Restricted
+|         instanceType: 4
+|         distinguishedName: CN=Restricted,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: 44422731-694e-3a43-a6e7-d2bca95ec9
+|         objectSid: 3
+|         name: Restricted
+|         uSNChanged: 1308
+|         uSNCreated: 1308
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=System,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: System
+|         instanceType: 4
+|         distinguishedName: CN=System,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: 7ed9cf64-56b-f742-a3cb-42e71a3f1d
+|         objectSid: 3
+|         name: System
+|         uSNChanged: 1309
+|         uSNCreated: 1309
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|         whenCreated: 2016/06/15 13:00:14 UTC
+|     dn: CN=Terminal Server User,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         cn: Terminal Server User
+|         instanceType: 4
+|         distinguishedName: CN=Terminal Server User,CN=WellKnown Security Principals,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectCategory: CN=Foreign-Security-Principal,CN=Schema,CN=Configuration,DC=EISENHOWER,DC=MIL
+|         objectClass: top
+|         objectClass: foreignSecurityPrincipal
+|         objectGUID: bca32d4e-765f-749-a754-f197e88a2
+|         objectSid: 3
+|         name: Terminal Server User
+|         uSNChanged: 1310
+|         uSNCreated: 1310
+|         whenChanged: 2016/06/15 13:00:14 UTC
+|_        whenCreated: 2016/06/15 13:00:14 UTC
+| ntp-info: 
+|_  receive time stamp: 2019-08-02T16:39:00
+1058/udp open          msrpc
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port88-TCP:V=7.12%I=7%D=8/2%Time=5D4466CE%P=x86_64-pc-linux-gnu%r(Kerbe
+SF:ros,68,"\0\0\0d~b0`\xa0\x03\x02\x01\x05\xa1\x03\x02\x01\x1e\xa4\x11\x18
+SF:\x0f20190802163728Z\xa5\x05\x02\x03\t~\x91\xa6\x03\x02\x01D\xa9\x10\x1b
+SF:\x0eEISENHOWER\.MIL\xaa#0!\xa0\x03\x02\x01\x02\xa1\x1a0\x18\x1b\x06krbt
+SF:gt\x1b\x0eEISENHOWER\.MIL")%r(SMBProgNeg,4,"\0\0\0\0");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port88-UDP:V=7.12%I=7%D=8/2%Time=5D4466CD%P=x86_64-pc-linux-gnu%r(Kerbe
+SF:ros,64,"~b0`\xa0\x03\x02\x01\x05\xa1\x03\x02\x01\x1e\xa4\x11\x18\x0f201
+SF:90802163727Z\xa5\x05\x02\x03\t\x04\x7f\xa6\x03\x02\x01D\xa9\x10\x1b\x0e
+SF:EISENHOWER\.MIL\xaa#0!\xa0\x03\x02\x01\x02\xa1\x1a0\x18\x1b\x06krbtgt\x
+SF:1b\x0eEISENHOWER\.MIL");
+Device type: general purpose
+Running: Microsoft Windows 2000|XP
+OS CPE: cpe:/o:microsoft:windows_2000::- cpe:/o:microsoft:windows_2000::sp1 cpe:/o:microsoft:windows_2000::sp2 cpe:/o:microsoft:windows_2000::sp3 cpe:/o:microsoft:windows_2000::sp4 cpe:/o:microsoft:windows_xp::- cpe:/o:microsoft:windows_xp::sp1
+OS details: Microsoft Windows 2000 SP0 - SP4 or Windows XP SP0 - SP1
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=148 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: Host: SVC-WIN2K; OSs: Windows, Windows 98, Windows 2000, Windows NT; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_98, cpe:/o:microsoft:windows_2000, cpe:/o:microsoft:windows_nt
+
+Host script results:
+|_asn-query: No Servers
+|_fcrdns: FAIL (No PTR record)
+| firewalk: 
+| HOP  HOST       PROTOCOL  BLOCKED PORTS
+|_1    172.168.10.106  udp       138,389,445,464,500,1038,1040,1047
+|_hostmap-robtex: ERROR: Script execution failed (use -d to debug)
+|_ip-geolocation-geobytes: ERROR: Script execution failed (use -d to debug)
+|_ip-geolocation-geoplugin: ERROR: Script execution failed (use -d to debug)
+|_ip-geolocation-maxmind: ERROR: Script execution failed (use -d to debug)
+|_ipidseq: Unknown
+| msrpc-enum: 
+|   
+|     annotation: PERFMON SERVICE
+|     uuid: a00c021c-2be2-11d2-b678-0000f87a8f8e
+|     ncalrpc: LRPC00000380.00000001
+|   
+|     ncacn_np: \PIPE\lsass
+|     netbios: \\SVC-WIN2K
+|     annotation: NTDS Backup Interface
+|     uuid: ecec0d70-a603-11d0-96b1-00a0c91ece30
+|   
+|     annotation: NTDS Backup Interface
+|     uuid: ecec0d70-a603-11d0-96b1-00a0c91ece30
+|     ncalrpc: LRPC00000100.00000001
+|   
+|     ncacn_np: \PIPE\lsass
+|     netbios: \\SVC-WIN2K
+|     annotation: NTDS Restore Interface
+|     uuid: 16e0cf3a-a604-11d0-96b1-00a0c91ece30
+|   
+|     annotation: NTDS Restore Interface
+|     uuid: 16e0cf3a-a604-11d0-96b1-00a0c91ece30
+|     ncalrpc: LRPC00000100.00000001
+|   
+|     ncacn_np: \PIPE\lsass
+|     netbios: \\SVC-WIN2K
+|     annotation: MS NT Directory DRS Interface
+|     uuid: e3514235-4b06-11d1-ab04-00c04fc2dcd2
+|   
+|     annotation: MS NT Directory DRS Interface
+|     uuid: e3514235-4b06-11d1-ab04-00c04fc2dcd2
+|     ncalrpc: LRPC00000100.00000001
+|   
+|     annotation: MS NT Directory DRS Interface
+|     uuid: e3514235-4b06-11d1-ab04-00c04fc2dcd2
+|     ncalrpc: NTDS_LPC
+|   
+|     tcp_port: 1028
+|     ip_addr: 172.168.10.105
+|     annotation: MS NT Directory DRS Interface
+|     uuid: e3514235-4b06-11d1-ab04-00c04fc2dcd2
+|   
+|     tcp_port: 1026
+|     ip_addr: 172.168.10.105
+|     annotation: MS NT Directory DRS Interface
+|     uuid: e3514235-4b06-11d1-ab04-00c04fc2dcd2
+|   
+|     udp_port: 1029
+|     ip_addr: 172.168.10.105
+|     annotation: MS NT Directory DRS Interface
+|     uuid: e3514235-4b06-11d1-ab04-00c04fc2dcd2
+|   
+|     ncacn_http: 1030
+|     annotation: MS NT Directory DRS Interface
+|     uuid: e3514235-4b06-11d1-ab04-00c04fc2dcd2
+|     ip_addr: 172.168.10.105
+|   
+|     ncacn_np: \PIPE\lsass
+|     netbios: \\SVC-WIN2K
+|     annotation: MS NT Directory XDS Interface
+|     uuid: f5cc5a7c-4264-101a-8c59-08002b2f8426
+|   
+|     annotation: MS NT Directory XDS Interface
+|     uuid: f5cc5a7c-4264-101a-8c59-08002b2f8426
+|     ncalrpc: LRPC00000100.00000001
+|   
+|     annotation: MS NT Directory XDS Interface
+|     uuid: f5cc5a7c-4264-101a-8c59-08002b2f8426
+|     ncalrpc: NTDS_LPC
+|   
+|     tcp_port: 1028
+|     ip_addr: 172.168.10.105
+|     annotation: MS NT Directory XDS Interface
+|     uuid: f5cc5a7c-4264-101a-8c59-08002b2f8426
+|   
+|     tcp_port: 1026
+|     ip_addr: 172.168.10.105
+|     annotation: MS NT Directory XDS Interface
+|     uuid: f5cc5a7c-4264-101a-8c59-08002b2f8426
+|   
+|     udp_port: 1029
+|     ip_addr: 172.168.10.105
+|     annotation: MS NT Directory XDS Interface
+|     uuid: f5cc5a7c-4264-101a-8c59-08002b2f8426
+|   
+|     ncacn_http: 1030
+|     annotation: MS NT Directory XDS Interface
+|     uuid: f5cc5a7c-4264-101a-8c59-08002b2f8426
+|     ip_addr: 172.168.10.105
+|   
+|     ncacn_np: \PIPE\lsass
+|     netbios: \\SVC-WIN2K
+|     annotation: MS NT Directory NSP Interface
+|     uuid: f5cc5a18-4264-101a-8c59-08002b2f8426
+|   
+|     annotation: MS NT Directory NSP Interface
+|     uuid: f5cc5a18-4264-101a-8c59-08002b2f8426
+|     ncalrpc: LRPC00000100.00000001
+|   
+|     annotation: MS NT Directory NSP Interface
+|     uuid: f5cc5a18-4264-101a-8c59-08002b2f8426
+|     ncalrpc: NTDS_LPC
+|   
+|     tcp_port: 1028
+|     ip_addr: 172.168.10.105
+|     annotation: MS NT Directory NSP Interface
+|     uuid: f5cc5a18-4264-101a-8c59-08002b2f8426
+|   
+|     tcp_port: 1026
+|     ip_addr: 172.168.10.105
+|     annotation: MS NT Directory NSP Interface
+|     uuid: f5cc5a18-4264-101a-8c59-08002b2f8426
+|   
+|     udp_port: 1029
+|     ip_addr: 172.168.10.105
+|     annotation: MS NT Directory NSP Interface
+|     uuid: f5cc5a18-4264-101a-8c59-08002b2f8426
+|   
+|     ncacn_http: 1030
+|     annotation: MS NT Directory NSP Interface
+|     uuid: f5cc5a18-4264-101a-8c59-08002b2f8426
+|     ip_addr: 172.168.10.105
+|   
+|     ncacn_np: \PIPE\lsass
+|     exe: Netlogon netlogon interface (Net Logon service)
+|     uuid: 12345678-1234-abcd-ef00-01234567cffb
+|     netbios: \\SVC-WIN2K
+|   
+|     exe: Netlogon netlogon interface (Net Logon service)
+|     uuid: 12345678-1234-abcd-ef00-01234567cffb
+|     ncalrpc: LRPC00000100.00000001
+|   
+|     exe: Netlogon netlogon interface (Net Logon service)
+|     uuid: 12345678-1234-abcd-ef00-01234567cffb
+|     ncalrpc: NTDS_LPC
+|   
+|     exe: Netlogon netlogon interface (Net Logon service)
+|     ip_addr: 172.168.10.105
+|     uuid: 12345678-1234-abcd-ef00-01234567cffb
+|     tcp_port: 1028
+|   
+|     exe: Netlogon netlogon interface (Net Logon service)
+|     ip_addr: 172.168.10.105
+|     uuid: 12345678-1234-abcd-ef00-01234567cffb
+|     tcp_port: 1026
+|   
+|     udp_port: 1029
+|     exe: Netlogon netlogon interface (Net Logon service)
+|     ip_addr: 172.168.10.105
+|     uuid: 12345678-1234-abcd-ef00-01234567cffb
+|   
+|     exe: Netlogon netlogon interface (Net Logon service)
+|     ncacn_http: 1030
+|     uuid: 12345678-1234-abcd-ef00-01234567cffb
+|     ip_addr: 172.168.10.105
+|   
+|     uuid: 906b0ce0-c70b-1067-b317-00dd010662da
+|     ncalrpc: LRPC000002a4.00000001
+|   
+|     tcp_port: 1037
+|     ip_addr: 172.168.10.105
+|     uuid: 906b0ce0-c70b-1067-b317-00dd010662da
+|   
+|     uuid: 906b0ce0-c70b-1067-b317-00dd010662da
+|     ncalrpc: LRPC000002a4.00000001
+|   
+|     tcp_port: 1037
+|     ip_addr: 172.168.10.105
+|     uuid: 906b0ce0-c70b-1067-b317-00dd010662da
+|   
+|     uuid: 906b0ce0-c70b-1067-b317-00dd010662da
+|     ncalrpc: LRPC000002a4.00000001
+|   
+|     tcp_port: 1037
+|     ip_addr: 172.168.10.105
+|     uuid: 906b0ce0-c70b-1067-b317-00dd010662da
+|   
+|     uuid: 906b0ce0-c70b-1067-b317-00dd010662da
+|     ncalrpc: LRPC000002a4.00000001
+|   
+|     tcp_port: 1037
+|     ip_addr: 172.168.10.105
+|     uuid: 906b0ce0-c70b-1067-b317-00dd010662da
+|   
+|     tcp_port: 1043
+|     ip_addr: 172.168.10.105
+|     annotation: NTDS ISM IP Transport
+|     uuid: 130ceefb-e466-11d1-b78b-00c04fa32883
+|   
+|     uuid: 1ff70682-a51-30e8-076d-740be8cee98b
+|     ncalrpc: LRPC0000041c.00000001
+|   
+|     tcp_port: 1045
+|     ip_addr: 172.168.10.105
+|     uuid: 1ff70682-a51-30e8-076d-740be8cee98b
+|   
+|     uuid: 378e52b0-c0a9-11cf-822d-00aa0051e40f
+|     ncalrpc: LRPC0000041c.00000001
+|   
+|     tcp_port: 1045
+|     ip_addr: 172.168.10.105
+|     uuid: 378e52b0-c0a9-11cf-822d-00aa0051e40f
+|   
+|     tcp_port: 1046
+|     ip_addr: 172.168.10.105
+|     uuid: 4da1c422-943d-11d1-acae-00c04fc2aa3f
+|   
+|     exe: messenger msgsvcsend interface (Messenger service)
+|     annotation: Messenger Service
+|     uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc
+|     ncalrpc: ntsvcs
+|   
+|     ncacn_np: \PIPE\ntsvcs
+|     exe: messenger msgsvcsend interface (Messenger service)
+|     annotation: Messenger Service
+|     uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc
+|     netbios: \\SVC-WIN2K
+|   
+|     ncacn_np: \PIPE\scerpc
+|     exe: messenger msgsvcsend interface (Messenger service)
+|     annotation: Messenger Service
+|     uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc
+|     netbios: \\SVC-WIN2K
+|   
+|     exe: messenger msgsvcsend interface (Messenger service)
+|     annotation: Messenger Service
+|     uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc
+|     ncalrpc: DNSResolver
+|   
+|     exe: messenger msgsvcsend interface (Messenger service)
+|     ip_addr: 172.168.10.105
+|     annotation: Messenger Service
+|     uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc
+|     tcp_port: 1046
+|   
+|     udp_port: 1058
+|     exe: messenger msgsvcsend interface (Messenger service)
+|     ip_addr: 172.168.10.105
+|     annotation: Messenger Service
+|     uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc
+|   
+|     tcp_port: 1051
+|     ip_addr: 172.168.10.105
+|     annotation: NtFrs Service
+|     uuid: f5cc59b4-4264-101a-8c59-08002b2f8426
+|   
+|     annotation: NtFrs Service
+|     uuid: f5cc59b4-4264-101a-8c59-08002b2f8426
+|     ncalrpc: LRPC00000380.00000001
+|   
+|     tcp_port: 1051
+|     ip_addr: 172.168.10.105
+|     annotation: NtFrs API
+|     uuid: d049b186-814f-11d1-9a3c-00c04fc9b232
+|   
+|     annotation: NtFrs API
+|     uuid: d049b186-814f-11d1-9a3c-00c04fc9b232
+|     ncalrpc: LRPC00000380.00000001
+|   
+|     tcp_port: 1051
+|     ip_addr: 172.168.10.105
+|     annotation: PERFMON SERVICE
+|_    uuid: a00c021c-2be2-11d2-b678-0000f87a8f8e
+| nbstat: NetBIOS name: SVC-WIN2K, NetBIOS user: SVC-WIN2K$, NetBIOS MAC: 00:0c:29:8a:8e:03 (VMware)
+| Names:
+|   SVC-WIN2K<00>        Flags: <unique><active>
+|   SVC-WIN2K<20>        Flags: <unique><active>
+|   EISENHOWER<00>       Flags: <group><active>
+|   EISENHOWER<1c>       Flags: <group><active>
+|   EISENHOWER<1b>       Flags: <unique><active>
+|   SVC-WIN2K<03>        Flags: <unique><active>
+|   SVC-WIN2K$<03>       Flags: <unique><active>
+|   EISENHOWER<1e>       Flags: <group><active>
+|   ADMINISTRATOR<03>    Flags: <unique><active>
+|   EISENHOWER<1d>       Flags: <unique><active>
+|_  \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|_path-mtu: PMTU == 1500
+| qscan: 
+| PORT  FAMILY  MEAN (us)  STDDEV  LOSS (%)
+| 1     0       243.10     16.82   0.0%
+| 22    1       259.10     14.47   0.0%
+| 88    0       268.70     72.85   0.0%
+| 135   1       268.40     40.29   0.0%
+| 139   0       282.10     79.11   0.0%
+| 389   1       295.00     80.98   0.0%
+| 445   2       368.90     139.84  0.0%
+| 464   1       265.40     20.57   0.0%
+|_593   1       276.10     40.88   0.0%
+| smb-mbenum: 
+|   Domain Controller
+|     SVC-WIN2K  5.0  
+|   Master Browser
+|     SVC-WIN2K  5.0  
+|   Server service
+|     SVC-WIN2K  5.0  
+|   Time Source
+|     SVC-WIN2K  5.0  
+|   Windows NT/2000/XP/2003 server
+|     SVC-WIN2K  5.0  
+|   Workstation
+|_    SVC-WIN2K  5.0  
+| smb-os-discovery: 
+|   OS: Windows 2000 (Windows 2000 LAN Manager)
+|   OS CPE: cpe:/o:microsoft:windows_2000::-
+|   Computer name: SVC-WIN2K
+|   NetBIOS computer name: SVC-WIN2K
+|   Domain name: EISENHOWER.MIL
+|   FQDN: SVC-WIN2K.EISENHOWER.MIL
+|_  System time: 2019-08-02T12:39:07-04:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: supported
+|_smbv2-enabled: Server doesn't support SMBv2 protocol
+| traceroute-geolocation: 
+|   HOP  RTT   ADDRESS     GEOLOCATION
+|   1    0.30  172.168.10.106   - ,- 
+|_  2    0.52  172.168.10.105  - ,- 
+|_whois-domain: You should provide a domain name.
+|_whois-ip: ERROR: Script execution failed (use -d to debug)
+
+TRACEROUTE (using port 5900/tcp)
+HOP RTT     ADDRESS
+1   0.30 ms 172.168.10.106
+2   0.52 ms 172.168.10.105
+
+NSE: Script Post-scanning.
+Initiating NSE at 12:39
+Completed NSE at 12:39, 0.00s elapsed
+Initiating NSE at 12:39
+Completed NSE at 12:39, 0.00s elapsed
+Initiating NSE at 12:39
+Completed NSE at 12:39, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 134.66 seconds
+           Raw packets sent: 2163 (81.808KB) | Rcvd: 2018 (97.512KB)
+
+----------------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 12:17 EDT
+NSE: Loaded 138 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 12:17
+Completed NSE at 12:17, 0.00s elapsed
+Initiating NSE at 12:17
+Completed NSE at 12:17, 0.00s elapsed
+Initiating ARP Ping Scan at 12:17
+Scanning 172.168.10.106 [1 port]
+Completed ARP Ping Scan at 12:17, 0.00s elapsed (1 total hosts)
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating SYN Stealth Scan at 12:17
+Scanning 172.168.10.106 [65535 ports]
+Discovered open port 22/tcp on 172.168.10.106
+Completed SYN Stealth Scan at 12:17, 2.27s elapsed (65535 total ports)
+Initiating Service scan at 12:17
+Scanning 1 service on 172.168.10.106
+Completed Service scan at 12:17, 0.02s elapsed (1 service on 1 host)
+Initiating OS detection (try #1) against 172.168.10.106
+NSE: Script scanning 172.168.10.106.
+Initiating NSE at 12:17
+Completed NSE at 12:17, 0.35s elapsed
+Initiating NSE at 12:17
+Completed NSE at 12:17, 0.01s elapsed
+Nmap scan report for 172.168.10.106
+Host is up (0.0020s latency).
+Not shown: 65534 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.5p1 Debian 6+squeeze8 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ca:8d:9b:cb:82:8e:a0:ce:64:0a:aa:17:64:3e:39:91 (DSA)
+|_  2048 90:6c:7d:2d:fc:9d:42:9a:f6:d4:ff:77:9a:9f:a2:d8 (RSA)
+MAC Address: 00:50:57:42:F7:A1 (Broadband Access Systems)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.4
+Uptime guess: 0.114 days (since Fri Aug  2 09:33:45 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.98 ms 172.168.10.106
+
+NSE: Script Post-scanning.
+Initiating NSE at 12:17
+Completed NSE at 12:17, 0.00s elapsed
+Initiating NSE at 12:17
+Completed NSE at 12:17, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 6.55 seconds
+           Raw packets sent: 65558 (2.885MB) | Rcvd: 65551 (2.623MB)
+
+----------------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 12:08 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 172.168.10.100
+Host is up (0.76s latency).
+Not shown: 990 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+3306/tcp open  mysql
+5222/tcp open  xmpp-client
+5269/tcp open  xmpp-server
+7070/tcp open  realserver
+7443/tcp open  oracleas-https
+7777/tcp open  cbt
+9090/tcp open  zeus-admin
+9091/tcp open  xmltec-xmlmail
+
+Nmap done: 1 IP address (1 host up) scanned in 1.22 seconds
+
+----------------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 12:04 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 172.168.10.106
+Host is up (0.00033s latency).
+PORT    STATE  SERVICE
+443/tcp closed https
+MAC Address: 00:50:57:42:F7:A1 (Broadband Access Systems)
+
+Nmap scan report for 172.168.10.107
+Host is up (0.000042s latency).
+PORT    STATE  SERVICE
+443/tcp open https
+
+Nmap done: 256 IP addresses (2 hosts up) scanned in 2.11 seconds
+
+----------------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 09:52 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 172.168.10.101
+Host is up (0.00027s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.5p1 Debian 6+squeeze8 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ca:8d:9b:cb:82:8e:a0:ce:64:0a:aa:17:64:3e:39:91 (DSA)
+|_  2048 90:6c:7d:2d:fc:9d:42:9a:f6:d4:ff:77:9a:9f:a2:d8 (RSA)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.4
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   0.26 ms 172.168.10.101
+
+Nmap scan report for 172.168.10.102
+Host is up (0.0015s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+23/tcp open  telnet  Cisco router telnetd
+Device type: router|switch
+Running: Cisco IOS 12.X
+OS CPE: cpe:/h:cisco:1760_router cpe:/o:cisco:ios:12.4 cpe:/h:cisco:831_switch
+OS details: Cisco 831 switch or 1760 router (IOS 12.4)
+Network Distance: 2 hops
+Service Info: OS: IOS; Device: router; CPE: cpe:/o:cisco:ios
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   0.25 ms 172.168.10.106
+2   1.58 ms 172.168.10.102
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (2 hosts up) scanned in 45.14 seconds
+
+----------------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 09:32 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Warning: 172.168.10.106 giving up on port because retransmission cap hit (2).
+Nmap scan report for 172.168.10.106
+Host is up (0.00033s latency).
+Not shown: 109 closed ports, 89 open|filtered ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+123/udp open  ntp
+MAC Address: 00:50:57:42:F7:A1 (Broadband Access Systems)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.4
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 6.52 seconds
+
+----------------------------------------------------------------------------------------------
+

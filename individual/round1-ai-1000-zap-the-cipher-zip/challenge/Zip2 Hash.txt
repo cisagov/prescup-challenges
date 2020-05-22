@@ -1,0 +1,5 @@
+**AFTER decrypting and unzipping zip1.zip.gpg**
+
+For zip2.zip.gpg, the SHA256 hash below is the hash of the gpg password:
+
+7ebbc0c601ef9f0db280c844065e8639d10b26c68323c4c5e31669a9f89cfe36

@@ -1,0 +1,515 @@
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 13:26 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 172.168.11.104
+Host is up (0.000070s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 172.168.11.105
+Host is up (0.0012s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+135/tcp open  msrpc
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+
+Nmap scan report for 172.168.11.106
+Host is up (0.00014s latency).
+Not shown: 990 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+88/tcp   open  kerberos-sec
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+389/tcp  open  ldap
+445/tcp  open  microsoft-ds
+464/tcp  open  kpasswd5
+593/tcp  open  http-rpc-epmap
+636/tcp  open  ldapssl
+1026/tcp open  LSA-or-nterm
+
+
+Nmap done: 3 IP addresses (3 hosts up) scanned in 3.30 seconds
+
+---------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 12:19 EDT
+NSE: Loaded 262 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 12:19
+NSE: [mtrace] A source IP must be provided through fromip argument.
+NSE: [shodan-api] Error: Please specify your ShodanAPI key with the shodan-api.apikey argument
+Completed NSE at 12:19, 10.05s elapsed
+Initiating NSE at 12:19
+Completed NSE at 12:19, 0.00s elapsed
+Initiating NSE at 12:19
+Completed NSE at 12:19, 0.00s elapsed
+Pre-scan script results:
+| targets-asn: 
+|_  targets-asn.asn is a mandatory parameter
+Initiating Ping Scan at 12:19
+Scanning 172.168.11.101 [7 ports]
+Completed Ping Scan at 12:19, 0.00s elapsed (1 total hosts)
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating SYN Stealth Scan at 12:19
+Scanning 172.168.11.101 [1000 ports]
+Discovered open port 23/tcp on 172.168.11.101
+Completed SYN Stealth Scan at 12:19, 3.67s elapsed (1000 total ports)
+Initiating UDP Scan at 12:19
+Scanning 172.168.11.101 [1000 ports]
+Increasing send delay for 172.168.11.101 from 0 to 50 due to max_successful_tryno increase to 5
+Increasing send delay for 172.168.11.101 from 50 to 100 due to max_successful_tryno increase to 6
+Warning: 172.168.11.101 giving up on port because retransmission cap hit (6).
+Increasing send delay for 172.168.11.101 from 100 to 200 due to 11 out of 12 dropped probes since last increase.
+Increasing send delay for 172.168.11.101 from 200 to 400 due to 11 out of 11 dropped probes since last increase.
+Increasing send delay for 172.168.11.101 from 400 to 800 due to 11 out of 11 dropped probes since last increase.
+UDP Scan Timing: About 6.11% done; ETC: 12:27 (0:07:56 remaining)
+UDP Scan Timing: About 9.81% done; ETC: 12:29 (0:09:21 remaining)
+UDP Scan Timing: About 28.21% done; ETC: 12:31 (0:08:49 remaining)
+UDP Scan Timing: About 34.61% done; ETC: 12:31 (0:08:09 remaining)
+Discovered open port 161/udp on 172.168.11.101
+UDP Scan Timing: About 40.61% done; ETC: 12:32 (0:07:29 remaining)
+UDP Scan Timing: About 46.21% done; ETC: 12:32 (0:06:50 remaining)
+UDP Scan Timing: About 51.81% done; ETC: 12:32 (0:06:09 remaining)
+UDP Scan Timing: About 57.41% done; ETC: 12:32 (0:05:28 remaining)
+UDP Scan Timing: About 62.71% done; ETC: 12:32 (0:04:48 remaining)
+UDP Scan Timing: About 67.91% done; ETC: 12:32 (0:04:09 remaining)
+Discovered open port 123/udp on 172.168.11.101
+UDP Scan Timing: About 73.21% done; ETC: 12:32 (0:03:28 remaining)
+UDP Scan Timing: About 78.41% done; ETC: 12:32 (0:02:48 remaining)
+UDP Scan Timing: About 84.11% done; ETC: 12:32 (0:02:06 remaining)
+UDP Scan Timing: About 89.41% done; ETC: 12:32 (0:01:24 remaining)
+UDP Scan Timing: About 94.61% done; ETC: 12:32 (0:00:43 remaining)
+Completed UDP Scan at 12:32, 805.69s elapsed (1000 total ports)
+Initiating Service scan at 12:32
+Scanning 7 services on 172.168.11.101
+Service scan Timing: About 57.14% done; ETC: 12:34 (0:00:35 remaining)
+Completed Service scan at 12:34, 87.55s elapsed (7 services on 1 host)
+Initiating OS detection (try #1) against 172.168.11.101
+Initiating Traceroute at 12:34
+Completed Traceroute at 12:34, 0.01s elapsed
+NSE: Script scanning 172.168.11.101.
+Initiating NSE at 12:34
+Completed NSE at 12:34, 10.13s elapsed
+Initiating NSE at 12:34
+Completed NSE at 12:34, 1.04s elapsed
+Initiating NSE at 12:34
+Completed NSE at 12:34, 0.01s elapsed
+Nmap scan report for 172.168.11.101
+Host is up (0.0015s latency).
+Not shown: 1993 closed ports
+PORT     STATE         SERVICE  VERSION
+23/tcp   open          telnet   Cisco router telnetd
+| banner: \xFF\xFB\x01\xFF\xFB\x03\xFF\xFD\x18\xFF\xFD\x1F\x0D\x0A\x0D\x0
+|_APassword required, but none set
+| telnet-encryption: 
+|_  Telnet server does not support encryption
+20/udp   open|filtered ftp-data
+123/udp  open          ntp      NTP v4 (unsynchronized)
+| ntp-info: 
+|   receive time stamp: 2019-08-02T16:34:34
+|   version: 4
+|   processor: unknown
+|   system: UNIX
+|   leap: 3
+|   stratum: 16
+|   precision: -10
+|   rootdelay: 
+|   rootdisp: 
+|   refid: INIT\x10
+|   reftime: 0x00000000.00000000
+|   clock: 0xE0EEE48E.D9168980
+|   peer: 0
+|   tc: 3
+|   mintc: 3
+|   offset: 
+|   frequency: 
+|   sys_jitter: 
+|   clk_jitter: 
+|_  clk_wander: 
+161/udp  open          snmp     SNMPv1 server; ciscoSystems SNMPv3 server (public)
+| snmp-hh3c-logins: 
+|_  baseoid: 1.3.6.1.4.1.25506.2.12.1.1.1
+| snmp-info: 
+|   enterprise: ciscoSystems
+|   engineIDFormat: mac
+|   engineIDData: 00:00:0c:29:23:2e
+|   snmpEngineBoots: 3
+|_  snmpEngineTime: 3h03m35s
+| snmp-interfaces: 
+|   GigabitEthernet1
+|     IP address: 172.168.11.101  Netmask: 255.255.255.0
+|     MAC address: 00:0c:29:23:2e:a9 (VMware)
+|     Type: ethernetCsmacd  Speed: 1 Gbps
+|     Status: up
+|     Traffic stats: 533.01 Kb sent, 19.98 Mb received
+|   Null0
+|     Type: other  Speed: 4 Gbps
+|     Status: up
+|_    Traffic stats: 0.00 Kb sent, 0.00 Kb received
+| snmp-netstat: 
+|   TCP  172.168.11.101:23         172.168.11.108:45796
+|   TCP  172.168.11.101:23         172.168.11.108:45798
+|   TCP  172.168.11.101:23         172.168.11.108:45800
+|   UDP  0.0.0.0:5353         *:*
+|   UDP  172.168.11.101:123        *:*
+|   UDP  172.168.11.101:161        *:*
+|   UDP  172.168.11.101:162        *:*
+|   UDP  172.168.11.101:55830      *:*
+|_  UDP  172.168.11.101:63427      *:*
+| snmp-sysdescr: Cisco IOS Software, CSR1000V Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 15.4(1)S, RELEASE SOFTWARE (fc2)
+| Technical Support: http://www.cisco.com/techsupport
+| Copyright (c) 1986-2013 by Cisco Systems, Inc.
+| Compiled Tue 19-Nov-13 21:00 by mcpre
+|_  System uptime: 3h03m50.80s (1103080 timeticks)
+162/udp  open|filtered snmptrap
+1023/udp open|filtered unknown
+5353/udp open|filtered zeroconf
+Device type: router|switch|WAP
+Running: Cisco IOS 12.X
+OS CPE: cpe:/h:cisco:1760_router cpe:/o:cisco:ios:12.4 cpe:/h:cisco:831_switch cpe:/h:cisco:aironet_ap1140 cpe:/h:cisco:aironet_ap1262
+OS details: Cisco 831 switch or 1760 router (IOS 12.4), Cisco Aironet 1140 or 1262 WAP, or IAD 2430 router (IOS 12.4)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: Randomized
+Service Info: Host: ROUTER-R1; OSs: IOS, UNIX; Device: router; CPE: cpe:/o:cisco:ios
+
+Host script results:
+|_asn-query: No Servers
+|_fcrdns: FAIL (No PTR record)
+| firewalk: 
+| HOP  HOST       PROTOCOL  BLOCKED PORTS
+|_1    172.168.11.107  udp       20,162,1023,5353
+|_hostmap-robtex: ERROR: Script execution failed (use -d to debug)
+|_ip-geolocation-geobytes: ERROR: Script execution failed (use -d to debug)
+|_ip-geolocation-geoplugin: ERROR: Script execution failed (use -d to debug)
+|_ip-geolocation-maxmind: ERROR: Script execution failed (use -d to debug)
+|_ipidseq: Randomized
+|_path-mtu: PMTU == 1500
+| qscan: 
+| PORT  FAMILY  MEAN (us)  STDDEV  LOSS (%)
+| 1     0       1463.10    255.59  0.0%
+| 23    0       1436.30    293.96  0.0%
+| 123   0       1393.80    298.83  0.0%
+|_161   1       1784.10    286.96  0.0%
+| traceroute-geolocation: 
+|   HOP  RTT   ADDRESS    GEOLOCATION
+|   1    0.56  172.168.11.107  - ,- 
+|_  2    1.73  172.168.11.101  - ,- 
+|_whois-domain: You should provide a domain name.
+|_whois-ip: ERROR: Script execution failed (use -d to debug)
+
+TRACEROUTE (using port 993/tcp)
+HOP RTT     ADDRESS
+1   0.56 ms 172.168.11.107
+2   1.73 ms 172.168.11.101
+
+NSE: Script Post-scanning.
+Initiating NSE at 12:34
+Completed NSE at 12:34, 0.00s elapsed
+Initiating NSE at 12:34
+Completed NSE at 12:34, 0.00s elapsed
+Initiating NSE at 12:34
+Completed NSE at 12:34, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 922.32 seconds
+           Raw packets sent: 2383 (89.940KB) | Rcvd: 2023 (97.263KB)
+
+---------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 12:10 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 172.168.11.103
+Host is up (0.027s latency).
+Not shown: 996 filtered ports
+PORT    STATE  SERVICE
+22/tcp  open   ssh
+139/tcp open   netbios-ssn
+445/tcp open   microsoft-ds
+631/tcp closed ipp
+
+Nmap done: 1 IP address (1 host up) scanned in 15.57 seconds
+
+---------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 12:05 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 172.168.11.107
+Host is up (0.00033s latency).
+PORT   STATE  SERVICE
+80/tcp closed http
+MAC Address: 00:50:57:42:F7:A1 (Broadband Access Systems)
+
+Nmap scan report for 172.168.11.108
+Host is up (0.000078s latency).
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap done: 256 IP addresses (2 hosts up) scanned in 2.10 seconds
+
+---------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 13:29 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 172.168.11.104
+Host is up (0.00032s latency).
+Not shown: 995 open|filtered ports
+PORT      STATE  SERVICE
+123/udp   open   ntp
+19663/udp closed unknown
+20560/udp closed unknown
+21674/udp closed unknown
+39723/udp closed unknown
+
+Nmap scan report for 172.168.11.105
+Host is up (0.0014s latency).
+Not shown: 991 closed ports
+PORT     STATE         SERVICE
+123/udp  open          ntp
+137/udp  open          netbios-ns
+138/udp  open|filtered netbios-dgm
+445/udp  open|filtered microsoft-ds
+500/udp  open|filtered isakmp
+1025/udp open|filtered blackjack
+1031/udp open|filtered iad2
+1900/udp open|filtered upnp
+4500/udp open|filtered nat-t-ike
+
+Nmap scan report for 172.168.11.106
+Host is up (0.00026s latency).
+Not shown: 985 closed ports
+PORT     STATE         SERVICE
+88/udp   open|filtered kerberos-sec
+123/udp  open          ntp
+135/udp  open          msrpc
+137/udp  open          netbios-ns
+138/udp  open|filtered netbios-dgm
+220/udp	 open 		   imap
+389/udp  open|filtered ldap
+445/udp  open|filtered microsoft-ds
+464/udp  open|filtered kpasswd5
+500/udp  open|filtered isakmp
+1029/udp open          solid-mux
+1038/udp open|filtered mtqp
+1040/udp open|filtered netarx
+1047/udp open|filtered neod1
+1058/udp open          nim
+
+Nmap done: 3 IP addresses (3 hosts up) scanned in 18.12 seconds
+
+---------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 12:11 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 172.168.11.103
+Host is up (0.0010s latency).
+Not shown: 996 filtered ports
+PORT    STATE  SERVICE     VERSION
+22/tcp  open   ssh         OpenSSH 4.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 80:35:e3:e1:a0:7b:b0:31:a2:4b:69:c2:b5:3f:26:da (DSA)
+|_  2048 f5:b7:79:02:ff:f8:7d:af:a2:3f:87:db:e0:ee:c0:5e (RSA)
+139/tcp open   netbios-ssn Samba smbd 3.X (workgroup: MYGROUP)
+445/tcp open   netbios-ssn Samba smbd 3.X (workgroup: MYGROUP)
+631/tcp closed ipp
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.27
+Network Distance: 3 hops
+
+Host script results:
+|_nbstat: NetBIOS name: WORKGROUP, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.21)
+|   NetBIOS computer name: 
+|   Workgroup: MYGROUP
+|_  System time: 2019-08-02T12:11:36-04:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smbv2-enabled: Server doesn't support SMBv2 protocol
+
+TRACEROUTE (using port 631/tcp)
+HOP RTT     ADDRESS
+1   0.64 ms 172.168.11.107
+2   0.69 ms 172.168.11.109
+3   1.17 ms 172.168.11.103
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 96.63 seconds
+
+---------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 10:02 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+
+Nmap scan report for 172.168.11.100
+Host is up (0.00028s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for 172.168.11.101
+Host is up (0.0014s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+23/tcp open  telnet
+
+----------------------------------------------------------------------------------------
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 10:13 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+
+
+Nmap scan report for 172.168.11.0-10
+
+Host is up.
+All 1000 scanned ports on 172.168.11.0 are filtered
+
+Nmap scan report for 172.168.11.1
+Host is up (3.0s latency).
+All 1000 scanned ports on 172.168.11.1 are filtered
+
+Nmap scan report for 172.168.11.2
+Host is up.
+All 1000 scanned ports on 172.168.11.2 are filtered
+
+Nmap scan report for 172.168.11.3
+Host is up.
+All 1000 scanned ports on 172.168.11.3 are filtered
+
+Nmap scan report for 172.168.11.4
+Host is up.
+All 1000 scanned ports on 172.168.11.4 are filtered
+
+Nmap scan report for 172.168.11.5
+Host is up.
+All 1000 scanned ports on 172.168.11.5 are filtered
+
+Nmap scan report for 172.168.11.6
+Host is up (1.4s latency).
+All 1000 scanned ports on 172.168.11.6 are filtered
+
+Nmap scan report for 172.168.11.7
+Host is up.
+All 1000 scanned ports on 172.168.11.7 are filtered
+
+Nmap scan report for 172.168.11.8
+Host is up.
+All 1000 scanned ports on 172.168.11.8 are filtered
+
+Nmap scan report for 172.168.11.9
+Host is up.
+All 1000 scanned ports on 172.168.11.9 are filtered
+
+Nmap scan report for 172.168.11.10
+Host is up.
+All 1000 scanned ports on 172.168.11.10 are filtered
+
+
+Nmap done: 100 IP addresses (100 hosts up) scanned in 6703.29 seconds
+
+---------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 09:43 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 172.168.11.107
+Host is up (0.000067s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+MAC Address: 00:50:57:42:F7:A1 (Broadband Access Systems)
+
+Nmap scan report for 172.168.11.108
+Host is up (0.0000070s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap done: 256 IP addresses (2 hosts up) scanned in 2.18 seconds
+
+---------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 09:51 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 172.168.11.107
+Host is up (0.00027s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.5p1 Debian 6+squeeze8 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ca:8d:9b:cb:82:8e:a0:ce:64:0a:aa:17:64:3e:39:91 (DSA)
+|_  2048 90:6c:7d:2d:fc:9d:42:9a:f6:d4:ff:77:9a:9f:a2:d8 (RSA)
+MAC Address: 00:50:57:42:F7:A1 (Broadband Access Systems)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.4
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.27 ms 172.168.11.107
+
+Nmap scan report for 172.168.11.108
+Host is up (0.000051s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.2p2 Debian 5 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 ad:82:14:b9:81:9e:cf:bd:fd:d2:a1:df:b6:75:86:ce (RSA)
+|_  256 2d:b3:c4:fc:01:69:f0:45:f3:a2:ae:eb:3c:ad:ff:a7 (ECDSA)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.8 - 4.4
+Network Distance: 0 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (2 hosts up) scanned in 8.59 seconds
+
+---------------------------------------------------------------------------------------
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2019-08-02 13:37 EDT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Warning: 172.168.11.103 giving up on port because retransmission cap hit (10).
+Nmap scan report for 172.168.11.102
+Host is up (0.00068s latency).
+Not shown: 254 open|filtered protocols
+PROTOCOL STATE SERVICE
+1        open  icmp
+132      open  sctp
+
+Nmap scan report for 172.168.11.103
+Host is up (0.0010s latency).
+Not shown: 250 filtered protocols
+PROTOCOL STATE         SERVICE
+1        open          icmp
+6        open|filtered tcp
+50       closed        esp
+51       closed        ah
+58       open|filtered ipv6-icmp
+103      open|filtered pim
+
+Nmap done: 256 IP addresses (2 hosts up) scanned in 277.08 seconds
+
+---------------------------------------------------------------------------------------

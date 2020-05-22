@@ -1,0 +1,37 @@
+  IS_SECURE = False
+  if(IS_SECURE):
+    flag += 'WY'
+  else:
+    flag += 'tA'
+
+  import pickle
+
+  class Fruits:
+    pass
+
+  class FruitManager:
+    def set_banana(o, banana):
+      filehandler = open("Fruits.obj", "wb")
+      pickle.dump(banana, filehandler)
+      filehandler.close()
+
+    def get_banana(o):
+      file = open("Fruits.obj", 'rb')
+      object_file = pickle.load(file)
+      file.close()
+      return object_file
+
+    def get_fruits(o):
+      print(pickle.LIST)
+
+  banana = Fruits()
+  banana.color = 'yellow'
+  banana.value = 30
+  banana.isGood = True
+
+  fm = FruitManager()
+  fm.set_banana(banana)
+
+  print(fm.get_banana().value)
+
+  print(fm.get_fruits())

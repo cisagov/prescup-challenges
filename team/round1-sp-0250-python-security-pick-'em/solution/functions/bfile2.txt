@@ -1,0 +1,18 @@
+  IS_SECURE = False
+  if(IS_SECURE):
+    flag += 'Wb'
+  else:
+    flag += 'xb'
+
+  import subprocess
+  try:
+    raw_input		# Python 2
+  except:
+    raw_input = input	# Python 3
+
+  def clone_file(filename):
+    # Assume this runs exclusively on a Linux machine
+    command = 'cp "{source}" output.clone'.format(source=filename)
+    subprocess.call(command, shell=True)
+
+  clone_file(filename)

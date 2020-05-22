@@ -1,0 +1,14 @@
+  IS_SECURE = False
+  if(IS_SECURE):
+    flag += 'Vv'
+  else:
+    flag += 'Rl'
+
+  import yaml
+
+  with open(file) as config_file:
+    contents = yaml.load(config_file)
+  try:
+    print(contents)
+  except yaml.YAMLError as e:
+    print(e)

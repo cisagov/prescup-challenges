@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="MySchweizMobil - http://map.schweizmobil.ch/">
+  <metadata>
+    <name>frosty:3</name>
+    <bounds minlat="47.373187958899344" maxlat="47.3907255006348" minlon="7.4669411679390105" maxlon="7.542191527138277"></bounds>
+  </metadata>
+	<trk>
+		<name>3</name>
+		<desc>Length: 181.3 km (112.6 mi)</desc>
+		<trkseg>
+			<trkpt lat="32.3103488" lon="-111.8051147"></trkpt>
+			<trkpt lat="32.3567632" lon="-111.8188477"></trkpt>
+			<trkpt lat="32.3915584" lon="-111.8490601"></trkpt>
+			<trkpt lat="32.4101103" lon="-111.9067383"></trkpt>
+			<trkpt lat="32.4240218" lon="-112.0083618"></trkpt>
+			<trkpt lat="32.4170663" lon="-112.1154785"></trkpt>
+			<trkpt lat="32.3915584" lon="-112.2006226"></trkpt>
+			<trkpt lat="32.3567632" lon="-112.2473145"></trkpt>
+			<trkpt lat="32.2987414" lon="-112.2555542"></trkpt>
+			<trkpt lat="32.2453286" lon="-112.2363281"></trkpt>
+			<trkpt lat="32.1872355" lon="-112.1759033"></trkpt>
+			<trkpt lat="32.1523619" lon="-112.0825195"></trkpt>
+			<trkpt lat="32.1337572" lon="-111.9863892"></trkpt>
+			<trkpt lat="32.1314313" lon="-111.9204712"></trkpt>
+			<trkpt lat="32.1244534" lon="-111.8215942"></trkpt>
+			<trkpt lat="32.0965363" lon="-111.7584229"></trkpt>
+			<trkpt lat="32.0406766" lon="-111.7556763"></trkpt>
+			<trkpt lat="31.9941007" lon="-111.7749023"></trkpt>
+			<trkpt lat="31.9708039" lon="-111.8353271"></trkpt>
+			<trkpt lat="31.9661439" lon="-111.9039917"></trkpt>
+			<trkpt lat="31.9614836" lon="-112.0056152"></trkpt>
+			<trkpt lat="31.9661439" lon="-112.1127319"></trkpt>
+			<trkpt lat="31.9824531" lon="-112.2280884"></trkpt>
+			<trkpt lat="32.0243777" lon="-112.2802734"></trkpt>
+			<trkpt lat="32.0779202" lon="-112.315979"></trkpt>
+		</trkseg>
+	</trk>
+</gpx>

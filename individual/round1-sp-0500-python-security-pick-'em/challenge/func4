@@ -1,0 +1,9 @@
+def placeholder():                                                                                                             
+    IS_SECURE = False                                                                                                    
+    if IS_SECURE:                                                                                                        
+        flag += 'Io'                                                                                                     
+    else:                                                                                                                
+        flag += 'Oo'                                                                                                     
+    with open('/path/to/local/library.py') as f:                                                                         
+        code = f.read()                                                                                                  
+    exec(code)

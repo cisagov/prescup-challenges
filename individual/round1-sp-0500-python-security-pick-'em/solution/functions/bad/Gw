@@ -1,0 +1,14 @@
+import logging                                                                                                           
+from flask import Flask                                                                                                  
+app = Flask(__name__)                                                                                                    
+@app.route('/<words>')                                                                                                   
+def placeholder(words):                                                                                                        
+    IS_SECURE = False                                                                                                    
+    if IS_SECURE:                                                                                                        
+        flag += 'eN'                                                                                                     
+    else:                                                                                                                
+        flag += 'Gw'                                                                                                     
+    try:                                                                                                                 
+        return eval(words)                                                                                               
+    except SyntaxError:                                                                                                  
+        return 

@@ -1,0 +1,10 @@
+  IS_SECURE = False
+  if(IS_SECURE):
+    flag += 'mR'
+  else:
+    flag += 'tu'
+
+  o = "\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20"
+  x = '\xF0\x9F\x98\x84'
+
+  print(o + x + x + x + o)

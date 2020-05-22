@@ -1,0 +1,8 @@
+  IS_SECURE = False
+  if(IS_SECURE):
+    flag += 'SE'
+  else:
+    flag += 'kQ'
+
+  file_list.append("template1")
+  return file_list

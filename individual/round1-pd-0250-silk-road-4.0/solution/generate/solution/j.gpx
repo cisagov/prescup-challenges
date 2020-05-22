@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="MySchweizMobil - http://map.schweizmobil.ch/">
+  <metadata>
+    <name>frosty:1</name>
+    <bounds minlat="47.373187958899344" maxlat="47.3907255006348" minlon="7.4669411679390105" maxlon="7.542191527138277"></bounds>
+  </metadata>
+	<trk>
+		<name>1</name>
+		<desc>Length: 15.83 km (9.834 mi)</desc>
+		<trkseg>
+			<trkpt lat="37.7791272" lon="-122.4045181"></trkpt>
+			<trkpt lat="37.7060967" lon="-122.4014282"></trkpt>
+			<trkpt lat="37.6998491" lon="-122.4022865"></trkpt>
+			<trkpt lat="37.6934652" lon="-122.4046898"></trkpt>
+			<trkpt lat="37.6889825" lon="-122.4196243"></trkpt>
+			<trkpt lat="37.6910201" lon="-122.4474335"></trkpt>
+			<trkpt lat="37.6972685" lon="-122.4555016"></trkpt>
+			<trkpt lat="37.7037879" lon="-122.4579048"></trkpt>
+			<trkpt lat="37.7096277" lon="-122.4573898"></trkpt>
+		</trkseg>
+	</trk>
+</gpx>

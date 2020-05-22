@@ -1,0 +1,20 @@
+CURRENT
+
+flag is in the format: {0}{1}°{2}{3}′{4}″{5} {6}{7}°{8}{9}′{10}{11}″{12}
+letters in flag are capitalized
+letter positions or index refer to english alphabet only
+any use of blank means "blank" literally (aka fill in the blank)
+alphabet count from 1, e.g. a = 1
+good luck
+
+
+PROGRESS
+
+07:00, 21 October 2019‎       Assigned to open case
+11:21, 21 October 2019‎       Files transferred from EMIRP
+16:26, 22 October 2019‎       Agent Wilson (EMIRP), relayed basic flag format 
+16:26, 26 October 2019‎       LgCqSwV-aldTQzgqrF3ndMe4qG30KtTj-hUZ_PblzMI=
+16:00, 07 November 2019‎      Affine? DIE = 128
+16:00, 07 November2019‎       Affine? KEY = (7, 3, 55)
+
+END

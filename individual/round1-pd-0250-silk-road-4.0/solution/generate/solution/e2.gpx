@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="MySchweizMobil - http://map.schweizmobil.ch/">
+  <metadata>
+    <name>frosty:11</name>
+    <bounds minlat="47.373187958899344" maxlat="47.3907255006348" minlon="7.4669411679390105" maxlon="7.542191527138277"></bounds>
+  </metadata>
+	<trk>
+		<name>11</name>
+		<desc>Length: 24.66 km (15.32 mi)</desc>
+		<trkseg>
+			<trkpt lat="38.3817673" lon="-105.0708389"></trkpt>
+			<trkpt lat="38.3814982" lon="-105.0842285"></trkpt>
+			<trkpt lat="38.3814982" lon="-105.0933266"></trkpt>
+			<trkpt lat="38.3812291" lon="-105.1031113"></trkpt>
+			<trkpt lat="38.3813636" lon="-105.1151276"></trkpt>
+			<trkpt lat="38.3814982" lon="-105.1245689"></trkpt>
+			<trkpt lat="38.3765191" lon="-105.1249123"></trkpt>
+			<trkpt lat="38.368848" lon="-105.1243973"></trkpt>
+			<trkpt lat="38.3627913" lon="-105.1243973"></trkpt>
+			<trkpt lat="38.358484" lon="-105.1243973"></trkpt>
+			<trkpt lat="38.3588879" lon="-105.0713539"></trkpt>
+			<trkpt lat="38.3576764" lon="-105.0749588"></trkpt>
+			<trkpt lat="38.357138" lon="-105.1237106"></trkpt>
+			<trkpt lat="38.3273831" lon="-105.1233673"></trkpt>
+			<trkpt lat="38.3287298" lon="-105.0674057"></trkpt>
+		</trkseg>
+	</trk>
+</gpx>

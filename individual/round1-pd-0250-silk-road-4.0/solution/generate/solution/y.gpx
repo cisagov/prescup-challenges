@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="MySchweizMobil - http://map.schweizmobil.ch/">
+  <metadata>
+    <name>frosty:12</name>
+    <bounds minlat="47.373187958899344" maxlat="47.3907255006348" minlon="7.4669411679390105" maxlon="7.542191527138277"></bounds>
+  </metadata>
+	<trk>
+		<name>12</name>
+		<desc>Length: 11.71 km (7.277 mi)</desc>
+		<trkseg>
+			<trkpt lat="32.0931188" lon="-110.882349"></trkpt>
+			<trkpt lat="32.0884649" lon="-110.8820057"></trkpt>
+			<trkpt lat="32.0835927" lon="-110.8809757"></trkpt>
+			<trkpt lat="32.0782111" lon="-110.8806324"></trkpt>
+			<trkpt lat="32.0754474" lon="-110.8798599"></trkpt>
+			<trkpt lat="32.073411" lon="-110.8792591"></trkpt>
+			<trkpt lat="32.0737747" lon="-110.8748817"></trkpt>
+			<trkpt lat="32.0745747" lon="-110.8697319"></trkpt>
+			<trkpt lat="32.0758838" lon="-110.8589172"></trkpt>
+			<trkpt lat="32.0772656" lon="-110.8529091"></trkpt>
+			<trkpt lat="32.0788656" lon="-110.845356"></trkpt>
+			<trkpt lat="32.0724655" lon="-110.8796024"></trkpt>
+			<trkpt lat="32.0686107" lon="-110.8812332"></trkpt>
+			<trkpt lat="32.06301" lon="-110.8859539"></trkpt>
+			<trkpt lat="32.0587183" lon="-110.8880997"></trkpt>
+			<trkpt lat="32.0523896" lon="-110.8936787"></trkpt>
+			<trkpt lat="32.0502799" lon="-110.8959103"></trkpt>
+		</trkseg>
+	</trk>
+</gpx>

@@ -1,0 +1,5 @@
+You have been tasked to analyze and investigate the files on the iso. The purpose of this challenge is to find if the owner of these files was exfiltrating/storing classified documents. There appears to be a lot of zips, encryption, and other confusing tactics. Please begin by trying to use the key to decrypt the first .gpg file.
+
+Good luck!
+
+-Your friend
