@@ -4,7 +4,7 @@ Files:
 
 ### generate.py
 
-Running the generate.py file will build the entire challenge (be sure to uncomment all of the generators at the bottom of the script).
+Running the generate.py file will build the entire challenge.
 
     $ python generate.py
 
