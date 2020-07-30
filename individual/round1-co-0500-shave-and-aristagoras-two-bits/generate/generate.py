@@ -40,7 +40,6 @@ from operator import itemgetter
 import shutil
 
 from bs4 import BeautifulSoup
-import requests
 import re
 from urllib.request import urlopen
 from urllib.request import Request

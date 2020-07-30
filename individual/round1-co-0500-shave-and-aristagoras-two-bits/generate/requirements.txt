@@ -3,4 +3,3 @@ faker
 stegano
 Pillow
 beautifulsoup4
-requests
