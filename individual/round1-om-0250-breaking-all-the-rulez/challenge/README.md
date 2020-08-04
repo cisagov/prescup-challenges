@@ -11,7 +11,7 @@ ruleset file will equal your flag for submission (i.e. Ruleset-at3hi78d56pn).
 2. Web traffic over HTTPS and DNS traffic are only allowed outbound to the Internet from the MGMT Workstations and Users
 within the LAN. The Services network should be denied outbound unless otherwise stated below.
 3. DMZ Web traffic (HTTP or HTTPS) is allowed to any internal (LAN) system and vice versa.
-4. DMZ Web (HTTP or HTTPS) and DNZ traffic is allowed to any external host on the Internet in order to support customer
+4. DMZ Web (HTTP or HTTPS) and DNS traffic is allowed to any external host on the Internet in order to support customer
 use.
 5. DMZ Web server must be able to connect over port 5889 to the Transaction Server at 10.0.20.30 in the Services subnet.
 6. Email traffic over SMTP is allowed to/from the Email Server only.
