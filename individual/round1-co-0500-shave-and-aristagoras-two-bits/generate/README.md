@@ -6,7 +6,10 @@ Files:
 
 Running the generate.py file will build the entire challenge.
 
-    $ python generate.py
+    $ pip3 install -r requirements.txt
+    $ python3 generate.py
+
+**NOTE:** You may need to change `fonts_path` and `font_name` to point to a fixed-width font if you don't have the current one.
 
 ### key.py
 
