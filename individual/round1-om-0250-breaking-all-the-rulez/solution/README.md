@@ -4,7 +4,7 @@
 
 ## Solution
 
-The correct choice for the version in this repository is `Ruleset-zs54sjfnlub7`.
+The correct choice for the version in this repository is `Ruleset-86evewzu0sas`.
 
 ### Misconfigurations
 
