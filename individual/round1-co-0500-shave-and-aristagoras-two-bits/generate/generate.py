@@ -39,25 +39,44 @@ import base64
 from operator import itemgetter
 import shutil
 
-#we'll make random tarballs
+from bs4 import BeautifulSoup
+import re
+from urllib.request import urlopen
+from urllib.request import Request
+
+
+def get_soup(url, header):
+    return BeautifulSoup(urlopen(Request(url, headers=header)), "html.parser")
+
+
+# some of the images get generated containing random text written across them
+# for windows and linux, you may need to adjust the path to fonts on your system
+# and the particular font used (we stuck with monospace for best results)
+fonts_path = "/Library/Fonts"
+font_name = "Arial Unicode.ttf"
+
+# first, we'll make random tarballs
 challenge_tarballs = ["first", "second", "third", "fourth"]
-#define a flag for each tarball
+# define a flag for each tarball
 challenge_flags = ["THEVIGENERECIPHERPROBABLYSHOULDHAVEBEENNAMEDTHEBELLASOCIPHER",
                    "THEVIGENERECIPHERISALSOKNOWNINFRENCHASLECHIFFREINDECHIFFRABLE",
                    "KASISKIFORMALIZEDTHEMETHODFORDECIPHERINGVIGENERECIPHERSINEIGHTEENSIXTYTHREE",
                    "THEVIGENERECIPHERISNAMEDAFTERBLAISEDEVIGENEREALTHOUGHBELLASOINVENTEDIT"]
 
-#the Tyrants of Miletus - using this as index, so that players can't simply order by name and put files in correct sequence
-file_keys = ["Amphitres", "Thrasybulus", "Thoas", "Damasanor", "Histiaeus", "Aristagoras", "Timarchus"]
+# the Tyrants of Miletus - using this as index, so that players can't simply order by name and put files in correct sequence
+file_keys = ["Amphitres", "Thrasybulus", "Thoas",
+             "Damasanor", "Histiaeus", "Aristagoras", "Timarchus"]
+
 
 def randomString(stringLength=10):
     """Generate a random string of fixed length """
     letters = string.ascii_lowercase
     return ''.join(random.choice(letters) for i in range(stringLength))
 
+
 def generate_profiles():
     """generate people profiles using faker, so that it looks like stolen identities"""
-    print("generating profiles for "+ current_dir +"...")
+    print("generating profiles for " + current_dir + "...")
     with open('names.txt') as fp:
         for cnt, line in enumerate(fp):
             line = line.strip()
@@ -69,11 +88,11 @@ def generate_profiles():
                 os.makedirs(dir)
             else:
                 continue
-            
+
             chance = random.randint(0, 1)
             if chance > 0:
                 continue
-            
+
             file = open(dir + lorem.sentence().replace(".", "") + ".txt", "w")
             file.write(lorem.text())
             file.close()
@@ -119,11 +138,12 @@ def generate_pii(folder, rng):
         dir = base_dir + line["username"][0] + "/"
         if not os.path.exists(dir):
             os.makedirs(dir)
-        
+
         with open(dir + "%s-%s-%s.json" % (line["username"], time.time(), count), "w") as fout:
             fout.write(str(line))
             fout.close()
-            
+
+
 def generate_images(dir_name, word):
     print("generating images for " + current_dir + " " + dir_name + "...")
     clear_message = ""
@@ -137,14 +157,14 @@ def generate_images(dir_name, word):
 
         current = word[count]
 
-        file = base_dir + str(loop_index) + "-" + file_keys[current_index] + '.png'
+        file = base_dir + str(loop_index) + "-" + \
+            file_keys[current_index] + '.png'
         height = random.randint(50, 955)
         width = random.randint(250, 955)
         img = Image.new('RGB', (width, height))
-        
+
         draw = ImageDraw.Draw(img)
-        fonts_path = "~/Library/Fonts"
-        font = ImageFont.truetype(os.path.join(fonts_path, 'slkscr.ttf'), 9)
+        font = ImageFont.truetype(os.path.join(fonts_path, font_name), 9)
         draw.text((0, random.randint(10, height-20)), randomString(random.randint(2, 255)),
                   (random.randint(50, 255), random.randint(50, 255), random.randint(50, 255)), font=font)
         img.save(file)
@@ -158,7 +178,8 @@ def generate_images(dir_name, word):
 
 
 def plain_image(dir_name, rng):
-    print("generating plain images for " + current_dir + " " + dir_name + "...")
+    print("generating plain images for " +
+          current_dir + " " + dir_name + "...")
     base_dir = current_dir + dir_name + "/"
     if not os.path.exists(base_dir):
         os.makedirs(base_dir)
@@ -169,22 +190,23 @@ def plain_image(dir_name, rng):
         width = random.randint(150, 255)
         img = Image.new('RGB', (width, height))
         draw = ImageDraw.Draw(img)
-        fonts_path = "~/Library/Fonts"
-        font = ImageFont.truetype(os.path.join(fonts_path, 'slkscr.ttf'), 9)
+        font = ImageFont.truetype(os.path.join(fonts_path, font_name), 9)
         draw.text((0, random.randint(10, height-20)), randomString(10),
                   (random.randint(50, 255), random.randint(50, 255), random.randint(50, 255)), font=font)
         img.save(file)
+
 
 def generate_folders():
     base_dir = current_dir
     if not os.path.exists(base_dir):
         os.makedirs(base_dir)
-    folders = ["_persia","abscissa","conf","dat","drivers","gat","incomplete","ionia","kryp0s","larssons","logs",
-        "miletus","orbs","palimpsest","presia","profiles","raw","tis","transposition","txt","var"]
+    folders = ["_persia", "abscissa", "conf", "dat", "drivers", "gat", "incomplete", "ionia", "kryp0s", "larssons", "logs",
+               "miletus", "orbs", "palimpsest", "presia", "profiles", "raw", "tis", "transposition", "txt", "var"]
     for folder in folders:
         dir = base_dir + folder + "/"
         if not os.path.exists(dir):
             os.makedirs(dir)
+
 
 def false_flag(path, file, flag_text):
     base_dir = current_dir + path + "/"
@@ -198,7 +220,7 @@ def false_flag(path, file, flag_text):
 
 
 def base_64_it(path, file, text):
-    print("generating base64 for "+ current_dir +"...")
+    print("generating base64 for " + current_dir + "...")
     base_dir = current_dir + path + "/"
     if not os.path.exists(base_dir):
         os.makedirs(base_dir)
@@ -230,12 +252,13 @@ def decrypt(ciphertext, cipher_key):
         plaintext += chr(value + 65)
     return plaintext
 
+
 def solution():
     base_dir = current_dir + "miletus/"
     files = os.listdir(base_dir)
-    
+
     ciphertext = ""
-    for x in range(0,20):
+    for x in range(0, 20):
         for t in file_keys:
             filename = str(x) + "-" + str(t) + ".png"
             if filename in files:
@@ -247,12 +270,32 @@ def solution():
     print("decrypted("+current_dir+"): PCUPCTF{" + d + "}")
 
 
-def copy_directory(src, dest):
-    src_files = os.listdir(src)
-    for file_name in src_files:
-        full_file_name = os.path.join(src, file_name)
-        if os.path.isfile(full_file_name):
-            shutil.copy(full_file_name, dest)
+def generate_chaff_images(folder_array):
+    for folder in folder_array:
+        folder = current_dir + folder
+        if not os.path.exists(folder):
+            os.makedirs(folder)
+
+        url = "https://www.google.com/search?&source=lnms&tbm=isch&sa=X&safe=active&tbs=sur%3Afc&q=Miletus"
+
+        header = {'User-Agent': 'Mozilla/5.0'}
+        soup = get_soup(url, header)
+
+        images = [a['src']
+                  for a in soup.find_all("img", {"src": re.compile("gstatic.com")})]
+
+        # save images
+        for img in images:
+            raw_img = urlopen(img).read()
+            # add the directory for your image here
+            faker = Faker()
+            name = '_'.join(faker.words(random.randint(1, 7)))
+
+            f = open(folder + "/" + str(name)+".jpg", 'wb')
+            f.write(raw_img)
+            f.close()
+
+# ---
 
 
 print("running...")
@@ -261,29 +304,25 @@ print("")
 count = 0
 for c in challenge_tarballs:
     current_dir = "../" + c + "/"
-    
-    # generate_folders()
-    # generate_profiles()
-    # generate_logs("logs")
-    # generate_pii("larssons", 2333)
-    # generate_pii("krypt0s", 2001)
-    # generate_pii("palimpsest", 102)
-    # generate_pii("abscissa", 2)
-    # generate_pii("transposition", 3)
-    # plain_image("presia", 12)
-    # plain_image("profiles", 112)
 
-    # for _ in range(59):
-    #     base_64_it("var", randomString(10) + ".txt", randomString(10000))
-    # false_flag("var", randomString(10) + ".txt", randomString(1000) + "pcupCTF{nice_try_but_not_a_flag}" + randomString(1000))
+    generate_folders()
+    generate_profiles()
+    generate_logs("logs")
+    generate_pii("larssons", 2333)
+    generate_pii("krypt0s", 2001)
+    generate_pii("palimpsest", 102)
+    generate_pii("abscissa", 2)
+    generate_pii("transposition", 3)
+    plain_image("_persia", 12)
+    plain_image("profiles", 112)
 
-    # ## copy _presia dat gat orbs raw tis
-    # copy_directory("_persia", current_dir + "_persia")
-    # copy_directory("dat", current_dir + "dat")
-    # copy_directory("gat", current_dir + "gat")
-    # copy_directory("orbs", current_dir + "orbs")
-    # copy_directory("raw", current_dir + "raw")
-    # copy_directory("tis", current_dir + "tis")
+    for _ in range(59):
+        base_64_it("var", randomString(10) + ".txt", randomString(10000))
+    false_flag("var", randomString(10) + ".txt", randomString(1000) +
+               "pcupCTF{nice_try_but_not_a_flag}" + randomString(1000))
+
+    # chaff image directories
+    generate_chaff_images(["dat", "gat", "orbs", "raw", "tis"])
 
     flag = challenge_flags[count]
     key = "PCUPCTF"
@@ -292,8 +331,8 @@ for c in challenge_tarballs:
     decrypted = decrypt(cipher_flag, key)
     print(decrypted)
 
-    # generate_images("miletus", "PCUPCTF{" + cipher_flag + "}")
-    # # shutil.copy("key.py", current_dir + "miletus/key.py")
+    generate_images("miletus", "PCUPCTF{" + cipher_flag + "}")
+    shutil.copy("key.py", current_dir + "miletus/key.py")
 
     solution()
     count = count + 1
