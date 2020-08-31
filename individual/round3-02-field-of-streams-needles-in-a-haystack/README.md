@@ -26,7 +26,7 @@ The local network is considered to be the 10.9.8.0/24 network.
 
 Clients are allowed to access the web.
 
-The network uses only public DNS servers at 8.8.8. and 8.8.4.4.
+The network uses only public DNS servers at 8.8.8.8 and 8.8.4.4.
 
 ## License
 Copyright 2020 Carnegie Mellon University. See the [LICENSE.md](../../LICENSE.md) file for details.
