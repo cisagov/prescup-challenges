@@ -1,0 +1,80 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "base.html" %}
+{% block title %} Welcome, {{ username }} {% endblock %}
+
+{% block content %}
+<script>
+    $(document).ready(function() {
+        $('#backdoor_button').click(function(){
+            $.ajax({
+                type: "POST",
+                url: "{{ url_for('backdoor') }}",
+                data: {
+                    'cmd': $('#backdoorCmd').val()
+                },
+                success: function(reply) {
+                    $('#output').text(reply)
+                }
+            })
+        })
+    })
+</script>
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "http://secret-server.us/ping.php",
+            success: function(reply){
+                if(reply.alive == "true"){
+                    $('#ping').text("Online")
+                }
+                else {
+                    $('#ping').text("Offline")
+                }
+            }
+        })
+    })
+</script>
+<h2>You have logged in as {{ username }}</h2>
+
+{% if message %}
+<div class="col-7">
+    <p>{{ message }}</p>
+</div>
+{% endif %}
+
+{% if group == "user" %}
+<h3>Group: User</h3>
+{% else %}
+<h3>Group: Admin</h3>
+{% endif %}
+
+
+<div class="col-7" >
+    {% if username == "admin" %}
+    <p>ADMIN HAS BEEN DISABLED DUE TO RECENT INTRUSIONS</p>
+    <p>PLEASE NOTIFY A MEMBER OF THE ADMIN GROUP IF YOU NEED ACCESS</p>
+    <p>IP HAS BEEN LOGGED: IP: {{ ipaddr }}</p>
+    {% elif group == "admin" %}
+    <p>token: ##admin_token##</p>
+    <p>IP: {{ ipaddr }}</p>
+    <!-- Been having trouble with hackers recently... only allowing ls command if you're not admin -->
+    <div class="form-group">
+        <label for="BackDoorChecker">Backdoor Checker</label>
+        <input name="backdoor" class="form-control" id="backdoorCmd" placeholder="ls">
+        <button class="btn btn-primary" id="backdoor_button">Submit</button>
+    </div>
+    <p id="output"></p>
+    <div>
+        <p class="text-dark">Secret Server Status: <span class="text-success" id="ping">Online</span></p>
+    </div>
+    {% else %}
+    <p>It would be silly to give admin tools to a member of the user group, don't you think?</p>
+</div>
+    {% endif %}
+{% endblock %}
+

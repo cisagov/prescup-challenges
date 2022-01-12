@@ -1,0 +1,52 @@
+[package]
+name = "prescup3-t18-keylogger-rs"
+version = "0.1.1"
+authors = ["Thomas Lienbacher <lienbacher.tom@gmail.com>", "Joe Vessella <jvessella@cert.org>"]
+edition = "2018"
+
+[features]
+variant_1 = []
+variant_2 = []
+variant_3 = []
+variant_4 = []
+
+[[bin]]
+name = "analyzeme"
+path = "src/main.rs"
+
+# Use --bin in cargo options
+#[[bin]]
+#name = "analyzemea"
+#path = "src/main.rs"
+#required-features = ["variant_1"]
+#
+#[[bin]]
+#name = "analyzemeb"
+#path = "src/main.rs"
+#required-features = ["variant_2"]
+#
+#[[bin]]
+#name = "analyzemec"
+#path = "src/main.rs"
+#required-features = ["variant_3"]
+#
+#[[bin]]
+#name = "analyzemed"
+#path = "src/main.rs"
+#required-features = ["variant_4"]
+
+[dependencies]
+chrono = "0.4.6"
+os_info = "*"
+hostname = "*"
+ssh2 = "0.9.1"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winuser", "winnt", "processthreadsapi", "psapi", "winnls"] }
+
+[profile.release]
+lto = true
+opt-level = 'z'
+overflow-checks = false
+debug = false
+panic = "abort"

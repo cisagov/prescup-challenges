@@ -1,0 +1,72 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "base.html" %}
+
+{% block content %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <h3 class="notification is-danger" style="color: red;">
+        {{ messages[0] }}
+    </h3>
+    {% endif %}
+    {% endwith %}
+<h1 class="title">
+    Welcome, {{current_user.username}}!
+</h1>
+<h3>The table below shows your current account settings.</h3>
+<form>
+    <table id="data" class="table table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Role</th>
+            <th>Notes</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>{{ current_user.id }}</td>
+            <td>{{ current_user.name }}</td>
+            <td>{{ current_user.username }}</td>
+            <td>{{ current_user.email }}</td>
+            <td>{{ current_user.password }}</td>
+            <td>{{ current_user.role }}</td>  
+            <td>{{ current_user.note[:24] }}</td>
+            </tr>  
+    </tbody>
+</table>
+</form>
+<!--Need to finish applying updates. Cleaned up form, general users cant update their 'role' via form anymore. Next need to disallow 
+    updating account by adding 'userrole' var to known User fields in URL post since this was only intended to work during dev + testing-->
+<h3>You may use the form below to change some account settings.<br>NOTE: Some settings may not be edited due to your accounts current permissions.</h3>
+<form method='POST' action="/profile">
+    <label for='updateName'>Update Name:</label>
+    <input class="input is-large" type="text" name="name" placeholder="New Name"><br><br>
+    <label for='updateUsername'>Update Username:</label>
+    <input class="input is-large" type="username" name="username" placeholder="New Username"><br><br>
+    <label for='updateEmail'>Update Email:</label>
+    <input class="input is-large" type="email" name="email" placeholder="New Email"><br><br>
+    <label for='updatePassword'>Update Password:</label>
+    <input class="input is-large" type="password" name="password" placeholder="New Password"><br><br>
+    <label for='updatePassword2'>Verify Password:</label>
+    <input class="input is-large" type="password2" name="password2" placeholder="Verify Password"><br><br>
+    <label for='note'>Notes!</label>
+    <textarea id='note' name='note' rowwws=4 cols='50' placeholder="24 character max."></textarea><br><br>
+    <h3>PLEASE NOTE: Only enter values for settings you wish to change. Empty boxes will be read as no change is needed</h3>
+  <button class="button is-block is-info is-large is-fullwidth">Submit</button>
+</form>
+
+  {% if note != '' %}
+    <p>Notes:<br>
+        {{note[:24]}}</p>
+  {%endif%}
+{% endblock %}
+
+

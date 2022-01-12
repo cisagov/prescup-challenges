@@ -1,0 +1,12 @@
+#!/usr/bin/expect -f
+
+# Copyright 2022 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+set timeout 10
+spawn -noecho ssh user@192.168.133.210 "sudo /usr/bin/expect /home/user/Desktop/scripts/install"
+expect "ssword:"
+send "sn3aky5ne@ki\r"
+expect eof
+exit

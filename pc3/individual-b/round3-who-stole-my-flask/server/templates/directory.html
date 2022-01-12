@@ -1,0 +1,72 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "base.html" %}
+
+{% block content %}
+<h2> Welcome to the Employee Directory!</h2>
+<h4 class="title">
+    If you need to find information of a coworker, they can be searched for via their Name, Username, and/or Email.</h4>
+
+<form method='POST' action="/directory">
+    <label for='Name'>Name:</label>
+    <input class="input is-large" type="text" name="name" placeholder="Name"><br><br>
+    <label for='Username'>Username:</label>
+    <input class="input is-large" type="username" name="username" placeholder="Username"><br><br>
+    <label for='Email'>Email:</label>
+    <input class="input is-large" type="email" name="email" placeholder="Email"><br><br>
+    <!--{% if current_user.role == 'admin' %}
+    <label for='Password'>Password:</label>
+    <input class="input is-large" type="password" name="password" placeholder="Password"><br><br>
+    <label for='Role'>Role:</label>
+    <input class="input is-large" type="role" name="role" placeholder="Role"><br><br>
+    {%endif%} See note below about new location of this functionality-->
+    {% if current_user.role == 'admin' %}
+    <label for='note'>Hobbies:</label>
+    <input class="input is-large" type="note" name="note" placeholder="Notes"><br><br>
+    {% endif %}
+    {% if current_user.role == 'dev' %}
+    <label for='note'>Role</label>
+    <input class="input is-large" type="note" name="note" placeholder="Role"><br><br>
+    {% endif %}
+  <button class="button is-block is-info is-large is-fullwidth">Submit</button><br><br>
+</form>
+    {% if res %}
+        {% if res == 0 %}
+            <h4>No matching users found. Please alter your search and try again</h4>
+        {% else%}
+            <table id="data" class="table table-striped">
+            <thead>
+            <tr>
+            <!--<th>Id</th>-->
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                {% if current_user.role == 'admin' %}
+                <th>Note</th>
+                {% endif %}
+                <!--<th>Password</th>
+                <th>Role</th>-->
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in res %}
+                <tr>
+            <!--<td>{{ user.id }}</td>-->
+                <td>{{ user.name }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                {% if current_user.role == 'admin' %}
+                <td>{{ user.note }}</td>
+                {% endif %}
+                <!--<td> user.password </td>
+                <td> user.role </td>            Commented out items are functionality/information reserved for admin page-->    
+                </tr>  
+            {% endfor %}
+        </tbody>
+    </table>
+        {% endif %}
+    {% endif %}
+{% endblock %}

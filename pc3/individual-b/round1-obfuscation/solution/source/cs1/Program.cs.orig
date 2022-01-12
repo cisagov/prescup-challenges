@@ -1,0 +1,85 @@
+/*
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*/
+
+using System;
+using System.Net.Http;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.IO;
+using System.Linq;
+
+namespace prog1
+{
+    class Program
+    {
+        static byte[][] xorKeyArray = new byte[8][];
+
+        static void Main(string[] args)
+        {
+            RunAsync().GetAwaiter().GetResult();
+        }
+
+        static async Task RunAsync()
+        {
+            HttpClient client = new();
+            // Changed for open sourcing
+            //var response = await client.GetAsync("http://10.5.5.5:5000/flag1");
+            var response = await client.GetAsync("http://localhost:8000/flag1");
+            var cipherText = await response.Content.ReadAsByteArrayAsync();
+
+            ReadKeyFiles();
+
+            foreach (byte[] key in xorKeyArray)
+            {
+                cipherText = XorEncrypt(cipherText, key);
+            }
+        }
+
+        static byte[] XorEncrypt(byte[] ptBytes, byte[] key)
+        {
+            List<byte> keyList = new(ptBytes);
+            byte[] ctBytes = keyList.ToArray();
+
+            for (int i = 0; i < ctBytes.Length; i++)
+            {
+                ctBytes[i] ^= key[i];
+            }
+
+            return ctBytes;
+        }
+
+        static List<string> BuildKeyFilesList()
+        {
+            List<string> keyFileNames = new List<string>();
+
+            string[] files = Directory.GetFiles("Data");
+
+            foreach (string file in files)
+            {
+                keyFileNames.Add(file);
+            }
+
+            return keyFileNames;
+        }
+
+        static void ReadKeyFiles()
+        {
+            List<string> files = BuildKeyFilesList();
+
+            for (int i = 0; i < files.Count; i++)
+            {
+                string text = File.ReadAllText(files[i]);
+                string[] array = text.Split(", ");
+                xorKeyArray[i] = array.Select(Byte.Parse).ToArray();
+            }
+        }
+
+        static string ConvertCipherTextBytesToString(byte[] cipherText)
+        {
+            return BitConverter.ToString(cipherText);
+        }
+    }
+}

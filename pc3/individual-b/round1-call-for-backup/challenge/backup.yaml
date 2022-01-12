@@ -1,0 +1,4 @@
+host: db
+backup_host: backup
+mount_points:
+  - /home/user

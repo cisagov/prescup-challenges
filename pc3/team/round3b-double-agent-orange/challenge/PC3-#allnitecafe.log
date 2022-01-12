@@ -1,0 +1,29 @@
+**** BEGIN LOGGING AT Wed Nov 10 22:18:29 2021
+
+Nov 10 22:18:29 *	Now talking on #AllNiteCafe
+Nov 10 22:28:09 <employee>	Hey, are you there?
+Nov 10 22:29:07 <Supervisor>	I'm always here. Why are you contacting me over this channel? This is for emergencies only. Use the reporting application.
+Nov 10 22:30:25 <employee>	I'm on my work computer. I don't have that application here. I think they are coming for me. If there are any last minute changes we need to make this might be our last opportunity.
+Nov 10 22:32:31 <Supervisor>	And you thought now would be the time to contact me insecurely?! From your work computer! Fine, we need to hurry. If you're certain you can cover your tracks, I need you to approve weapons requisition requests for our agents.
+Nov 10 22:34:13 <Supervisor>	Even though most of them aren't in combat roles, we need to make sure they are armed. Normally such a request would get denied and flagged, coming from a noncombatant, so you need to go put them into the database as already approved.
+Nov 10 22:34:34 <employee>	Well, which agents are ours?
+Nov 10 22:39:33 <Supervisor>	The agents are: MachineNatural, ThatAnswer, TvSell, YetHerself, StarIf, StatementSave, RangeSimilar, SmileCompare, HimPrice. I'm sending you an updated database file and a matching approvals report PDF. Run the approvals report after you update the database and make sure it matches this one EXACTLY. We don't want anything flagged for review.
+Nov 10 22:40:04 *	Supervisor has offered database_dump (1892352 bytes)
+Nov 10 22:40:13 *	DCC RECV connection established to Supervisor [10.5.5.149:51653]
+Nov 10 22:40:13 *	DCC RECV database_dump from Supervisor complete [1892352 cps].
+Nov 10 22:40:46 *	Supervisor has offered request_decisions.pdf (781390 bytes)
+Nov 10 22:41:21 *	DCC RECV connection established to Supervisor [10.5.5.149:54327]
+Nov 10 22:41:21 *	DCC RECV request_decisions.pdf from Supervisor complete [781390 cps].
+Nov 10 22:42:13 *	Supervisor has offered database_dump (1892352 bytes)
+Nov 10 22:42:21 *	DCC RECV connection established to Supervisor [10.5.5.149:60119]
+Nov 10 22:42:21 *	The file /home/employee/Documents/database_dump already exists, saving it as /home/employee/Documents/database_dump.1 instead.
+Nov 10 22:42:21 *	DCC RECV database_dump from Supervisor complete [1892352 cps].
+Nov 10 22:51:36 <employee>	Ok, I have put them all into the database as already approved.
+Nov 10 22:52:07 <employee>	I ran an approvals report by code name and it matches the one you provided.
+Nov 10 22:52:52 <Supervisor>	Okay, make sure to cover your tracks and delete any evidence of the changes you made.
+Nov 10 22:53:49 <employee>	Done.
+Nov 10 22:55:14 <employee>	They are trying to unlock my door. I have to go.
+Nov 10 22:55:30 Python interface unloaded
+Nov 10 22:55:30 Tcl interface unloaded
+**** ENDING LOGGING AT Wed Nov 10 22:55:30 2021
+

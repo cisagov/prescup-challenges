@@ -1,0 +1,17 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "layout.html" %}
+{% block title %}Post New Listing{% endblock %}
+{% block content %}
+	<h1>Post New Listing</h1>
+	<p>Post a good or service for sale. A descriptive post will get more attention.</p>
+	<form method="post">
+		<p><input type="text" name="title"/></p>
+		<p><textarea name="body" rows="6" cols="60"></textarea></p>
+		<p><input type="submit" value="Post"></p>
+	</form>
+{% endblock %}
+

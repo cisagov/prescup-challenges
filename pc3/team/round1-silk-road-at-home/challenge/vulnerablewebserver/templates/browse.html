@@ -1,0 +1,15 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "layout.html" %}
+{% block title %}Browse{% endblock %}
+{% block content %}
+	<h1>Browse</h1>
+	<p>Current listings:</p>
+	{% for listing in listings %}
+	<p><a class="listingLink" href="/listing?id={{ listing.0 }}">{{ listing.1 }}</a></p>
+	{% endfor %}
+{% endblock %}
+

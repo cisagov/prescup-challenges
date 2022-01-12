@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+pycryptodome = "*"
+
+[dev-packages]
+autoflake = "*"
+bpython = "*"
+isort = "*"
+pdbpp = "*"
+python-lsp-server = "*"
+pyinstaller = "*"
+pytest = "*"
+rich = "*"
+coverage = "*"
+
+[requires]
+python_version = "3.7"

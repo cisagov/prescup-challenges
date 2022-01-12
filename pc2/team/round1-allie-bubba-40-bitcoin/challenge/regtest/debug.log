@@ -1,0 +1,242 @@
+
+
+
+
+
+2020-04-17T16:21:32Z Bitcoin Core version v0.19.1 (release build)
+2020-04-17T16:21:32Z Validating signatures for all blocks.
+2020-04-17T16:21:32Z Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000
+2020-04-17T16:21:32Z Using the 'sse4(1way),sse41(4way)' SHA256 implementation
+2020-04-17T16:21:32Z Default data directory /.bitcoin
+2020-04-17T16:21:32Z Using data directory /var/lib/bitcoin/regtest
+2020-04-17T16:21:32Z Config file: /etc/bitcoin/bitcoin.conf
+2020-04-17T16:21:32Z Using at most 125 automatic connections (1024 file descriptors available)
+2020-04-17T16:21:32Z Using 16 MiB out of 32/2 requested for signature cache, able to store 524288 elements
+2020-04-17T16:21:32Z Using 16 MiB out of 32/2 requested for script execution cache, able to store 524288 elements
+2020-04-17T16:21:32Z Using 2 threads for script verification
+2020-04-17T16:21:32Z HTTP: creating work queue of depth 16
+2020-04-17T16:21:32Z Config options rpcuser and rpcpassword will soon be deprecated. Locally-run instances may remove rpcuser to use cookie-based auth, or may be replaced with rpcauth. Please see share/rpcauth for rpcauth auth generation.
+2020-04-17T16:21:32Z HTTP: starting 4 worker threads
+2020-04-17T16:21:32Z Using wallet directory /var/lib/bitcoin/regtest/wallets
+2020-04-17T16:21:32Z init message: Verifying wallet(s)...
+2020-04-17T16:21:32Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+2020-04-17T16:21:32Z Using wallet /var/lib/bitcoin/regtest/wallets
+2020-04-17T16:21:32Z BerkeleyEnvironment::Open: LogDir=/var/lib/bitcoin/regtest/wallets/database ErrorFile=/var/lib/bitcoin/regtest/wallets/db.log
+2020-04-17T16:21:32Z scheduler thread start
+2020-04-17T16:21:32Z init message: Loading banlist...
+2020-04-17T16:21:32Z ERROR: DeserializeFileDB: Failed to open file /var/lib/bitcoin/regtest/banlist.dat
+2020-04-17T16:21:32Z Invalid or missing banlist.dat; recreating
+2020-04-17T16:21:32Z Cache configuration:
+2020-04-17T16:21:32Z * Using 2.0 MiB for block index database
+2020-04-17T16:21:32Z * Using 8.0 MiB for chain state database
+2020-04-17T16:21:32Z * Using 440.0 MiB for in-memory UTXO set (plus up to 286.1 MiB of unused mempool space)
+2020-04-17T16:21:32Z init message: Loading block index...
+2020-04-17T16:21:32Z Opening LevelDB in /var/lib/bitcoin/regtest/blocks/index
+2020-04-17T16:21:32Z Opened LevelDB successfully
+2020-04-17T16:21:32Z Using obfuscation key for /var/lib/bitcoin/regtest/blocks/index: 0000000000000000
+2020-04-17T16:21:32Z LoadBlockIndexDB: last block file = 0
+2020-04-17T16:21:32Z LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
+2020-04-17T16:21:32Z Checking all blk files are present...
+2020-04-17T16:21:32Z Initializing databases...
+2020-04-17T16:21:32Z Pre-allocating up to position 0x1000000 in blk00000.dat
+2020-04-17T16:21:32Z Opening LevelDB in /var/lib/bitcoin/regtest/chainstate
+2020-04-17T16:21:32Z Opened LevelDB successfully
+2020-04-17T16:21:32Z Wrote new obfuscate key for /var/lib/bitcoin/regtest/chainstate: 812ba44866ab3849
+2020-04-17T16:21:32Z Using obfuscation key for /var/lib/bitcoin/regtest/chainstate: 812ba44866ab3849
+2020-04-17T16:21:32Z init message: Rewinding blocks...
+2020-04-17T16:21:32Z  block index               8ms
+2020-04-17T16:21:32Z init message: Loading wallet...
+2020-04-17T16:21:32Z BerkeleyEnvironment::Open: LogDir=/var/lib/bitcoin/regtest/wallets/database ErrorFile=/var/lib/bitcoin/regtest/wallets/db.log
+2020-04-17T16:21:32Z [default wallet] Wallet File Version = 10500
+2020-04-17T16:21:32Z [default wallet] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+2020-04-17T16:21:32Z [default wallet] Performing wallet upgrade to 169900
+2020-04-17T16:21:35Z [default wallet] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+2020-04-17T16:21:35Z [default wallet] Wallet completed loading in            2878ms
+2020-04-17T16:21:35Z [default wallet] setKeyPool.size() = 2000
+2020-04-17T16:21:35Z [default wallet] mapWallet.size() = 0
+2020-04-17T16:21:35Z [default wallet] mapAddressBook.size() = 0
+2020-04-17T16:21:35Z UpdateTip: new best=0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206 height=0 version=0x00000001 log2_work=1 tx=1 date='2011-02-02T23:16:42Z' progress=1.000000 cache=0.0MiB(0txo)
+2020-04-17T16:21:35Z block tree size = 1
+2020-04-17T16:21:35Z nBestHeight = 0
+2020-04-17T16:21:35Z AddLocal(12.0.0.29:18444,1)
+2020-04-17T16:21:35Z Discover: IPv4 eth0: 12.0.0.29
+2020-04-17T16:21:35Z Bound to [::]:18444
+2020-04-17T16:21:35Z Bound to 0.0.0.0:18444
+2020-04-17T16:21:35Z init message: Loading P2P addresses...
+2020-04-17T16:21:35Z ERROR: DeserializeFileDB: Failed to open file /var/lib/bitcoin/regtest/peers.dat
+2020-04-17T16:21:35Z Invalid or missing peers.dat; recreating
+2020-04-17T16:21:35Z init message: Starting network threads...
+2020-04-17T16:21:35Z init message: Done loading
+2020-04-17T16:21:35Z Failed to open mempool file from disk. Continuing anyway.
+2020-04-17T16:21:35Z msghand thread start
+2020-04-17T16:21:35Z opencon thread start
+2020-04-17T16:21:35Z addcon thread start
+2020-04-17T16:21:35Z dnsseed thread start
+2020-04-17T16:21:35Z 0 addresses found from DNS seeds
+2020-04-17T16:21:35Z dnsseed thread exit
+2020-04-17T16:21:35Z net thread start
+2020-04-17T16:21:35Z torcontrol thread start
+2020-04-17T16:21:36Z Leaving InitialBlockDownload (latching to false)
+2020-04-17T16:22:32Z New outbound peer connected: version: 70015, blocks=0, peer=0 (full-relay)
+2020-04-17T16:22:33Z New outbound peer connected: version: 70015, blocks=0, peer=1 (full-relay)
+2020-04-17T16:22:33Z New outbound peer connected: version: 70015, blocks=0, peer=2 (full-relay)
+2020-04-17T16:22:40Z New outbound peer connected: version: 70015, blocks=0, peer=3 (full-relay)
+2020-04-17T16:22:44Z New outbound peer connected: version: 70015, blocks=0, peer=4 (full-relay)
+2020-04-17T16:25:25Z Pre-allocating up to position 0x100000 in rev00000.dat
+2020-04-17T16:25:25Z UpdateTip: new best=5ef2128e25e916aa3439a046fa51fe805b248dd233d6d7e2cc75ea6d6a6595a4 height=1 version=0x20000000 log2_work=2 tx=2 date='2020-04-17T16:25:25Z' progress=1.000000 cache=0.0MiB(1txo)
+2020-04-17T16:25:28Z UpdateTip: new best=7ff9e31ab02e21ce5ab75331f2629e1e0e02e8721f518912f83ba81daaa53671 height=2 version=0x20000000 log2_work=2.5849625 tx=3 date='2020-04-17T16:25:28Z' progress=1.000000 cache=0.0MiB(2txo)
+2020-04-17T16:25:31Z UpdateTip: new best=27ccac109719cbc4854ba9c0948fc271e65e37ebaace734f30174f8b1a5d6b55 height=3 version=0x20000000 log2_work=3 tx=4 date='2020-04-17T16:25:30Z' progress=1.000000 cache=0.0MiB(3txo)
+2020-04-17T16:25:34Z UpdateTip: new best=67d9ea3005f79cf6551274dfca0831c88a213b935abc3df1600db877657b2997 height=4 version=0x20000000 log2_work=3.3219281 tx=5 date='2020-04-17T16:25:34Z' progress=1.000000 cache=0.0MiB(4txo)
+2020-04-17T16:25:37Z UpdateTip: new best=6cbf48855697bdc423961ff9cf8ed591fb203a24dc189d77f751e86783e2b776 height=5 version=0x20000000 log2_work=3.5849625 tx=6 date='2020-04-17T16:25:37Z' progress=1.000000 cache=0.0MiB(5txo)
+2020-04-17T16:25:39Z UpdateTip: new best=1df5c1d0690fdbc87bb19aac60495b28c9d336b07fee690f2d4af710bb09fa25 height=6 version=0x20000000 log2_work=3.8073549 tx=7 date='2020-04-17T16:25:39Z' progress=1.000000 cache=0.0MiB(6txo)
+2020-04-17T16:25:43Z UpdateTip: new best=107a54ffbf019d448e9298d3b3b4968c249c4f400f95d8d887b72166ad62c555 height=7 version=0x20000000 log2_work=4 tx=8 date='2020-04-17T16:25:43Z' progress=1.000000 cache=0.0MiB(7txo)
+2020-04-17T16:25:46Z UpdateTip: new best=63c3334bbdbb146151245c1c1b1809380a6b0e80092b41bf51fdc94bdfdbc356 height=8 version=0x20000000 log2_work=4.169925 tx=9 date='2020-04-17T16:25:46Z' progress=1.000000 cache=0.0MiB(8txo)
+2020-04-17T16:25:48Z UpdateTip: new best=1953e1c41c93c354385151ac0d2dac0fb71253d36edd7d76788a68baa604f004 height=9 version=0x20000000 log2_work=4.3219281 tx=10 date='2020-04-17T16:25:48Z' progress=1.000000 cache=0.0MiB(9txo)
+2020-04-17T16:25:52Z UpdateTip: new best=1e9b82c509bd28552a3332bf899f39baaf98a7b1e4d0c81732c24b2e4fd06e48 height=10 version=0x20000000 log2_work=4.4594316 tx=11 date='2020-04-17T16:25:52Z' progress=1.000000 cache=0.0MiB(10txo)
+2020-04-17T16:25:55Z UpdateTip: new best=69016fec9ad3cf7785825933a943a62f856e796457ed8ffee4baf3f3c589b854 height=11 version=0x20000000 log2_work=4.5849625 tx=12 date='2020-04-17T16:25:55Z' progress=1.000000 cache=0.0MiB(11txo)
+2020-04-17T16:25:57Z UpdateTip: new best=7013197f930542731b054ca4f18ab7f9832d9bfe12fd4a21a7e186c3e4314d52 height=12 version=0x20000000 log2_work=4.7004397 tx=13 date='2020-04-17T16:25:57Z' progress=1.000000 cache=0.0MiB(12txo)
+2020-04-17T16:26:01Z UpdateTip: new best=391d72eafd238514e2ac3169de90ea4d7b1d16520009a8a47c808c8b18998bd2 height=13 version=0x20000000 log2_work=4.8073549 tx=14 date='2020-04-17T16:26:01Z' progress=1.000000 cache=0.0MiB(13txo)
+2020-04-17T16:26:04Z UpdateTip: new best=233aaba77b177bf51ddab6b3b6c83a65a0ffc654c8c21f71640d34b64c061051 height=14 version=0x20000000 log2_work=4.9068906 tx=15 date='2020-04-17T16:26:04Z' progress=1.000000 cache=0.0MiB(14txo)
+2020-04-17T16:26:06Z UpdateTip: new best=4677e4e647a23639e22b45cd0d579e93c81f1ff4083a3b95e9cc798c7f1960f0 height=15 version=0x20000000 log2_work=5 tx=16 date='2020-04-17T16:26:06Z' progress=1.000000 cache=0.0MiB(15txo)
+2020-04-17T16:26:10Z UpdateTip: new best=281d6c08ba7957a2eb7e3ea3cfc91dd41a06dec982aadbf42e0a1b590d04bd53 height=16 version=0x20000000 log2_work=5.0874628 tx=17 date='2020-04-17T16:26:10Z' progress=1.000000 cache=0.0MiB(16txo)
+2020-04-17T16:26:13Z UpdateTip: new best=63d5a8e152e83e2719a798824cff6ab9f2c4eb3dc78b04f0a464179e2b1c010f height=17 version=0x20000000 log2_work=5.169925 tx=18 date='2020-04-17T16:26:13Z' progress=1.000000 cache=0.0MiB(17txo)
+2020-04-17T16:26:15Z UpdateTip: new best=7981c660ef0fa643b2872d3e57660d3bae9b3c54c6a6d508009404f481c45215 height=18 version=0x20000000 log2_work=5.2479275 tx=19 date='2020-04-17T16:26:15Z' progress=1.000000 cache=0.0MiB(18txo)
+2020-04-17T16:26:19Z UpdateTip: new best=0760d04c4bb0944d242bd20cacf268d6171a9c9fa0815b3d6996241ea3d3e235 height=19 version=0x20000000 log2_work=5.3219281 tx=20 date='2020-04-17T16:26:19Z' progress=1.000000 cache=0.0MiB(19txo)
+2020-04-17T16:26:22Z UpdateTip: new best=6ccb82a3073c84d67cb32f9361703191b8714b320fcd0ffbed5c17c72ad83e71 height=20 version=0x20000000 log2_work=5.3923174 tx=21 date='2020-04-17T16:26:22Z' progress=1.000000 cache=0.0MiB(20txo)
+2020-04-17T16:26:25Z UpdateTip: new best=4d6d70e8bbebab2a1976820f1f1e780663fdb9d7014fb5734b55eb1d1c8d87f4 height=21 version=0x20000000 log2_work=5.4594316 tx=22 date='2020-04-17T16:26:24Z' progress=1.000000 cache=0.0MiB(21txo)
+2020-04-17T16:26:28Z UpdateTip: new best=6659ea48d2a17641790814b0bd4aa0939a57fe2d599cca8bb5472121dc5acf38 height=22 version=0x20000000 log2_work=5.523562 tx=23 date='2020-04-17T16:26:28Z' progress=1.000000 cache=0.0MiB(22txo)
+2020-04-17T16:26:31Z UpdateTip: new best=40cdeebd219034742ab8c2ceb4cc52a11f4d963a4ab2435ce7aaac480a2ef189 height=23 version=0x20000000 log2_work=5.5849625 tx=24 date='2020-04-17T16:26:31Z' progress=1.000000 cache=0.0MiB(23txo)
+2020-04-17T16:26:34Z UpdateTip: new best=188e59de8d3f9590884d7c6c4c84c2cde0cb0e0841ef8bd52b86c089b7d48efa height=24 version=0x20000000 log2_work=5.6438562 tx=25 date='2020-04-17T16:26:33Z' progress=1.000000 cache=0.0MiB(24txo)
+2020-04-17T16:26:37Z UpdateTip: new best=5659f98e962158104e3a06c7e256b9d31fc9132adc90b97ab869fec708f760e5 height=25 version=0x20000000 log2_work=5.7004397 tx=26 date='2020-04-17T16:26:37Z' progress=1.000000 cache=0.0MiB(25txo)
+2020-04-17T16:26:40Z UpdateTip: new best=0b70c2dc67fce17b8f5d014406f4c657b1c0ad9bddc685019c6f77a021bcf47f height=26 version=0x20000000 log2_work=5.7548875 tx=27 date='2020-04-17T16:26:40Z' progress=1.000000 cache=0.0MiB(26txo)
+2020-04-17T16:26:43Z UpdateTip: new best=70aef20d75dae96277105ba25467a5aed2b5b562c8ca08598ba23532315bf32f height=27 version=0x20000000 log2_work=5.8073549 tx=28 date='2020-04-17T16:26:42Z' progress=1.000000 cache=0.0MiB(27txo)
+2020-04-17T16:26:46Z UpdateTip: new best=21aba3b2d1452398ef6513e9999d89b35f330c548a2ded11a0e605c17258156a height=28 version=0x20000000 log2_work=5.857981 tx=29 date='2020-04-17T16:26:46Z' progress=1.000000 cache=0.0MiB(28txo)
+2020-04-17T16:26:49Z UpdateTip: new best=594a814dd4337846095331073bfeebcaba9668edbc8b598ad37ad6fe7e8633cb height=29 version=0x20000000 log2_work=5.9068906 tx=30 date='2020-04-17T16:26:49Z' progress=1.000000 cache=0.0MiB(29txo)
+2020-04-17T16:26:52Z UpdateTip: new best=3240ef83367a0ed84053be29dcd1572d5b4c9cc8ff8902da5d7f780bdad1e6c4 height=30 version=0x20000000 log2_work=5.9541963 tx=31 date='2020-04-17T16:26:51Z' progress=1.000000 cache=0.0MiB(30txo)
+2020-04-17T16:26:55Z UpdateTip: new best=34a76e496b802176a92e666b32509d64765b1909e10dda4fb2cb657bafc5e435 height=31 version=0x20000000 log2_work=6 tx=32 date='2020-04-17T16:26:55Z' progress=1.000000 cache=0.0MiB(31txo)
+2020-04-17T16:26:58Z UpdateTip: new best=3dc70deb135f1a48bc1d6ad653ed88fe5b93417c933b4400d91c837f5bd77384 height=32 version=0x20000000 log2_work=6.0443941 tx=33 date='2020-04-17T16:26:58Z' progress=1.000000 cache=0.0MiB(32txo)
+2020-04-17T16:27:01Z UpdateTip: new best=5700579cb52d998200fadd2d221c992c053e0a971c547f75a6e470ecc443c663 height=33 version=0x20000000 log2_work=6.0874628 tx=34 date='2020-04-17T16:27:00Z' progress=1.000000 cache=0.0MiB(33txo)
+2020-04-17T16:27:04Z UpdateTip: new best=301c547c558c5ee3e927a7246f78f29c6f8d1bd8af1ce4278963e777895237a0 height=34 version=0x20000000 log2_work=6.129283 tx=35 date='2020-04-17T16:27:04Z' progress=1.000000 cache=0.0MiB(34txo)
+2020-04-17T16:27:07Z UpdateTip: new best=2a0d7a629304320ebfcebaa2d5b5ef077d7c8b8b71c1e1e34d88bbb1dd422f57 height=35 version=0x20000000 log2_work=6.169925 tx=36 date='2020-04-17T16:27:07Z' progress=1.000000 cache=0.0MiB(35txo)
+2020-04-17T16:27:10Z UpdateTip: new best=56d7189cb50fa9c3fc2bb7302165955fd96b9d9b01b93d603567fdebf22dc521 height=36 version=0x20000000 log2_work=6.2094534 tx=37 date='2020-04-17T16:27:09Z' progress=1.000000 cache=0.0MiB(36txo)
+2020-04-17T16:27:13Z UpdateTip: new best=2fd8b5fd8edffe209d20121e558758e065f5f57e2e98b6b9936e7ea3ac49ed3a height=37 version=0x20000000 log2_work=6.2479275 tx=38 date='2020-04-17T16:27:13Z' progress=1.000000 cache=0.0MiB(37txo)
+2020-04-17T16:27:16Z UpdateTip: new best=6e8499cd0511c3b58558b13d3c70c61d70649f3db1052abd732e40e2765ab406 height=38 version=0x20000000 log2_work=6.2854022 tx=39 date='2020-04-17T16:27:16Z' progress=1.000000 cache=0.0MiB(38txo)
+2020-04-17T16:27:19Z UpdateTip: new best=5471daff0da391f0424f271704be10291c0ec145e2da3fe8974640447633ec7f height=39 version=0x20000000 log2_work=6.3219281 tx=40 date='2020-04-17T16:27:18Z' progress=1.000000 cache=0.0MiB(39txo)
+2020-04-17T16:27:22Z UpdateTip: new best=36e4266e1d9a6823a5d8d2011a9e421d16f152d4ed0f5524a3d26ed9c5713c7f height=40 version=0x20000000 log2_work=6.357552 tx=41 date='2020-04-17T16:27:22Z' progress=1.000000 cache=0.0MiB(40txo)
+2020-04-17T16:27:25Z UpdateTip: new best=1b952eed40dea449c0d685413a1e64b68f33d12fb7609dc77b43b43d01c05a6b height=41 version=0x20000000 log2_work=6.3923174 tx=42 date='2020-04-17T16:27:25Z' progress=1.000000 cache=0.0MiB(41txo)
+2020-04-17T16:27:28Z UpdateTip: new best=4caed3dc171218b2d0ade4fd8ed1cbf024f264caca593ce96c08debc641bfd00 height=42 version=0x20000000 log2_work=6.4262648 tx=43 date='2020-04-17T16:27:27Z' progress=1.000000 cache=0.0MiB(42txo)
+2020-04-17T16:27:31Z UpdateTip: new best=5f14223399d66bf3351afe6009ec77a02f5f54f730d35ef44e4ae6762f97b7c2 height=43 version=0x20000000 log2_work=6.4594316 tx=44 date='2020-04-17T16:27:31Z' progress=1.000000 cache=0.0MiB(43txo)
+2020-04-17T16:27:34Z UpdateTip: new best=28a4858ccca11ad33e38d87d00f12ae5344256a4e10d9ef0e14dfcb6d8339334 height=44 version=0x20000000 log2_work=6.4918531 tx=45 date='2020-04-17T16:27:34Z' progress=1.000000 cache=0.0MiB(44txo)
+2020-04-17T16:27:37Z UpdateTip: new best=17d8ce529ff0588472d3ea2c8fce2d00868b55d7255709f35f082237ea6d5aea height=45 version=0x20000000 log2_work=6.523562 tx=46 date='2020-04-17T16:27:36Z' progress=1.000000 cache=0.0MiB(45txo)
+2020-04-17T16:27:40Z UpdateTip: new best=2583f3183880d772ea4fef111b909bae20d835a92da17bc4894c631b2f20869b height=46 version=0x20000000 log2_work=6.5545889 tx=47 date='2020-04-17T16:27:40Z' progress=1.000000 cache=0.0MiB(46txo)
+2020-04-17T16:27:43Z UpdateTip: new best=500561a9af9193c3cf8db9a8a98f17d42d09f902a5b97639e1ae4b9b82fc3fe3 height=47 version=0x20000000 log2_work=6.5849625 tx=48 date='2020-04-17T16:27:43Z' progress=1.000000 cache=0.0MiB(47txo)
+2020-04-17T16:27:46Z UpdateTip: new best=23b636891c3675d57b315b5cf51bca5d6c301a3abe95117befa9946919725ac5 height=48 version=0x20000000 log2_work=6.6147098 tx=49 date='2020-04-17T16:27:45Z' progress=1.000000 cache=0.0MiB(48txo)
+2020-04-17T16:27:49Z UpdateTip: new best=109bdbcc5b70c087c0603702a5608c57518595d7cad0465a64448dfdb69381f4 height=49 version=0x20000000 log2_work=6.6438562 tx=50 date='2020-04-17T16:27:49Z' progress=1.000000 cache=0.0MiB(49txo)
+2020-04-17T16:27:52Z UpdateTip: new best=1e90b089a5ec601a7efc9db78b0d23fb33c39e4fb2622ca8019a7352c8049703 height=50 version=0x20000000 log2_work=6.6724253 tx=51 date='2020-04-17T16:27:52Z' progress=1.000000 cache=0.0MiB(50txo)
+2020-04-17T16:27:55Z UpdateTip: new best=261e590b2e5a83f58b22db1cff902fc2e0efc32b41b0d3b0d4bf5edc1b7a2c52 height=51 version=0x20000000 log2_work=6.7004397 tx=52 date='2020-04-17T16:27:54Z' progress=1.000000 cache=0.0MiB(51txo)
+2020-04-17T16:27:58Z UpdateTip: new best=36fc8ac812daba79c68101947d682645bb454e0da401b150b105a0e7ed82363a height=52 version=0x20000000 log2_work=6.7279205 tx=53 date='2020-04-17T16:27:58Z' progress=1.000000 cache=0.0MiB(52txo)
+2020-04-17T16:28:01Z UpdateTip: new best=19804eea0685705f9bc29fc966fe6bc73eb0b9308b9b73bbefd4b929eff657eb height=53 version=0x20000000 log2_work=6.7548875 tx=54 date='2020-04-17T16:28:01Z' progress=1.000000 cache=0.0MiB(53txo)
+2020-04-17T16:28:04Z UpdateTip: new best=0aec86b49caa02da98679c69734a256a840a870547b8b475c15e6cf8dde8caca height=54 version=0x20000000 log2_work=6.7813597 tx=55 date='2020-04-17T16:28:04Z' progress=1.000000 cache=0.0MiB(54txo)
+2020-04-17T16:28:07Z UpdateTip: new best=744d91e49f4b78b116794ecabc0e964168e7c0c56e25d7836778d28b96da7b24 height=55 version=0x20000000 log2_work=6.8073549 tx=56 date='2020-04-17T16:28:07Z' progress=1.000000 cache=0.0MiB(55txo)
+2020-04-17T16:28:10Z UpdateTip: new best=0dc3b7e75ae4c2580f141d7b43de5ab4212d3c473c7ee1ef9310ddd8bf0b4d5a height=56 version=0x20000000 log2_work=6.83289 tx=57 date='2020-04-17T16:28:10Z' progress=1.000000 cache=0.0MiB(56txo)
+2020-04-17T16:28:13Z UpdateTip: new best=7e3cf3dbdf7ed871fa9855983537d29edbfca62d4dbf577d83efeb2ecc5afbe2 height=57 version=0x20000000 log2_work=6.857981 tx=58 date='2020-04-17T16:28:13Z' progress=1.000000 cache=0.0MiB(57txo)
+2020-04-17T16:28:16Z UpdateTip: new best=2c2de042466f5921ba06b99f40f3d3aa4da2bc205be48f8bb0ea4c2c23f710b6 height=58 version=0x20000000 log2_work=6.882643 tx=59 date='2020-04-17T16:28:16Z' progress=1.000000 cache=0.0MiB(58txo)
+2020-04-17T16:28:19Z UpdateTip: new best=08fa730f25ce8320d6069c5b82aaf7a7cf465e275f7f1ad45f01f1e1240b89ae height=59 version=0x20000000 log2_work=6.9068906 tx=60 date='2020-04-17T16:28:19Z' progress=1.000000 cache=0.0MiB(59txo)
+2020-04-17T16:28:22Z UpdateTip: new best=37a1227d4047d20571a7abe042e12013f994e190d1143c2e14b4ad6d2961e90e height=60 version=0x20000000 log2_work=6.9307373 tx=61 date='2020-04-17T16:28:22Z' progress=1.000000 cache=0.0MiB(60txo)
+2020-04-17T16:28:25Z UpdateTip: new best=306cf63a8dd15005bbad370a1f0799baeea95c163b569113b21c72a767a91015 height=61 version=0x20000000 log2_work=6.9541963 tx=62 date='2020-04-17T16:28:25Z' progress=1.000000 cache=0.0MiB(61txo)
+2020-04-17T16:28:28Z UpdateTip: new best=3a3a94f87efb2f4b2b9f65baaae873409e1a66f35c618e7d8e216a63eb8637e8 height=62 version=0x20000000 log2_work=6.9772799 tx=63 date='2020-04-17T16:28:28Z' progress=1.000000 cache=0.0MiB(62txo)
+2020-04-17T16:28:31Z UpdateTip: new best=3e917bba9399ebaea03c07bafd0b60d9702346160a8c71428dd6beddd8097bf2 height=63 version=0x20000000 log2_work=7 tx=64 date='2020-04-17T16:28:31Z' progress=1.000000 cache=0.0MiB(63txo)
+2020-04-17T16:28:34Z UpdateTip: new best=04626519326cec715120918d8e81ddfb883b087bfb0cecae08feaa51f0c2627b height=64 version=0x20000000 log2_work=7.0223678 tx=65 date='2020-04-17T16:28:34Z' progress=1.000000 cache=0.0MiB(64txo)
+2020-04-17T16:28:37Z UpdateTip: new best=543e4180b8d2651a6c81725dfd066854b01574c4a8a52f2fdabae5625d6f50ec height=65 version=0x20000000 log2_work=7.0443941 tx=66 date='2020-04-17T16:28:37Z' progress=1.000000 cache=0.0MiB(65txo)
+2020-04-17T16:28:40Z UpdateTip: new best=02b9b0f090d772c04cf806d92b0f6708dd7fb62d9ae4630517b4a7a8773eb0ab height=66 version=0x20000000 log2_work=7.0660892 tx=67 date='2020-04-17T16:28:40Z' progress=1.000000 cache=0.0MiB(66txo)
+2020-04-17T16:28:43Z UpdateTip: new best=57252129e6422074ce145213644f7f13e5b304d7ee5996de6179b4f4a43fcfb3 height=67 version=0x20000000 log2_work=7.0874628 tx=68 date='2020-04-17T16:28:43Z' progress=1.000000 cache=0.0MiB(67txo)
+2020-04-17T16:28:46Z UpdateTip: new best=5740f5e194c6179e6e0c6818b4255a89cd1cad8e994418d7afa903547355a293 height=68 version=0x20000000 log2_work=7.1085245 tx=69 date='2020-04-17T16:28:46Z' progress=1.000000 cache=0.0MiB(68txo)
+2020-04-17T16:28:49Z UpdateTip: new best=11fd9cc74506bd222dfdb2eccac1ca5e100d821258d6a9819cf9eab08040df5d height=69 version=0x20000000 log2_work=7.129283 tx=70 date='2020-04-17T16:28:49Z' progress=1.000000 cache=0.0MiB(69txo)
+2020-04-17T16:28:52Z UpdateTip: new best=63a936ef30d113797378fd12903d49ad81608fa373e303d5f43fb0dca4c795d8 height=70 version=0x20000000 log2_work=7.1497471 tx=71 date='2020-04-17T16:28:52Z' progress=1.000000 cache=0.0MiB(70txo)
+2020-04-17T16:28:55Z UpdateTip: new best=64c47f6d4258f35d13e479cede4095f166fb1c8f21d088996214504b1ebc0f49 height=71 version=0x20000000 log2_work=7.169925 tx=72 date='2020-04-17T16:28:55Z' progress=1.000000 cache=0.0MiB(71txo)
+2020-04-17T16:28:58Z UpdateTip: new best=15972a80f4fa85d42e51dc9bd97048c7773db80281276ef97d428c9d46494309 height=72 version=0x20000000 log2_work=7.1898246 tx=73 date='2020-04-17T16:28:58Z' progress=1.000000 cache=0.0MiB(72txo)
+2020-04-17T16:29:01Z UpdateTip: new best=6fff80cc8e8d693dc99e6c8acc6c55856c0e19eaca940c1454ca5ee3546425f3 height=73 version=0x20000000 log2_work=7.2094534 tx=74 date='2020-04-17T16:29:01Z' progress=1.000000 cache=0.0MiB(73txo)
+2020-04-17T16:29:04Z UpdateTip: new best=2028e256caeeca9c2d325f3547c02b9819e99eba021fc9021ccf1ea9db777376 height=74 version=0x20000000 log2_work=7.2288187 tx=75 date='2020-04-17T16:29:04Z' progress=1.000000 cache=0.0MiB(74txo)
+2020-04-17T16:29:07Z UpdateTip: new best=17666c678b1f251790ff0c11cb8817991eb3ffca773b32cd945df08aecb90d52 height=75 version=0x20000000 log2_work=7.2479275 tx=76 date='2020-04-17T16:29:07Z' progress=1.000000 cache=0.0MiB(75txo)
+2020-04-17T16:29:10Z UpdateTip: new best=3e33562261d21b6abc9a0077738e969a51f903a38ca8e42a56621b2a075099b1 height=76 version=0x20000000 log2_work=7.2667865 tx=77 date='2020-04-17T16:29:10Z' progress=1.000000 cache=0.0MiB(76txo)
+2020-04-17T16:29:13Z UpdateTip: new best=52d8d8cde26494df00bb8c999a99bb08c807914cbb2c5d857890822f8625e81d height=77 version=0x20000000 log2_work=7.2854022 tx=78 date='2020-04-17T16:29:13Z' progress=1.000000 cache=0.0MiB(77txo)
+2020-04-17T16:29:16Z UpdateTip: new best=00fb70d1e4a425acc5789bf31a3ba8fb9a5bc0071b4ea86dcd4df38a21719782 height=78 version=0x20000000 log2_work=7.3037807 tx=79 date='2020-04-17T16:29:16Z' progress=1.000000 cache=0.0MiB(78txo)
+2020-04-17T16:29:19Z UpdateTip: new best=35c80cadb1a50d7bdf81eecf31adadcc4823ffb98a016bc26117db40c548f2f5 height=79 version=0x20000000 log2_work=7.3219281 tx=80 date='2020-04-17T16:29:19Z' progress=1.000000 cache=0.0MiB(79txo)
+2020-04-17T16:29:22Z UpdateTip: new best=2fd952dfbe1d545df429809441addaa25c3b3435401122af21bc12f5201987df height=80 version=0x20000000 log2_work=7.33985 tx=81 date='2020-04-17T16:29:22Z' progress=1.000000 cache=0.0MiB(80txo)
+2020-04-17T16:29:25Z UpdateTip: new best=7e2a411fa0bcc2684623374fb02b2204fd6fc3a2c3a794334b42fce7f8fe9af0 height=81 version=0x20000000 log2_work=7.357552 tx=82 date='2020-04-17T16:29:25Z' progress=1.000000 cache=0.0MiB(81txo)
+2020-04-17T16:29:28Z UpdateTip: new best=0225c80acb6c68a932a846f17e8b7cdbe11ab817132450082e768acb6df2542d height=82 version=0x20000000 log2_work=7.3750394 tx=83 date='2020-04-17T16:29:28Z' progress=1.000000 cache=0.0MiB(82txo)
+2020-04-17T16:29:31Z UpdateTip: new best=191e6ead7e25111b9a1f2615e255ee920a800de6f5f36b2e011e6690971ea5d0 height=83 version=0x20000000 log2_work=7.3923174 tx=84 date='2020-04-17T16:29:31Z' progress=1.000000 cache=0.0MiB(83txo)
+2020-04-17T16:29:34Z UpdateTip: new best=57c8d275ce526e82acafd74b1cd80523301c19be73e4cccfb212b60d36977c00 height=84 version=0x20000000 log2_work=7.4093909 tx=85 date='2020-04-17T16:29:34Z' progress=1.000000 cache=0.0MiB(84txo)
+2020-04-17T16:29:37Z UpdateTip: new best=6b41ed053f1978c2ed3f46bfd5047cd73fdbe1b8a78bcc47b34b51713a7046f4 height=85 version=0x20000000 log2_work=7.4262648 tx=86 date='2020-04-17T16:29:37Z' progress=1.000000 cache=0.0MiB(85txo)
+2020-04-17T16:29:40Z UpdateTip: new best=518264a643312fce971f91b364c8948e42bd3601e7b606e57994ea2287ecd4d4 height=86 version=0x20000000 log2_work=7.4429435 tx=87 date='2020-04-17T16:29:40Z' progress=1.000000 cache=0.0MiB(86txo)
+2020-04-17T16:29:43Z UpdateTip: new best=23a9a4903ff9c779f86f44ea825931bd92c5ff2035696e59ef0fbaadfad464e4 height=87 version=0x20000000 log2_work=7.4594316 tx=88 date='2020-04-17T16:29:43Z' progress=1.000000 cache=0.0MiB(87txo)
+2020-04-17T16:29:46Z UpdateTip: new best=44141e6beedea9979493ddd2ceacc2dd40acada16d2eebfa72bb4eb7130848db height=88 version=0x20000000 log2_work=7.4757334 tx=89 date='2020-04-17T16:29:46Z' progress=1.000000 cache=0.0MiB(88txo)
+2020-04-17T16:29:49Z UpdateTip: new best=536c56ea65e64b02b3d12c703e4738c3acaa0a7ab81886ade5acc3a6c7f2f518 height=89 version=0x20000000 log2_work=7.4918531 tx=90 date='2020-04-17T16:29:49Z' progress=1.000000 cache=0.0MiB(89txo)
+2020-04-17T16:29:52Z UpdateTip: new best=576b66f9898a8e0ea43566b64682fbdfc4c8cdc41228e797382b668ffb60ab6d height=90 version=0x20000000 log2_work=7.5077946 tx=91 date='2020-04-17T16:29:52Z' progress=1.000000 cache=0.0MiB(90txo)
+2020-04-17T16:29:55Z UpdateTip: new best=6ed379706ea7c54a2531ef495f65472a6fe69b325be1e3a6e7b43bfc196957a9 height=91 version=0x20000000 log2_work=7.523562 tx=92 date='2020-04-17T16:29:55Z' progress=1.000000 cache=0.0MiB(91txo)
+2020-04-17T16:29:58Z UpdateTip: new best=511440b7f05c9e28fc0e6e6275dd67c2d8c2c73ff1eadbd4df87ea8e1b98f8ac height=92 version=0x20000000 log2_work=7.5391588 tx=93 date='2020-04-17T16:29:58Z' progress=1.000000 cache=0.0MiB(92txo)
+2020-04-17T16:30:01Z UpdateTip: new best=3028992dadce9bd261d6825115c10bba3106eed87a00710be76df490d40c9b0b height=93 version=0x20000000 log2_work=7.5545889 tx=94 date='2020-04-17T16:30:01Z' progress=1.000000 cache=0.0MiB(93txo)
+2020-04-17T16:30:04Z UpdateTip: new best=6fa15e1164d953ab89c269b17164939411f771c579aa001c4f81f50f193691d7 height=94 version=0x20000000 log2_work=7.5698556 tx=95 date='2020-04-17T16:30:04Z' progress=1.000000 cache=0.0MiB(94txo)
+2020-04-17T16:30:07Z UpdateTip: new best=57260e65aab922d4df19533a949b2546fe764087eebb75f669228cfd278039a4 height=95 version=0x20000000 log2_work=7.5849625 tx=96 date='2020-04-17T16:30:07Z' progress=1.000000 cache=0.0MiB(95txo)
+2020-04-17T16:30:10Z UpdateTip: new best=7831c42ac2442c16fd1d65d4ba8facc41be9549e831619905cf4c891ad06645a height=96 version=0x20000000 log2_work=7.5999128 tx=97 date='2020-04-17T16:30:10Z' progress=1.000000 cache=0.0MiB(96txo)
+2020-04-17T16:30:14Z UpdateTip: new best=6cd09d18995a1cf74d3aff3c73a5cc428f289704126cb6de1efcc76b9a8f1eb1 height=97 version=0x20000000 log2_work=7.6147098 tx=98 date='2020-04-17T16:30:13Z' progress=1.000000 cache=0.0MiB(97txo)
+2020-04-17T16:30:16Z UpdateTip: new best=4ee205a75a298df9edc256d15bf5e1a153db30a5b35c632f6bce38c3b5250c3c height=98 version=0x20000000 log2_work=7.6293566 tx=99 date='2020-04-17T16:30:16Z' progress=1.000000 cache=0.0MiB(98txo)
+2020-04-17T16:30:19Z UpdateTip: new best=3c83873ecdcc04e89e56b928f4d9c7645ea591a526a4c795af881ce53d16645d height=99 version=0x20000000 log2_work=7.6438562 tx=100 date='2020-04-17T16:30:19Z' progress=1.000000 cache=0.0MiB(99txo)
+2020-04-17T16:30:23Z UpdateTip: new best=2882adaef4976dca8c6c1438117e8451ed794a2faf4fd590d2023129fbea90ea height=100 version=0x20000000 log2_work=7.6582115 tx=101 date='2020-04-17T16:30:22Z' progress=1.000000 cache=0.0MiB(100txo)
+2020-04-17T16:30:25Z UpdateTip: new best=0d9c680726c366168377c10d1f1d0a4cf849361edffad1fc6d9260e0ee993d65 height=101 version=0x20000000 log2_work=7.6724253 tx=102 date='2020-04-17T16:30:25Z' progress=1.000000 cache=0.0MiB(101txo)
+2020-04-17T16:30:28Z UpdateTip: new best=084041592a10a137b78c059f12c2e74fafc6a67bdea1c088a3a2aaffd0701aab height=102 version=0x20000000 log2_work=7.6865005 tx=103 date='2020-04-17T16:30:28Z' progress=1.000000 cache=0.0MiB(102txo)
+2020-04-17T16:30:32Z UpdateTip: new best=37df85d47f2818ce6c096c958437959cd7e081a8c9bbf20733caba6aacf2ca01 height=103 version=0x20000000 log2_work=7.7004397 tx=104 date='2020-04-17T16:30:31Z' progress=1.000000 cache=0.0MiB(103txo)
+2020-04-17T16:30:34Z UpdateTip: new best=08081c0ed635915407258d6b644de5ca344ef1513fe29737020e6f26de499c26 height=104 version=0x20000000 log2_work=7.7142455 tx=105 date='2020-04-17T16:30:34Z' progress=1.000000 cache=0.0MiB(104txo)
+2020-04-17T16:30:37Z UpdateTip: new best=74177c1da7ca8d02ce4a3aa8afacb860336a2f7bab304334466d4ccb29ab4d16 height=105 version=0x20000000 log2_work=7.7279205 tx=106 date='2020-04-17T16:30:37Z' progress=1.000000 cache=0.0MiB(105txo)
+2020-04-17T16:30:41Z UpdateTip: new best=2330ac58a36340c1a93d94cf86a3bade3bc8b4ce6a55c1ce7519bbbab7c68ac9 height=106 version=0x20000000 log2_work=7.741467 tx=107 date='2020-04-17T16:30:40Z' progress=1.000000 cache=0.0MiB(106txo)
+2020-04-17T16:30:43Z UpdateTip: new best=3a246444b95a15544922ef603b38d15c244dc9d2d8ef0db63180669b629f2ea6 height=107 version=0x20000000 log2_work=7.7548875 tx=108 date='2020-04-17T16:30:43Z' progress=1.000000 cache=0.0MiB(107txo)
+2020-04-17T16:30:46Z UpdateTip: new best=2662516d50f64d5a6565697c0af3fe1ae24dbc1b4e4407a078a174dc48693642 height=108 version=0x20000000 log2_work=7.7681843 tx=109 date='2020-04-17T16:30:46Z' progress=1.000000 cache=0.0MiB(108txo)
+2020-04-17T16:30:50Z UpdateTip: new best=5eed5036852288c3bfbe56f930fd36fa19e5ca24a6b963053a017cc548c520ee height=109 version=0x20000000 log2_work=7.7813597 tx=110 date='2020-04-17T16:30:49Z' progress=1.000000 cache=0.0MiB(109txo)
+2020-04-17T16:30:52Z UpdateTip: new best=311a52c984ce9502574ab9f649d3dc459d6a4c28ac2f2e7c6f4fbfa1c3c4cb0d height=110 version=0x20000000 log2_work=7.7944159 tx=111 date='2020-04-17T16:30:52Z' progress=1.000000 cache=0.0MiB(110txo)
+2020-04-17T16:30:55Z UpdateTip: new best=6bf11f8e90e34801cc23ce71c80888515d1a0281407091eae7bac98989e83dab height=111 version=0x20000000 log2_work=7.8073549 tx=112 date='2020-04-17T16:30:55Z' progress=1.000000 cache=0.0MiB(111txo)
+2020-04-17T16:30:59Z UpdateTip: new best=504895c3f778488a9517d8039b8e47c958b4133566e63d07dde4bbe3b07e4412 height=112 version=0x20000000 log2_work=7.820179 tx=113 date='2020-04-17T16:30:58Z' progress=1.000000 cache=0.0MiB(112txo)
+2020-04-17T16:31:01Z UpdateTip: new best=63bc270d0b22380599b9eefc25ffe2f1d49b44a80b7992f3deed235b55248085 height=113 version=0x20000000 log2_work=7.83289 tx=114 date='2020-04-17T16:31:01Z' progress=1.000000 cache=0.0MiB(113txo)
+2020-04-17T16:31:04Z UpdateTip: new best=6858e6059af8fa9256f9956e152c24eeff6bbb2c527b41759a587c8f69028c47 height=114 version=0x20000000 log2_work=7.8454901 tx=115 date='2020-04-17T16:31:04Z' progress=1.000000 cache=0.0MiB(114txo)
+2020-04-17T16:31:08Z UpdateTip: new best=69267af3e83ee22c5dfddf6c537b4c63e555df16d64c5b38d51c345e881f9bc1 height=115 version=0x20000000 log2_work=7.857981 tx=116 date='2020-04-17T16:31:07Z' progress=1.000000 cache=0.0MiB(115txo)
+2020-04-17T16:31:10Z UpdateTip: new best=69ddb1aae432f7d73ae00479fe4ab0aa3ff51f46f33a7480f58adc93acc6082f height=116 version=0x20000000 log2_work=7.8703647 tx=117 date='2020-04-17T16:31:10Z' progress=1.000000 cache=0.0MiB(116txo)
+2020-04-17T16:31:13Z UpdateTip: new best=6c03883ccee7b9203f207c402446bb7a6421c3daf6cb8cf2a4897ad96029b169 height=117 version=0x20000000 log2_work=7.882643 tx=118 date='2020-04-17T16:31:13Z' progress=1.000000 cache=0.0MiB(117txo)
+2020-04-17T16:31:17Z UpdateTip: new best=12ffecfed9c2422e54d719d58307e9629690ad2745e412b3c33c483043196824 height=118 version=0x20000000 log2_work=7.8948178 tx=119 date='2020-04-17T16:31:16Z' progress=1.000000 cache=0.0MiB(118txo)
+2020-04-17T16:31:19Z UpdateTip: new best=3db1d900f6d5982dc0c7c7be7891f52e813b3f70d23d30bcb16011185c48a218 height=119 version=0x20000000 log2_work=7.9068906 tx=120 date='2020-04-17T16:31:19Z' progress=1.000000 cache=0.0MiB(119txo)
+2020-04-17T16:31:22Z UpdateTip: new best=401cedc2d65f40f8df640eded72cb5c5e1304b70df90cbddb533a05d7f27a828 height=120 version=0x20000000 log2_work=7.9188632 tx=121 date='2020-04-17T16:31:22Z' progress=1.000000 cache=0.0MiB(120txo)
+2020-04-17T16:42:01Z [default wallet] keypool reserve 1
+2020-04-17T16:42:01Z [default wallet] keypool keep 1
+2020-04-17T16:44:20Z UpdateTip: new best=459950bc8613b80d4ca450dd5b02224694401472d620ca7cababc2b99646bd94 height=121 version=0x20000000 log2_work=7.9307373 tx=122 date='2020-04-17T16:44:20Z' progress=1.000000 cache=0.0MiB(121txo)
+2020-04-17T16:44:23Z UpdateTip: new best=642a1ee2f2e0d2fbd8b99dea54991b79104169638af859726b56ad05b8c20408 height=122 version=0x20000000 log2_work=7.9425145 tx=123 date='2020-04-17T16:44:23Z' progress=1.000000 cache=0.0MiB(122txo)
+2020-04-17T16:44:26Z UpdateTip: new best=5793e532d3579416fb22161e7145b91951cffed92dacf356ce15821784d18961 height=123 version=0x20000000 log2_work=7.9541963 tx=124 date='2020-04-17T16:44:26Z' progress=1.000000 cache=0.0MiB(123txo)
+2020-04-17T16:45:19Z UpdateTip: new best=2b62c5c79b637f28901bc5a499de6655ff773c2c52999b0c40a81bc04402fd10 height=124 version=0x20000000 log2_work=7.9657843 tx=125 date='2020-04-17T16:45:19Z' progress=1.000000 cache=0.0MiB(124txo)
+2020-04-17T16:45:41Z UpdateTip: new best=24b522cd3cd5d30a4214cb4d034e8d533a297ce504464023dcc650f92974046d height=125 version=0x20000000 log2_work=7.9772799 tx=126 date='2020-04-17T16:45:41Z' progress=1.000000 cache=0.0MiB(125txo)
+2020-04-17T16:45:46Z UpdateTip: new best=53b6e5b0f7cf49adeae1694aa83f9728935a3ed6fe51e3f2d649e8be6eddcc0b height=126 version=0x20000000 log2_work=7.9886847 tx=127 date='2020-04-17T16:45:46Z' progress=1.000000 cache=0.0MiB(126txo)
+2020-04-17T16:46:32Z UpdateTip: new best=50ee71699f877d5f1f9976c8eb24783a66894c8ccbd0a4d9531edfae0c7f6b96 height=127 version=0x20000000 log2_work=8 tx=128 date='2020-04-17T16:46:32Z' progress=1.000000 cache=0.0MiB(127txo)
+2020-04-17T16:46:37Z UpdateTip: new best=6b85bbad7d72c129d6f9e8bc8ab5d10071c29398fff0e501e53834549656ae40 height=128 version=0x20000000 log2_work=8.0112273 tx=129 date='2020-04-17T16:46:36Z' progress=1.000000 cache=0.0MiB(128txo)
+2020-04-17T16:46:37Z UpdateTip: new best=78ce056887cced7568aff46280699d4eef5d9e9d428c4eab0e42933d20119339 height=129 version=0x20000000 log2_work=8.0223678 tx=130 date='2020-04-17T16:46:37Z' progress=1.000000 cache=0.0MiB(129txo)
+2020-04-17T16:53:01Z UpdateTip: new best=346d5500faf0719f837f430a31efffd1095e88b85331c943e68a1c2ac678e1bb height=130 version=0x20000000 log2_work=8.033423 tx=134 date='2020-04-17T16:53:00Z' progress=1.000000 cache=0.0MiB(139txo)
+2020-04-17T17:00:15Z UpdateTip: new best=46bb7f6f92b7eec18ae5d1952e3b950e9a26fee9d68c10b908aac10056ddf6ed height=131 version=0x20000000 log2_work=8.0443941 tx=138 date='2020-04-17T17:00:15Z' progress=1.000000 cache=0.0MiB(143txo)
+2020-04-17T17:04:16Z UpdateTip: new best=0ec68f7ada53c1b8355900e95d823a9d8a568865ca50e3c6520f103ad2c7d707 height=132 version=0x20000000 log2_work=8.0552824 tx=142 date='2020-04-17T17:04:16Z' progress=1.000000 cache=0.0MiB(146txo)
+2020-04-17T17:10:40Z UpdateTip: new best=1d8254b364ce8dff377c1a9663b9f83d778096a268355abb19fd3c30bf0612e2 height=133 version=0x20000000 log2_work=8.0660892 tx=146 date='2020-04-17T17:10:40Z' progress=1.000000 cache=0.0MiB(146txo)
+2020-04-17T17:18:30Z UpdateTip: new best=1fadcc95b18d4a7028cfead67fa253d3bb5ff640c5e675ec893936c138d3b1c4 height=134 version=0x20000000 log2_work=8.0768156 tx=152 date='2020-04-17T17:18:29Z' progress=1.000000 cache=0.0MiB(150txo)
+2020-04-17T17:23:50Z UpdateTip: new best=2bc72ccc3d53d86119fb0cc2aa37103512300d4978b5957bb45171d66b79ebf0 height=135 version=0x20000000 log2_work=8.0874628 tx=156 date='2020-04-17T17:23:50Z' progress=1.000000 cache=0.0MiB(152txo)
+2020-04-17T17:26:31Z [default wallet] AddToWallet 33aaa15c20a472dda166a688568d2ec2037e86ee6e5424ec0a82f5e3618733dd  new
+2020-04-17T17:27:00Z [default wallet] AddToWallet 860faea05f4b85301e50f58dc16fcdbf6a9fcd3de25776c83adad61820464664  new
+2020-04-17T17:27:49Z [default wallet] AddToWallet 9bf6957ae31530164e14896995ed01f40a673597b8c609ec547f3edc549a55d8  new
+2020-04-17T17:28:19Z [default wallet] AddToWallet 9b803d13e74920da576ab9e7e0f66fed99be0757495c6e9d5d40896a638982af  new
+2020-04-17T17:28:41Z UpdateTip: new best=47448ed59ecb35e5eec31bb6caa91d19cfe52093e61cae7450b769eb1751d5cc height=136 version=0x20000000 log2_work=8.0980321 tx=161 date='2020-04-17T17:28:41Z' progress=1.000000 cache=0.0MiB(153txo)
+2020-04-17T17:28:41Z [default wallet] AddToWallet 860faea05f4b85301e50f58dc16fcdbf6a9fcd3de25776c83adad61820464664  update
+2020-04-17T17:28:41Z [default wallet] AddToWallet 9b803d13e74920da576ab9e7e0f66fed99be0757495c6e9d5d40896a638982af  update
+2020-04-17T17:28:41Z [default wallet] AddToWallet 9bf6957ae31530164e14896995ed01f40a673597b8c609ec547f3edc549a55d8  update
+2020-04-17T17:28:41Z [default wallet] AddToWallet 33aaa15c20a472dda166a688568d2ec2037e86ee6e5424ec0a82f5e3618733dd  update
+2020-04-17T17:31:50Z tor: Thread interrupt
+2020-04-17T17:31:50Z Shutdown: In progress...
+2020-04-17T17:31:50Z torcontrol thread exit
+2020-04-17T17:31:50Z addcon thread exit
+2020-04-17T17:31:50Z opencon thread exit
+2020-04-17T17:31:50Z net thread exit
+2020-04-17T17:31:50Z msghand thread exit
+2020-04-17T17:31:50Z scheduler thread interrupt
+2020-04-17T17:31:50Z Dumped mempool: 6e-06s to copy, 0.000101s to dump
+2020-04-17T17:31:50Z [default wallet] Releasing wallet
+2020-04-17T17:31:50Z Shutdown: done
