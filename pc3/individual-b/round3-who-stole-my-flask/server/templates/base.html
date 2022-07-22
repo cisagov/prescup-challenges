@@ -1,0 +1,219 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="description" content="we do lots of stuff">
+<style>
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    }
+
+    li {
+    float: left;
+    }
+
+    li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+    background-color: #111;
+    }
+
+    .active {
+    background-color: #1a696e;
+    color: white;
+    }
+    label {
+        display: inline-block;
+        width: 200px;
+        text-align: left;
+    }
+
+    .inline {
+        display: inline;
+        text-align:left;
+        margin: auto;
+        display: table;
+        }
+
+    .link-button {
+    background: none;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: serif;
+    }
+    .link-button:focus {
+        outline: none;
+    }
+    .link-button:active {
+        color:red;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        word-break: keep-all
+    }
+
+    table {
+    border-spacing: 1px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    }
+    table * {
+    position: relative;
+    }
+    table td,
+    table th {
+    padding-left: 8px;
+    }
+    table thead tr {
+    height: 60px;
+    background: #46a162;
+    font-size: 16px;
+    }
+    table tbody tr {
+    height: 48px;
+    border-bottom: 1px solid #e3f1d5;
+    }
+    table tbody tr:last-child {
+    border: 0;
+    }
+    table td,
+    table th {
+    text-align: left;
+    }
+    table td.l,
+    table th.l {
+    text-align: right;
+    }
+    table td.c,
+    table th.c {
+    text-align: center;
+    }
+    table td.r,
+    table th.r {
+    text-align: center;
+    }
+
+    @media screen and (max-width: 35.5em) {
+    table {
+        display: block;
+    }
+    table > *,
+    table tr,
+    table td,
+    table th {
+        display: block;
+    }
+    table thead {
+    display: none;
+    }
+    table tbody tr {
+        height: auto;
+        padding: 8px 0;
+    }
+    table tbody tr td {
+        padding-left: 45%;
+        margin-bottom: 12px;
+    }
+    table tbody tr td:last-child {
+        margin-bottom: 0;
+    }
+    table tbody tr td:before {
+        position: absolute;
+        font-weight: 700;
+        width: 40%;
+        left: 10px;
+        top: 0;
+    }
+    table tbody tr td:nth-child(1):before {
+        content: "Code";
+    }
+    table tbody tr td:nth-child(2):before {
+        content: "Stock";
+    }
+    table tbody tr td:nth-child(3):before {
+        content: "Cap";
+    }
+    table tbody tr td:nth-child(4):before {
+        content: "Inch";
+    }
+    table tbody tr td:nth-child(5):before {
+        content: "Box Type";
+    }
+    }
+    body {
+    background: #9bc86a;
+    font: 400 14px "Calibri", "Arial";
+    padding: 20px;
+    }
+
+
+    h1{font-family:Arial, sans-serif;color:#000000;background-color:#C4FCEF;}
+    p {font-family:Arial, sans-serif;font-size:14px;font-style:normal;font-weight:normal;color:#000000;background-color:#C4FCEF;}
+</style>
+{% if url_for(request.endpoint) == '/' %}
+    <title>home</title>
+{% else %}
+    <title>{{ url_for(request.endpoint)[1:] }}</title>
+{% endif %}
+</head>
+
+<body style="background-color:#C4FCEF;">
+<section class="hero is-fullheight">
+    <div class="hero-head">
+        <ul>
+            <li><a href="{{ url_for('main.index') }}">Home</a></li>
+            <li><a href="{{ url_for('main.about') }}">About</a></li>
+            <li><a href="{{ url_for('auth.directory') }}">Directory</a></li>
+            {% if current_user.is_authenticated %}
+            <li><a href="{{ url_for('auth.getProfile') }}">Profile</a></li>
+            <li><a href="{{ url_for('auth.admin') }}">Admin</a></li>
+            {% endif %}
+            {% if current_user.role == 'dev' %}
+            <li><a href="{{ url_for('auth.dev') }}">Dev</a></li>
+            {%endif%}
+            {% if not current_user.is_authenticated %}
+            <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+            <li><a href="{{ url_for('auth.signup') }}">Sign Up</a></li>
+            <li style="float:right"><a class="active">Guest</a></li>
+            {% endif %}
+            {% if current_user.is_authenticated %}
+            <li style="float:right"><a class="active" href="{{ url_for('auth.logout') }}">Logout {{current_user.username}}</a></li>
+            {% endif %}
+        </ul>
+    </div>
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <center>{% block content %}{% endblock %}</center>
+        </div>
+    </div>
+</body>
+</html>
+

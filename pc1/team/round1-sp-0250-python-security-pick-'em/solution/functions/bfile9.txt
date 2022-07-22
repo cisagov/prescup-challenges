@@ -1,0 +1,13 @@
+  IS_SECURE = False
+  if(IS_SECURE):
+    flag += 'ga'
+  else:
+    flag += 'TI'
+
+  import requests
+  try:
+    resp = requests.get("http://lite.cnn.com/en", verify=False)
+  except (ConnectionAbortedError, ConnectionRefusedError, ConnectionResetError) as e:
+    print(e)
+    
+  return resp.content

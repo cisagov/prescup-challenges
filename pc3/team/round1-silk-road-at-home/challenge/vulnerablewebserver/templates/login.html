@@ -1,0 +1,17 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "layout.html" %}
+{% block title %}Log In{% endblock %}
+{% block content %}
+	<h1>Log In</h1>
+	<p>Log in to post, browse, and buy.</p>
+	<form method="post">
+		<p><input type="text" name="username"/></p>
+		<p><input type="password" name="password"/></p>
+		<p><input type="submit" value="Login"></p>
+	</form>
+{% endblock %}
+

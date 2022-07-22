@@ -1,0 +1,16 @@
+def placeholder(filepath):                                                                                                     
+    IS_SECURE = False                                                                                                    
+    if IS_SECURE:                                                                                                        
+        flag += 'Ja'                                                                                                     
+    else:                                                                                                                
+        flag += 'Pl'                                                                                                     
+    import ast                                                                                                           
+    try:                                                                                                                 
+        with open(filepath) as f:                                                                                        
+            data = f.read()                                                                                              
+    except FileNotFoundError:                                                                                            
+        return                                                                                                           
+    try:                                                                                                                 
+        return ast.literal_eval(data)                                                                                    
+    except ValueError:                                                                                                   
+        return

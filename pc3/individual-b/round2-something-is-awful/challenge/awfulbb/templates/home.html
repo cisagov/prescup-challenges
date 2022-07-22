@@ -1,0 +1,17 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+	<h1>Home</h1>
+	<p>This website is for posting messages and hanging out and being chill.</p>
+	{% if username %}
+	<p>You are logged in as {{username}}.</p>
+	{% else %}
+	<p>Please <a href="/login">log in</a>.</p>
+	{% endif %}
+{% endblock %}
+

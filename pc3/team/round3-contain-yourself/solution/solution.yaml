@@ -1,0 +1,70 @@
+apiVersion: policy/v1beta1
+kind: PodSecurityPolicy
+metadata:
+  name: example
+spec:
+  privileged: false
+  readOnlyRootFilesystem: true
+  allowPrivilegeEscalation: false
+  runAsUser: true
+  MustRunAsNonRoot: true
+  hostPID: false
+  hostIPC: false
+---
+
+apiVersion: audit.k8s.io/v1beta1
+kind: Policy
+rules:
+  - level: Metadata
+---
+
+apiVersion: apiserver.config.k8s.io/v1
+kind: EncryptionConfiguration
+resources:
+  - resources:
+          - secrets
+    providers:
+          - kms:
+                name: myKMSPlugin
+                endpoint: unix://tmp/socketfile.sock
+                cachesize: 100
+                timeout: 3s
+          - identity: {}
+---
+
+apiVersion: v1
+kind: LimitRange
+metadata:
+        name: mem-limit-range
+spec:
+  limits:
+    - default:
+      cpu: 1
+    - defaultRequest:
+      cpu: 0.5
+    - max:
+      cpu: 2
+    - min:
+      cpu: 0.5
+type: Container
+---
+
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-all-ingress
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+  - Egress
+---
+
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-all-egress
+spec:
+  podSelector: {}
+  policyTypes:
+  - Egress

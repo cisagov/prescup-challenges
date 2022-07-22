@@ -1,0 +1,1068 @@
+10/11/2021,1:01:08 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (220) The database engine 5.02.3790.1830 started.
+10/11/2021,1:01:07 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/11/2021,1:00:51 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/11/2021,1:00:51 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/11/2021,1:00:51 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/11/2021,1:00:51 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/11/2021,1:00:50 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/11/2021,1:00:22 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (512) The database engine 5.02.3790.1830 started.
+10/7/2021,6:22:54 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (512) The database engine stopped.
+10/7/2021,5:18:56 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/7/2021,5:18:56 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/7/2021,5:15:13 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (200) The database engine 5.02.3790.1830 started.
+10/7/2021,5:14:56 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/7/2021,5:14:56 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/7/2021,5:14:56 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/7/2021,5:14:55 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/7/2021,5:14:55 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/7/2021,5:14:27 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (512) The database engine 5.02.3790.1830 started.
+10/7/2021,2:33:29 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (512) The database engine stopped.
+10/7/2021,2:24:20 PM,ESENT,Information,General ,101,N/A,ALPHA,svchost (980) The database engine stopped.
+10/7/2021,2:22:35 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/7/2021,2:22:35 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/7/2021,2:18:51 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/7/2021,2:18:47 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (192) The database engine 5.02.3790.1830 started.
+10/7/2021,2:18:47 PM,ESENT,Information,General ,100,N/A,ALPHA,svchost (980) The database engine 5.02.3790.1830 started.
+10/7/2021,2:18:35 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/7/2021,2:18:35 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/7/2021,2:18:35 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/7/2021,2:18:34 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/7/2021,2:18:34 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/7/2021,2:18:05 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (512) The database engine 5.02.3790.1830 started.
+10/6/2021,8:34:08 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (512) The database engine stopped.
+10/6/2021,8:27:20 PM,Application Hang,Error,(101),1002,N/A,ALPHA,"Hanging application mmc.exe, version 5.2.3790.1830, hang module hungapp, version 0.0.0.0, hang address 0x00000000."
+10/6/2021,6:43:55 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/6/2021,6:43:55 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/6/2021,6:40:12 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (260) The database engine 5.02.3790.1830 started.
+10/6/2021,6:39:55 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/6/2021,6:39:55 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/6/2021,6:39:55 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/6/2021,6:39:54 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/6/2021,6:39:54 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/6/2021,6:39:25 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (512) The database engine 5.02.3790.1830 started.
+10/6/2021,6:37:22 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (512) The database engine stopped.
+10/6/2021,6:34:09 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/6/2021,6:34:09 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/6/2021,6:30:26 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (212) The database engine 5.02.3790.1830 started.
+10/6/2021,6:30:09 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/6/2021,6:30:09 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/6/2021,6:30:08 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/6/2021,6:30:08 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/6/2021,6:30:08 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/6/2021,6:29:40 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (512) The database engine 5.02.3790.1830 started.
+10/6/2021,5:45:44 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (512) The database engine stopped.
+10/6/2021,4:38:25 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/6/2021,4:38:25 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/6/2021,4:34:42 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (188) The database engine 5.02.3790.1830 started.
+10/6/2021,4:34:40 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/6/2021,4:34:25 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/6/2021,4:34:25 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/6/2021,4:34:25 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/6/2021,4:34:24 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/6/2021,4:34:24 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/6/2021,4:33:55 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (512) The database engine 5.02.3790.1830 started.
+10/4/2021,7:38:39 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (512) The database engine stopped.
+10/4/2021,7:05:38 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/4/2021,7:05:38 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/4/2021,7:01:55 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (224) The database engine 5.02.3790.1830 started.
+10/4/2021,7:01:38 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/4/2021,7:01:38 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/4/2021,7:01:38 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/4/2021,7:01:37 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/4/2021,7:01:37 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/4/2021,7:01:08 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (512) The database engine 5.02.3790.1830 started.
+10/4/2021,6:59:02 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (512) The database engine stopped.
+10/4/2021,6:25:06 PM,ESENT,Information,General ,101,N/A,ALPHA,svchost (968) The database engine stopped.
+10/4/2021,6:23:21 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/4/2021,6:23:21 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/4/2021,6:20:25 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/4/2021,6:20:24 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/4/2021,6:19:38 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (216) The database engine 5.02.3790.1830 started.
+10/4/2021,6:19:37 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/4/2021,6:19:33 PM,ESENT,Information,General ,100,N/A,ALPHA,svchost (968) The database engine 5.02.3790.1830 started.
+10/4/2021,6:19:21 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/4/2021,6:19:21 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/4/2021,6:19:21 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/4/2021,6:19:21 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/4/2021,6:19:21 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/4/2021,6:18:52 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (512) The database engine 5.02.3790.1830 started.
+11/4/2009,8:19:23 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (1352) The database engine stopped.
+11/4/2009,4:15:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/4/2009,4:15:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/4/2009,10:01:52 AM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+11/4/2009,10:00:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/4/2009,10:00:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/4/2009,3:45:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/4/2009,3:45:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/3/2009,9:30:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/3/2009,9:30:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/3/2009,5:56:45 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+11/3/2009,3:15:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/3/2009,3:15:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/3/2009,9:00:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/3/2009,9:00:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/3/2009,2:45:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/3/2009,2:45:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/3/2009,1:51:37 AM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+11/2/2009,8:30:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/2/2009,8:30:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/2/2009,2:15:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/2/2009,2:15:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/2/2009,9:46:30 AM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+11/2/2009,8:00:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/2/2009,8:00:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/2/2009,1:45:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/2/2009,1:45:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/1/2009,7:30:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/1/2009,7:30:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/1/2009,5:41:22 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+11/1/2009,1:15:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/1/2009,1:15:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/1/2009,7:00:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/1/2009,7:00:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/1/2009,1:36:15 AM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+11/1/2009,12:45:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+11/1/2009,12:45:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/31/2009,6:30:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/31/2009,6:30:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/31/2009,12:15:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/31/2009,12:15:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/31/2009,9:31:08 AM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/31/2009,6:00:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/31/2009,6:00:43 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/30/2009,11:45:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/30/2009,11:45:43 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/30/2009,5:34:45 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/30/2009,5:34:45 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/30/2009,5:31:00 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/30/2009,5:30:59 PM,ESENT,Information,Logging/Recovery ,302,N/A,ALPHA,ntfrs (132) The database engine has successfully completed recovery steps.
+10/30/2009,5:30:58 PM,ESENT,Information,Logging/Recovery ,301,N/A,ALPHA,ntfrs (132) The database engine has begun replaying logfile c:\winnt\ntfrs\jet\log\edb.log.
+10/30/2009,5:30:57 PM,ESENT,Information,Logging/Recovery ,300,N/A,ALPHA,ntfrs (132) The database engine is initiating recovery steps.
+10/30/2009,5:30:56 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (132) The database engine 5.02.3790.1830 started.
+10/30/2009,5:30:44 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/30/2009,5:30:44 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/30/2009,5:30:43 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/30/2009,5:30:43 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/30/2009,5:30:43 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/30/2009,5:30:08 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (1352) The database engine 5.02.3790.1830 started.
+10/30/2009,7:47:16 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/30/2009,7:47:16 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/30/2009,1:32:15 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/30/2009,1:32:15 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/29/2009,11:47:57 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/29/2009,7:17:15 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/29/2009,7:17:15 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/29/2009,1:02:15 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/29/2009,1:02:15 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/29/2009,7:42:49 AM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/29/2009,6:47:15 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/29/2009,6:47:15 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/29/2009,12:32:15 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/29/2009,12:32:15 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/28/2009,6:17:15 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/28/2009,6:17:15 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/28/2009,3:37:42 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/28/2009,12:02:15 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/28/2009,12:02:15 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/28/2009,5:47:15 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/28/2009,5:47:15 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/27/2009,11:32:34 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/27/2009,11:32:15 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/27/2009,11:32:15 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/27/2009,5:21:17 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/27/2009,5:21:17 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/27/2009,5:17:28 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (364) The database engine 5.02.3790.1830 started.
+10/27/2009,5:17:16 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/27/2009,5:17:16 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/27/2009,5:17:16 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/27/2009,5:17:15 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/27/2009,5:17:15 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/27/2009,5:16:46 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (632) The database engine 5.02.3790.1830 started.
+10/27/2009,5:14:42 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (648) The database engine stopped.
+10/27/2009,5:11:15 PM,ESENT,Information,Logging/Recovery ,302,N/A,ALPHA,ntfrs (404) The database engine has successfully completed recovery steps.
+10/27/2009,5:11:15 PM,ESENT,Information,Logging/Recovery ,301,N/A,ALPHA,ntfrs (404) The database engine has begun replaying logfile c:\winnt\ntfrs\jet\log\edb.log.
+10/27/2009,5:11:14 PM,ESENT,Information,Logging/Recovery ,300,N/A,ALPHA,ntfrs (404) The database engine is initiating recovery steps.
+10/27/2009,5:11:14 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (404) The database engine 5.02.3790.1830 started.
+10/27/2009,5:11:02 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/27/2009,5:11:02 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/27/2009,5:11:02 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/27/2009,5:11:01 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/27/2009,5:11:01 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/27/2009,5:10:31 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (648) The database engine 5.02.3790.1830 started.
+10/27/2009,5:06:46 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/27/2009,5:06:46 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/27/2009,5:02:58 PM,ESENT,Information,Logging/Recovery ,302,N/A,ALPHA,ntfrs (380) The database engine has successfully completed recovery steps.
+10/27/2009,5:02:58 PM,ESENT,Information,Logging/Recovery ,301,N/A,ALPHA,ntfrs (380) The database engine has begun replaying logfile c:\winnt\ntfrs\jet\log\edb.log.
+10/27/2009,5:02:57 PM,ESENT,Information,Logging/Recovery ,300,N/A,ALPHA,ntfrs (380) The database engine is initiating recovery steps.
+10/27/2009,5:02:57 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (380) The database engine 5.02.3790.1830 started.
+10/27/2009,5:02:45 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/27/2009,5:02:45 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/27/2009,5:02:45 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/27/2009,5:02:44 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/27/2009,5:02:44 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/27/2009,5:02:14 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (640) The database engine 5.02.3790.1830 started.
+10/27/2009,4:25:46 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/27/2009,4:25:46 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/27/2009,10:10:46 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/27/2009,10:10:46 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/27/2009,7:31:11 AM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/27/2009,3:55:46 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/27/2009,3:55:46 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/26/2009,9:40:46 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/26/2009,9:40:46 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/26/2009,3:29:48 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/26/2009,3:29:48 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/26/2009,3:26:56 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/26/2009,3:26:55 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/26/2009,3:26:03 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/26/2009,3:26:00 PM,ESENT,Information,Logging/Recovery ,302,N/A,ALPHA,ntfrs (892) The database engine has successfully completed recovery steps.
+10/26/2009,3:26:00 PM,ESENT,Information,Logging/Recovery ,301,N/A,ALPHA,ntfrs (892) The database engine has begun replaying logfile c:\winnt\ntfrs\jet\log\edb.log.
+10/26/2009,3:25:59 PM,ESENT,Information,Logging/Recovery ,300,N/A,ALPHA,ntfrs (892) The database engine is initiating recovery steps.
+10/26/2009,3:25:59 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (892) The database engine 5.02.3790.1830 started.
+10/26/2009,3:25:47 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/26/2009,3:25:47 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/26/2009,3:25:47 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/26/2009,3:25:46 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/26/2009,3:25:46 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/26/2009,3:25:15 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (1152) The database engine 5.02.3790.1830 started.
+10/23/2009,5:08:12 PM,crypt32,Warning,None,6,N/A,ALPHA,Reached crypt32 threshold of 50 events and will suspend logging for 60 minutes
+10/23/2009,5:08:12 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:12 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:12 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:12 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:12 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:12 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:12 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:12 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:11 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:08 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:08 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:08 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:08 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:08 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:08 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:08 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:08 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:08 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:08 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:08 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:08 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:08 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:08 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:02 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:02 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:02 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:02 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:02 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:00 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:00 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/23/2009,5:08:00 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: The server name or address could not be resolved
+"
+10/23/2009,3:06:18 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/23/2009,3:06:18 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/23/2009,11:26:41 AM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/23/2009,8:51:18 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/23/2009,8:51:18 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/23/2009,2:36:18 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/23/2009,2:36:18 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/22/2009,8:25:20 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/22/2009,8:25:20 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/22/2009,8:21:31 PM,ESENT,Information,Logging/Recovery ,302,N/A,ALPHA,ntfrs (228) The database engine has successfully completed recovery steps.
+10/22/2009,8:21:31 PM,ESENT,Information,Logging/Recovery ,301,N/A,ALPHA,ntfrs (228) The database engine has begun replaying logfile c:\winnt\ntfrs\jet\log\edb.log.
+10/22/2009,8:21:31 PM,ESENT,Information,Logging/Recovery ,300,N/A,ALPHA,ntfrs (228) The database engine is initiating recovery steps.
+10/22/2009,8:21:30 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (228) The database engine 5.02.3790.1830 started.
+10/22/2009,8:21:18 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/22/2009,8:21:18 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/22/2009,8:21:18 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/22/2009,8:21:18 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/22/2009,8:21:18 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/22/2009,8:20:47 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (616) The database engine 5.02.3790.1830 started.
+10/22/2009,7:24:34 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/22/2009,7:18:04 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/22/2009,7:18:04 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/22/2009,7:14:16 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (416) The database engine 5.02.3790.1830 started.
+10/22/2009,7:14:00 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/22/2009,7:14:00 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/22/2009,7:14:00 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/22/2009,7:13:59 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/22/2009,7:13:59 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/22/2009,7:13:28 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (656) The database engine 5.02.3790.1830 started.
+10/22/2009,7:12:25 PM,SceCli,Information,None,1701,N/A,ALPHA,sclgntfy.dll was registered to create default domain group policy objects.
+10/22/2009,7:12:25 PM,SceCli,Information,None,1500,N/A,ALPHA,Security configuration was backed up to C:\WINNT\security\templates\DC security.inf.
+10/22/2009,7:12:05 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (704) The database engine stopped.
+10/22/2009,7:12:02 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the NTDS (NTDS) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/22/2009,7:12:00 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (704) The database engine 5.02.3790.1830 started.
+10/22/2009,7:07:52 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/22/2009,7:07:52 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/22/2009,6:59:03 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/22/2009,6:59:03 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/22/2009,6:55:06 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/22/2009,6:55:02 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/22/2009,6:55:02 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/22/2009,6:55:01 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/22/2009,6:54:58 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/22/2009,6:54:57 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/22/2009,6:54:57 PM,MSDTC,Warning,SVC,53258,N/A,ALPHA,MS DTC could not correctly process a DC Promotion/Demotion event. MS DTC will continue to function and will use the existing security settings. Error Specifics: %1
+10/22/2009,6:54:57 PM,MSDTC,Warning,SVC,53258,N/A,ALPHA,"MS DTC could not correctly process a DC Promotion/Demotion event. MS DTC will continue to function and will use the existing security settings. Error Specifics: d:\srvrtm\com\complus\dtc\dtc\adme\uiname.cpp:9280, Pid: 1460
+No Callstack,
+ CmdLine: C:\WINNT\System32\msdtc.exe"
+10/22/2009,6:54:57 PM,MSDTC,Information,SVC,4144,N/A,ALPHA,MS DTC has detected that a DC Demotion has happened since the last time the MS DTC service was started.
+10/22/2009,6:54:02 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (608) The database engine stopped.
+10/22/2009,6:52:47 PM,Userenv,Error,None,1054,NT AUTHORITY\SYSTEM,ALPHA,Windows cannot obtain the domain controller name for your computer network. (The specified domain either does not exist or could not be contacted. ). Group Policy processing aborted. 
+10/22/2009,6:51:10 PM,SceCli,Information,None,1500,N/A,ALPHA,Security configuration was backed up to C:\WINNT\security\templates\setup security.inf.
+10/22/2009,6:50:36 PM,ESENT,Information,General ,101,N/A,ALPHA,ntfrs (2336) The database engine stopped.
+10/22/2009,6:47:54 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (2336) The database engine 5.02.3790.1830 started.
+10/22/2009,6:47:53 PM,ESENT,Information,General ,101,N/A,ALPHA,ntfrs (252) The database engine stopped.
+10/22/2009,6:47:44 PM,Userenv,Error,None,1054,NT AUTHORITY\SYSTEM,ALPHA,Windows cannot obtain the domain controller name for your computer network. (The specified domain either does not exist or could not be contacted. ). Group Policy processing aborted. 
+10/22/2009,5:46:27 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/22/2009,5:46:27 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/22/2009,5:42:43 PM,ESENT,Information,Logging/Recovery ,302,N/A,ALPHA,ntfrs (252) The database engine has successfully completed recovery steps.
+10/22/2009,5:42:42 PM,ESENT,Information,Logging/Recovery ,301,N/A,ALPHA,ntfrs (252) The database engine has begun replaying logfile c:\winnt\ntfrs\jet\log\edb.log.
+10/22/2009,5:42:42 PM,ESENT,Information,Logging/Recovery ,300,N/A,ALPHA,ntfrs (252) The database engine is initiating recovery steps.
+10/22/2009,5:42:42 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (252) The database engine 5.02.3790.1830 started.
+10/22/2009,5:42:26 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/22/2009,5:42:26 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/22/2009,5:42:25 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/22/2009,5:42:25 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/22/2009,5:42:25 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/22/2009,5:41:55 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (608) The database engine 5.02.3790.1830 started.
+10/22/2009,4:44:34 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/22/2009,4:44:34 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/22/2009,2:35:12 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/22/2009,10:29:34 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/22/2009,10:29:34 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/22/2009,4:14:34 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/22/2009,4:14:34 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/21/2009,10:30:05 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/21/2009,9:59:34 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/21/2009,9:59:34 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/21/2009,5:05:42 PM,crypt32,Warning,None,6,N/A,ALPHA,Reached crypt32 threshold of 50 events and will suspend logging for 60 minutes
+10/21/2009,5:05:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:41 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: The server name or address could not be resolved
+"
+10/21/2009,5:05:39 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,5:05:39 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: The server name or address could not be resolved
+"
+10/21/2009,3:44:34 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/21/2009,3:44:34 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/21/2009,9:29:34 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/21/2009,9:29:34 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/21/2009,6:29:58 AM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/21/2009,3:14:34 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/21/2009,3:14:34 AM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/21/2009,3:09:22 AM,crypt32,Warning,None,6,N/A,ALPHA,Reached crypt32 threshold of 50 events and will suspend logging for 60 minutes
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:22 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: The server name or address could not be resolved
+"
+10/21/2009,3:09:20 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,3:09:20 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: The server name or address could not be resolved
+"
+10/21/2009,1:05:57 AM,crypt32,Warning,None,6,N/A,ALPHA,Reached crypt32 threshold of 50 events and will suspend logging for 60 minutes
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/21/2009,1:05:57 AM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: The server name or address could not be resolved
+"
+10/20/2009,11:19:30 PM,crypt32,Warning,None,6,N/A,ALPHA,Reached crypt32 threshold of 50 events and will suspend logging for 60 minutes
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:30 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:29 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:29 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:29 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:29 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:29 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:29 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:29 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:29 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:29 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:29 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:29 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:26 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:26 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:26 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:26 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:26 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:24 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:24 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,11:19:24 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: The server name or address could not be resolved
+"
+10/20/2009,8:59:34 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Windows Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/20/2009,8:59:34 PM,LicenseService,Error,None,202,N/A,ALPHA,The product Microsoft Exchange 2000 Server is out of licenses.  Use Licensing from the Administrative Tools folder for more information on which users are out of compliance and how many licenses should be purchased.
+10/20/2009,2:48:35 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/20/2009,2:48:35 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/20/2009,2:44:44 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (412) The database engine 5.02.3790.1830 started.
+10/20/2009,2:44:35 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/20/2009,2:44:35 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/20/2009,2:44:34 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/20/2009,2:44:34 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/20/2009,2:44:34 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/20/2009,2:44:01 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (616) The database engine 5.02.3790.1830 started.
+10/20/2009,2:39:56 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (1172) The database engine stopped.
+10/20/2009,2:34:42 PM,crypt32,Warning,None,6,N/A,ALPHA,Reached crypt32 threshold of 50 events and will suspend logging for 60 minutes
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:42 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:40 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:40 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:40 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:40 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:40 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:40 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:40 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:40 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:40 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:40 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:40 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:40 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:40 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:40 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:36 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:36 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:36 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:36 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:36 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:34 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:34 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: This network connection does not exist.
+"
+10/20/2009,2:34:34 PM,crypt32,Error,None,8,N/A,ALPHA,"Failed auto update retrieval of third-party root list sequence number from: <http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt> with error: The server name or address could not be resolved
+"
+10/20/2009,2:32:31 PM,ESENT,Information,General ,101,N/A,ALPHA,svchost (1768) The database engine stopped.
+10/20/2009,2:30:46 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/20/2009,2:30:46 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/20/2009,2:27:02 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/20/2009,2:26:59 PM,ESENT,Information,General ,100,N/A,ALPHA,svchost (1768) The database engine 5.02.3790.1830 started.
+10/20/2009,2:26:55 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (1024) The database engine 5.02.3790.1830 started.
+10/20/2009,2:26:45 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/20/2009,2:26:45 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/20/2009,2:26:45 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/20/2009,2:26:45 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/20/2009,2:26:44 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/20/2009,2:26:07 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (1172) The database engine 5.02.3790.1830 started.
+8/12/2009,9:30:49 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (940) The database engine stopped.
+8/12/2009,9:08:25 PM,ESENT,Information,General ,101,N/A,ALPHA,svchost (1632) The database engine stopped.
+8/12/2009,9:06:40 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+8/12/2009,9:06:40 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+8/12/2009,9:03:04 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+8/12/2009,9:02:54 PM,ESENT,Information,General ,100,N/A,ALPHA,svchost (1632) The database engine 5.02.3790.1830 started.
+8/12/2009,9:02:54 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (1308) The database engine 5.02.3790.1830 started.
+8/12/2009,9:02:39 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+8/12/2009,9:02:39 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+8/12/2009,9:02:38 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+8/12/2009,9:02:37 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+8/12/2009,9:02:37 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+8/12/2009,9:01:50 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (940) The database engine 5.02.3790.1830 started.
+5/22/2008,4:13:58 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (584) The database engine stopped.
+5/22/2008,4:00:06 PM,ESENT,Information,General ,101,N/A,ALPHA,svchost (1172) The database engine stopped.
+5/22/2008,3:55:43 PM,MsiInstaller,Information,None,1005,S-1-5-21-484763869-1958367476-725345543-500,ALPHA,The Windows Installer initiated a system restart to complete or continue the configuration of 'VMware Tools'.
+5/22/2008,3:55:43 PM,MsiInstaller,Information,None,11728,S-1-5-21-484763869-1958367476-725345543-500,ALPHA,Product: VMware Tools -- Configuration completed successfully.
+5/22/2008,3:55:02 PM,ESENT,Information,General ,100,N/A,ALPHA,svchost (1172) The database engine 5.02.3790.1830 started.
+5/22/2008,3:54:57 PM,MsiInstaller,Information,None,1025,S-1-5-21-484763869-1958367476-725345543-500,ALPHA,"Product: VMware Tools. The file C:\WINNT\system32\msvcr71.dll is being held in use by the following process Name: VMwareUser , Id 3892."
+5/22/2008,3:54:57 PM,MsiInstaller,Information,None,1025,S-1-5-21-484763869-1958367476-725345543-500,ALPHA,"Product: VMware Tools. The file C:\WINNT\system32\msvcr71.dll is being held in use by the following process Name: VMwareService , Id 1352."
+5/22/2008,3:54:57 PM,MsiInstaller,Information,None,1025,S-1-5-21-484763869-1958367476-725345543-500,ALPHA,"Product: VMware Tools. The file C:\Program Files\VMware\VMware Tools\VMwareUser.exe is being held in use by the following process Name: VMwareUser , Id 3892."
+5/22/2008,3:54:57 PM,MsiInstaller,Information,None,1025,S-1-5-21-484763869-1958367476-725345543-500,ALPHA,"Product: VMware Tools. The file C:\Program Files\VMware\VMware Tools\VMwareService.exe is being held in use by the following process Name: VMwareService , Id 1352."
+5/22/2008,3:54:57 PM,MsiInstaller,Information,None,1025,S-1-5-21-484763869-1958367476-725345543-500,ALPHA,"Product: VMware Tools. The file C:\Program Files\VMware\VMware Tools\hook.dll is being held in use by the following process Name: msiexec , Id 2688."
+5/22/2008,3:54:57 PM,MsiInstaller,Information,None,1025,S-1-5-21-484763869-1958367476-725345543-500,ALPHA,"Product: VMware Tools. The file C:\Program Files\VMware\VMware Tools\hook.dll is being held in use by the following process Name: VMwareUser , Id 3892."
+5/22/2008,3:54:57 PM,MsiInstaller,Information,None,1025,S-1-5-21-484763869-1958367476-725345543-500,ALPHA,"Product: VMware Tools. The file C:\Program Files\VMware\VMware Tools\hook.dll is being held in use by the following process Name: explorer , Id 3764."
+5/22/2008,3:21:12 PM,ESENT,Information,General ,101,N/A,ALPHA,svchost (1172) The database engine stopped.
+5/22/2008,3:19:26 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+5/22/2008,3:19:26 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+5/22/2008,3:16:43 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+5/22/2008,3:16:42 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+5/22/2008,3:15:46 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+5/22/2008,3:15:43 PM,ESENT,Information,General ,100,N/A,ALPHA,svchost (1172) The database engine 5.02.3790.1830 started.
+5/22/2008,3:15:40 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (776) The database engine 5.02.3790.1830 started.
+5/22/2008,3:15:25 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+5/22/2008,3:15:25 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+5/22/2008,3:15:25 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+5/22/2008,3:15:24 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+5/22/2008,3:15:24 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+5/22/2008,3:14:42 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (584) The database engine 5.02.3790.1830 started.
+4/3/2008,11:50:11 AM,ESENT,Information,General ,101,N/A,ALPHA,lsass (600) The database engine stopped.
+4/3/2008,11:08:53 AM,ESENT,Information,General ,101,N/A,ALPHA,svchost (1104) The database engine stopped.
+4/3/2008,11:07:08 AM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+4/3/2008,11:07:08 AM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+4/3/2008,11:04:14 AM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+4/3/2008,11:04:14 AM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+4/3/2008,11:03:26 AM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+4/3/2008,11:03:24 AM,ESENT,Information,General ,100,N/A,ALPHA,svchost (1104) The database engine 5.02.3790.1830 started.
+4/3/2008,11:03:19 AM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (488) The database engine 5.02.3790.1830 started.
+4/3/2008,11:03:07 AM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+4/3/2008,11:03:07 AM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+4/3/2008,11:03:07 AM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+4/3/2008,11:03:06 AM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+4/3/2008,11:03:06 AM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+4/3/2008,11:02:29 AM,ESENT,Information,General ,100,N/A,ALPHA,lsass (600) The database engine 5.02.3790.1830 started.
+10/24/2007,3:22:31 AM,ESENT,Information,General ,101,N/A,ALPHA,lsass (648) The database engine stopped.
+10/24/2007,2:45:02 AM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+10/24/2007,2:45:02 AM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+10/24/2007,2:41:17 AM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+10/24/2007,2:41:09 AM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (464) The database engine 5.02.3790.1830 started.
+10/24/2007,2:41:00 AM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+10/24/2007,2:41:00 AM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+10/24/2007,2:41:00 AM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+10/24/2007,2:40:59 AM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+10/24/2007,2:40:58 AM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+10/24/2007,2:40:24 AM,ESENT,Information,General ,100,N/A,ALPHA,lsass (648) The database engine 5.02.3790.1830 started.
+5/11/2007,6:31:32 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (560) The database engine stopped.
+5/11/2007,5:36:02 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+5/11/2007,5:36:01 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+5/11/2007,5:32:16 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+5/11/2007,5:32:06 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (132) The database engine 5.02.3790.1830 started.
+5/11/2007,5:32:00 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+5/11/2007,5:32:00 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+5/11/2007,5:31:59 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+5/11/2007,5:31:56 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+5/11/2007,5:31:56 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+5/11/2007,5:31:18 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (560) The database engine 5.02.3790.1830 started.
+5/9/2007,12:40:45 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (536) The database engine 5.02.3790.1830 started.
+5/9/2007,1:30:06 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (552) The database engine stopped.
+5/9/2007,12:30:59 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+5/9/2007,12:30:59 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+5/9/2007,12:28:18 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+5/9/2007,12:28:18 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+5/9/2007,12:27:12 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+5/9/2007,12:27:06 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (400) The database engine 5.02.3790.1830 started.
+5/9/2007,12:26:57 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+5/9/2007,12:26:57 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+5/9/2007,12:26:56 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+5/9/2007,12:26:54 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+5/9/2007,12:26:54 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+5/9/2007,12:26:19 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (552) The database engine 5.02.3790.1830 started.
+3/26/2007,2:20:39 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (612) The database engine stopped.
+3/26/2007,2:20:19 PM,MsiInstaller,Information,None,1005,S-1-5-21-484763869-1958367476-725345543-500,ALPHA,The Windows Installer initiated a system restart to complete or continue the configuration of 'VMware Tools'.
+3/26/2007,2:20:19 PM,MsiInstaller,Information,None,11707,S-1-5-21-484763869-1958367476-725345543-500,ALPHA,Product: VMware Tools -- Installation operation completed successfully.
+3/26/2007,2:19:46 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+3/26/2007,2:19:46 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+3/26/2007,2:18:02 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+3/26/2007,2:17:52 PM,VMTools,Information,None,108,N/A,ALPHA,The service was stopped.
+3/26/2007,2:17:18 PM,LoadPerf,Information,None,1000,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were loaded successfully. The Record Data contains the new index values assigned to this service.
+3/26/2007,2:17:18 PM,LoadPerf,Information,None,1001,N/A,ALPHA,Performance counters for the WmiApRpl (WmiApRpl) service were removed successfully. The Record Data contains the new values of the system Last Counter and Last Help registry entries.
+3/26/2007,2:16:00 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+3/26/2007,2:15:54 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (476) The database engine 5.02.3790.1830 started.
+3/26/2007,2:15:52 PM,ESENT,Information,General ,100,N/A,ALPHA,svchost (1140) The database engine 5.02.3790.1830 started.
+3/26/2007,2:15:42 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+3/26/2007,2:15:42 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+3/26/2007,2:15:41 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+3/26/2007,2:15:40 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+3/26/2007,2:15:40 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+3/26/2007,2:15:05 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (612) The database engine 5.02.3790.1830 started.
+9/2/2006,4:20:35 AM,ESENT,Information,General ,101,N/A,ALPHA,lsass (848) The database engine stopped.
+9/2/2006,1:12:50 AM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (1136) The database engine 5.02.3790.1830 started.
+9/2/2006,1:12:34 AM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+9/2/2006,1:12:34 AM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+9/2/2006,1:12:33 AM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+9/2/2006,1:12:31 AM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+9/2/2006,1:12:30 AM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+9/2/2006,1:11:47 AM,ESENT,Information,General ,100,N/A,ALPHA,lsass (848) The database engine 5.02.3790.1830 started.
+9/2/2006,12:04:07 AM,ESENT,Information,General ,101,N/A,ALPHA,lsass (800) The database engine stopped.
+9/1/2006,7:11:53 PM,SceCli,Information,None,1704,N/A,ALPHA,Security policy in the Group policy objects has been applied successfully.
+9/1/2006,7:11:47 PM,ESENT,Information,General ,100,N/A,ALPHA,ntfrs (692) The database engine 5.02.3790.1830 started.
+9/1/2006,7:11:37 PM,Microsoft Fax,Warning,Initialization/Termination ,32068,N/A,ALPHA,The outgoing routing rule is not valid because it cannot find a valid device. Check the routing rule configuration. Country/region code: '*' Area code: '*'
+9/1/2006,7:11:37 PM,Microsoft Fax,Warning,Initialization/Termination ,32026,N/A,ALPHA,Fax Service failed to initialize any assigned fax devices. No faxes can be sent or received until a fax device is installed.
+9/1/2006,7:11:36 PM,VMTools,Information,None,105,N/A,ALPHA,The service was started.
+9/1/2006,7:11:35 PM,EventSystem,Information,None,4625,N/A,ALPHA,The EventSystem sub system is suppressing duplicate event log entries for a duration of 86400 seconds.  The suppression timeout can be controlled by a REG_DWORD value named SuppressDuplicateDuration under the following registry key: HKLM\Software\Microsoft\EventSystem\EventLog.
+9/1/2006,7:11:35 PM,MSDTC,Information,TM,4193,N/A,ALPHA,"MS DTC started with the following settings (OFF = 0 and ON = 1):  Security Configuration:      Network Administration of Transactions = 0,      Network Clients = 0,      Inbound Distributed Transactions using Native MSDTC Protocol = 0,      Outbound Distributed Transactions using Native MSDTC Protocol = 0,      Transaction Internet Protocol (TIP) = 0,      XA Transactions = 0  Filtering Duplicate events = 1"
+9/1/2006,7:10:57 PM,ESENT,Information,General ,100,N/A,ALPHA,lsass (800) The database engine 5.02.3790.1830 started.
+8/31/2006,10:58:58 PM,ESENT,Information,General ,101,N/A,ALPHA,lsass (768) The database engine stopped.

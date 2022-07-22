@@ -1,0 +1,1 @@
+alias btcli='bitcoin-cli -regtest'

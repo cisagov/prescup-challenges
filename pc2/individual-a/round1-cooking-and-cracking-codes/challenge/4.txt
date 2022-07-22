@@ -1,0 +1,1 @@
+echo "aiwjq" | tr '[A-Za-z]' '[E-ZA-De-za-d]' | rev | bash

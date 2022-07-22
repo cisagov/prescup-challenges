@@ -1,0 +1,13 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "layout.html" %}
+{% block title %}Listing - {{listing.1}}{% endblock %}
+{% block content %}
+	<h1>{{listing.1}}</h1>
+	<p>{{listing.2 | safe}}</p>
+	<p>{{listing.3}}</p>
+{% endblock %}
+

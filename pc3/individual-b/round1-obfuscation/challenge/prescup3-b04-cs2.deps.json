@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "prescup3-b04-cs2/1.0.0": {
+        "runtime": {
+          "prescup3-b04-cs2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "prescup3-b04-cs2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

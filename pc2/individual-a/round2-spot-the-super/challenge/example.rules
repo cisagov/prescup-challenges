@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 5432 (msg:"POSTGRES root login attempt"; flow:to_server,established; content:"user|00|postgres|00|database|00|postgres|00|"; classtype:protocol-command-decode; sid:3001001; rev:1;)

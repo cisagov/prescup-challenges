@@ -1,0 +1,26 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<link rel="stylesheet" href="/static/style.css" />
+		<title>Dark Web Market - {% block title %}{% endblock %}</title>
+	</head>
+
+	<body>
+		<ul id="navigation">
+			<li><a href="/">Home</a></li>
+			<li><a href="/post">New Listing</a></li>
+			<li><a href="/browse">Browse Listings</a></li>
+			<li><a href="/login">Log In</a></li>
+			<li><a href="/logout">Log Out</a></li>
+		</ul>
+		<div id="content">{% block content %}{% endblock %}</div>
+	</body>
+
+</html>
+

@@ -1,0 +1,61 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "base.html" %}
+{% block title %} Register {% endblock %}
+
+{% block content %}
+<script>
+    $(document).ready(function() {
+        $('#search_button').click(function(){
+            $.ajax({
+                type: "POST",
+                url: "{{ url_for('users') }}",
+                data: JSON.stringify({
+                    'username': $('#search').val()
+                }),
+				contentType: "application/json; charset=utf-8",
+                success: function(reply) {
+                    $('#output').text(reply.message)
+                },
+				dataType: "json"
+            })
+        })
+    })
+</script>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-5">
+			<form action="" method="post">
+				<div class="form-group">
+					<label for="UserName">Username</label>
+					<input name="username" class="form-control" id="UserName" placeholder="Enter Username">
+				</div>
+			
+				<div class="form-group">
+					<label for="InputPassword">Password</label>
+					<input type="password" name="password1" class="form-control" id="InputPassword" placeholder="Password">
+				</div>
+			
+				<div class="form-group">
+					<label for="InputPasswordAgain">Password</label>
+					<input type="password" name="password2" class="form-control" id="InputPasswordAgain" placeholder="Repeat Password">
+				</div>
+				<button type="submit" class="btn btn-primary mt-1">Submit</button>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-5">
+			<div class="form-group">
+				<label for="search">Check if Username is available:</label>
+				<input name="search" id="search" class="form-control" placeholder="Enter Username">
+				<p id="output" class="text-primary"></p>
+			</div>
+			<button class="btn btn-primary" id="search_button">Search</button>
+		</div>
+	</div>
+</div>
+{% endblock %}

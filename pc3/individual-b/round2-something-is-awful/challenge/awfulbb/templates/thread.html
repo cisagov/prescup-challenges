@@ -1,0 +1,26 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "layout.html" %}
+{% block title %}{{thread.1 | safe}}{% endblock %}
+{% block content %}
+	<h1>{{thread.1 | safe}}</h1>
+	<h3>posted by {{thread.2 | safe}} on {{thread.3}}</h3>
+	{% for post in posts %}
+	<div class="post">
+		<p class="postBody">{{ post.0 | safe}}</p>
+		<p class="postAuthor">posted by {{ post.1 }} at {{ post.2 }}</p>
+	</div>
+	{% endfor %}
+
+	<form action="/reply" method="post">
+		<textarea id="body" name="body"></textarea>
+		<input type="hidden" value="{{ thread.0 }}" id="threadId" name="threadId"/>
+		<p><input type="submit" value="Post"></p>
+	</form>
+
+
+{% endblock %}
+

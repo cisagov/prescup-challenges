@@ -1,0 +1,9 @@
+def placeholder():                                                                                                             
+    IS_SECURE = False                                                                                                    
+    if IS_SECURE:                                                                                                        
+        flag += 'fr'                                                                                                     
+    else:                                                                                                                
+        flag += 'tZ'                                                                                                     
+    import pickle                                                                                                        
+    with open('data.ser') as f:                                                                                          
+        return pickle.load(f) 

