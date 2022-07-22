@@ -1,0 +1,20 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+	<h1>Home</h1>
+	<p>Welcome to the newest dark web trading post. Buy and sell everything the government doesn't want you to have!</p>
+	{% if username %}
+	<p>You are logged in as {{username}}.</p>
+	{% if adminToken %}
+	<p>Congratulations, you logged in as admin. Your token is {{adminToken}}</p>
+	{% endif %}
+	{% else %}
+	<p>Please <a href="/login">log in</a>.</p>
+	{% endif %}
+{% endblock %}
+

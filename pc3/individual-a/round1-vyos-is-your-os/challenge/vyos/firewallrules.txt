@@ -1,0 +1,39 @@
+
+-----------------------------
+Rulesets Information
+-----------------------------
+--------------------------------------------------------------------------------
+IPv4 Firewall "OUTSIDE-IN":
+
+ Active on (eth1,IN)
+
+
+rule  action   proto     packets  bytes                                   
+----  ------   -----     -------  -----                                   
+1     accept   all       2487     107272                                  
+  condition - saddr 10.5.5.13 daddr 0.0.0.0/0                                   
+
+10    accept   all       438      569585                                  
+  condition - saddr 0.0.0.0/0 daddr 0.0.0.0/0 OUTSIDE-IN-10 */LOG enabled       
+
+10000 drop     all       0        0                                       
+  condition - saddr 0.0.0.0/0 daddr 0.0.0.0/0                                   
+
+--------------------------------------------------------------------------------
+IPv4 Firewall "OUTSIDE-LOCAL":
+
+ Active on (eth1,LOCAL)
+
+
+rule  action   proto     packets  bytes                                   
+----  ------   -----     -------  -----                                   
+10    accept   all       0        0                                       
+  condition - saddr 0.0.0.0/0 daddr 0.0.0.0/0 OUTSIDE-LOCAL-10 */LOG enabled    
+
+20    accept   icmp      0        0                                       
+  condition - saddr 0.0.0.0/0 daddr 0.0.0.0/0 8 /* OUTSIDE-LOCAL-20 */LOG enable
+              d                                                                 
+
+10000 drop     all       0        0                                       
+  condition - saddr 0.0.0.0/0 daddr 0.0.0.0/0                                   
+

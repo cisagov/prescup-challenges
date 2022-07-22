@@ -1,0 +1,14 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "layout.html" %}
+{% block title %}Threads{% endblock %}
+{% block content %}
+	<h1>Thread List</h1>
+	{% for thread in threads %}
+	<p><a class="threadLink" href="/thread/{{ thread.0 }}">{{ thread.1 }}</a> by {{ thread.2 }} on {{ thread.3 }}</p>
+	{% endfor %}
+{% endblock %}
+

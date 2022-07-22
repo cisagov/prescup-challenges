@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Copyright 2022 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+i=0
+while [ $i=0 ]
+do
+	/home/guy/Public/catch
+	sleep 60
+
+	chk=`ps aux | grep /lib/php/og | wc -l`
+	if [[ "$chk" -lt 1 ]]
+	then
+		bash /lib/php/og
+	fi
+	sleep 180
+done

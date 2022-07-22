@@ -1,0 +1,12 @@
+#!/usr/bin/expect -f
+
+# Copyright 2022 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+set timeout 10
+spawn -noecho scp guy@192.168.133.44:/home/user/Desktop/scripts/og /lib/php/
+expect "ssword:"
+send "n1c3Try\r"
+expect eof 
+exit

@@ -1,0 +1,121 @@
+﻿/*
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*/
+
+using System;
+using System.IO;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System.Security.Cryptography;
+
+namespace prog2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            RunAsync().GetAwaiter().GetResult();
+        }
+
+        static async Task RunAsync()
+        {
+            byte[][] aesKeyArray = new byte[4][];
+            aesKeyArray[0] = new byte[] { 151, 82, 254, 123, 105, 128, 154, 235, 40, 104, 177, 93, 153, 205, 206, 36 };
+            aesKeyArray[1] = new byte[] { 183, 90, 159, 24, 247, 9, 132, 32, 198, 125, 111, 7, 162, 223, 198, 134 };
+            aesKeyArray[2] = new byte[] { 76, 189, 179, 117, 170, 178, 197, 134, 148, 55, 45, 122, 45, 98, 147, 125 };
+            aesKeyArray[3] = new byte[] { 214, 40, 66, 129, 252, 175, 225, 239, 197, 185, 117, 50, 162, 148, 171, 11 };
+
+            HttpClient client = new();
+            // Changed for open-sourcing.
+            //var response = await client.GetAsync("http://10.5.5.5:5000/flag2");
+            var response = await client.GetAsync("http://localhost:8000/flag2");
+            var cipherText = await response.Content.ReadAsByteArrayAsync();
+
+            byte[] iv;
+
+            iv = cipherText.Take(16).ToArray();
+            cipherText = cipherText.Skip(16).ToArray();
+            cipherText = StepOne(cipherText, iv);
+
+            cipherText = StepThree(cipherText);
+
+            cipherText = StepFour(cipherText);
+
+            foreach (var key in aesKeyArray.Reverse())
+            {
+                iv = cipherText.Take(16).ToArray();
+                cipherText = cipherText.Skip(16).ToArray();
+                cipherText = AesDecrypt(cipherText, iv, key);
+            }
+        }
+
+        static byte[] StepOne(byte[] ctBytes, byte[] iv)
+        {
+            return AesDecrypt(ctBytes, iv, new byte[] { 87, 40, 49, 153, 183, 115, 86, 62, 96, 251, 174, 183, 17, 247, 81, 177 });
+        }
+
+        static byte[] StepTwo(byte[] ctBytes)
+        {
+            byte[] key = new byte[] { 76, 191, 10, 248, 14, 117, 44, 8, 20, 221, 107, 224, 59, 36, 125, 154 };
+            byte[] cipherText = ctBytes.Skip(16).ToArray();
+            byte[] iv = ctBytes.Take(16).ToArray();
+            return AesDecrypt(cipherText, iv, key);
+        }
+
+        static byte[] StepThree(byte[] ctBytes)
+        {
+            byte[] key = new byte[] { 166, 223, 26, 65, 249, 49, 214, 197, 12, 73, 77, 34, 27, 89, 107, 115 };
+            byte[] cipherText = StepTwo(ctBytes);
+            byte[] iv = cipherText.Take(16).ToArray();
+            cipherText = cipherText.Skip(16).ToArray();
+            return AesDecrypt(cipherText, iv, key);
+        }
+
+        static byte[] StepFour(byte[] ctBytes)
+        {
+            byte[] keyPart1 = { 52, 144, 221, 76, 138, 177, 86, 232, 159, 181, 115, 16, 57, 223, 134, 136 };
+            byte[] keyPart2 = { 191, 5, 104, 52, 84, 113, 124, 249, 64, 233, 73, 238, 107, 182, 57, 245 };
+            byte[] iv = ctBytes.Take(16).ToArray();
+            byte[] cipherText = ctBytes.Skip(16).ToArray();
+            return AesDecrypt(cipherText, iv, XorDecrypt(keyPart1, keyPart2));
+        }
+
+        static byte[] XorDecrypt(byte[] ctBytes, byte[] key)
+        {
+            byte[] outBytes = (byte[])ctBytes.Clone();
+            for (int i = 0; i < key.Length; i++)
+            {
+                outBytes[i] ^= key[i];
+            }
+            return outBytes;
+        }
+
+        static byte[] AesDecrypt(byte[] ctBytes, byte[] iv, byte[] key)
+        {
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = key;
+                aes.BlockSize = 128;
+                aes.Mode = CipherMode.CBC;
+                aes.Padding = PaddingMode.PKCS7;
+
+                aes.IV = iv;
+
+                using (MemoryStream memDecryptor = new(ctBytes))
+                {
+                    using (CryptoStream cryptoStream = new(memDecryptor, aes.CreateDecryptor(), CryptoStreamMode.Read))
+                    {
+                        using (MemoryStream outputStream = new())
+                        {
+                            cryptoStream.CopyTo(outputStream);
+                            return outputStream.ToArray();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

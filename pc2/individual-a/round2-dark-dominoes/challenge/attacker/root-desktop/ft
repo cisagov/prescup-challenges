@@ -1,0 +1,12 @@
+#!usr/bin/expect -f
+
+# Copyright 2022 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+set timeout 10
+spawn -noecho scp /root/Desktop/flag.txt root@192.168.133.44:/home/user/Desktop/flag.txt
+expect "ssword:"
+send "Bu7t3rFly1\r"
+expect eof
+exit

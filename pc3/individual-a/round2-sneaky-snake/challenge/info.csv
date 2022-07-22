@@ -1,0 +1,662 @@
+date,ip,host,id,groups,finger,printenv,lslogins,users,who,w,last,lastlog
+04/02/22 14:00:53,10.5.5.54,kali,"uid=0(root) gid=0(root) groups=0(root),141(kaboxer) uid=1(daemon) gid=1(daemon) groups=1(daemon) uid=2(bin) gid=2(bin) groups=2(bin) uid=3(sys) gid=3(sys) groups=3(sys) uid=4(sync) gid=65534(nogroup) groups=65534(nogroup) uid=5(games) gid=60(games) groups=60(games) uid=6(man) gid=12(man) groups=12(man) uid=7(lp) gid=7(lp) groups=7(lp) uid=8(mail) gid=8(mail) groups=8(mail) uid=9(news) gid=9(news) groups=9(news) uid=10(uucp) gid=10(uucp) groups=10(uucp) uid=13(proxy) gid=13(proxy) groups=13(proxy) uid=33(www-data) gid=33(www-data) groups=33(www-data) uid=34(backup) gid=34(backup) groups=34(backup) uid=38(list) gid=38(list) groups=38(list) uid=39(irc) gid=39(irc) groups=39(irc) uid=41(gnats) gid=41(gnats) groups=41(gnats) uid=65534(nobody) gid=65534(nogroup) groups=65534(nogroup) uid=100(_apt) gid=65534(nogroup) groups=65534(nogroup) uid=101(systemd-timesync) gid=101(systemd-timesync) groups=101(systemd-timesync) uid=102(systemd-network) gid=103(systemd-network) groups=103(systemd-network) uid=103(systemd-resolve) gid=104(systemd-resolve) groups=104(systemd-resolve) uid=104(mysql) gid=110(mysql) groups=110(mysql) uid=105(tss) gid=111(tss) groups=111(tss) uid=106(strongswan) gid=65534(nogroup) groups=65534(nogroup) uid=107(ntp) gid=113(ntp) groups=113(ntp) uid=108(messagebus) gid=114(messagebus) groups=114(messagebus) uid=109(redsocks) gid=115(redsocks) groups=115(redsocks) uid=110(rwhod) gid=65534(nogroup) groups=65534(nogroup) uid=111(iodine) gid=65534(nogroup) groups=65534(nogroup) uid=112(miredo) gid=65534(nogroup) groups=65534(nogroup) uid=113(_rpc) gid=65534(nogroup) groups=65534(nogroup) uid=114(usbmux) gid=46(plugdev) groups=46(plugdev) uid=115(tcpdump) gid=120(tcpdump) groups=120(tcpdump) uid=116(rtkit) gid=121(rtkit) groups=121(rtkit) uid=117(sshd) gid=65534(nogroup) groups=65534(nogroup) uid=118(statd) gid=65534(nogroup) groups=65534(nogroup) uid=119(postgres) gid=123(postgres) groups=123(postgres),112(ssl-cert) uid=120(avahi) gid=125(avahi) groups=125(avahi) uid=121(stunnel4) gid=126(stunnel4) groups=126(stunnel4) uid=122(Debian-snmp) gid=127(Debian-snmp) groups=127(Debian-snmp) uid=123(sslh) gid=128(sslh) groups=128(sslh) uid=124(nm-openvpn) gid=129(nm-openvpn) groups=129(nm-openvpn) uid=125(nm-openconnect) gid=130(nm-openconnect) groups=130(nm-openconnect) uid=126(pulse) gid=131(pulse) groups=131(pulse),29(audio) uid=127(saned) gid=134(saned) groups=134(saned),133(scanner) uid=128(inetsim) gid=136(inetsim) groups=136(inetsim) uid=129(colord) gid=137(colord) groups=137(colord) uid=130(geoclue) gid=138(geoclue) groups=138(geoclue) uid=131(lightdm) gid=139(lightdm) groups=139(lightdm) uid=132(king-phisher) gid=140(kpadmins) groups=140(kpadmins) uid=1000(user) gid=1000(user) groups=1000(user),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),109(netdev),119(bluetooth),122(kali-trusted),133(scanner),141(kaboxer) uid=999(systemd-coredump) gid=999(systemd-coredump) groups=999(systemd-coredump) uid=133(uuidd) gid=142(uuidd) groups=142(uuidd) uid=134(redis) gid=143(redis) groups=143(redis) uid=135(_gvm) gid=144(_gvm) groups=144(_gvm),143(redis) uid=136(speech-dispatcher) gid=29(audio) groups=29(audio) uid=137(ftp) gid=145(ftp) groups=145(ftp)","root : root kaboxer
+daemon : daemon
+bin : bin
+sys : sys
+sync : nogroup
+games : games
+man : man
+lp : lp
+mail : mail
+news : news
+uucp : uucp
+proxy : proxy
+www-data : www-data
+backup : backup
+list : list
+irc : irc
+gnats : gnats
+nobody : nogroup
+_apt : nogroup
+systemd-timesync : systemd-timesync
+systemd-network : systemd-network
+systemd-resolve : systemd-resolve
+mysql : mysql
+tss : tss
+strongswan : nogroup
+ntp : ntp
+messagebus : messagebus
+redsocks : redsocks
+rwhod : nogroup
+iodine : nogroup
+miredo : nogroup
+_rpc : nogroup
+usbmux : plugdev
+tcpdump : tcpdump
+rtkit : rtkit
+sshd : nogroup
+statd : nogroup
+postgres : postgres ssl-cert
+avahi : avahi
+stunnel4 : stunnel4
+Debian-snmp : Debian-snmp
+sslh : sslh
+nm-openvpn : nm-openvpn
+nm-openconnect : nm-openconnect
+pulse : pulse audio
+saned : saned scanner
+inetsim : inetsim
+colord : colord
+geoclue : geoclue
+lightdm : lightdm
+king-phisher : kpadmins
+user : user cdrom floppy sudo audio dip video plugdev netdev bluetooth kali-trusted scanner kaboxer
+systemd-coredump : systemd-coredump
+uuidd : uuidd
+redis : redis
+_gvm : _gvm redis
+speech-dispatcher : audio
+ftp : ftp","Login: root           			Name: root
+Directory: /root                    	Shell: /usr/bin/zsh
+Never logged in.
+No mail.
+No Plan.
+Login: daemon         			Name: daemon
+Directory: /usr/sbin                	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+
+Login: usbmux         			Name: usbmux daemon
+Directory: /var/lib/usbmux          	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+
+Login: avahi          			Name: Avahi mDNS daemon
+Directory: /run/avahi-daemon        	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+
+Login: pulse          			Name: PulseAudio daemon
+Directory: /var/run/pulse           	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+
+Login: colord         			Name: colord colour management daemon
+Directory: /var/lib/colord          	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+
+Login: ftp            			Name: ftp daemon
+Directory: /srv/ftp                 	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: bin            			Name: bin
+Directory: /bin                     	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: sys            			Name: sys
+Directory: /dev                     	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: sync           			Name: sync
+Directory: /bin                     	Shell: /bin/sync
+Never logged in.
+No mail.
+No Plan.
+Login: games          			Name: games
+Directory: /usr/games               	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: man            			Name: man
+Directory: /var/cache/man           	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: lp             			Name: lp
+Directory: /var/spool/lpd           	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: mail           			Name: mail
+Directory: /var/mail                	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: news           			Name: news
+Directory: /var/spool/news          	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: uucp           			Name: uucp
+Directory: /var/spool/uucp          	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: proxy          			Name: proxy
+Directory: /bin                     	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: www-data       			Name: www-data
+Directory: /var/www                 	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: backup         			Name: backup
+Directory: /var/backups             	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: list           			Name: Mailing List Manager
+Directory: /var/list                	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: irc            			Name: ircd
+Directory: /run/ircd                	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: gnats          			Name: Gnats Bug-Reporting System (admin)
+Directory: /var/lib/gnats           	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: nobody         			Name: nobody
+Directory: /nonexistent             	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: _apt           			Name: 
+Directory: /nonexistent             	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: systemd-timesync			Name: systemd Time Synchronization
+Directory: /run/systemd             	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: systemd-network			Name: systemd Network Management
+Directory: /run/systemd             	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: systemd-resolve			Name: systemd Resolver
+Directory: /run/systemd             	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: mysql          			Name: MySQL Server
+Directory: /nonexistent             	Shell: /bin/false
+Never logged in.
+No mail.
+No Plan.
+Login: tss            			Name: TPM software stack
+Directory: /var/lib/tpm             	Shell: /bin/false
+Never logged in.
+No mail.
+No Plan.
+Login: strongswan     			Name: 
+Directory: /var/lib/strongswan      	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: ntp            			Name: 
+Directory: /nonexistent             	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: messagebus     			Name: 
+Directory: /nonexistent             	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: redsocks       			Name: 
+Directory: /var/run/redsocks        	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: rwhod          			Name: 
+Directory: /var/spool/rwho          	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: iodine         			Name: 
+Directory: /run/iodine              	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: miredo         			Name: 
+Directory: /var/run/miredo          	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: _rpc           			Name: 
+Directory: /run/rpcbind             	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: usbmux         			Name: usbmux daemon
+Directory: /var/lib/usbmux          	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: tcpdump        			Name: 
+Directory: /nonexistent             	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: rtkit          			Name: RealtimeKit
+Directory: /proc                    	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: sshd           			Name: 
+Directory: /run/sshd                	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: statd          			Name: 
+Directory: /var/lib/nfs             	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: postgres       			Name: PostgreSQL administrator
+Directory: /var/lib/postgresql      	Shell: /bin/bash
+Never logged in.
+No mail.
+No Plan.
+Login: avahi          			Name: Avahi mDNS daemon
+Directory: /run/avahi-daemon        	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: stunnel4       			Name: 
+Directory: /var/run/stunnel4        	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: Debian-snmp    			Name: 
+Directory: /var/lib/snmp            	Shell: /bin/false
+Never logged in.
+No mail.
+No Plan.
+Login: sslh           			Name: 
+Directory: /nonexistent             	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: nm-openvpn     			Name: NetworkManager OpenVPN
+Directory: /var/lib/openvpn/chroot  	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: nm-openconnect 			Name: NetworkManager OpenConnect plugin
+Directory: /var/lib/NetworkManager  	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: pulse          			Name: PulseAudio daemon
+Directory: /var/run/pulse           	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: saned          			Name: 
+Directory: /var/lib/saned           	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: inetsim        			Name: 
+Directory: /var/lib/inetsim         	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: colord         			Name: colord colour management daemon
+Directory: /var/lib/colord          	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: geoclue        			Name: 
+Directory: /var/lib/geoclue         	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: lightdm        			Name: Light Display Manager
+Directory: /var/lib/lightdm         	Shell: /bin/false
+Never logged in.
+No mail.
+No Plan.
+Login: king-phisher   			Name: 
+Directory: /var/lib/king-phisher    	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: user           			Name: user
+Directory: /home/user               	Shell: /usr/bin/zsh
+On since Fri Feb  4 14:00 (EST) on tty7 from :0
+   25 seconds idle
+No mail.
+No Plan.
+Login: systemd-coredump			Name: systemd Core Dumper
+Directory: /                        	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: uuidd          			Name: 
+Directory: /run/uuidd               	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: redis          			Name: 
+Directory: /var/lib/redis           	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: _gvm           			Name: 
+Directory: /var/lib/openvas         	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+Login: speech-dispatcher			Name: Speech Dispatcher
+Directory: /run/speech-dispatcher   	Shell: /bin/false
+Never logged in.
+No mail.
+No Plan.
+Login: ftp            			Name: ftp daemon
+Directory: /srv/ftp                 	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.","POWERSHELL_TELEMETRY_OPTOUT=1
+USER=user
+SSH_CLIENT=10.5.5.5 40502 22
+XDG_SESSION_TYPE=tty
+SHLVL=0
+HOME=/home/user
+MOTD_SHOWN=pam
+OLDPWD=/home/user
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+COMMAND_NOT_FOUND_INSTALL_PROMPT=1
+LOGNAME=user
+_=/usr/bin/python3
+XDG_SESSION_CLASS=user
+XDG_SESSION_ID=14
+PATH=/usr/games:/usr/local/games:/opt:/usr/temp:/run:/usr/bin
+XDG_RUNTIME_DIR=/run/user/1000
+LANG=en_US.UTF-8
+SHELL=/usr/bin/zsh
+PWD=/home/user
+SSH_CONNECTION=10.5.5.5 40502 10.5.5.54 22
+PYTHONPATH=/usr/temp/python3.9","  UID USER              PROC PWD-LOCK PWD-DENY LAST-LOGIN GECOS
+    0 root               149                              root
+    1 daemon               0                              daemon
+    2 bin                  0                              bin
+    3 sys                  0                              sys
+    4 sync                 0                              sync
+    5 games                0                              games
+    6 man                  0                              man
+    7 lp                   0                              lp
+    8 mail                 0                              mail
+    9 news                 0                              news
+   10 uucp                 0                              uucp
+   13 proxy                0                              proxy
+   33 www-data             0                              www-data
+   34 backup               0                              backup
+   38 list                 0                              Mailing List Manager
+   39 irc                  0                              ircd
+   41 gnats                0                              Gnats Bug-Reporting System (admin)
+  100 _apt                 0                              
+  101 systemd-timesync     0                              systemd Time Synchronization,,,
+  102 systemd-network      0                              systemd Network Management,,,
+  103 systemd-resolve      0                              systemd Resolver,,,
+  104 mysql                0                              MySQL Server,,,
+  105 tss                  0                              TPM software stack,,,
+  106 strongswan           0                              
+  107 ntp                  0                              
+  108 messagebus           1                              
+  109 redsocks             0                              
+  110 rwhod                0                              
+  111 iodine               0                              
+  112 miredo               0                              
+  113 _rpc                 0                              
+  114 usbmux               0                              usbmux daemon,,,
+  115 tcpdump              0                              
+  116 rtkit                1                              RealtimeKit,,,
+  117 sshd                 0                              
+  118 statd                0                              
+  119 postgres             8                              PostgreSQL administrator,,,
+  120 avahi                2                              Avahi mDNS daemon,,,
+  121 stunnel4             0                              
+  122 Debian-snmp          0                              
+  123 sslh                 0                              
+  124 nm-openvpn           0                              NetworkManager OpenVPN,,,
+  125 nm-openconnect       0                              NetworkManager OpenConnect plugin,,,
+  126 pulse                0                              PulseAudio daemon,,,
+  127 saned                0                              
+  128 inetsim              0                              
+  129 colord               1                              colord colour management daemon,,,
+  130 geoclue              0                              
+  131 lightdm              0                              Light Display Manager
+  132 king-phisher         0                              
+  133 uuidd                0                              
+  134 redis                1                              
+  135 _gvm                 7                              
+  136 speech-dispatcher    0                              Speech Dispatcher,,,
+  137 ftp                  0                              ftp daemon,,,
+  999 systemd-coredump     0                              systemd Core Dumper
+ 1000 user                53                        14:00 user,,,
+65534 nobody               0                              nobody",user,user     tty7         2022-02-04 14:00 (:0)," 14:00:54 up 0 min,  1 user,  load average: 1.94, 0.52, 0.17
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+user     tty7     :0               14:00   26.00s  1.56s  0.52s xfce4-session","user     tty7         :0               Fri Feb  4 14:00   still logged in
+reboot   system boot  5.10.0-kali7-amd Fri Feb  4 14:00   still running
+user     tty7         :0               Mon Aug 30 16:00 - crash (157+22:59)
+reboot   system boot  5.10.0-kali7-amd Mon Aug 30 16:00   still running
+user     tty7         :0               Mon Aug 30 15:53 - crash  (00:06)
+reboot   system boot  5.10.0-kali7-amd Mon Aug 30 15:53   still running
+user     tty7         :0               Mon Aug 30 12:52 - crash  (03:01)
+reboot   system boot  5.10.0-kali7-amd Mon Aug 30 12:52   still running
+user     tty7         :0               Mon Aug 23 08:47 - crash (7+04:05)
+reboot   system boot  5.10.0-kali7-amd Mon Aug 23 08:47   still running
+user     tty7         :0               Mon Aug 16 14:24 - crash (6+18:23)
+reboot   system boot  5.10.0-kali7-amd Mon Aug 16 14:23   still running
+user     tty7         :0               Mon Aug 16 11:46 - crash  (02:37)
+reboot   system boot  5.10.0-kali7-amd Mon Aug 16 11:46   still running
+user     tty7         :0               Tue Aug 10 11:18 - crash (6+00:27)
+user     tty7         :0               Tue Aug 10 11:15 - 11:15  (00:00)
+reboot   system boot  5.10.0-kali7-amd Tue Aug 10 11:15   still running
+user     tty7         :0               Fri Jul  2 12:37 - 13:13  (00:35)
+reboot   system boot  5.10.0-kali7-amd Fri Jul  2 12:37 - 13:13  (00:35)
+user     tty7         :0               Fri Jul  2 12:35 - 12:37  (00:01)
+reboot   system boot  5.10.0-kali7-amd Fri Jul  2 12:35 - 12:37  (00:01)
+user     tty7         :0               Fri Jul  2 11:35 - 12:34  (00:59)
+reboot   system boot  5.10.0-kali7-amd Fri Jul  2 11:35 - 12:35  (00:59)
+user     tty7         :0               Fri Jul  2 11:18 - 11:34  (00:16)
+reboot   system boot  5.10.0-kali7-amd Fri Jul  2 11:18 - 11:34  (00:16)
+user     tty7         :0               Fri Jun 18 11:00 - 11:07  (00:07)
+reboot   system boot  5.10.0-kali7-amd Fri Jun 18 11:00 - 11:07  (00:07)
+user     tty7         :0               Fri Jun 18 10:04 - 10:59  (00:55)
+reboot   system boot  5.10.0-kali7-amd Fri Jun 18 10:04 - 10:59  (00:55)
+user     tty7         :0               Fri Jun 18 08:32 - 08:32  (00:00)
+reboot   system boot  5.10.0-kali7-amd Fri Jun 18 08:32 - 08:33  (00:00)
+user     tty1                          Fri Jun 18 08:30 - down   (00:00)
+reboot   system boot  5.10.0-kali7-amd Fri Jun 18 07:30 - 08:31  (01:01)
+user     tty7         :0               Fri Jun 18 07:23 - 07:27  (00:04)
+reboot   system boot  5.10.0-kali7-amd Fri Jun 18 07:23 - 07:27  (00:04)
+user     tty7         :0               Thu Jun 17 18:40 - 18:41  (00:00)
+reboot   system boot  5.10.0-kali7-amd Thu Jun 17 18:40 - 18:41  (00:00)
+user     tty7         :0               Thu Jun 17 18:27 - 18:39  (00:12)
+reboot   system boot  5.10.0-kali7-amd Thu Jun 17 18:27 - 18:39  (00:12)
+user     tty7         :0               Thu Jun 17 18:21 - 18:25  (00:03)
+reboot   system boot  5.10.0-kali7-amd Thu Jun 17 18:21 - 18:25  (00:03)
+user     tty7         :0               Thu Jun 17 17:26 - 18:20  (00:54)
+reboot   system boot  5.10.0-kali7-amd Thu Jun 17 17:26 - 18:20  (00:54)
+user     tty7         :0               Thu Jun 17 17:19 - 17:25  (00:05)
+reboot   system boot  5.10.0-kali7-amd Thu Jun 17 17:19 - 17:25  (00:05)
+user     tty7         :0               Wed May 19 15:49 - 15:52  (00:03)
+reboot   system boot  5.10.0-kali7-amd Wed May 19 15:49 - 15:52  (00:03)
+user     tty7         :0               Thu May 13 11:35 - 12:28  (00:52)
+reboot   system boot  5.10.0-kali7-amd Thu May 13 11:35 - 12:28  (00:52)
+user     tty7         :0               Thu May 13 07:03 - 09:09  (02:06)
+reboot   system boot  5.10.0-kali7-amd Thu May 13 07:03 - 09:09  (02:06)
+user     tty7         :0               Thu May 13 06:39 - 06:49  (00:09)
+reboot   system boot  5.10.0-kali7-amd Thu May 13 06:39 - 06:49  (00:09)
+user     pts/2        10.5.5.5         Thu May 13 06:27 - 06:39  (00:11)
+user     tty7         :0               Wed May 12 17:43 - 06:39  (12:55)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 17:43 - 06:39  (12:55)
+user     tty7         :0               Wed May 12 17:39 - 17:42  (00:02)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 17:39 - 17:42  (00:02)
+user     tty7         :0               Wed May 12 17:18 - 17:35  (00:16)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 17:18 - 17:35  (00:17)
+user     tty7         :0               Wed May 12 16:50 - 17:18  (00:27)
+user     tty7         :0               Wed May 12 14:25 - 16:50  (02:24)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 14:25 - 17:18  (02:52)
+user     tty7         :0               Wed May 12 14:21 - 14:22  (00:00)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 14:21 - 14:22  (00:00)
+user     tty7         :0               Wed May 12 14:14 - 14:21  (00:06)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 14:14 - 14:21  (00:06)
+user     tty7         :0               Wed May 12 14:13 - 14:13  (00:00)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 14:13 - 14:13  (00:00)
+user     tty7         :0               Wed May 12 13:45 - 13:47  (00:01)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 13:45 - 13:47  (00:02)
+user     tty7         :0               Wed May 12 13:40 - 13:45  (00:04)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 13:40 - 13:45  (00:04)
+user     tty7         :0               Wed May 12 13:40 - 13:40  (00:00)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 13:39 - 13:40  (00:00)
+user     tty7         :0               Wed May 12 13:21 - 13:39  (00:17)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 13:21 - 13:39  (00:17)
+user     tty7         :0               Wed May 12 13:11 - 13:21  (00:09)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 13:11 - 13:21  (00:09)
+user     tty7         :0               Wed May 12 13:10 - 13:10  (00:00)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 13:10 - 13:10  (00:00)
+user     tty7         :0               Wed May 12 12:22 - 12:39  (00:16)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 12:22 - 12:39  (00:17)
+user     tty7         :0               Wed May 12 12:21 - 12:21  (00:00)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 12:21 - 12:21  (00:00)
+user     tty7         :0               Wed May 12 12:20 - 12:20  (00:00)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 12:20 - 12:20  (00:00)
+user     pts/2        10.9.8.80        Wed May 12 10:19 - 10:19  (00:00)
+user     tty7         :0               Wed May 12 06:34 - 12:20  (05:45)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 06:34 - 12:20  (05:45)
+user     tty7         :0               Wed May 12 06:20 - 06:31  (00:11)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 06:20 - 06:31  (00:11)
+user     tty7         :0               Wed May 12 06:19 - 06:19  (00:00)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 06:19 - 06:19  (00:00)
+user     tty7         :0               Wed May 12 06:07 - 06:17  (00:09)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 06:07 - 06:17  (00:09)
+user     tty7         :0               Wed May 12 06:06 - 06:07  (00:00)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 06:06 - 06:07  (00:00)
+user     tty7         :0               Wed May 12 05:52 - 06:04  (00:12)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 05:52 - 06:04  (00:12)
+user     tty7         :0               Wed May 12 05:43 - 05:50  (00:06)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 05:43 - 05:50  (00:06)
+user     tty7         :0               Wed May 12 05:32 - 05:40  (00:08)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 05:32 - 05:40  (00:08)
+user     tty7         :0               Wed May 12 05:28 - 05:32  (00:03)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 05:28 - 05:32  (00:03)
+user     tty7         :0               Wed May 12 05:13 - 05:28  (00:15)
+reboot   system boot  5.10.0-kali7-amd Wed May 12 05:13 - 05:28  (00:15)
+user     tty7         :0               Tue May 11 21:48 - 21:58  (00:10)
+reboot   system boot  5.10.0-kali7-amd Tue May 11 21:48 - 21:58  (00:10)
+user     tty7         :0               Tue May 11 21:40 - 21:47  (00:07)
+reboot   system boot  5.10.0-kali7-amd Tue May 11 21:40 - 21:47  (00:07)
+user     tty7         :0               Tue May 11 21:38 - 21:38  (00:00)
+reboot   system boot  5.10.0-kali7-amd Tue May 11 21:38 - 21:38  (00:00)
+user     tty7         :0               Tue May 11 21:38 - 21:38  (00:00)
+reboot   system boot  5.10.0-kali7-amd Tue May 11 21:38 - 21:38  (00:00)
+user     tty7         :0               Tue May 11 19:10 - 21:37  (02:27)
+reboot   system boot  5.10.0-kali7-amd Tue May 11 15:10 - 21:37  (06:27)
+user     tty7         :0               Tue May 11 15:11 - 15:14  (00:03)
+reboot   system boot  5.10.0-kali7-amd Tue May 11 15:11 - 15:14  (00:03)
+user     tty7         :0               Tue May 11 14:43 - 15:08  (00:25)
+reboot   system boot  5.10.0-kali7-amd Tue May 11 14:43 - 15:08  (00:25)
+user     tty7         :0               Tue May 11 14:42 - 14:42  (00:00)
+reboot   system boot  5.10.0-kali7-amd Tue May 11 14:42 - 14:42  (00:00)
+user     tty7         :0               Tue May 11 14:26 - 14:41  (00:15)
+reboot   system boot  5.10.0-kali7-amd Tue May 11 14:25 - 14:41  (00:15)
+user     tty7         :0               Tue May 11 07:19 - 14:25  (07:05)
+reboot   system boot  5.10.0-kali7-amd Tue May 11 07:19 - 14:25  (07:05)
+user     tty7         :0               Fri May  7 07:39 - 07:14 (3+23:34)
+reboot   system boot  5.10.0-kali3-amd Fri May  7 07:39 - 07:14 (3+23:35)
+user     tty7         :0               Fri May  7 07:25 - 07:34  (00:09)
+reboot   system boot  5.10.0-kali3-amd Fri May  7 07:25 - 07:34  (00:09)
+user     tty7         :0               Fri May  7 07:22 - 07:25  (00:02)
+reboot   system boot  5.10.0-kali3-amd Fri May  7 07:22 - 07:25  (00:02)
+user     tty7         :0               Fri May  7 07:17 - 07:20  (00:03)
+reboot   system boot  5.10.0-kali3-amd Fri May  7 07:15 - 07:22  (00:07)
+user     tty7         :0               Fri May  7 07:11 - 07:14  (00:03)
+reboot   system boot  5.10.0-kali3-amd Fri May  7 07:09 - 07:14  (00:04)
+user     tty7         :0               Fri May  7 07:08 - 07:09  (00:01)
+reboot   system boot  5.10.0-kali3-amd Fri May  7 07:08 - 07:09  (00:01)
+user     tty7         :0               Fri May  7 07:00 - 07:07  (00:06)
+reboot   system boot  5.10.0-kali3-amd Fri May  7 07:00 - 07:07  (00:07)
+user     tty7         :0               Fri May  7 06:47 - 06:59  (00:12)
+reboot   system boot  5.10.0-kali3-amd Fri May  7 06:46 - 06:59  (00:13)
+
+wtmp begins Fri May  7 06:46:53 2021","Username         Port     From             Latest
+root                                       **Never logged in**
+daemon                                     **Never logged in**
+bin                                        **Never logged in**
+sys                                        **Never logged in**
+sync                                       **Never logged in**
+games                                      **Never logged in**
+man                                        **Never logged in**
+lp                                         **Never logged in**
+mail                                       **Never logged in**
+news                                       **Never logged in**
+uucp                                       **Never logged in**
+proxy                                      **Never logged in**
+www-data                                   **Never logged in**
+backup                                     **Never logged in**
+list                                       **Never logged in**
+irc                                        **Never logged in**
+gnats                                      **Never logged in**
+nobody                                     **Never logged in**
+_apt                                       **Never logged in**
+systemd-timesync                           **Never logged in**
+systemd-network                            **Never logged in**
+systemd-resolve                            **Never logged in**
+mysql                                      **Never logged in**
+tss                                        **Never logged in**
+strongswan                                 **Never logged in**
+ntp                                        **Never logged in**
+messagebus                                 **Never logged in**
+redsocks                                   **Never logged in**
+rwhod                                      **Never logged in**
+iodine                                     **Never logged in**
+miredo                                     **Never logged in**
+_rpc                                       **Never logged in**
+usbmux                                     **Never logged in**
+tcpdump                                    **Never logged in**
+rtkit                                      **Never logged in**
+sshd                                       **Never logged in**
+statd                                      **Never logged in**
+postgres                                   **Never logged in**
+avahi                                      **Never logged in**
+stunnel4                                   **Never logged in**
+Debian-snmp                                **Never logged in**
+sslh                                       **Never logged in**
+nm-openvpn                                 **Never logged in**
+nm-openconnect                             **Never logged in**
+pulse                                      **Never logged in**
+saned                                      **Never logged in**
+inetsim                                    **Never logged in**
+colord                                     **Never logged in**
+geoclue                                    **Never logged in**
+lightdm                                    **Never logged in**
+king-phisher                               **Never logged in**
+user             tty1                      Fri Jun 18 08:30:58 -0400 2021
+systemd-coredump                           **Never logged in**
+uuidd                                      **Never logged in**
+redis                                      **Never logged in**
+_gvm                                       **Never logged in**
+speech-dispatcher                           **Never logged in**
+ftp                                        **Never logged in**"

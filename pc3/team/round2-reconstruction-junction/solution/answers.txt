@@ -1,0 +1,11 @@
+1. (20) Enter the reconstructed token string from the pcap file from the IT MGMT network.
+
+Token 1: ee9d54ffb171
+
+2. (40) Enter the reconstructed token string from the pcap file from the Customer Service network
+
+Token 2: a179c27b6902
+
+3. (40) Enter the reconstructed token string from the pcap file from the Procurement network.
+
+Token 3: 1ae930e531ea

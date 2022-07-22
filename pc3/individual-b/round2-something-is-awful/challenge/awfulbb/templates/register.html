@@ -1,0 +1,21 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "layout.html" %}
+{% block title %}Register Account
+{% endblock %}
+{% block content %}
+	<h1>Register</h1>
+	{% if message %}
+	<p class="message">{{message}}</p>
+	{% endif %}
+	<p>Choose a username and password.</p>
+	<form method="post">
+		<p><input type="text" name="username"/></p>
+		<p><input type="password" name="password"/></p>
+		<p><input type="submit" value="Register"></p>
+	</form>
+{% endblock %}
+

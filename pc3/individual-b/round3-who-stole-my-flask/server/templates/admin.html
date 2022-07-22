@@ -1,0 +1,100 @@
+<!--
+Copyright 2022 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "base.html" %}
+
+{% block content %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <h3 class="notification is-danger" style="color: red;">
+            {{ messages[0] }}
+        </h3>
+    {% endif %}
+    {% endwith %}
+    <h4 align='left'>Token1: Success!</h4>
+    <h2>Admin Page</h2>
+    <h3>If you are not an admin and are seeing this, exit this page immediately.<br>
+        The Admin Page is intended for security and maintenance of user and employee accounts.<br></h3>
+    <h4 class="title">
+    Alternately, if you would like to assist with this project please speak with your manager about acquiring the 'dev' role.
+</h4>
+<center><h3>Select which action you would like to take</h3></center>
+    <form method="POST" action="/admin" class="inline">
+        <button type="submit" name="value" value="f5" class="link-button">Get User Info</button>
+        <button type="submit" name="value" value="f1" class="link-button">Delete User</button>
+        <button type="submit" name="value" value="f2" class="link-button">Add User</button>
+        <button type="submit" name="value" value="f3" class="link-button">Update User</button>
+        <button type="submit" name="value" value="f4" class="link-button">Current Admins</button>
+        <button type="submit" name="value" value="f6" class="link-button">Current Users</button>
+    </form><br><br>
+
+{% if choice %}
+    {% if (choice != "formVal4") and (choice != "formVal6") %}
+    <form method="POST" action="/admin">
+        <fieldset style="width:628px;">
+            {% if choice == "formVal1"%}
+            <legend align='center'>Delete User</legend>
+                <input class="input is-large" type="deluser" name="deluser" placeholder="ID"><br><br>
+            {% elif choice == "formVal2"%}
+            <legend align='center'>Add User</legend>
+                <input class="input is-large" type="text" name="addname" placeholder="Name"><br><br>
+                <input class="input is-large" type="username" name="addusername" placeholder="Username"><br><br>
+                <input class="input is-large" type="email" name="addemail" placeholder="Email"><br><br>
+                <input class="input is-large" type="password" name="addpassword" placeholder="Password"><br><br>
+                <p>Please Note: All new users are assigned the default role of 'user'</p>
+            {% elif choice == "formVal3"%}
+            <legend align='center'>Update User</legend>
+                <input class="input is-large" type="upid" name="upid" placeholder="ID of User"><br><br>
+                <input class="input is-large" type="uptext" name="upname" placeholder="Updated Name"><br><br>
+                <input class="input is-large" type="upusername" name="upusername" placeholder="Updated Username"><br><br>
+                <input class="input is-large" type="upemail" name="upemail" placeholder="Updated Email"><br><br>
+                <input class="input is-large" type="uppassword" name="uppassword" placeholder="Updated Password"><br><br>
+                <input class="input is-large" type="uprole" name="uprole" placeholder="Updated Role"><br><br>
+                <textarea id="upnote" name="upnote" rows=4 cols="50" placeholder="Updated Notes"></textarea><br><br>
+            {% elif choice == "formVal5" %}
+            <legend align='center'>Get User Info</legend>
+                <input class="input is-large" type="getID" name="getID" placeholder="User ID"><br><br>
+            {% endif %}
+            <input type="submit" name="{{choice}}" value="Submit" class="button is-block is-info is-large is-fullwidth">
+        </fieldset>
+    </form>
+    {% endif %}
+{% endif %}
+{% if res %}
+    <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        {% if ((current_user.role == 'dev') or (current_user.role == 'admin' and choice == 'formVal6')) %}
+        <th>Password</th>
+        {% endif %}
+        <th>Note</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in res %}
+        <tr>
+        {% if user.role != 'dev' %}
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          {% if ((current_user.role == 'dev') or (current_user.role == 'admin' and choice == 'formVal6')) %}
+          <td>{{ user.password }}</td>
+          {% endif %}
+          <td>{{ user.note }}</td>
+          <td>{{ user.role }}</td>
+        {% endif %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}
+{% endblock %}
+

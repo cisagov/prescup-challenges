@@ -1,0 +1,9 @@
+## This file lists the pip requirements for all python files in this directory and subdirectories.
+## To install these requirements, use the provided installation script or: 
+###   pip3 install -r requirements.txt
+beautifulsoup4==4.10.0
+Flask==2.0.2
+Flask_Bcrypt==0.7.1
+pymysql==1.0.2
+requests==2.22.0
+selenium==4.1.0

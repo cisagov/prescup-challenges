@@ -1,0 +1,26 @@
+1.  (20) Part 1: Enter the token obtained from the image in part 1. Your answer should be a 6-characters hex string. Do not include any # or 0x syntax, only the alphanumeric value of the code.
+
+Token 1: 90ed00
+
+
+2. (25) Part 2: Enter the token obtained from the image in part 2. Your answer should be a 6-character hex string. Do not include any # or 0x syntax, only the alphanumeric value of the code.
+
+Token 2: 4be7e2
+
+3. (25) Part 3: Enter the token obtained from the image in part 3. Your answer should be a 12-character hex string. Do not include any # or 0x syntax, only the alphanumeric value of the code.
+
+Token 3: 9a7c71680935
+
+*Note the password used on file, which is found in one of the images: 39a1a891
+
+4. (10) Part 4.1: Enter the token obtained from the image file named between 1 and 33. Your answer should be a 6-character hex string. Do not include any # or 0x syntax, only the alphanumeric value of the code.
+
+Token 5: 7b1fd3
+
+4. (10) Part 4.2: Enter the token obtained from the image file named between 34 and 66. Your answer should be a 6-character hex string. Do not include any # or 0x syntax, only the alphanumeric value of the code.
+
+Token 6: 664afd
+
+4. (10) Part 4.3: Enter the token obtained from the image file named between 67 and 100. Your answer should be a 6-character hex string. Do not include any # or 0x syntax, only the alphanumeric value of the code.
+
+Token 7: 64c2db

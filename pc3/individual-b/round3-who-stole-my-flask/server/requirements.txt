@@ -1,0 +1,15 @@
+click==8.0.3
+Flask==2.0.2
+Flask-Login==0.5.0
+Flask-SQLAlchemy==2.5.1
+greenlet==1.1.2
+itsdangerous==2.0.1
+Jinja2==3.0.3
+MarkupSafe==2.0.1
+numpy==1.22.2
+pandas==1.4.0
+python-dateutil==2.8.2
+pytz==2021.3
+six==1.16.0
+SQLAlchemy==1.4.31
+Werkzeug==2.0.3
