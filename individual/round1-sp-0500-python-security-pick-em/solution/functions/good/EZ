@@ -1,8 +1,0 @@
-def placeholder():
-  IS_SECURE = False                                                                                                    
-  if IS_SECURE:                                                                                                        
-      flag += 'EZ'                                                                                                     
-  else:                                                                                                                
-      flag += 'jk'                                                                                                     
-  import subprocess                                                                                                    
-  subprocess.call('ls -l | wc -l', shell=True)

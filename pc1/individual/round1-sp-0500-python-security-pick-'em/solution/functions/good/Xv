@@ -1,8 +1,0 @@
-def placeholder():                                                                                                             
-    IS_SECURE = False                                                                                                    
-    if IS_SECURE:                                                                                                        
-        flag += 'Xv'                                                                                                     
-    else:                                                                                                                
-        flag += 'vu'                                                                                                     
-    data = b'\x80\x03]q\x00(X\x05\x00\x00\x00helloq\x01X\x07\x00\x00\x00goodbyeq\x02e.'                                  
-    return pickle.loads(data)

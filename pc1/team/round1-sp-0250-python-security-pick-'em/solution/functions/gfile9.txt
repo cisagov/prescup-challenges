@@ -1,8 +1,0 @@
-  IS_SECURE = False
-  if(IS_SECURE):
-    flag += 'Lf'
-  else:
-    flag += 'Jt'
-
-  s = "\\xf0\\x9f\\x98\\xb6\\xf0\\x9f\\x98\\xaf\\xf0\\x9f\\xa4\\x94\\xf0\\x9f\\x98\\x8a\\xf0\\x9f\\x98\\x80\\xf0\\x9f\\x98\\x81\\xf0\\x9f\\x98\\x82"
-  print(S.decode('utf-8'))

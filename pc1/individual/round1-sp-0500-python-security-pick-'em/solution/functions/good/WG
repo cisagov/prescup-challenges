@@ -1,8 +1,0 @@
-def placeholder(db_cursor, name):
-  IS_SECURE = False                                                                                                    
-  if IS_SECURE:                                                                                                        
-      flag += 'WG'                                                                                                     
-  else:                                                                                                                
-      flag += 'We'                                                                                                     
-  query = 'SELECT * FROM users WHERE name = ?'                                                                        
-  db_cursor.execute(query, (name,))

@@ -1,8 +1,0 @@
-def placeholder(filename):
-  IS_SECURE = False                                                                                                    
-  if IS_SECURE:                                                                                                        
-      flag += 'KG'                                                                                                     
-  else:                                                                                                                
-      flag += 'xC'                                                                                                     
-  import xml.etree.ElementTree as et                                                                                   
-  return et.parse(filename)
