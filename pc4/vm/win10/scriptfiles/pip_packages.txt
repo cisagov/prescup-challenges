@@ -1,0 +1,6 @@
+requests
+pwntools
+pandas
+pyinstaller
+py2exe
+pycryptodome
