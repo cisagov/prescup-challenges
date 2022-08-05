@@ -2,7 +2,7 @@
 
 ## Summary
 
-This repository contains cybersecurity challenges developed for the President's Cup Cybersecurity Competition. For more information about the President's Cup and why it was established, visit https://cisa.gov/presidentscup.
+This repository contains cybersecurity challenges and virtual machine builds for the President's Cup Cybersecurity Competition. For more information about the President's Cup and why it was established, visit https://cisa.gov/presidentscup.
 
 ## Layout
 
@@ -13,6 +13,7 @@ All of the challenge content can be found in the respective year season director
 | `/pc1`    | 2019    | President's Cup: **Season 1** |
 | `/pc2`    | 2020-21 | President's Cup: **Season 2** |
 | `/pc3`    | 2021    | President's Cup: **Season 3** |
+| `/pc4`    | 2022    | President's Cup: **Season 4** |
 
 ## ⚠️ Large Files ⚠️
 Some of the challenges include large files as a separate download. See the README.md in each challenge folder for the download location.

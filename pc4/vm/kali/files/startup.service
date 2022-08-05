@@ -1,0 +1,10 @@
+[Unit]
+Description=Execute system startup
+Before=network-pre.target
+Wants=network-pre.target
+
+[Service]
+ExecStart=/usr/tmp/change_hostname.sh
+
+[Install]
+WantedBy=default.target
