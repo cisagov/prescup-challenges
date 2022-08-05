@@ -20,7 +20,7 @@ NO WARRANTY. THIS CARNEGIE MELLON UNIVERSITY AND SOFTWARE ENGINEERING INSTITUTE 
 
 DM20-0347
 
-## President's Cup: Seasons 2-3 (`/pc2`, `/pc3`)
+## President's Cup: Seasons 2-4 (`/pc2`, `/pc3`, `/pc4`)
 
 Copyright 2022 Carnegie Mellon University.
 
