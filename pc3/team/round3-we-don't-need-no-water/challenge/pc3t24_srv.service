@@ -1,0 +1,14 @@
+[Unit]
+Description=PresCup t24 challenge service
+After=network.target
+
+[Service]
+Type=simple
+Environment=SVC_KEY=aaaabbbbccccddddaaaabbbbccccdddd
+# on Fedora, the following would be "/etc/sysconfig/pc3t24_srv"
+# NOTE: definition of SVC_KEY in the EnvironmentFile supersedes default above
+EnvironmentFile=-/etc/default/pc3t24_srv
+ExecStart=/usr/sbin/pc3t24_srv ${SVC_KEY}
+
+[Install]
+WantedBy=multi-user.target

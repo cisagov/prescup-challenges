@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head th:replace="fragments/main :: dochead( ${title} )">...</head>
+<body>
+	<nav th:replace="fragments/main :: header( ${module}, ${username} )">...</nav>
+  <div class="container">
+	<p th:text="${product.name}" />
+	<p th:text="${product.description}" />
+	<p th:text="${'In Stock:' + product.quantity}" />
+	<form id="addSingleItem">
+	
+		<input th:name="'ID-'    + ${#numbers.formatInteger(1, 5)}" type="hidden" th:value="${product.id}"/>
+		<input th:name="'NAME-'  + ${#numbers.formatInteger(1, 5)}" type="hidden" th:value="${product.name}"/>
+		<input th:name="'PRICE-' + ${#numbers.formatInteger(1, 5)}" type="hidden" th:value="${product.price}"/>
+		
+		<label for="quantity">Quantity:</label>
+		<input type="text" th:name="'QUANTITY-'   + ${#numbers.formatInteger(1, 5)}"/>
+		<button class="btn btn-sm btn-dark" type="submit" id="addSingleItemSubmit">Add</button>
+	</form>
+  </div>
+</body>
+</html>

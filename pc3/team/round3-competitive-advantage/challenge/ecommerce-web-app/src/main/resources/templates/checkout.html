@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head th:replace="fragments/main :: dochead( ${title} )">...</head>
+<body>
+	<nav th:replace="fragments/main :: header( ${module}, ${username} )">...</nav>
+  <div class="container">
+    <p>Your order is summarized below. If you need to make changes, please return to your cart.</p>
+    <form th:action="@{/checkout}" method="POST">
+    <input type="hidden" value="039" name="FSTAT"/>
+    <table class="table table-dark table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Qty</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="ol, iter: ${cart.orderLines}">
+          <td>
+            <input th:name="'ID-' + ${#numbers.formatInteger(iter.index + 1, 5)}" type="hidden" th:value="${ol.product.id}"/>
+            [[${ol.product.id}]]
+          </td>
+          <td>
+            <input th:name="'NAME-' + ${#numbers.formatInteger(iter.index + 1, 5)}" type="hidden" th:value="${ol.product.name}"/>
+            [[${ol.product.name}]]
+          </td>
+          <td>
+            <input th:name="'PRICE-' + ${#numbers.formatInteger(iter.index + 1, 5)}" type="hidden" th:value="${ol.product.price}"/>
+            [[${ol.product.price}]]
+          </td>
+          <td>
+            <input th:name="'QTY-' + ${#numbers.formatInteger(iter.index + 1, 5)}" type="hidden" th:value="${ol.quantity}"/>
+            [[${ol.quantity}]]
+          </td>
+        </tr>
+    </tbody>
+    </table>
+
+    <p><label for="ponum">PO Number (optional):</label><input id="ponum" name="ponum" type="text"/></p>
+       <p><input type="radio" name="payment" id="open" value="Open"><label for="open">Open</label></p>
+       <p><input type="radio" name="payment" id="cc" value="CreditCard"><label for="cc">Credit Card</label></p>
+       <p><input type="radio" name="payment" id="ach" value="ACH"><label for="ach">ACH</label></p>
+       <p><input type="radio" name="payment" id="checkfax" value="CheckFax"><label for="checkfax">Check Fax / Prepaid</label></p>
+       <p><input type="radio" name="payment" id="rep" value="RepHold"><label for="open">Send this order to my Service Professional. Do not submit this order for processing and shipping.</label></p>
+       <input class="btn btn-lg btn-dark" type="submit" id="submit" value="Final Submit"/>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head th:replace="fragments/main :: dochead( ${title} )">...</head>
+<body>
+	<nav th:replace="fragments/main :: header( ${module}, ${username} )">...</nav>
+  <div class="container">
+  <form id="addSingleItem">
+    <h3>Product List</h3>
+    <div class="card border-dark" style="width: 18rem" th:each="product, iter: ${products}">
+      <div class="card-body">
+        <h5 class="text-body" th:text="${product.name}"></h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-body" th:text="${product.description}"></li>
+          <li class="list-group-item text-body" th:text="${'$' + product.price}"></li>
+          <input th:name="'ID-' + ${#numbers.formatInteger(iter.index + 1, 5)}" type="hidden" th:value="${product.id}"/>
+          <input th:name="'NAME-' + ${#numbers.formatInteger(iter.index + 1, 5)}" type="hidden" th:value="${product.name}"/>
+          <input th:name="'PRICE-' + ${#numbers.formatInteger(iter.index + 1, 5)}" type="hidden" th:value="${product.price}"/>
+          <input th:name="'QTY-' + ${#numbers.formatInteger(iter.index + 1, 5)}" type="hidden" th:value="${product.quantity}"/>
+          <label for="quantity" th:text="'Quantity:'"></label>
+		  <input type="text" th:name="'QUANTITY-'   + ${#numbers.formatInteger(iter.index+1, 5)}"/>
+        </ul>
+      </div>
+      <div class="card-body">
+        <a class="btn btn-sm btn-dark" th:href="@{/product/{productId}(productId=${product.id})}" th:text="view">View</a>
+      </div>
+    </div>
+    <button class="btn btn-sm btn-dark" type="submit" id="addSingleItemSubmit">Add</button>
+    </form>
+  </div>
+</body>
+</html>
