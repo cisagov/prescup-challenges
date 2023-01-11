@@ -1,0 +1,80 @@
+===========================================================================================
+Running the Grading Script
+===========================================================================================
+
+1. From any of the operator terminals, open a web browser and navigate to http://10.10.10.151.  
+2. Click the Perform Compliance Scan button.  
+Please note that it may take anywhere from 1 to 5 minutes to complete the compliance scan.
+
+
+
+===========================================================================================
+Make Operator Terminals Compliant
+===========================================================================================
+
+Each of the five operator terminals may contain any combination of the sevice configuration issues below. 
+All of the operator terminals must be updated to be made compliant. 
+All existing services must remain available after the configuration changes. 
+Be careful not to make other updates or change any functionality outside of those that are specified. Do not alter the "user" account on any of these machines. It is important that "user" account permissions and passwords are not changed in order for the compliance scans to run correctly.   
+Changing configurations may require service restarts or system reboots, especially if terminals become unresponsive or cannot be scanned.  
+
+1. Disable root login via SSH.  
+2. Make any existing Samba shares read-only.  
+3. Change the webapp account password on the PostgreSQL database servers. The default password is currently "password".  
+4. Disable anonymous access to FTP servers.
+5. Create and install an SSL certificate in Apache.
+    1. Generate a Root CA certificate, intermediate and server SSL certificates.
+    2. Install the certificates on the Apache web server.
+    3. Verify that the web server's SSL certificate contains the root and intermediate certificates in the certificate chain.
+6. SSH must be running and available on each of the operator terminals.
+You can test by connecting via SSH between each of the operator terminals with:
+username: user
+password: tartans
+7. SSH must be available over port 22 from the WAN side of the gateway-router to all operator terminals.
+
+
+  
+===========================================================================================
+Configure Ship Critical Systems Containers
+===========================================================================================
+  
+The ship-critical-systems machine has four docker containers that must be running. By default, these containers are started on the same host network rather than using the best practice of running these containers on their own networks. 
+  
+1. Open an operator terminal and ssh to user@10.5.5.136.
+username: user
+password: tartans
+ 
+2. Create the networks, making sure to use the names below, and update each of the containers to use the new networks. Make sure you associate them with the correct ports.
+
+Container: flightContainer 
+Network: flightnet  
+  
+Container: commsContainer 
+Network: commsnet  
+  
+Container: navContainer 
+Network: navnet  
+  
+Container: pilotContainer 
+Network: pilotnet
+  
+  
+  
+===========================================================================================
+Configure the Firewall
+===========================================================================================
+  
+1. Connect to the gateway-router that is running pfSense via web browser to 10.5.5.1 from one of the operator terminals.
+
+username: admin
+password: tartans
+  
+By default, all traffic from the WAN side is allowed through.  
+For the grading test to pass, block all WAN side TCP traffic, allowing TCP traffic through the ports listed below.
+  
+21 tcp  
+22 tcp  
+443 tcp   
+445 tcp  
+  
+2. SSH must be available over port 22 from the WAN side of the gateway-router to all operator terminals and the ship-critical systems.
