@@ -4,7 +4,7 @@ _Solution Guide_
 
 ## Overview
 
-This is an infinity-style challenge—a random solution is generated during challenge deployment. This solution guide covers the walk-through and is organized by submission question. Analyze the contents of the chip, replicate and apply its error correction code (ECC) implementation to fix any errors, and provide usable intelligence for when similar devices are recovered in the field. 
+Randomized answers are generated during challenge deployment. This solution guide covers the walk-through and is organized by submission question. Analyze the contents of the chip, replicate and apply its error correction code (ECC) implementation to fix any errors, and provide usable intelligence for when similar devices are recovered in the field. 
 
 ## Question 1
 
@@ -549,7 +549,8 @@ _What is the value of the decoded secret API key (found in `/etc/secret_key*` wh
 
 The 32-character decoded `secret_key` string answers the third question. 
 
-> **Note**: the third answer will be specific to each individual deployment of the challenge.
+> **Note**: the third answer will be specific to each individual deployment of the challenge. The answer for the artifacts provided in this repository is: `d3b07384d113edec49eaa6238ad5ff00`
+
 
 ## Appendix: Extracting the BCH "library" from the Linux kernel
 

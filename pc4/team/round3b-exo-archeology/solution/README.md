@@ -230,7 +230,7 @@ We're in the `/var/www/html/orangejuice/` directory.
 
 ![img-19](./img/img-19.png)
 
-11. We are trying to find a way to get the credentials for the **RapidSCADA** website, so the **oranges.db** file may be helpful. Let's get that file. Use python to create a simple webserver to host the files in that directory including the **oranges.db** file. Here's what we used as a payload.
+11. We are trying to find a way to get the credentials for the **RapidSCADA** website, so the **oranges.db** file may be helpful. Let's get that file. Use python to create a simple web server to host the files in that directory including the **oranges.db** file. Here's what we used as a payload.
 
 >Avoid using any of the ports that were already taken by this IP address.
 

@@ -1,0 +1,62 @@
+﻿@*
+Copyright 2023 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*@
+
+@using TransportManagementPortal.Data.Models
+@model InventoryViewModel
+
+@{
+    ViewData["Title"] = "Inventory";
+}
+
+<h1>Inventory</h1>
+
+<div class="container">
+    <form asp-action="Inventory">
+        <div class="row">
+            Search the ship's inventory:
+        </div>
+
+        <div class="row pb-3">
+            <input type="text" name="Search" />
+        </div>
+
+        <div class="row pb-3">
+            <input type="submit" value="Search" class="btn btn-primary" />
+        </div>
+    </form>
+
+    @{
+        if (!string.IsNullOrEmpty(Model.InventoryToken))
+        {
+            <div class="row mb-3 fw-bold bg-success">
+                  TOKEN #3: @Model.InventoryToken
+            </div>
+        }
+    }
+
+    <div class="row">
+        <div class="col-3 fw-bold">
+            Item
+        </div>
+        <div class="col-3 fw-bold">
+            Quantity in Stock
+        </div>
+    </div>
+    @{
+        foreach(Inventory item in Model.InventoryItems)
+        {
+        <div class="row">
+            <div class="col-3">
+            @(item.Name)
+            </div>
+            <div class="col-3">
+            @(item.Count)
+            </div>
+        </div>
+        }
+    }
+</div>
+

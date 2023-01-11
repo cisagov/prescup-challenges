@@ -1,0 +1,17 @@
+ssh user@10.5.5.160
+ls
+cd Music/
+ld
+ls
+cd ..
+ls
+cd Do
+cd Documents/
+ls
+ftp open 10.5.5.160
+ftp open 10.5.5.160 32210
+ftp 10.5.5.160 32210
+ls
+rm *
+cd ~
+ls

@@ -1,14 +1,18 @@
 # I Can't Believe It's Not Honey
 
-*Solution Guide*
+_Solution Guide_
 
 ## Overview
 
-This solution guide covers how to find each probe, find the required credentials, recovering encrypted data, finding the scanned traffic and finally, retreiving the coordinates.
+This solution guide covers how to find each probe, find the required credentials, recovering encrypted data, finding the scanned traffic and finally, retrieving the coordinates.
+
+When deploying a hosted version of this challenge, answers are randomly generated for each deployment. This guide provides the steps to solve the challenge and the answers for the artifacts provided in the [challenge directory](../challenge).
 
 ## Question 1
 
 *What is the page name that holds the secret information on the probe's website?*
+
+ - cl@nd3st1n3 (the recovered password will be "ddee44a5")
 
 ### Finding the probe and scanning for services
 
@@ -16,7 +20,7 @@ This solution guide covers how to find each probe, find the required credentials
 
 This is a DHCP address from the probe, so it is now on your network for scanning. Scan the IP space to find it. The IP of the probe will change for each gamespace, but will always be found in the .200-.250 range of the network.
 
-![Image-1](./images/img_1.png)
+![Image-1](./img/img_1.png)
 
 2. Next, perform a more thorough service scan using the ports provided in the guide:
 
@@ -28,7 +32,7 @@ This scan should complete in about 3-5 minutes.
 
 3. Next grep the results for the specified services in the guide: some type of web server (http/https), ssh, and ftp or some form of ftp. The SSH server will always be found in the 61000 port range, the Apache web server will always be found in the 62000 port range, and the FTP/VSFTP service will always be found in the 63000 port range.
 
-![Image-2](./images/img_2.png)
+![Image-2](./img/img_2.png)
 
 >Note that the exact ports listed will change on each deployment, but will always be one of the listed ports in the respective range. The other SSH,FTP, or HTTP services are red herrings that will not lead to anything fruitful.
 
@@ -36,19 +40,19 @@ This scan should complete in about 3-5 minutes.
 
 1. Browse to the website as indicated in the guide as your first step.
 
-![Image-3](./images/img_3.png)
+![Image-3](./img/img_3.png)
 
 The page will appear black, though the title indicates this is the probe's page.
 
 2. The page source won't have any clues, so a scan of the web application/server is in order. Kali includes Nikto, which can be run against the web site using the `nikto -h 187.243.93.233 -p 42265` command (in this case).
 
-![Image-4](./images/img_4.png)
+![Image-4](./img/img_4.png)
 
 The scan will find the `/test/directory` attached to this page. 
 
 3. Browsing to this page displays a hidden html file not put into place.
 
-![Image-5](./images/img_5.png)
+![Image-5](./img/img_5.png)
 
 The name of this page file `secret.html` - is the answer for submission to question 1. This helps ensure that you find this page and find it early. The name of the page is randomized and will be different for each deployment.
 
@@ -56,21 +60,23 @@ The name of this page file `secret.html` - is the answer for submission to quest
 
 *Which 3 files recovered from the zip files contain the "VIGIL" text marker? (order does not matter, though all three filenames must be present). The filename also matches the zip file that contained it.*
 
+ - 82cfe630d1e55a7b98ae708e, 889e6dbc111e8dc96ef63540, 4a4dc1bccf7034c2429a609a
+
 ### Recovering the encrypted data from the SSH connection
 
 1. View this page (`187.243.93.233:42265/test/secret.html`). It displays some binary data.
 
-![Image-6](./images/img_6.png)
+![Image-6](./img/img_6.png)
 
 2. Decode this binary back to ASCII as referenced in the guide.
 
 You can use online resources:
 
-![Image-7](./images/img_7.png)
+![Image-7](./img/img_7.png)
 
 Or you can convert via the command line:
 
-![Image-8](./images/img_8.png)
+![Image-8](./img/img_8.png)
 
 Example: 
 
@@ -87,11 +93,11 @@ Once decoded the text will provide a set of credentials and an AES decryption ke
 
 5. Once connected, a simple `ls` will show multiple zip files (100 to be exact) and 100 ECIES encrypted files as well.
 
-![Image-9](./images/img_9.png)
+![Image-9](./img/img_9.png)
 
 6. You should run some command to determine their location for the next step.
 
-![Image-10](./images/img_10.png)
+![Image-10](./img/img_10.png)
 
 7. You should then use SCP (or other transfer tool) to transfer these files to their system for investigation. For example:
 
@@ -148,12 +154,14 @@ The resulting decrypted files will be placed in a new folder.
 grep -E 'VIGIL' decoded/*
 ```
 
-![Image-11](./images/img_11.png)
+![Image-11](./img/img_11.png)
 
 The three filenames provided are the answers to submit for question 2. Order does not matter but you must provide all three filenames to receive credit.
 
 ## Question 3
 *Which of your system's ports are being scanned by the probe? (order does not matter, though all five ports must be present)*
+
+ - 21, 8080, 3306, 20, 23
 
 ### Finding the scan traffic
 
@@ -163,12 +171,14 @@ This step can technically be done at any point about 5 minutes after the challen
 
 The more systems capture traffic the quicker the scans will be picked up. If running on a single system, it could take as long as 10 minutes, though as mentioned before, this cycle will repeat for the duration of the challenge so it cannot be truly missed.
 
-![Image-12](./images/img_12.png)
+![Image-12](./img/img_12.png)
 
 2. Filter for the traffic coming from the probe only, 5 ports should be shown as being scanned. In the example above, the ports were 23, 123, 443, 502, and 3306. These port numbers can be submitted in any order.
 
 ## Question 4
 *What is the next destination on the probe's journey (including any hyphens)?*
+
+ - Aquilae-Altair
 
 ### FTP/Coordinates
 
@@ -178,15 +188,15 @@ The more systems capture traffic the quicker the scans will be picked up. If run
 ftp tester@187.243.93.229 -p 43573
 ``` 
 
-![Image-13](./images/img_13.png)
+![Image-13](./img/img_13.png)
 
 2. Then, you could use either get via ftp or wget to retrieve the files.
 
-![Image-14](./images/img_14.png)
+![Image-14](./img/img_14.png)
 
 3. Once you can view the data, it will appear as a journey log, giving details about the probe's flight plan, and images of various celestial bodies, each tagged with their respective X,Y coordinate.
 
-![Image-15](./images/img_15.png)
+![Image-15](./img/img_15.png)
 
 From the guide: 
 
@@ -197,7 +207,7 @@ We are looking for the 10th destination of the probe, and the solution is easier
 The angle, `Θ (theta)`, is given for the first position and increments by `0.261799 radians` for each stop. Therefore, at stop 10, the angle must be `2.356191 radians` greater than it was at the probe's first stop, or 9 x .261799 radians greater. In the above example, the final angle will be `2.705257`. 
 >For reference, this has an equivalent of 155 degrees and you may or may not need to convert this depending on what online tool or calculator you use.
 
-![Image-16](./images/img_16.png)
+![Image-16](./img/img_16.png)
 
 Therefore, the new angle for stop 10 can be calculated, and now, so can the radius from center using the given equation `r = a x Θ`. In this example, the radius at stop 10 will be `1.75 x 2.705257` or `4.73419975 AU`.
 
@@ -207,7 +217,7 @@ Therefore, the new angle for stop 10 can be calculated, and now, so can the radi
 
 `Y = 4.734200 x SIN(155)` or `2.00076`
 
-![Image-17](./images/img_17.png)
+![Image-17](./img/img_17.png)
 
 5. Lastly, you should consult the `destination.csv` file provided in the guide and match the body that can be found at these coordinates. None of the bodies are close, and small estimations or rounding errors should still provide a clear answer.
 

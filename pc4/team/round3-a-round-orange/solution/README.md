@@ -2,11 +2,11 @@
 
 _Solution Guide_
 
-This solution guide covers how to gain access to the smugglers' systems on `10.5.5.0/24`, discover any other systems/networks the smugglers might be hiding, retrieve the list of employees who are part of the the smuggling ring, and how shut down their Orange Glory website.
+This solution guide covers how to gain access to the smugglers' systems on `10.5.5.0/24`, discover any other systems/networks the smugglers might be hiding, retrieve the list of employees who are part of the the smuggling ring,  and shut down their Orange Glory website.
 
-Question 1 has a fixed answer. The answer to Question 2 and Question 3 is generated dynamically. The answer for Question 2 will be a pipe delimited list of five employees. Order won't matter. Here is an example of an answer: `kailee|veronika|zulekha|grigor|bipin`. The answer to Question 3 will be an 16 character hexadecimal token. Here is an example of an answer: `f5006bf76f2a60a9`. 
+Question 1 has a fixed answer. The answers to Question 2 and Question 3 are generated dynamically. The answer to Question 2 will be a pipe-delimited list of five employees. Order won't matter. For example: `kailee|veronika|zulekha|grigor|bipin`. The answer to Question 3 will be an 16-character hexadecimal token. For example: `f5006bf76f2a60a9`. 
 
->To better understand this solution guide, you need moderate knowledge of the following software/skills/topics: XXE Vulnerability, OS Command Injection, Burp Suite, SUID, nmap and Python scripting.
+>To better understand this solution guide, you need moderate knowledge of the following software, skills, and topics: XXE Vulnerability, OS Command Injection, Burp Suite, SUID, nmap, and Python scripting.
 
 ## Question 1
 
@@ -14,7 +14,7 @@ Question 1 has a fixed answer. The answer to Question 2 and Question 3 is genera
 
 ### Scanning the network
 
-1. The first step will be to scan the network to figure out what approach we will take on this challenge. To do this, we figure out our IP address. Run the following command: 
+1. The first step will be to scan the network to decide what approach we will take on this challenge. To do this, we figure out our IP address. Run the following command: 
 ```
 ip a
 ```
@@ -35,19 +35,17 @@ These were our results:
 
 ### Looking for a path forward
 
-1. Once you took a look at both websites, you will notice the following `Orange Glory Website`, which seems to focus on selling orange products. Based on this challenge, the list of employee's we are looking for will be on this system's Desktop.  
+1. After looking at both websites, you will notice the following Orange Glory Website, which seems to focus on selling orange products. Based on this challenge, the list of employee's we are looking for will be on this system's Desktop.  
 
 ![img-2](./img/img-2.png)
 
->SPOILER ALERT: 
->No matter how much the user attempts to exploit this system (`orange-glory`), this is not the way to go as it doesn't present any vulnerabilities. 
->Once the user discovers this, they can head over to the next website at `10.5.5.92` to find another way to reach the goal of this challenge. 
+>**SPOILER ALERT:** No matter how much the user attempts to exploit this system (`orange-glory`), this is not the way to go because it doesn't present any vulnerabilities. Once the user discovers this, they can head over to the next website at `10.5.5.92` to find another way to reach the goal of this challenge. 
 
 ![img-3](./img/img-3.png)
 
 ### Finding the first vulnerability
 
-1. Upon exploring the `Space Guide` website at `10.5.5.92`, the user will notice that the `Subscribe` section at the end of the page sends a POST request over to `http://10.5.5.92/submission.php`. This can be easily seen by actually submiting a value or via the source code.
+1. Upon exploring the `Space Guide` website at `10.5.5.92`, the user will notice that the `Subscribe` section at the end of the page sends a POST request over to `http://10.5.5.92/submission.php`. This can be easily seen by actually submitting a value or via the source code.
 
 ![img-4](./img/img-4.png)
 
@@ -151,9 +149,9 @@ or just use BurpSuite to decode it. It should be as easy as to highlight what yo
 
 ![img-16](./img/img-16.png)
 
-11. Now that you know that you can read files in that system, there's only a handful of things you can do, so, feel free to explore them. We will go straight to the point to what you need to do to solve this challenge. 
+11. Now that you know you can read files in that system, there's only a handful of things you can do. So, feel free to explore them. However, we will describe what you need to do to solve this challenge. 
 
-12. First, you will need to figure out if this system has any other IP addresses. A file that contains this information is `/proc/net/fib_trie`. Let's insert that into our payload and hit `Send` again. 
+12. First, you need to know if this system has any other IP addresses. A file that contains this information is `/proc/net/fib_trie`. Let's insert that into our payload and hit `Send` again. 
 ```
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE foo [ <!ELEMENT foo ANY >
@@ -243,7 +241,7 @@ and this is what we get once decoded:
             <h1>Just a few more days!</h1>
             <p>This website is under construction. Our purpose will be to create a platform where everyone can add tips to make your time in space a little bit easier.</p>
             <p>Come back to this page in the next following days to see our progress.</p>
-            <p>We currenty have 3 tips available for demonstration purposes! Just type: Tip-1, Tip-2 or Tip-3 and hit the <b>Read Tip</b> button.</p><br>
+            <p>We currently have 3 tips available for demonstration purposes! Just type: Tip-1, Tip-2 or Tip-3 and hit the <b>Read Tip</b> button.</p><br>
                 <div>
                 <form action="index.php" method="GET">
                         <input type="text" name="tips">
@@ -358,33 +356,33 @@ for i in range(48, 55):
 
 > **Note:** Notice that we added `2>&1` right after the command (It is currently encoded but, it is there). This will allow us to redirect the output to, in this case, the terminal and, in upcoming commands, to BurpSuite. 
 
-5. We are going to use this step to give you a brief explanation on what is going on so far. If you understand what we are doing so far, you can skip to step `6` 
+5. We are going to use this step to give you a brief explanation so far. If you understand, then you can skip to Step 6.
 
-Brief explanation of what the python script is doing: 
+##### Brief explanation of what the python script does: 
 
-- We first import what we need.
-- Then, the script is preparing the xml payload.
-- Next, we prepare a `for` loop that will iterate the last octet of the `20.20.20.x` IP from 1 to 255 and send the following payload: 
+- First, import what we need.
+- Then, script is preparing the xml payload.
+- Next, we prepare a `for` loop that iterates the last octet of the `20.20.20.x` IP from 1 to 255 and send the following payload: 
 ```
 http://10.10.10.175/index.php?tips=Tip-1;ping -c 2 20.20.20.' + ip  + '2>&1'
 ```
-- What that payload does is simply the following: 
+- What that payload does: 
 ```
 ping -c 2 20.20.20.x 2>&1
 ```
 
-Brief explanation of what is happening throughout the challenge so far:
+##### Brief explanation of challenge solution so far:
 
 - We are exploiting an XXE vulnerability on the `10.5.5.59` that allows you to read files on that system.
-- We are using that vulnerability to our advantage to develop a scanner that will let us know if there is another web hosted on the `10.10.10.0/24` network. 
-- That python script lets you know that there is another website hosted at `10.10.10.175` and upon exploring it, you will notice that you can perform command injection.
-- Now, remember, you read the `fib_trie` file and there were only two networks on the `space-guide`. This means that this website you found is hosted somewhere else.
-- In theory, what this means is, that by having read access on the `10.5.5.59` system (`space-guide`), you found a way to perform commands in the `10.10.10.175` unknown new system. 
-- You also noticed that the `space-guide` system has two networks, `10.5.5.59` and `10.10.10.10` and that the new, unknown system, also has two networks, `10.10.10.175` and `20.20.20.20`. 
+- We are using that vulnerability to develop a scanner that will let us know if there is another website hosted on the `10.10.10.0/24` network. 
+- That python script tells us there is another website hosted at `10.10.10.175` and that you can perform command injection.
+- Recall that you read the `fib_trie` file and there were only two networks on the `space-guide`. This means that this website you found is hosted somewhere else.
+- By having read access on the `10.5.5.59` system (`space-guide`), you found a way to perform commands in the `10.10.10.175` unknown new system. 
+- You noticed that the `space-guide` system has two networks, `10.5.5.59` and `10.10.10.10` and that the new, unknown system, also has two networks, `10.10.10.175` and `20.20.20.20`. 
 
 Let's continue...
 
-6. We saved the script as `ping.py`. Now, to make things easier, we are running the script with a `grep` like below so that we can only see which IP returned bytes back to us: 
+6. We saved the script as `ping.py`. Now, to make things easier, we are running the script with a `grep` so we can only see which IP returned bytes back to us: 
 
 ```
 python3 ping.py | grep "bytes from 20.20.20"
@@ -394,7 +392,7 @@ python3 ping.py | grep "bytes from 20.20.20"
 
 ![img-24](./img/img-24.png)
 
-8. Now, the first question of this challenge is to figure out the hostname of the hidden smugglers' system. Let's create a payload to get the hostname of this system. 
+8. Question 1 asks for the hostname of the smugglers' hidden system. Let's create a payload to get the hostname of this system. 
 
 ```
 <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -417,7 +415,9 @@ You now have the answer to Question 1! Way to go!
 
 ### SUID Vulnerability
 
-1. The second question asks you to find the list five employees are behind the illegal orange smuggling ring. It also tells us it will be found on the Desktop. Let's now create a payload to see if this system contains that file! 
+The second question asks you to find the list of five employees who are behind the illegal orange smuggling ring. It also tells us it will be found on the Desktop. 
+
+1. Create a payload to see if this system contains that file.
 
 ```
 <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -440,12 +440,12 @@ You now have the answer to Question 1! Way to go!
 </entry>
 ```
 
-It seems we don't have access to read this file. Let's see what can we do. 
+It seems we don't have access to read this file.
 
 ![img-27](./img/img-27.png)
 
 
-3. Once again, feel free to explore different commands you want but, for this solution guide, we will go straight to the point. There's two things you should've notice in the steps above. First, you couldn't read the contents of `employee_list.txt` and, you found that the only IP that returned a value was `20.20.20.53`. We must find a way to escalate our privileges to be able to perform more useful commands. Let's look for a way to exploit this. Let's see if we can find any other vulnerabilities on the system we currently are (`space-tips`). 
+3. Once again, feel free to explore different commands you want. However, for this solution guide, we will get straight to the point. You would have noticed two things: you couldn't read the contents of `employee_list.txt` *and* you found the only IP that returned a value was `20.20.20.53`. We must find a way to escalate our privileges to be able to perform more useful commands.Let's see if we can find any other vulnerabilities on the system we currently are (`space-tips`). 
 
 4. The other vulnerability that can be found in this system is an SUID given to the `grep` command. You can find this by doing the following payload back in BurpSuite: 
 
@@ -509,7 +509,7 @@ The payload above is doing the following:
 
 11. Congrats! You have obtained the requested employees list. Write down that answer. Remember that the required format is pipe delimited as shown below: 
 
->The list of the employees you obtain might be different.
+>**Reminder:** The list of the employees you obtain might be different.
 
 ```
 polyiak|yinoiak|baalrat|tylroat|ginyt
@@ -541,7 +541,7 @@ Here are our results:
 
 ![img-31](./img/img-31.png)
 
-2. We just found a SSH key! Let's copy this value and attempt to use it to connect to the IP we found above. What we will do is `echo` it to a file called `id_rsa` in our current directory. We are going to perform three **indiviual** payloads to avoid writing the SSH key with a wrong format. Here is what we will do: 
+2. We just found a SSH key! Let's copy this value and attempt to use it to connect to the IP we found above. What we will do is `echo` it to a file called `id_rsa` in our current directory. We are going to perform three **individual** payloads to avoid writing the SSH key with a wrong format. Here is what we will do: 
 
 ```
 echo "-----BEGIN OPENSSH PRIVATE KEY-----" > id_rsa

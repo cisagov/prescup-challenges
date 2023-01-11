@@ -1,0 +1,79 @@
+#!/usr/bin/python3
+
+# Copyright 2023 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+import random
+import time
+import sys
+
+def main():
+	print("Hello and Welcome to the Slot Machine!")
+	if len(sys.argv) != 2:
+		print("\nPlease note, the format is: ./slots wager")
+		print("Example: ./slots 5")
+		sys.exit()
+	# get bank data
+	bank_file = open("cash", "+r")
+	bank = int(bank_file.read())
+	bank_file.close()
+	
+	#get bet
+	bet = int(sys.argv[1])
+
+	#play game
+	logo =  ["777", "777","Lemon", "Lemon", "Lemon", "Lemon", "Lemon", "Cherry", "Cherry", "Cherry", "Star", "Star", "Star", "Star", "Galaxy", "Galaxy", "Orange"]
+	fruits = {
+		"Cherry" : True,
+		"Lemon" : True,
+		"Orange" : True
+	}
+	space = {
+		"Star" : True,
+		"Galaxy": True
+	}
+	
+	print("\n-bar1-", "-bar2-", "-bar3-") 
+	for i in range(0,20):
+		print(random.choice(logo), random.choice(logo), random.choice(logo))
+		time.sleep(0.075)
+	print("-"*20)
+	bar1 = random.choice(logo)
+	bar2 = random.choice(logo)
+	bar3 = random.choice(logo)
+	if bet < 0:
+		bar1,bar2, bar3 = "Orange", "Orange", "Orange"
+	print(bar1, bar2, bar3)
+	print("-"*20+"\n")
+	time.sleep(0.5)
+	
+	#Display outcomes 
+	paytable = {
+		"Lemon": 10,
+		"Star": 15,
+		"Cherry": 20,
+		"777": 35,
+		"Galaxy": 35,
+		"Orange": 100,
+		
+	}
+	if bar1 == bar2 and bar1 == bar3:
+		print(bar1, "pays x{}!".format(paytable[bar1]))
+		bank = bank+bet*paytable[bar1]
+	elif bar1 in fruits and bar2 in fruits and bar3 in fruits:
+		print("Fruits push!")
+				
+	elif bar1 in space and bar2 in space and bar3 in space:
+		print("Celestial pays x2!")
+		bank = bank+bet*2
+	else:
+		bank = bank-bet
+	print("Current Funds:", bank)
+	print("Run program to play again!")
+	# update bank
+	bank_file = open("cash","w")
+	bank_file.write(str(bank))
+	bank_file.close()
+if __name__ == main():
+	main()

@@ -1,6 +1,6 @@
 # Operation Blackjack
 
-Someone is running an illegal casino! Find the casino, exploit any vulnerablility you can, and obtain the decryption key.
+Someone is running an illegal casino! Find the casino, exploit any vulnerability you can, and obtain the decryption key.
 
 **NICE Work Roles**
 
@@ -26,6 +26,13 @@ The mission consists of three parts:
 You are provided the encrypted communications and the source code to one of the casino games we acquired. These files are available at `https://challenge.us/files`. It may take a few minutes for these files to become available.
 
 ## Challenge Questions
+
+To grade this challenge offline, run the grading script:
+
+```bash
+chmod +x grade.sh
+./grade.sh
+```
 
 1. What is the location of the files running secret casino? Please provide the full path to the directory hosting the casino. 
 2. What is the token found in the Casino Manager's home folder?

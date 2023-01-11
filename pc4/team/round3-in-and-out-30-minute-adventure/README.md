@@ -14,6 +14,10 @@ A group of Xeno cultists obtained the plans for a high-security vault containing
 - [T0644](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0644) - Detect exploits against targeted networks and hosts and react accordingly.
 - [T0736](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0736) - Lead or enable exploitation operations in support of organization objectives and target requirements.
 
+## IMPORTANT
+
+This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.
+
 ## Background
 
 Some valuable data that will help your team complete its task(s) has already been gathered.

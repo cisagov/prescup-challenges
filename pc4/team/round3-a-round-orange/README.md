@@ -14,6 +14,10 @@ You and your team have been hired by the Aurellian Empire to discover who is run
 - [T0664](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0664) - Develop new techniques for gaining and keeping access to target systems.
 - [T0724](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0724) - Identify potential points of strength and vulnerability within a network.
 
+## IMPORTANT
+
+This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.
+
 ## Background
 
 Orange smugglers have been peddling knock-off orange products containing lots of filler and dangerous substitutes. Intel tells us they use multiple web services to cover their tracks. We managed to infiltrate their `10.5.5.0/24` network and found out they have an `orange-glory` and a `space-guide` system containing an Orange Glory and a Space Travel website, respectively. 

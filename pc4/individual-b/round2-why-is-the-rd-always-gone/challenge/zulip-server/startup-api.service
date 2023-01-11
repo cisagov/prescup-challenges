@@ -1,0 +1,10 @@
+[Unit]
+Description=Execute system to add API key
+ConditionPathExists=!/etc/systemd/system/startup-api-done.txt
+
+[Service]
+Type=simple
+ExecStart=/etc/systemd/system/startup-api.sh
+
+[Install]
+WantedBy=default.target

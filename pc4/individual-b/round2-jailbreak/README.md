@@ -15,18 +15,21 @@ Ensure that there are no major security flaws in the *Dauntless*' systems by ana
 
 Before the *Dauntless* can depart, its systems need to be checked for vulnerabilities. 
 
+## ⚠️ Large Files ⚠️
+This challenge includes large files as a separate download. Please download the required files from [here](https://presidentscup.cisa.gov/files/pc4/individualb-round2-jailbreak-largefiles.tar.gz) and follow the instructions in the [challenge directory](./challenge) to configure the server needed for this challenge. The zipped file is ~62MBs and will be imported into `Docker`.
+
 ## Getting Started
 
 Inspect an HTTP API server -- intended to eventually handle the _Dauntless_' non-critical personnel management functions -- for vulnerabilities.
 
-- First, download the zipped server source code: `http://10.5.5.10/static/source.zip`.
-- Next, view an **OpenAPI** schema of the endpoints: `http://10.5.5.10/schema`.
+- First, download the zipped server source code: [Server source](http://localhost/static/source.zip).
+- Next, view an **OpenAPI** schema of the endpoints: [Schema](http://localhost/schema).
 
 Using this information and the file paths provided in the challenge question submission labels, retrieve the challenge flags.
 
 ## Submission Format
 
-There are two submissions for this challenge. Each submission is a 16-character lowercase hex string in the format of `0123456789abcdef`.
+The offline version of this challenge uses the string `Success!` in place of flags.
 
 ## Challenge Questions
 

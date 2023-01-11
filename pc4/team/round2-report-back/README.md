@@ -15,6 +15,8 @@ Find the careless employee to prevent other shipments from getting lost!
 - [T0641](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0641) - Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
 - [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0028) - Conduct and/or support authorized penetration testing on enterprise network assets.
 
+## IMPORTANT
+This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.
 
 ## Background
 

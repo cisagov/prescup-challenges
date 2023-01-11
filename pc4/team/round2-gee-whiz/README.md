@@ -76,12 +76,12 @@ The `drvctl.bin` binary can be downloaded onto any `usr*` workstation by visitin
 A linux firewall (`svcnat`) accepts drive commands on TCP port 31337 and, subject to a set of iptables firewall rules, forwards them to the actual
 CubeDrive computer (`srv`) over a private, isolated network link.
 
-Your team's objective is to write a firewall rule that ensures only drive control commands that respect the acceleration and time limits provided in the table above are forwarded to `srv`, in order to prevent injury to the human crew. A sample/skeleton firewall program, designed to work in conjunction with iptables userspace queuing rules, is also available for download from `http://challenge.us/files`. You should modify this program
+Your team's objective is to write a firewall rule that ensures only drive control commands that respect the acceleration and time limits provided in the table above are forwarded to `srv`, in order to prevent injury to the human crew. A sample/skeleton firewall program, designed to work in conjunction with iptables user-space queuing rules, is also available for download from `http://challenge.us/files`. You should modify this program
 to parse 32-hex-character drive control requests as illustrated above, and issue a verdict on whether to accept or reject the request based on whether the maximum acceleration and time limits are met or not.
 
 ## Getting Started
 
-Your team has access to a set of Kali user workstations (`usr*`), which may be used to study and analyze the sample binary command generator, and also to develop userspace firewall filter binaries and upload them to `svcnat` for use in conjunction with the iptables firewall.
+Your team has access to a set of Kali user workstations (`usr*`), which may be used to study and analyze the sample binary command generator, and also to develop user-space firewall filter binaries and upload them to `svcnat` for use in conjunction with the iptables firewall.
 
 The relevant network map is shown below:
 

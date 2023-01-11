@@ -1,0 +1,142 @@
+#!/usr/bin/python3
+
+# Copyright 2023 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+import random
+import time
+import sys
+
+def main():
+	print("Hello and Welcome to Video Poker! Paytable is 9/6 Jacks.")
+	if len(sys.argv) != 2:
+		print("\nPlease note, the format is: ./video_poker wager")
+		print("Example: ./video_poker 5")
+		sys.exit()
+	# get bank data
+	bank_file = open("cash", "+r")
+	bank = int(bank_file.read())
+	bank_file.close()
+	
+	#get bet
+	bet = int(sys.argv[1])
+	if bet < 1:
+		print("Please make a positive bet.")
+		exit()
+	bank = bank - bet
+
+	#play game
+	card_vals = {}
+	for i in range(2,15):
+		if i == 14:
+			val = "A"
+		elif i == 11:
+			val = "J"
+		elif i == 12:
+			val = "Q"
+		elif i == 13:
+			val = "K"
+		else:
+			val = str(i)
+		card_vals[val] = i
+	
+	deck = []
+	suits = ["H", "S", "D", "C"]
+	for suit in suits:
+		for face in card_vals.keys():
+			deck.append(face+"-"+suit)
+	random.shuffle(deck)
+	
+	hand = []
+	for i in range(0,5):
+		hand.append( deck.pop())
+	
+	print("\nYour hand:")
+	print("|"+hand[0]+"| |"+hand[1]+"| |"+hand[2]+"| |"+hand[3]+"| |"+hand[4]+"|")
+	
+	print("\nPlease indicate which card you would like to hold.")
+	print("For instance, input 134 to hold card 1,3, and 4.")
+	hold = input("Hold: ")
+	for i in range (1,6):
+		if str(i) in hold:
+			pass
+		else:
+			hand[i-1] = deck.pop()
+	
+	print("\nYour hand:")
+	print("|"+hand[0]+"| |"+hand[1]+"| |"+hand[2]+"| |"+hand[3]+"| |"+hand[4]+"|\n")
+	
+	#checking for pairs, or a kinds, and full house
+	pair = {}
+	#check for flushes
+	flush = True
+	suit_first = hand[0].split("-")[1]
+	#check to see if there is a straight
+	straight = []
+	for c in hand:
+		face = c.split("-")[0]
+		suit = c.split("-")[1]
+		straight.append(card_vals[face])
+		if face in pair:
+			pair[face] = pair[face]+1
+		else:
+			pair[face] = 1
+		if suit != suit_first:
+			flush = False
+	straight = sorted(straight)
+	straight_check = False
+	royal = False
+	pair_list = pair.values()
+	# straight check	
+	if straight[4] - straight[0] == 4 and 2 not in pair_list and 3 not in pair_list :
+		straight_check = True
+		if straight[4] == 14:
+			royal = True # if top card is ace, royal flush
+
+	if flush and royal:
+		print("Royal Flush! Pays x800")
+		bank = bank+bet*800
+
+	elif flush and straight_check:
+		print("Straight Flush! Pays x50")
+		bank = bank+bet*50
+	elif 4 in pair_list:
+		print("Four of a Kind! Pays x25")
+		bank = bank+bet*25
+	elif 3 in pair_list and 2 in pair_list:
+		print("Full House! Pays x9")
+		bank = bank+bet*9
+	elif flush:
+		print("Flush! Pays x6")
+		bank = bank+bet*6
+	elif straight_check:
+		print("Straight! Pays x4")
+		bank = bank+bet*4
+	elif 3 in pair_list:
+		print("Three of a Kind! Pays x3")
+	elif 2 in pair_list:
+		pair_count = 0
+		for each in pair_list:
+			if each == 2:
+				pair_count +=1
+		if pair_count == 2:
+			print("Two Pairs! Pays x2")
+			bank = bank+bet*2
+		else:
+			face = [key for key, v in pair.items() if v == 2][0]
+			if card_vals[face] > 10:
+				print("Pair Jacks or Better! Pays x1")
+				bank = bank+bet
+
+	else:
+		bank = bank-bet 
+		
+	print("Current Funds:", bank)
+	print("Run program to play again!")
+	# update bank
+	bank_file = open("cash","w")
+	bank_file.write(str(bank))
+	bank_file.close()
+if __name__ == main():
+	main()

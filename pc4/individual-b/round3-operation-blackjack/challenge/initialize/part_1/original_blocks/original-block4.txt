@@ -1,0 +1,5 @@
+> - Here's the password: %flag2%
+
+<Gyre> - Make sure to store that securely.
+
+<Jimu>

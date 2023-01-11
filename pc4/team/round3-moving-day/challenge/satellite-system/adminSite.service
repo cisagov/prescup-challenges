@@ -1,0 +1,16 @@
+[Unit]
+Description=Run website
+After=network.target 
+#satellite.service
+Requires=network.target
+
+[Service]
+Type=simple
+Restart=always
+#StandardOutput=journal
+#StandardError=journal
+ExecStart=/usr/bin/python3 /home/user/Desktop/adminSite/adminSite.py    # change path to wherever adminSite.py is located
+ExecStop=/usr/bin/pkill -f adminSite.py
+
+[Install]
+WantedBy=multi-user.target

@@ -4,7 +4,7 @@ _Solution Guide_
 
 ## Overview
 
-As instructed in the challenge guide, download the server source code from the challenge server and view the schema. Inspecting these two items reveals that the server creates and launches containers using Docker. The overarching objective in this challenge is to access resources on a Docker host from within a container by taking advantage of a vulnerable configuration.
+As instructed in the challenge guide, download the server source code and view the schema. Inspecting these two items reveals that the server creates and launches containers using Docker. The overarching objective in this challenge is to access resources on a Docker host from within a container by taking advantage of a vulnerable configuration.
 
 ## Question 1
 

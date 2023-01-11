@@ -24,7 +24,7 @@ When reviewing these folders, you'll find the first token in `10.5.5.140/norobot
 
 ## Token 2
 
-Token 2 is obtained through a SQL injection attack on the personnel page: `10.5.5.0/Home/Personnel`.
+Token 2 is obtained through a SQL injection attack on the personnel page: `10.5.5.140/Home/Personnel`.
 
 In the search box, enter: `' or 1=1;` . Token 2 is shown at the top of the page.
 
@@ -36,13 +36,13 @@ Scrolling down the page, you will see this record: **Emily Sherman** | **esherma
 
 ## Token 3
 
-To obtain Token 3, you need to change the value of the `showChallengeToken` query string paramater. Navigate to the **Inventory** page and note the URL: 
+To obtain Token 3, you need to change the value of the `showChallengeToken` query string parameter. Navigate to the **Inventory** page and note the URL: 
 
 `http://thedauntless.us/Home/Inventory?itemCount=0&searchEnabled=True&paramCount=50&showChallengeToken=False&shipName=dauntless`
 
 ![image 5](img/c05-image5.png)
 
-Looking at the query string parameters, users might be interested in the obviously named parameter `showChallengeToken`. Change the value of `showChallengeToken=False` to `showChallenegeToken=True`. Token #3 is now visible.
+Looking at the query string parameters, users might be interested in the obviously named parameter `showChallengeToken`. Change the value of `showChallengeToken=False` to `showChallengeToken=True`. Token #3 is now visible.
 
 ![image 6.1](img/c05-image6.1.png)
 
@@ -83,7 +83,7 @@ If the new admin account is created successfully, then Token 4 is displayed.
 
 ## Token 5
 
-We now have a user with admin privileges and we know there is an API on the network. The next step is to find the API and call the correct methods to revtieve Token 5.
+We now have a user with admin privileges and we know there is an API on the network. The next step is to find the API and call the correct methods to retrieve Token 5.
 
 1. Perform an **nmap** scan to find the API: `sudo nmap -A 10.5.5.0-255`. The results indicate `5432` and `8080` are running on `10.5.5.80`.
 2. Navigate to `10.5.5.80:8080`. This brings up a **TMPAdminAPI** swagger page.

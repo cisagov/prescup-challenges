@@ -1,0 +1,11 @@
+[Unit]
+Description=Execute adding web admin to router on startup
+StartLimitBurst=60
+
+[Service]
+ExecStart=/etc/systemd/system/router-add-web.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

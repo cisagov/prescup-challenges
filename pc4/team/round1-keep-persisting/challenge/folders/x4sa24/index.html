@@ -1,0 +1,92 @@
+<!--
+Copyright 2023 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>XeNO</title>
+  <style>
+    html,body {
+    font-family: monospace;
+    background: #000;
+    height: 100%; 
+    }
+
+    .container {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    }
+
+    .header {
+      font-size: 100px;
+      color: #fafafa;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+
+    .text {
+    font-weight: 100;
+    font-size: 28px;
+    color: #fafafa;
+    }
+
+    .alternate {
+    color: #757575;
+    }
+    .bold {
+      font-weight: 700;
+      color: #FF0000 
+    }
+
+    </style>
+</head>
+
+<body>
+  <div>
+    <div class="header">
+      <p>WE ARE Xe<strong class="bold">NO</strong></p>
+    </div> 
+    <br><br><br><br><br>
+    <div class="container">
+      <div class="text"></div>
+    </div> 
+    <div></div>
+    <div></div>
+    <div></div>
+
+<script src="scramble.js"></script>
+<script> 
+
+    const phrases = [
+    'Seek not the words of the xenos, lest they infect our minds with their thoughts.',
+    'Suffer not the Xeno to live.'
+    ];
+    const el = document.querySelector('.text');
+    const fx = new TextScramble(el);
+    let counter = 0;
+
+    const next = () => {
+    fx.setText(phrases[counter]).then(() => {
+    setTimeout(next, 3500);
+    });
+    counter = (counter + 1) % phrases.length;
+    };
+
+    next();
+
+</script>
+
+
+</body>
+
+
+</html>
+}

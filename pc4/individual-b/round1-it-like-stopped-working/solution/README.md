@@ -4,9 +4,7 @@ _Solution Guide_
 
 ## Overview
 
-This challenge expects competitors to leverage the power of `git bisect` to quickly hone in on a breaking change, or commit. Running `make test` takes a non-negligible amount of time (approximately 100 seconds), so using brute force to simply test all of the 10,000 changes applied since the software was last known to be working isn't feasible. 
-
-This solution guide covers the walk-through on how to solve the challenge and is organized by submission question. 
+This challenge expects competitors to leverage the power of `git bisect` to quickly hone in on a breaking change, or commit. Running `make test` takes a non-negligible amount of time (approximately 100 seconds), so using brute force to simply test all of the 10,000 changes applied since the software was last known to be working isn't feasible. This solution guide walks you through solving the challenge question by question. 
 
 ## Question 1
 
@@ -18,8 +16,7 @@ See the steps outlined below. The author's email address is revealed in the faul
 
 _Abbreviated (8-digit) commit ID of the offending commit_
 
-Find a working (a.k.a. "good") commit. The challenge guide tells us that the oldest 100 commits are known to be free of the error we're trying to identify. Use `git log` and scroll all the way to the end, to the oldest commits in the repository. Pick one, and
-test it:
+Find a working ("good") commit. The challenge guide confirms that the oldest 100 commits are free of the error we're trying to identify. Use `git log` and scroll all the way to the end - to the oldest commits in the repository. Pick one, and test it:
 
 ```
 git checkout <old-commit-ID>
@@ -36,7 +33,7 @@ Building commit <old-commit-ID>, please stand by...
 Test Successful!
 ```
 
-Find a non-working (a.k.a. "bad") commit. The easiest thing here is to test the latest commit in the `master` branch of the repository:
+Find a non-working ("bad") commit. The easiest thing is to test the latest commit in the `master` branch of the repository:
 
 ```
 git checkout master
@@ -60,7 +57,7 @@ git bisect good <old-commit-ID>
 git bisect bad <new-commit-ID>
 ```
 
-This specifies the interval over which Git should conduct its binary search for the faulty commit. Once the above commands are all executed, Git will immediately and automatically select a commit in the "middle" of this interval, and ask you to test whether the repository is in a "good" (working) or "bad" (broken) state at that commit:
+This specifies the interval over which Git should conduct its binary search for the faulty commit. Once the above commands are all executed, Git will immediately and automatically select a commit in the "middle" of this interval and ask you to test whether the repository is in a "good" (*working*) or "bad" (*broken*) state at that commit:
 
 ```
 make test
@@ -90,19 +87,19 @@ Date: ...
 
 In many cases, building, testing, and `good`/`bad` feedback to `git bisect` may be fully automated.
 
-First, `git bisect start` may be directly provided with the `bad` and `good` commit IDs, respectively, as additional command line arguments:
+First, `git bisect start` may be directly provided with the `bad` and `good` commit IDs as additional command line arguments:
 
 ```
-git bisect start <bad-commit-ID> <good-comit-ID>
+git bisect start <bad-commit-ID> <good-commit-ID>
 ```
 
-Next, the build/test/feedback cycle outlined in the previous section may be automated using:
+Next, the build/test/feedback cycle outlined in the previous section can be automated using:
 
 ```
 git bisect run <script> [<script-arguments>]
 ```
 
-Our script must simply return with a `0` exit code on success (implying `git bisect good`), and with an exit code between `1` and `127` (except for the reserved exit code `125`) on failure (implying `git bisect bad`).
+Our script must return with a `0` exit code on success (indicating`git bisect good`), and with an exit code between `1` and `127` (except for the reserved exit code `125`) on failure (indicating `git bisect bad`).
 
 In our case, the following script (`test.sh`) may be used:
 

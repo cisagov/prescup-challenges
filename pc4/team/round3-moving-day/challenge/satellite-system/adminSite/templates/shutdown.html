@@ -1,0 +1,106 @@
+<!--
+Copyright 2023 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Satellite Control{% endblock %}</title>
+  <style> 
+    .circlegraph {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      margin: calc(100px / 2 + 0px);
+    }
+
+    .circlegraph::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      border: 2px solid teal;
+      width:  calc( 100% - 2px * 2);
+      height: calc( 100% - 2px * 2 );
+      border-radius: 50%;
+    }
+
+    .circlegraph .circle {
+      position: absolute;
+      top: 50%; 
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      margin: calc( -100px / 2 );
+      border-radius: 50%;
+    }
+
+    .circlegraph .out {
+      position: absolute;
+      top: 40%; 
+      left: 0;
+      width:  calc( 100% - 2px * 2);
+      height: calc( 100% - 2px * 2 );
+      border-radius: 50%;
+    }
+
+    .button {
+      width:100%;
+      height:100%;
+      border-radius: inherit;
+      border:1px solid black;
+      font-size: medium;
+      /*opacity: 0;*/
+    }
+
+    .button:hover {
+      border:3px solid black;
+    }
+  </style>
+{% endblock %}
+{% block content %}
+  <br>
+  <h1 id="headline"><u><strong>Shutdown Sequence</strong></u></h1>
+  <br><br>
+  <div class="circlegraph">
+    <h3 id="out" class="out"></h3>
+    <div class="circle">
+      <button type="button" class="button" style="background: yellowgreen;" onclick="addColor('Green')">Green</button>
+    </div>
+    <div class="circle">
+      <button type="button" class="button" style="background: red;" onclick="addColor('Red')">Red</button>
+    </div>
+    <div class="circle">
+      <button type="button" class="button" style="background: deepskyblue;"  onclick="addColor('Blue')">Blue</button>
+    </div>
+    <div class="circle">
+      <button type="button" class="button" style="background: yellow;" onclick="addColor('Yellow')">Yellow</button>
+    </div>
+    <div class="circle">
+      <button type="button" class="button" style="background: orange;" onclick="addColor('Orange')">Orange</button>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll( '.circlegraph' ).forEach( ( circlegraph )=> {
+    let circles = circlegraph.querySelectorAll( '.circle' );
+    let angle = 360-90, 
+      dangle = 360 / circles.length;
+    for( let i = 0; i < circles.length; ++i ) {
+      let circle = circles[i]
+      angle += dangle
+      circle.style.transform = `rotate(${angle}deg) translate(${circlegraph.clientWidth / 2}px) rotate(-${angle}deg)`
+    }})
+  </script>
+
+<br>
+<h1 id="headline"><u><strong>Current Sequence</strong></u></h1>
+<br>
+<h3 id="seq"></h3>
+<br>
+<h1 id="headline"><u><strong>Last Sequence Sent</strong></u></h1>
+<br>
+<h3 id="lastSent"></h3>
+
+
+
+{% endblock %}

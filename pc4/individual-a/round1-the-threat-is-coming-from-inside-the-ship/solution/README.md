@@ -6,12 +6,16 @@ _Solution Guide_
 
 In this challenge, competitors will analyze a packet capture to find downloaded malware, hash it, and then search the file system for a match. Once that is done, they will use an IOC matrix to identify the threat actor involved in the attack. An answer key that lists file variations for the challenge is provided at the end of this solution guide.
 
+When deploying a hosted version of this challenge, answers are randomly generated for each deployment. This guide provides the steps to solve the challenge and the answers for the artifacts provided in the challenge directory.
+
 ## Question 1
 _What domain hosted the malware file that was downloaded to the system?_
 
+ - plentyofxenos, plentyofxenos.com, or ww<span>w.plentyofx</span>enos.com
+
 This question is solved by analyzing the provided packet capture and finding the malware in it, and then identifying the domain the malware was downloaded from.
 
-The challenge guide lists the potentially malicious domains, though only 10 of them will be present in the packet capture. The others are listed simply to expand the possible search area and reduce the likelihood that a player can guess without at least looking at the pcap file.
+The challenge guide lists the potentially malicious domains, though only 10 of them will be present in the packet capture. The others are listed to expand the possible search area and reduce the likelihood that a player can guess without at least looking at the pcap file.
 
 There are several ways to search for the domain traffic.
 
@@ -39,6 +43,8 @@ However, to answer the first question, all you need to verify is the domain that
 
 ## Question 2
 _What is the obfuscated name of the malware file as it exists on the compromised system (extension is not required)?_
+
+ - 3cec88f40b34 (found in the /usr/lib/bluetooth directory)
 
 The malware file used in part 1 will also be placed on the compromised insider system at challenge start. Players must be careful to extract the file correctly from the packet capture and then figure out the hash, though they may have to think through the process of using the hash to find the file on the system.
 
@@ -72,6 +78,14 @@ In this case, the filename is `ddafc6cce77f.x` and either the full filename with
 ## Question 3
 _Which threat actor is responsible for the malware based on the IOC matrix?_
 
+ - LisaArcher46
+   - Documents folder is empty (not conclusive, but implies deletion)
+   - /home/user text files are legible
+   - Pictures folder contents not zipped
+   - fake administrator account found in /etc/shadow
+   - oranges image found with malware in /usr/lib/bluetooth (may need to add .jpeg file extension to view)
+   - ports 443 and 8080 shown as listening, no reference to ports 22222 or 30000 in netstat output file
+
 Players are provided with a Threat Actor Matrix (TAM) as part of the challenge files. This table is represented as a web page where the names are randomly assigned from a list of 50 potential candidates. Ultimately, it does not matter what names appear in the matrix, as long as players identify and submit the corresponding actor to the IOCs found on the system.
 
 ![](img/image4.png)
@@ -85,7 +99,7 @@ Notably these actions are:
 - Zipping/encrypting the contents of the Pictures directory
 - Creating a backup admin user account
 
-To verify whether Documents contents have been deleted simply browse to the directory and check if files persist.
+To verify whether Documents contents have been deleted browse to the directory and check if files persist.
 
 ![Graphical user interface, application Description automatically generated](img/image5.png)
 
@@ -93,7 +107,7 @@ If the folder is empty than this must be true. If the contents were not deleted,
 
 ![](img/image6.png)
 
-To validate whether the home directory contents have been XOR encrypted, simply view the directory and its contents.
+To validate whether the home directory contents have been XOR encrypted, view the directory and its contents.
 
 ![A picture containing diagram Description automatically generated](img/image7.png)
 
@@ -105,7 +119,7 @@ If the files were not altered the contents will look like the following:
 
 ![](img/image9.png)
 
-To validate whether files in the Pictures directory were zipped, simply look in the directory for the presence of a password protected zip file containing image files.
+To validate whether files in the Pictures directory were zipped, look in the directory for the presence of a password protected zip file containing image files.
 
 ![](img/image10.png)
 
@@ -123,11 +137,11 @@ To validate the presence of the calling card, you must have found the malware lo
 
 ![](img/image13.png)
 
-To validate the open ports simply run \`ss -ano \| grep \[port\#\]\` to see if that port is open. Note that if you do not specify the \`a\` and \`n\` options together you are not going to see results. The fact that one of these ports must be open should tip players off that they may not be using the correct command, or they may use other methods to enumerate this.
+To validate the open ports run \`ss -ano \| grep \[port\#\]\` to see if that port is open. Note that if you do not specify the \`a\` and \`n\` options together you are not going to see results. The fact that one of these ports must be open should tip players off that they may not be using the correct command, or they may use other methods to enumerate this.
 
 ![Text Description automatically generated](img/image14.png)
 
-Finally, after working through each of these possible IOCs, or after simply eliminating options from the TAM table until only one actor is possible, you can submit the corresponding threat actor's name as the answer.
+Finally, after working through each of these possible IOCs, or after eliminating options from the TAM table until only one actor is possible, you can submit the corresponding threat actor's name as the answer.
 
 ## Answer Key
 
@@ -150,13 +164,22 @@ The **Malware** filename will always be randomized.
 
 The malware file is contained in one of these directories at random:
 
-/usr/bin
-/usr/sbin
-/usr/share/color
-/usr/share/dict
-/usr/share/fonts
-/usr/lib/apt
-/usr/lib/Bluetooth
-/usr/lib/gcc
-/usr/lib/grub
-/usr/share/bug
+- `/usr/bin`
+- `/usr/sbin`
+- `/usr/share/color`
+- `/usr/share/dict`
+- `/usr/share/fonts`
+- `/usr/lib/apt`
+- `/usr/lib/Bluetooth`
+- `/usr/lib/gcc`
+- `/usr/lib/grub`
+- `/usr/share/bug`
+
+**Questions and answers quick reference:**
+
+1. What domain hosted the malware file that was downloaded to the system?
+    - `plentyofxenos`, `plentyofxenos.com`, or `www.plentyofxenos.com`
+2. What is the obfuscated name of the malware file as it exists on the compromised system (extension is not required)?
+    - `3cec88f40b34`
+3. Which threat actor is responsible for the malware based on the IOC matrix?
+    - `LisaArcher46`

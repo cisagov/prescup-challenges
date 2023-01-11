@@ -4,11 +4,11 @@ An embedded device was recovered from an abandoned alien base. Its appearance is
 
 Analyze the contents of this chip, replicate and apply its error correction code (ECC) implementation to fix any errors, and provide usable intelligence for when similar devices are recovered in the field.
 
-**NICE Work Roles:**
+**NICE Work Roles**
 - [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-forensics-analyst)
 - [Data Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/data-analyst)
 
-**NICE Tasks:**
+**NICE Tasks**
 - [T0049](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0049) - Decrypt seized data using technical means.
 - [T0286](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0286) - Perform file system forensic analysis.
 - [T0287](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0287) - Perform static analysis to mount an "image" of a drive (without necessarily having the original drive).
@@ -66,11 +66,11 @@ For each value of ***m***, Linux provides an implicit default *primitive polynom
 |      14 |        0x402b |
 |      15 |        0x8003 |
 
-#### Note 1:
+#### Note 1
 
 When seeking additional information on BCH, focus on how ***m*** and ***t*** influence how much data can be protected with how many bytes worth of ECC material.
 
-#### Note 2:
+#### Note 2
 
 The stored ECC data corresponding to *uninitialized* (all-`0xFF` bytes) page data should *also* consist of all-`0xFF` bytes! This avoids the need to *gratuitously* touch each and every otherwise-empty page's OOB area. The typical approach is to apply an XOR byte mask to the calculated ECC bytes before writing them out *to* flash, and before using them, to verify and correct data immediately after reading *from* flash. For example: if the ECC bytes for data chunk `0xffffffff` end up being `0xbeef`, the XOR mask would be `0x4110`, ensuring that the *stored* ECC information for data `0xffffffff` would be `0xffff`.
 

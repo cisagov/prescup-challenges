@@ -1,0 +1,29 @@
+{
+    "f1": {
+        "aDegree":-76,
+        "aMinute":27, 
+        "aSecond":15,
+        "eDegree":161,
+        "eMinute":40, 
+        "eSecond":32,
+        "name":"f1"
+    },
+    "f2": {
+        "aDegree":2,
+        "aMinute":2, 
+        "aSecond":2,
+        "eDegree":2,
+        "eMinute":2, 
+        "eSecond":2,
+        "name":"f2"
+    },
+    "f3": {
+        "aDegree":3,
+        "aMinute":3, 
+        "aSecond":3,
+        "eDegree":3,
+        "eMinute":3, 
+        "eSecond":3,
+        "name":"f3"
+    }
+}

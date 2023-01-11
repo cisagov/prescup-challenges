@@ -1,0 +1,15 @@
+Initial angle of travel at stop 1: .349066 radians
+Increment angle at each stop by: .261799 radians
+Constant 'a' value of: 1.75
+
+Destination |    Coordinates
+---------------------------------
+Dst1        | 0.574026,0.208928
+Dst2        | 0.875685,0.613161
+Dst3        | 0.981642,1.169875
+Dst4        | 0.839029,1.799304
+Dst5        | 0.424303,2.406339
+Dst6        | -0.252892,2.890568
+Dst7        | -1.149105,3.157141
+Dst8        | -2.189862,3.127447
+Dst9        | -3.275649,2.748596

@@ -13,14 +13,14 @@ There is one variant for _It's Got to be Somebody's Data_. This solution guide c
 You can modify the `waypoints.py` file to produce the correct answers. A sample solution is provided [here](Question1Solution.py).
 
 ```
-denseNerualLayer = Dense(units=1, input_shape=[1])  
+denseNeuralLayer = Dense(units=1, input_shape=[1])  
 #mod = Sequential([Dense(units=1, input_shape=[1])])  
-mod = Sequential([denseNerualLayer])
+mod = Sequential([denseNeuralLayer])
 
 mod.fit(waypoints1, waypoints2a, epochs=1000)
 ```
 
-Add this line to the end of the script: `print(denseNerualLayer.get_weights())`.
+Add this line to the end of the script: `print(denseNeuralLayer.get_weights())`.
 
 Run the script three times, one for each of the waypoints lists:
 

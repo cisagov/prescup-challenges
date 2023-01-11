@@ -1,0 +1,162 @@
+<!--
+Copyright 2023 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Merchantcaste</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="./jquery.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="./sw.js"></script>
+</head>
+
+<body>
+    <nav id="colorChange">
+        <div id="nav-title">
+            <img src="./Images/product-icon.png" alt="Merchantcaste logo" />
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="#">HOME</a></li>
+            <li class="nav-item hide" id="staff"><a href="./staff.html">STAFF</a></li>
+            <button class="nav-item" id="signin" onclick="document.getElementById('login-popup').style.display='block'">
+                <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                </span>
+                <span class="signin-text">Sign in</span>
+            </button>
+            <li class="nav-item hide" id="signedin">Signed In</li>
+        </ul>
+    </nav>
+
+    <div id="login-popup">
+
+        <form class="login-content zoomin" id="login-form" method="post" onsubmit="return false">
+            <div class="img-container">
+                <span onclick="document.getElementById('login-popup').style.display='none'" class="close"
+                    title="Close Login">&times;</span>
+                <img src="./Images/product-icon.png" alt="XeNO logo" />
+            </div>
+
+            <div id="login-error-msg-container">
+                <p id="login-error-msg">Invalid username <span id="login-error-msg-snd-line">and/or password</span></p>
+            </div>
+
+            <div class="content-container">
+                <label for="user"><b>Username</b></label>
+                <input type="text" id="userText" placeholder="Enter Username" name="user" required>
+
+                <label for="pswd"><b>Password</b></label>
+                <input type="password" id="passText" placeholder="Enter Password" name="pswd" required>
+
+                <input id="submit-button" type="submit" value="Login">
+            </div>
+
+            <div class="content-container">
+                <button type="button" onclick="document.getElementById('login-popup').style.display='none'"
+                    class="cancel-button">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="top-half-wrapper"></div>
+
+    <div class="main-content" id="featured-products-wrapper">
+        <div id="featured-products-header">
+            <h2>Highest Value Items</h2>
+            <h4>We're running low on the following products! <span id="featured-products-snd-line">Find out more below
+                    to get the most bang for your orange bucks!</span></h4>
+        </div>
+        <div id="featured-products-content">
+            <div class="featured-product">
+                <div class="inner-content" id="blood-oranges">
+                    <div class="front-content" id="blood-oranges-front">
+                        <div class="inside-text">
+                            <h3>Blood Oranges</h3>
+                        </div>
+                    </div>
+                    <div class="back-content" id="blood-oranges-back">
+                        <div class="inside-text">
+                            <img src="./Images/product-icon.png" alt="Orange Icon" id="bo-img">
+                            <h3 class="back-title" id="bo-h3"></h3>
+                            <p id="bo-p"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-product">
+                <div class="inner-content" id="dried-oranges">
+                    <div class="front-content" id="dried-oranges-front">
+                        <div class="inside-text">
+                            <h3>Dried Oranges</h3>
+                        </div>
+                    </div>
+                    <div class="back-content" id="dried-oranges-back">
+                        <div class="inside-text">
+                            <img src="./Images/product-icon.png" alt="Orange Icon" id="do-img">
+                            <h3 class="back-title" id="do-h3"></h3>
+                            <p id="do-p"></p>
+                            <ul id="do-checklist">
+                                <h4>ÆC Benefits</h4>
+                                <li>Galactically Accepted</li>
+                                <li>Redeemable for Aurelian Technology</li>
+                                <li>Unique products previously unavailable on Earth</li>
+                            </ul>
+                            <h3 class="price" id="do-price"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-product">
+                <div class="inner-content" id="orange-juice">
+                    <div class="front-content" id="orange-juice-front">
+                        <div class="inside-text">
+                            <h3>Orange Juice</h3>
+                        </div>
+                    </div>
+                    <div class="back-content" id="orange-juice-back">
+                        <div class="inside-text">
+                            <h3 class="back-title" id="oj-h3"></h3>
+                            <p id="oj-p"></p>
+                            <ul id="oj-checklist">
+                                <h4>ÆC Benefits</h4>
+                                <li>Galactically Accepted</li>
+                                <li>Redeemable for Aurelian Technology</li>
+                                <li>Unique products previously unavailable on Earth</li>
+                            </ul>
+                            <h3 class="price" id="oj-price"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="main-content" id="about-us-wrapper">
+        <div id="about-us-header">
+            <h2>About us</h2>
+            <h4>Learn more about who we are, and how we get you the most from your orange products.</h4>
+        </div>
+        <div id="about-us-content">
+            <p class="about-us-p" id="about-us-p-one">We are the Aurelian Trading post, and we buy oranges and orange
+                products! Our highly skilled merchants are ready to make you the deal of a lifetime! From regular old 
+                oranges to tangy orange juice, we are the number one buyer in the solar system! Come to us to sell your oranges! We buy at the highest prices on the 
+                market!</p>
+            <p class="about-us-p">Our goal is to buy as many oranges as possible. Whether it be navel oranges, blood 
+                oranges, dried oranges, or rotten oranges, we buy them all! Provide us with the very best oranges 
+                possible and we'll turn your sour day into a sweet one with our amazing prices!
+                <br>
+                <span id='about-us-orange'>Disclaimer:</span> &nbsp;We reserve the right to refuse service to anyone.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

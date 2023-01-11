@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "EncryptFileContents": {
+      "commandName": "Project",
+      "commandLineArgs": "-d \"C:\\Users\\rkemerer\\OneDrive - Software Engineering Institute\\Documents\\President's Cup\\Season 4 - 2022\\pc4-i2-c36\\Code\\EncryptFileContents\\personal.txt.encrypted\" aaaabbbbaaaabbbb"
+    }
+  }
+}

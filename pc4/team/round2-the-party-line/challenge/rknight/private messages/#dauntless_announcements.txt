@@ -1,0 +1,12 @@
+T 1656700485 19*	19Now talking on #Dauntless_Announcements
+T 1656700525 19*	19angelawilliams (angelawilli@10.5.5.152) has joined #Dauntless_Announcements
+T 1656700572 18<Dauntless>	04Attention All Crew: Departure imminent, head to your assigned duty stations.
+T 1656701310 18<Dauntless>	03@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+T 1656701388 18<Dauntless>	03** All Hands muster in your assigned locations for operations brief **
+T 1656701408 18<Dauntless>	03@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+T 1656703428 18<Dauntless>	04**********************************************************************
+T 1656703458 18<Dauntless>	04*  General Quarters drills will be held today.  Stand by. **
+T 1656703473 18<Dauntless>	04*******************************************************************
+T 1656705188 23*	23Dauntless has quit (23Ping timeout: 121 seconds23)
+T 1657034933 23*	23donnasmith has quit (23Quit: Leaving23)
+T 1657035669 23*	23angelawilliams has quit (23Quit: Leaving23)

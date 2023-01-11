@@ -20,7 +20,7 @@ This challenge does not have any downloadable artifacts. You may complete this c
 ## Background
 Your websites are under attack!
 
-![network_diagram](https://files-presidentscup.cisa.gov/69957b45-networkDiagram.png)
+![network_diagram](https://presidentscup.cisa.gov/files/69957b45-networkDiagram.png)
 
 Each time you identify a malicious/anomalous traffic source, you should block (not reject) it by its source address immediately at the respective firewall as specifically as possible. Blocking entire networks will prevent legitimate traffic from accessing your sites and pause challenge progression.
 
@@ -47,7 +47,7 @@ An example grading table is provided below:
 - "Running/Passed Final Check" means that the grader is reverifying all of your prior rules before awarding time tokens. If one of these gets stuck, you might want to check that you did not accidentally alter/remove a previous rule.
 - Note the elapsed time in the bottom left. This is the timer that is used for awarding further tokens.
 
-![GradingTable](https://files-presidentscup.cisa.gov/3268863e-gradingTable.png)
+![GradingTable](https://presidentscup.cisa.gov/files/3268863e-gradingTable.png)
 
 Once all five levels have been passed a final check will reverify all of your changes. If you have accidentally removed or changed a previous rule, you will have to find this traffic in NTOP again to re-block it. You will know the type by the level next to the notice in the grading table. Once the final checks are complete, your overall challenge time will be used to add additional tokens towards as follows:
 

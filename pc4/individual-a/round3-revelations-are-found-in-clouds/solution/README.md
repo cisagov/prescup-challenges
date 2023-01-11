@@ -15,7 +15,6 @@ The correct answers are provided here for your convenience.
 3. 10.0.0.6  
 4. 12
 
-
 ## Getting Started
 
 1. Login to the `sof-elk` VM, create a directory and mount the provided ISO image to that directory.
@@ -49,7 +48,6 @@ sof-elk_clear.py -i list
 
 The output of this command will show how many log entries are currently loaded. (The number should increase after you import more logs).
 
----
 ## Question 1
 
 _A user's credentials may have been compromised. What is the name of that user?_
@@ -76,7 +74,6 @@ _A user's credentials may have been compromised. What is the name of that user?_
 
 Submit the answer `Larry Jones` for Part 1.
 
---- 
 ## Question 2
 
 _What is the name of the blob container from which the unauthorized user using stolen credentials downloaded a file?_
@@ -97,7 +94,6 @@ https://spaceships.blob.core.windows.net:443/spaceshipdata/important.zip?sv=2021
 
 Submit the answer `spaceshipdata` for Part 2. 
 
----
 ## Question 3
 
 _What is the private IP address of the Linux virtual machine that was created most recently in the subscription?_
@@ -114,13 +110,12 @@ _What is the private IP address of the Linux virtual machine that was created mo
 
 <img src="img/img9.png">
 
-4. The 2nd log from the bottom will contain the Private IP address of the VM in the `response_body` field. 
+4. The second log from the bottom will contain the Private IP address of the VM in the `response_body` field. 
 
 <img src="img/img10.png">
 
 Submit the answer `10.0.0.6` as the answer for Part 3. 
 
----
 ## Question 4
 
 _Based on the Azure netflow logs, how many times did an SSH flow with the attacker's IP address as the destination begin?_
@@ -140,4 +135,4 @@ grep -l -r -P "172\.58\.190\.159.*22,T,O,A,B" /mnt/evidence | xargs cat | python
 
 The output of this command will show that 12 flows destined for SSH on the attacker's IP address began. 
 
-Submit `12` as the answer for Part 4. 
+Submit `12` as the answer for Part 4.

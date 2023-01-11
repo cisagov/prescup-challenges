@@ -17,14 +17,14 @@ _What item corresponds to 267f75b7-222c-47f2-ac9d-8f0a7eb8058c? It is stored nex
 
 As the image is opened in Autopsy, you'll notice that it has NTFS file system. The volume boot record should have the word `NTFS` in its first few bytes. 
 
-1. Let's search for `NTFS` in 010 hex editor. Click on `Search` -> `Find`
+1. Let's search for `NTFS` in 010 hex editor. Click`Search` > `Find`.
 2. In the search bar at the bottom left, search for `NTFS` as a text string.
 
 <img src="img/c17-image1.png">
 
-The results will show five occurences of NTFS keyboard. The first two are linked to volume boot record and the last two are linked to backup volume boot record. 
+The results will show five occurrences of NTFS keyboard. The first two are linked to volume boot record and the last two are linked to backup volume boot record. 
 
-3. Click on the fourth occurence. This is the start of backup volume boot record.
+3. Click the fourth occurrence. This is the start of backup volume boot record.
 4. Scroll down. You'll notice some data in binary after the volume boot record. 
 
 <img src="img/c17-image2.png">
@@ -41,14 +41,14 @@ The results will show five occurences of NTFS keyboard. The first two are linked
 _What item corresponds to 49292006-a997-4cee-89b8-28a868c31267? It is stored in the slack space of deleted pdf file present on the USB._
 
 1. Let's examine the image in Autopsy. Navigate to $RECYCLE.BIN -> S-1-5-21....
-2. Click on $R....pdf 
+2. Click $R....pdf 
 3. Review the file metadata in the bottom pane.
 
 <img src="img/c17-image4.png">
 
 4. Note the starting cluster address and length in file metadata section. (1422+46 = 1468)
 5. Multiply that by 4096 bytes (1468*4096 = 6012928)
-6. Let's navigate to byte offset 6012928. Go back to 010 hex editor. Click on `Search` -> `Goto`.
+6. Let's navigate to byte offset 6012928. Go back to 010 hex editor. Click `Search` > `Goto`.
 7. Type in the byte offset and select `dec` from the drop down for decimal. 
 
 <img src="img/c17-image5.png">
@@ -87,7 +87,7 @@ Now, we need to find the end of this file. Question says that the file footer/tr
 <img src="img/c17-image11.png"> 
 
 4. Click Enter. 
-5. Right-click the higlighted content, and select `Copy`.
+5. Right-click the highlighted content, and select `Copy`.
 6. Click `File` -> `New` -> `New Hex File`.
 7. Paste the highlighted data in this new file. 
 8. Save the file as `image.jpeg` on the Desktop.

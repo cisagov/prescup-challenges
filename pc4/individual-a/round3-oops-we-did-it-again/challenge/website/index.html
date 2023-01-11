@@ -1,0 +1,82 @@
+<!--
+# Copyright 2023 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+-->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="paymyransom">
+    <title>Pay My Ransom</title>
+    <style>
+        .cent {
+            max-width: 1250px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+            text-align: center;
+            color:black;
+        }
+        a {
+            font-size:25px;
+            color:black;
+        }
+    </style>
+    <script>
+        /*Provide link if payment has been made*/
+        (function () {
+            let paid = 'False';
+            x = setInterval(function () 
+            {
+                var xhttp = new XMLHttpRequest();
+                xhttp.open('GET','status.txt');
+                xhttp.onload = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var contents = this.responseText;
+                        console.log(contents)
+                        if (contents == 'True') {
+                            const tmp = document.createElement('a');
+                            let stat = document.getElementById('status');
+                            tmp.setAttribute('href', 'ransomware');   //This is the program to download to decrypt, keep it in the web root for easy acess when victims need to get to it
+                            tmp.setAttribute('id', 'status');
+                            tmp.setAttribute('href', 'decryptioncodes');     //update this key file as needed, right now we're using this bulk file for everyone. Let them figure it out while we count our moneys
+                            tmp.setAttribute('target', '_blank');
+                            tmp.innerText = 'Ransomware';
+                            stat.replaceWith(tmp);
+                        } else {
+                            const tmp = document.createElement('p');
+                            let stat = document.getElementById('status');
+                            tmp.setAttribute('id', 'status');
+                            tmp.innerText = 'Status: NOT PAID'
+                            stat.replaceWith(tmp)
+                        };
+                    };
+                }
+                xhttp.send();
+            },1000);
+        })();
+      </script>
+</head>
+<body style="background-color:rgb(228, 87, 6);">
+    <section class="cent">
+        <br><h2>Welcome to <u>Pay My Ransom!</u></h2>
+        <h4>The best illegal bank around, let us help you with your Ransomware! You definitely wont regret it.</h4><br>
+
+        <img src="imgs/pmr1.jpg" width="400" height="400" alt="1" style="padding-right:20px;">
+        <img src="imgs/pmr2.jpg" width="400" height="400" alt="2"><br><br>
+
+        <div id="status"></div>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Arcu felis bibendum ut tristique et egestas quis. Enim praesent elementum facilisis leo vel fringilla. 
+            Porttitor massa id neque aliquam. A diam sollicitudin tempor id eu nisl. Scelerisque eleifend donec pretium vulputate sapien nec. 
+            Eros donec ac odio tempor orci dapibus. Massa vitae tortor condimentum lacinia quis vel eros. Sed felis eget velit aliquet 
+            sagittis id consectetur. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. Maecenas ultricies mi eget mauris 
+            pharetra et ultrices. Nunc faucibus a pellentesque sit amet porttitor eget. Augue eget arcu dictum varius duis at consectetur.</p><br>
+
+        <a href="help.txt" target = "blank">README</a>&emsp;&emsp;
+    </section>
+</body>

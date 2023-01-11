@@ -1,0 +1,10 @@
+[Unit]
+Description=Execute adding a user
+
+[Service]
+ExecStart=/etc/systemd/system/add-ssh-user.sh
+Restart=always
+RestartSec=300
+
+[Install]
+WantedBy=default.target

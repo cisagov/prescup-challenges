@@ -1,0 +1,11 @@
+[Unit]
+Description=checker
+
+[Timer]
+OnCalendar=*-*-* *:*:00/5
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
+

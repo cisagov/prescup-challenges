@@ -50,7 +50,7 @@ Using this method, you can send any number of commands to the satellite rather t
 
 ### Question 1   
 
-_Enter the value of the storage-token, found by listing the files on the admin storage interface._
+_Enter the value of the storage-token, found by listing the files on the admin storage interface._  
 
 You will need to scan the website's **admin** pages, which require a user to be logged in or the active cookie. You need to store the cookies that your browser is currently using for the admin user.
 
@@ -104,14 +104,17 @@ Once all data packages are retrieved, download them from the storage page found 
 ### Question 2  
 
 _Enter the value of the wa-token, found with the data recovered from the orbital weapons array (wa-data.zip)?_
+`5ddb455e92e3`
 
 ### Question 3   
 
 _Enter the value of the sd-token, found with the data recovered from the moon base supply depot(sd-data.zip)?_  
+ `fa3380b77d35`
 
 ### Question 4  
 
 _Enter the value of the hq-token, found with the data recovered from the headquarters building (hq-data.zip)?_  
+`3039f52bd65f`
 
 > **Note:** The shutdown sequence can be performed at any point after all three files are retrieved, but the solution is listed at the end of this guide. You cannot perform the shutdown sequence unless all three files are retrieved.
 
@@ -120,6 +123,7 @@ _Enter the value of the hq-token, found with the data recovered from the headqua
 ### Question 5
 
 _Using the data in wa-data.zip, what is the total battle complement of the weapons array as of the final report?_
+`32994`
 
 The weapons data comes in a few different reports. The first is a **September 1st** status report. This report provides the status of the weapons array as of this date. The report will list the total complement of weapons and munitions as well as which and how many of each weapon are offline or damaged.
 
@@ -155,7 +159,8 @@ The **total value** is the answer for submission for this part of the challenge.
 
 ### Question 6
 
-_Using the data in sd-data.zip, what is the total weight (in kilograms) of the final inventory stock plus shipping containers as of the final invoice date for the original supply depot? (number only, out to two decimal places)_
+_Using the data in sd-data.zip, what is the total weight (in kilograms) of the final inventory stock plus shipping containers as of the final invoice date for the original supply depot? (number only, out to two decimal places)_  
+`17185.12`
 
 The supply depot data comes in two forms: a starting **inventory list** and **invoices of supplies** to be sent out to specific ships over time.
 
@@ -189,7 +194,8 @@ The possible total weight values, depending on your deployment, will be: **17185
 
 ### Question 7
 
-_Using the data in hq-data.zip, what is the code name of the person who was in each room when each BOOM was heard?_
+_Using the data in hq-data.zip, what is the code name of the person who was in each room when each BOOM was heard?_  
+`5V5XIE`
 
 The headquarters data comes in one single file, a series of RFID badging logs for the headquarters building. There is also a reference sheet explaining how to use the RFID logs to identify the person who was in each room when the mysterious noise was heard. This data can be analyzed with consolidation and correlation methods.
 

@@ -1,0 +1,76 @@
+﻿@*
+Copyright 2023 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*@
+
+@using TransportManagementPortal.Data.Models
+@model TransportSystemStatusViewModel
+
+@{
+    ViewData["Title"] = "Dauntless System Status";
+}
+
+<h1>Dauntless System Status</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <img src="~/img/GDDv15.png" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10">
+            <div class="row pb-1">
+                <div class="col">
+                    <span class="fw-bold">System</span>
+                </div>
+                <div class="col">
+                    <span class="fw-bold">Subsystem</span>
+                </div>
+                <div class="col">
+                    <span class="fw-bold">Status</span>
+                </div>
+            </div>
+            @{
+                foreach(TransportSystem transportSystem in Model.TransportSystems)
+                {
+                    if (transportSystem.Status == "Online")
+                    {
+                        <div class="row pb-1">
+                            <div class="col">
+                                @transportSystem.Name
+                            </div>
+                            <div class="col">
+                                @transportSystem.Description
+                            </div>
+                            <div class="col fw-bold bg-success">
+                                @(transportSystem.Status)
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="row pb-1">
+                            <div class="col">
+                                @transportSystem.Name
+                            </div>
+                            <div class="col">
+                                @transportSystem.Description
+                            </div>
+                            <div class="col fw-bold bg-danger">
+                                @transportSystem.Status
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10">
+            <hr/>
+        </div>
+    </div>
+</div>
+

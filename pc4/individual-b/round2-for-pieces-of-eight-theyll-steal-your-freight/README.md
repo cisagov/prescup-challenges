@@ -12,6 +12,10 @@ Stop the space pirates from obtaining our shipping route information by planting
 - [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0028)- Conduct and/or support authorized penetration testing on enterprise network assets.
 - [T0616](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0616)-  Conduct network scouting and vulnerability analyses of systems within a network.
 
+## IMPORTANT
+
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give you a starting point if you wish to rebuild this challenge on your own. 
+
 ## Background
 
 Space pirates have been setting up websites where defectors, spies, and other escapees are able to report on, trade, and supply route information and coordinates. Ultimately, we want to put a stop to these space pirates, but we also want to identify any traitors within our own ranks.
@@ -19,6 +23,10 @@ Space pirates have been setting up websites where defectors, spies, and other es
 You have been given access to a system just outside the perimeter of one of the space pirate networks, unbeknownst to them.
 
 Go to `https://challenge.us/files` from a gamespace resource to download all challenge-specific files and artifacts. It may take a few minutes before the **grading/files** site is available.
+
+## Getting Started
+
+Please follow the instructions in the [challenge directory](./challenge) to setup before starting this challenge offline. 
 
 ## Objectives
 
@@ -31,7 +39,7 @@ Go to `https://challenge.us/files` from a gamespace resource to download all cha
 ## Challenge Questions
 
 1. What is the cracked password for the user Ridley?
-2. What is the token found on the webserver with the Wordpress site files?
+2. What is the token found on the web server with the Wordpress site files?
 3. What is the token provided from the grading server for successfully replacing the Connect With Me link in the blog post?
 4. What is the obfuscated token string found on the client system within the traitor's home directory contents?
 

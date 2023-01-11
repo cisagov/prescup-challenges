@@ -22,6 +22,10 @@ Your agency has access to some type of communication records for this colony on 
 - Which aliens worked together to steal the cult memorabilia?
 - Which aliens collaborated to purchase the cult memorabilia?
 
+## ⚠️ Large Files ⚠️
+
+This challenge includes large files as a separate download. Please [download the required PPTX file](https://presidentscup.cisa.gov/files/pc4/team-round2-the-claaaaaaaaw-largefiles.zip) to get started. The zipped file is ~98MBs and the extracted PPTX file is roughly the same size.
+
 ## Getting Started
 
 The associated intel documents (phone logs, satellite imagery, and persona non grata intel reports on individual aliens of this colony) are attached as an ISO on your Ubuntu and Windows intel workstations.

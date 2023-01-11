@@ -1,0 +1,9 @@
+T 1656700648 18<donnasmith>	Could you do me a favor?  I'd like to read your policy on easements, you should have received a copy of it at closing. 
+T 1656700666 31<ryanknight>30	Sure, I'll send it over shortly
+T 1656700679 18<donnasmith>	Ok, thanks. I'll be waiting
+T 1656700719 22*	Offering26 Easement and Right of Way Agreement.pdf to26 donnasmith
+T 1656700744 22*	DCC SEND connection established to26 donnasmith 30[10.5.5.151:5767130]
+T 1656700744 22*	DCC SEND26 Easement and Right of Way Agreement.pdf to26 donnasmith complete 30[261166315 cps30].
+T 1656700803 18<donnasmith>	Thanks Ryan!
+T 1656701088 22*	You have been invited to26 #Private_chat by26 angelawilliams (26Dauntless.us)
+T 1657034933 23*	23donnasmith has quit (23Quit: Leaving23)

@@ -12,6 +12,9 @@ Combine data analysis techniques with artificial intelligence, machine learning,
 - [T0403](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0163) -  Read, interpret, write, modify, and execute simple scripts (e.g., Perl, VBScript) on Windows and UNIX systems (e.g., those that perform tasks such as: parsing large data files, automating manual tasks, and fetching/processing remote data).
 - [T0405](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0163) -  Utilize open source language such as R and apply quantitative techniques (e.g., descriptive and inferential statistics, sampling, experimental design, parametric and non-parametric tests of difference, ordinary least squares regression, general line).
 
+## ⚠️ Large Files ⚠️
+This challenge includes large files as a separate download. Please download [here](https://presidentscup.cisa.gov/files/pc4/team-round3-its-got-to-be-somebodys-data-largefiles.zip) then follow the setup instructions in the [challenge directory](./challenge) to get started. The zipped file is ~1.9GBs and the extracted artifact is ~1.9GBs.
+
 ## Background
 
 The data analysts in one of our labs have gone missing and their work is in various stages of completion. We need your help to finish their work.

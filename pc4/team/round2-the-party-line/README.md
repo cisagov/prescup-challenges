@@ -8,6 +8,12 @@ Investigate and remedy a cyber defense incident.
 **NICE Tasks**
 - [T0041](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0041) -  Coordinate and provide expert technical support to enterprise-wide cyber defense technicians to resolve cyber defense incidents.
 
+## IMPORTANT 
+This challenge only partially open sourced. The files in the [challenge directory](./challenge/) are provided to give you a starting point if you wish to recreate the challenge on your own. The full version of the challenge can be played on the hosted site. 
+
+Please follow the instructions in the [challenge directory](./challenge/) to generate additional challenge artifacts. 
+
+
 ## Background
 
 IT administrators noticed some unexpected network traffic and unauthorized applications and services. Additionally, admins can't access the `enterprise-server` because one of the users changed the shared password. 
@@ -17,6 +23,10 @@ Examine the users' machines to find evidence of creating unauthorized services o
 IRC chat logs and user documents might contain evidence of rogue activities on the network. Users may have tried to cover their tracks by deleting logs. 
 
 The only required services that must remain accessible on the `enterprise-server` are SSH, IRC, and a website hosted on port 80. Other services on the `enterprise-server` should be considered "unauthorized" and should be disabled.
+
+## ⚠️ Large Files ⚠️
+
+This challenge includes large files as a separate download. Please [download the required elf file](https://presidentscup.cisa.gov/files/pc4/team-round2-the-party-line-largefiles.zip) to get started. The zip archive is ~29MBs and the extracted file is ~65MBs.
 
 ## Getting Started
 

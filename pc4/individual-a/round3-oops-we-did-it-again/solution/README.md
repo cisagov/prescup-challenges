@@ -6,11 +6,15 @@ _Solution Guide_
 
 In this challenge, competitors will identify persistent malware based on traits that identify it, and then remove that malware from the system. They will then decrypt files that the malware had encrypted on the compromised system.
 
+_When deploying a hosted version of this challenge, answers are randomly generated for each deployment. This guide provides the steps to solve the challenge and the answers for the artifacts provided in the challenge directory._
+
 > **Note:** You will need to configure an address on the eth1 interface of the Kali system in order to reach the Internet websites or the compromised system at 64.100.100.100.
 
 ## Question 1
 
 _What is the IP address associated with the website that hosted the unique malware package that was downloaded only once over the network?_
+
+**Answer:** `87.188.4.219`
 
 For this question, we will find an SSL key, use it to decrypt malware traffic, and extract the malware in question from the packet capture provided for the challenge.
 
@@ -28,17 +32,17 @@ You'll need this file on your Kali system to import into Wireshark, so `scp` the
 
 ![](./img/image2.png)
 
-With the sslkey file in hand, go back to the Kali system and retrieve the packet capture file from https://challenge.us/files.
+With the ssl key file in hand, go back to the Kali system and retrieve the packet capture file from https://challenge.us/files.
 
 With the capture open in Wireshark, you could start by filtering for just TLS traffic, since we know the target traffic exists in TLS traffic based on the challenge instructions. Exporting the TLS traffic only to a new capture file will reduce the amount of chaff in the resulting file for easier analysis, though this is entirely optional.
 
-To import the ssl keys for decryption, go to Edit -> Preferences -> expand Protocols and then click on TLS. On this options screen, point to the sslkeys file you retrieved from the compromised system. The hint to this feature is in the pre-shared key reference in the guide. The top Internet search results for this topic will demonstrate how to use such a file with Wireshark.
+To import the ssl keys for decryption, go to Edit > Preferences > expand Protocols and then click TLS. On this options screen, point to the sslkeys file you retrieved from the compromised system. The hint to this feature is in the pre-shared key reference in the guide. The top Internet search results for this topic will demonstrate how to use such a file with Wireshark.
 
 ![](./img/image3.png)
 
 After clicking OK, the TLS traffic will be decrypted, and HTTP requests will now be visible in plain text. You are looking for a unique file download, one that was only retrieved once, and its source.
 
-The simplest method for looking at the requested files is to go to File -> Export Objects -> HTTP, which are now visible due to the decryption process.
+Look at the requested files by going to File > Export Objects > HTTP, which are now visible due to the decryption process.
 
 ![](./img/image4.png)
 
@@ -52,6 +56,8 @@ In this example, the source IP of the https/tls response is 126.160.237.96.
 
 _What is the type and version/variant of the rootkit found on the compromised system?_
 
+**Answer:** `Reptile_v2.phi`. The redacted malware can be found in the `/etc/bluetooth` directory. The hidden config file lists a port of `15004`.
+
 This question requires the competitor to use the provided malware variant sheet to cross reference malware behaviors to find the specific version of the malware installed on the compromised machine.
 
 You can actually browse to this IP to see the site in question, and even retrieve the same file there. Note that the IP and the specific site used will be randomized for each deployment.
@@ -64,7 +70,7 @@ Looking into the zip, you will see the malware is a rootkit named Reptile. There
 
 ![](./img/image7.png)
 
-The Reptile-master directory will always be extracted somewhere in the /etc directory files, and while the name of the folder itself has been obfuscated, the same contents can be found with a simple filename search in the file explorer window, though you may have to try a few different options to find a unique file.
+The Reptile-master directory will always be extracted somewhere in the `/etc` directory files, and while the name of the folder itself has been obfuscated, the same contents can be found with a simple filename search in the file explorer window, though you may have to try a few different options to find a unique file.
 
 Once you find the hidden config file (.config) in the directory (using ls -lah for example), you will be able to determine the exact make and variant of the malware/rootkit from the list provided at https://challenge.us/files.
 
@@ -76,6 +82,8 @@ The type will always be the Reptile type, but the port will determine the varian
 
 _What is the token string provided by the challenge server for successfully removing the malware?_
 
+**Answer:** Cannot be executed in the offline version of the challenge.
+
 This question requires the competitor to fully remove the malware from the compromised system, including removing a persistence mechanism.
 
 The grading page at https://challenge.us will tell players exactly what must be done in order to receive credit for recovering from and mitigating this malware's presence.
@@ -84,7 +92,7 @@ The grading page at https://challenge.us will tell players exactly what must be 
 
 Players must remove the rootkit folder from the system, remove any libraries that may have been added for this rootkit to work, and then block access to the offending site.
 
-Simply deleting the Reptile-master obfuscated folder from the /etc/xxxx directory of the system to complete task 1 would suffice, however, there is a service being run that will copy an obfuscated backup of the rootkit zip back to the same directory. You will also need the information from the README file to complete task 2, so it is a good idea to check that first, or retrieve a copy on your Kali system.
+Simply deleting the Reptile-master obfuscated folder from the `/etc/xxxx` directory of the system to complete Task 1 would suffice, however, there is a service being run that will copy an obfuscated backup of the rootkit zip back to the same directory. You will also need the information from the README file to complete Task 2, so it is a good idea to check that first, or retrieve a copy on your Kali system.
 
 In order to remove the persistence, do the following:
 
@@ -92,7 +100,7 @@ In order to remove the persistence, do the following:
 
 ![](./img/image-system.png)
 
- - Therefore, you will have to search the contents of /etc/systemd/system to find the timer, the associated service file, and what it is doing.
+ - Therefore, you will have to search the contents of `/etc/systemd/system` to find the timer, the associated service file, and what it is doing.
 
 ![](./img/image-timer.png)
 
@@ -101,7 +109,7 @@ In order to remove the persistence, do the following:
  - Optionally, stop/disable/remove the service, as it could put a lock on the backup zip itself.
 
  - Finally, find the backup zip in
-"/usr/lib/x86_64-linux-gnu/krb5/plugins/preauth" and also remove it.
+`/usr/lib/x86_64-linux-gnu/krb5/plugins/preauth` and also remove it.
 
 This will allow you to pass the check. You cannot pass the check until both copies have been removed.
 
@@ -120,6 +128,8 @@ Once all tasks have been completed, the grading page will provide the token for 
 ## Question 4
 
 _What is the flag/token recovered from the decrypted contents of the ransomware encrypted files?_
+
+**Answer:** `f0ce17d0003d`. The decryption code/password required to recover the flag is `10bfae49047b623a9def7bbf5be6ae1f`.
 
 This question will have the competitor use the ransomware's decryption program and a key file in order to decrypt the files that were encrypted by the malware.
 
@@ -152,7 +162,7 @@ done < "$file"
 cat output/flag-* >> allfiles
 ```
 
-The above script would iterate over each line or code in the decryptioncodes file and attempt to decrypt the files in encrypted/ with that key. After each attempt is made, the resulting file is moved to an "output" folder. Once all decryption codes have been attempted, one final command will combine these output files into a single file. Since only one of these decryption processes would have produced results, the contents of the "allfiles" file would be the token for submission. Additionally, the only resulting flag-$line file with a non-zero size would also contain the token.
+The above script would iterate over each line or code in the decryption codes file and attempt to decrypt the files in encrypted/ with that key. After each attempt is made, the resulting file is moved to an "output" folder. Once all decryption codes have been attempted, one final command will combine these output files into a single file. Since only one of these decryption processes would have produced results, the contents of the "**allfiles**" file would be the token for submission. Additionally, the only resulting flag-$line file with a non-zero size would also contain the token.
 
 Once the files have been decrypted the text file will include the flag for the final submission.
 
@@ -171,10 +181,10 @@ Answer combinations based on index value retrieved at deployment are as follows:
 
 The rootkit files will always be downloaded to one of the following directories at random:
 
-/etc/cups
-/etc/Bluetooth
-/etc/calendar
-/etc/fonts
-/etc/hp
-/etc/ghostscript
-/etc/firefox
+- `/etc/cup`
+- `/etc/Bluetooth`
+- `/etc/calendar`
+- `/etc/fonts`
+- `/etc/hp`
+- `/etc/ghostscript`
+- `/etc/firefox`

@@ -38,6 +38,8 @@ Finally, disable the pirates' satellite system.
 
 ## Getting Started
 
+_Note: To play this challenge offline, please see the instructions in the [challenge directory](./challenge) ot get started._
+
 DHCP provides valid addresses to both interfaces on your Kali systems. Run `sudo dhclient eth0` and/or `sudo dhclient eth1` to receive addresses on both interfaces before beginning your work.
 
 Follow these steps to collect the data packages, analyze the data, and shut down the pirates' satellite system:

@@ -1,12 +1,10 @@
-# For the Memory of a Lifetime Solution Guide
+# For the Memory of a Lifetime
+
+_Solution Guide_
 
 ## Overview
 
-This is a memory and registry examination forensic challenge to identify actions taken by users.
-
-## Before you begin
-
-There are several tools you can use in the challenge but the guide uses **Volatility 3** and **Eric Zimmerman's tools**. Evidence files are found in the Evidence folder. For the purposes of this solution guide, PowerShell is used. 
+This is a memory and registry examination forensic challenge to identify actions taken by users. There are several tools you can use in the challenge but the guide uses **Volatility 3** and **Eric Zimmerman's tools**. Evidence files are found in the Evidence folder. For the purposes of this solution guide, PowerShell is used. 
 
 ## Answer Quick Reference
 
@@ -34,15 +32,15 @@ You see that chrome.exe is running under local account dquaid
 
 *Which user visited the Wikipedia page for Methane?*
 
-For this answer, we want the history files.  Since they aren't in the files in the `C:\` folder under "Evidence", we must attempt to pull from the RAM capture -- we are using Volatility again.
+For this answer, we want the history files.  Since they aren't in the files in the `C:\` folder under "Evidence", we must attempt to pull them from the RAM capture using Volatility.
 
-First, find the PID for Chrome, in the volatility folder, run this Powershell command.
+First, find the process ID (PID) for Chrome. In the volatility folder, run this Powershell command.
 
 ```
  .\vol -f C:\Users\Administrator\Desktop\Evidence\memdump.raw windows.pslist |Select-String chrome
 ```
 
-The results show you that the the parent PID for Chrome is `3692` and all child processes are spawned from this PID.  In the screen capture below, the furthest number to the left is the PID and the next number is the parent process ID of each instance. <img src="img/c40-img2.png">
+The results show you that the the PID for Chrome is `3692` and all child processes are spawned from this PID.  In the screen capture below, the furthest number to the left is the PID and the next number is the parent process ID of each instance. <img src="img/c40-img2.png">
 
 Next, find the handles Chrome is using. The Volatility **windows.handles plugin** will show all the file handles used by Chrome.  To find the history file, we want to filter the results with `Select-String`.
 
@@ -54,11 +52,11 @@ Next, find the handles Chrome is using. The Volatility **windows.handles plugin*
 
 The output shows the memory address.  We'll use the **dump plugin** to pull the file.
 
-Make a place to dump the files to...
+Make a place to dump the files to:
 ```
 mkdir C:\users\administrator\desktop\files
 ```
-And, dump the file to that location.
+And, dump the file to that location:
 
 ```
  .\vol -f C:\Users\Administrator\Desktop\Evidence\memdump.raw -o "C:\Users\Administrator\Desktop\files\" windows.dumpfile --pid 3692 --virtaddr 0xe501d751da80
@@ -87,11 +85,17 @@ The site isn't there, so repeat the steps above to try pulling Firefox informati
  ```
  <img src="img/c40-img6.png">
 
+ Using the windows.sessions volatility command from the previous question, you will see Milena was using Firefox.
+
+ ```
+ .\vol -f C:\Users\Administrator\Desktop\Evidence\memdump.raw windows.sessions |Select-String Firefox
+ ```
+
 ## Question 3
 
 *How many USB storage devices have been connected to this machine?*
 
-The number of USB objects connected to this machine is stored in the Registry system hive. Open the **Registry Explorer** app in the **...Eric Zimmerman tools\RegistryExplorer** folder on the Desktop.
+The number of USB objects connected to this machine is stored in the Windows Registry system hive. Open the **Registry Explorer** app in the **Eric Zimmerman tools\RegistryExplorer** folder on the Desktop.
 
 <img src="img/c40-img7.png">
 

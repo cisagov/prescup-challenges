@@ -58,7 +58,7 @@ Submit `jupiter` as the answer to Question 4.
 
 _What is the token in the binary?_
 
-1. Download the `space_question` and `pwn_space.py` files using scp: `scp test@satellite-1337:space_question space_question`.  
+1. Download the [space_question](./challenge/space_question.elf) and [pwn_space.py](./challenge/pwn_space.py) files using scp: `scp test@satellite-1337:space_question space_question`.  
 2. Run Ghidra by typing `ghidra` into the command line. This will open a window and start the application for you. 
 3. Click “File” and “New Project” to create a new project. 
 4. Choose “Non-Shared Project”, and name your project. Then, drag the `space_question` file into the folder of your new project in the Ghidra window. 

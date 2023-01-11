@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+
+# Copyright 2023 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
 # https://github.com/realpython/materials/tree/master/python-sockets-tutorial
 
 import time

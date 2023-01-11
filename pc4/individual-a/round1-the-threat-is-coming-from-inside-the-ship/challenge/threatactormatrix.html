@@ -1,0 +1,236 @@
+<!--
+Copyright 2023 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+<!DOCTYPE html>
+<html>
+<style>
+table {border: 2px solid black; border-collapse: collapse;}
+th {border: 2px solid black; border-collapse: collapse; color: blue;}
+tr {border: 2px solid black; border-collapse: collapse;}
+td {border: 2px solid black; border-collapse: collapse; text-align: center;}
+.bottom {position: absolute; bottom: 5px; left: 10px; color: red;}
+.top {position: absolute; top: 5px; right: 10px; color: blue;}
+.background>div {position: relative; height: 100%; width: 100%; top: 0; bottom: 0;}
+.background { width: 100px; height: 50px; padding: 0; margin: 0;}
+.line { width: 167px; height: 42px; border-bottom: 2px solid black; transform: translateY(-17px) translateX(3px) rotate(17.5deg); position: absolute; z-index: -1;}
+</style>
+<table>
+<tr>
+<th class="background">
+    <div>
+    <span class="bottom">Actor</span>
+    <span class="top">IOC</span>
+    <div class="line"></div>
+    </div>
+</th>
+<th>Deletes Files Within "Documents" Folder</th>
+<th>XORs files in the User's "home" Directory</th>
+<th>Zips Pictures Folder Contents</th>
+<th>Creates backup administrative account</th>
+<th>Comes with Oranges Calling Card</th>
+<th>Comes with Xenos Calling Card</th>
+<th>Port 443 Open</th>
+<th>Port 8080 Open</th>
+<th>Port 22222 Open</th>
+<th>Port 30000 Open</th>
+</tr>
+<tr>
+<td style="color: red"><b>LisaArcher46</b></td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td style="color: red"><b>RachelVazquez89</b></td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+</tr>
+<tr>
+<td style="color: red"><b>RonaldLeonard59</b></td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+</tr>
+<tr>
+<td style="color: red"><b>JasonArmstrong3</b></td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td style="color: red"><b>JohnOlson65</b></td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td style="color: red"><b>ShaneEdwards77</b></td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+</tr>
+<tr>
+<td style="color: red"><b>LaurenRiley93</b></td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+</tr>
+<tr>
+<td style="color: red"><b>GarrettAdams91</b></td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td style="color: red"><b>IsaiahStoneMD60</b></td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+</tr>
+<tr>
+<td style="color: red"><b>SheilaOchoa68</b></td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+</tr>
+<tr>
+<td style="color: red"><b>ChristyLong76</b></td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+</tr>
+<tr>
+<td style="color: red"><b>CarolThomas55</b></td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+</tr>
+<tr>
+<td style="color: red"><b>OliviaAllen2</b></td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+</tr>
+<tr>
+<td style="color: red"><b>HeatherJones97</b></td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td style="color: red"><b>KaylaLevine79</b></td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>---</td>
+<td>X</td>
+<td>X</td>
+<td>---</td>
+<td>---</td>
+<td>X</td>
+</tr>
+</table>
+</html>
+

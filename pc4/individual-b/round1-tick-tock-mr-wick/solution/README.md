@@ -11,16 +11,16 @@ Before attempting to find the keys needed to deactivate the countdown, you need 
 ```bash
 nikto -h countdown:5000
 ```
-
 Once it finishes, it will show that some pages have been found and also explain that the "robots.txt" file contains entries which should be viewed manually. This file is normally found on many sites, and can be viewed by running the command:
 
 ```bash
 curl countdown:5000/robots.txt
-``` 
+```
+Doing this will show that the site has been configured to allow all User-agents to look at the pages `/deactivate/`, `/connect/`, `/authorized/access/only/`, and `/app/status/`. This should be the first step toward finding the deactivating keys.
 
-Doing this will show that the site has been configured to allow all User-agents to look at the pages `/deactivate/`, `/connect/`, `/authorized/access/only/`, and `/app/status/`. This should be the first steps to working towards finding the deactivating keys.
+## Task 1: Authorized Access Only key
 
-## Task 1: Authorized Access Only key (Question 1)
+### Question 1
 
 *What is the 8 character hex string given for submitting the first key?*
 
@@ -32,51 +32,51 @@ This page shows you two small strings, one being `Mod of the day` and the other 
 
 ![Image 2](./img/img_2.png)
 
-The next hint is the title of the page that is shown on the browser tab. The title is shown as `Infinite URL Builder: Locked`. Attempt to add values to the end of the url and see what the outcome is.
+The next hint is the title of the page shown on the browser tab. The title shows as `Infinite URL Builder: Locked`. Attempt to add values to the end of the url and see what the outcome is.
 
 ![Image 3](./img/img_3.png)
 
-After some testing, you should find that the number you are entering to be modded is being based on the length of the URL added after `/internal/use/only/`. This is why its called the `infinite URL Builder` because the URL can be any length, but it just needs to satisfy the math equation in order to unlock the page. 
+After some testing, you should find that the number you are entering to be modded is based on the length of the URL added after `/internal/use/only/`. This is why its called the `infinite URL Builder` -- because the URL can be any length, but it just needs to satisfy the math equation in order to unlock the page. 
 
 For example:
 
-Mod of the day: 21
-Chosen remainder: 18
-URL entered: countdown:5000/internal/use/only/this/is/a/example/url/string/entry/solution/key
+- **Mod of the day:** 21
+- **Chosen remainder:** 18
+- **URL entered:** `countdown:5000/internal/use/only/this/is/a/example/url/string/entry/solution/key`
 
-If done correctly, a page will show with a link saying `AUTHORIZED ACCESS ONLY` which will then take you to the `countdown:5000/authorized/access/only` page but it will now be showing the first key name and value. 
+If done correctly, a page will show with a link saying `AUTHORIZED ACCESS ONLY` which will then take you to the `countdown:5000/authorized/access/only` page; but now it will show the **First Key Name** and **First Key Value**. 
 
 ![Image 4](./img/img_4.png)
 
 ![Image 5](./img/img_5.png)
 
-Enter the found key name into the url like so, `countdown:5000/deactivate/*KEYNAME1*/` and it will take you to a page where you can submit the value you found. Once entered correctly, it will redirect you back to the main deactivation page.
+Enter the found key name into the url like so --  `countdown:5000/deactivate/*KEYNAME1*/` -- and it will take you to a page where you can submit the value you found. When entered correctly, it will redirect you to the main deactivation page.
 
-![Image 6](./img/img_6.png)
-
-Once the key has been submitted and deactivated, you can find the hex token to be submitted for points here `http://countdown:5000` and here `http://challenge.us`.
+When the key has been submitted and deactivated, you can find the hex token to be submitted for points here `http://countdown:5000` and here `http://challenge.us`.
 
 ![Image 7](./img/img_7.png)
 
-## Task 2: Form POST SSTI (Question 2)
+## Task 2: Form POST SSTI
+
+### Question 2
 
 *What is the 8 character hex string given for submitting the second key?*
 
-You should look to browse to the URL found previously, `http://countdown:5000/app/status/`. This page will give a brief message about the running application and then state that you can `Enter 'data' field value to get information about application`. 
+Browse to the URL found previously: `http://countdown:5000/app/status/`. This page will give a brief message about the running application and then state that you can `Enter 'data' field value to get information about application`. 
 
 ![Image 8](./img/img_8.png)
 
-Since there is no text box available, the next thought should be to attempt a POST using the field 'data' with an accompanying value. If you attempt to POST a value using URL parameters, you'll see that it will have no effect on the page. The next thing you should try is to do a Form POST, this can be done with Curl.
+Since there is no text box available, the next thought should be to attempt a POST using the field 'data' with an accompanying value. If you attempt to POST a value using URL parameters, you'll see that it will have no effect on the page. The next thing you should try is to do a Form POST; this can be done with Curl.
 
-The page states you can get information about the application, that should be a hint that you can run an SSTI (Server Side Template Injection) to pull info from the running application within this POST.
+The page states you can get information about the application. That is a hint that you can run an SSTI (Server Side Template Injection) to pull information from the running application within this POST.
 
-You will find that the application is limited to what information can be pulled, but if you used the following command you can get the basic configuration:
+You will find that the application is limited to what information can be pulled, but if you use the following command you can get the basic configuration:
 
 ```bash
 curl -X POST -F "data={{config}}" http://countdown:5000/app/status/
 ```
 
-This will dump out all the current apps configuration, and if you look you will find there is an entry that contains the information regarding the second key. 
+This will dump out all the current app's configuration and, if you look, you will find there is an entry that contains the information regarding the second key. 
 
 ![Image 9](./img/img_9.png)
 
@@ -84,33 +84,35 @@ Using the same format as before, go to the second keys page (`countdown:5000/dea
 
 ![Image 10](./img/img_10.png)
 
-Once the key has been submitted and deactivated, you can find the hex token to be submitted for points on the `http://countdown:5000` page as well as on the grading site at `http://challenge.us`.
+When the key has been submitted and deactivated, you can find the hex token on `http://countdown:5000` and at `http://challenge.us`.
 
 ![Image 11](./img/img_11.png)
 
-## Task 3: Online FTP share (Question 3)
+## Task 3: Online FTP share
+
+### Question 3
 
 *What is the 8 character hex string given for submitting the third key?*
 
-For the last part, you will need to browse to the page `countdown:5000/connect`. This page will have a text box and a string asking for you to input a hostname for you to connect to their FTP share. If you do a scan of the network you will find there is another host named `countdownBackup`. 
+For the last part, browse to the page `countdown:5000/connect`. This page will have a text box and a string asking you to input a hostname to connect to their FTP share. If you do a scan of the network you will find there is another host named `countdownBackup`. 
 
 ![Image 12](./img/img_12.png)
 
-Once you enter the discovered hostname you will be re-directed to another page that will have a list of files available on the FTP share. On that page you will see multiple files are clickable and available for download, except for one. 
+After entering the discovered hostname you will be redirected to another page that will have a list of files available on the FTP share. On that page, multiple files are clickable and available for download -- except for one. 
 
 ![Image 13](./img/img_13.png)
 
-In order to get this file, you will need to do some analyzing of the HTML page and altering of the URL. If you look at the source code of the page, you will see each hyperlink contains a URL redirect where it adds `/**file**` to the URL in order to retrieve it. 
+In order to get this file, you will need to analyze the HTML page and alter the URL. If you look at the source code of the page, you will see each hyperlink contains a URL redirect where it adds `/**file**` to the URL in order to retrieve it. 
 
 ![Image 14](./img/img_14.png)
 
-You can then use this same method to get the file that is currently unavailable. Below is an example of the URL:
+Use this same method to get the file that is currently unavailable. Below is an example of the URL:
 
-`http://countdown:5000/connect/**file**` -- Where **file** is the name of the file you want to download.
+`http://countdown:5000/connect/**file**` -- where **file** is the name of the file you want to download.
 
 ![Image 15](./img/img_15.png)
 
-If done correctly, you will have the key name (which is the name of the file) and then the value (which is within the file you downloaded).
+If done correctly, you will have the key name (which is the name of the file) and the value (which is within the file you downloaded).
 
 ![Image 16](./img/img_16.png)
 
@@ -118,20 +120,22 @@ You can submit the key name and value using the same method as previously noted 
 
 ![Image 17](./img/img_17.png)
 
-Once the key has been submitted and deactivated, you can find the hex token to be submitted for points on `http://countdown:5000` and at `http://challenge.us`.
+When the key has been submitted and deactivated, you can find the hex token on `http://countdown:5000` and at `http://challenge.us`.
 
 ![Image 18](./img/img_18.png)
 
-## Getting Time Tokens (Remaining questions)
+## Getting Time Tokens
 
-Once all three keys have been entered, browse to `http://challenge.us` and, depending on how fast you completed the challenge you will be given your hex tokens to submit for points. Here is a reminder on how that's measured: 
+### Remaining Questions
 
-| Completion Time  | # of Tokens Earned  |  % of Overall Challenge Score Added   |
-|-------------|-----------|-------------|
-|  75 minutes or less | 4 | 20% (5% each) |
-|  76-90 minutes | 3 | 15% (5% each) |
-|  91-105 minutes | 2 | 10% (5% each) |
-|  106-120 minutes | 1 | 5% |
-|  more than 120 minutes  | 0 | 0% |
+After all three keys have been entered, browse to `http://challenge.us` and, depending on how fast you completed the challenge, you will be given your hex tokens to submit for points. Here is a reminder on how that's measured: 
+
+| Completion Time       | # of Tokens Earned | % of Overall Challenge Score Added |
+| --------------------- | ------------------ | ---------------------------------- |
+| 75 minutes or less    | 4                  | 20% (5% each)                      |
+| 76-90 minutes         | 3                  | 15% (5% each)                      |
+| 91-105 minutes        | 2                  | 10% (5% each)                      |
+| 106-120 minutes       | 1                  | 5%                                 |
+| more than 120 minutes | 0                  | 0%                                 |
 
 ![Image 19](./img/img_19.png)
