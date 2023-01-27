@@ -7,7 +7,7 @@ This challenge consists of a cyber-based Rubik's Cube that must be solved. When 
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/pc1/team-round3-03-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc1/team-round3-03-largefiles.zip)
 and extract in _this directory_ to get started.
 
 ## Getting Started

@@ -10,7 +10,7 @@ You have been provided with one large 15-minute packet capture and the following
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/pc1/individual-round3-02-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc1/individual-round3-02-largefiles.zip)
 and extract in _this directory_ to get started.
 
 ## Getting Started

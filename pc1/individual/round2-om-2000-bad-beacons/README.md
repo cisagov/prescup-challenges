@@ -15,7 +15,7 @@ The workstation's IP Address is 192.168.106.152.
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/pc1/individual-round2-om-2000-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc1/individual-round2-om-2000-largefiles.zip)
 and extract in _this directory_ to get started.
 
 ## License

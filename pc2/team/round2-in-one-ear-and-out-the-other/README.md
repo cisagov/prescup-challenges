@@ -15,7 +15,7 @@ This challenge is aimed at testing your ability to analyze memory artifacts and 
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/pc2/team-round2-in-one-ear-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc2/team-round2-in-one-ear-largefiles.zip)
 and extract in _this directory_ to get started.
 
 ## Background

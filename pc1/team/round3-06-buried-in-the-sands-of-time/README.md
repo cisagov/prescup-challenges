@@ -8,7 +8,7 @@ An adversary has developed a new form of steganography which can embed data into
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/prescup19/team-round3-06-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc1/team-round3-06-largefiles.zip)
 and extract in _this directory_ to get started.
 
 ## Getting Started

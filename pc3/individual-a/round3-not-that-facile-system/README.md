@@ -20,7 +20,7 @@ This challenge could only be partially open sourced. This challenge contains two
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/pc3/individual-a-round3-not-that-facile-system-ntfs-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc3/individual-a-round3-not-that-facile-system-ntfs-largefiles.zip)
 and extract in _this directory_ to get started.
 
 ## Background
