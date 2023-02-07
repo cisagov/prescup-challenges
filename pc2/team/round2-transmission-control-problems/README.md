@@ -12,7 +12,7 @@ You must analyze PCAP files to answer questions regarding the perpetrator of net
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/pc2/team-round2-transmission-control-problems-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc2/team-round2-transmission-control-problems-largefiles.zip)
 and extract in _this directory_ to get started.
 
 ## Background

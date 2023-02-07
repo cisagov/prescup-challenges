@@ -16,7 +16,7 @@ You are provided with a packet capture and a memory dump from a machine suspecte
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/pc1/individual-round2-om-1000-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc1/individual-round2-om-1000-largefiles.zip)
 and extract in _this directory_ to get started.
 
 ## License

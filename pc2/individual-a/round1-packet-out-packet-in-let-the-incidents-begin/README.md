@@ -18,7 +18,7 @@ Your network (10.9.8.0/24) has been attacked. You are provided access to a full 
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/pc2/individual-a-round1-packet-out-packet-in-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc2/individual-a-round1-packet-out-packet-in-largefiles.zip)
 and extract in _this directory_ to get started.
 
 ## Questions

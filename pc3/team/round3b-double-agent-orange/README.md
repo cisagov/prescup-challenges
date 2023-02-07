@@ -18,7 +18,7 @@ We‘ve discovered that one of our own staff is an alien! Erin from accounting, 
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/pc3/team-round3b-double-agent-orange-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc3/team-round3b-double-agent-orange-largefiles.zip)
 and extract in _this directory_ to get started.
 
 ## Mission II Briefing

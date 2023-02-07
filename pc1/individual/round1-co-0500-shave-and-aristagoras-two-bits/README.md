@@ -19,7 +19,7 @@ text, decrypt, and piece together a flag in the correct order.
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/pc1/individual-round1-co-0500-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc1/individual-round1-co-0500-largefiles.zip)
 and extract in _this directory_ to get started.
 
 ## License

@@ -19,7 +19,7 @@ Evidence suggests that embedded within these images are the codes to decrypt the
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/pc2/individual-a-round2-more-than-meets-the-eye-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc2/individual-a-round2-more-than-meets-the-eye-largefiles.zip)
 and extract in _this directory_ to get started.
 
 ## Getting Started

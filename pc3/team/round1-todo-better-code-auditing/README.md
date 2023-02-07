@@ -23,7 +23,7 @@ This challenge could only be partially open sourced, since it requires significa
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/pc3/team-round1-todo-better-code-auditing-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc3/team-round1-todo-better-code-auditing-largefiles.zip)
 and extract in _this directory_ to get started.
 
 ## Background

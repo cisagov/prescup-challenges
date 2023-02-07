@@ -18,7 +18,7 @@ This challenge is only partially open sourced. The files are provided to give a 
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/pc2/individual-a-round3-dbyod-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc2/individual-a-round3-dbyod-largefiles.zip)
 and extract in _this directory_ to get started.
 
 ## Background

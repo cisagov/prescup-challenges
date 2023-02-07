@@ -24,7 +24,7 @@ destinations and can be used to verify certain types of traffic.
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download
-[this zip](https://cisaprescup.blob.core.usgovcloudapi.net/pc1/team-round1-om-0500-largefiles.zip)
+[this zip](https://presidentscup.cisa.gov/files/pc1/team-round1-om-0500-largefiles.zip)
 and extract in _this directory_ to get started.
 
 
