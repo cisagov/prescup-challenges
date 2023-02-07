@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head th:replace="fragments/main :: dochead( ${title} )">...</head>
+<body>
+	<nav th:replace="fragments/main :: header( ${module}, ${username} )">...</nav>
+	<p>Your submitted order:</p>
+	
+	
+	
+	
+	
+	
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Qty</th>
+			</tr>
+			<tr th:each="ol: ${order.orderLines}">
+				<td>
+					[[${ol.product.id}]]
+				</td>
+				<td>
+					[[${ol.product.name}]]
+				</td>
+				<td>
+					[[${ol.product.price}]]
+				</td>
+				<td>
+					[[${ol.quantity}]]
+				</td>
+			</tr>		
+		
+		</table>
+	
+	
+	
+</body>
+</html>

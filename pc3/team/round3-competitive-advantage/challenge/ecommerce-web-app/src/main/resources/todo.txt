@@ -1,0 +1,16 @@
++ model cart
++ add items to cart
++ add items to cart UI
++ view cart
++ view/update cart UI
++ checkout
++ submit
++ order confirmation
++ api endpoint for grading
++ script for adding stock
++ attack script
++ build TopoMojo environment
+
++ enhance POST requirements after first token
+- live cart price on each page load
+- account purchase limits

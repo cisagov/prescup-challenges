@@ -1,0 +1,1 @@
+sudo systemctl restart smbd.service && sudo smbcontrol all reload-config && sudo systemctl restart rsyslog.service

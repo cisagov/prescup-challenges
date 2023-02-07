@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    hibernate.ddl-auto: create-drop
+    show-sql: false
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+    properties.hibernate.format_sql: true
+  datasource:
+    url: jdbc:mysql://evault30:5558/t25?useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: t25
+    password: t25
+  logging:
+    level:
+      root: ERROR
+      edu.cmu.sei.cert: ERROR
+name: dev-home
+server:
+  error:
+    whitelabel:
+      enabled: true
+  address: 0.0.0.0
+  port: 8080
