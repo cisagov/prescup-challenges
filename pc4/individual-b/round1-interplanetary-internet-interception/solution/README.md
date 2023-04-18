@@ -10,7 +10,7 @@ This challenge asks the competitor to figure out which IP address to set their s
 
 _What is the only IP address that the default gateway (router) will accept SSH connections from on your subnet?_
 
-First we'll need to find the bypass address mentioned in the challenge guide using a shell script.
+First, we'll need to find the bypass address mentioned in the challenge guide using a shell script.
 
 On the Kali system, run the following command to find the IP address that can reach the router/default gateway on TCP/22.
 
@@ -24,7 +24,7 @@ When a string is returned that indicates the Ubuntu system's SSH banner, the IP 
 
 _What is the ID of the correct mission name in the HTTPS traffic?_
 
-This solution breaks the problem into multiple smaller steps. First we need to actually capture the mission traffic. Then we have a choice of tools to decrypt it. Finally, we'll actually examine the traffic and find the correct mission from the packet data.
+This solution breaks the problem into multiple smaller steps. First, we need to actually capture the mission traffic. Then, we have a choice of tools to decrypt it. Finally, we'll actually examine the traffic and find the correct mission from the packet data.
 
 ### Intercepting the traffic
 
@@ -49,13 +49,13 @@ This solution breaks the problem into multiple smaller steps. First we need to a
    ip a
    ```
 
-4. SSH with the credentials in the challenge guide (user:SecureThisShip!) to the router/default gateway to verify you can establish this connection before transferring your TLS interception tool of choice.
+4. SSH with the credentials in the challenge guide (**user:SecureThisShip!**) to the router/default gateway to verify you can establish this connection before transferring your TLS interception tool of choice.
 
    ```
    ssh user@172.17.6.1
    ```
 
-5. On Kali, click the 'iso' icon to see your choice of TLS interception tools (PolarProxy and/or sslsplit). Verify the absolute filepath of these files. Open a second terminal tab or window (on your Kali) and SCP either PolarProxy or sslsplit to the router/default gateway. Either tool can be used for this challenge, and only one of the following two sections need to be followed.
+5. On Kali, click the **iso** icon to see your choice of TLS interception tools (PolarProxy and/or sslsplit). Verify the absolute file path of these files. Open a second terminal tab or window (on your Kali) and SCP either PolarProxy or sslsplit to the router/default gateway. Either tool can be used for this challenge, and only one of the following two sections need to be followed.
 
    ```
    scp /media/cdrom0/sslsplit_deps.tar.gz user@172.17.6.1:~/
@@ -153,4 +153,4 @@ This solution breaks the problem into multiple smaller steps. First we need to a
 
 3. You should see all HTTPS traffic now decrypted as HTTP.
 
-4. There are 120 Mission IDs that are queried per ~minute (1 every .5 seconds). Either sift through this pcap to find the correct mission ID, or you can click the magnifying glass, select 'String', select 'Packet bytes', search for ' correct', and click 'Find'. Notice the intentional space before correct as this will ignore all strings that state incorrect. At the bottom (packet bytes panel), you should now see the correct MissionName and MissionID received.
+4. There are 120 Mission IDs that are queried per ~minute (1 every .5 seconds). Either sift through this pcap to find the correct mission ID, or you can click the magnifying glass, select **String**, select **Packet bytes**, search for **correct**, and click **Find**. Notice the intentional space before correct as this will ignore all strings that state incorrect. At the bottom (packet bytes panel), you should now see the correct MissionName and MissionID received.

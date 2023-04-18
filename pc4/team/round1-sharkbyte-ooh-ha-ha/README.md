@@ -28,22 +28,14 @@ The Sensor subnet traffic is only available on the Ubuntu Server (via ISO) due t
 
 The Kali and Ubuntu Server VMs are located on different subnets of the spaceship and cannot communicate with each other. The Kali and Ubuntu Server VMs are unable to sniff their subnets live. We only have these pcaps for analysis.
 
+__To play this challenge offline, the files from the ISO are available in the [challenge directory](./challenge)__
+
 ## Challenge Questions
 
 1. Engine Q1: How many packets are associated with Engine 1?
-2. This question had several variants:
-    - (Engine Q2 Variation 1): When all five flags are turned on, the status code should be Fatal; however, one packet with all flags turned on did not respond with a Fatal Status. What is the packet number of this packet?
-    - (Engine Q2 Variation 2): When four flags are set, the Status should be either Warning or Fatal. What is the packet number of the packet that failed to correctly set the Status?
-    - (Engine Q2 Variation 3): When all five flags are turned on, the status code should be Fatal. How many packets contain a Fatal status code with all five flags for Engine 1?
-    - (Engine Q2 Variation 4): When at least four flags are turned on, the status code should be Fatal; however, how many packets with at least four flags did not return a Fatal status code?
-
+2. Engine Q2: When all five flags are turned on, the status code should be Fatal; however, one packet with all flags turned on did not respond with a Fatal Status. What is the packet number of this packet?
 3. Engine Q3: What is the lowest the burn speed can be without the Gas Flag being turned on?
-4. This question had several variants:
-    - (Engine Q4 Variation 1): The Oil Flag is turned on when Burn Speed is at least ANSWER1 (or over) and Temperature reaches ANSWER2 (or below)? Submit your answer as ANSWER1:ANSWER2 (e.g., 55:1234)
-    - (Engine Q4 Variation 2): The Oil Flag is turned on when Burn Speed is at least ANSWER1 (or over) and Temperature reaches ANSWER2 (or below)? Submit your answer as ANSWER1:ANSWER2 (e.g., 55:1234)
-    - (Engine Q4 Variation 3): The Oil Flag is turned on when Burn Speed is at least ANSWER1 (or over) and Temperature reaches ANSWER2 (or below)? Submit your answer as ANSWER1:ANSWER2 (e.g., 55:1234)
-    - (Engine Q4 Variation 4): Multiple criteria must meet for the oil flag to turn on. What is the LOWEST burn speed (ANSWER1) recorded when the oil flag was on?  What is the HIGHEST temperature (ANSWER2) recorded when the oil flag was on? Submit your answer as ANSWER1:ANSWER2 (e.g., 12:1234)
-
+4. Engine Q4: The Oil Flag is turned on when Burn Speed is at least ANSWER1 (or over) and Temperature reaches ANSWER2 (or below)? Submit your answer as ANSWER1:ANSWER2 (e.g., 55:1234)
 5. Engine Q5: What is the highest recorded temperature of any engine? (it may have hit this level once, or more than once; however, NEVER higher).
 6. Engine Q6: The Other Flag appears to be very buggy. How many times has the Other Flag been triggered, regardless of potentially other flags being turned on/off as well.
 7. Sensor Q1: What is the 3-digit identifier for Paul?

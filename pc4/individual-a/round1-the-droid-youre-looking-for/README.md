@@ -13,6 +13,10 @@ Examine a forensic disk image of an Android mobile device.
 - [T0216](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0216) - Recognize and accurately report forensic artifacts indicative of a particular operating system.
 - [T0396](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0396) - Process image with appropriate tools depending on analyst's goals.
 
+ ## ⚠️ Large Files ⚠️
+ 
+ This challenge includes large files as a separate download. Please download and extract the `andrew.dd` image [here](https://presidentscup.cisa.gov/files/pc4/individuala-round1-the-droid-youre-looking-for-largefiles.zip) before beginning. The zipped file is ~3GBs and the extracted artifact is ~6GBs.
+
 ## Getting Started
 
 Someone was caught stealing information off of The Dauntless and transmitting it to another party.  We have seized their mobile device and created an image of the data partition to examine.  The image, `andrew.dd`, is placed on the Security Terminal workstation's desktop.  Examine the partition to try to determine what was compromised and if there is anyone else we should suspect. Examine the disk image to answer the questions.  

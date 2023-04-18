@@ -1,0 +1,4 @@
+starlette==0.20.4
+starlite==1.7.2
+python-jose==3.3.0
+pytest~=7.1.2

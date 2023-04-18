@@ -50,7 +50,7 @@ A decryption key is downloaded and stored on the machine at runtime. Provide the
    - Operation is RegSetValue Include
    <img src="img/c36-6.PNG"/>
 
-3. Click **OK**. This should clear any existing events and start the capture. Verify that that events are being captured by making sure that the sqare icon under the **Event** menu is highlighted in blue.
+3. Click **OK**. This should clear any existing events and start the capture. Verify that that events are being captured by making sure that the square icon under the **Event** menu is highlighted in blue.
 4. Run **Adsvcexec.exe** from the command line.
 5. You will notice a value set in **HKCU\SOFTWARE\Microsoft\Fax\UserInfo\runcount**. A quick online search will verify that this key is not normally here.
 <img src="img/c36-7.PNG"/>
@@ -138,7 +138,7 @@ _What is the port number associated with the firewall rule that the application 
 
 A firewall rule is created and a port is opened for inbound traffic by one of the application's modules. Confirm this activity and provide the port number.
 
-1. During the first exection of Adsvcexec.exe you will be asked to allow a new firewall rule. Allowing the change to be made is ok because you want to study the functionality of the application.
+1. During the first execution of Adsvcexec.exe you will be asked to allow a new firewall rule. Allowing the change to be made is ok because you want to study the functionality of the application.
 <img src="img/c36-23.PNG"/>
 
 2. Notice it is asking to allow ncat.exe. If you look at Process Explorer (procexp64.exe) while Adsvcexec.exe is running you will see that it loaded ncat.exe. 
@@ -181,7 +181,7 @@ Write a YARA rule to detect the Adsvcexec.exe executable. We will test your rule
 
 For example: `rule MyRule { strings: $testString = "suspicious" condition: $testString }`
 
-1. Use the yara64.exe file you downloaded from http://challenge.us/files and extracted from yara-v4.2.2-2012-win64.zip to test your YARA rule. While you can test your rule against the Adsvcexec.exe executable on your local machine you have no way to know what sample files it will be compared with. This indicates that you should use mutltiple values in your comparison or fewer longer runs of hex bytes that will likely differ between executables.
+1. Use the yara64.exe file you downloaded from http://challenge.us/files and extracted from yara-v4.2.2-2012-win64.zip to test your YARA rule. While you can test your rule against the Adsvcexec.exe executable on your local machine you have no way to know what sample files it will be compared with. This indicates that you should use multiple values in your comparison or fewer longer runs of hex bytes that will likely differ between executables.
 2. You need to create a single rule that can detect the Ansvcexec.exe file without returning true when testing against a collection of unknown sample file.
 3. For example, providing this rule will fail because it will return true for both Adsvcexec.exe and one or more sample files.
 

@@ -15,6 +15,9 @@ One of your ship’s internal websites has been attacked and taken over and is n
 - [T0591](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0591) - Perform analysis for target infrastructure exploitation activities.
 - [T0736](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0736) - Lead or enable exploitation operations in support of organization objectives and target requirements.
 
+## IMPORTANT
+
+This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.
 
 ## Background  
 

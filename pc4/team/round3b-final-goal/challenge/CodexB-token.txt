@@ -1,0 +1,2 @@
+SHA1 hash of Archive B.zip:
+96ef64bcb506f391dd8cc56035e03902ab477372

@@ -9,6 +9,13 @@ A devastating insider threat attack has disabled a critical cube drive manufactu
 - [T0510](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0510) - Coordinate incident response functions.
 - [T0278](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0278) - Collect intrusion artifacts (e.g., source code, malware, Trojans) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
+## IMPORTANT
+
+This challenge only partially open sourced. The files in the [challenge directory](./challenge) are provided to give you a starting point if you wish to recreate the challenge on your own. 
+
+Please follow the instructions in the [challenge directory](./challenge) to setup the required files before attempting to play this challenge offline.  
+
+The files provided/generated will allow you to solve Question 1. The full version of the challenge can be played on the hosted site.  
 
 ## Background
 
@@ -20,7 +27,7 @@ Additional evidence shows the attacker was using the `ssh-access` workstation an
 
 The image below shows the connections we suspect the attacker is capable of making. 
 
-![network-topology-1258573180.png](https://launchpad.cisa.gov/tm/docs/f37bd01778b445d3938a090d0139c73a/connection-map-945403253.png)
+![network-topology.png](./img/network-topology.png.png)
 
 ## Getting Started
 

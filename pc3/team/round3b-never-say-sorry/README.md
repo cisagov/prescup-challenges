@@ -23,7 +23,7 @@ We do not know exactly when the aliens will attack and attempt to exfiltrate the
 Respond to the intelligence and recommendations reports below carefully. Our leaders in the field need to be able to retrieve the data at any given time. Even they do not know the locations of the reserves for security purposes.
 
 
-[NeverSaySORryTippersandRecommendationsGuide.pdf](https://files-presidentscup.cisa.gov/51ce14fb-NeverSaySORryTippersandRecommendationsGuide.pdf)
+[NeverSaySORryTippersandRecommendationsGuide.pdf](https://presidentscup.cisa.gov/files/51ce14fb-NeverSaySORryTippersandRecommendationsGuide.pdf)
 
 Do not alter, move, or change the storageloc data files. The files must be accessible in their current state for legitimate authenticated users when the time comes.
 
@@ -31,7 +31,7 @@ Additionally, do not change any of the existing named non-root user accounts or 
 
 A network map has been provided to assist in your efforts. All retrieval attempts from our leadership will come from the external network.
 
-![t27-network-1648016461.png](https://files-presidentscup.cisa.gov/83c4bae5-network-diagram.png)
+![t27-network-1648016461.png](https://presidentscup.cisa.gov/files/83c4bae5-network-diagram.png)
 
 ## Submission Format
 This challenge is automatically graded at specific unknown points in time to the players. As such, there is no submission required. Depending on the results of the grading checks, score updates will be sent automatically to the Gameboard.

@@ -1,0 +1,112 @@
+﻿@*
+Copyright 2023 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*@
+
+@using TransportManagementPortal.Data.Models
+@model PersonnelViewModel
+
+@{
+    ViewData["Title"] = "Personnel";
+}
+
+<h1>Personnel</h1>
+
+<div class="container">
+    <form asp-action="Personnel">
+        <div class="row">
+            Search the ship's personnel directory:
+        </div>
+
+        <div class="row pb-3">
+            <input type="text" name="Search" />
+        </div>
+
+        <div class="row pb-3">
+            <input type="submit" value="Search" class="btn btn-primary" />
+        </div>
+    </form>
+
+    @{
+        if (Model.Users != null && Model.Users.Count > 100)
+        {
+            <div class="row mb-3 fw-bold bg-success">
+                  TOKEN #2: @Model.SqlInectionToken
+            </div>
+        }
+    }
+    
+    <div class="row pb-3 fw-bold">
+        Results:
+    </div>
+
+    <div class="row pb-3">
+        <div class="col-3 fw-bold">
+            First Name
+        </div>
+        <div class="col-3 fw-bold">
+            Last Name
+        </div>
+        <div class="col-3 fw-bold">
+            Username
+        </div>
+        <div class="col-3 fw-bold">
+            Role
+        </div>
+    </div>
+
+    @{
+        if (Model.Users != null)
+        {
+            foreach (User user in Model.Users)
+            {
+                if (user.Username == "esherman")
+                {
+                    <div class="row pb-3 fw-bold">
+                        <div class="col-3">
+                        @user.FirstName 
+                        </div>
+                        <div class="col-3 fw-bold">
+                            @user.LastName
+                        </div>
+                        <div class="col-3 fw-bold">
+                            @user.Username
+                        </div>
+                        <div class="col-3 fw-bold">
+                            @((Enums.Roles)user.RoleId)
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="row pb-3">
+                        <div class="col-3">
+                        @user.FirstName 
+                        </div>
+                        <div class="col-3">
+                            @user.LastName
+                        </div>
+                        <div class="col-3">
+                            @user.Username
+                        </div>
+                        <div class="col-3">
+                            @((Enums.Roles)user.RoleId)
+                        </div>
+                    </div>
+                }
+            }
+        }
+    }
+
+    @{
+        if (Context.Session.GetString("CurrentUserRole") == "5")
+        {
+            <div class="row">
+                <div class="col-2">
+                    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="CreateUser">Create User</a>
+                </div>
+            </div>
+        }
+    }
+</div>

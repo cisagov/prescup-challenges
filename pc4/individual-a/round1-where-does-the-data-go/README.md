@@ -12,11 +12,18 @@ Analyze packet captures and live network traffic to investigate a data exfiltrat
 
 - [T0163](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0163) - Perform cyber defense incident triage, to include determining scope, urgency, and potential impact, identifying the specific vulnerability, and making recommendations that enable expeditious remediation.
 
+## ⚠️ Large Files ⚠️
+
+This challenge includes large files as a separate download. Please download the large files [here](https://presidentscup.cisa.gov/files/pc4/individuala-round1-where-does-the-data-go-largefiles.zip). The packet capture file extracted from the large file zip was provided to competitors as an ISO during the competition. The zipped file is ~136MBs and the extracted pcap is ~144MBs.
+
+
 ## Background
 
 A user workstation on the _Dauntless_ is suspected of being compromised and appears to be transmitting personnel data to one or more external locations. We provided a packet capture, now we need you to examine the artifacts of this data exfiltration incident.
 
 ## Getting Started
+
+_Note: Follow the setup instructions in the [challenge directory](./challenge/) to get started solving this challenge offline._
 
 We provided a packet capture as an ISO and placed it on the Kali Linux machine. You can use this to answer the first five questions. For the last two questions you will need to examine the Ubuntu desktop machine to identify which process is calling home, what data is being sent and where it is going.
 

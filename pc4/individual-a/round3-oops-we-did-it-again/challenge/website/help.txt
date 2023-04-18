@@ -1,0 +1,13 @@
+The ransomware decrypter has a few options.
+
+Always run the decrypter in a separate directory from the files you want to encrypt or decrypt, and add your encryption/decryption code to a file called "pwd" in the same directory as the program.
+
+Use the "-p /path/to/files" option to tell the program the target directory 
+
+To encrypt, use the "-m encrypt" option.
+
+To decrypt, use the "-m decrypt" option.
+
+Depending on the method, the program will encrypt or decrypt everything within the target directory and create a new directory called "encrypted" or "decrypted" in the current directory with the resulting files.
+
+To access help, use the "help" option.

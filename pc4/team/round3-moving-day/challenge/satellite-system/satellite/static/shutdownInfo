@@ -1,0 +1,7 @@
+{
+    "correct_seq" : ["Yellow","Blue","Green","Orange","Red"],
+    "attempts": 0,
+    "timeout": "False",
+    "timein":"False",
+    "offline":"False"
+}

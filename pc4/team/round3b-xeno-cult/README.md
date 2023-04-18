@@ -3,6 +3,12 @@
 ## Background
 A group of cultists revere the ancient Seelax, collecting numerous records and artifacts. The Aurelian's have hunted them for years, narrowing down their home base to somewhere in this asteroid system, but never finding it...  
 
+## IMPORTANT
+This challenge is only partially open sourced. The files are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
+
+## ⚠️ Large Files ⚠️
+This challenge includes large files as a separate download. Please download [here](https://presidentscup.cisa.gov/files/pc4/team-round3b-xeno-cult-largefiles.zip) to get started. The zip file contains a collection of `.pcap` files that the user must analyze to complete the challenge and a text file with a list of probe locations. The zipped file is ~578MBs and the extracted artifact is ~2.1GBs.
+
 ## Getting Started
 The Aurellian security forces have been sending out probes to search for the hidden base of a cult of ancient alien worshippers; however, the cultists jam their probes as they travel, preventing them from reporting their location. The Aurellian security provides your team access to some files so that your team can attempt to find the hidden base. Your team must discover coordinates to their location.
 

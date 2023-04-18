@@ -1,0 +1,10 @@
+[Unit]
+Description=Execute adding user to router on startup
+
+[Service]
+ExecStart=/etc/systemd/system/router-add-user.sh
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=default.target

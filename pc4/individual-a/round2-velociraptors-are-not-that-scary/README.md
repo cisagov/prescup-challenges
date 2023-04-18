@@ -9,6 +9,9 @@ Use a remote system management tool to investigate a cyber incident.
 - [T0175](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0175) - Perform real-time cyber defense incident handling (e.g., forensic collections, intrusion correlation and tracking, threat analysis, and direct system remediation) tasks to support deployable Incident Response Teams (IRTs).
 - [T0432](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0432) - Collect and analyze intrusion artifacts (e.g., source code, malware, and system configuration) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
+## IMPORTANT
+This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.
+
 ## Background
 
 There are reports of a cyber attack in a facility on planet Alpha in galaxy Sierra. You have been provided remote access to a system from that facility that needs to be investigated. The remote access is available through the **Velociraptor** tool.

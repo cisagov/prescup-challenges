@@ -13,7 +13,11 @@ Anyway, my job is to help you get acquainted with some of the tools you’ll be 
 - [T0641](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0641&description=All) - Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
 - [T0736](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0736&description=All) - Lead or enable exploitation operations in support of organization objectives and target requirements.
 
-# Getting Started
+## IMPORTANT
+
+This challenge is only partially open sourced. The files in the [challenge directory](./challege) are provided to give you a starting point if you wish to recreate the challenge on your own. The full challenge can be played on the hosted site. 
+
+## Getting Started
 
 You'll have to perform several tasks on a Kali Virtual Machine (VM) to solve this challenge. Details on each task are provided here, and a list of Challenge Questions is below this section. 
 

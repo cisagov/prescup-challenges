@@ -1,5 +1,9 @@
 #!/bin/bash -e
 
+# Copyright 2023 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
 export DISPLAY=:0.0
 export XAUTHORITY=/home/user/.Xauthority
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"

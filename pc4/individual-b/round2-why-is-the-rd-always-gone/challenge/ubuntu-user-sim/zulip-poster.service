@@ -1,0 +1,8 @@
+[Unit]
+Description=Execute adding chat to Zulip on startup
+
+[Service]
+ExecStart=/etc/systemd/system/zulip-poster.sh
+
+[Install]
+WantedBy=default.target

@@ -13,6 +13,10 @@ It is time to put your red team and blue team skills to the test for our red, wh
 - [T0696](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0696) - Exploit network devices, security devices, and/or terminals or environments using various methods or tools.
 - [T0724](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0724) - Identify potential points of strength and vulnerability within a network.
 
+## IMPORTANT
+
+This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.
+
 ## Background
 
 You have been deployed to a critical manufacturing plant. This factory builds laptops. Intel states that this factory is a high-target for adversaries. You must hack your way into viewing the Human Machine Interface (HMI) and turn off nine (9) Programmable Logic Controller (PLC) values to shut down the factory assembly line. Once you do, you must restore the PLC values and secure/protect the factory with the VyOS Firewall to ensure others cannot perform the same righteous attack.

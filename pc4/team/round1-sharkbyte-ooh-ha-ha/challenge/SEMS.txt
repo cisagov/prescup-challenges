@@ -1,0 +1,13 @@
+Spaceship Engine Monitoring System (SEMS)
+UDP/6186
+SEMS data is passed within the data payload in this order:
+- Status (hexadecimal - 1 byte): 01 (OK), 02 (Advisory), 03 (Alert), 04 (Warning), 05 (Fatal).
+- Engine (hexadecimal - 1 byte): 31 (E1/Engine1), 32 (E2/Engine2), 33 (E3/Engine3), 34 (E4/Engine4), 35 (E5/Engine5).
+- Angle_Degree (ASCII - 4 bytes): Value ranges. E.g., 6000 = -15 degrees, 7000 = 0 degrees, 8000 = +15 degrees.
+- Burn_Speed (ASCII - 2 bytes): Value ranges between 00-99.
+- Temperature (ASCII - 4 bytes): Value passed as 0000-9999. This indicates the Kelvin temperature.
+- Flags (ASCII - 2 bytes/each): Always passed lowest to highest, if turned on/passed. Values: 01 (Gas Flag), 02 (Oil Flag), 03 (Air Flag), 04 (Balance Flag), 05 (Other Flag).
+-- If the flag is passed, the flag is on. If the flag is not passed, the flag is off.
+-- Length of payload will vary based on number of flags turned on.
+- End of Payload (hexadecimal): Indicated by 0a. Some 00 padding may follow the 0a, if necessary.
+

@@ -4,6 +4,10 @@
 
 An intergalactic buccaneer known as "The Red Raider" has been rumored to have a stockpile of ancient weapons and artifacts.
 
+## IMPORTANT
+
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give you a starting point if you wish to recreate the challenge on your own. The full challenge can be played on the hosted site.
+
 ## Getting Started
 
 After some searching, you and your team stumble upon a ship that appears to be commandeered by The Red Raider.  Rumor has it that they have a stockpile of ancient weapons and artifacts so, you try to negotiate with them. They don’t speak english, so you will need to give them access to your language file.

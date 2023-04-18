@@ -1,0 +1,15 @@
+/*
+Copyright 2023 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*/
+
+.background {
+    background: #8f8e8c;
+    min-height: 100vh;
+    }
+
+    .subtext {
+    color: rgb(36, 36, 36);
+    }
+

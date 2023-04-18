@@ -1,0 +1,48 @@
+<!--
+Copyright 2023 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Satellite Control{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <br><br>
+  <div id="files"></div>
+  <br><br>
+  <h1 id="headline"><u><strong>Satellite Position:</strong></u></h1>
+  <br>
+  <div id="azimuth">
+    <div class="xcenter">
+      <fieldset>
+        <legend align="center"><strong>Azimuth Coordinates</strong></legend>
+        <ul class="azu">
+          <li class="azu"><span id="aDegrees"></span>Degrees</li>
+          <li class="azu"><span id="aMinutes"></span>Minutes</li>
+          <li class="azu"><span id="aSeconds"></span>Seconds</li>
+        </ul>
+      </fieldset>
+    </div>
+    <div class="xcenter">
+      <fieldset>
+        <legend align="center"><strong>Elevation Coordinates</strong></legend>
+        <ul class="azu">
+          <li class="azu"><span id="eDegrees"></span>Degrees</li>
+          <li class="azu"><span id="eMinutes"></span>Minutes</li>
+          <li class="azu"><span id="eSeconds"></span>Seconds</li>
+        </ul>
+      </fieldset>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div id="status"></div>
+
+{% endblock %}
+

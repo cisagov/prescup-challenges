@@ -6,6 +6,8 @@ _Solution Guide_
 
 In this challenge, we will analyze the forensic image to determine why the spacecraft and antennas are unable to communicate with each other. There are four possible variants for this challenge. This solution guide covers the walk-through for variant #1, organized by submission question. The steps used to solve all variants will be similar, but the answers will vary.
 
+## Getting Started
+
 The following commands will help you get started with the challenge.
 
 Unzip the forensic image:
@@ -24,7 +26,7 @@ sudo fdisk -l image.raw
 
 <img src="img/c02-image1.png">
 
-Please note that the Linux partition begins at 1052672 sector. To find the byte offset of this sector, mulitiple it by 512. Byte offset will be 538968064.
+Please note that the Linux partition begins at 1052672 sector. To find the byte offset of this sector, multiple it by 512. Byte offset will be 538968064.
  
 Mount the image:
 

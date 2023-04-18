@@ -1,0 +1,763 @@
+Tue Jun 28 14:15:16 2022: WARNING: <dns:server> not defined, attempting to find working server in /etc/resolv.conf...
+Tue Jun 28 14:15:16 2022: <dns:server> set to '127.0.0.53' as first resolver in /etc/resolv.conf.
+Tue Jun 28 14:15:16 2022: WARNING: <performance:softlimit> value of 12800 is not between 10 and 1024; set to 1024.
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_links.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_notice.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_ison.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_oper.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_stats.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_rules.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_server.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_part.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_quit.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_info.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_userhost.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_eline.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_die.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_unloadmodule.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_squit.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_clearcache.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_admin.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_kline.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_connect.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_kill.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_gline.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_user.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_wallops.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_topic.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_who.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_pong.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_privmsg.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_names.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_join.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_invite.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_version.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_modenotice.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_nick.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_kick.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_qline.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_whowas.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_time.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_zline.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_list.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_map.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_loadmodule.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_ping.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_away.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_commands.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_reloadmodule.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_modules.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_whois.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_rehash.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_pass.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_restart.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_lusers.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_mode.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: cmd_motd.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: m_md5.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: m_sha256.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: m_ripemd160.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: m_alias.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: m_auditorium.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: m_password_hash.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: m_permchannels.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: m_spanningtree.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: New module introduced: m_chatlog.so (Module version InspIRCd-2.0.25 r0)
+Tue Jun 28 14:15:16 2022: Startup complete as 'Dauntless.us'[560], 1024 max open sockets
+Tue Jun 28 14:15:26 2022: CONNECT: Client connecting on port 6667 (class main): Dauntless!dauntless@pc4-kali-will-be-deleted.us (10.5.5.95) [realname]
+Tue Jun 28 14:25:58 2022: *** Dauntless has quit IRC: Ping timeout: 121 seconds
+Tue Jun 28 14:25:58 2022: QUIT: Client exiting: Dauntless!dauntless@pc4-kali-will-be-deleted.us (10.5.5.95) [Ping timeout: 121 seconds]
+Tue Jun 28 18:29:01 2022: CONNECT: Client connecting on port 6667 (class main): Dauntless!dauntless@pc4-kali-will-be-deleted.us (10.5.5.124) [realname]
+Tue Jun 28 18:29:21 2022: *** Dauntless has joined #Dauntless_announcements
+Tue Jun 28 18:55:19 2022: CONNECT: Client connecting on port 6667 (class main): donnasmith!donnasmith@dsmith.us (10.5.5.125) [Donna Smith]
+Tue Jun 28 18:55:37 2022: *** donnasmith has joined #Dauntless_announcements
+Tue Jun 28 18:57:00 2022: CONNECT: Client connecting on port 6667 (class main): angelawilliams!angelawilli@awilliams.us (10.5.5.88) [Angela Williams]
+Tue Jun 28 18:57:08 2022: *** angelawilliams has joined #Dauntless_announcements
+Tue Jun 28 18:59:48 2022: CONNECT: Client connecting on port 6667 (class main): ryanknight!ryanknight@rknight.us (10.5.5.98) [Ryan Knight]
+Tue Jun 28 18:59:56 2022: *** ryanknight has joined #Dauntless_announcements
+Tue Jun 28 19:05:17 2022: *** ryanknight has quit IRC: Ping timeout: 121 seconds
+Tue Jun 28 19:05:17 2022: QUIT: Client exiting: ryanknight!ryanknight@rknight.us (10.5.5.98) [Ping timeout: 121 seconds]
+Tue Jun 28 19:08:55 2022: *** angelawilliams has quit IRC: Ping timeout: 121 seconds
+Tue Jun 28 19:08:55 2022: QUIT: Client exiting: angelawilliams!angelawilli@awilliams.us (10.5.5.88) [Ping timeout: 121 seconds]
+Wed Jun 29 16:15:25 2022: *** donnasmith has quit IRC: Ping timeout: 121 seconds
+Wed Jun 29 16:15:25 2022: QUIT: Client exiting: donnasmith!donnasmith@dsmith.us (10.5.5.125) [Ping timeout: 121 seconds]
+Wed Jun 29 16:25:55 2022: WARNING: <dns:server> not defined, attempting to find working server in /etc/resolv.conf...
+Wed Jun 29 16:25:55 2022: <dns:server> set to '127.0.0.53' as first resolver in /etc/resolv.conf.
+Wed Jun 29 16:25:55 2022: WARNING: <performance:softlimit> value of 12800 is not between 10 and 1024; set to 1024.
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_links.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_notice.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_ison.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_oper.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_stats.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_rules.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_server.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_part.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_quit.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_info.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_userhost.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_eline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_die.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_unloadmodule.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_squit.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_clearcache.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_admin.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_kline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_connect.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_kill.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_gline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_user.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_wallops.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_topic.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_who.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_pong.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_privmsg.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_names.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_join.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_invite.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_version.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_modenotice.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_nick.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_kick.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_qline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_whowas.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_time.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_zline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_list.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_map.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_loadmodule.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_ping.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_away.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_commands.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_reloadmodule.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_modules.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_whois.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_rehash.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_pass.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_restart.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_lusers.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_mode.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: cmd_motd.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: m_md5.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: m_sha256.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: m_ripemd160.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: m_alias.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: m_auditorium.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: m_password_hash.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: m_permchannels.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: m_spanningtree.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: New module introduced: m_chatlog.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 16:25:55 2022: Startup complete as 'Dauntless.us'[560], 1024 max open sockets
+Wed Jun 29 16:26:05 2022: CONNECT: Client connecting on port 6667 (class main): Dauntless!dauntless@pc4-kali-will-be-deleted.us (10.5.5.124) [realname]
+Wed Jun 29 16:26:05 2022: *** Dauntless has joined #Dauntless_announcements
+Wed Jun 29 18:26:29 2022: WARNING: <dns:server> not defined, attempting to find working server in /etc/resolv.conf...
+Wed Jun 29 18:26:29 2022: <dns:server> set to '127.0.0.53' as first resolver in /etc/resolv.conf.
+Wed Jun 29 18:26:29 2022: WARNING: <performance:softlimit> value of 12800 is not between 10 and 1024; set to 1024.
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_links.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_notice.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_ison.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_oper.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_stats.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_rules.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_server.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_part.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_quit.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_info.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_userhost.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_eline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_die.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_unloadmodule.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_squit.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_clearcache.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_admin.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_kline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_connect.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_kill.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_gline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_user.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_wallops.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_topic.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_who.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_pong.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_privmsg.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_names.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_join.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_invite.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_version.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_modenotice.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_nick.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_kick.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_qline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_whowas.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_time.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_zline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_list.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_map.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_loadmodule.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_ping.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_away.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_commands.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_reloadmodule.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_modules.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_whois.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_rehash.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_pass.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_restart.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_lusers.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_mode.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: cmd_motd.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: m_md5.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: m_sha256.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: m_ripemd160.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: m_alias.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: m_auditorium.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: m_password_hash.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: m_permchannels.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: m_spanningtree.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: New module introduced: m_chatlog.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 18:26:29 2022: Startup complete as 'Dauntless.us'[560], 1024 max open sockets
+Wed Jun 29 18:26:38 2022: CONNECT: Client connecting on port 6667 (class main): Dauntless!dauntless@pc4-kali-will-be-deleted.us (10.5.5.124) [realname]
+Wed Jun 29 18:26:38 2022: *** Dauntless has joined #Dauntless_announcements
+Wed Jun 29 18:31:56 2022: CONNECT: Client connecting on port 6667 (class main): ryanknight!ryanknight@10.5.5.153 (10.5.5.153) [Ryan Knight]
+Wed Jun 29 18:32:07 2022: *** ryanknight has joined #Dauntless_announcements
+Wed Jun 29 18:34:05 2022: CONNECT: Client connecting on port 6667 (class main): angelawilliams!angelawilli@10.5.5.152 (10.5.5.152) [Angela Williams]
+Wed Jun 29 18:34:18 2022: *** angelawilliams has joined #Dauntless_announcements
+Wed Jun 29 18:35:55 2022: CONNECT: Client connecting on port 6667 (class main): donnasmith!donnasmith@10.5.5.151 (10.5.5.151) [Donna Smith]
+Wed Jun 29 18:36:04 2022: *** donnasmith has joined #Dauntless_announcements
+Wed Jun 29 18:39:04 2022: #Dauntless_announcements: <Dauntless!dauntless@pc4-kali-will-be-deleted.us> Attention All Crew: Departure imminent, head to your assigned duty stations.
+Wed Jun 29 18:40:14 2022: donnasmith: <angelawilliams!angelawilli@10.5.5.152> Please let me know if you need curve shift still.
+Wed Jun 29 18:40:29 2022: angelawilliams: <donnasmith!donnasmith@10.5.5.151> Did you attach the file?
+Wed Jun 29 18:43:27 2022: donnasmith: <angelawilliams!angelawilli@10.5.5.152> Attached is the delta positions for the dates requested
+Wed Jun 29 18:43:52 2022: donnasmith: <angelawilliams!angelawilli@10.5.5.152> DCC SEND excusable-edition.xlsx 168101272 38145 2432736
+Wed Jun 29 18:46:39 2022: angelawilliams: <donnasmith!donnasmith@10.5.5.151> This is exactly what I needed Thanks!
+Wed Jun 29 18:47:05 2022: donnasmith: <angelawilliams!angelawilli@10.5.5.152> Let me know if you have any questions
+Wed Jun 29 18:50:17 2022: donnasmith: <ryanknight!ryanknight@10.5.5.153> Could you do me a favor?  I'd like to read your policy on easements, you should have received a copy of it at closing. I don't know how many pages it will be, but  let me know how you want to handle getting a copy made.  I'll be happy to make the copy, or whatever makes it easy for you.
+Wed Jun 29 19:01:06 2022: ryanknight: <donnasmith!donnasmith@10.5.5.151> I'll let you know when I find it
+Wed Jun 29 19:01:37 2022: donnasmith: <ryanknight!ryanknight@10.5.5.153> ok, thanks
+Wed Jun 29 19:01:56 2022: *** angelawilliams has joined #private_chat
+Wed Jun 29 19:02:02 2022: #private_chat: <angelawilliams!angelawilli@10.5.5.152> +s
+Wed Jun 29 19:03:17 2022: *** donnasmith has joined #private_chat
+Wed Jun 29 19:03:25 2022: #private_chat: <donnasmith!donnasmith@10.5.5.151> Hi, what's up?
+Wed Jun 29 19:03:40 2022: #private_chat: <angelawilliams!angelawilli@10.5.5.152> hold on, I need to invite ryan
+Wed Jun 29 19:04:07 2022: *** ryanknight has joined #private_chat
+Wed Jun 29 19:04:15 2022: #private_chat: <ryanknight!ryanknight@10.5.5.153> hi guys
+Wed Jun 29 19:05:56 2022: #private_chat: <angelawilliams!angelawilli@10.5.5.152> hey, so I thought i could make this room we could chat privately in a group instead of using private messages.  Just be sure to delete your logs so it stays private!
+Wed Jun 29 19:15:45 2022: ryanknight: <donnasmith!donnasmith@10.5.5.151> DCC SEND "Easement and Right of Way Agreement.pdf" 168101271 48689 1166315
+Wed Jun 29 19:15:57 2022: ryanknight: <donnasmith!donnasmith@10.5.5.151> Here is the information you requested.  
+Wed Jun 29 19:16:58 2022: donnasmith: <ryanknight!ryanknight@10.5.5.153> Thanks Donna!
+Wed Jun 29 19:18:40 2022: #Dauntless_announcements: <Dauntless!dauntless@pc4-kali-will-be-deleted.us> All hands: muster in assigned locations for operations briefing
+Wed Jun 29 19:19:01 2022: #Dauntless_announcements: <Dauntless!dauntless@pc4-kali-will-be-deleted.us> ********************************************************************************
+Wed Jun 29 19:19:32 2022: #Dauntless_announcements: <Dauntless!dauntless@pc4-kali-will-be-deleted.us> * All hands: muster in assigned locations for operations briefing                               *
+Wed Jun 29 19:19:41 2022: #Dauntless_announcements: <Dauntless!dauntless@pc4-kali-will-be-deleted.us> ***************************************************************************
+Wed Jun 29 19:20:04 2022: #Dauntless_announcements: <Dauntless!dauntless@pc4-kali-will-be-deleted.us> 04
+Wed Jun 29 19:20:41 2022: #Dauntless_announcements: <Dauntless!dauntless@pc4-kali-will-be-deleted.us> 04  All hands: muster in assigned locations for operations briefing  
+Wed Jun 29 19:20:46 2022: #Dauntless_announcements: <Dauntless!dauntless@pc4-kali-will-be-deleted.us>  
+Wed Jun 29 19:20:46 2022: #Dauntless_announcements: <Dauntless!dauntless@pc4-kali-will-be-deleted.us>  
+Wed Jun 29 19:20:46 2022: #Dauntless_announcements: <Dauntless!dauntless@pc4-kali-will-be-deleted.us>  
+Wed Jun 29 19:21:12 2022: #private_chat: <donnasmith!donnasmith@10.5.5.151> whelp, better go see what that's all about
+Wed Jun 29 19:28:14 2022: #Dauntless_announcements: <Dauntless!dauntless@pc4-kali-will-be-deleted.us>  /part
+Wed Jun 29 19:28:27 2022: *** Dauntless has quit IRC: Quit: Leaving
+Wed Jun 29 19:28:27 2022: QUIT: Client exiting: Dauntless!dauntless@pc4-kali-will-be-deleted.us (10.5.5.124) [Quit: Leaving]
+Wed Jun 29 19:31:43 2022: CONNECT: Client connecting on port 6667 (class main): Dauntless!dauntless@pc4-kali-will-be-deleted.us (10.5.5.124) [realname]
+Wed Jun 29 19:34:08 2022: *** Dauntless has quit IRC: Quit: Leaving
+Wed Jun 29 19:34:08 2022: QUIT: Client exiting: Dauntless!dauntless@pc4-kali-will-be-deleted.us (10.5.5.124) [Quit: Leaving]
+Wed Jun 29 19:34:09 2022: CONNECT: Client connecting on port 6667 (class main): Dauntless!dauntless@pc4-kali-will-be-deleted.us (10.5.5.124) [realname]
+Wed Jun 29 19:34:48 2022: *** Dauntless has joined #Dauntless_announcements
+Wed Jun 29 19:36:18 2022: #Dauntless_announcements: <Dauntless!dauntless@pc4-kali-will-be-deleted.us> 04Attention: General Quarters Drills will be taking place today  Stand by 
+Wed Jun 29 19:37:13 2022: *** Dauntless has quit IRC: Server shutdown
+Wed Jun 29 19:37:13 2022: QUIT: Client exiting: Dauntless!dauntless@pc4-kali-will-be-deleted.us (10.5.5.124) [Server shutdown]
+Wed Jun 29 19:37:13 2022: *** donnasmith has quit IRC: Server shutdown
+Wed Jun 29 19:37:13 2022: QUIT: Client exiting: donnasmith!donnasmith@10.5.5.151 (10.5.5.151) [Server shutdown]
+Wed Jun 29 19:37:13 2022: *** angelawilliams has quit IRC: Server shutdown
+Wed Jun 29 19:37:13 2022: QUIT: Client exiting: angelawilliams!angelawilli@10.5.5.152 (10.5.5.152) [Server shutdown]
+Wed Jun 29 19:37:13 2022: *** ryanknight has quit IRC: Server shutdown
+Wed Jun 29 19:37:13 2022: QUIT: Client exiting: ryanknight!ryanknight@10.5.5.153 (10.5.5.153) [Server shutdown]
+Wed Jun 29 19:37:13 2022: Module cmd_admin.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_away.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_clearcache.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_commands.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_connect.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_die.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_eline.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_gline.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_info.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_invite.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_ison.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_join.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_kick.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_kill.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_kline.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_links.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_list.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_loadmodule.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_lusers.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_map.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_mode.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_modenotice.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_modules.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_motd.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_names.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_nick.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_notice.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_oper.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_part.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_pass.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_ping.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_pong.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_privmsg.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_qline.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_quit.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_rehash.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_reloadmodule.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_restart.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_rules.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_server.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_squit.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_stats.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_time.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_topic.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_unloadmodule.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_user.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_userhost.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_version.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_wallops.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_who.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_whois.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_whowas.so unloaded
+Wed Jun 29 19:37:13 2022: Module cmd_zline.so unloaded
+Wed Jun 29 19:37:13 2022: Module m_alias.so unloaded
+Wed Jun 29 19:37:13 2022: Module m_auditorium.so unloaded
+Wed Jun 29 19:37:13 2022: Module m_chatlog.so unloaded
+Wed Jun 29 19:37:13 2022: Module m_md5.so unloaded
+Wed Jun 29 19:37:13 2022: Module m_password_hash.so unloaded
+Wed Jun 29 19:37:13 2022: Module m_permchannels.so unloaded
+Wed Jun 29 19:37:13 2022: Module m_ripemd160.so unloaded
+Wed Jun 29 19:37:13 2022: Module m_sha256.so unloaded
+Wed Jun 29 19:37:13 2022: Module m_spanningtree.so unloaded
+Wed Jun 29 19:37:14 2022: WARNING: <dns:server> not defined, attempting to find working server in /etc/resolv.conf...
+Wed Jun 29 19:37:14 2022: <dns:server> set to '127.0.0.53' as first resolver in /etc/resolv.conf.
+Wed Jun 29 19:37:14 2022: WARNING: <performance:softlimit> value of 12800 is not between 10 and 1024; set to 1024.
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_links.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_notice.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_ison.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_oper.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_stats.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_rules.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_server.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_part.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_quit.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_info.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_userhost.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_eline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_die.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_unloadmodule.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_squit.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_clearcache.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_admin.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_kline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_connect.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_kill.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_gline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_user.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_wallops.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_topic.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_who.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_pong.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_privmsg.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_names.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_join.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_invite.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_version.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_modenotice.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_nick.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_kick.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_qline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_whowas.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_time.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_zline.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_list.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_map.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_loadmodule.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_ping.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_away.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_commands.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_reloadmodule.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_modules.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_whois.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_rehash.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_pass.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_restart.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_lusers.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_mode.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: cmd_motd.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: m_md5.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: m_sha256.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: m_ripemd160.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: m_alias.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: m_auditorium.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: m_password_hash.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: m_permchannels.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: m_spanningtree.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: New module introduced: m_chatlog.so (Module version InspIRCd-2.0.25 r0)
+Wed Jun 29 19:37:14 2022: Startup complete as 'Dauntless.us'[560], 1024 max open sockets
+Wed Jun 29 19:37:24 2022: CONNECT: Client connecting on port 6667 (class main): Dauntless!dauntless@pc4-kali-will-be-deleted.us (10.5.5.124) [realname]
+Wed Jun 29 19:37:24 2022: *** Dauntless has joined #Dauntless_announcements
+Wed Jun 29 19:37:29 2022: CONNECT: Client connecting on port 6667 (class main): donnasmith!donnasmith@10.5.5.151 (10.5.5.151) [Donna Smith]
+Wed Jun 29 19:37:29 2022: CONNECT: Client connecting on port 6667 (class main): ryanknight!ryanknight@10.5.5.153 (10.5.5.153) [Ryan Knight]
+Wed Jun 29 19:37:29 2022: CONNECT: Client connecting on port 6667 (class main): angelawilliams!angelawilli@10.5.5.152 (10.5.5.152) [Angela Williams]
+Wed Jun 29 19:37:29 2022: *** ryanknight has joined #private_chat
+Wed Jun 29 19:37:29 2022: *** donnasmith has joined #private_chat
+Wed Jun 29 19:37:29 2022: *** ryanknight has joined #Dauntless_announcements
+Wed Jun 29 19:37:29 2022: *** donnasmith has joined #Dauntless_announcements
+Wed Jun 29 19:37:29 2022: *** angelawilliams has joined #private_chat
+Wed Jun 29 19:37:29 2022: *** angelawilliams has joined #Dauntless_announcements
+Wed Jun 29 19:42:42 2022: angelawilliams: <donnasmith!donnasmith@10.5.5.151> Can you send me the license key for that game that you gave me a few weeks ago? It randomly prompts me for a key in the middle of the game and it's pretty annoying.
+Wed Jun 29 19:45:37 2022: donnasmith: <angelawilliams!angelawilli@10.5.5.152> DCC SEND licensekey.jpg 168101272 57561 16
+Wed Jun 29 19:48:15 2022: #private_chat: <angelawilliams!angelawilli@10.5.5.152> hey guys! I've set up an ftp server at 10.5.5.160 user scrtftp pass: Km73pDXf
+Wed Jun 29 19:49:20 2022: #private_chat: <angelawilliams!angelawilli@10.5.5.152> I've added videos, music, and games
+Wed Jun 29 19:49:37 2022: #private_chat: <ryanknight!ryanknight@10.5.5.153> Sounds cool! I'll check it out!
+Wed Jun 29 19:50:42 2022: *** ryanknight has left #private_chat: "Leaving"
+Wed Jun 29 19:51:00 2022: *** ryanknight has joined #private
+Wed Jun 29 19:51:14 2022: #private_chat: <angelawilliams!angelawilli@10.5.5.152> check it out
+Wed Jun 29 19:51:25 2022: *** ryanknight has left #private: "Leaving"
+Wed Jun 29 19:56:14 2022: angelawilliams: <ryanknight!ryanknight@10.5.5.153> can you invite me again?
+Wed Jun 29 19:57:12 2022: *** angelawilliams has left #private_chat: "Leaving"
+Wed Jun 29 19:57:25 2022: *** donnasmith has left #private_chat: "Leaving"
+Wed Jun 29 19:58:18 2022: *** angelawilliams has joined #PrivateChat
+Wed Jun 29 19:59:04 2022: *** ryanknight has joined #PrivateChat
+Wed Jun 29 19:59:16 2022: *** donnasmith has joined #PrivateChat
+Wed Jun 29 19:59:26 2022: #PrivateChat: <angelawilliams!angelawilli@10.5.5.152> +s
+Wed Jun 29 20:00:30 2022: *** angelawilliams has joined #private_chat
+Wed Jun 29 20:00:39 2022: *** angelawilliams has left #PrivateChat: "Leaving"
+Wed Jun 29 20:01:04 2022: *** ryanknight has joined #private_chat
+Wed Jun 29 20:01:31 2022: *** donnasmith has joined #private_chat
+Wed Jun 29 20:02:26 2022: *** ryanknight has left #PrivateChat: "Leaving"
+Wed Jun 29 20:02:38 2022: #private_chat: <ryanknight!ryanknight@10.5.5.153> sorry I dropped out, I'll try that server out
+Wed Jun 29 20:03:55 2022: #private_chat: <angelawilliams!angelawilli@10.5.5.152> great, just keep it quiet.  
+Wed Jun 29 20:05:09 2022: #private_chat: <ryanknight!ryanknight@10.5.5.153> will do
+Wed Jun 29 20:08:26 2022: #private_chat: <angelawilliams!angelawilli@10.5.5.152> I forgot to tell you: the server is on port 32210, so make sure you use that
+Wed Jun 29 20:12:14 2022: *** ryanknight has quit IRC: Quit: Leaving
+Wed Jun 29 20:12:14 2022: QUIT: Client exiting: ryanknight!ryanknight@10.5.5.153 (10.5.5.153) [Quit: Leaving]
+Wed Jun 29 20:12:58 2022: CONNECT: Client connecting on port 6667 (class main): ryanknight!ryanknight@10.5.5.153 (10.5.5.153) [Ryan Knight]
+Wed Jun 29 20:13:07 2022: *** ryanknight has joined #private_chat
+Wed Jun 29 20:13:11 2022: *** ryanknight has joined #Dauntless_announcements
+Wed Jun 29 20:13:47 2022: #private_chat: <ryanknight!ryanknight@10.5.5.153> Had to log off for a second
+Wed Jun 29 20:22:23 2022: angelawilliams: <ryanknight!ryanknight@10.5.5.153> I downloaded that 2048 game that oyu put on the server.  It's so addictive.  So much for getting any work done this week.  Somethings strange though, it started displaving weird error messages in the background.  I deleted it from my machine just in case, AM I going to get in trouble with IT for this?
+Wed Jun 29 20:22:42 2022: ryanknight: <angelawilliams!angelawilli@10.5.5.152> No, I think it should be fine.
+Wed Jun 29 20:30:58 2022: *** donnasmith has quit IRC: Connection closed
+Wed Jun 29 20:30:58 2022: QUIT: Client exiting: donnasmith!donnasmith@10.5.5.151 (10.5.5.151) [Connection closed]
+Wed Jun 29 20:38:02 2022: #private_chat: <ryanknight!ryanknight@10.5.5.153> talk later guys
+Wed Jun 29 20:50:22 2022: *** angelawilliams has quit IRC: Quit: Leaving
+Wed Jun 29 20:50:22 2022: QUIT: Client exiting: angelawilliams!angelawilli@10.5.5.152 (10.5.5.152) [Quit: Leaving]
+Wed Jun 29 23:02:47 2022: *** ryanknight has quit IRC: Ping timeout: 121 seconds
+Wed Jun 29 23:02:47 2022: QUIT: Client exiting: ryanknight!ryanknight@10.5.5.153 (10.5.5.153) [Ping timeout: 121 seconds]
+Fri Jul  1 17:53:44 2022: WARNING: <dns:server> not defined, attempting to find working server in /etc/resolv.conf...
+Fri Jul  1 17:53:44 2022: <dns:server> set to '127.0.0.53' as first resolver in /etc/resolv.conf.
+Fri Jul  1 17:53:44 2022: WARNING: <performance:softlimit> value of 12800 is not between 10 and 1024; set to 1024.
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_links.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_notice.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_ison.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_oper.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_stats.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_rules.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_server.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_part.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_quit.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_info.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_userhost.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_eline.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_die.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_unloadmodule.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_squit.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_clearcache.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_admin.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_kline.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_connect.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_kill.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_gline.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_user.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_wallops.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_topic.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_who.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_pong.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_privmsg.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_names.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_join.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_invite.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_version.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_modenotice.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_nick.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_kick.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_qline.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_whowas.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_time.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_zline.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_list.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_map.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_loadmodule.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_ping.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_away.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_commands.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_reloadmodule.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_modules.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_whois.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_rehash.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_pass.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_restart.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_lusers.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_mode.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: cmd_motd.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: m_md5.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: m_sha256.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: m_ripemd160.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: m_alias.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: m_auditorium.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: m_password_hash.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: m_permchannels.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: m_spanningtree.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: New module introduced: m_chatlog.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 17:53:44 2022: Startup complete as 'Dauntless.us'[560], 1024 max open sockets
+Fri Jul  1 18:08:50 2022: Module cmd_admin.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_away.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_clearcache.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_commands.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_connect.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_die.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_eline.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_gline.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_info.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_invite.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_ison.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_join.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_kick.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_kill.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_kline.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_links.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_list.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_loadmodule.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_lusers.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_map.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_mode.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_modenotice.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_modules.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_motd.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_names.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_nick.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_notice.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_oper.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_part.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_pass.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_ping.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_pong.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_privmsg.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_qline.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_quit.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_rehash.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_reloadmodule.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_restart.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_rules.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_server.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_squit.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_stats.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_time.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_topic.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_unloadmodule.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_user.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_userhost.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_version.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_wallops.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_who.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_whois.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_whowas.so unloaded
+Fri Jul  1 18:08:50 2022: Module cmd_zline.so unloaded
+Fri Jul  1 18:08:50 2022: Module m_alias.so unloaded
+Fri Jul  1 18:08:50 2022: Module m_auditorium.so unloaded
+Fri Jul  1 18:08:50 2022: Module m_chatlog.so unloaded
+Fri Jul  1 18:08:50 2022: Module m_md5.so unloaded
+Fri Jul  1 18:08:50 2022: Module m_password_hash.so unloaded
+Fri Jul  1 18:08:50 2022: Module m_permchannels.so unloaded
+Fri Jul  1 18:08:50 2022: Module m_ripemd160.so unloaded
+Fri Jul  1 18:08:50 2022: Module m_sha256.so unloaded
+Fri Jul  1 18:08:50 2022: Module m_spanningtree.so unloaded
+Fri Jul  1 18:09:34 2022: WARNING: <dns:server> not defined, attempting to find working server in /etc/resolv.conf...
+Fri Jul  1 18:09:34 2022: <dns:server> set to '127.0.0.53' as first resolver in /etc/resolv.conf.
+Fri Jul  1 18:09:34 2022: WARNING: <performance:softlimit> value of 12800 is not between 10 and 1024; set to 1024.
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_links.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_notice.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_ison.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_oper.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_stats.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_rules.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_server.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_part.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_quit.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_info.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_userhost.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_eline.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_die.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_unloadmodule.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_squit.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_clearcache.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_admin.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_kline.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_connect.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_kill.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_gline.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_user.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_wallops.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_topic.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_who.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_pong.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_privmsg.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_names.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_join.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_invite.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_version.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_modenotice.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_nick.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_kick.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_qline.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_whowas.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_time.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_zline.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_list.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_map.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_loadmodule.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_ping.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_away.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_commands.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_reloadmodule.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_modules.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_whois.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_rehash.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_pass.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_restart.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_lusers.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_mode.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: cmd_motd.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: m_md5.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: m_sha256.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: m_ripemd160.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: m_alias.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: m_auditorium.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: m_password_hash.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: m_permchannels.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: m_spanningtree.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: New module introduced: m_chatlog.so (Module version InspIRCd-2.0.25 r0)
+Fri Jul  1 18:09:34 2022: Startup complete as 'Dauntless.us'[560], 1024 max open sockets
+Fri Jul  1 18:19:28 2022: CONNECT: Client connecting on port 6667 (class main): Dauntless!Dauntless@Dauntless-Main-Circuit.us (10.5.5.66) [realname]
+Fri Jul  1 18:20:14 2022: *** Dauntless has joined #Dauntless
+Fri Jul  1 18:20:39 2022: *** Dauntless has joined #Dauntless_Announcements
+Fri Jul  1 18:33:22 2022: CONNECT: Client connecting on port 6667 (class main): ryanknight!ryanknight@10.5.5.153 (10.5.5.153) [Ryan Knight]
+Fri Jul  1 18:34:13 2022: CONNECT: Client connecting on port 6667 (class main): donnasmith!donnasmith@10.5.5.151 (10.5.5.151) [Donna Smith]
+Fri Jul  1 18:34:28 2022: *** donnasmith has joined #Dauntless_Announcements
+Fri Jul  1 18:34:45 2022: *** ryanknight has joined #Dauntless_Announcements
+Fri Jul  1 18:35:01 2022: CONNECT: Client connecting on port 6667 (class main): angelawilliams!angelawilli@10.5.5.152 (10.5.5.152) [Angela Williams]
+Fri Jul  1 18:35:25 2022: *** angelawilliams has joined #Dauntless_Announcements
+Fri Jul  1 18:36:13 2022: #Dauntless_Announcements: <Dauntless!Dauntless@Dauntless-Main-Circuit.us> 04Attention All Crew: Departure imminent, head to your assigned duty stations.
+Fri Jul  1 18:37:29 2022: ryanknight: <donnasmith!donnasmith@10.5.5.151> Could you do me a favor?  I'd like to read your policy on easements, you should have received a copy of it at closing. 
+Fri Jul  1 18:37:46 2022: donnasmith: <ryanknight!ryanknight@10.5.5.153> Sure, I'll send it over shortly
+Fri Jul  1 18:38:00 2022: ryanknight: <donnasmith!donnasmith@10.5.5.151> Ok, thanks. I'll be waiting
+Fri Jul  1 18:38:39 2022: donnasmith: <ryanknight!ryanknight@10.5.5.153> DCC SEND "Easement and Right of Way Agreement.pdf" 199 0 1166315 81
+Fri Jul  1 18:39:05 2022: ryanknight: <donnasmith!donnasmith@10.5.5.151> DCC SEND "Easement and Right of Way Agreement.pdf" 168101271 57671 1166315 81
+Fri Jul  1 18:40:03 2022: ryanknight: <donnasmith!donnasmith@10.5.5.151> Thanks Ryan!
+Fri Jul  1 18:42:12 2022: *** angelawilliams has joined #Private_chat
+Fri Jul  1 18:45:11 2022: *** ryanknight has joined #Private_chat
+Fri Jul  1 18:46:06 2022: *** donnasmith has joined #Private_chat
+Fri Jul  1 18:46:25 2022: #Private_chat: <ryanknight!ryanknight@10.5.5.153> Hi Guys!
+Fri Jul  1 18:47:22 2022: #Private_chat: <angelawilliams!angelawilli@10.5.5.152> I made us this private channel so we can chat without using private messages.  It's invite only too
+Fri Jul  1 18:48:30 2022: #Dauntless_Announcements: <Dauntless!Dauntless@Dauntless-Main-Circuit.us> 03@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Fri Jul  1 18:49:49 2022: #Dauntless_Announcements: <Dauntless!Dauntless@Dauntless-Main-Circuit.us> 03** All Hands muster in your assigned locations for operations brief **
+Fri Jul  1 18:50:08 2022: #Dauntless_Announcements: <Dauntless!Dauntless@Dauntless-Main-Circuit.us> 03@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Fri Jul  1 18:50:29 2022: #Private_chat: <donnasmith!donnasmith@10.5.5.151> We Better go to the  briefing
+Fri Jul  1 18:52:22 2022: donnasmith: <angelawilliams!angelawilli@10.5.5.152> Donna, do you still need the curve shift document?
+Fri Jul  1 18:52:40 2022: angelawilliams: <donnasmith!donnasmith@10.5.5.151> Yes, can you attach the file?
+Fri Jul  1 18:56:18 2022: donnasmith: <angelawilliams!angelawilli@10.5.5.152> DCC SEND excusable-edition.xlsx 168101272 44215 1
+Fri Jul  1 18:57:31 2022: angelawilliams: <donnasmith!donnasmith@10.5.5.151> exactly what I need, thanks!
+Fri Jul  1 18:57:54 2022: donnasmith: <angelawilliams!angelawilli@10.5.5.152> Let me know if you need anything else.
+Fri Jul  1 19:07:00 2022: angelawilliams: <donnasmith!donnasmith@10.5.5.151> can you send me the license key for that application you gave me a few weeks ago?  It's popping up requesting to register.
+Fri Jul  1 19:07:18 2022: donnasmith: <angelawilliams!angelawilli@10.5.5.152> Sure, here it is
+Fri Jul  1 19:07:22 2022: donnasmith: <angelawilliams!angelawilli@10.5.5.152> DCC SEND licensekey.jpg 168101272 54371 66560
+Fri Jul  1 19:11:07 2022: #Private_chat: <angelawilliams!angelawilli@10.5.5.152> I wanted to give you two info for a secret file share I set up for us to use.  I've already added some music, movies and games.
+Fri Jul  1 19:11:35 2022: #Private_chat: <ryanknight!ryanknight@10.5.5.153> That sounds pretty cool, how do we use it?
+Fri Jul  1 19:13:57 2022: #Private_chat: <angelawilliams!angelawilli@10.5.5.152> It's an FTP service at 10.5.5.160.  I put it on port 32210 so it won't show up if they do a common port scan on the network.  Keep it quiet so we don't get caught.
+Fri Jul  1 19:14:10 2022: #Private_chat: <ryanknight!ryanknight@10.5.5.153> I can't wait to check it out
+Fri Jul  1 19:14:40 2022: #Private_chat: <angelawilliams!angelawilli@10.5.5.152> the username is scrtftp and password is Km73pDXf
+Fri Jul  1 19:14:52 2022: #Private_chat: <angelawilliams!angelawilli@10.5.5.152> Just make sure you delete these chat logs from your computers.
+Fri Jul  1 19:22:05 2022: angelawilliams: <ryanknight!ryanknight@10.5.5.153> Ang, I tried the 2048 game you had on the server, and I got some weird errors popping up.  I'm not going to get into trouble from IT will I?
+Fri Jul  1 19:23:15 2022: ryanknight: <angelawilliams!angelawilli@10.5.5.152> I wouldn't worry about it.
+Fri Jul  1 19:23:48 2022: #Dauntless_Announcements: <Dauntless!Dauntless@Dauntless-Main-Circuit.us> 04**********************************************************************
+Fri Jul  1 19:24:18 2022: #Dauntless_Announcements: <Dauntless!Dauntless@Dauntless-Main-Circuit.us> 04*  General Quarters drills will be held today.  Stand by. **
+Fri Jul  1 19:24:33 2022: #Dauntless_Announcements: <Dauntless!Dauntless@Dauntless-Main-Circuit.us> 04*******************************************************************
+Fri Jul  1 19:53:09 2022: *** Dauntless has quit IRC: Ping timeout: 121 seconds
+Fri Jul  1 19:53:09 2022: QUIT: Client exiting: Dauntless!Dauntless@Dauntless-Main-Circuit.us (10.5.5.66) [Ping timeout: 121 seconds]
+Tue Jul  5 15:28:54 2022: *** donnasmith has quit IRC: Quit: Leaving
+Tue Jul  5 15:28:54 2022: QUIT: Client exiting: donnasmith!donnasmith@10.5.5.151 (10.5.5.151) [Quit: Leaving]
+Tue Jul  5 15:41:09 2022: *** angelawilliams has quit IRC: Quit: Leaving
+Tue Jul  5 15:41:09 2022: QUIT: Client exiting: angelawilliams!angelawilli@10.5.5.152 (10.5.5.152) [Quit: Leaving]
+Wed Jul  6 18:30:40 2022: DEBUG: EH?! -- Time is jumping FORWARDS! Clock skipped 3 secs.
+Fri Oct 21 20:50:27 2022: WARNING: <dns:server> not defined, attempting to find working server in /etc/resolv.conf...
+Fri Oct 21 20:50:27 2022: <dns:server> set to '127.0.0.53' as first resolver in /etc/resolv.conf.
+Fri Oct 21 20:50:27 2022: WARNING: <performance:softlimit> value of 12800 is not between 10 and 1024; set to 1024.
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_links.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_notice.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_ison.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_oper.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_stats.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_rules.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_server.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_part.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_quit.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_info.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_userhost.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_eline.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_die.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_unloadmodule.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_squit.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_clearcache.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_admin.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_kline.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_connect.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_kill.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_gline.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_user.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_wallops.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_topic.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_who.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_pong.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_privmsg.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_names.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_join.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_invite.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_version.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_modenotice.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_nick.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_kick.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_qline.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_whowas.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_time.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_zline.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_list.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_map.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_loadmodule.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_ping.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_away.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_commands.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_reloadmodule.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_modules.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_whois.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_rehash.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_pass.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_restart.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_lusers.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_mode.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: cmd_motd.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: m_md5.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: m_sha256.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: m_ripemd160.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: m_alias.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: m_auditorium.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: m_password_hash.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: m_permchannels.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: m_spanningtree.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: New module introduced: m_chatlog.so (Module version InspIRCd-2.0.25 r0)
+Fri Oct 21 20:50:27 2022: Startup complete as 'Dauntless.us'[560], 1024 max open sockets

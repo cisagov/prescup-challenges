@@ -24,7 +24,11 @@ You will need to determine the exact IP/MAC address pairs of the FOBs in order t
 You may not see traffic for the first 5 minutes after deployment. This is normal. This delay provides teams the time to situate themselves on the network before traffic begins.
 ```
 
-### Main Objectives:
+## Getting started
+
+Please follow the instructions in the [challenge directory](./challenge) to setup before starting this challenge offline.
+
+## Main Objectives:
 
 - Discover the three(3) key FOB IP/MAC address pairs
 - Discover the three(3) door receiver MAC addresses

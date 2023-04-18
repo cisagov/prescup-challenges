@@ -10,6 +10,9 @@ Analyze a forensic image to investigate a service outage.
 
 - [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0532) - Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
 
+## ⚠️ Large Files ⚠️
+This challenge includes large files as a separate download. Please download [here](https://presidentscup.cisa.gov/files/pc4/team-round1-docking-ship-largefiles.zip) to get started. The zipped file is ~5GBs and the extracted artifact is ~15GBs.
+
 ## Background
 
 Mars relay satellites (spacecrafts and antennas) are not able to communicate with each other. There is a suspicion that the Deep Space Network might have been a victim of a cyber attack. We have forensically acquired a system from the Deep Space Network that runs their web stack. You're provided with that forensic image. Your goal is to analyze that forensic image to determine what might have happened. 

@@ -22,9 +22,25 @@ Scientists do not know much about the probe in question but have a few theories:
 
 - The probe must have some sort of interactive web service for administration, though we expect the language used to be some sort of universal language, like binary, which would need to be converted.
 - The probe obfuscates its running services and run honeypots in order to hide its data. Remote access is required to retrieve the data. Therefore, there must be ways to gain access.
-- The probe uses common networking prototcols and broadcasts a service similar to DHCP that provide an address to your systems while on the same network.
+- The probe uses common networking protocols and broadcasts a service similar to DHCP that provide an address to your systems while on the same network.
 - The probe contains encrypted messages sent and received by the Vigil. The Vigil seem to prefer the AES 256-bit CBC algorithm. Look for messages specifically containing the "VIGIL" marker to tag them for further analysis.
 - The probe moves in an Archimedes spiral; its position can be calculated as `X = r x COS(Θ)`, `Y = r x SIN(Θ)`, and its movement is determined by the equation `r = a x Θ`, where the radius is measured in AU and Θ is measured in radians. 
+
+## Getting Started
+
+See the contents of the [challenge directory](./challenge) to retrieve the challenges files, which include:
+ * [Probe Enumeration Files](./challenge/Probe-Enumeration)
+    * [ifconfig-output.txt](./challenge/Probe-Enumberation/ifconfig-output.txt) - Winnie's ifconfig output
+    * [nmap-output.txt](./challenge/Probe-Enumeration/nmap-output.txt) - Nmap results of a network ping scan and target port scan
+    * [nikto-output.txt](./challenge/Probe-Enumeration/nikto-output.txt) Nikto output after scanning the probe's website
+ * [Web Files](./challenge/Web)
+    * [Probe-Website-Screenshot.png](./challenge/Web/Probe-Website-Screenshot.png) - a screenshot of the hidden web page
+    * [cl@nd3st1n3.html](./challenge/Web/cland3st1n3.html) a copy of the hidden web page's text 
+ * [SSH Files](./challenge/SSH)
+    * [encrypted-zip-files.zip](./challenge/SSH/encrypted-zip-files.zip) - a collection of zip files recovered from the probe 
+ * [FTP Files](./challenge/FTP)
+    * Nine (9) image files recovered from the probe
+ * [scan-capture.pcapng](./challenge/scan-capture.pcapng) - a packet capture of the probe's scan traffic
 
 ## Main Objectives
 
@@ -62,6 +78,9 @@ Understand where the probe has been and use this data to predict where it is hea
 Parts of this challenge will rely heavily on scripting to make the tasks easier and quicker.
 
 The questions will guide your analysis and provide further hints as to what to look for.
+
+## Submission Format
+The offline version of this challenge uses the answers provided with the questions below.
 
 ## Challenge Questions
 

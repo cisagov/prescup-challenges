@@ -13,6 +13,11 @@ Recover concealed information from a streamed video and exploit the target.
 - [T0240](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0240) - Capture and analyze network traffic associated with malicious activities using network monitoring tools.
 - [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0028) - Conduct and/or support authorized penetration testing on enterprise network assets.
 
+## IMPORTANT
+
+This challenge only partially open sourced. The files in the [challenge directory](./challenge) are provided to give you a starting point if you wish to recreate the challenge on your own. The files provided will allow you to solve Question 1.  Question 2 required a specific virtual machine setup. The full version of the challenge can be played on the hosted site.
+
+Before getting started, extract the pcap from [cant-you-hear-me-knocking.zip](./challenge/cant-you-hear-me-knocking.zip).
 
 ## Getting Started
 

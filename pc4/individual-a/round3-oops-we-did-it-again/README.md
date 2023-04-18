@@ -17,7 +17,13 @@ Investigate network traffic to trace activity, analyze and remove malware, apply
 
 Investigate malware on a compromised system on *Dauntless*. All relevant data has been made available in-game at: `http://challenge.us/files`. Please be patient; it may take a few minutes before the site is available.
 
+## ⚠️ Large Files ⚠️
+
+This challenge includes large files as a separate download. Please [download the required pcap file](https://presidentscup.cisa.gov/files/pc4/individuala-round3-oops-we-did-it-again-largefiles.zip) to get started. The zipped file is ~203MBs and the extracted pcap is ~222MBs.
+
 ## Getting Started
+
+_Note: Please follow the instructions in the [challenge directory](./challenge) before starting this challenge offline._
 
 The compromised system has been moved to a semi-isolated network for analysis with an IP address of `64.100.100.100/2`.
 

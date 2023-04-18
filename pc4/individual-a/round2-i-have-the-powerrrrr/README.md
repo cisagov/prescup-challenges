@@ -12,6 +12,9 @@ Investigate and remedy a cyber defense incident.
 
 - [T0278](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0278) Collect intrusion artifacts (e.g., source code, malware, Trojans) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
+## IMPORTANT
+
+This challenge does not have any downloadable artifacts. The full challenge can be completed on the hosted site.
 
 ## Getting Started
 

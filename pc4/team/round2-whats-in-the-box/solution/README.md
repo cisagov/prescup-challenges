@@ -4,26 +4,26 @@ _Solution Guide_
 
 ## Overview
 
-For this challenge, five tasks need to be completed to get all points available. These tasks revolve around gaining information from the five obfuscated scripts given to the user and then using information to either gain access to an external resource or determine what file is being exfiltrated. The walk-through is organized by question. 
+Five tasks need to be completed to solve _What's in the Box_. These tasks require the competitor to gain information from the five obfuscated scripts given, use the information to access an external resource or determine what file is being exfiltrated. This solution guide is organized by question. 
 
 ## Question 1
 
 _What is the token found by connecting to the service used by script1?_
 
-This script creates a new user and then sends an encrypted message that contains these credentials. These are the steps that one can use to solve this.
+This script creates a new user and then sends an encrypted message that contains credentials. These are the steps that you can follow to solve this part.
 
-1. Begin by executing the script, you will get back a string of what seems like garbled characters. If you look, you will see that the string's basic structure - including spaces, periods, and other special characters - has stayed intact.
-2. Execute it again. You will get another string that looks similar to the previous one but it is slightly altered. Look closely. You can see there vowels/common letters still in the string. These aspects of the cipher text hint that a transpositional cipher is being used. The only thing left to find is the key that is needed to revert these strings back to normal.
-3. Look at the /etc/passwd file. Two new users were added with the previous two executions.
-4. Just to verify this, execute it once more. You will then find a new user has been added in the /etc/passwd file.
-5. Try decrypting the string returned on the last execution with the username of the user who was added during that same execution. Chances are, some users will use the site `https://www.dcode.fr/transposition-cipher` to get a better understanding of how a transpositonal cipher works. 
-    - Be warned if you do decrypt the string using the site, you will still need to edit it to get it into the correct format. 
+1. Begin by executing the script. You will get back a string of what seems like garbled characters. If you look, you will see that the string's basic structure -- including spaces, periods, and other special characters -- has stayed intact.
+2. Execute it again. You will get another string that looks similar to the previous one, but it is slightly altered. Look closely. You can see there vowels and common letters still in the string. These aspects of the cipher text hint that a transposition cipher is being used. The only thing left to find is the key that is needed to revert these strings back to normal.
+3. Look at the **/etc/passwd** file. Two new users were added with the previous two executions.
+4. Just to verify this, execute it once more. You will then find a new user has been added in the **/etc/passwd** file.
+5. Try decrypting the string returned on the last execution with the username of the user who was added during that same execution. Chances are, some users will use the site `https://www.dcode.fr/transposition-cipher` to get a better understanding of how a transposition cipher works. 
+    - Be warned! If you do decrypt the string using the site, you will still need to edit it to get it into the correct format. 
     - The site will output the string in all capitals, which is incorrect; the password is case sensitive and needs to match the case used in the cipher text.
     - The site may remove some special characters in the cipher string that are required in order to get the correct password.
 6. If you want to verify that it is correct via `https://www.dcode.fr/transposition-cipher`, follow these steps.
-    - Remove all instances of spaces, commas, and colons from the cipher string. (' ' and ',' and ':' ). If you run `script1.py` multiple times, you will see that these characters are the only ones always in the same place. That means they are not factored in when the text is being shifted/encrypted.
+    - Remove all instances of spaces, commas, and colons from the cipher string (' ' and ',' and ':' ). If you run `script1.py` multiple times, you will see that these characters are the only ones always in the same place. That means they are not factored in when the text is being shifted/encrypted.
     - Take this new string and enter it in the decrypt section of the site.
-    - Click the checkbox enabling the setting `Keep spaces, puncuatuation and other characters`.
+    - Click the checkbox enabling the setting `Keep spaces, punctuation and other characters`.
     - Click `Decrypt` and you will get the decoded plain text. Below is an example of how it should look when ran correctly. The username/key for this example is `hector` while the password found is `PaR1ayY!!`.
     - <img src="img/dcodeExample.PNG">
 7. If you attempt to do it yourself, the script `decrypt.py` gives the plain text of the string if the cipher text and key are written into it. Once you get the plain text, you will see the creds of the new user. It also states that the password of this user matches the password used for user `jack`. This is a hint that you can now use these creds to SSH into ext.
@@ -37,7 +37,7 @@ This script deals with running commands locally and storing the output of it on 
 
 1. Begin by executing it. You will get output that it is running commands and the results have been stored.
 2. If you watch Wireshark while it is running, you will see that a transfer occurred. Assume that data was sent out to another host.
-3. If you continue testing the script, you will find that cmds can be passed as arguments which are sent to the external host. The results will be returned.
+3. If you continue testing the script, you will find that commands can be passed as arguments which are sent to the external host. The results will be returned.
 4. You can test it by running this command:
     - `Python3 script2.py ‘ls -l’`
     Which will then return to you the listing of files in the directory of the host this script connects too

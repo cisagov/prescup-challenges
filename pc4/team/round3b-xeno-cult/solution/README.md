@@ -6,9 +6,9 @@ _Solution Guide_
 
 The Aurellian security forces have been sending out probes to search for the hidden base of a cult of ancient alien worshippers; however, the cultists jam their probes as they travel, preventing them from reporting their location. The Aurellian security provides your team access to some files so that your team can attempt to find the hidden base. Your team must discover coordinates to their location.
 
-Coordinates consist of 2 sets of 3 case insensitive alphanumeric characters. (i.e 123/abc, a2n/3ib)
+Coordinates consist of two (2) sets of three (3) case insensitive alphanumeric characters. (i.e., **123/abc**, **a2n/3ib**)
 
-In this directory you will find the [client](flight(client).py) and [server](multiconn-(server).py) python scripts used to generate this data. DO NOT SHARE WITH COMPETITORS. The flight(client).py was executed with `flight(client).py > internal_logs.txt` to show all locations of ships and probes (with jamming details). Again, these should not be shared with competitors. [internal_logs.txt](internal_logs.txt)
+In this directory you will find the [client](flight(client).py) and [server](multiconn-(server).py) python scripts used to generate this data. DO NOT SHARE WITH COMPETITORS. The flight(client).py was executed with `flight(client).py > internal_logs.txt` to show all locations of ships and probes (with jamming details). Again, these should not be shared with competitors. Click [here](internal_logs.txt) for the `internal_logs.txt` file.
 
 ## Question 1
 
@@ -47,17 +47,17 @@ Challengers notice the server echos the payload back to the server after recepti
 6. Save a backup.
 `cp pcap.txt pcap.txt.bak`
 
-7. Add new line before each probe to interpret the data similiar to probelocations.txt.
+7. Add new line before each probe to interpret the data similar to `probelocations.txt`.
 `sed -i 's/probe/\nprobe/g' pcap.txt`
 
 8. Sort pcap.txt.
 `sort pcap.txt > sorted-pcap.txt`
 
-9. Remove the epoch time and sort probelocations.txt and save as sorted-probes.txt.
+9. Remove the epoch time and sort `probelocations.txt` and save as sorted-probes.txt.
 `cut -d ":" -f2 probelocations.txt | sort > sorted-probes.txt`
 
 10. Identify the number of times each probe was seen in the pcap and how many times it should have been seen based on the sorted-probes.txt.
-`for i in {1..20000}; do echo -n "probe_"$i":" >> probes-results.txt && grep "probe_"$i" " sorted-probes.txt | wc -l >> probes-results.txt; done` and while the previous commmand is running, open another terminal and run the command
+`for i in {1..20000}; do echo -n "probe_"$i":" >> probes-results.txt && grep "probe_"$i" " sorted-probes.txt | wc -l >> probes-results.txt; done` and while the previous command is running, open another terminal and run the command
 `for i in {1..20000}; do echo -n "probe_"$i":" >> pcap-results.txt && grep "probe_"$i" " sorted-pcap.txt | wc -l >> pcap-results.txt; done`
 
 11. Find the difference between the files to see what pcap requests were jammed.

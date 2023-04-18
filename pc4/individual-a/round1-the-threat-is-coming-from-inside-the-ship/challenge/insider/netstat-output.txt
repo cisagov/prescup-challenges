@@ -1,0 +1,154 @@
+Netid   State    Recv-Q   Send-Q                                  Local Address:Port                             Peer Address:Port            Process           
+nl      UNCONN   0        0                                                   0:1186                                         *                                  
+nl      UNCONN   0        0                                                   0:572                                          *                                  
+nl      UNCONN   0        0                                                   0:559                                          *                                  
+nl      UNCONN   0        0                                                   0:0                                            *                                  
+nl      UNCONN   0        0                                                   0:519                                          *                                  
+nl      UNCONN   0        0                                                   0:1544                                         *                                  
+nl      UNCONN   0        0                                                   0:818                                          *                                  
+nl      UNCONN   0        0                                                   0:921                                          *                                  
+nl      UNCONN   0        0                                                   0:1170                                         *                                  
+nl      UNCONN   0        0                                                   0:1195                                         *                                  
+nl      UNCONN   0        0                                                   0:1544                                         *                                  
+nl      UNCONN   0        0                                                   0:1195                                         *                                  
+nl      UNCONN   0        0                                                   0:1186                                         *                                  
+nl      UNCONN   0        0                                                   0:1170                                         *                                  
+nl      UNCONN   0        0                                                   0:921                                          *                                  
+nl      UNCONN   0        0                                                   0:818                                          *                                  
+nl      UNCONN   0        0                                                   0:572                                          *                                  
+nl      UNCONN   0        0                                                   0:559                                          *                                  
+nl      UNCONN   0        0                                                   0:519                                          *                                  
+nl      UNCONN   768      0                                                   4:0                                            *                                  
+nl      UNCONN   4352     0                                                   4:1784                                         *                                  
+nl      UNCONN   0        0                                                   7:0                                            *                                  
+nl      UNCONN   0        0                                                   9:1783                                         *                                  
+nl      UNCONN   0        0                                                   9:564                                          *                                  
+nl      UNCONN   0        0                                                   9:-1960130591                                  *                                  
+nl      UNCONN   0        0                                                   9:0                                            *                                  
+nl      UNCONN   0        0                                                   9:781                                          *                                  
+nl      UNCONN   0        0                                                   9:1                                            *                                  
+nl      UNCONN   0        0                                                   9:1                                            *                                  
+nl      UNCONN   0        0                                                  10:0                                            *                                  
+nl      UNCONN   0        0                                                  11:0                                            *                                  
+nl      UNCONN   0        0                                                  15:-1041844058                                  *                                  
+nl      UNCONN   0        0                                                  15:1400                                         *                                  
+nl      UNCONN   0        0                                                  15:609                                          *                                  
+nl      UNCONN   0        0                                                  15:606                                          *                                  
+nl      UNCONN   0        0                                                  15:1231                                         *                                  
+nl      UNCONN   0        0                                                  15:-1324871287                                  *                                  
+nl      UNCONN   0        0                                                  15:941                                          *                                  
+nl      UNCONN   0        0                                                  15:-129085040                                   *                                  
+nl      UNCONN   0        0                                                  15:-268065867                                   *                                  
+nl      UNCONN   0        0                                                  15:596                                          *                                  
+nl      UNCONN   0        0                                                  15:1560                                         *                                  
+nl      UNCONN   0        0                                                  15:744                                          *                                  
+nl      UNCONN   0        0                                                  15:-1350883363                                  *  
+nl      UNCONN   0        0                                                  15:572                                          *                                  
+nl      UNCONN   0        0                                                  15:-625407571                                   *                                  
+nl      UNCONN   0        0                                                  15:876                                          *                                  
+nl      UNCONN   0        0                                                  15:1                                            *                                  
+nl      UNCONN   0        0                                                  15:0                                            *                                  
+nl      UNCONN   0        0                                                  15:838                                          *                                  
+nl      UNCONN   0        0                                                  15:951                                          *                                  
+nl      UNCONN   0        0                                                  15:-1468393324                                  *                                  
+nl      UNCONN   0        0                                                  15:600                                          *                                  
+nl      UNCONN   0        0                                                  15:-959115498                                   *                                  
+nl      UNCONN   0        0                                                  15:847                                          *                                  
+nl      UNCONN   0        0                                                  15:1097                                         *                                  
+nl      UNCONN   0        0                                                  15:-1849892825                                  *                                  
+nl      UNCONN   0        0                                                  15:-1686195984                                  *                                  
+nl      UNCONN   0        0                                                  15:-74116698                                    *                                  
+nl      UNCONN   0        0                                                  15:-212186244                                   *                                  
+nl      UNCONN   0        0                                                  15:596                                          *                                  
+nl      UNCONN   0        0                                                  15:-1324871287                                  *                                  
+nl      UNCONN   0        0                                                  15:1560                                         *                                  
+nl      UNCONN   0        0                                                  15:-1849892825                                  *                                  
+nl      UNCONN   0        0                                                  15:-268065867                                   *                                  
+nl      UNCONN   0        0                                                  15:-625407571                                   *                                  
+nl      UNCONN   0        0                                                  15:1400                                         *                                  
+nl      UNCONN   0        0                                                  15:1231                                         *                                  
+nl      UNCONN   0        0                                                  15:-74116698                                    *                                  
+nl      UNCONN   0        0                                                  15:1097                                         *                                  
+nl      UNCONN   0        0                                                  15:951                                          *                                  
+nl      UNCONN   0        0                                                  15:946                                          *                                  
+nl      UNCONN   0        0                                                  15:941                                          *                                  
+nl      UNCONN   0        0                                                  15:-1468393324                                  *                                  
+nl      UNCONN   0        0                                                  15:847                                          *                                  
+nl      UNCONN   0        0                                                  15:876                                          *                                  
+nl      UNCONN   0        0                                                  15:838                                          *                                  
+nl      UNCONN   0        0                                                  15:744                                          *                                  
+nl      UNCONN   0        0                                                  15:-212186244                                   *                                  
+nl      UNCONN   0        0                                                  15:-1686195984                                  *                                  
+nl      UNCONN   0        0                                                  15:609                                          *                                  
+nl      UNCONN   0        0                                                  15:572                                          *                                  
+nl      UNCONN   0        0                                                  15:-1350883363                                  *                                  
+nl      UNCONN   0        0                                                  15:-129085040                                   *                                  
+nl      UNCONN   0        0                                                  15:-959115498                                   *                                  
+nl      UNCONN   0        0                                                  15:606                                          *                                  
+nl      UNCONN   0        0                                                  15:600                                          *                                  
+nl      UNCONN   0        0                                                  15:-1041844058                                  *                                  
+nl      UNCONN   0        0                                                  15:1                                            *     nl      UNCONN   0        0                                                  16:572                                          *                                  
+nl      UNCONN   0        0                                                  16:556                                          *                                  
+nl      UNCONN   0        0                                                  16:0                                            *                                  
+nl      UNCONN   0        0                                                  16:556                                          *                                  
+nl      UNCONN   0        0                                                  18:0                                            *                                  
+p_dgr   UNCONN   0        0                                              [2054]:ens32                                        *                                  
+u_dgr   UNCONN   0        0                         /run/systemd/journal/syslog 16414                                       * 0                                 
+u_str   LISTEN   0        4096                       /run/systemd/fsck.progress 16416                                       * 0                                 
+u_dgr   UNCONN   0        0                        /run/systemd/journal/dev-log 16424                                       * 0                                 
+u_str   LISTEN   0        4096                      /run/systemd/journal/stdout 16426                                       * 0                                 
+u_dgr   UNCONN   0        0                         /run/systemd/journal/socket 16428                                       * 0                                 
+u_seq   LISTEN   0        4096                                /run/udev/control 16430                                       * 0                                 
+u_dgr   UNCONN   0        0                       /run/user/1000/systemd/notify 27401                                       * 0                                 
+u_str   LISTEN   0        4096                   /run/user/1000/systemd/private 27404                                       * 0                                 
+u_str   LISTEN   0        4096                               /run/user/1000/bus 28028                                       * 0                                 
+u_str   LISTEN   0        4096                   /run/user/1000/gnupg/S.dirmngr 28029                                       * 0                                 
+u_str   LISTEN   0        128                   /tmp/ssh-nzMw3DDPL9xW/agent.962 29784                                       * 0                                 
+u_str   LISTEN   0        4096         /run/user/1000/gnupg/S.gpg-agent.browser 28030                                       * 0                                 
+u_str   LISTEN   0        4096           /run/user/1000/gnupg/S.gpg-agent.extra 28031                                       * 0                                 
+u_str   LISTEN   0        4096             /run/user/1000/gnupg/S.gpg-agent.ssh 28032                                       * 0                                 
+u_str   LISTEN   0        4096                 /run/user/1000/gnupg/S.gpg-agent 28033                                       * 0                                 
+u_str   LISTEN   0        128                               /tmp/.ICE-unix/1083 29543                                       * 0                                 
+u_str   LISTEN   0        4096                 /run/user/1000/pk-debconf-socket 27411                                       * 0                                 
+u_str   LISTEN   0        4096          /run/systemd/journal/io.systemd.journal 16667                                       * 0                                 
+u_str   LISTEN   0        5                         /run/user/1000/pulse/native 27412                                       * 0                                 
+u_str   LISTEN   0        4096        /run/user/1000/snapd-session-agent.socket 27413                                       * 0                                 
+u_str   LISTEN   0        128                              @/tmp/.ICE-unix/1083 29542                                       * 0                                 
+u_str   LISTEN   0        128                    /run/user/1000/keyring/control 28179                                       * 0                                 
+u_str   LISTEN   0        4096                               @/tmp/.X11-unix/X0 28456                                       * 0                                 
+u_str   LISTEN   0        10                                @/tmp/dbus-TLryhdtX 28186                                       * 0                                 
+u_str   LISTEN   0        128                     /run/user/1000/keyring/pkcs11 29991                                       * 0                                 
+u_str   LISTEN   0        10                         /run/user/1000/keyring/ssh 29571                                       * 0                                 
+u_str   LISTEN   0        10                                @/tmp/dbus-diWdK2hp 28185                                       * 0                                 
+u_str   LISTEN   0        10              @/home/user/.cache/ibus/dbus-fG7QqPOI 29637                                       * 0                                 
+u_str   LISTEN   0        10                                @/tmp/dbus-eUCY3hvt 26105                                       * 0                                 
+u_str   LISTEN   0        4096                                /run/acpid.socket 21882                                       * 0                                 
+u_str   LISTEN   0        4096                         /run/avahi-daemon/socket 21884                                       * 0                                 
+u_str   LISTEN   0        4096                              /run/cups/cups.sock 21886                                       * 0                                 
+u_str   LISTEN   0        4096                            @/tmp/dbus-DbnVFdxvJR 29292                                       * 0                                 
+u_str   LISTEN   0        4096                      /run/dbus/system_bus_socket 21888                                       * 0                                 
+u_str   LISTEN   0        4096                                /run/snapd.socket 21890                                       * 0                                 
+u_str   LISTEN   0        4096                           /run/snapd-snap.socket 21892                                       * 0                                 
+u_str   LISTEN   0        4096                               /run/uuidd/request 21894                                       * 0                                 
+u_str   LISTEN   0        10                                @/tmp/dbus-kPfe9OGo 26106                                       * 0                                 
+u_str   LISTEN   0        32                   /var/run/vmware/guestServicePipe 21223                                       * 0  
+u_str   LISTEN   0        1                 /run/irqbalance//irqbalance579.sock 22727                                       * 0                                 
+u_dgr   UNCONN   0        0                                 /run/systemd/notify 16400                                       * 0                                 
+u_str   LISTEN   0        4096                                /tmp/.X11-unix/X0 28457                                       * 0                                 
+u_str   LISTEN   0        4096                             /run/systemd/private 16403                                       * 0                                 
+u_str   LISTEN   0        4096       /run/systemd/userdb/io.systemd.DynamicUser 16405                                       * 0                                 
+icmp6   UNCONN   0        0                                                   *:58                                          *:*                                 
+udp     UNCONN   0        0                                             0.0.0.0:35961                                 0.0.0.0:*                                 
+udp     UNCONN   0        0                                             0.0.0.0:5353                                  0.0.0.0:*                                 
+udp     UNCONN   0        0                                       127.0.0.53%lo:53                                    0.0.0.0:*                                 
+udp     UNCONN   0        0                                             0.0.0.0:631                                   0.0.0.0:*                                 
+udp     UNCONN   0        0                                                [::]:5353                                     [::]:*                                 
+udp     UNCONN   0        0                                                [::]:38389                                    [::]:*                                 
+tcp     LISTEN   0        1                                             0.0.0.0:443                                   0.0.0.0:*                                 
+tcp     LISTEN   0        1                                             0.0.0.0:8080                                  0.0.0.0:*                                 
+tcp     LISTEN   0        4096                                    127.0.0.53%lo:53                                    0.0.0.0:*                                 
+tcp     LISTEN   0        5                                           127.0.0.1:631                                   0.0.0.0:*                                 
+tcp     LISTEN   0        5                                               [::1]:631                                      [::]:*                                 
+v_str   ESTAB    0        0                                          1351987182:1023                                        0:976                               
+v_str   ESTAB    0        0                                          1351987182:2572239888                                  0:976        
+

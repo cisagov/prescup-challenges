@@ -4,26 +4,28 @@ _Solution Guide_
 
 ## Overview
 
-This is an infinity-style challenge. This solution guide covers the walk-through and is organized by submission question.
+_The Party Line_ is an infinity-style challenge—a random solution is generated during challenge deployment. This solution guide covers the walk-through and is organized by submission question.
 
 ### Answer Quick Reference
 
 The correct answers for questions with static answers are provided here for your convenience.
 
 1. `Angela Williams`
-2. `This value is randomly generated`
+2. This value is randomly generated.
 3. `Ryan Knight`
-4. `This value is randomly generated`
-5. `This value is randomly generated`
-6. `This value is randomly generated`
+4. This value is randomly generated.
+5. This value is randomly generated.
+6. This value is randomly generated.
 
 ## Question 1
 
 _What is the first and last name of the user that attempted shell access to the enterprise-server (10.5.5.160)?_
 
-You will need to check the .bash_history file for the **awilliams** account to find the attempted ssh access.  
+You will need to check the `.bash_history` file for the **awilliams** account to find the attempted ssh access.  
 
-You can find the answer to this question by logging into the awilliams machine with the "user" account and searching the bash history file located at: `/home/angelawilliams/.bash_history`. You will see this line: `ssh user@10.5.5.160`, which indicates an attempt at shell access. The answer to the questions is Angela Williams.
+You can find the answer to this question by logging into the **awilliams** system with the "user" account and searching the bash history file located at: `/home/angelawilliams/.bash_history`.
+
+You will see this line: `ssh user@10.5.5.160`, which indicates an attempt at shell access. The answer to the questions is Angela Williams.
 
 <img src="img/c26-image1.png">
 
@@ -31,16 +33,15 @@ You can find the answer to this question by logging into the awilliams machine w
 
 _What is the password of the "user" account on the enterprise-server?_
 
-You need to find the share.zip file then crack the zip.hashes file with the help of the provided wordlist.txt file.  
+You need to find the **share.zip** file then crack the **zip.hashes** file with the help of the provided wordlist.txt file.  
 
 1. The first step is to login to **rknight's Desktop** with the "user" account and find the deleted chat log file in Ryan Knight's trash. The location of the file is: `/home/ryanknight/.local/share/Trash/files`.
 
-1. After opening the chat log file you will find a hint when Angela Williams mentions that she installed an unauthorized FTP server on 10.5.5.160:32210. 
-
+2. After opening the chat log file you will find a hint when Angela Williams mentions that she installed an unauthorized FTP server on `10.5.5.160:32210`. 
 
 <img src="img/c26-image2.png">
 
-3. This should prompt challengers to try logging into the server to investigate the FTP server's contents and logs. At this point they will realize they don't have the password for this machine. In order to login to the machine where the FTP server is hosted (10.5.5.160) you will need to get the password for the local "user" account. This password was changed by Angela Williams. In order locate the password you must login to the **awilliams** machine with the "user" account and find the `/home/angelawilliams/Documents/share.zip` file. It is a password protected zip file that can be cracked using the word list provided in the IS0 on the Kali machine.
+3. This should prompt challengers to try logging into the server to investigate the FTP server's contents and logs. At this point they will realize they don't have the password for this machine. In order to login to the machine where the FTP server is hosted (10.5.5.160) you will need to get the password for the local "user" account. This password was changed by Angela Williams. To locate the password you must login to the **awilliams** machine with the "user" account and find the `/home/angelawilliams/Documents/share.zip` file. It is a password protected zip file that can be cracked using the word list provided in the ISO on the Kali machine.
 
 <img src="img/c26-image3.png">
 
@@ -52,8 +53,11 @@ Another option is to move the file via **scp** from the host machine to the Kali
 5. Using John the Ripper, collect hashes from the zip file by running: `zip2john share.zip > zip.hashes`. Using the provided wordlist.txt, crack the zip.hashes file by running: `john --wordlist=/media/cdrom0/wordlist.txt zip.hashes`.
 
 <img src="img/c26-image5.png">
+
 <img src="img/c26-image6.png">
+
 <img src="img/c26-image7.png">
+
 <img src="img/c26-image8.png">
 
 > **Note:** After gaining access to the enterprise-server many challengers will probably find it helpful to review the server's IRC logs. While other machines do contain various useful logs, it is not a complete picture since some of the users have intentionally deleted some of the logs from their local profile folders. The IRC logs can be found here: **/home/inspircd/run/logs**.
@@ -80,7 +84,11 @@ _What is the value written after the text "License Key: " that is visible in the
 
 You need to retrieve the value of the license key by finding the image in Donna Smith's Downloads directory.  
 
-In one of the chat logs on the **dsmith** machine Donna Smith asks Angela Williams for a license key for a piece of software that was previously downloaded. Angela replies saying the file was sent. This file is an image named **licensekey.jpg** and is located on the dsmith machine. Challengers can login with the "user" account and look in the `/home/donnasmith/Downloads` directory. The answer is an eight character hexadecimal value that is written after the **License Key:** text in the image.
+In one of the chat logs on the **dsmith** machine Donna Smith asks Angela Williams for a license key for a piece of software that was previously downloaded. Angela replies saying the file was sent. This file is an image named **licensekey.jpg** and is located on the dsmith machine. 
+
+<img src="img/c26-image23.png">
+
+Challengers can login with the "user" account and look in the `/home/donnasmith/Downloads` directory. The answer is an eight character hexadecimal value that is written after the **License Key:** text in the image.
 
 <img src="img/c26-image11.png">
 
@@ -102,9 +110,12 @@ Users must capture network traffic generated by the 2048 game and find the value
 
 <img src="img/c26-image14.png">
 
-4. Launch the 2048 game and begin playing. After roughly 30 seconds challengers will see HTTP requests. Notice that some GET requests are successful and others appear to be failing. After making a successful GET request to **dauntless.us** the game will POST a value. The token value included in the body of the POST contains the answer in an encrypted string.
+4. Launch the 2048 game and begin playing.
 
 <img src="img/c26-image15.png">
+
+After roughly 30 seconds challengers will see HTTP requests. Notice that some GET requests are successful and others appear to be failing. After making a successful GET request to **dauntless.us** the game will POST a value. The token value included in the body of the POST contains the answer in an encrypted string.
+
 <img src="img/c26-image16.png">
 
 5. Challengers will find the information they need to decrypt the token by opening the **appsettings.json** file that is included in the 2048Game.zip file. The configuration file for the application contains settings that provide hints as to the encryption type used to hide the token. A lucky guess by a challenger or a little experience would allow them to skip capturing the encrypted token in Wireshark and grab the value directly from the **data.txt** file.
@@ -126,5 +137,7 @@ For the final token, challengers must disable the FTP server so it is not access
 Once the appropriate changes have been made, browse to: http://challenge.us and click Grade Challenge.
 
 <img src="img/c26-image20.png">
+
 <img src="img/c26-image21.png">
+
 <img src="img/c26-image22.png">

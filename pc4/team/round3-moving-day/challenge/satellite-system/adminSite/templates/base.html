@@ -1,0 +1,151 @@
+<!--
+Copyright 2023 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="description" content="">
+<style>
+    /*Style for coordinates*/
+    body {
+    align-items: center;
+    background-color: darkgoldenrod;
+    color:black;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    }
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    html,
+    body {
+    height: 100%;
+    margin: 0;
+    }
+    .container {
+    color:black;
+    margin: 0 auto;
+    text-align: center;
+    left:50%;
+    }
+    h1 {
+    font-weight: normal;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    }
+    .azu li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+    }
+    .azu li span {
+    display: block;
+    font-size: 4.5rem;
+    }
+    .azu .message {
+    font-size: 4rem;
+    }
+    #content {
+    display: none;
+    padding: 1rem;
+    }
+    /*Style for nav bar*/
+    .nav ul {
+    list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #333;position: sticky;
+    }
+    .nav li {
+    float: right;
+    }
+    .nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+    .nav li a:hover:not(.active) {
+    border:1px solid black;
+    /*background-color: rgb(0, 0, 0);*/
+    color: white;
+    }
+    .active {
+    border:1px solid black;background-color: #94640b;color: white;
+    }  
+    fieldset {
+        border:1px solid black;
+        max-width:800px;
+        width:100%;
+    }
+    .xcenter {
+        display:inline-block;
+        margin:50px;
+    }
+    .footer {
+        /*position: fixed;**/
+        left:0;
+        right:0;
+        bottom:0;
+        margin:0 auto;
+        max-width: 800px;
+        width: 100%;
+    }
+    .running {
+        padding:10px;
+        color:red;
+        /*border: 2px solid red;*/
+        text-align: center;
+    }
+
+</style>
+
+{% block header %}{% endblock %}
+
+
+{% if (current_user.is_authenticated) and ('control' in request.endpoint) %}
+<script src="{{url_for('static',filename='sendCmd.js')}}"></script>
+{% elif (current_user.is_authenticated) and ('shutdown' in request.endpoint) %}
+<script src="{{url_for('static',filename='shutdown.js')}}"></script>
+{% endif %}
+
+</head>
+
+
+<body>
+    <section class="hero is-fullheight">
+        <div class="hero-head">
+            <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #333;position: sticky;">
+                {% if current_user.is_authenticated %}
+                    <li style="float: right;font-size:25px;background-color: rgb(146, 140, 140);color: white;"><a style="border:1px solid rgb(0, 0, 0);color: crimson;" href="{{ url_for('admin.logout') }}">Logout</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <center>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <h3 class="notification is-danger" style="color: red;">
+                            {% for message in messages %}
+                                <br>{{ message }}
+                            {% endfor %}
+                            </h3>
+                        {% endif %}
+                    {% endwith %}
+
+                    {% block content %}{% endblock %} 
+                </center>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+

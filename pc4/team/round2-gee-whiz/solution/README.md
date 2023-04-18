@@ -98,9 +98,9 @@ Legend: <------><------><------><------>
            gx      ms      gy      gz
 ```
 
-## Writing a userspace firewall rule
+## Writing a user-space firewall rule
 
-Download the sample userspace firewall filter program from: `http://challenge.us/files/sample_filter.c`. This program already provides the necessary building blocks for writing a userspace firewall rule that works in conjunction with the `netfilter_queue` library. Inspecting the existing firewall rules on `svcnat`, you see:
+Download the sample user-space firewall filter program from: `http://challenge.us/files/sample_filter.c`. This program already provides the necessary building blocks for writing a user-space firewall rule that works in conjunction with the `netfilter_queue` library. Inspecting the existing firewall rules on `svcnat`, you see:
 
 ```
 $ sudo iptables-save
@@ -114,14 +114,14 @@ $ sudo iptables-save
 ...
 ```
 
-Requests to port 31337 on the "public" interface of `svcnat` are forwarded over a private link to the actual server at `192.168.4.254`. Also, TCP traffic to port 31337 is queued for a userspace decision, to be made when a program such as `sample_filter` is in execution on `svcnat`.
+Requests to port 31337 on the "public" interface of `svcnat` are forwarded over a private link to the actual server at `192.168.4.254`. Also, TCP traffic to port 31337 is queued for a user-space decision, to be made when a program such as `sample_filter` is in execution on `svcnat`.
 
 You now have to modify the `tcp_payload_verdict()` function to return a value of `NF_DROP` when the 32-character request would exceed the specified acceleration and time limits, and `NF_ACCEPT` for requests passing the safety criteria. The new filter program might look something like what is provided. You will need to re-order the fields of `struct {...} ctl` according to what you found in Ghidra.
 
 ```
-/* user_filter.c -- userspace filtering of specific tcp payloads
+/* user_filter.c -- user-space filtering of specific tcp payloads
  *
- * ensure traffic is sent to userspace by netfilter rule, e.g.:
+ * ensure traffic is sent to user-space by netfilter rule, e.g.:
  *     iptables -A FORWARD -p tcp --dport 31337 -j NFQUEUE --queue-num 0 \
  *             [--queue-bypass]
  *

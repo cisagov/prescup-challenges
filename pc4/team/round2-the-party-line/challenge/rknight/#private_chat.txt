@@ -1,0 +1,14 @@
+T 1656701110 19*	19Now talking on #Private_chat
+T 1656701130 22*	angelawilliams sets mode +i #Private_chat
+T 1656701166 19*	19donnasmith (donnasmith@10.5.5.151) has joined #Private_chat
+T 1656701185 31<ryanknight>30	Hi Guys!
+T 1656701242 18<angelawilliams>	I made us this private channel so we can chat without using private messages.  It's invite only too
+T 1656701429 18<donnasmith>	We Better go to the  briefing
+T 1656702667 18<angelawilliams>	I wanted to give you two info for a secret file share I set up for us to use.  I've already added some music, movies and games.
+T 1656702694 31<ryanknight>30	That sounds pretty cool, how do we use it?
+T 1656702837 18<angelawilliams>	It's an FTP service at 10.5.5.160.  I put it on port 32210 so it won't show up if they do a common port scan on the network.  Keep it quiet so we don't get caught.
+T 1656702850 31<ryanknight>30	I can't wait to check it out
+T 1656702880 18<angelawilliams>	the username is scrtftp and password is Km73pDXf
+T 1656702892 18<angelawilliams>	Just make sure you delete these chat logs from your computers.
+T 1657034933 23*	23donnasmith has quit (23Quit: Leaving23)
+T 1657035669 23*	23angelawilliams has quit (23Quit: Leaving23)

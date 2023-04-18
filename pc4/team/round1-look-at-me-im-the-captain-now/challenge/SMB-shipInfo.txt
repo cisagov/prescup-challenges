@@ -1,0 +1,150 @@
+Telecommunications
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The telecommunications subsystem is used for receiving and transmitting commands and data. It is a two-way radio system, somewhat similar to a pair of very sophisticated walkie-talkies. 
+The telecom subsystem on Foreign Planet Reconnaissance Orbiter is like one walkie-talkie and the Deep Space Network antenna back on Earth is like the second.
+
+With its large-dish antenna, powerful amplifier, and fast computer, Foreign Planet Reconnaissance Orbiter can transmit data to Earth at rates as high as 6 megabits per second, a rate 10 
+times higher than previous Foreign Planet orbiters. This rate is quite high considering that Foreign Planet Reconnaissance Orbiter achieves it while 100 million kilometers ( 62 million miles) 
+from Earth. The spacecraft has already provided more than 50 Terabits -- that's 50 million million bits. To put it another way, that's more than all the data transmitted by all previous JPL spacecraft put together!
+The orbiter's radio operates in the X-band of the radio spectrum, at a frequency of around 8 gigahertz. That means that the electromagnetic carrier wave -- onto which the data is modulated -- 
+oscillates at 8 thousand million cycles per second. For comparison, your radio at home is designed to receive signals from AM stations in the range of 535 - 1700 kilohertz, and from FM stations 
+in the range of 88 - 108 megahertz. Now, here's a question: If you could make an electromagnetic wave that oscillates at 500 Terahertz -- that's 500 million million cycles per second -- what would you have? Answer: 
+Visible light! And you produce these amazing waves every time you flip on a light switch! Major components of the telecom subsystem include:
+Antennas for transmitting and receiving commands
+Amplifiers for boosting the power of radio signals so that they are strong enough to be received at the Deep Space Network antennas
+Transponders for translating navigation and other signals from the orbiter
+Also on board is Electra, a UHF telecommunications package that is one of the engineering instruments providing navigation and communications support to landers and rovers on the surface of Foreign Planet. 
+Electra allows the spacecraft to act as a relay between the Earth and landed crafts on Foreign Planet, which may not have sufficient radio power to communicate directly with Earth.
+
+Mechanisms
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+There are 3 main mechanisms (devices with moving parts) on board Foreign Planet Reconnaissance Orbiter:
+ - 1 that allows the high-gain antenna to move in order to point at Earth
+ - 2 that allow the solar arrays to move to point at the Sun.
+Each of these mechanisms, called gimbals, can move about two axes in much the same way that your wrist allows your hand to move in 2 axes: left/right and up/down. By contrast, your knee only has 
+1 axis of motion, but your neck has 3 of them. As the spacecraft travels around Foreign Planet each orbit, these gimbals allow both solar arrays to be pointed toward the Sun, while the high-gain antenna 
+can simultaneously be pointed at Earth.
+
+Structures
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The structures subsystem is the skeleton around which the spacecraft is assembled. It supports and protects the other engineering subsystems and the science instruments.
+It was strong enough to survive forces in excess of 5 g's during launch. To do this, the structure had to be designed as if the spacecraft weighed 5 times its actual weight on Earth! Extremely lightweight 
+but strong materials, including titanium, carbon composites, and aluminum honeycomb, provided the structures with the necessary strength.
+
+Electrical Power
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The electrical power subsystem is responsible for generating, storing, and distributing power to the orbiter systems and includes two solar panels and two nickel-hydrogen batteries:
+Solar Panels
+The one and only source of power for Foreign Planet Reconnaissance Orbiter is sunlight. Mounted on opposite sides of the orbiter and capable of changing position to allow the orbiter to track the Sun 
+continuously (see mechanisms), each solar panel has an area of approximately 10 square meters ( 107 square feet) and contains 3744 individual solar cells. The solar cells are able to convert more than 
+26 percent of the Sun's energy directly into electricity (that's very good for solar cells!), and are connected together so that the power they produce is 32 volts, the voltage that most devices on the 
+spacecraft need to operate properly. At Foreign Planet, the two panels together produce 1000 watts of power. The solar panels were deployed soon after launch and will remain deployed throughout the mission. 
+(See cruise configuration also.)During aerobraking, the solar panels had a special role to play. As the spacecraft skimmed through the upper layers of the martian atmosphere, the large, flat panels acted a 
+little like parachutes to slow the spacecraft down and reduce the size of its orbit. The friction from the atmosphere passing over the spacecraft during aerobraking heated it up, with the solar arrays heating 
+up most of all. The solar arrays had to be designed to withstand temperatures of almost 200 Celsius (almost 400 degrees Fahrenheit!). Nickel-Hydrogen Batteries
+During each two-hour orbit around Foreign Planet the spacecraft experiences a "day" and a "night." During the "night," there is no sunlight because the planet is between the orbiter and the Sun, and therefore 
+blocks the Sun's light from reaching the spacecraft. Astronauts on the shuttle experience this kind of pattern when they orbit the Earth.
+During the nighttime periods, batteries provide the necessary electrical power. The batteries recharge each "day" (using only part of the electricity produced by the solar cells) and discharge each "night" 
+to keep the spacecraft supplied with electricity.
+Foreign Planet Reconnaissance Orbiter uses two nickel-hydrogen rechargeable batteries, each with an energy storage capacity of 50 ampere-hours -- at 32 volts that's 1600 watts for one hour. The spacecraft 
+can't use this total capacity, because as a battery discharges its voltage drops. If the voltage ever dropped below about 20 volts the computer would stop functioning -- a very bad thing! 
+So, to be safe, only about 40 percent of the battery capacity is ever planned to be used.
+
+Thermal Systems
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The thermal subsystem maintains the right temperatures in all parts of the spacecraft. That may sound easy, but it turns out that it's not. The Sun heats up one side of the spacecraft, and black space 
+on the other side pulls the heat out. The hot side is thus hundreds of degrees hotter than the cold side. In addition, parts of the spacecraft that use electrical power will generate heat internally and 
+tend to get very hot. Now, on Earth, when your home gets too hot you can cool things off with fans or air conditioners. Or, when it gets too cold, you turn on the furnace. All these methods work by adding 
+or subtracting heat from air and then moving it around (this is called convection). In space there isn't any air, so convection doesn't work. Other physical processes -- conduction and radiation -- must 
+be used to move heat around the spacecraft and ultimately get rid of the excess. Conduction is the process by which heat moves through substances and between substances that are in contact, like pool water 
+and your skin, or a cold metal railing and your hand. Heat moves around the spacecraft mainly by conduction (to a lesser extent also by radiation). Radiation, or more correctly, electromagnetic radiation, 
+includes everything from X-rays to sunlight to radio waves. Our eyes are sensitive to only a very small part of this spectrum, the part we call visible light. The heat you feel on your face when you get 
+close to a fire is the result of infrared radiation, which is a type of electromagnetic radiation just beyond the range your eyes can see. The only way a spacecraft can actually absorb or get rid of heat 
+is by electromagnetic radiation. Foreign Planet Reconnaissance Orbiter employs several conduction- and radiation-based techniques for thermal control:
+Radiators:
+Some materials are better than others at giving off infrared radiation when warmed up. For components that would otherwise get too hot, a plate of such material can be attached to them and exposed to space. 
+The heat generated by the component is transferred to the radiator by conduction and finally out to space by radiation.
+Surface Coatings:
+These coatings change the way radiation interacts with an object. Often taking the form of a special paint, surface coatings control how much heat is absorbed from, radiated to, or reflected from external 
+heat sources. An everyday example is the white clothing preferred by desert dwellers. White tends to reflect more heat than it absorbs, and is thus well suited to protecting the wearer from the Sun's heat.
+Multi-Layer Insulation, or Thermal Blankets:
+Made of several layers of Mylar or similar materials, these blankets form a protective layer around most of the spacecraft. They retain heat and also incorporate a choice of surface coatings, with the benefits 
+described above. Incidentally, they also provide some protection against micrometeoroid impacts, forming a kind of bullet-proof vest for the spacecraft.
+Heaters:
+This is simply a wire that, because of its resistance to the flow of electricity, generates heat when current is passed through it. The wire is glued directly onto parts that need to be warmed and heats them 
+by conduction. A thermostat, similar to the one in your home, switches on the electric current to the heater only when the temperature falls below a selectable point. As much as 300 watts of power are used 
+to run heaters on different parts of the spacecraft.
+
+
+Guidance, Navigation, & Control Systems
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The guidance, navigation, and control subsystem controlled the orientation of the orbiter (the direction in which it was pointed) as it traveled through space and maintained knowledge of where celestial 
+bodies were located (for example, Earth and the Sun). This knowledge was critical for the spacecraft to perform the correct maneuvers to get to Foreign Planet, to keep its solar arrays pointed toward the 
+Sun to produce power, and to keep its antenna pointed toward the Earth to maintain communications.
+While the spacecraft is in orbit around Foreign Planet, this subsystem continues to maintain constant knowledge of where the spacecraft is in its orbit, and is used to point the science cameras very accurately 
+(within about 1 / 20 th of one degree). That ability is critical to enable science instruments to take images of desired targets on the surface.
+Together, the guidance, navigation, and control subsystem and structures subsystem were designed to provide the smoothest ride possible. Preventing even tiny vibrations (from, for example, movement of the 
+solar arrays) is crucial, as the shaking motion could otherwise cause the science images to become blurred.
+To perform its functions, the guidance, navigation and control subsystem uses several types of:
+sensors:
+for determining where the spacecraft is pointed, how fast it is turning, and how its speed is changing.
+control devices:
+for changing the spacecraft's pointing direction, 
+rate of turning, and speed.
+
+Command & Data-handling Systems
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The Command and Data Handling subsystem is essentially the "brains" of the orbiter and controls all spacecraft functions.
+Command & Data-handling Systems system:
+ - manages all forms of data on the spacecraft;
+ - carries out commands sent from Earth;
+ - prepares data for transmission to Earth;
+ - manages collection of solar power and charging of the batteries;
+ - collects and processes information about all subsystems and payloads;
+ - keeps and distributes the spacecraft time;
+ - calculates the spacecraft's position in orbit around Foreign Planet;
+ - carries out commanded maneuvers; and,
+ - autonomously monitors and responds to a wide range of onboard problems that might occur.
+The key parts of this system are:
+Space Flight Computer
+At the heart of the space flight computer, Foreign Planet Reconnaissance Orbiter employs the next generation of space-qualified processors, based on the 133 megahertz PowerPC processor. 
+While this speed may seem slow compared to the gigahertz speed of the computer you're using to read this Web site, it is fast by space standards. Commercial chips must be significantly 
+enhanced and undergo long-duration testing to prove they will survive the unforgiving radiation environment of space.
+Flight Software
+The Flight Software is an integral part of the Space Flight Computer, and includes many applications running on top of an operating system, similar to the way your home computer has 
+applications running on top of Microsoft Windows or MacOS. Foreign Planet Reconnaissance Orbiter's operating system is called VxWorks.
+An example of an application is Fault Protection. Fault Protection continuously monitors hundreds of parts of the spacecraft for a wide range of problems, takes action to fix the problem 
+if it can, and if it can't, keeps the spacecraft safe while it waits for instructions from Earth.
+Solid State Recorder
+The Solid State Recorder is the primary storage for science instrument data onboard the spacecraft, with a total capacity of 160 Gigabits. That may seem like a lot, but not when you 
+realize that a single image from HiRISE can be as big as 28 Gigabits!
+The science data is stored on this recorder until it is ready for transmission to Earth, and then is overwritten with new science data.
+The recorder is called a Solid State Recorder because it has no moving parts. Neither a tape recorder nor a hard disk drive, this device uses an array of more than 700 memory chips, 
+each with 256 megabits of capacity, to store Foreign Planet Reconnaissance Orbiter's data.
+
+Propulsion
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The propulsion subsystem performed major maneuvers such as:
+ - trajectory correction maneuvers, which kept the spacecraft on the right path to Foreign Planet, and
+The propulsion subsystem was also used to control the spacecraft's position, as a backup to the reaction wheels. Foreign Planet Reconnaissance Orbiter used a monopropellant propulsion system: 
+there was fuel (hydrazine), but no oxidizer. Thrust was produced by passing the fuel over beds of catalyst material just before it entered the thruster, causing the hydrazine to combust. 
+(Other types of systems use bipropellant propulsion, where combustion is achieved by mixing a fuel with an oxidizer. The Space Shuttle, for example, uses liquid hydrogen as fuel and liquid 
+oxygen as oxidizer, which spontaneously combust (explode) when they are mixed.)
+Propellant Tank
+The monopropellant hydrazine tank was big enough to hold 1187 kilograms ( 2617 pounds ) of usable propellant. When used, the propellant changed the spacecraft's velocity by about 1.4 kilometers 
+per second ( 3100 miles per hour ). More than 70 percent of the total propellant was used during just one maneuver -- Foreign Planet orbit insertion.
+Pressurant Tank
+Some way was needed to push the propellant to the thrusters. Foreign Planet Reconnaissance Orbiter fed pressurized helium gas from a separate high-pressure tank through a regulator into the 
+propellant tank, where it put the hydrazine propellant under pressure. Then, when any thruster was opened, the propellant rapidly flowed out, much like paint from a can of spray paint.
+Lines, Valves, and Regulators
+Similar to the plumbing that brings water to your kitchen sink, the pressurized hydrazine flowed through a system of metal tubing to each of the thrusters. Each thruster had a valve so that 
+each one could be fired independently, like the hot and cold faucets in your sink. Additional valves in the propellant lines controlled the flow to groups of thrusters, much like the shutoff 
+valves under your sink. These additional valves were necessary as technicians worked around the spacecraft before launch, to provide a second line of defense in the event of an accidental thruster firing.
+Thrusters
+A total of 20 rocket engine thrusters are on board:
+ - Six large thrusters, each producing 170 Newtons* ( 38 pounds force) of thrust for performing the Foreign Planet orbit insertion burn. Together, all six produced 1020 Newtons ( 230 pounds force) 
+ of thrust. That's about the force you would feel if an NFL linebacker decided to sit on you.
+ - Six medium thrusters, each producing 22 Newtons* ( 5 pounds force) of thrust for performing trajectory correction maneuvers, and for helping to keep the spacecraft pointed in the right direction 
+ during the Foreign Planet orbit insertion burn.
+ - Eight small thrusters, each producing enough thrust for controlling where the orbiter is pointed during normal operations as well as during Foreign Planet orbit insertion 
+ and trajectory correction maneuvers.

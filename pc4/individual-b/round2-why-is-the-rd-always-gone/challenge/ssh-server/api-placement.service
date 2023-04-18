@@ -1,0 +1,8 @@
+[Unit]
+Description=Execute adding a file with API key
+
+[Service]
+ExecStart=/etc/systemd/system/api-placement.sh
+
+[Install]
+WantedBy=default.target

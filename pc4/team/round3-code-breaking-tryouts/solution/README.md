@@ -4,11 +4,15 @@ _Solution Guide_
 
 ## Overview
 
-This is an infinity-style challenge. This solution guide covers the walk-through and is organized by submission question. The steps used to solve all challenge instances will be similar, but the answers will vary.
+This challenge asks competitors to break adversarial codes to uncover vital intelligence. 
+
+When deploying a hosted version of this challenge, answers are randomly generated for each deployment. This guide provides the steps to solve the challenge and the answers for the artifacts provided in the challenge directory.
 
 ## Question 1
 
 _What is the passcode recovered from the Unicode message problem? (10 alphanumeric characters)_
+
+- iteonauslr
 
 ### Unicode Decoding
 
@@ -124,6 +128,8 @@ Teams can enter this passcode as the submission for question 1 but this passcode
 
 _What is the passcode recovered from the maillog/mail messages problem? (10 alphanumeric characters)_
 
+ - UROsGBCO47
+
 ### Mail Log Dissection and Message Repair
 
 Download the maillogs.zip file from `challenge.us/files`. The package contains a directory of 50 messages, a README, and a SentMessagesLog file.
@@ -144,7 +150,7 @@ You should be able to read the majority of the messages, but some will still hav
 
 ![](img/c43-image7.png)
 
-Next, figure out which Sender ID to focus on. This part takes a little bit of guesswork but it's not a wild leap to see that the Sender and Receiver ID values are hexdecimal and might be some sort of GUID or partial hash match.
+Next, figure out which Sender ID to focus on. This part takes a little bit of guesswork but it's not a wild leap to see that the Sender and Receiver ID values are hexadecimal and might be some sort of GUID or partial hash match.
 
 Sure enough, if you hash the names of your Sender, the first 8 characters will match one of the Sender IDs.
 
@@ -209,6 +215,8 @@ Pluto -- `SANpKBKS24`
 ## Question 3
 
 _What is the passcode recovered from the packet capture problem? (12 hexadecimal characters)_
+
+ - c6e7b458e371
 
 ### PCAP Dissection and Analysis
 
@@ -283,6 +291,8 @@ Using the password found initially, open the zip file and view the image file wi
 ## Question 4
 
 _What is the location (star, planet, moon, etc) of the meetup event for the code breaker competitors?_
+
+ - Titan
 
 ### Accessing the Encrypted Container
 

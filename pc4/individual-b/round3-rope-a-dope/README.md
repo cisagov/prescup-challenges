@@ -24,6 +24,8 @@ When combined with other mistakes committed during program development (e.g., bu
 
 ## Getting Started
 
+_Note: For completing this challenge offline, please see the instructions in the [challenge directory](./challenge)._
+
 You are given access to a `kali` workstation. From there, use ssh to log into `cube` as a regular user.
 
 Focus your attention on the `/usr/sbin/chk_cube_cmd` utility, normally intended to verify the formatting of command strings for the cube drive.

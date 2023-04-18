@@ -14,6 +14,8 @@ For this training exercise, you have enumerated the alien’s network and found 
 
 ## Getting Started
 
+_Note: Please see the instructions in the [challenge directory](./challenge) to set up before playing this challenge offline._
+
 Inspect the Aurelian's merchant website `http:\\merchantcaste.us` to figure out the password and log in using the username `qorluia`.
 
 ## Challenge Questions

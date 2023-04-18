@@ -1,0 +1,16 @@
+[Unit]
+Description=Run website
+#Before=adminSite.service
+After=network.target
+Requires=network.target
+
+[Service]
+Type=simple
+Restart=always
+#StandardOutput=journal
+#StandardError=journal
+ExecStart=/usr/bin/python3 /home/user/Desktop/satellite/satellite.py    # change path to wherever satellite.py is located
+ExecStop=/usr/bin/pkill -f satellite.py
+
+[Install]
+WantedBy=multi-user.target

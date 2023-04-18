@@ -9,6 +9,11 @@ After the Dauntless experienced a mysterious power surge, your team ends up spli
 - [T0035](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0035&description=All) - Configure and optimize network hubs, routers, and switches.
 - [T0081](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0081&description=All) - Diagnose network connectivity problems.
 
+## IMPORTANT
+
+This challenge does not have any downloadable artifacts. You may complete this
+challenge in the hosted environment.
+
 ## Background
 
 There are a total of four terminals directly accessible by team members, two of which are located in each cargo hold area.

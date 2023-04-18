@@ -11,6 +11,9 @@ A team of researchers have been studying the Seelax for years and are returning 
 - [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0028) - Conduct and/or support authorized penetration testing on enterprise network assets.
 - [T0608](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0608) - Conduct analysis of physical and logical digital technologies (e.g., wireless, SCADA, telecom) to identify potential avenues of access.
 
+## IMPORTANT
+This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.
+
 ## Video 
 
 Watch [this video](https://presidentscup.cisa.gov/files/hqv8a5dv6GR9bh9278VPuP36xA7d9htD-VIDEO-04-P01.mp4) for information about the Exo Archeologists!

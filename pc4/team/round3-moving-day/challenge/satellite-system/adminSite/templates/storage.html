@@ -1,0 +1,28 @@
+<!--
+Copyright 2023 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Storage{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <br><br>
+    <h1 id="headline"><u><strong>Storage</strong></u></h1>
+    <br><br>
+
+    {% if fileList %}
+        {% for i in fileList %}
+            {% if i[0] != '.' %}
+                <br><h3><a href="{{ url_for('admin.storage',filename=i) }}">{{i}}</a></h3>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+</div>
+{% endblock %}
+

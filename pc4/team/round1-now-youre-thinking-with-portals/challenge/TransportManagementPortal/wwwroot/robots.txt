@@ -1,0 +1,6 @@
+﻿User-agent: *
+Disallow: /norobots/admin
+Disallow: /norobots/internal
+Disallow: /norobots/hidden
+Disallow: /norobots/network
+Disallow: /norobots/management

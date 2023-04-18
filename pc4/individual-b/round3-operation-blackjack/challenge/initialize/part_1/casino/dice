@@ -1,0 +1,90 @@
+#!/usr/bin/python3
+
+# Copyright 2023 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+import random
+import time
+import sys
+
+def main():
+	print("Welcome to Craps!")
+	# get bank data
+	bank_file = open("cash", "+r")
+	bank = int(bank_file.read())
+	bank_file.close()
+
+	#play game
+	play_again = "y"
+	while play_again == "y":
+		bet = int(input("\nPlace your bet: "))
+		if bet < 1:
+			print("Please make a positive bet.")
+			exit()
+		guess = int(input("Pass(1) or No-Pass (2)?: "))
+		if guess != 1 and guess != 2:
+			print("Not a valid guess!")
+		else:
+			dice1 = random.randint(1,6)
+			dice2 = random.randint(1,6)
+			total = dice1 + dice2
+		
+			print("Rolling...")
+			time.sleep(0.7)
+			print("\nDice 1:", dice1)
+			time.sleep(0.3)
+			print("Dice 2:", dice2)
+			time.sleep(0.5)
+			print("---\nTotal:", total)
+			time.sleep(0.3)
+			if total == 7 or total == 11:
+				print("Pass!")
+				Pass = 1
+			elif total == 2 or total == 3:
+				print("Craps!")
+				Pass = 2
+			elif total == 12:
+				print("Craps!")
+				Pass = 12
+			else:
+				cont = True
+				point = total
+				while cont:
+					input("\nTarget: " + str(point) + "\nEnter anything to roll!")
+					dice1 = random.randint(1,6)
+					dice2 = random.randint(1,6)
+					total = dice1 + dice2
+				
+					print("Rolling...")	
+					time.sleep(0.7)
+					print("Dice 1:", dice1)
+					time.sleep(0.3)
+					print("Dice 2:", dice2)
+					time.sleep(0.5)
+					print("---\nTotal:", total)
+					time.sleep(0.3)
+					if total == 7:
+						print("\nNo Pass!")
+						Pass = 2
+						cont = False
+					elif total == point:
+						print("\nPass!")
+						Pass = 1
+						cont = False
+		# payment outcomes
+		
+			if guess == Pass:
+				bank = bank + bet
+			elif guess == 2 and Pass == 12:
+				print("\nNo pass pushes on 12")
+			else:
+				bank = bank - bet
+			print("Current Funds:", bank)
+	# write updated bank to cash file
+		bank_file = open("cash", "w")
+		bank_file.write(str(bank))
+		bank_file.close()
+		play_again = input("\nInput y to play again: ")
+if __name__ == main():
+	main()

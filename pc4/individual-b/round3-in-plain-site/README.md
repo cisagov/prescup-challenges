@@ -12,6 +12,10 @@ A new blogging website has appeared, promoting tourism to Harmony-infected world
 - [T0644](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0644) - Detect exploits against targeted networks and hosts and react accordingly.
 - [T0736](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0736) - Lead or enable exploitation operations in support of organization objectives and target requirements.
 
+## IMPORTANT
+
+This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.
+
 ## Background
 
 A new blogging platform has been launched by Harmony-infected individuals. Now, there is a growing fear  individuals will violate quarantine for a “free vacation” and get absorbed into Harmony colonies. 

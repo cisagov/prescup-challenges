@@ -1,0 +1,19 @@
+└─$ nikto -h 187.243.93.206 -p 62921
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          187.243.93.206
++ Target Hostname:    187.243.93.206
++ Target Port:        62921
++ Start Time:         2023-02-17 13:51:14 (GMT-5)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.53 (Debian)
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Server may leak inodes via ETags, header found with file /, inode: 87, size: 5e1a9c5442999, mtime: gzip
++ Allowed HTTP Methods: GET, POST, OPTIONS, HEAD 
++ OSVDB-3268: /test/: Directory indexing found.
++ OSVDB-3092: /test/: This might be interesting...
++ 7918 requests: 0 error(s) and 7 item(s) reported on remote host
++ End Time:           2023-02-17 13:51:23 (GMT-5) (9 seconds)

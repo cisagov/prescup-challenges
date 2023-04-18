@@ -13,7 +13,7 @@ Find the Default Gateway, Intercept/Decrypt TLS Traffic, and Analyze the Spacesh
 
 ## Background
 
-The Dauntless spaceship has a system that queries a remote HTTPS webserver for mission instructions. Every ~60 seconds, the mission workstation queries the ground station mission webserver regarding all possible missions. At any time only one mission is the correct/current mission while the others are not selected (incorrect). Nobody can find the physical mission workstation onboard the spaceship; however, you have your Kali machine plugged in to the appropriate default gateway/router. It is your task to find the default gateway (router), intercept/decrypt the HTTPS requests, and find the current mission!
+The Dauntless spaceship has a system that queries a remote HTTPS web server for mission instructions. Every ~60 seconds, the mission workstation queries the ground station mission web server regarding all possible missions. At any time only one mission is the correct/current mission while the others are not selected (incorrect). Nobody can find the physical mission workstation onboard the spaceship; however, you have your Kali machine plugged in to the appropriate default gateway/router. It is your task to find the default gateway (router), intercept/decrypt the HTTPS requests, and find the current mission!
 
 ## Topology
 

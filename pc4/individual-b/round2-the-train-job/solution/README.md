@@ -4,7 +4,7 @@ _Solution Guide_
 
 ## Overview
 
-This challenge demonstrates that it can be very tricky to lock down Python enough that it is possible to allow access to create useful scripts without opening significant vulnerabilities - even with a restricted subset. The first part takes advantage of the fact that it is possible to access *imports of imports* in Python - in this challenge, there is a signing key that is being passed as command line arguments and competitors need to retrieve it. The second part is simple once the key has been retrieved - forge a JWT to tell the server to move the train.
+_The Train Job_ demonstrates that it can be very tricky to lock down Python enough that it's possible to allow access to create useful scripts without opening significant vulnerabilities -- even with a restricted subset. The first part takes advantage of the fact that it is possible to access *imports of imports* in Python. In this challenge, there is a signing key that is being passed as command line arguments and competitors need to retrieve it. The second part is simple once the key has been retrieved -- forge a JWT to tell the server to move the train.
 
 ## Question 1
 
@@ -20,12 +20,11 @@ Experimentation with the server's response shows that it captures the output of 
 * In the `ALLOWED_IMPORTS` set, several of the allowed imports have also imported the `sys` module.
 * We can put the above facts together and devise a `schedule.py` to retrieve the signing key:
 
-```
+```python
 import typing
 
 print(typing.sys.argv)
 ```
-
 This small script will print out the command line arguments to the runner script and the server will blindly send it back to get the first flag.
 
 ## Question 2
@@ -36,7 +35,8 @@ Now we need to get the train to move. The runner script reveals exactly how to d
 
 * Install `python-jose` with `pip install python-jose`.
 * Create the following script and run it (replace the string assigned to KEY with the key you got from part 1):
-```
+
+```python
 from jose import jwt
 import requests
 

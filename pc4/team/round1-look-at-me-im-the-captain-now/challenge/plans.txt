@@ -1,0 +1,49 @@
+
+Bravo Earths Warriors
+
+If you're reading this, then you have decided to take up the task of infiltrating and sabotaging internal resources aboard the spaceship that is preparing to leave earth and I commend you for your bravery. 
+
+I have prepared the targets of our attack and the method to be carried out to misconfigure their internal setup. I need you though to carry it out. The method in which we will be following to misconfigure each of the targets was created with the idea in mind that we will use their own data against them. 
+
+During my research, I came across various different files that I know exist within the confines of that spaceship. Using those files, I will need you to extract, manipulate and edit their data in order to create new credentials to deny access to everyone else but us! this will be our bargaining chip in the off chance they find out who we are.
+
+Below is everything you need to know.
+
+
+TARGET: Mass Encryption of files via zip
+METHOD: 
+Grab any and all files you can gain access to. The password you will use to encrypt this zip will be created using data from the 'manifest.html' file. You will need to get the weight of items on page 1, the items on page 2, and the items on page 3 separately. Then, determine the total weight of all items by adding the weights from pages 1-3 together. Then choose a random cargo item on the list. The encryption password will then be created by concatenated the initials of the item (the first letter of each word in the item name) chosen along with one (1) of the four (4) weights found.
+
+
+TARGET: TCP Server located on machine with hostname: 'services' - port 22222
+METHOD: 
+Their internal TCP Server authentication works by having a file containing a list of keys that are rotated. You will need to gain access to that file, and then set the TCP Server's accepted key to a random key in the list. Once done, take all the keys and encode them using any format you see fit. Next, concatenate all the strings together. It's a big list of keys so even if they figure it out it'll take them a while to re-gain access.
+
+
+TARGET: Website located at services.us
+METHOD:
+They keep a public file containing the records of all users who have an account on their website. Once you find it, you will need to choose a random account from the list. This accounts email will be the username of our new account. For the password, take the username of the selected account, concatenate a '.' followed by their initials. Finally, concatenate their account ID to the end of it.
+
+
+TARGET: SMB Server located on the machine with hostname: 'services'
+METHOD:
+As part of the onboarding process, they give out a document that has a handful of information about the spacecraft. Find this document, and once you do follow these steps:
+    - Create Username: Grab the first four (4) letters of any of the section names in the document. From here, concatenate the value of the highest number + lowest number found in that same section's information.
+    - Create Password: Grab the last four (4) letters of any of the section names in the document. From here, concatenate one (1) number found in the document to it. The choice of number is up to you.
+
+TARGET: FTP Server located on the machine with hostname 'services'
+METHOD:
+Another file that's part of their onboarding process is an excel sheet that has information about some of the positions/roles on the spaceship, descriptions of them, as well as departments that those positions/roles are in. There is some other mumbo jumbo in there that I'll elaborate on below. This is what you need to do to edit the FTP access:
+    - Create Username: Select a random department on the list
+    - Create Password: Select a random position/role. Next, select the longest word present in any one of the descriptions that exist. It can be the longest word from the 'Captains' description, or the longest word from the 'Stewards' description, your call. Lastly, add together the number of crew members per department and then subtract the number of members that the department has of the role/position you selected. Once done, concatenate them all together and presto you got your new password. 
+
+
+IMPORTANT:
+______________________________________________________________________________________________________________________________________________
+1. Make these these credentials case sensitive, enter them just as you find them. It'll make it that much more difficult for them to figure out.
+
+2. For those tasks that apply, once you've completed your task make sure to remove/delete all other users that exist. All this would be for nothing if they could use one of their accounts to reverse what we did. 
+
+3. DELETE/DESTROY THIS FILE ONCE YOU ARE DONE. IF THEY FIND IT, THEY WILL BE ABLE TO REVERSE ENGINEER OUR EFFORTS AND THAT CANNOT HAPPEN!
+
+go get em

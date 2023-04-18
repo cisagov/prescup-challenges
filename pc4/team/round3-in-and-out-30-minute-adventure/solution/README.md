@@ -37,7 +37,7 @@ Start arpspoofing any traffic between the gateway `220.133.91.1` and the other m
     - Select `220.133.91.1` and then click `Add to Target 1`
     - Select `220.133.91.202` and then click `Add to Target 2`
     - Click on the button that looks like a mini globe/world in the top-right area.
-    - Click `ARP Poisioning`, make sure to disable all optional parameters, then start it.
+    - Click `ARP Poisoning`, make sure to disable all optional parameters, then start it.
 4. Once running, open a second terminal and run Wireshark to start capturing traffic. You will see random `UDP` traffic being sent.
 5. Right-click on the `UDP Packet` and then scroll down to `Follow` -> `UDP Stream`.
 6. Within the packet that opens, you should have a small list of passwords mentioned in the `backup` share comment found previously.
@@ -62,9 +62,9 @@ If you scan host `220.133.91.202` using the same `nmap` scan ran previously, you
 
 >Note: You will need to stop the arpspoofing in order to reach this host.
 
-If you attempt to connect, you are prompted with a message stating that `anonymous` SSH is being used for configuration, has limited capabilities, and isnt intended for non-authorized users. It looks like a perfect location to find a vulnerabilitiy.
+If you attempt to connect, you are prompted with a message stating that `anonymous` SSH is being used for configuration, has limited capabilities, and isn't intended for non-authorized users. It looks like a perfect location to find a vulnerability.
 
-With the SSH User information retreieved, log into the SSH server using this command: `ssh anonymous@220.133.91.202`.
+With the SSH User information retrieved, log into the SSH server using this command: `ssh anonymous@220.133.91.202`.
 
 The FW1 config file shows that FTP traffic is allowed from `220.133.91.202` -> `210.111.90.123`, although if you attempt to connect using the `anonymous` user you will find that they do not have the permissions to run the commands.
 

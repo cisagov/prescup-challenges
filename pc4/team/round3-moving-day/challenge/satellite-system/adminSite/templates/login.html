@@ -1,0 +1,40 @@
+<!--
+Copyright 2023 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Login Page{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">Login</h3>
+        <form method="POST" action="{{url_for('main.login')}}">
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="username" name="username" placeholder="Username" autofocus="">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+
+                    <input class="input is-large" type="password" name="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="field">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    Remember me
+                </label>
+            </div>
+            <button class="button is-block is-info is-large is-fullwidth">Login</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+

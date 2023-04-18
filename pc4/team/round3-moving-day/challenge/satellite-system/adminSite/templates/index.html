@@ -1,0 +1,23 @@
+<!--
+Copyright 2023 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Welcome!{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<div><br>
+    <h1>Welcome to the Satellite Controller</h1>
+    {% if current_user.is_authenticated %}
+        <h3>Move Satellite <a href="{{ url_for('admin.home') }}" class="navbar-item">here</a></h3>
+    {% else %}
+        <h3><a href="{{ url_for('main.login') }}">Log in</a></h3>
+    {% endif %}
+</div>
+
+{% endblock %}
+

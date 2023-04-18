@@ -1,0 +1,47 @@
+﻿@*
+Copyright 2023 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*@
+
+@model TransportManagementPortal.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+<div>
+    <hr />
+    @{
+        if (!string.IsNullOrWhiteSpace(Model.Message))
+        {
+            <div class="row text-danger fw-bold">@(Model.Message)</div>
+            <hr />
+        }
+    }
+    <form asp-action="Login">
+        <div class="row">
+            <dt class = "col-1">
+                @Html.DisplayNameFor(model => model.Username)
+            </dt>
+            <dd class = "col-3">
+                @Html.TextBoxFor(model => model.Username)
+            </dd>
+        </div>
+        <div class="row">
+            <dt class = "col-1">
+                @Html.DisplayNameFor(model => model.Password)
+            </dt>
+            <dd class = "col-3">
+                @Html.PasswordFor(model => model.Password)
+            </dd>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+</div>

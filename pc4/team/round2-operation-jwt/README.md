@@ -21,7 +21,9 @@ We have access to the crane operation software, but it only has the lowest level
 
 ## Getting Started
 
-Navigate to `https://challenge.us` from a gamespace resource and download the `crane.zip` file from the server. You can access the remote server's schema at `https://challenge.us:8000/schema`.
+See the contents of the [server](./challenge/server) directory first in order to start the server for this challenge.
+
+Inspect the contents of the [challenge/crane](./challenge/crane) directory. You may need to install the `requests` or `tkinter` packages for Python, depending on your system Python installation (or follow the instructions in server/README.md to make a separate virtual environment). You can access the remote server's schema at `https://localhost:8000/schema`.
 
 ## Challenge Questions
 
