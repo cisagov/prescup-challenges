@@ -4,11 +4,11 @@ Delve into a version control repository to unearth insecure development practice
 
 **NICE Work Role:**
 
-- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Software+Developer)
+- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0014](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0014&description=All) - Apply secure code documentation.
+- [T0014](https://niccs.cisa.gov/workforce-development/nice-framework) - Apply secure code documentation.
 
 ## IMPORTANT
 

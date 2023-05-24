@@ -4,14 +4,14 @@ It is time to put your red team and blue team skills to the test for our red, wh
 
 **NICE Work Roles** 
 
-- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-operator)
-- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/vulnerability-assessment-analyst)
+- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0567](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0567) - Analyze target operational architecture for ways to gain access.
-- [T0696](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0696) - Exploit network devices, security devices, and/or terminals or environments using various methods or tools.
-- [T0724](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0724) - Identify potential points of strength and vulnerability within a network.
+- [T0567](https://niccs.cisa.gov/workforce-development/nice-framework) - Analyze target operational architecture for ways to gain access.
+- [T0696](https://niccs.cisa.gov/workforce-development/nice-framework) - Exploit network devices, security devices, and/or terminals or environments using various methods or tools.
+- [T0724](https://niccs.cisa.gov/workforce-development/nice-framework) - Identify potential points of strength and vulnerability within a network.
 
 ## IMPORTANT
 

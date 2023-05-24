@@ -5,14 +5,14 @@ Given a Linux binary executable file, you must craft an exploit which prints the
 
   **NICE Work Role:** 
   
-  [Exploitation Analyst](https://niccs.us-cert.gov/workforce-development/cyber-security-workforce-framework/workroles?name=Cyber%20Defense%20Incident%20Responder)
+  [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
   **NICE Tasks:**  
 
-  [T0641](https://niccs.us-cert.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0641&description=All) - Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.  
+  [T0641](https://niccs.cisa.gov/workforce-development/nice-framework) - Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.  
 
-  [T0736](https://niccs.us-cert.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0736&description=All) - Lead or enable exploitation operations in support of organization objectives and target requirements.
+  [T0736](https://niccs.cisa.gov/workforce-development/nice-framework) - Lead or enable exploitation operations in support of organization objectives and target requirements.
 
 ## Background
 

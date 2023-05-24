@@ -3,11 +3,11 @@
 A devastating insider threat attack has disabled a critical cube drive manufacturing facility. You are tasked with helping us regain SSH access to the file server. 
 
 **NICE Work Roles**
-- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-incident-responder)
+- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0510](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0510) - Coordinate incident response functions.
-- [T0278](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0278) - Collect intrusion artifacts (e.g., source code, malware, Trojans) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
+- [T0510](https://niccs.cisa.gov/workforce-development/nice-framework) - Coordinate incident response functions.
+- [T0278](https://niccs.cisa.gov/workforce-development/nice-framework) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
 ## IMPORTANT
 

@@ -5,15 +5,15 @@ Your employer has tasked you with securing critical goods from a wholesale distr
 
   **NICE Work Roles**   
 
-  - [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All)
+  - [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-  - [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst&id=All)
+  - [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
   **NICE Tasks**
 
-  - [T0591](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0591&description=All) - Perform analysis for target infrastructure exploitation activities.
-  - [T0694](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0695&description=All) - Examine intercept-related metadata and content with an understanding of targeting significance.
+  - [T0591](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform analysis for target infrastructure exploitation activities.
+  - [T0694](https://niccs.cisa.gov/workforce-development/nice-framework) - Examine intercept-related metadata and content with an understanding of targeting significance.
 
 
   ## Background  

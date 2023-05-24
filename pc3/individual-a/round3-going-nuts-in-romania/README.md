@@ -4,16 +4,16 @@ Players must respond to an incident involving both external and internal parties
 
 **NICE Work Roles**  
 
-- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Incident+Responder&id=All)  
+- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)  
 
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst&id=All)  
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)  
 
 
 
 **NICE Tasks**
-- [T0166](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0166&description=All) - Perform event correlation using information gathered from a variety of sources within the enterprise to gain situational awareness and determine the effectiveness of an observed attack.
-- [T0295](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0295&description=All) - Validate intrusion detection system (IDS) alerts against network traffic using packet analysis tools.
-- [T0214](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0214&description=All) - Receive and analyze network alerts from various sources within the enterprise and determine possible causes of such alerts.
+- [T0166](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform event correlation using information gathered from a variety of sources within the enterprise to gain situational awareness and determine the effectiveness of an observed attack.
+- [T0295](https://niccs.cisa.gov/workforce-development/nice-framework) alerts against network traffic using packet analysis tools.
+- [T0214](https://niccs.cisa.gov/workforce-development/nice-framework) - Receive and analyze network alerts from various sources within the enterprise and determine possible causes of such alerts.
 
 ## IMPORTANT
 

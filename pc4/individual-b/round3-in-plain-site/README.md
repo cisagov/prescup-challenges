@@ -3,14 +3,14 @@
 A new blogging website has appeared, promoting tourism to Harmony-infected worlds, claiming the quarantine isn’t needed, visiting infected worlds is “fun” and “the vacation of a lifetime." Attack this new site. Gain access by elevating your privileges; analyze any sensitive documents associated with the site.
 
 **NICE Work Roles:**
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/exploitation-analyst)
-- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-operator)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0028) - Conduct and/or support authorized penetration testing on enterprise network assets.
-- [T0643](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0643) -  Deploy tools to a target and utilize them once deployed (e.g., backdoors, sniffers).
-- [T0644](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0644) - Detect exploits against targeted networks and hosts and react accordingly.
-- [T0736](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0736) - Lead or enable exploitation operations in support of organization objectives and target requirements.
+- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct and/or support authorized penetration testing on enterprise network assets.
+- [T0643](https://niccs.cisa.gov/workforce-development/nice-framework).
+- [T0644](https://niccs.cisa.gov/workforce-development/nice-framework) - Detect exploits against targeted networks and hosts and react accordingly.
+- [T0736](https://niccs.cisa.gov/workforce-development/nice-framework) - Lead or enable exploitation operations in support of organization objectives and target requirements.
 
 ## IMPORTANT
 

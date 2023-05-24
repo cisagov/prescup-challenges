@@ -4,11 +4,11 @@ Gain intel on alien life.
 
 **NICE Work Roles** 
 
-- [Threat/Warning Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/threatwarning-analyst)
+- [Threat/Warning Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0569](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0569) - Answer requests for information.  
-- [T0708](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0708) - Identify threat tactics and methodologies.
+- [T0569](https://niccs.cisa.gov/workforce-development/nice-framework) - Answer requests for information.  
+- [T0708](https://niccs.cisa.gov/workforce-development/nice-framework) - Identify threat tactics and methodologies.
 
 ## Background
 

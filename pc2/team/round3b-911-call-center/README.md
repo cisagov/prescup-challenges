@@ -4,9 +4,9 @@ A rural hospital nearby has been hit with a ransomware attack.
 
 **NICE Work Role:**
 
-  - [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst)
+  - [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-  - [System Administrator](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=System+Administrator&id=All)
+  - [System Administrator](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
 

@@ -4,14 +4,14 @@ We’ve known about the alien threat for years, and that is why we established t
 
 **NICE Work Role**
 
-- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Infrastructure+Support+Specialist&id=All)
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst&id=All)
+- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0180](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0180&description=All) - Perform system administration on specialized cyber defense applications and systems (e.g., antivirus, audit and remediation) or Virtual Private Network (VPN) devices, to include installation, configuration, maintenance, backup, and restoration.
-- [T0438](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0438&description=All) - Create, edit, and manage network access control lists on specialized cyber defense systems (e.g., firewalls and intrusion prevention systems).
-- [T0260](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0260&description=All) - Analyze identified malicious activity to determine weaknesses exploited, exploitation methods, effects on system and information.
-- [T0292](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0292&description=All) - Recommend computing environment vulnerability corrections.
+- [T0180](https://niccs.cisa.gov/workforce-development/nice-framework) devices, to include installation, configuration, maintenance, backup, and restoration.
+- [T0438](https://niccs.cisa.gov/workforce-development/nice-framework).
+- [T0260](https://niccs.cisa.gov/workforce-development/nice-framework) - Analyze identified malicious activity to determine weaknesses exploited, exploitation methods, effects on system and information.
+- [T0292](https://niccs.cisa.gov/workforce-development/nice-framework) - Recommend computing environment vulnerability corrections.
 
 ## IMPORTANT
 This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.

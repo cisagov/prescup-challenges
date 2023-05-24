@@ -3,12 +3,12 @@
 Recover an exfiltrated file from captured network traffic.
 
 **NICE Work Roles:**
-- [Cyber Defense Forensics Analyst](https://niccs.us-cert.gov/workforce-development/nice-framework/workroles?name=Cyber%20Defense%20Forensics%20Analyst)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0035](https://niccs.us-cert.gov/workforce-development/nice-framework/tasks?id=T0035&description=All) - Configure and optimize network hubs, routers, and switches (e.g., higher-level protocols, tunneling).
-- [T0532](https://niccs.us-cert.gov/workforce-development/nice-framework/tasks?id=T0532&description=All) - Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+- [T0035](https://niccs.cisa.gov/workforce-development/nice-framework).
+- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
 Babushka's Kvass and East-European Delicacies is suspected of running a Troll
 Farm operation on the side. An undercover operative has infiltrated the team,

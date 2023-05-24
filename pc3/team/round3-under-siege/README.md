@@ -5,14 +5,14 @@ Teams must monitor for and respond to anomalous traffic destined for their prote
 **Time is a factor in the scoring of this challenge. Team members must work together to be as quick and as accurate in their actions as possible to receive full credit for the challenge.** 
 
 **NICE Work Roles**
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst&id=All)
-- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Infrastructure+Support+Specialist&id=All)
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0023](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0023&description=All#) - Characterize and analyze network traffic to identify anomalous activity and potential threats to network resources.
-- [T0259](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0259&description=All#) - Use cyber defense tools for continual monitoring and analysis of system activity to identify malicious activity.
-- [T0438](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0438&description=All#) - Create, edit, and manage network access control lists on specialized cyber defense systems (e.g., firewalls and intrusion prevention systems).
+- [T0023](https://niccs.cisa.gov/workforce-development/nice-framework) - Characterize and analyze network traffic to identify anomalous activity and potential threats to network resources.
+- [T0259](https://niccs.cisa.gov/workforce-development/nice-framework) - Use cyber defense tools for continual monitoring and analysis of system activity to identify malicious activity.
+- [T0438](https://niccs.cisa.gov/workforce-development/nice-framework).
 
 ## IMPORTANT
 This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.

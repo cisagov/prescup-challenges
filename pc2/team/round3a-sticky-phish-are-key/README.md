@@ -5,13 +5,13 @@ To simulate a phishing attack, you will upload malware for a user to execute, th
 
 **Nice Work Role:** 
 
-[Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All)
+[Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**    
 
- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0028&description=All) - Conduct and/or support authorized penetration testing on enterprise network assets.
+ [T0028](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct and/or support authorized penetration testing on enterprise network assets.
  
- [T0736](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0736&description=All) - Lead or enable exploitation operations in support of organization objectives and target requirements."
+ [T0736](https://niccs.cisa.gov/workforce-development/nice-framework) - Lead or enable exploitation operations in support of organization objectives and target requirements."
 
 
 ## IMPORTANT

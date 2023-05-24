@@ -4,14 +4,14 @@ Given a Windows machine with remote access to other machines on your network, yo
 
 **NICE Work Role:**
 
-  [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Incident+Responder&id=All)
+  [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
 **NICE Tasks:**
 
-  - [T0163](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=All&description=T0163) - Perform cyber defense incident triage, to include determining scope, urgency, and potential impact, identifying the specific vulnerability, and making recommendations that enable expeditious remediation.
+  - [T0163](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform cyber defense incident triage, to include determining scope, urgency, and potential impact, identifying the specific vulnerability, and making recommendations that enable expeditious remediation.
   - 
-  - [T0485](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=All&description=T0485) - Implement security measures to resolve vulnerabilities, mitigate risks, and recommend security changes to system or system components as needed.
+  - [T0485](https://niccs.cisa.gov/workforce-development/nice-framework) - Implement security measures to resolve vulnerabilities, mitigate risks, and recommend security changes to system or system components as needed.
 
 ## IMPORTANT
 This challenge is only partially open sourced. The files in the challenge directory are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.

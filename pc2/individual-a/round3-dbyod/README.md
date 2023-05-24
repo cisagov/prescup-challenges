@@ -5,13 +5,13 @@ Analyze forensic images of a laptop and a USB and answer a few questions.
 
 **NICE Work Role:** 
 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0238](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0238&description=All) - Extract data using data carving techniques.
-- [T0397](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0397&description=All) - Perform Windows registry analysis.
-- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0532&description=All) - Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+- [T0238](https://niccs.cisa.gov/workforce-development/nice-framework) - Extract data using data carving techniques.
+- [T0397](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform Windows registry analysis.
+- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
 ## IMPORTANT
 This challenge is only partially open sourced. The files are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.

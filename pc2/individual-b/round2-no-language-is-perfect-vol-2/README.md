@@ -4,12 +4,12 @@ Identify a flaw given some source code, and then exploit the flaw.
 
 **NICE Work Role:**
 
-- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Software+Developer&id=All)
+- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0111](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0111&description=All) - Identify basic common coding flaws at a high level.
-- [T0176](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0176&description=All) - Perform secure programming and identify potential flaws in codes to mitigate vulnerabilities.
+- [T0111](https://niccs.cisa.gov/workforce-development/nice-framework) - Identify basic common coding flaws at a high level.
+- [T0176](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform secure programming and identify potential flaws in codes to mitigate vulnerabilities.
 
 ## Background
 

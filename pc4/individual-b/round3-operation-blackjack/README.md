@@ -4,12 +4,12 @@ Someone is running an illegal casino! Find the casino, exploit any vulnerability
 
 **NICE Work Roles**
 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/exploitation-analyst)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
  **NICE Tasks**
 
-- [T0641](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0641) - Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
-- [T0736](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0736) - Lead or enable exploitation operations in support of organization objectives and target requirements.
+- [T0641](https://niccs.cisa.gov/workforce-development/nice-framework) - Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
+- [T0736](https://niccs.cisa.gov/workforce-development/nice-framework) - Lead or enable exploitation operations in support of organization objectives and target requirements.
 
 ## Background
 

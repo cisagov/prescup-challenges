@@ -4,14 +4,14 @@ Enumerate network and report answers to headquarters.
 
 **NICE Work Role:**
 
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst&id=All)
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0023](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0023&description=All) - Characterize and analyze network traffic to identify anomalous activity and potential threats to network resources.
-- [T0297](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0297&description=All) - Identify applications and operating systems of a network device based on network traffic.
-- [T0299](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0299&description=All) - Identify network mapping and operating system (OS) fingerprinting activities.
-- [T0526](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0526&description=All) - Provides cybersecurity recommendations to leadership based on significant threats and vulnerabilities
+- [T0023](https://niccs.cisa.gov/workforce-development/nice-framework) - Characterize and analyze network traffic to identify anomalous activity and potential threats to network resources.
+- [T0297](https://niccs.cisa.gov/workforce-development/nice-framework) - Identify applications and operating systems of a network device based on network traffic.
+- [T0299](https://niccs.cisa.gov/workforce-development/nice-framework) fingerprinting activities.
+- [T0526](https://niccs.cisa.gov/workforce-development/nice-framework) - Provides cybersecurity recommendations to leadership based on significant threats and vulnerabilities
 
 
 ## IMPORTANT

@@ -4,13 +4,13 @@ Exploit common web application vulnerabilities.
 
 **NICE Work Roles**
 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/exploitation-analyst)
-- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/software-developer)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0266](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0266) - Perform penetration testing as required for new or updated applications.
-- [T0171](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0171) - Perform integrated quality assurance testing for security functionality and resiliency attack.
+- [T0266](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform penetration testing as required for new or updated applications.
+- [T0171](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform integrated quality assurance testing for security functionality and resiliency attack.
 
 
 ## Getting Started

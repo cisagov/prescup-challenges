@@ -4,16 +4,16 @@
 Teams must investigate compromised data and determine what the various malicious actors were able to retrieve by replicating their actions, methods, and techniques.
 
 **NICE Work Roles**
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/workroles?name=Cyber+Defense+Analyst&id=All)
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/workroles?name=Exploitation+Analyst&id=All)
-- [Cyber Forensic Analyst](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Cyber Forensic Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0258](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0258&description=All) - Provide timely detection, identification, and alerting of possible attacks/intrusions, anomalous activities, and misuse activities and distinguish these incidents and events from benign activities.
-- [T0260](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0260&description=All) - Analyze identified malicious activity to determine weaknesses exploited, exploitation methods, effects on system and information.
-- [T0028](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0028&description=All) - Conduct and/or support authorized penetration testing on enterprise network assets.
-- [T0532](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All) Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+- [T0258](https://niccs.cisa.gov/workforce-development/nice-framework) - Provide timely detection, identification, and alerting of possible attacks/intrusions, anomalous activities, and misuse activities and distinguish these incidents and events from benign activities.
+- [T0260](https://niccs.cisa.gov/workforce-development/nice-framework) - Analyze identified malicious activity to determine weaknesses exploited, exploitation methods, effects on system and information.
+- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct and/or support authorized penetration testing on enterprise network assets.
+- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
 <!-- cut -->
 

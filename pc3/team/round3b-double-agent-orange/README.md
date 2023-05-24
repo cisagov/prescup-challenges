@@ -4,17 +4,17 @@ We‘ve discovered that one of our own staff is an alien! Erin from accounting, 
 
 **NICE Work Role**
 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0075](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0075&description=All) - Provide technical summary of findings in accordance with established reporting procedures.
+- [T0075](https://niccs.cisa.gov/workforce-development/nice-framework) - Provide technical summary of findings in accordance with established reporting procedures.
 
-- [T0167](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0167&description=All) - Perform file signature analysis.
+- [T0167](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform file signature analysis.
 
-- [T0238](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0238&description=All) - Extract data using data carving techniques (e.g., Forensic Tool Kit [FTK], Foremost).
+- [T0238](https://niccs.cisa.gov/workforce-development/nice-framework).
 
-- [T0396](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0396&description=All) - Process image with appropriate tools depending on analyst's goals.
+- [T0396](https://niccs.cisa.gov/workforce-development/nice-framework) - Process image with appropriate tools depending on analyst's goals.
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download

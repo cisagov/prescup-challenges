@@ -3,10 +3,10 @@
 Congratulations, prospective crew members. You are well on your way to becoming a fully-fledged crew member! These missions are designed to be a basic introduction to various systems onboard the ship.
 
 **NICE Work Roles**
-- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Vulnerability+Assessment+Analyst&id=All)
+- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
  
 **NICE Tasks**
-- [T0028](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0028&description=All) - Conduct and/or support authorized penetration testing on enterprise network assets.
+- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct and/or support authorized penetration testing on enterprise network assets.
 
 ## Background
 

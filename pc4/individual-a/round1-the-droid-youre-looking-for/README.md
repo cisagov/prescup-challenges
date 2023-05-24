@@ -4,14 +4,14 @@ Examine a forensic disk image of an Android mobile device.
 
 **NICE Work Roles**
 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-forensics-analyst)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0049](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0049) - Decrypt seized data using technical means.
-- [T0103](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0103) - Examine recovered data for information of relevance to the issue at hand.
-- [T0216](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0216) - Recognize and accurately report forensic artifacts indicative of a particular operating system.
-- [T0396](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0396) - Process image with appropriate tools depending on analyst's goals.
+- [T0049](https://niccs.cisa.gov/workforce-development/nice-framework) - Decrypt seized data using technical means.
+- [T0103](https://niccs.cisa.gov/workforce-development/nice-framework) - Examine recovered data for information of relevance to the issue at hand.
+- [T0216](https://niccs.cisa.gov/workforce-development/nice-framework) - Recognize and accurately report forensic artifacts indicative of a particular operating system.
+- [T0396](https://niccs.cisa.gov/workforce-development/nice-framework) - Process image with appropriate tools depending on analyst's goals.
 
  ## ⚠️ Large Files ⚠️
  

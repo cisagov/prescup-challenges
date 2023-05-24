@@ -3,15 +3,15 @@
 You must analyze traffic, write scripts, and execute attacks to gain access to any files that are on the private web server being hosted inside the organization's network.  
 
 **NICE Work Role:**
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All)
-- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Software+Developer&id=All)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
 **NICE Tasks:**
-- [T0077](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0077&description=All) - Develop secure code and error handling.
-- [T0176](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0176&description=All) - Perform secure programming and identify potential flaws in codes to mitigate vulnerabilities.
-- [T0570](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0570&description=All) - Apply and utilize authorized cyber capabilities to enable access to targeted networks.
-- [T0591](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0591&description=All) - Perform analysis for target infrastructure exploitation activities.
+- [T0077](https://niccs.cisa.gov/workforce-development/nice-framework) - Develop secure code and error handling.
+- [T0176](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform secure programming and identify potential flaws in codes to mitigate vulnerabilities.
+- [T0570](https://niccs.cisa.gov/workforce-development/nice-framework) - Apply and utilize authorized cyber capabilities to enable access to targeted networks.
+- [T0591](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform analysis for target infrastructure exploitation activities.
 
 ## IMPORTANT
 

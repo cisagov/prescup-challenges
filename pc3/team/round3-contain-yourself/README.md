@@ -3,18 +3,18 @@ Harden the configuration of a Kubernetes cluster.
 
 **NICE Work Role:**
 
-[Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Vulnerability+Assessment+Analyst&id=All)
+[Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-[Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst&id=All)
+[Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-[Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Infrastructure+Support+Specialist&id=All)
+[Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-[Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Network+Operations+Specialist&id=All)
+[Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0142](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0142&description=All) - Maintain knowledge of applicable cyber defense policies, regulations, and compliance documents specifically related to cyber defense auditing.
-- [T0160](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0160&description=All) - Patch network vulnerabilities to ensure that information is safeguarded against outside parties.
+- [T0142](https://niccs.cisa.gov/workforce-development/nice-framework) - Maintain knowledge of applicable cyber defense policies, regulations, and compliance documents specifically related to cyber defense auditing.
+- [T0160](https://niccs.cisa.gov/workforce-development/nice-framework) - Patch network vulnerabilities to ensure that information is safeguarded against outside parties.
 
 # Underground Cluster
 

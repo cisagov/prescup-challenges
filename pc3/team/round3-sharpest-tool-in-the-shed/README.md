@@ -4,18 +4,18 @@ Newly developed admin-tools.us needs to be investigated due to the high volume o
 
 **NICE Work Roles:**
 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Software+Developer&id=All)
+- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework)
 
     
 **NICE Tasks:**  
 
-- [T0695](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0695&description=All) : Examine intercept-related metadata and content with an understanding of targeting significance.
+- [T0695](https://niccs.cisa.gov/workforce-development/nice-framework) : Examine intercept-related metadata and content with an understanding of targeting significance.
 
-- [T0111](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0111&description=All) : Identify basic common coding flaws at a high level.
+- [T0111](https://niccs.cisa.gov/workforce-development/nice-framework) : Identify basic common coding flaws at a high level.
 
-- [T0228](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0228&description=All) : Store, retrieve, and manipulate data for analysis of system capabilities and requirements.
+- [T0228](https://niccs.cisa.gov/workforce-development/nice-framework) : Store, retrieve, and manipulate data for analysis of system capabilities and requirements.
 
 ## Background
 

@@ -5,15 +5,15 @@ players must identify whether a set of transactions occurring at a future time
 are descendants of, or otherwise related to, the known-bad transaction.
 
 **NICE Work Roles:**  
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber%20Defense%20Forensics%20Analyst)  
-- [Threat/Warning Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Threat%2FWarning%20Analyst)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)  
+- [Threat/Warning Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0103](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0103&description=All) - Examine recovered data for information of relevance to the issue at hand  
-- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0532&description=All) - Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information  
-- [T0783](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0783&description=All) - Provide current intelligence support to critical internal/external stakeholders as appropriate  
-- [T0786](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0786&description=All) - Provide information and assessments for the purposes of informing leadership and customers; developing and refining objectives; supporting operation planning and execution; and assessing the effects of operations  
+- [T0103](https://niccs.cisa.gov/workforce-development/nice-framework) - Examine recovered data for information of relevance to the issue at hand  
+- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information  
+- [T0783](https://niccs.cisa.gov/workforce-development/nice-framework) - Provide current intelligence support to critical internal/external stakeholders as appropriate  
+- [T0786](https://niccs.cisa.gov/workforce-development/nice-framework) - Provide information and assessments for the purposes of informing leadership and customers; developing and refining objectives; supporting operation planning and execution; and assessing the effects of operations  
 
 ## Background
 

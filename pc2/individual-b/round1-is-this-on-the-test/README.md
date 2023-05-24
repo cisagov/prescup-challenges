@@ -4,13 +4,13 @@ Given some internal traffic packet captures and a single penetration testing sys
 
 **NICE Work Role:** 
 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-  - [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0028&description=All) - Conduct and/or support authorized penetration testing on enterprise network assets.
-  - [T0570](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0570&description=All) - Apply and utilize authorized cyber capabilities to enable access to targeted networks.
-  - [T0591](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0591&description=All) - Perform analysis for target infrastructure exploitation activities.
-  - [T0695](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0695&description=All) - Examine intercept-related metadata and content with an understanding of targeting significance.
+  - [T0028](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct and/or support authorized penetration testing on enterprise network assets.
+  - [T0570](https://niccs.cisa.gov/workforce-development/nice-framework) - Apply and utilize authorized cyber capabilities to enable access to targeted networks.
+  - [T0591](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform analysis for target infrastructure exploitation activities.
+  - [T0695](https://niccs.cisa.gov/workforce-development/nice-framework) - Examine intercept-related metadata and content with an understanding of targeting significance.
 
 ## IMPORTANT
 This challenge is only partially open sourced. The files in the [challenge directory](challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.

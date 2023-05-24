@@ -6,18 +6,18 @@
 
   **NICE Work Role:**
 
-  [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Network+Operations+Specialist&id=All)
+  [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-  [Cyber Defense Analyst](https://niccs.us-cert.gov/workforce-development/nice-framework/workroles?name_selective=Cyber+Defense+Analyst&fwid=All)
+  [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
   **NICE Tasks:**
 
-  - [T0035](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=All&description=T0035) - Configure and optimize network hubs, routers, and switches(e.g., higher-level protocols, tunneling).
+  - [T0035](https://niccs.cisa.gov/workforce-development/nice-framework).
 
-  - [T0081](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=All&description=T0081) - Diagnose network connectivity problem
+  - [T0081](https://niccs.cisa.gov/workforce-development/nice-framework) - Diagnose network connectivity problem
 
-  - [T0162](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=All&description=T0162) - Perform backup and recovery of databases to ensure data integrity. 
+  - [T0162](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform backup and recovery of databases to ensure data integrity. 
 
 ## Note
 

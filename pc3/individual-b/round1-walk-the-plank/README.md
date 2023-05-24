@@ -4,16 +4,16 @@ Exploit a given program to find the tokens.
 
   **NICE Work Role:**
 
-  [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All)
+  [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-  [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Vulnerability+Assessment+Analyst&id=All)
+  [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
   **NICE Tasks:**
 
-  - [T0641](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0641&description=All)  - Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.  
+  - [T0641](https://niccs.cisa.gov/workforce-development/nice-framework)  - Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.  
 
-  - [T0736](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0736&description=All) - Lead or enable exploitation operations in support of organization objectives and target requirements.
+  - [T0736](https://niccs.cisa.gov/workforce-development/nice-framework) - Lead or enable exploitation operations in support of organization objectives and target requirements.
 
 ## Background
 

@@ -6,11 +6,11 @@ malicious patch, or an honest mistake that turned out to be exploitable by your 
 changes are attributed and carefully tracked in a Git repository. Your goal for this challenge is to identify the specific change (commit) causing the suspicious behavior (including the identity of its author), for further review.
 
 **NICE Work Roles**
-- [Research & Development Specialist](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/workroles?name=Research+%26+Development+Specialist&id=All)
+- [Research & Development Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0409](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0409&description=All) - Troubleshoot prototype design and process issues throughout the product design, development, and pre-launch phases.
-- [T0410](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0410&description=All) - Identify functional- and security-related features to find opportunities for new capability development to exploit or mitigate vulnerabilities.
+- [T0409](https://niccs.cisa.gov/workforce-development/nice-framework) - Troubleshoot prototype design and process issues throughout the product design, development, and pre-launch phases.
+- [T0410](https://niccs.cisa.gov/workforce-development/nice-framework) - Identify functional- and security-related features to find opportunities for new capability development to exploit or mitigate vulnerabilities.
 
 ## Background
 

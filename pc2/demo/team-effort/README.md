@@ -6,10 +6,10 @@ Find the target IP and SSH port. Connect and grab token. Easy!
 
 **NICE Work Role:**   
 
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst&id=All)
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-- [T0299](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0299&description=All) - Identify network mapping and operating system (OS) fingerprinting activities.
+- [T0299](https://niccs.cisa.gov/workforce-development/nice-framework) fingerprinting activities.
 
 ## Setup
 For this challenge you'll need to two virtual machines on a the 192.168.33.0/24 subnet (one must be Ubuntu VM). Move the files in the challenge folder into the Ubuntu vm and run the startup.sh file. When ran this should update your netplan and ssh configurations so that you have a new IP address and port number for that IP address.

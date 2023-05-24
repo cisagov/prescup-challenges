@@ -4,11 +4,11 @@ You must analyze PCAP files to answer questions regarding the perpetrator of net
 
 **Nice Work Role:**
 
-- [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Network+Operations+Specialist&id=All)
+- [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-- [T0081](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0081&description=All) - Diagnose network connectivity problems  
-- [T0153](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0153&description=All) -  Monitor network capacity and performance"
+- [T0081](https://niccs.cisa.gov/workforce-development/nice-framework) - Diagnose network connectivity problems  
+- [T0153](https://niccs.cisa.gov/workforce-development/nice-framework) -  Monitor network capacity and performance"
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download

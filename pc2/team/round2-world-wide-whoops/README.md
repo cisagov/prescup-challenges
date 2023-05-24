@@ -5,15 +5,15 @@ Challengers must read code for websites to find potential security vulnerabiliti
 
 **NICE Work Roles:**   
 
-- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Vulnerability+Assessment+Analyst&id=All)
+- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Software+Developer&id=All)   
+- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework)   
 
 **NICE Tasks:** 
 
-- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0028&description=All) - Collaborates to identify access and collection gaps that can be satisfied through cyber collection and/or preparation activities. Leverages all authorized resources and analytic techniques to penetrate targeted networks.  
+- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework) - Collaborates to identify access and collection gaps that can be satisfied through cyber collection and/or preparation activities. Leverages all authorized resources and analytic techniques to penetrate targeted networks.  
 
-- [T0176](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0176&description=All) - Perform secure programming and identify potential flaws in codes to mitigate vulnerabilities.
+- [T0176](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform secure programming and identify potential flaws in codes to mitigate vulnerabilities.
 
 
 ## IMPORTANT

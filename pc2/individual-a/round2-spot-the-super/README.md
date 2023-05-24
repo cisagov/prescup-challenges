@@ -4,15 +4,15 @@ Develop an IDS rule to alert on PostgreSQL superuser account creation. Familiari
 
 **NICE Work Role:** 
 
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst)
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0023](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0023&description=All) - Characterize and analyze network traffic to identify anomalous activity and potential threats to network resources.
+- [T0023](https://niccs.cisa.gov/workforce-development/nice-framework) - Characterize and analyze network traffic to identify anomalous activity and potential threats to network resources.
 
-- [T0295](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0295&description=All) - Validate intrusion detection system (IDS) alerts against network traffic using packet analysis tools.  
+- [T0295](https://niccs.cisa.gov/workforce-development/nice-framework) alerts against network traffic using packet analysis tools.  
 
-- [T0310](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0310&description=All) - Assist in the construction of signatures which can be implemented on cyber defense network tools in response to new or observed threats within the network environment or enclave.  
+- [T0310](https://niccs.cisa.gov/workforce-development/nice-framework) - Assist in the construction of signatures which can be implemented on cyber defense network tools in response to new or observed threats within the network environment or enclave.  
 
 ## Background
 

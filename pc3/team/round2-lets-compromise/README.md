@@ -5,17 +5,17 @@
 
   **NICE Work Roles:**   
 
-  [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Incident+Responder&id=All)
+  [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-  [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber%20Defense%20Analyst&id=All&fwid=All&name_selective=Cyber%20Defense%20Analyst)
+  [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
   **NICE Tasks:**
 
-  - [T0041](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0041&description=All) -  Coordinate and provide expert technical support to enterprise-wide cyber defense technicians to resolve cyber defense incidents.
-  - [T0023](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0023&description=All) - Characterize and analyze network traffic to identify anomalous activity and potential threats to network resources.
-  - [T0258](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0258&description=All) - Provide timely detection, identification, and alerting of possible attacks/intrusions, anomalous activities, and misuse activities and distinguish these incidents and events from benign activities.
-  - [T0296](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0296&description=All) -  Isolate and remove malware. 
+  - [T0041](https://niccs.cisa.gov/workforce-development/nice-framework) -  Coordinate and provide expert technical support to enterprise-wide cyber defense technicians to resolve cyber defense incidents.
+  - [T0023](https://niccs.cisa.gov/workforce-development/nice-framework) - Characterize and analyze network traffic to identify anomalous activity and potential threats to network resources.
+  - [T0258](https://niccs.cisa.gov/workforce-development/nice-framework) - Provide timely detection, identification, and alerting of possible attacks/intrusions, anomalous activities, and misuse activities and distinguish these incidents and events from benign activities.
+  - [T0296](https://niccs.cisa.gov/workforce-development/nice-framework) -  Isolate and remove malware. 
 
 ## IMPORTANT
 This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.

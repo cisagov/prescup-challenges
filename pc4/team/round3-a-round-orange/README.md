@@ -4,15 +4,15 @@ You and your team have been hired by the Aurellian Empire to discover who is run
 
 **NICE Work Roles** 
 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/exploitation-analyst)
-- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-operator)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0570](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0570) - Apply and utilize authorized cyber capabilities to enable access to targeted networks.
-- [T0641](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0641) - Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
-- [T0664](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0664) - Develop new techniques for gaining and keeping access to target systems.
-- [T0724](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0724) - Identify potential points of strength and vulnerability within a network.
+- [T0570](https://niccs.cisa.gov/workforce-development/nice-framework) - Apply and utilize authorized cyber capabilities to enable access to targeted networks.
+- [T0641](https://niccs.cisa.gov/workforce-development/nice-framework) - Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
+- [T0664](https://niccs.cisa.gov/workforce-development/nice-framework) - Develop new techniques for gaining and keeping access to target systems.
+- [T0724](https://niccs.cisa.gov/workforce-development/nice-framework) - Identify potential points of strength and vulnerability within a network.
 
 ## IMPORTANT
 

@@ -4,18 +4,18 @@ Exploit a poor code auditing pipeline to gain indirect access to a web server.
 
 **NICE Work Roles:**
 
-[Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Software+Developer&id=All)
+[Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-[Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All)
+[Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
 **NICE Tasks:**
 
-- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0028&description=All) - Conduct and/or support authorized penetration testing on enterprise network assets.
+- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct and/or support authorized penetration testing on enterprise network assets.
 
-- [T0266](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0266&description=All) - Perform penetration testing as required for new or updated applications.
+- [T0266](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform penetration testing as required for new or updated applications.
 
-- [T0324](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0324&description=All) - Direct software programming and development of documentation.
+- [T0324](https://niccs.cisa.gov/workforce-development/nice-framework) - Direct software programming and development of documentation.
 
 ## IMPORTANT
 

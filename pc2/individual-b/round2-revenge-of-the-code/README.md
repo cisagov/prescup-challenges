@@ -3,14 +3,14 @@ Players will be required to analyze, write, optimize, or correct pieces of code 
 
 **NICE Work Role:** 
 
-- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Software+Developer&id=All)
+- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0046](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0046&description=All) - Correct errors by making appropriate changes and rechecking the program to ensure that desired results are produced.
-- [T0111](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0111&description=All) - Identify basic common coding flaws at a high level.
-- [T0436](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0436&description=All) - Conduct trial runs of programs and software applications to ensure that the desired information is produced and instructions and security levels are correct.
-- [T0553](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0553&description=All) - Apply cybersecurity functions (e.g., encryption, access control, and identity management) to reduce exploitation opportunities.
+- [T0046](https://niccs.cisa.gov/workforce-development/nice-framework) - Correct errors by making appropriate changes and rechecking the program to ensure that desired results are produced.
+- [T0111](https://niccs.cisa.gov/workforce-development/nice-framework) - Identify basic common coding flaws at a high level.
+- [T0436](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct trial runs of programs and software applications to ensure that the desired information is produced and instructions and security levels are correct.
+- [T0553](https://niccs.cisa.gov/workforce-development/nice-framework) to reduce exploitation opportunities.
 
 ## Background
 You have been given four programming related problems to solve. Each problem will provide you with one or more tokens for submission towards the overall completion of this challenge. Problems will require you to analyze code as well as ask you to write your own code to efficiently complete the required tasks.

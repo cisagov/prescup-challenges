@@ -4,11 +4,11 @@ Analyze a forensic image to investigate a service outage.
 
 **NICE Work Roles** 
 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-forensics-analyst)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0532) - Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download [here](https://presidentscup.cisa.gov/files/pc4/team-round1-docking-ship-largefiles.zip) to get started. The zipped file is ~5GBs and the extracted artifact is ~15GBs.

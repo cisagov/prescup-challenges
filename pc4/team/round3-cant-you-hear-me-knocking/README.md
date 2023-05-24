@@ -4,14 +4,14 @@ Recover concealed information from a streamed video and exploit the target.
 
 **NICE Work Roles**
 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-forensics-analyst)
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/exploitation-analyst)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0103](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0103) - Examine recovered data for information of relevance to the issue at hand.
-- [T0240](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0240) - Capture and analyze network traffic associated with malicious activities using network monitoring tools.
-- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0028) - Conduct and/or support authorized penetration testing on enterprise network assets.
+- [T0103](https://niccs.cisa.gov/workforce-development/nice-framework) - Examine recovered data for information of relevance to the issue at hand.
+- [T0240](https://niccs.cisa.gov/workforce-development/nice-framework) - Capture and analyze network traffic associated with malicious activities using network monitoring tools.
+- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct and/or support authorized penetration testing on enterprise network assets.
 
 ## IMPORTANT
 

@@ -4,12 +4,12 @@ Decrypt AES-256 files with help from passwords, salts, IVs, keys, and logs.
 
 **NICE Work Role:** 
 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0028&description=All) - Conduct and/or support authorized penetration testing on enterprise network assets.  
-- [T0572](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0572&description=All) - Apply cyber collection, environment preparation and engagement expertise to enable new exploitation and/or continued collection operations, or in support of customer requirements."
+- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct and/or support authorized penetration testing on enterprise network assets.  
+- [T0572](https://niccs.cisa.gov/workforce-development/nice-framework) - Apply cyber collection, environment preparation and engagement expertise to enable new exploitation and/or continued collection operations, or in support of customer requirements."
 
 ## Background
 You are conducting a penetration test. Your team has accessed encrypted files. If you are able to crack this data at rest, then the penetration test is a success as you've shown that the data the client prioritizes was lost and compromised.

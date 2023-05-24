@@ -7,15 +7,15 @@ Your mission is to place a firewall rule in front of the drive controller's netw
 The document specifying the exact ordering of the fields in the data structure representing a drive command was also misplaced, but no worries, we can provide a binary program used to convert numeric values on the command line into the requisite hex string that can be sent to the drive controller over the network.
 
 **NICE Work Roles:**
-- [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/workroles?name=Network+Operations+Specialist&id=All)
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/workroles?name=Cyber+Defense+forensics+Analyst&id=All)
-- [Software Developer](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/workroles?name=Software+Developer&id=All)
+- [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-- [T0117](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0117&description=All) - Identify security implications and apply methodologies within centralized and decentralized environments across the enterprise's computer systems in software development.
-- [T0118](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0118&description=All) - Identify security issues around steady state operation and management of software and incorporate security measures that must be taken when a product reaches its end of life.
-- [T0175](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0175&description=All) - Perform real-time cyber defense incident handling (e.g., forensic collections, intrusion correlation and tracking, threat analysis, and direct system remediation) tasks to support deployable Incident Response Teams (IRTs).
-- [T0182](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0182&description=All) - Perform tier 1, 2, and 3 malware analysis.
+- [T0117](https://niccs.cisa.gov/workforce-development/nice-framework) - Identify security implications and apply methodologies within centralized and decentralized environments across the enterprise's computer systems in software development.
+- [T0118](https://niccs.cisa.gov/workforce-development/nice-framework) - Identify security issues around steady state operation and management of software and incorporate security measures that must be taken when a product reaches its end of life.
+- [T0175](https://niccs.cisa.gov/workforce-development/nice-framework).
+- [T0182](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform tier 1, 2, and 3 malware analysis.
 
 ## Background
 

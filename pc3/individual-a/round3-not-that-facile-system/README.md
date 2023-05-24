@@ -5,14 +5,14 @@ Perform file system forensics.
 
 **NICE Work Role:**
 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
 **NICE Tasks:**
 
-- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0532&description=All) - Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
-- [T0286](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0286&description=All) - Perform file system forensic analysis.
+- [T0286](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform file system forensic analysis.
 
 ## IMPORTANT
 

@@ -3,13 +3,13 @@
 Assess and reverse-engineer a rapidly spreading novel ransomware.
 
 **NICE Work Roles:**
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-- - [T0049](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0049&description=All) - Decrypt seized data using technical means.
-- - [T0103](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0103&description=All) - Examine recovered data for information of relevance to the issue at hand.
-- - [T0113](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0113&description=All) - Identify digital evidence for examination and analysis in such a way as to avoid unintentional alteration.
-- - [T0286](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0286&description=All) - Perform file system forensic analysis.
+- - [T0049](https://niccs.cisa.gov/workforce-development/nice-framework) - Decrypt seized data using technical means.
+- - [T0103](https://niccs.cisa.gov/workforce-development/nice-framework) - Examine recovered data for information of relevance to the issue at hand.
+- - [T0113](https://niccs.cisa.gov/workforce-development/nice-framework) - Identify digital evidence for examination and analysis in such a way as to avoid unintentional alteration.
+- - [T0286](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform file system forensic analysis.
 
 
 

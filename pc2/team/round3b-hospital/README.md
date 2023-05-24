@@ -4,13 +4,13 @@ A nearby rural hospital has been hit with a ransomware attack. This small hospit
 
 **NICE Work Role:** 
 
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst&id=All)
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber%20Defense%20Incident%20Responder)
+- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0278](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0278&description=All) - Collect intrusion artifacts (e.g., source code, malware, Trojans) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
+- [T0278](https://niccs.cisa.gov/workforce-development/nice-framework) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
 ## IMPORTANT
 There are no downloadable artifacts for this challenge. The full challenge can be completed on the hosted site.

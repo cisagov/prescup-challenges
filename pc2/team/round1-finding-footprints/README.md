@@ -4,14 +4,14 @@ The user must analyze disk image files to determine information about a planned 
 
 **NICE Work Role:** 
 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/digital-forensics)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0036](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0036&description=All) - Confirm what is known about an intrusion and discover new information, if possible, after identifying intrusion via dynamic analysis.  
-- [T0165](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0165&description=All) - Perform dynamic analysis to boot an image of a drive (without necessarily having the original drive) to see the intrusion as the user may have seen it, in a native environment.  
-- [T0286](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0286&description=All) - Perform file system forensic analysis.  
--  [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0532&description=All) - Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+- [T0036](https://niccs.cisa.gov/workforce-development/nice-framework) - Confirm what is known about an intrusion and discover new information, if possible, after identifying intrusion via dynamic analysis.  
+- [T0165](https://niccs.cisa.gov/workforce-development/nice-framework) to see the intrusion as the user may have seen it, in a native environment.  
+- [T0286](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform file system forensic analysis.  
+-  [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
 ## IMPORTANT
 This challenge does not have any downloadable artifacts. The full challenge can be completed on the hosted site.

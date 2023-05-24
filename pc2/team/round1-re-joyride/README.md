@@ -13,15 +13,15 @@ copy of the Detours library with a provided example and some starting code.
 
 **NICE Work Roles:**
 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0736](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0736&description=All): Lead or enable exploitation operations in support of organization objectives and target requirements.
+- [T0736](https://niccs.cisa.gov/workforce-development/nice-framework): Lead or enable exploitation operations in support of organization objectives and target requirements.
 
-- [T0641](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0641&description=All): Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
+- [T0641](https://niccs.cisa.gov/workforce-development/nice-framework): Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
 
-- [T0720](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0720&description=All): Identify gaps in our understanding of target technology and developing innovative collection approaches.
+- [T0720](https://niccs.cisa.gov/workforce-development/nice-framework): Identify gaps in our understanding of target technology and developing innovative collection approaches.
 
 ## Background
 

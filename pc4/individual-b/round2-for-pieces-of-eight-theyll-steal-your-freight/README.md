@@ -4,13 +4,13 @@ Stop the space pirates from obtaining our shipping route information by planting
 
 **NICE Work Roles**
 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/exploitation-analyst)
-- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-operator)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0028)- Conduct and/or support authorized penetration testing on enterprise network assets.
-- [T0616](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0616)-  Conduct network scouting and vulnerability analyses of systems within a network.
+- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework)- Conduct and/or support authorized penetration testing on enterprise network assets.
+- [T0616](https://niccs.cisa.gov/workforce-development/nice-framework)-  Conduct network scouting and vulnerability analyses of systems within a network.
 
 ## IMPORTANT
 

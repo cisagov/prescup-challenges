@@ -4,12 +4,12 @@ Intercept a brute-force login attempt in real-time to discover details behind th
 
 **NICE Work Role:**
 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber%20Defense%20Incident%20Responder)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 - [Software Developer](hhttps://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Software%20Developer)
 
 **NICE Tasks:**  
-- [T0009](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0009&description=All)  - Analyze information to determine, recommend, and plan the development of a new application or modification of an existing application
-- [T0500](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0500&description=All) - Modify and maintain existing software to correct errors, to adapt it to new hardware, or to upgrade interfaces and improve performance.
+- [T0009](https://niccs.cisa.gov/workforce-development/nice-framework)  - Analyze information to determine, recommend, and plan the development of a new application or modification of an existing application
+- [T0500](https://niccs.cisa.gov/workforce-development/nice-framework) - Modify and maintain existing software to correct errors, to adapt it to new hardware, or to upgrade interfaces and improve performance.
 
 
 ## Setting Up

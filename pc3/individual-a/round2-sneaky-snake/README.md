@@ -5,17 +5,17 @@ Some files have been recently updated, including a script used internally for yo
 
   **NICE Work Roles:**   
 
-  - [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+  - [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-  - [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber%20Defense%20Analyst&id=All&fwid=All&name_selective=Cyber%20Defense%20Analyst)
+  - [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
   **NICE Tasks:**
 
-  - [T0036](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0036&description=All) - Confirm what is known about an intrusion and discover new information, if possible, after identifying intrusion via dynamic analysis.
-  - [T0400](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0400&description=All) - Correlate incident data and perform cyber defense reporting.
-  - [T0258](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0258&description=All) - Provide timely detection, identification, and alerting of possible attacks/intrusions, anomalous activities, and misuse activities and distinguish these incidents and events from benign activities.
-  - [T0166](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0166&description=All) - Perform event correlation using information gathered from a variety of sources within the enterprise to gain situational awareness and determine the effectiveness of an observed attack.
+  - [T0036](https://niccs.cisa.gov/workforce-development/nice-framework) - Confirm what is known about an intrusion and discover new information, if possible, after identifying intrusion via dynamic analysis.
+  - [T0400](https://niccs.cisa.gov/workforce-development/nice-framework) - Correlate incident data and perform cyber defense reporting.
+  - [T0258](https://niccs.cisa.gov/workforce-development/nice-framework) - Provide timely detection, identification, and alerting of possible attacks/intrusions, anomalous activities, and misuse activities and distinguish these incidents and events from benign activities.
+  - [T0166](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform event correlation using information gathered from a variety of sources within the enterprise to gain situational awareness and determine the effectiveness of an observed attack.
 
 
   ## Setting Up

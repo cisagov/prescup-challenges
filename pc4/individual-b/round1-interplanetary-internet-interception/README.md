@@ -4,12 +4,12 @@ Find the Default Gateway, Intercept/Decrypt TLS Traffic, and Analyze the Spacesh
 
 **NICE Work Roles**
 
-- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-operator)
+- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0567](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0567) - Analyze target operational architecture for ways to gain access.
-- [T0643](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0643) - Deploy tools to a target and utilize them once deployed (e.g., backdoors, sniffers)
+- [T0567](https://niccs.cisa.gov/workforce-development/nice-framework) - Analyze target operational architecture for ways to gain access.
+- [T0643](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 ## Background
 

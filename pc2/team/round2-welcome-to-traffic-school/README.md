@@ -4,13 +4,13 @@ Teams will be required to properly configure two network firewalls as well as lo
 
 **NICE Work Role:** 
 
-- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Infrastructure+Support+Specialist&id=All)
+- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0335](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0335&description=All) - Build, install, configure, and test dedicated cyber defense hardware.
-- [T0420](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0420&description=All) - Administer test bed(s), and test and evaluate applications, hardware infrastructure, rules/signatures, access controls, and configurations of platforms managed by service provider(s).
-- [T0438](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0438&description=All) - Create, edit, and manage network access control lists on specialized cyber defense systems (e.g., firewalls and intrusion prevention systems).
+- [T0335](https://niccs.cisa.gov/workforce-development/nice-framework) - Build, install, configure, and test dedicated cyber defense hardware.
+- [T0420](https://niccs.cisa.gov/workforce-development/nice-framework).
+- [T0438](https://niccs.cisa.gov/workforce-development/nice-framework).
 
 ## IMPORTANT
 This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.

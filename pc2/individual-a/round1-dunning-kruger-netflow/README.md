@@ -5,13 +5,13 @@ of the events that occurred, and generate a timeline analysis thereof.
 
 **NICE Work Roles:**
 
-- [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Network%20Operations%20Specialist)
-- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber%20Defense%20Incident%20Responder)
+- [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0160](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0160&description=All) - Patch network vulnerabilities to ensure that information is safeguarded against outside parties.
-- [T0161](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0161&description=All) - Perform analysis of log files from a variety of sources to identify possible threats to network security.
+- [T0160](https://niccs.cisa.gov/workforce-development/nice-framework) - Patch network vulnerabilities to ensure that information is safeguarded against outside parties.
+- [T0161](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform analysis of log files from a variety of sources to identify possible threats to network security.
 
 ## Background
 

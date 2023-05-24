@@ -4,14 +4,14 @@ The Aurellian Empire recently found some malicious scripts on one of its machine
 
 **NICE Work Roles**
 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-forensics-analyst)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0103](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0103) - Examine recovered data for information of relevance to the issue at hand.
-- [T0240](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0240) - Capture and analyze network traffic associated with malicious activities using network monitoring tools.
-- [T0036](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0036) - Confirm what is known about an intrusion and discover new information, if possible, after identifying intrusion via dynamic analysis.
-- [T0288](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0288) - Perform static malware analysis.
+- [T0103](https://niccs.cisa.gov/workforce-development/nice-framework) - Examine recovered data for information of relevance to the issue at hand.
+- [T0240](https://niccs.cisa.gov/workforce-development/nice-framework) - Capture and analyze network traffic associated with malicious activities using network monitoring tools.
+- [T0036](https://niccs.cisa.gov/workforce-development/nice-framework) - Confirm what is known about an intrusion and discover new information, if possible, after identifying intrusion via dynamic analysis.
+- [T0288](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform static malware analysis.
 
 ## IMPORTANT
 

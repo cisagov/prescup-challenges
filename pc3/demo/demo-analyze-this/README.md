@@ -5,12 +5,12 @@ Analyze a Packet Capture (pcap) file.
 
   **NICE Work Roles:**   
 
-  [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst&id=All)
+  [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
   **NICE Tasks:**
 
-  - [T0023](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0023&description=All) - Characterize and analyze network traffic to identify anomalous activity and potential threats to network resources.
+  - [T0023](https://niccs.cisa.gov/workforce-development/nice-framework) - Characterize and analyze network traffic to identify anomalous activity and potential threats to network resources.
 
 
 ## Background

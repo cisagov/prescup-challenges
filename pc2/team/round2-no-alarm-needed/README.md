@@ -3,11 +3,11 @@
 Investigate a Mobile Device Incident
 
 **NICE Work Role:** 
-- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Incident+Responder&id=All)
+- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-- [T0047](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0047&description=All) - Correlate incident data to identify specific vulnerabilities and make recommendations that enable expeditious remediation.
-- [T0278](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0278&description=All) - Collect intrusion artifacts (e.g., source code, malware, Trojans) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
+- [T0047](https://niccs.cisa.gov/workforce-development/nice-framework) - Correlate incident data to identify specific vulnerabilities and make recommendations that enable expeditious remediation.
+- [T0278](https://niccs.cisa.gov/workforce-development/nice-framework) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
 ## IMPORTANT
 

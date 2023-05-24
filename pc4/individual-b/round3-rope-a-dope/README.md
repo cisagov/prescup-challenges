@@ -6,12 +6,12 @@ incident and is currently on life support in sick bay. You have an unprivileged 
 offensive security skills to execute a privilege escalation attack and recover root access to `cube`.
 
 **NICE Work Roles:**
-- [Cyber Operator](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/workroles?name=Cyber+Operator&id=All)
+- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-- [T0567](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0567&description=All) - Analyze target operational architecture for ways to gain access.
-- [T0664](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0664&description=All) - Develop new techniques for gaining and keeping access to target systems.
-- [T0696](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0696&description=All) - Exploit network devices, security devices, and/or terminals or environments using various methods or tools.
+- [T0567](https://niccs.cisa.gov/workforce-development/nice-framework) - Analyze target operational architecture for ways to gain access.
+- [T0664](https://niccs.cisa.gov/workforce-development/nice-framework) - Develop new techniques for gaining and keeping access to target systems.
+- [T0696](https://niccs.cisa.gov/workforce-development/nice-framework) - Exploit network devices, security devices, and/or terminals or environments using various methods or tools.
 
 ## Background
 
