@@ -4,17 +4,17 @@ In this challenge, the team must integrate a replacement firewall system from sc
 
 **NICE Work Role:**
 
-  - [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Network+Operations+Specialist&id=All)
+  - [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-  - [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Infrastructure+Support+Specialist&id=All)
+  - [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-  - [T0335](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0335&description=All) - Build, install, configure, and test dedicated cyber defense hardware.
+  - [T0335](https://niccs.cisa.gov/workforce-development/nice-framework) - Build, install, configure, and test dedicated cyber defense hardware.
 
-  - [T0081](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0081&description=All) - Diagnose network connectivity problem.
+  - [T0081](https://niccs.cisa.gov/workforce-development/nice-framework) - Diagnose network connectivity problem.
 
-  - [T0129](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0129&description=All) - Integrate new systems into existing network architecture.
+  - [T0129](https://niccs.cisa.gov/workforce-development/nice-framework) - Integrate new systems into existing network architecture.
 
 ## IMPORTANT
 

@@ -5,11 +5,11 @@ Utilize exploitation to gain access to a web server suspected of criminal activi
 
 
 **NICE Work Roles:**
-* [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All#)
+* [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:** 
-* [T0570](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0570&description=All) - Apply and utilize authorized cyber capabilities to enable access to targeted networks.
-* [T0591](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0591&description=All) - Perform analysis for target infrastructure exploitation activities.
+* [T0570](https://niccs.cisa.gov/workforce-development/nice-framework) - Apply and utilize authorized cyber capabilities to enable access to targeted networks.
+* [T0591](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform analysis for target infrastructure exploitation activities.
 
 ## Note
 There are no artifacts available for this challenge and it must be completed in the hosted environment.

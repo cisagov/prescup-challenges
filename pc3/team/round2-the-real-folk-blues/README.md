@@ -4,14 +4,14 @@ A machine is infected and is BSODing on boot. This machine needs to be investiga
 
 **NICE Work Roles:**
 
- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+ [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
     
 **NICE Tasks:**  
 
-- [T0432](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0432&description=All) : Collect and analyze intrusion artifacts (e.g., source code, malware, and system configuration) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
+- [T0432](https://niccs.cisa.gov/workforce-development/nice-framework) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
-- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0532&description=All) : Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
 ## IMPORTANT
 

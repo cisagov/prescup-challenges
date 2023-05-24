@@ -3,11 +3,11 @@
 Use a remote system management tool to investigate a cyber incident. 
 
 **NICE Work Roles** 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-forensics-analyst)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0175](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0175) - Perform real-time cyber defense incident handling (e.g., forensic collections, intrusion correlation and tracking, threat analysis, and direct system remediation) tasks to support deployable Incident Response Teams (IRTs).
-- [T0432](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0432) - Collect and analyze intrusion artifacts (e.g., source code, malware, and system configuration) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
+- [T0175](https://niccs.cisa.gov/workforce-development/nice-framework).
+- [T0432](https://niccs.cisa.gov/workforce-development/nice-framework) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
 ## IMPORTANT
 This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.

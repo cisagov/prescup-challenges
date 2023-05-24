@@ -4,11 +4,11 @@ Configure one side of a VPN tunnel to connect to a remote site. Then, configure 
 
 **NICE Work Role:**   
 
-- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Infrastructure+Support+Specialist&id=All)
+- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:** 
 
-- [T0180](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0180&description=All) - Perform system administration on specialized cyber defense applications and systems (e.g., antivirus, audit and remediation) or Virtual Private Network (VPN) devices, to include installation, configuration, maintenance, backup, and restoration.
+- [T0180](https://niccs.cisa.gov/workforce-development/nice-framework) devices, to include installation, configuration, maintenance, backup, and restoration.
 
 ## IMPORTANT
 This challenge does not have any downloadable artifacts. The full challenge can be completed on the hosted site.

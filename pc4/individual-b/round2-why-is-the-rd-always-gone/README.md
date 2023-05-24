@@ -3,11 +3,11 @@
 Gain research and development intel by hacking the Followers' router and production systems.
 
 **NICE Work Roles** 
-- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-operator)
+- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0768](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0768) - Conduct cyber activities to degrade/remove information resident in computers and computer networks.
-- [T0696](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0696) - Exploit network devices, security devices, and/or terminals or environments using various methods or tools.
+- [T0768](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct cyber activities to degrade/remove information resident in computers and computer networks.
+- [T0696](https://niccs.cisa.gov/workforce-development/nice-framework) - Exploit network devices, security devices, and/or terminals or environments using various methods or tools.
 
 ### NOTE
 

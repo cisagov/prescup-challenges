@@ -4,12 +4,12 @@ Use tools to analyze a malware sample.
 
 **NICE Work Role:**
 
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst)
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0296](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0296&description=All) - Isolate and remove malware.
-- [T0260](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0260&description=All) - Analyze identified malicious activity to determine weaknesses exploited, exploitation methods, effects on system and information."
+- [T0296](https://niccs.cisa.gov/workforce-development/nice-framework) - Isolate and remove malware.
+- [T0260](https://niccs.cisa.gov/workforce-development/nice-framework) - Analyze identified malicious activity to determine weaknesses exploited, exploitation methods, effects on system and information."
 
 
 ## IMPORTANT

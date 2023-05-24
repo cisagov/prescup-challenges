@@ -4,12 +4,12 @@ Locate a hidden machine planted on the network by a malicious insider.
 
 **NICE Work Roles:**
 
-- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber%20Defense%20Infrastructure%20Support%20Specialist)
+- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0180](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0180&description=All) - Perform system administration on specialized cyber defense applications and systems or VPN devices, to include installation, configuration, maintenance, backup, and restoration.
-- [T0261](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0261&description=All) - Assist in identifying, prioritizing, and coordinating the protection of critical cyber defense infrastructure and key resources.
+- [T0180](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform system administration on specialized cyber defense applications and systems or VPN devices, to include installation, configuration, maintenance, backup, and restoration.
+- [T0261](https://niccs.cisa.gov/workforce-development/nice-framework) - Assist in identifying, prioritizing, and coordinating the protection of critical cyber defense infrastructure and key resources.
 
 You can view the [challenge guide](challenge-guide.pdf) here.
 

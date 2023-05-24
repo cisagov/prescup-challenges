@@ -3,10 +3,10 @@
 Perform database forensics to find the missing inventory. 
 
 **NICE Work Roles** 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-forensics-analyst) 
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework) 
 
 **NICE Tasks**
-- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0532) - Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
 ## Background
 

@@ -4,15 +4,15 @@ A network administrator has detected a foreign IP accessing our internal servers
 
   **NICE Work Roles:**   
 
-  - [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Network+Operations+Specialist&id=All)
+  - [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-  - [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Incident+Responder&id=All)
+  - [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
   **NICE Tasks:**
 
-  - [T0035](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0035&description=All)- Configure and optimize network hubs, routers, and switches (e.g., higher-level protocols, tunneling).
-  - [T0160](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0160&description=All)- Patch network vulnerabilities to ensure that information is safeguarded against outside parties.
-  - [T0163](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0163&description=All)- Perform cyber defense incident triage, to include determining scope, urgency, and potential impact, identifying the specific vulnerability, and making recommendations that enable expeditious remediation.
+  - [T0035](https://niccs.cisa.gov/workforce-development/nice-framework).
+  - [T0160](https://niccs.cisa.gov/workforce-development/nice-framework)- Patch network vulnerabilities to ensure that information is safeguarded against outside parties.
+  - [T0163](https://niccs.cisa.gov/workforce-development/nice-framework)- Perform cyber defense incident triage, to include determining scope, urgency, and potential impact, identifying the specific vulnerability, and making recommendations that enable expeditious remediation.
 
 ## IMPORTANT
 This challenge is only partially open sourced. The files in the challenge directory are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.

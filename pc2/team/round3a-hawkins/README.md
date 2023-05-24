@@ -3,11 +3,11 @@
 Your box has been compromised, and the attacker has deliberately left a trail. Can you track them down?
 
 **NICE Work Roles:**
-- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Vulnerability+Assessment+Analyst&id=All)
+- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-- [T0252](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0252&description=All) - Conduct required reviews as appropriate within environment (e.g., Technical Surveillance, Countermeasure Reviews [TSCM], TEMPEST countermeasure reviews).
-- [T0549](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0549&description=All) - Perform technical (evaluation of technology) and nontechnical (evaluation of people and operations) risk and vulnerability assessments of relevant technology focus areas (e.g., local computing environment, network and infrastructure, enclave boundary, supporting infrastructure, and applications).
+- [T0252](https://niccs.cisa.gov/workforce-development/nice-framework).
+- [T0549](https://niccs.cisa.gov/workforce-development/nice-framework).
 
 ## IMPORTANT
 

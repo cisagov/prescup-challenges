@@ -3,14 +3,14 @@
 Intercept, replay, and analyze key code transmission traffic and services in order to regain access to a locked part of the ship.
 
 **NICE Work Roles**
- - [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/exploitation-analyst)
- - [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/vulnerability-assessment-analyst)
+ - [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+ - [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
- - [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0028)- Conduct and/or support authorized penetration testing on enterprise network assets.
- - [T0591](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0591) - Perform analysis for target infrastructure exploitation activities.
- - [T0608](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0608) - Conduct analysis of physical and logical digital technologies (e.g., wireless, SCADA, telecom) to identify potential avenues of access.
- - [T0641](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0641) - Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
+ - [T0028](https://niccs.cisa.gov/workforce-development/nice-framework)- Conduct and/or support authorized penetration testing on enterprise network assets.
+ - [T0591](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform analysis for target infrastructure exploitation activities.
+ - [T0608](https://niccs.cisa.gov/workforce-development/nice-framework) to identify potential avenues of access.
+ - [T0641](https://niccs.cisa.gov/workforce-development/nice-framework) - Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
 
 ## Background
 

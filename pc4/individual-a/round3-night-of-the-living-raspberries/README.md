@@ -3,12 +3,12 @@
 Raspberry Pi devices are popular with certain Aurellians who collect and trade them. We were recently approached by an Aurellians Pi collector who was alarmed by the presence of malware on his Raspberry Pi system. Reverse engineer the malware and pinpoint the Indicators of Compromise (IOC).
 
 **NICE Work Role**
-[Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-forensics-analyst)
+[Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
  **NICE Tasks**
-- [T0182](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0182) - Perform tier 1, 2, and 3 malware analysis.
-- [T0288](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0288) - Perform static malware analysis.
-- [T0036](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0036) - Confirm what is known about an intrusion and discover new information, if possible, after identifying intrusion via dynamic analysis.
+- [T0182](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform tier 1, 2, and 3 malware analysis.
+- [T0288](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform static malware analysis.
+- [T0036](https://niccs.cisa.gov/workforce-development/nice-framework) - Confirm what is known about an intrusion and discover new information, if possible, after identifying intrusion via dynamic analysis.
 
 ## IMPORTANT
 

@@ -4,15 +4,15 @@ Your cybersecurity department has been notified that credentials for your employ
 
 **NICE Work Role:**
 
-- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber%20Defense%20Incident%20Responder)
+- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0278](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0278&description=All) - Collect intrusion artifacts (e.g., source code, malware, Trojans) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
+- [T0278](https://niccs.cisa.gov/workforce-development/nice-framework) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
-- [T0175](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0175&description=All) - Perform real-time cyber defense incident handling (e.g., forensic collections, intrusion correlation and tracking, threat analysis, and direct system remediation) tasks to support deployable Incident Response Teams (IRTs).
+- [T0175](https://niccs.cisa.gov/workforce-development/nice-framework).
 
-- [T0163](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0163&description=All) - Perform cyber defense incident triage, to include determining scope, urgency, and potential impact, identifying the specific vulnerability, and making recommendations that enable expeditious remediation.
+- [T0163](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform cyber defense incident triage, to include determining scope, urgency, and potential impact, identifying the specific vulnerability, and making recommendations that enable expeditious remediation.
 
 ## IMPORTANT
 

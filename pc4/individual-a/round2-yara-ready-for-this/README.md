@@ -4,12 +4,12 @@ Examine a potentially malicious application's activities by running it in a sand
 
 **NICE Work Roles**
 
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-analyst)
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0260](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0260) - Analyze identified malicious activity to determine weaknesses exploited, exploitation methods, effects on system and information.
-- [T0310](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0310) - Assist in the construction of signatures which can be implemented on cyber defense network tools in response to new or observed threats within the network environment or enclave.
+- [T0260](https://niccs.cisa.gov/workforce-development/nice-framework) - Analyze identified malicious activity to determine weaknesses exploited, exploitation methods, effects on system and information.
+- [T0310](https://niccs.cisa.gov/workforce-development/nice-framework) - Assist in the construction of signatures which can be implemented on cyber defense network tools in response to new or observed threats within the network environment or enclave.
 
 ## IMPORTANT
 This challenge only partially open sourced. The files in the [challenge directory](./challenge/) are provided to give you a starting point if you wish to recreate the challenge on your own. The files provided will allow you to solve all parts of the challenge except Question 7. The full version of the challenge can be played on the hosted site.

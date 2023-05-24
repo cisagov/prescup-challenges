@@ -3,13 +3,13 @@
 Perform code breaking, recovery, and reconstruction of data messages to uncover vital threat information.
 
 **NICE Work Roles**
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-forensics-analyst)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0027](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0027)- Conduct analysis of log files, evidence, and other information to determine best methods for identifying the perpetrator(s) of a network intrusion.
-- [T0049](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0049)- Decrypt seized data using technical means.
-- [T0167](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0167)- Perform file signature analysis.
-- [T0240](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0240)- Capture and analyze network traffic associated with malicious activities using network monitoring tools.
+- [T0027](https://niccs.cisa.gov/workforce-development/nice-framework) of a network intrusion.
+- [T0049](https://niccs.cisa.gov/workforce-development/nice-framework)- Decrypt seized data using technical means.
+- [T0167](https://niccs.cisa.gov/workforce-development/nice-framework)- Perform file signature analysis.
+- [T0240](https://niccs.cisa.gov/workforce-development/nice-framework)- Capture and analyze network traffic associated with malicious activities using network monitoring tools.
 
 ## Background
 

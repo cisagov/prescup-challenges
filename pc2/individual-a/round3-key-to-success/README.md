@@ -5,12 +5,12 @@ Analyze forensic evidence and find the flag.
 
 **NICE Work Roles:** 
 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
 **NICE Tasks:**
-- [T0049](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0049&description=All) - Decrypt seized data using technical means.
-- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0532&description=All) - Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+- [T0049](https://niccs.cisa.gov/workforce-development/nice-framework) - Decrypt seized data using technical means.
+- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
 ## Background
 

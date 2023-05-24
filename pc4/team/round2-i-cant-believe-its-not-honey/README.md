@@ -4,15 +4,15 @@ Investigate and perform reconnaissance on a passing probe in order to gain intel
 
 **NICE Work Roles**
 
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-analyst)
-- [Data Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/data-analyst)
-- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-operator)
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Data Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0299](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0299) - Identify network mapping and operating system (OS) fingerprinting activities.
-- [T0403](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0403) - Read, interpret, write, modify, and execute simple scripts (e.g., Perl, VBScript) on Windows and UNIX systems (e.g., those that perform tasks such as: parsing large data files, automating manual tasks, and fetching/processing remote data).
-- [T0616](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0616) - Conduct network scouting and vulnerability analyses of systems within a network.
+- [T0299](https://niccs.cisa.gov/workforce-development/nice-framework) fingerprinting activities.
+- [T0403](https://niccs.cisa.gov/workforce-development/nice-framework).
+- [T0616](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct network scouting and vulnerability analyses of systems within a network.
 
 ## Background
 

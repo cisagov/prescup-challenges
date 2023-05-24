@@ -3,16 +3,16 @@
 A machine on your network has been identified as a victim of a cyber attack. You must do analysis of the machine to determine what was done by the attacker and dispose of the malicious files placed on your machine. 
 
 **NICE Work Role:** 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-- [T0027](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0027&description=All) - Conduct analysis of log files, evidence, and other information to determine best methods for identifying the perpetrator(s) of a network intrusion.  
+- [T0027](https://niccs.cisa.gov/workforce-development/nice-framework) of a network intrusion.  
 
-- [T0240](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0240&description=All) - Capture and analyze network traffic associated with malicious activities using network monitoring tools.  
+- [T0240](https://niccs.cisa.gov/workforce-development/nice-framework) - Capture and analyze network traffic associated with malicious activities using network monitoring tools.  
 
-- [T0286](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0286&description=All) - Perform file system forensic analysis.  
+- [T0286](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform file system forensic analysis.  
 
-- [T0432](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0432&description=All) - Collect and analyze intrusion artifacts (e.g., source code, malware, and system configuration) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
+- [T0432](https://niccs.cisa.gov/workforce-development/nice-framework) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
 ## IMPORTANT
 This challenge is only partially open sourced. The files in the [challenge directory](challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.

@@ -6,14 +6,14 @@ You will follow a set of network traffic related breadcrumbs in order to find th
 
 **NICE Work Role:**
 
-  - [Cyber Defense Incident Response](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Incident+Responder&id=All)
-  - [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst&id=All)
+  - [Cyber Defense Incident Response](https://niccs.cisa.gov/workforce-development/nice-framework)
+  - [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-  - [T0161](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0161&description=All)- Perform analysis of log files from a variety of sources (e.g., individual host logs, network traffic logs, firewall logs, and intrusion detection system [IDS] logs) to identify possible threats to network security.
-  - [T0166](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0166&description=All) - Perform event correlation using information gathered from a variety of sources within the enterprise to gain situational awareness and determine the effectiveness of an observed attack.
-  - [T0258](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0166&description=All) - Provide timely detection, identification, and alerting of possible attacks/intrusions, anomalous activities, and misuse activities and distinguish these incidents and events from benign activities.
+  - [T0161](https://niccs.cisa.gov/workforce-development/nice-framework) to identify possible threats to network security.
+  - [T0166](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform event correlation using information gathered from a variety of sources within the enterprise to gain situational awareness and determine the effectiveness of an observed attack.
+  - [T0258](https://niccs.cisa.gov/workforce-development/nice-framework) - Provide timely detection, identification, and alerting of possible attacks/intrusions, anomalous activities, and misuse activities and distinguish these incidents and events from benign activities.
 
 ## IMPORTANT
 This challenge is only partially open sourced. The files listed below can be downloaded and are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.

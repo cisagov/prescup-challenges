@@ -5,16 +5,16 @@ Gain elevated privileges on a target by utilizing persistence mechanisms that we
 
 **NICE Work Roles:**
 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
     
 **NICE Tasks:**  
 
-- [T0432](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0432&description=All) : Collect and analyze intrusion artifacts (e.g., source code, malware, and system configuration) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
+- [T0432](https://niccs.cisa.gov/workforce-development/nice-framework) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
-- [T0572](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0572&description=All) : Apply cyber collection, environment preparation and engagement expertise to enable new exploitation and/or continued collection operations, or in support of customer requirements.
+- [T0572](https://niccs.cisa.gov/workforce-development/nice-framework) : Apply cyber collection, environment preparation and engagement expertise to enable new exploitation and/or continued collection operations, or in support of customer requirements.
 
 ## Note
 

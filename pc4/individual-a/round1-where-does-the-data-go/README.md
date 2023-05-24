@@ -4,13 +4,13 @@ Analyze packet captures and live network traffic to investigate a data exfiltrat
 
 **NICE Work Roles**
 
-- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-incident-responder)
+- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0161](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0161) - Perform analysis of log files from a variety of sources (e.g., individual host logs, network traffic logs, firewall logs, and intrusion detection system [IDS] logs) to identify possible threats to network security.
+- [T0161](https://niccs.cisa.gov/workforce-development/nice-framework) to identify possible threats to network security.
 
-- [T0163](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0163) - Perform cyber defense incident triage, to include determining scope, urgency, and potential impact, identifying the specific vulnerability, and making recommendations that enable expeditious remediation.
+- [T0163](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform cyber defense incident triage, to include determining scope, urgency, and potential impact, identifying the specific vulnerability, and making recommendations that enable expeditious remediation.
 
 ## ⚠️ Large Files ⚠️
 

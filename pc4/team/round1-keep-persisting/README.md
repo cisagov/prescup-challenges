@@ -4,12 +4,12 @@ The Dauntless 'Policies and Procedures for First Contact' website has been defac
 
 **NICE Work Roles** 
 
-- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-incident-responder)
+- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0163](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0163) - Perform cyber defense incident triage, to include determining scope, urgency, and potential impact, identifying the specific vulnerability, and making recommendations that enable expeditious remediation.
-- [T0175](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0175) - Perform real-time cyber defense incident handling (e.g., forensic collections, intrusion correlation and tracking, threat analysis, and direct system remediation) tasks to support deployable Incident Response Teams (IRTs).
+- [T0163](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform cyber defense incident triage, to include determining scope, urgency, and potential impact, identifying the specific vulnerability, and making recommendations that enable expeditious remediation.
+- [T0175](https://niccs.cisa.gov/workforce-development/nice-framework).
 
 ## IMPORTANT
 

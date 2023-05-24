@@ -4,15 +4,15 @@ Analyze network traffic, intelligence data, and a compromised system in order to
 
 **NICE Work Roles**
 
- - [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-incident-responder)
- - [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-analyst)
+ - [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
+ - [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
- - [T0161](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0161)- Perform analysis of log files from a variety of sources (e.g., individual host logs, network traffic logs, firewall logs, and intrusion detection system [IDS] logs) to identify possible threats to network security.
- - [T0175](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0175)- Perform real-time cyber defense incident handling (e.g., forensic collections, intrusion correlation and tracking, threat analysis, and direct system remediation)
- - [T0290](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0290)- Determine tactics, techniques, and procedures (TTPs) for intrusion sets.
- - [T0312](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0312)- Coordinate with intelligence analysts to correlate threat assessment data.
+ - [T0161](https://niccs.cisa.gov/workforce-development/nice-framework) to identify possible threats to network security.
+ - [T0175](https://niccs.cisa.gov/workforce-development/nice-framework)
+ - [T0290](https://niccs.cisa.gov/workforce-development/nice-framework) for intrusion sets.
+ - [T0312](https://niccs.cisa.gov/workforce-development/nice-framework)- Coordinate with intelligence analysts to correlate threat assessment data.
 
 ## Background
 A recent release of intelligence reports has you worried about malware being potentially downloaded to one of the ship's systems during its last orbital dock. Not only is there a risk to the system, but proper identification of those responsible is necessary to prevent further harm.

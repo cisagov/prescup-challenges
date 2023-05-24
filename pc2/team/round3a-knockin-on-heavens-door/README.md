@@ -4,22 +4,22 @@ Determine how an insider threat is exfiltrating data and replicate the attack to
 
 **NICE Work Role:**
 
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber%20Defense%20Analyst&id=All&fwid=All&name_selective=Cyber%20Defense%20Analyst)
-- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name_selective=Cyber+Defense+Incident+Responder&fwid=All)
-- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name_selective=Vulnerability+Assessment+Analyst&fwid=All)
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
 **NICE Tasks:**
 
-- [T0023](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0023&description=All) - Characterize and analyze network traffic to identify anomalous activity and potential threats to network resources.
+- [T0023](https://niccs.cisa.gov/workforce-development/nice-framework) - Characterize and analyze network traffic to identify anomalous activity and potential threats to network resources.
 
-- [T0166](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0166&description=All) - Perform event correlation using information gathered from a variety of sources within the enterprise to gain situational awareness and determine the effectiveness of an observed attack.
+- [T0166](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform event correlation using information gathered from a variety of sources within the enterprise to gain situational awareness and determine the effectiveness of an observed attack.
 
-- [T0298](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0298&description=All) - Reconstruct a malicious attack or activity based off network traffic.
+- [T0298](https://niccs.cisa.gov/workforce-development/nice-framework) - Reconstruct a malicious attack or activity based off network traffic.
 
-- [T0175](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0175&description=All) - Perform real-time cyber defense incident handling (e.g., forensic collections, intrusion correlation and tracking, threat analysis, and direct system remediation) tasks to support deployable Incident Response Teams (IRTs).
+- [T0175](https://niccs.cisa.gov/workforce-development/nice-framework).
 
-- [T0233](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0233&description=All) - Track and document cyber defense incidents from initial detection through final resolution.
+- [T0233](https://niccs.cisa.gov/workforce-development/nice-framework) - Track and document cyber defense incidents from initial detection through final resolution.
 
 ## IMPORTANT
 

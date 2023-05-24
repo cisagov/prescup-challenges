@@ -5,16 +5,16 @@
 
   **NICE Work Role:**
 
-  [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Incident+Responder&id=All)
+  [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-  [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+  [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
   **NICE Tasks:**
 
-  - [T0160](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=All&description=T0160) - Patch network vulnerabilities to ensure that information is safeguarded against outside parties.
-  - [T0162](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=All&description=T0162) - Perform backup and recovery of databases to ensure data integrity. 
-  - [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=All&description=T0532) - Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+  - [T0160](https://niccs.cisa.gov/workforce-development/nice-framework) - Patch network vulnerabilities to ensure that information is safeguarded against outside parties.
+  - [T0162](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform backup and recovery of databases to ensure data integrity. 
+  - [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
 
   ## IMPORTANT

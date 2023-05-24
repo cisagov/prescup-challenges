@@ -4,19 +4,19 @@
 
 **NICE Work Role:**
 
-  - [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Incident+Responder&id=All#)
+  - [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-  - [T0041](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0041&description=All) - Coordinate and provide expert technical support to enterprise-wide cyber defense technicians to resolve cyber defense incidents.
+  - [T0041](https://niccs.cisa.gov/workforce-development/nice-framework) - Coordinate and provide expert technical support to enterprise-wide cyber defense technicians to resolve cyber defense incidents.
 
-  - [T0175](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0175&description=All) - Perform real-time cyber defense incident handling (e.g., forensic collections, intrusion correlation and tracking, threat analysis, and direct system remediation) tasks to support deployable Incident Response Teams (IRTs).
+  - [T0175](https://niccs.cisa.gov/workforce-development/nice-framework).
 
-  - [T0233](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0233&description=All) - Track and document cyber defense incidents from initial detection through final resolution.
+  - [T0233](https://niccs.cisa.gov/workforce-development/nice-framework) - Track and document cyber defense incidents from initial detection through final resolution.
 
-  - [T0278](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0278&description=All) - Collect intrusion artifacts (e.g., source code, malware, Trojans) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
+  - [T0278](https://niccs.cisa.gov/workforce-development/nice-framework) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
-  - [T0510](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0510&description=All) - Coordinate incident response functions.
+  - [T0510](https://niccs.cisa.gov/workforce-development/nice-framework) - Coordinate incident response functions.
 
 ## IMPORTANT
 

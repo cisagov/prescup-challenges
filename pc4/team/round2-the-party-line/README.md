@@ -3,10 +3,10 @@
 Investigate and remedy a cyber defense incident.
 
 **NICE Work Roles**
-- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-incident-responder)
+- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0041](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0041) -  Coordinate and provide expert technical support to enterprise-wide cyber defense technicians to resolve cyber defense incidents.
+- [T0041](https://niccs.cisa.gov/workforce-development/nice-framework) -  Coordinate and provide expert technical support to enterprise-wide cyber defense technicians to resolve cyber defense incidents.
 
 ## IMPORTANT 
 This challenge only partially open sourced. The files in the [challenge directory](./challenge/) are provided to give you a starting point if you wish to recreate the challenge on your own. The full version of the challenge can be played on the hosted site. 

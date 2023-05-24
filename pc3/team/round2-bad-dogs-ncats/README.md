@@ -4,17 +4,17 @@ After a system administrator noticed some abnormal activity on the network, they
 
 **NICE Work Roles:**
 
-[Cyber Defense Forensic Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+[Cyber Defense Forensic Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0049](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All) - Decrypt seized data using technical means.
+- [T0049](https://niccs.cisa.gov/workforce-development/nice-framework) - Decrypt seized data using technical means.
 
-- [T0182](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)- Perform tier 1, 2, and 3 malware analysis.
+- [T0182](https://niccs.cisa.gov/workforce-development/nice-framework)- Perform tier 1, 2, and 3 malware analysis.
 
-- [T0240](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)- Capture and analyze network traffic associated with malicious activities using network monitoring tools.
+- [T0240](https://niccs.cisa.gov/workforce-development/nice-framework)- Capture and analyze network traffic associated with malicious activities using network monitoring tools.
 
-- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)- Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download

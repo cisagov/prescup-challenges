@@ -3,11 +3,11 @@
 After the Dauntless experienced a mysterious power surge, your team ends up split, and stuck in two of the ship's cargo storage rooms. The door switches are not operational, so you'll need to use the computer terminals available in each hold to connect to the ship's SCADA server and actuate the doors from there. However, the IPv6 routing configuration of the ship's backbone network seems to also have been reset to factory defaults...
 
 **NICE Work Roles:**
-- [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/workroles?name=Network+Operations+Specialist&id=All)
+- [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-- [T0035](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0035&description=All) - Configure and optimize network hubs, routers, and switches.
-- [T0081](https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/tasks?id=T0081&description=All) - Diagnose network connectivity problems.
+- [T0035](https://niccs.cisa.gov/workforce-development/nice-framework) - Configure and optimize network hubs, routers, and switches.
+- [T0081](https://niccs.cisa.gov/workforce-development/nice-framework) - Diagnose network connectivity problems.
 
 ## IMPORTANT
 

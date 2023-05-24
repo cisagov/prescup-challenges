@@ -4,12 +4,12 @@ Players must analyze a set of pictures to find hidden data using various methods
 
 **NICE Work Role**
 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0103](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0103&description=All) - Examine recovered data for information of relevance to the issue at hand.
-- [T0168](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0168&description=All) - Perform hash comparison against established database.
-- [T0253](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0253&description=All) - Conduct cursory binary analysis.
+- [T0103](https://niccs.cisa.gov/workforce-development/nice-framework) - Examine recovered data for information of relevance to the issue at hand.
+- [T0168](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform hash comparison against established database.
+- [T0253](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct cursory binary analysis.
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download

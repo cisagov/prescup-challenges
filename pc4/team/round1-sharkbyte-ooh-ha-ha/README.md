@@ -3,11 +3,11 @@
 Analyze Spaceship network traffic.
 
 **NICE Work Roles**
-- [Data Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/data-analyst)
+- [Data Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0366](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0366) - Develop strategic insights from large data sets.
-- [T0342](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0342) - Analyze data sources to provide actionable recommendations.
+- [T0366](https://niccs.cisa.gov/workforce-development/nice-framework) - Develop strategic insights from large data sets.
+- [T0342](https://niccs.cisa.gov/workforce-development/nice-framework) - Analyze data sources to provide actionable recommendations.
 
 ## Background
 

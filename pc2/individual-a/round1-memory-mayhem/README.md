@@ -5,16 +5,16 @@ You must investigate a memory capture from a victim's machine to answer question
 
 **NICE Work Role:**
 
-- [Cyber Defense Forensic Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Cyber Defense Forensic Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
 **NICE Tasks:**
 
-- [T0238](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0238&description=All) - Extract data using data carving techniques (e.g., Forensic Tool Kit [FTK], Foremost).
+- [T0238](https://niccs.cisa.gov/workforce-development/nice-framework).
 
-- [T0397](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0397&description=All) - Perform Windows registry analysis.
+- [T0397](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform Windows registry analysis.
 
-- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0532&description=All) - Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
 
 ## Background

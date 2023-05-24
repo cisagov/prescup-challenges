@@ -7,8 +7,8 @@ You must use existing email infrastructure to gain access to a user's machine.
 - [Exploitation Analyst]https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation%20Analyst&id=All&fwid=All&name_selective=Exploitation%20Analyst)
 
 **NICE Tasks:**
-- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0028&description=All) - Conduct and/or support authorized penetration testing on enterprise network assets.
-- [T0591](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0028&description=All) - Perform analysis for target infrastructure exploitation activities."
+- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct and/or support authorized penetration testing on enterprise network assets.
+- [T0591](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform analysis for target infrastructure exploitation activities."
 
 ## IMPORTANT
 

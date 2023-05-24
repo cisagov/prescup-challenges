@@ -5,12 +5,12 @@ There was an update to a mission critical website, but we don't know where the n
 
   **NICE Work Roles:**   
 
-  [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All)
+  [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
   **NICE Tasks:**
 
-  - [T0266](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0266&description=All) - Perform analysis for target infrastructure exploitation activities.
+  - [T0266](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform analysis for target infrastructure exploitation activities.
 
 ## Setup
 

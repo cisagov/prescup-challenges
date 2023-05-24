@@ -6,15 +6,15 @@ Troubleshoot network issues.
 **NICE Work Role:** 
 
 
-- [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Network+Operations+Specialist&id=All) 
+- [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework) 
 
 
 **NICE Tasks:**
 
 
-- [T0081](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0081&description=All) - Diagnose network connectivity problem.
-- [T0129](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0129&description=All) - Integrate new systems into existing network architecture.
-- [T0153](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0153&description=All) - Monitor network capacity and performance.
+- [T0081](https://niccs.cisa.gov/workforce-development/nice-framework) - Diagnose network connectivity problem.
+- [T0129](https://niccs.cisa.gov/workforce-development/nice-framework) - Integrate new systems into existing network architecture.
+- [T0153](https://niccs.cisa.gov/workforce-development/nice-framework) - Monitor network capacity and performance.
 
 
 ## IMPORTANT

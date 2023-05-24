@@ -4,13 +4,13 @@ You must use Indicators of Compromise from another organization's incident repor
 
 **NICE Work Role:** 
 
-- [Threat/Warning Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Threat%2FWarning+Analyst&id=All)
+- [Threat/Warning Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**  
 
-- [T0805](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0805&description=All) - Report intelligence-derived significant network events and intrusions.  
+- [T0805](https://niccs.cisa.gov/workforce-development/nice-framework) - Report intelligence-derived significant network events and intrusions.  
 
-- [T0749](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0749&description=All) - Monitor and report on validated threat activities.  
+- [T0749](https://niccs.cisa.gov/workforce-development/nice-framework) - Monitor and report on validated threat activities.  
 
 ## IMPORTANT
 This challenge does not have any downloadable artifacts. The full challenge can be completed on the hosted site.

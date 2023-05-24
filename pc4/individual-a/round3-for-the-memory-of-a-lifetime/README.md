@@ -3,11 +3,11 @@
 Examine a forensic memory capture of a Windows 10 machine.
 
 **NICE Work Roles**
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-forensics-analyst)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0103](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0103) - Examine recovered data for information of relevance to the issue at hand.
-- [T0216](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0216) - Recognize and accurately report forensic artifacts indicative of a particular operating system.
+- [T0103](https://niccs.cisa.gov/workforce-development/nice-framework) - Examine recovered data for information of relevance to the issue at hand.
+- [T0216](https://niccs.cisa.gov/workforce-development/nice-framework) - Recognize and accurately report forensic artifacts indicative of a particular operating system.
 
 ## ⚠️ Large Files ⚠️
 

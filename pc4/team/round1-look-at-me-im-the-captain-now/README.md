@@ -4,15 +4,15 @@ A radical isolationist group opposed to Earth's involvement in galactic affairs 
 
 **NICE Work Roles**   
 
-- [Data Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/data-analyst)
-- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-incident-responder)
+- [Data Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0278](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0278) - Collect intrusion artifacts (e.g., source code, malware, Trojans) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
-- [T0383](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0383) - Program custom algorithms.
-- [T0403](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0403) - Read, interpret, write, modify, and execute simple scripts (e.g., Perl, VBScript) on Windows and UNIX systems (e.g., those that perform tasks such as: parsing large data files, automating manual tasks, and fetching/processing remote data).
-- [T0404](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0404) - Utilize different programming languages to write code, open files, read files, and write output to different files.
+- [T0278](https://niccs.cisa.gov/workforce-development/nice-framework) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
+- [T0383](https://niccs.cisa.gov/workforce-development/nice-framework) - Program custom algorithms.
+- [T0403](https://niccs.cisa.gov/workforce-development/nice-framework).
+- [T0404](https://niccs.cisa.gov/workforce-development/nice-framework) - Utilize different programming languages to write code, open files, read files, and write output to different files.
 
 ## IMPORTANT
 

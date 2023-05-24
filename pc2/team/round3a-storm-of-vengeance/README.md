@@ -3,13 +3,13 @@
 Given access to a live network, assess incoming requests, and provide a detailed SITREP.
 
 **NICE Work Roles:**
-- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Infrastructure+Support+Specialist&id=All)
+- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-- [T0042](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0042&description=All) - Coordinate with Cyber Defense Analysts to manage and administer the updating of rules and signatures (e.g., intrusion detection/protection systems, antivirus, and content blacklists) for specialized cyber defense applications.
-- [T0261](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0261&description=All) - Assist in identifying, prioritizing, and coordinating the protection of critical cyber defense infrastructure and key resources.
-- [T0348](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0348&description=All) - Assist in assessing the impact of implementing and sustaining a dedicated cyber defense infrastructure.
-- [T0483](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0483&description=All) - Identify potential conflicts with implementation of any cyber defense tools (e.g., tool and signature testing and optimization).
+- [T0042](https://niccs.cisa.gov/workforce-development/nice-framework) for specialized cyber defense applications.
+- [T0261](https://niccs.cisa.gov/workforce-development/nice-framework) - Assist in identifying, prioritizing, and coordinating the protection of critical cyber defense infrastructure and key resources.
+- [T0348](https://niccs.cisa.gov/workforce-development/nice-framework) - Assist in assessing the impact of implementing and sustaining a dedicated cyber defense infrastructure.
+- [T0483](https://niccs.cisa.gov/workforce-development/nice-framework).
 
 ## IMPORTANT
 

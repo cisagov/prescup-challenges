@@ -3,13 +3,13 @@
 You must investigate a set of incidents on your network using a packet capture.
 
 **NICE Work Role:** 
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst&id=All)
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-- [T0023](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0023&description=All) - Characterize and analyze network traffic to identify anomalous activity and potential threats to network resources.
-- [T0258](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0258&description=All) - Provide timely detection, identification, and alerting of possible attacks/intrusions, anomalous activities, and misuse activities and distinguish these incidents and events from benign activities.
-- [T0295](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0295&description=All) - Validate intrusion detection system (IDS) alerts against network traffic using packet analysis tools.
-- [T0299](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0299&description=All) - Identify network mapping and operating system (OS) fingerprinting activities.
+- [T0023](https://niccs.cisa.gov/workforce-development/nice-framework) - Characterize and analyze network traffic to identify anomalous activity and potential threats to network resources.
+- [T0258](https://niccs.cisa.gov/workforce-development/nice-framework) - Provide timely detection, identification, and alerting of possible attacks/intrusions, anomalous activities, and misuse activities and distinguish these incidents and events from benign activities.
+- [T0295](https://niccs.cisa.gov/workforce-development/nice-framework) alerts against network traffic using packet analysis tools.
+- [T0299](https://niccs.cisa.gov/workforce-development/nice-framework) fingerprinting activities.
 
 
 ## Background

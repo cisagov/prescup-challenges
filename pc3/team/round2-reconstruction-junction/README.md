@@ -4,15 +4,15 @@ Analyze a set of pcaps to reconstruct exfiltrated data
 
 **NICE Work Roles**
 
- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+ [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Incident+Responder&id=All)
+ [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
 
-- [T0240](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0240&description=All) - Capture and analyze network traffic associated with malicious activities using network monitoring tools.
+- [T0240](https://niccs.cisa.gov/workforce-development/nice-framework) - Capture and analyze network traffic associated with malicious activities using network monitoring tools.
 
-- [T0161](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0161&description=All) - Perform analysis of log files from a variety of sources (e.g., individual host logs, network traffic logs, firewall logs, and intrusion detection system [IDS] logs) to identify possible threats to network security.
+- [T0161](https://niccs.cisa.gov/workforce-development/nice-framework) to identify possible threats to network security.
 
 ## ⚠️ Large Files ⚠️
 This challenge includes large files as a separate download. Please download

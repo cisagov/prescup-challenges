@@ -3,10 +3,10 @@
 Prospective crew members, we need you to help get the _Dauntless_ ready for the mission by installing mission-critical components!
 
 **NICE Work Roles**
-- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Operator&id=All)
+- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework)
  
 **NICE Tasks**
-- [T0566](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0566&description=All): - Analyze internal operational architecture, tools, and procedures for ways to improve performance.
+- [T0566](https://niccs.cisa.gov/workforce-development/nice-framework): - Analyze internal operational architecture, tools, and procedures for ways to improve performance.
 
 ## IMPORTANT
 

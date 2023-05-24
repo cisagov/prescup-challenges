@@ -6,15 +6,15 @@ Analyze a forensic image to investigate an incident.
 **NICE Work Role:** 
 
 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All) 
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework) 
 
 
 **NICE Tasks:**
 
 
-- [T0027](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0027&description=All) - Conduct analysis of log files, evidence, and other information to determine best methods for identifying the perpetrator(s) of a network intrusion.
-- [T0396](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0396&description=All) - Process image with appropriate tools depending on analyst's goals.
-- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0532&description=All) - Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+- [T0027](https://niccs.cisa.gov/workforce-development/nice-framework) of a network intrusion.
+- [T0396](https://niccs.cisa.gov/workforce-development/nice-framework) - Process image with appropriate tools depending on analyst's goals.
+- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
 
 ## IMPORTANT

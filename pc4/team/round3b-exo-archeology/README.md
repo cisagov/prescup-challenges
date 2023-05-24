@@ -5,11 +5,11 @@
 A team of researchers have been studying the Seelax for years and are returning from their latest dig. They're scheduled to resupply at an old Aurellian starbase, if you can get there before they depart... 
 
 **NICE Work Roles** 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/exploitation-analyst)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0028) - Conduct and/or support authorized penetration testing on enterprise network assets.
-- [T0608](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0608) - Conduct analysis of physical and logical digital technologies (e.g., wireless, SCADA, telecom) to identify potential avenues of access.
+- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct and/or support authorized penetration testing on enterprise network assets.
+- [T0608](https://niccs.cisa.gov/workforce-development/nice-framework) to identify potential avenues of access.
 
 ## IMPORTANT
 This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.

@@ -4,19 +4,19 @@ This challenge is a collection of various tasks that take place around the MakeS
 
 **NICE Work Role:** 
 
-- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Vulnerability+Assessment+Analyst&id=All)
+- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation%20Analyst&id=All&fwid=All&name_selective=Exploitation%20Analyst)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:** 
 
-- [T0010](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0010&description=All): Analyze organization's cyber defense policies and configurations and evaluate compliance with regulations and organizational directives.
+- [T0010](https://niccs.cisa.gov/workforce-development/nice-framework): Analyze organization's cyber defense policies and configurations and evaluate compliance with regulations and organizational directives.
 
-- [T0142](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0142&description=All): Maintain knowledge of applicable cyber defense policies, regulations, and compliance documents specifically related to cyber defense auditing.
+- [T0142](https://niccs.cisa.gov/workforce-development/nice-framework): Maintain knowledge of applicable cyber defense policies, regulations, and compliance documents specifically related to cyber defense auditing.
 
-- [T0775](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0775&description=All) - Produce network reconstructions.
+- [T0775](https://niccs.cisa.gov/workforce-development/nice-framework) - Produce network reconstructions.
 
-- [T0572](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0572&description=All) -  Apply cyber collection, environment preparation and engagement expertise to enable new exploitation and/or continued collection operations, or in support of customer requirements.
+- [T0572](https://niccs.cisa.gov/workforce-development/nice-framework) -  Apply cyber collection, environment preparation and engagement expertise to enable new exploitation and/or continued collection operations, or in support of customer requirements.
 
 
 ## IMPORTANT

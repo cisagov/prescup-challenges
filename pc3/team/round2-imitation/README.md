@@ -8,16 +8,16 @@ This challenge could only be partially open sourced, since it has networking and
 
   **NICE Work Role:**
 
-  [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber%20Defense%20Incident%20Responder)
+  [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-  [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Software+Developer&id=All)
+  [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
   **NICE Tasks:**
 
-  - [T0278](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0278&description=All) - Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
+  - [T0278](https://niccs.cisa.gov/workforce-development/nice-framework) - Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
 
-  - [T0324](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0324&description=All) - Direct software programming and development of documentation.
+  - [T0324](https://niccs.cisa.gov/workforce-development/nice-framework) - Direct software programming and development of documentation.
 
 
 

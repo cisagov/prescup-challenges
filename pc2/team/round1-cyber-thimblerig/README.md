@@ -4,14 +4,14 @@ Cyber Thimblerig is a game that challenges players to digest unstructured threat
 
 **NICE Work Role:** 
 
-- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Vulnerability+Assessment+Analyst&id=All)
+- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
 **NICE Tasks:**
 
-- [T0549](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0549&description=All) - Perform technical (evaluation of technology) and nontechnical (evaluation of people and operations) risk and vulnerability assessments of relevant technology focus areas (e.g., local computing environment, network and infrastructure, enclave boundary, supporting infrastructure, and applications).  
-- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0028&description=All) - Conduct and/or support authorized penetration testing on enterprise network assets.  
-- [T0188](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0188&description=All) - Prepare audit reports that identify technical and procedural findings, and provide recommended remediation strategies/solutions.
+- [T0549](https://niccs.cisa.gov/workforce-development/nice-framework).  
+- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct and/or support authorized penetration testing on enterprise network assets.  
+- [T0188](https://niccs.cisa.gov/workforce-development/nice-framework) - Prepare audit reports that identify technical and procedural findings, and provide recommended remediation strategies/solutions.
 
 # IMPORTANT
 

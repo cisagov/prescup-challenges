@@ -4,14 +4,14 @@
   
   **NICE Work Role:**
 
-  [Cyber Defense Analyst](https://niccs.us-cert.gov/workforce-development/nice-framework/workroles?name_selective=Cyber+Defense+Analyst&fwid=All)
+  [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
   **NICE Tasks:**
 
-  - [T0187](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=All&description=T00187): Plan and recommend modifications or adjustments based on exercise results or system environment
+  - [T0187](https://niccs.cisa.gov/workforce-development/nice-framework): Plan and recommend modifications or adjustments based on exercise results or system environment
 
-  - [T0292](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=All&description=T0292): - Recommend computing environment vulnerability corrections.
+  - [T0292](https://niccs.cisa.gov/workforce-development/nice-framework): - Recommend computing environment vulnerability corrections.
 
 
 ## Background

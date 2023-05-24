@@ -4,13 +4,13 @@ Use existing access to continue a penetration test. Escalate privileges and pivo
 
   **NICE Work Role:**
 
-  - [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All)
+  - [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
   **NICE Tasks:**
 
-  - [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=All&description=T0028) - Conduct and/or support authorized penetration testing on enterprise network assets.
-  - [T0696](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=All&description=T0696) - Exploit network devices, security devices, and/or terminals or environments using various methods or tools. 
+  - [T0028](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct and/or support authorized penetration testing on enterprise network assets.
+  - [T0696](https://niccs.cisa.gov/workforce-development/nice-framework) - Exploit network devices, security devices, and/or terminals or environments using various methods or tools. 
 
   ## IMPORTANT
   This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.

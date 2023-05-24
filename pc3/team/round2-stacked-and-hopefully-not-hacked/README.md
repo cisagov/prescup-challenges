@@ -4,14 +4,14 @@
 Teams will be required to install and configure the initial setup of an Elasticsearch/Kibana server and Filebeat/Logbeat log shippers. Grading checks will verify the proper setup. Teams will also need to use the Kibana dashboard to discover information regarding multiple pre-staged events on the various systems.
 
 **NICE Work Roles**
- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Infrastructure+Support+Specialist&id=All)
+ [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
- [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Incident+Responder&id=All#)
+ [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
 **NICE Tasks**
-- [T0335](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0335&description=All) - Build, install, configure, and test dedicated cyber defense hardware.
-- [T0161](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0161&description=All) - Perform analysis of log files from a variety of sources (e.g., individual host logs, network traffic logs, firewall logs, and intrusion detection system [IDS] logs) to identify possible threats to network security.
+- [T0335](https://niccs.cisa.gov/workforce-development/nice-framework) - Build, install, configure, and test dedicated cyber defense hardware.
+- [T0161](https://niccs.cisa.gov/workforce-development/nice-framework) to identify possible threats to network security.
 
 ## IMPORTANT
 

@@ -4,13 +4,13 @@ Decode the contents of six files that are relevant to a U.S. Government investig
 
 **NICE Work Role:** 
 
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst&id=All)
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0049](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0049&description=All) - Decrypt seized data using technical means
+- [T0049](https://niccs.cisa.gov/workforce-development/nice-framework) - Decrypt seized data using technical means
 
-- [T0253](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0253&description=All) - Conduct cursory binary analysis
+- [T0253](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct cursory binary analysis
 
 ## Background
 

@@ -4,13 +4,13 @@ Modify an MSFVenom payload to avoid signature detection.
 
 **NICE Work Role:**
 
-- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Software+Developer)
+- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0176](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0176&description=All) - Perform secure programming and identify potential flaws in codes to mitigate vulnerabilities.
+- [T0176](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform secure programming and identify potential flaws in codes to mitigate vulnerabilities.
 
-- [T0500](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0500&description=All) - Modify and maintain existing software to correct errors, to adapt it to new hardware, or to upgrade interfaces and improve performance.
+- [T0500](https://niccs.cisa.gov/workforce-development/nice-framework) - Modify and maintain existing software to correct errors, to adapt it to new hardware, or to upgrade interfaces and improve performance.
 
 ## IMPORTANT
 

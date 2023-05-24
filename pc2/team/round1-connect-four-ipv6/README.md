@@ -3,18 +3,18 @@
 Your team must use several systems to connect to three unique IPv6 interfaces and services after performing the proper network configuration, discovery, and enumeration tasks. Once each connection is made, an answer file for each can be found on the remote system. Additionally, the team must use one of these connections to reconfigure a service in order to allow a new connection. Once that final connection is made to the remote system, a fourth and final answer file can be found and the challenge is complete. Teams must use a combination of Windows and Kali Linux systems to make these connections.
 
 **NICE Work Role:**
-- [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Network+Operations+Specialist)
+- [Network Operations Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-- [T0029](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0029&description=All) - Conduct functional and connectivity testing to ensure continuing operability.
+- [T0029](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct functional and connectivity testing to ensure continuing operability.
 
-- [T0081](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0081&description=All) - Diagnose network connectivity problem.
+- [T0081](https://niccs.cisa.gov/workforce-development/nice-framework) - Diagnose network connectivity problem.
 
-- [T0129](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0129&description=All) - Integrate new systems into existing network architecture.  
+- [T0129](https://niccs.cisa.gov/workforce-development/nice-framework) - Integrate new systems into existing network architecture.  
 
-- [T0144](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0144&description=All) - Manage accounts, network rights, and access to systems and equipment.
+- [T0144](https://niccs.cisa.gov/workforce-development/nice-framework) - Manage accounts, network rights, and access to systems and equipment.
 
-- [T0232](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0232&description=All) - Test and maintain network infrastructure including software and hardware devices
+- [T0232](https://niccs.cisa.gov/workforce-development/nice-framework) - Test and maintain network infrastructure including software and hardware devices
 
 ## IMPORTANT
 There are no downloadable artifacts for this challenge. The full challenge can be completed on the hosted site.

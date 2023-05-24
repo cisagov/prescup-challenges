@@ -5,14 +5,14 @@ An embedded device was recovered from an abandoned alien base. Its appearance is
 Analyze the contents of this chip, replicate and apply its error correction code (ECC) implementation to fix any errors, and provide usable intelligence for when similar devices are recovered in the field.
 
 **NICE Work Roles**
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-forensics-analyst)
-- [Data Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/data-analyst)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Data Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0049](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0049) - Decrypt seized data using technical means.
-- [T0286](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0286) - Perform file system forensic analysis.
-- [T0287](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0287) - Perform static analysis to mount an "image" of a drive (without necessarily having the original drive).
-- [T0404](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0404) - Utilize different programming languages to write code, open files, read files, and write output to different files.
+- [T0049](https://niccs.cisa.gov/workforce-development/nice-framework) - Decrypt seized data using technical means.
+- [T0286](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform file system forensic analysis.
+- [T0287](https://niccs.cisa.gov/workforce-development/nice-framework).
+- [T0404](https://niccs.cisa.gov/workforce-development/nice-framework) - Utilize different programming languages to write code, open files, read files, and write output to different files.
 
 ## Background
 

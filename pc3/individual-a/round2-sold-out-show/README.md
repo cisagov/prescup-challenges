@@ -4,16 +4,16 @@ DC has been compromised by a golden ticket attack.
 
 **NICE Work Roles:**
 
-- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Analyst&id=All)
+- [Cyber Defense Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
     
 **NICE Tasks:**  
 
-- [T0187](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0187&description=All) : Plan and recommend modifications or adjustments based on exercise results or system environment.
+- [T0187](https://niccs.cisa.gov/workforce-development/nice-framework) : Plan and recommend modifications or adjustments based on exercise results or system environment.
 
-- [T0258](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0258&description=All) : Provide timely detection, identification, and alerting of possible attacks/intrusions, anomalous activities, and misuse activities and distinguish these incidents and events from benign activities.
+- [T0258](https://niccs.cisa.gov/workforce-development/nice-framework) : Provide timely detection, identification, and alerting of possible attacks/intrusions, anomalous activities, and misuse activities and distinguish these incidents and events from benign activities.
 
 ## IMPORTANT
 

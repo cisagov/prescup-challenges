@@ -4,13 +4,13 @@ Determine an attacker's intentions by deliberately granting them access.
 
 **NICE Work Roles:**
 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation%20Analyst&id=All&fwid=All&name_selective=Exploitation%20Analyst)
-- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Software+Developer)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
 - [T0695](hhttps://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0695&description=All#) - Examine intercept-related metadata and content with an understanding of targeting significance.
-- [T0500](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0500&description=All#) - Modify and maintain existing software to correct errors, to adapt it to new hardware, or to upgrade interfaces and improve performance.
+- [T0500](https://niccs.cisa.gov/workforce-development/nice-framework) - Modify and maintain existing software to correct errors, to adapt it to new hardware, or to upgrade interfaces and improve performance.
 
 ## IMPORTANT
 

@@ -4,20 +4,20 @@ Use your development knowledge to infiltrate a DC.
 
 **NICE Work Roles:**
 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
-- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Software+Developer&id=All)
+- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework)
 
     
 **NICE Tasks:**  
 
-- [T0266](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0266&description=All) : Perform penetration testing as required for new or updated applications.
+- [T0266](https://niccs.cisa.gov/workforce-development/nice-framework) : Perform penetration testing as required for new or updated applications.
 
-- [T0641](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0258&description=All) : Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
+- [T0641](https://niccs.cisa.gov/workforce-development/nice-framework) : Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
 
-- [T0554](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0554&description=All) : Determine and document software patches or the extent of releases that would leave software vulnerable.
+- [T0554](https://niccs.cisa.gov/workforce-development/nice-framework) : Determine and document software patches or the extent of releases that would leave software vulnerable.
 
-- [T0111](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0111&description=All) : Identify basic common coding flaws at a high level.
+- [T0111](https://niccs.cisa.gov/workforce-development/nice-framework) : Identify basic common coding flaws at a high level.
 
 ## IMPORTANT
 This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.

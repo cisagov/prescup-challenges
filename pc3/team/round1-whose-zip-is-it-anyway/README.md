@@ -6,14 +6,14 @@ A ZIP file has been intercepted and contains files that have been altered and en
 
 **NICE Work Role:** 
 
-  - [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+  - [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-  - [T0049](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0049&description=All) - Decrypt seized data using technical means
-  - [T0167](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0167&description=All) - Perform file signature analysis.
-  - [T0179](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0179&description=All) - Perform static media analysis.
-  - [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0532&description=All) - Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+  - [T0049](https://niccs.cisa.gov/workforce-development/nice-framework) - Decrypt seized data using technical means
+  - [T0167](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform file signature analysis.
+  - [T0179](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform static media analysis.
+  - [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
 ## Background
 

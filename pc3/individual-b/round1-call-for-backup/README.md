@@ -4,13 +4,13 @@ Your Linux Administrator has developed a new backup process and would like you t
 
 **NICE Work Role:**
 
-[Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Vulnerability+Assessment+Analyst&id=All)
+[Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
 **NICE Tasks:**
-- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=All&description=T0028) - Conduct and/or support authorized penetration testing on enterprise network assets.
+- [T0028](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct and/or support authorized penetration testing on enterprise network assets.
 
-- [T0252](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=All&description=T0252) - Conduct required reviews as appropriate within environment.
+- [T0252](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct required reviews as appropriate within environment.
 
 ## IMPORTANT
 

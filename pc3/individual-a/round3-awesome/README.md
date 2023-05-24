@@ -4,11 +4,11 @@ Investigate an incident in AWS cloud
 
 **NICE Work Roles:** 
 
-- [Cyber Defense Forensics Analyst](https://niccs.us-cert.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 
  **NICE Tasks:**
-- [T0027](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0027&description=All) -  Conduct analysis of log files, evidence, and other information to determine best methods for identifying the perpetrator(s) of a network intrusion.
+- [T0027](https://niccs.cisa.gov/workforce-development/nice-framework) of a network intrusion.
 
 
 <!-- cut -->

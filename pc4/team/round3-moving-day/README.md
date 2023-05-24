@@ -3,15 +3,15 @@
 Exploit and manipulate a satellite system web API to gather data about the relocation of a Space Pirate moonbase.
 
 **NICE Work Roles**
-- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-operator)
-- [Data Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/data-analyst)
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/exploitation-analyst)
+- [Cyber Operator](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Data Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks**
-- [T0266](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0266)- Perform penetration testing as required for new or updated applications.
-- [T0342](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0342)- Analyze data sources to provide actionable recommendations.
-- [T0618](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0618) - Conduct on-net activities to control and exfiltrate data from deployed technologies.
-- [T0696](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0696)- Exploit network devices, security devices, and/or terminals or environments using various methods or tools.
+- [T0266](https://niccs.cisa.gov/workforce-development/nice-framework)- Perform penetration testing as required for new or updated applications.
+- [T0342](https://niccs.cisa.gov/workforce-development/nice-framework)- Analyze data sources to provide actionable recommendations.
+- [T0618](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct on-net activities to control and exfiltrate data from deployed technologies.
+- [T0696](https://niccs.cisa.gov/workforce-development/nice-framework)- Exploit network devices, security devices, and/or terminals or environments using various methods or tools.
 
 ## Background
 

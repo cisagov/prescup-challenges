@@ -9,12 +9,12 @@ Your job is to identify the IPv4 address of the client who used the VPN to
 download an image of "Vlad the Inhaler".
 
 **NICE Work Role:** 
-- [Cyber Crime Investigator](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber%20Crime%20Investigator)
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber%20Defense%20Forensics%20Analyst)
+- [Cyber Crime Investigator](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-- [T0240](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0240&description=All) - Capture and analyze network traffic associated with malicious activities using network monitoring tools.
-- [T0433](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0433&description=All) - Conduct analysis of log files, evidence, and other information to determine the best methods for identifying the perpetrator(s) of a network intrusion or other crimes.
+- [T0240](https://niccs.cisa.gov/workforce-development/nice-framework) - Capture and analyze network traffic associated with malicious activities using network monitoring tools.
+- [T0433](https://niccs.cisa.gov/workforce-development/nice-framework) of a network intrusion or other crimes.
 
 ## Background
 

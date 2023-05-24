@@ -5,13 +5,13 @@ There are four hidden features within the code that, when used, will cause a fla
 
 **NICE Work Role:** 
 
-- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Systems+Developer&id=All)
+- [Software Developer](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0013](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0013&description=All#) - Apply coding and testing standards, apply security testing tools including \"'fuzzing\" static-analysis code scanning tools, and conduct code reviews.  
-- [T0111](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0111&description=All) - Identify basic common coding flaws at a high level.  
-- [T0436](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0436&description=All) - Conduct trial runs of programs and software applications to ensure that the desired information is produced and instructions and security levels are correct. 
+- [T0013](https://niccs.cisa.gov/workforce-development/nice-framework) - Apply coding and testing standards, apply security testing tools including \"'fuzzing\" static-analysis code scanning tools, and conduct code reviews.  
+- [T0111](https://niccs.cisa.gov/workforce-development/nice-framework) - Identify basic common coding flaws at a high level.  
+- [T0436](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct trial runs of programs and software applications to ensure that the desired information is produced and instructions and security levels are correct. 
 
 ## Getting Started
 

@@ -4,15 +4,15 @@ Given a raw DD forensic image and two encrypted containers, find several pieces 
 
 **NICE Work Role:** 
 
-- [Cyber Defense Forensic Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Cyber Defense Forensic Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0027](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All) - Conduct analysis of log files, evidence, and other information to determine best methods for identifying the perpetrator(s) of a network intrusion.
--[T0238](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All) - Extract data using data carving techniques (e.g., Forensic Tool Kit [FTK], Foremost).
-- [T0286](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All) - Perform file system forensic analysis.
-- [T0289](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All) - Utilize deployable forensics toolkit to support operations as necessary.
-- [T0397](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All) - Perform Windows registry analysis.
+- [T0027](https://niccs.cisa.gov/workforce-development/nice-framework) of a network intrusion.
+-[T0238](https://niccs.cisa.gov/workforce-development/nice-framework).
+- [T0286](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform file system forensic analysis.
+- [T0289](https://niccs.cisa.gov/workforce-development/nice-framework) - Utilize deployable forensics toolkit to support operations as necessary.
+- [T0397](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform Windows registry analysis.
 
 ## IMPORTANT
 

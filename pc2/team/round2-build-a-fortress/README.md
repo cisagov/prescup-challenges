@@ -3,13 +3,13 @@
 Build a network topology by configuring a firewall, a router, an IDS, and a web proxy.
 
 **NICE Work Role:** 
-- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Infrastructure+Support+Specialist&id=All)
+- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
-- [T0042](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0042&description=All) - Coordinate with Cyber Defense Analysts to manage and administer the updating of rules and signatures (e.g., intrusion detection/protection systems, antivirus, and content blacklists) for specialized cyber defense applications.
-- [T0335](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0335&description=All) - Build, install, configure, and test dedicated cyber defense hardware.
-- [T0420](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0420&description=All) - Administer test bed(s), and test and evaluate applications, hardware infrastructure, rules/signatures, access controls, and configurations of platforms managed by service provider(s).
-- [T0438](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0438&description=All) - Create, edit, and manage network access control lists on specialized cyber defense systems (e.g., firewalls and intrusion prevention systems).
+- [T0042](https://niccs.cisa.gov/workforce-development/nice-framework) for specialized cyber defense applications.
+- [T0335](https://niccs.cisa.gov/workforce-development/nice-framework) - Build, install, configure, and test dedicated cyber defense hardware.
+- [T0420](https://niccs.cisa.gov/workforce-development/nice-framework).
+- [T0438](https://niccs.cisa.gov/workforce-development/nice-framework).
 
 ## IMPORTANT
 

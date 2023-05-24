@@ -4,14 +4,14 @@ Investigate the payload, and infiltrate the C2 server.
 
 **NICE Work Roles:**
 
-- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Exploitation+Analyst&id=All)
-- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Exploitation Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
+- [Vulnerability Assessment Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
     
 **NICE Tasks:**  
 
-- [T0549](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0549&description=All) : Perform technical (evaluation of technology) and nontechnical (evaluation of people and operations) risk and vulnerability assessments of relevant technology focus areas (e.g., local computing environment, network and infrastructure, enclave boundary, supporting infrastructure, and applications).
-- [T0572](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0572&description=All) : Apply cyber collection, environment preparation and engagement expertise to enable new exploitation and/or continued collection operations, or in support of customer requirements.
+- [T0549](https://niccs.cisa.gov/workforce-development/nice-framework).
+- [T0572](https://niccs.cisa.gov/workforce-development/nice-framework) : Apply cyber collection, environment preparation and engagement expertise to enable new exploitation and/or continued collection operations, or in support of customer requirements.
 
 ## IMPORTANT
 You may complete this challenge in the hosted environment. This challenge made use of a Command and Control server/agent project that is available on Github [here](https://github.com/0xRick/c2).

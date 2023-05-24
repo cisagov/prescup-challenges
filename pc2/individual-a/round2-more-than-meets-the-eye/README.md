@@ -4,13 +4,13 @@ You must analyze multiple sets of image (jpg) files in order to extract the decr
 
 **NICE Work Role:**
 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/workroles?name=Cyber+Defense+Forensics+Analyst&id=All)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
 **NICE Tasks:**
 
-- [T0103](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0103&description=All) - Examine recovered data for information of relevance to the issue at hand.
-- [T0253](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0253&description=All) - Conduct cursory binary analysis
-- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework/tasks?id=T0532&description=All) - Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
+- [T0103](https://niccs.cisa.gov/workforce-development/nice-framework) - Examine recovered data for information of relevance to the issue at hand.
+- [T0253](https://niccs.cisa.gov/workforce-development/nice-framework) - Conduct cursory binary analysis
+- [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information.
 
 ## Background
 Attackers took photos in the University of Pittsburgh, Pittsburgh, PA area on the morning of July 5th using a Samsung Galaxy S7 phone (SM-G930V camera model). It is believed that the buildings/subjects of these photos are currently the targets and victims of ransomware attacks. The attackers' location was traced, and evidence was recovered at the scene.

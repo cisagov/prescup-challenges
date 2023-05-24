@@ -4,11 +4,11 @@ Investigate an incident in the Azure cloud platform.
 
 **NICE Work Roles:** 
 
-- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework/work-roles/cyber-defense-forensics-analyst)
+- [Cyber Defense Forensics Analyst](https://niccs.cisa.gov/workforce-development/nice-framework)
 
  **NICE Tasks:**
 
-- [T0027](https://niccs.cisa.gov/workforce-development/nice-framework/tasks/t0027) -  Conduct analysis of log files, evidence, and other information to determine best methods for identifying the perpetrator(s) of a network intrusion.
+- [T0027](https://niccs.cisa.gov/workforce-development/nice-framework) of a network intrusion.
 
 ## Background
 
