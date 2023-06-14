@@ -30,7 +30,7 @@ There is an additional box (`outdated-xeno`) with two services on different open
 >OpenVAS is stopped on startup to avoid consuming resources.
 
 1. Using the information gathered above, scan the IP address you found for any known vulnerabilities. First, start OpenVAS using the following command: `sudo gvm-start`
-1. Once OpenVAS starts, it should open the web interface automatically. If it didn't, then open Firefox and navigate to the following URL: `https://127.0.0.1:9392` and use the provided OpenVAS credentials.
+1. Once OpenVAS starts, it should open the web interface automatically. If it didn't, then open Firefox and navigate to the following URL: `https://127.0.0.1:9392` and use the provided OpenVAS credentials: `username: admin | password: admin`.
 1. Navigate to the `Scans` tab. Hover over the "magic wand" on the upper left, then click **Task Wizard**. Now, you can enter the IP you discovered (`10.5.5.56` in this guide) and click **Start Scan**. This will automatically begin to scan the provided IP address for vulnerabilities. 
 4. The scan should take less than 15 minutes. The progress of the scan is shown on the **Scans** tab, under **Tasks**.  To see the vulnerabilities found, hover the **Scans** tab and click **Vulnerabilities**. 
 
