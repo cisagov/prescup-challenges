@@ -29,7 +29,7 @@ There are several ways to search for the domain traffic.
     malicious domains also comes from the IP 10.0.20.231 and could
     filter just for this IP and then cross filter with each domain
 
-Regardless of how you decide to filter and look at the traffic, the ultimate goal is to find the one file that is accessed or downloaded that is also different or suspicious when compared to the others from these domains. There are three types of files downloaded from these sites: a text file named contact, txt, a doc file named readmore.doc (which are chapters of the second half of War of the Worlds), and a png file named logo.png (which is the President's Cup wallpaper).
+Regardless of how you decide to filter and look at the traffic, the ultimate goal is to find the one file that is accessed or downloaded that is also different or suspicious when compared to the others from these domains. There are three types of files downloaded from these sites: a text file named contact.txt, a doc file named readmore.doc (which are chapters of the second half of War of the Worlds), and a png file named logo.png (which is the President's Cup wallpaper).
 
 One of the files from one of these domains will be named differently and also be a binary at about 17KB in size. The name is slightly obfuscated so it can be tricky to spot, which is intentional.
 
