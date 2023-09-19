@@ -15,7 +15,18 @@ _What domain hosted the malware file that was downloaded to the system?_
 
 This question is solved by analyzing the provided packet capture and finding the malware in it, and then identifying the domain the malware was downloaded from.
 
-The challenge guide lists the potentially malicious domains, though only 10 of them will be present in the packet capture. The others are listed to expand the possible search area and reduce the likelihood that a player can guess without at least looking at the pcap file.
+### Method 1
+*Export all HTTP objects from the packet capture and identify any executables*
+
+1. Open the packet capture in Wireshark
+2. Select **File** --> **Export Objects** --> **HTTP** 
+3. Click **Save All** and choose a directory where to save the files
+4. Open a terminal window and navigate to the directory where the files were saved.
+5. Run the `file` command on all the files in the directory to determine if any of them are executables: `for i in ./*; do file $i; done | grep executable`
+6. The results will show 1 file that is an executable. Take the name of the file and search for it in the **HTTP Object List** in Wireshark, which will show the domain the malware was downloaded from.
+
+### Method 2
+*The challenge guide lists the potentially malicious domains, though only 10 of them will be present in the packet capture. The others are listed to expand the possible search area and reduce the likelihood that a player can guess without at least looking at the pcap file.*
 
 There are several ways to search for the domain traffic.
 
