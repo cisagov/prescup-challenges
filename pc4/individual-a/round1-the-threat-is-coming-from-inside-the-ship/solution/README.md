@@ -60,10 +60,14 @@ Next, players can write a script like the below script to search the filesystem 
 
 The following is an example script from SuperUser by Kamil Maciorowski:
 
-`hash='fe6a2374ab188c9269a8bf9c5395602277817e9a'`
-`find . -type f -exec sh -c '`
-`sha1sum "$2" | cut -f 1 -d " " | sed "s|\\\\||" | grep -Eqi "$1"`
-`' find-sh "$hash" {} \; -print`
+```
+#!/bin/bash
+
+hash='fe6a2374ab188c9269a8bf9c5395602277817e9a'
+find . -type f -exec sh -c '
+sha1sum "$2" | cut -f 1 -d " " | sed "s|\\\\||" | grep -Eqi "$1"
+' find-sh "$hash" {} \; -print
+```
 
 There are other example scripts to be found and used online, or players may write their own.
 
