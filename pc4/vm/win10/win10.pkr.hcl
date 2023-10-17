@@ -67,6 +67,7 @@ source "virtualbox-iso" "pc4-win10" {
   winrm_timeout           = "4h"
   winrm_use_ssl           = true
   winrm_username          = "${var.winrm_username}"
+  guest_additions_mode    = "attach"
 }
 
 

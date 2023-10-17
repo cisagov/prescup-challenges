@@ -33,6 +33,8 @@ source "virtualbox-iso" "pc4-kali" {
   ssh_username        = "user"
   ssh_wait_timeout    = "10000s"
   vm_name             = "pc4-kali"
+  guest_additions_mode    = "attach"
+
 }
 
 build {
