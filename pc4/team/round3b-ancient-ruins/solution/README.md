@@ -1,4 +1,4 @@
-# Ancient Ruins
+# The Ancient Ruins 
 
 _Solution Guide_
 
@@ -8,52 +8,48 @@ A couple disk images were recovered from an old Seelax droid which houses one of
 
 In fact, the two disk images are part of a three-disk RAID-5 array, to be mounted under `/mnt/maps/`, which is where the `seelax.srv` daemon appears to be looking for its data files.
 
-Once the `seelax.srv` daemon *does* gain access to its data files, it will copy a *scrambled* version of `EncryptedCodexC` from one file into RAM, and load a bunch of map files, calculating and storing their `SHA1` hashes memory.
+Once the `seelax.srv` daemon *does* gain access to its data files, it will copy a *scrambled* version of `EncryptedCodexC` from one file into RAM, and load a bunch of map files, calculating and storing their SHA1 hashes memory.
 
-When receiving a request (32 ASCII characters), the daemon will *unscramble* the `EncryptedCodexC` string, interleave it with the request, and respond with the `md5` hash of the interleaved string.
+When receiving a request (32 ASCII characters), the daemon will *unscramble* the `EncryptedCodexC` string, interleave it with the request, and respond with the md5 hash of the interleaved string.
 
-Competitors must either attach a debugger to the running `seelax.srv` daemon and dump the unscrambled `EncryptedCodexC` string from memory at the right time, or disassemble `seelax.srv` (e.g., using Ghidra), and figure out how to locate the scrambled `EncryptedCodexC` string and the steps needed to unscramble it.
+Competitors must either attach a debugger to the running `seelax.srv` daemon and dump the unscrambled `EncryptedCodexC` string from memory at the right time, or disassemble seelax.srv (e.g., using Ghidra), and figure out how to locate the scrambled EncryptedCodexC string and the steps needed to unscramble it.
 
+## Mounting the missing filesystem
 
-## 1. Mounting the missing filesystem
+Use the file utility to determine what sort of disk images we were given:
 
-Use the `file` utility to determine what sort of disk images we were given:
-
-```
+```bash
 $ file /media/user/*/disk_image_*.dd
 /media/user/Recovered Droid Disks/disk_image_1.dd: Linux Software RAID version 1.2 (1) UUID=76e37c0d:b93d7096:b6b7aa4f:ee2a4dbe name=seelax-droid.chlg.us:0 level=5 disks=3
 /media/user/Recovered Droid Disks/disk_image_2.dd: Linux Software RAID version 1.2 (1) UUID=76e37c0d:b93d7096:b6b7aa4f:ee2a4dbe name=seelax-droid.chlg.us:0 level=5 disks=3
 ```
+As root, copy the drive images to a location where they can be modified, then map them to loop devices using the losetup command:
 
-As root, copy the drive images to a location where they can be modified, then map them to `loop` devices using the `losetup` command:
-
-```
+```bash
 $ sudo -s
 $ cd /root
 $ cp /media/user/*/disk_image_*.dd .
 $ losetup /dev/loop0 ./disk_image2.dd
 $ losetup /dev/loop1 ./disk_image1.dd
 ```
+Some trial-and-error will be needed to figure out the right order of the two disk images, and the relative position of the missing disk. As it turns out, `disk_image1.dd` is in fact the *third* RAID5 disk, whereas `disk_image2.dd` is the *first*, with the *second* disk missing, having been damaged before it was found. As such, we re-create the RAID5 array
+in software, and mount it like so:
 
-Some trial-and-error will be needed to figure out the right order of the two disk images, and the relative position of the missing disk. As it turns out, `disk_image1.dd` is in fact the *third* `RAID5` disk, whereas `disk_image2.dd` is the *first*, with the *second* disk missing, having been damaged before it was found. As such, we re-create the `RAID5` array in software, and mount it like so:
-
-```
+```bash
 $ mdadm --create /dev/md0 --level=5 --raid-devices=3 /dev/loop0 missing /dev/loop1
 $ mount /dev/md0 /mnt/maps/
 ```
-
 Mounting the images in the wrong sequence, or with the wrong RAID parameters, could damage them and render then unusable. However, remember that there's always a pristine read-only copy of each available from the CD-ROM drive.
 
-Once `/mnt/maps` is mounted, the `seelax.srv` daemon (started via the `seelax.service` systemd unit) will stop complaining about missing files
-(using strange ASCII/binary coded messages), and, instead, start issuing response codes when receiving 32-bit ASCII command strings over `TCP 31337`.
+Once `/mnt/maps` is mounted, the `seelax.srv` daemon (started via the `seelax.service` systemd unit) will stop complaining about missing files (using strange ASCII/binary coded messages), and, instead, start issuing response codes when receiving 32-bit ASCII command strings over TCP 31337.
 
-## 2. Decompiling the `seelax.srv` binary
+## Decompiling the seelax.srv binary
 
-Copy the binary to a `Kali` VM equipped with `Ghidra`. This can be done with `scp`, or using the clipboard: `cat /usr/sbin/seelax.srv | gzip | base64` on the `seelax-droid` VM, and the reverse steps to unpack the binary on `Kali`.
+Copy the binary to a Kali VM equipped with Ghidra. This can be done with scp, or using the clipboard: `cat /usr/sbin/seelax.srv | gzip | base64` on the seelax-droid VM, and the reverse steps to unpack the binary on Kali.
 
 Three functions will be of interest. First, we have:
 
-```
+```c
 int FUN_001014a9(int param_1)
 {
   int iVar1;
@@ -94,13 +90,11 @@ int FUN_001014a9(int param_1)
   return iVar1;
 }
 ```
-
-This function loads "floorplan" maps, calculates their `SHA1` checksums of length `0x14` bytes, and copies them into an array of such checksums at
-address `0x00104160`.
+This function loads "floorplan" maps, calculates their SHA1 checksums of length 0x14 bytes, and copies them into an array of such checksums at address 0x00104160.
 
 Next there is:
 
-```
+```c
 int FUN_00101622(void)
 {
   int iVar1;
@@ -153,11 +147,11 @@ LAB_0010176c:
 }
 ```
 
-This function opens `/mnt/maps/etc/datafile.txt`, and parses the first `0x14` *pairs* of ASCII hex characters into actual byte values, storing them starting at address `0x00104040`.
+This function opens `/mnt/maps/etc/datafile.txt`, and parses the first 0x14 *pairs* of ASCII hex characters into actual byte values, storing them starting at address 0x00104040.
 
 Finally, we have:
 
-```
+```c
 undefined4 FUN_00101782(int param_1)
 {
   ssize_t sVar1;
@@ -239,25 +233,30 @@ undefined4 FUN_00101782(int param_1)
 }
 ```
 
-This function appears to serve network requests (it uses `setsockopt()` and `receive()`), and appears to apply byte-wise `XOR` to the parsed `0x14` byte string at `0x00104040` and one of the hashes from in the array at `0x00104160` (specifically, the hash stored at `0x00104228`).
+This function appears to serve network requests (it uses `setsockopt()` and `receive()`, and appears to apply byte-wise XOR to the parsed `0x14` byte string at `0x00104040` and one of the hashes from in the array at `0x00104160` (specifically, the hash stored at `0x00104228`).
 
-Put another way: the scrambled codex loaded from `/mnt/maps/etc/datafile.txt` is "unscrambled" by `XOR`-ing it with one of the "floormap" hashes. We calculate the index of the floor map used as key:
+Put another way: the scrambled codex loaded from `/mnt/maps/etc/datafile.txt` is "unscrambled" by XOR-ing it with one of the "floormap" hashes. We calculate the index of the floor map used as key:
 
-```
+```c
 (0x00104228 - 0x00104160) / 0x14 = 0x0A
 ```
 
-The `SHA1` sum of `/mnt/maps/floorplans/fp_11.png` must be byte-wise `XOR`-ed with the first 20 bytes (represented by the first 40 ascii hex digits) of `/mnt/maps/etc/datafile.txt`) in order to obtain the unscrambled string representing `EncryptedCodexC`.
+The SHA1 sum of `/mnt/maps/floorplans/fp_11.png` must be byte-wise XOR-ed
+with the first 20 bytes (represented by the first 40 ascii hex digits) of `/mnt/maps/etc/datafile.txt`) in order to obtain the unscrambled string
+representing `EncryptedCodexC`.
 
-Right before unscrambling `EncryptedCodexC` in memory, the function sends a message to the client side of the socket (`send(param_1,&local_c8,0x21,0);`) advertising that it's about to unscramble the string. We know that from having interacted with the server program over sockets (using `telnet` or `ncat`).
+Right before unscrambling `EncryptedCodexC` in memory, the function sends
+a message to the client side of the socket ( `send(param_1,&local_c8,0x21,0);` ) advertising that it's about to unscramble the string. We know that from having interacted with the server program over sockets (using telnet or ncat).
 
-Hovering over the QWORD assignment to `local_c8`, `local_c0`, `local_b8`, etc., in the Ghidra code decompiler window, we notice that it's an actual string stored numerically as Little Endian 64-bit constants, on the stack:
+Hovering over the QWORD assignment to `local_c8`, `local_c0`, `local\_b8,
+etc., in the Ghidra code decompiler window, we notice that it's an actual string stored numerically as Little Endian 64-bit constants, on the stack:
 
-```
+```c
 local_c8: ... char[]  "bmarcsnU"
 local_c0: ... char[]  "cnE gnil"
 local_b8: ... char[]  "oCdetpyr"
 ...
 ```
 
-That's where the message "`Unscrambling EncryptedCodexC...`" is sent to the client, so we can safely assume the following `0x14` byte-wise `XOR` operation is, in fact, the "unscrambling" under discussion.
+That's where the message "Unscrambling EncryptedCodexC..." is sent to the client, so we can safely assume the following `0x14` byte-wise `XOR` operation is, in fact, the "unscrambling"
+under discussion.
