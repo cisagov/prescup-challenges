@@ -25,7 +25,7 @@ Your employer has tasked you with securing critical goods from a wholesale distr
 
   Log in to the provided Kali machine. Use your browser to navigate to `http://wholesaler.us`. The credentials are `kowalski` and `tartans`. Click the `Products` link at the top and peruse the list of items this distributor stocks. The top two, `Blue Party Hat` and `Bandanna`, are usually out of stock. They are very popular this holiday season, and the retail arm of your employer needs to have them available to customers.  
 
-  The CEO occasionally sees the quantity available rise above 0, but by the time he adds it to his cart and gets to checkout, they are out of stock. He doesn't know how, but he's sure other retailers are cheating to get these items.  
+  The CEO occasionally sees the quantity available rise above 0, but by the time they add it to the cart and gets to checkout, the items are out of stock. The CEO doesn't know how, but they're sure other retailers are cheating to get these items.  
 
   Use the tools at your disposal to order at least one `Blue Party Hat` and at least one `Bandanna`. You can score your progress by visiting `http://challenge.us` from a browser within the challenge environment. The solution tokens will be displayed by the grading service as you place orders that secure the requested products.
 

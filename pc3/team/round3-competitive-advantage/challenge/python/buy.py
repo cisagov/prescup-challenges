@@ -12,8 +12,6 @@ class AutoBuy:
     addStockUrl = baseUrl + '/admin/rest/addStock/'
 
     headerPatch = { 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36',
-        #'Host': 'www.rsrgroup.com',
-        #'Origin': 'https://www.rsrgroup.com/',
         'Referer': 'https://www.rsrgroup.com/' }
 
     username = 'user'
@@ -30,14 +28,10 @@ class AutoBuy:
         self.login()
 
     def login( self ):
-        #print( 'Logging in...' )
         loginPage = self.session.get( self.loginUrl )
         csrf = self.parseCsrf( loginPage.text )
-        #print( 'CSRF :', csrf )
         loginPayload = { 'username': self.username, 'password': self.password, '_csrf': csrf }
         loginProc = self.session.post( self.loginUrl, data = loginPayload )
-        #print( loginProc.text )
-        #print( 'Logged in.' )
         self.csrfToken = self.fetchCsrf()
 
     def createItem( self, name, cost, price, description ):
@@ -59,8 +53,6 @@ class AutoBuy:
 
     def fetchOrders( self, user ):
         r = self.session.get( self.baseUrl + '/admin/rest/orders/' + user )
-        #print( r.request.headers )
-        #print( r.request.url )
         return r.text
 
     def loadCart( self ):
@@ -91,11 +83,7 @@ class AutoBuy:
 
     def didBuy( self, user, item ):
         ordersRaw = self.fetchOrders( user )
-        #print( ordersRaw )
-        #print
-        #exit()
         orderList = json.loads( ordersRaw )
-        #print( orderList )
         for o in orderList:
             for ol in o['orderLines']:
                 if ol['product']['id'] == item['id'] and ol['quantity'] > 0:
@@ -116,10 +104,7 @@ class AutoBuy:
 
 if __name__ == "__main__":
     print( "Buy some stuff!!" )
-    #ab = AutoBuy( 'user', 'password' )
     ab = AutoBuy( 'admin', 'AncientMariner99' )
-    #csrf = ab.fetchCsrf()
-    #print( csrf )
     mk23 = ab.createItem( 'HK Mark 23', '1900.00', '2499.99', 'The finest handgun ever made.' )
     usp = ab.createItem( 'HK USP', '800.00', '1299.99', 'The gun Snake used on the Tanker Incident.' )
     g19 = ab.createItem( 'Glock', '475.00', '647.00', 'Popular mid-size handgun.' )
@@ -130,6 +115,3 @@ if __name__ == "__main__":
     print( ab.addStock( a01ld, 3 ) )
 
     print( ab.fetchOrders( 'kowalski' ) )
-
-    #print( ab.setMode( 'EASY' ) )
-    #print( ab.setMode( 'HARD' ) )

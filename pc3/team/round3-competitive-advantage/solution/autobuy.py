@@ -22,7 +22,6 @@ def main():
         n = n + 1
         ab.addToCart( items )
         ab.checkout()
-        #time.sleep( 1 )
 
 if __name__ == '__main__':
     main()
