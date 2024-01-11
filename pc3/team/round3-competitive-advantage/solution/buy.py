@@ -12,8 +12,6 @@ class AutoBuy:
     addStockUrl = baseUrl + '/admin/rest/addStock/'
 
     headerPatch = { 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36',
-        #'Host': 'cmu.edu',
-        #'Origin': 'https://cmu.edu/',
         'Referrer': 'https://www.cmu.edu/' }
 
     username = 'user'
@@ -30,14 +28,10 @@ class AutoBuy:
         self.login()
 
     def login( self ):
-        #print( 'Logging in...' )
         loginPage = self.session.get( self.loginUrl )
         csrf = self.parseCsrf( loginPage.text )
-        #print( 'CSRF :', csrf )
         loginPayload = { 'username': self.username, 'password': self.password, '_csrf': csrf }
         loginProc = self.session.post( self.loginUrl, data = loginPayload )
-        #print( loginProc.text )
-        #print( 'Logged in.' )
         self.csrfToken = self.fetchCsrf()
 
     def parseCsrf( self, text ):
