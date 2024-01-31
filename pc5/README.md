@@ -1,4 +1,4 @@
-<img src="pc4-banner.jpg" height="150px"/>
+<img src="pc5-banner.jpg" height="150px"/>
 
 # President's Cup Cybersecurity Competition 2024 Content (Season 5)
 
