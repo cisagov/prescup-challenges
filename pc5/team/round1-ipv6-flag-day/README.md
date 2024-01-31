@@ -55,18 +55,6 @@ Use any valid IPv6 routable network range(s) in your setup; however, to save tim
 
 Do not disable or replace the working IPv4 settings; you need to keep them to ensure you can connect to and configure the ship routers!
 
-## System and Tool Credentials
-
-|system/tool|username|password|
-|-----------|--------|--------|
-|kali*      |user    |tartans |
-|core-router|vyos    |vyos    |
-|border-router|vyos  |vyos    |
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
-
 ## Challenge Questions
 
 1. Enter token for app server's IPv6 address.

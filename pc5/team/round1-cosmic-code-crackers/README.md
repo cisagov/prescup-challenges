@@ -51,20 +51,6 @@ IDS alerts/logs from today (Last 24 Hours) were seen pointing to potential malwa
 - Use VirusTotal (out of game) to analyze the hashes of any files discovered to uncover their true identity.
 - Use the provided malware list (**mw-list.csv**) from `challenge.us/files` and information from [VirusTotal](https://virustotal.com) to determine the malware type. You must access VirusTotal outside of the gamespace - i.e. from a browser on your local system.
 
-## System Tools and Credentials
-
-| system | OS type | username | password |
-|--------|---------|----------|--------|
-| Kali | Kali | user | tartans|
-| Clients | Ubuntu | user | tartans |
-| SecurityOnion | Ubuntu | so | tartans |
-| SO Webtools (`https://10.4.4.4`)| ~ | [admin@so.org]() | tartans@1 |
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (`10.5.5.5` or `64.100.100.102`) is forbidden. You may only use the provided webpage to view challenge progress and download any challenge artifacts that are provided.
-
-
 ## Challenge Questions
 
 1. What is the return address (in little endian format) that would allow you to overflow the overflow_me function and retrieve the secret information found by analyzing the suspicious file found on the User-A network client?

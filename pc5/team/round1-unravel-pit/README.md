@@ -23,21 +23,6 @@ The user machines are located on the `10.1.1.0/24` network. The shop is located 
 
 On the Kali VM Desktop, navigate to `challenge.us/files` and download the provided .pcapng file. Use the packet capture and information from the Security Onion server at `10.4.4.4` to get started.
 
-## System and Tool Credentials
-
-|system/tool|address|username|password|
-|-----------|--------|--------|--------|
-|kali|N/A|user|tartans|
-|Pfsense|10.0.0.1|user|tartans|
-|Security Onion|10.4.4.4|so|tartans|
-|Security Onion webpage|10.4.4.4|admin@so.org|tartans@1|
-|VyOS router|N/A|vyos|vyos |
-|Linux servers|varied|user|tartans|
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
-
 ## Challenge Questions
 
 1. What is the root password retrieved from the shop?

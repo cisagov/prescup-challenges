@@ -34,31 +34,6 @@ The *Daunted*'s *Security Controls Guide* can be found [here](./challenge/Securi
 
 In the gamespace, browse to `challenge.us` and read the **Compliance Assistant**. The Compliance Assistant verifies the changes made to the network environment and gives you tokens for submission. Follow the instructions carefully!
 
-## System and Tool Credentials
-
-|system/tool|username|password|
-|-----------|--------|--------|
-|kali|user|tartans|
-|k3s-server|user|tartans|
-|Pfsense|user|tartans|
-|Security Onion|so|tartans|
-
-## Application Admin Credentials
-
-|application|username|password|
-|-----------|--------|--------|
-|https://chat.merch.codes|admin|tartans|
-|https://keycloak.merch.codes|admin|tartans|
-|https://db.merch.codes|admin@merch.codes|tartans|
-|https://mail.merch.codes|admin|MailPassword123-|
-|https://pfsense.merch.codes|admin|PfsensePassword123-|
-|Security Onion|admin@so.org|SecurityPassword123-|
-|K3s Postgres|root|tartans|
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
-
 ## Challenge Tasks
 
 1. Meet the Password Management Control.

@@ -19,19 +19,6 @@ The environment has a Zero Trust application (`zero.merch.codes`) and a sensitiv
 
 Login to **Security Onion** (`10.4.4.4`) and examine the network traffic. The sensor ID for Security Onion in your environment is `securityonion`. 
 
-
-## System and Tool Credentials
-
-|system/tool|username|password|
-|-----------|--------|--------|
-|kali*      |user    |tartans |
-|securityonion (web)|admin@so.org    |tartans@1    |
-|s7331.merch.codes (web)|user    |UALOisiOuSYmpREstR    |
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
-
 ## Challenge Questions
 
 1. Regarding the steel file that was exfiltrated, what are the last THREE digits of the original filename?

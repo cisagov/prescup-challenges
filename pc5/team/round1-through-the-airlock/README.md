@@ -28,18 +28,6 @@ There are two parts to this challenge.
 
 Both parts are graded at `challenge.us`, which returns a token for each completed part.
 
-## System and Tool Credentials
-
-|system/tool|username|password|
-|-----------|--------|--------|
-|app-server|user|tartans|
-|kali|user|tartans|
-|vyos|user|tartans|
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
-
 ## Challenge Tasks
 
 1. Isolate the rogue system.

@@ -29,16 +29,6 @@ This challenge relies on SSH to grade the final task. Do not break or shut down 
 
 There are four questions to answer about the breach and one token to retrieve after completing the final task of deleting the exfiltrated files. All tokens are eight character hexadecimal strings. To attempt grading Question 5, visit `https://challenge.us` inside the challenge environment. 
 
-## System and Tool Credentials
-
-| system/tool                   | username | password |
-|-------------------------------|----------|----------|
-| kali-analyst                  | user     | tartans  |
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
-
 ## Challenge Questions
 
 1. What is the campaign id in the link for downloading the avcleaner software that was received via email on 04/19/2023? Note: the file name is in the link

@@ -46,18 +46,6 @@ Make the changes described above then refer to the *Developer Guide* to build an
 
 In the gamespace, browse to `https://challenge.us` and run the validation script. You can run the validation script as many times as needed while you make the required application changes. You will be given a token for each of the four updates described above.  
 
-## System and Tool Credentials
-
-| system/tool                | username  | password |
-|----------------------------|-----------|----------|
-| kali                       | user      | tartans  |
-| web-server                 | user      | tartans  |
-| api-db-server              | user      | tartans  |
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
-
 ## Challenge Tasks
 
 1. Enter the SQL injection vulnerability token.
