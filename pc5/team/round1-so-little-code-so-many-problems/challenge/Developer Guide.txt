@@ -1,0 +1,82 @@
+Developer Guide
+
+* The kali virtual machines (VMs) are not connected to the internet. All of the required nuget packages that are required to fix, debug, and deploy the code are already located on the kali. Visual Studio Code has been installed and configured to build C# and ASP.NET Core applications. You may also use the `dotnet` build tools from the command line.
+
+* Do not delete items from the databases or change the database schema. You may add new users, files, and inventory items while testing the application and your code.
+
+* The Inventory UI web application can be reached from the kali VMs via web browser at http://inventory.merch.codes.
+You can register your own test accounts or login with the following credentials:
+username: test@test.com
+password: Tartans!1
+
+* The source code for the Inventory UI web application has been provided on the kali VMs at /home/user/Code/MerchCodesUI. This code has been provided for your reference only. You do not need to alter or deploy this application. If you need to restart the UI web application service for any reason you can find it running on the web-server VM.
+Login and use this command:
+sudo service kestrel-inventory restart
+
+* The Inventory API web application Swagger pages can be reach from the kali VMs via web browser at http://api.merch.codes/swagger/index.html.
+
+* The prescup5_MerchCodesInventory and prescup5_MerchCodesUI databases reside on the PostgreSQL database server that runs on the api-db-server VM. All instances of the UI and API reference these databases, including the applications running on the kali VMs. You do not need to alter the database schemas, but you might find it useful to query the databases directly while testing.
+
+Code Location
+1. Login to an instance of the kali.
+2. Open Visual Studio Code
+3. Click File > Open Folder
+4. Navigate to /home/user/Code/MerchCodesInventoryApi
+5. Click Open
+6. You will now see the solution in the Explorer View.
+7. Select the files you wish to view and edit to open them in the code editor window.
+
+How to Build the Code
+1. Start by opening the MerchCodesInventoryApi solution in Visual Studio code.
+2. Make the required code changes.
+3. Select Terminal > New Terminal
+4. From the Terminal window type `dotnet clean` and hit `Enter`
+5. From the Terminal window type `dotnet build --configuration Release` and hit Enter.
+6. Assuming there are no errors, you will see results similar to the following:
+
+user@kali:~/Code/MerchCodesInventoryApi$ dotnet build
+MSBuild version 17.3.2+561848881 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  MerchCodesInventoryApi -> /home/user/Code/MerchCodesInventoryApi/bin/Debug/net6.0/MerchCodesInventoryApi.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.52
+
+7. To publish a release version of the code, go to the Terminal window and type `dotnet publish --configuration Release` and hit Enter.
+8. Assuming there are no errors, you will see results similar to the following:
+
+MSBuild version 17.3.2+561848881 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  MerchCodesInventoryApi -> /home/user/Code/MerchCodesInventoryApi/bin/Release/net6.0/MerchCodesInventoryApi.dll
+  MerchCodesInventoryApi -> /home/user/Code/MerchCodesInventoryApi/bin/Release/net6.0/publish/
+
+
+How to Deploy the Code
+1. You will need to deploy all of the files located in /home/user/Code/MerchCodesInventoryApi/bin/Release/net6.0/publish/
+2. Navigate to the /home/user/Code/MerchCodesInventoryApi/bin/Release/net6.0/publish/ folder.
+3. Select all files, right click and choose Compress.
+4. Give the file a name such as `api.zip`. It is recommended that you create a new archive for each deployment to prevent caching issues when moving files between machines. For example, additional builds would be named something like `api2.zip`, `api3.zip`, etc.
+5. Click the Create button.
+6. Open a terminal window and navigate to /home/user/Code/MerchCodesInventoryApi/bin/Release/net6.0/publish.
+7. To move the code to the api-db-server enter the following command in the terminal window:
+sudo scp api.zip user@10.1.1.201:/home/user/Code
+8. Enter tartans when you are prompted for a password.
+9. Login to the api-db-server.
+10. Navite to /home/user/Code
+11. Extract the files from the api.zip folder.
+12. Stop the running API application with the following command:
+sudo service kestrel-api stop
+13. Delete the existing files from the `/var/www/inventoryapi` directory.
+14. Deploy the files you extracted in the steps above and move them to: /var/www/inventoryapi.
+15. If you deleted the Files directory in the /var/www/inventoryapi folder you will need to recreate it. Failure to do so will result in runtime errors when using the API.
+16. Start the running API application with the following command:
+sudo service kestrel-api start
+
+
+
+

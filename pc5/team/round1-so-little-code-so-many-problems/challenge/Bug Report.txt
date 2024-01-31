@@ -1,0 +1,37 @@
+Bug Report
+
+All of the identified code issues exist in the MerchCodesInventoryApi web API application. The code is located on each instance of the developer-workstation virtual machines (VMs) in the following directory: 
+/home/user/Code/MerchCodesInventoryApi
+
+Each of the four identified issues are located in methods that have been commented with TODO: tags.
+
+Do not alter the method names, routes, returned data types or formats for any of the methods.
+
+Question 1
+1. Prevent SQL Injection in the SearchInventory method of the /home/user/Code/MerchCodesInventoryApi/Controllers/InventoryController.cs file.
+2. This method is currently vulnerable to SQL injection attacks.
+3. Update the code to prevent SQL injection without changing the results that are returned for valid search strings.
+4. The token received for resolving this issue will be the answer to question #1.
+
+Question 2
+1. Require authenticated callers in the GetFiles method of the /home/user/Code/MerchCodesInventoryApi/Controllers/FilesController.cs file.
+2. This method currently allows unauthenticated clients to retrieve results from the associated /api/files/getfiles method.
+3. Use the IsUserAuthenticated() method to protect this method from unauthenticated clients.
+4. If the call to IsUserAuthenticated() returns false, the code must be updated with the following return statement:
+return Json(Unauthorized());
+5. The token received for resolving this issue will be the answer to question #2.
+
+Question 3
+1. Add validation to file uploads in the UploadFile method of the /home/user/Code/MerchCodesInventoryApi/Controllers/FilesController.cs file.
+2. The file upload method currently allows files larger than 1,000,000 bytes in length to be uploaded. If an attempt to upload a file larger than 1,000,000 bytes in length is attempted, the code in this method should return:
+return Json(false);
+3. The file upload method currently allows files with a .exe file extension to be uploaded. If an attempt to upload a file with a .exe file extension is attempted, the code in this method should return:
+return Json(false); 
+4. The token received for resolving this issue will be the answer to question #3.
+
+Question 4
+1. HTML encode data returned from the GetInventoryItems method of the /home/user/Code/MerchCodesInventoryApi/Controllers/InventoryController.cs file.
+2. This method is vulnerable to Stored XSS (Persistent XSS) attacks.
+3. The Name and Description fields of each of the Inventory items in the list of returned results should be HTML encoded.
+4. The token received for resolving this issue will be the answer to question #4.
+
