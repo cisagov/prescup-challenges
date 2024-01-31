@@ -14,6 +14,7 @@ All of the challenge content can be found in the respective year season director
 | `/pc2`    | 2020-21 | President's Cup: **Season 2** |
 | `/pc3`    | 2021    | President's Cup: **Season 3** |
 | `/pc4`    | 2022    | President's Cup: **Season 4** |
+| `/pc5`    | 2024    | President's Cup: **Season 5** |
 
 ## ⚠️ Large Files ⚠️
 Some of the challenges include large files as a separate download. See the README.md in each challenge folder for the download location.
