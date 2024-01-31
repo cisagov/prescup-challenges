@@ -11,8 +11,6 @@ Multiple bugs and vulnerabilities have been identified in our C# .NET Web API ap
 - [T0176](https://niccs.cisa.gov/workforce-development/nice-framework/): Perform secure programming and identify potential flaws in codes to mitigate vulnerabilities.  
 - [T0553](https://niccs.cisa.gov/workforce-development/nice-framework/): Apply cybersecurity functions (e.g., encryption, access control, and identity management) to reduce exploitation opportunities.
 
-<!-- cut -->
-
 ## Background
 
 Use the provided kali workstations, developer guide, and bug report to make code changes to the Web API application.
