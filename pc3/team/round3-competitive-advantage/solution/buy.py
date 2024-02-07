@@ -12,7 +12,7 @@ class AutoBuy:
     addStockUrl = baseUrl + '/admin/rest/addStock/'
 
     headerPatch = { 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36',
-        'Referrer': 'https://www.cmu.edu/' }
+        'Referer': 'https://www.cmu.edu/' }
 
     username = 'user'
     password = 'password'
