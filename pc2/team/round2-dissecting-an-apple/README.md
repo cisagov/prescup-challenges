@@ -11,8 +11,8 @@ Analyze a forensic image to answer a few questions.
 - [T0286](https://niccs.cisa.gov/workforce-development/nice-framework) - Perform file system forensic analysis.  
 - [T0532](https://niccs.cisa.gov/workforce-development/nice-framework) for recovery of potentially relevant information."
 
-## IMPORTANT
-There are no downloadable artifacts for this challenge. The full challenge can be completed on the hosted site.
+## ⚠️ Large Files ⚠️
+This challenge includes large files as a separate download. Please download the forensic disk image (the `EVIDENCE` drive) from [here](https://presidentscup.cisa.gov/files/pc2/team-round2-dissecting-an-apple-largefiles.7z) to play this challenge offline. The file is a 7-zip archive that is ~15.5GB zipped and 40GB unzipped. 
 
 
 ## Background
