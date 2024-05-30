@@ -25,8 +25,7 @@ No one knows the password to  `zero.merch.codes`; however, console access is giv
 
 |system/tool|username|password|
 |-----------|--------|--------|
-|kali*      |user    |tartans |
-|securityonion (web)|admin@so.org    |tartans@1    |
+|kali      |user    |tartans |
 |webserver|user    |tartans    |
 |pritunl (console)|user    |tartans    |
 
