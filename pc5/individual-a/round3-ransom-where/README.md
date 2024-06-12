@@ -14,6 +14,9 @@ Remediate a ransomware attack by decrypting files, removing malware, and patchin
 - [T0288](https://niccs.cisa.gov/workforce-development/nice-framework): Perform static malware analysis.
 - [T0432](https://niccs.cisa.gov/workforce-development/nice-framework): Collect and analyze intrusion artifacts (e.g., source code, malware, and system configuration) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
+
 ## Background
 
 Your company was recently the victim of a ransomware attack. It's your job to stop the attack, decrypt the affected files, remove all traces of the malware, and patch the vulnerabilities to prevent and protect against future incidents.  
