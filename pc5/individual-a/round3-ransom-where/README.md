@@ -15,6 +15,7 @@ Remediate a ransomware attack by decrypting files, removing malware, and patchin
 - [T0432](https://niccs.cisa.gov/workforce-development/nice-framework): Collect and analyze intrusion artifacts (e.g., source code, malware, and system configuration) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
 ## IMPORTANT
+
 This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
 
 ## Background
@@ -27,7 +28,7 @@ Tools to help you recover from the ransomware attack are available for download:
 
 ## Submission Info
 
-**Important!** SSH connectivity is required for grading and is done with the `root` account. Do not alter any files or configuration for the `root` user. Failed connection to host will result in a failed grade. 
+**Important!** SSH connectivity is required for grading and is done with the `root` account. Do not alter any files or configuration for the `root` user. Failed connection to host will result in a failed grade.
 
 The second and third tokens are received upon passing the grading check on `https://challenge.us`. Both tasks require that the VM's `website`, `user`, and `services` pass the grading check.
 
@@ -50,7 +51,7 @@ The second and third tokens are received upon passing the grading check on `http
 |user|user|tartans|
 |services|user|tartans|
 |Pfsense|admin|pfsense|
-|Security Onion|admin@so.org|tartans@1|
+|Security Onion|<admin@so.org>|tartans@1|
 
 ## Note
 
