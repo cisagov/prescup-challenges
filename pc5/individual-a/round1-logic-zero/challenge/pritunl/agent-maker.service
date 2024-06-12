@@ -1,0 +1,14 @@
+[Unit]
+Description=Make Agent
+After=network.target pritunl-zero.service
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 15
+ExecStart=/etc/systemd/system/agent-maker.sh
+Restart=no
+RemainAfterExit=yes
+StandardError=null
+
+[Install]
+WantedBy=default.target

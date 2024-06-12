@@ -1,0 +1,1 @@
+{"options":{"capped":true,"size":5242880,"max":1000},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"pritunl-zero.events"},{"v":2,"key":{"channel":1},"name":"channel_1","ns":"pritunl-zero.events","background":true}],"uuid":"3f1e5daabe9e43a08be011461e8cede0"}

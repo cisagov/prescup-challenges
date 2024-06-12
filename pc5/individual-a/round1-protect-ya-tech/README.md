@@ -12,6 +12,8 @@ Investigate a packet capture for evidence of programmable logic controller (PLC)
 - [T0161](https://niccs.cisa.gov/workforce-development/nice-framework/): Perform analysis of log files from a variety of sources (e.g., individual host logs, network traffic logs, firewall logs, and intrusion detection system [IDS] logs) to identify possible threats to network security.
 - [T0163](https://niccs.cisa.gov/workforce-development/nice-framework/): Perform cyber defense incident triage, to include determining scope, urgency, and potential impact, identifying the specific vulnerability, and making recommendations that enable expeditious remediation.
 
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.  
 
 ## Background
 

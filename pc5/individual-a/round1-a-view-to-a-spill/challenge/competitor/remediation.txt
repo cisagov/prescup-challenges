@@ -1,0 +1,3 @@
+Please fix the IPv6 camera management sites so that each camera's IPv6 default landing page instead points to the same login (index.html) page as the IPv4 sites. The grading script will verify that all 10 IPv6 camera sites use this page as the default landing page and that they enforce login verification before being redirected to the storage.html page. You do not need to modify the storage.html page in the IPv6 web directories.
+
+In order to connect to the webserver to implement these changes, you can SSH to 10.4.4.100 using the creds user|M0r3S3cur34L!f3 over port 22.

@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"pritunl-zero.geo"},{"v":2,"key":{"t":1},"name":"t_1","ns":"pritunl-zero.geo","background":true,"expireAfterSeconds":1296000}],"uuid":"f03ac705e0f74ba2aba67d70f89c98fc"}
