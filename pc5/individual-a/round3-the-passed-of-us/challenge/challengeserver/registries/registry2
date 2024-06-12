@@ -1,0 +1,113 @@
+<Registry>
+  <Applications>
+    <ByteCrypt>
+      <EncryptionKey>0x1A3F9B8C  </EncryptionKey>
+      <Compression>Enabled  </Compression>
+      <Algorithm>RSA  </Algorithm>
+    </ByteCrypt>
+    <CyberShield>
+      <Version>2.0  </Version>
+      <AutoUpdate>Disabled  </AutoUpdate>
+      <Firewall>Enabled  </Firewall> 
+    </CyberShield>
+    <DataSentry>
+      <BackupFrequency>Weekly  </BackupFrequency>
+      <BackupLocation>/mnt/backup  </BackupLocation>
+      <Compression>Disabled  </Compression>
+    </DataSentry>
+    <LostPass>
+      <UserDetails>
+        <markincaid>
+          <GUID>GGGG  </GUID>
+          <EncryptionScheme>AES-256-CBC  </EncryptionScheme>
+          <Iterations>IIII  </Iterations>
+          <InitialSalt>7182b71286242290aae9eb91b8f9c893  </InitialSalt>
+          <SecondSalt>11111111  </SecondSalt>
+          <ThirdSalt>22222222  </ThirdSalt>
+          <FourthSalt>33333333  </FourthSalt>
+          <FifthSalt>44444444  </FifthSalt>
+          <SixthSalt>55555555  </SixthSalt>
+          <VaultKeyHash>HHHH  </VaultKeyHash>
+        </markincaid>
+      </UserDetails>
+    </LostPass>
+    <NetDefender>
+      <NetworkScan>Enabled  </NetworkScan>
+      <VirusDetection>Enabled  </VirusDetection>
+      <QuarantinePath>C:\Quarantine  </QuarantinePath>
+    </NetDefender>
+    <WardVPN>
+      <EncryptionScheme>AES256  </EncryptionScheme>
+      <EnhancedProtection>Enabled  </EnhancedProtection>
+      <GUID>12345678-abcdef-5634  </GUID>
+    </WardVPN>
+  </Applications>
+  <SystemConfiguration>
+    <Hostname>myubuntu  </Hostname>
+    <TimeZone>UTC  </TimeZone>
+    <KernelVersion>4.20.0-64-generic  </KernelVersion>
+    <SwapSpace>2GB  </SwapSpace>
+  </SystemConfiguration>                            
+  <UserAccounts>
+    <User>
+      <Username>emily.james  </Username>
+      <GUID>4d1c-789b2-35e8  </GUID>
+      <CreationDate>2022-03-15  </CreationDate>
+      <LastLogin>2023-07-10 09:24:15  </LastLogin>
+    </User>
+    <User>
+      <Username>oliver.johnson  </Username>
+      <GUID>2f75-8f931-059a  </GUID>
+      <CreationDate>2022-04-30  </CreationDate>
+      <LastLogin>2023-07-13 08:57:21  </LastLogin>
+    </User>
+    <User>
+      <Username>markincaid  </Username>
+      <GUID>7a2e-9f9d3-248c  </GUID>
+      <CreationDate>2022-05-05  </CreationDate>
+      <LastLogin>2023-07-14 17:12:45  </LastLogin>
+    </User>
+    <User>
+      <Username>wsmith  </Username>
+      <GUID>8a17-29f0c-4f91  </GUID>
+      <CreationDate>2022-06-22  </CreationDate>
+      <LastLogin>2023-07-12 16:42:59  </LastLogin>
+    </User>
+    <User>
+      <Username>noah.jackson  </Username>
+      <GUID>5721-91f23-56a7  </GUID>
+      <CreationDate>2022-07-08  </CreationDate>
+      <LastLogin>2023-07-09 10:51:03  </LastLogin>
+    </User>
+    <User>
+      <Username>sophwilliams  </Username>
+      <GUID>11f4-57a6b-3645  </GUID>
+      <CreationDate>2022-08-11  </CreationDate>
+      <LastLogin>2023-07-11 14:36:07  </LastLogin>
+    </User>
+    <User>
+      <Username>sonia.brown  </Username>
+      <GUID>0f6b-89a23-19e4  </GUID>
+      <CreationDate>2022-09-01  </CreationDate>
+      <LastLogin>2023-07-16 11:15:32  </LastLogin>
+    </User>
+    <User>
+      <Username>ethan.rodriguez  </Username>
+      <GUID>40b6-4cd3e-8e71  </GUID>
+      <CreationDate>2022-10-14  </CreationDate>
+      <LastLogin>2023-07-07 21:18:12  </LastLogin>
+    </User>
+    <User>
+      <Username>odavis  </Username>
+      <GUID>c863-1a38f-89d2  </GUID>
+      <CreationDate>2022-11-18  </CreationDate>
+      <LastLogin>2023-07-15 13:09:28  </LastLogin>
+    </User>
+    <User>
+      <Username>isabella.thomas  </Username>
+      <GUID>93e5-0b679-1c9e  </GUID>
+      <CreationDate>2022-12-30  </CreationDate>
+      <LastLogin>2023-07-08 07:33:59  </LastLogin>
+    </User>
+  </UserAccounts>
+</Registry>  

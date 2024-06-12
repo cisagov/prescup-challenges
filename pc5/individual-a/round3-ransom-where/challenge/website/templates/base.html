@@ -1,0 +1,164 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="description" content="site">
+<head>
+<style>
+
+                                        /*Top search bar */
+ul.navbar {
+list-style-type: none;
+margin: 0 auto;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+position: sticky;
+height:70px;
+width:1900px;
+display:inline-block;
+}
+li a {
+    display: inline-block;
+    color:white;
+    text-decoration: none;
+}
+li.searchform {
+    margin:0;
+    padding:17.5px 10px;
+    float:center;
+    width:800px;
+}
+img.navbarimg {
+    height:70px;
+    width:60px;
+}
+li.cart {
+    float:right;
+    padding:0 20px;
+}
+li.signin {
+    float:right;
+    width:100px;
+    line-height:70px;
+    text-align:center;
+}
+
+li.user {
+    float:right;
+    width:100px;
+    line-height:30px;
+}
+
+                                        /* categories config */
+ul.category {
+    width:1900px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #918b8b;
+    position: sticky;
+}
+
+.category li {
+    float:left;
+    padding:0 40px;
+}
+                                /* products config */
+
+table.products {
+    border-spacing: 1px;
+    border-collapse: separate;
+    background: rgb(248, 174, 77);   /*rgb(70, 179, 75);*/
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid black;
+
+}
+
+td.info {
+    text-align:center;
+}
+
+img.cartimage {
+    height:100px;
+    width:80px;
+}
+img.itemimage {
+    height:200px;
+    width:200px;
+}
+
+
+</style>
+    {% block header %}{% endblock %}
+</head>
+
+<body style="background-color:#ffa500;">
+    <section class="hero is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <center>
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <h3 class="notification  style="color: red;">
+                    {{ messages[0] }}
+                    </h3>
+                    {% endif %}
+                    {% endwith %}
+
+                    <div>
+                        <ul class="navbar">
+                            <li style="float:left;">
+                                <a href="/">
+                                    <img class="navbarimg" src="{{ url_for('static', filename='images/logo.png') }}" />
+                                </a>
+                            </li>
+                            
+                            {% if not loggedIn %}
+                                <li class="signin">
+                                    <a style="height:70px;width:inherit;" href="/loginForm">Sign In</a>
+                                </li>
+                            {% else %}
+                                <li class="user">
+                                    <a style="height:70px;width:inherit;" href="/logout">Logout {{firstName}}</a>
+                                </li>
+                                <li class="signin">
+                                    <a style="height:70px;width:inherit;" href="/account/profile">Account</a>
+                                </li>
+                            {% endif %}
+                            <li class="cart">
+                                <a href="/cart">CART {{noOfItems}}<img class="navbarimg" src="{{url_for('static', filename='images/shoppingCart.png')}}" />
+                                </a>
+                            </li>
+                            <li class="searchform">
+                                <form>
+                                    <input style="width:600px;" type="text" name="searchQuery">
+                                    <input type="submit" value="Search">
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    {% block content %}{% endblock %} 
+                </center>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+

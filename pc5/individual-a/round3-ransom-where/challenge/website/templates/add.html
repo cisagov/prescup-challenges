@@ -1,0 +1,30 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Add Items{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+
+<h2>Add items</h2>
+<form action="/addItem" method="POST" enctype="multipart/form-data">
+	Name: <input type="text" name="name"><br>
+	Price: <input type="text" name="price"><br>
+	Description: <textarea name="description" rows=3 cols="40"></textarea><br>
+	Image: <input type="file" name="image"><br>
+	Stock: <input type="text" name="stock"><br>
+	Category: <select name="category">
+		{% for row in categories %}
+			<option value="{{row[0]}}">{{row[1]}}</option>
+		{% endfor %}
+	</select><br>
+	<input type="submit">
+</form>
+{% endblock %}

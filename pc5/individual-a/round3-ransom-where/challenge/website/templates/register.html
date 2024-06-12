@@ -1,0 +1,41 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Registration{% endblock %}</title>
+  <script type="text/javascript" src="{{ url_for('static', filename = 'js/validateForm.js') }}"></script>
+
+{% endblock %}
+
+{% block content %}
+
+<form action="/register" method="POST" onsubmit="return validate()">
+  <table>
+    <tr><th style="text-align:left;">Email</th><td><input type="email" name="email"></td></tr>
+    <tr><th style="text-align:left;">Password</th><td><input type="password" name="password" id="password" required></td></tr>
+    <tr><th style="text-align:left;">Confirm Password:</th><td><input type="password" name="cpassword" id="cpassword" required></td></tr>
+    <tr><th style="text-align:left;">First Name:</th><td><input type="text" name="firstName"></td></tr>
+    <tr><th style="text-align:left;">Last Name:</th><td><input type="text" name="lastName"></td></tr>
+    <tr><th style="text-align:left;">Address Line 1:</th><td><input type="text" name="address1"></td></tr>
+    <tr><th style="text-align:left;">Address Line 2:</th><td><input type="text" name="address2"></td></tr>
+    <tr><th style="text-align:left;">Zipcode:</th><td><input type="text" name="zipcode"></td></tr>
+    <tr><th style="text-align:left;">City:</th><td><input type="text" name="city"></td></tr>
+    <tr><th style="text-align:left;">State:</th><td><input type="text" name="state"></td></tr>
+    <tr><th style="text-align:left;">Country:</th><td><input type="text" name="country"></td></tr>
+    <tr><th style="text-align:left;">Phone Number:</th><td><input type="text" name="phone"></td></tr>
+
+    <tr><th colspan="2"><input type="submit" value="Register"></th></tr>
+  </table>
+  <br>
+  <a href="/loginForm">Login here</a>
+</form>
+{% endblock %}
+
+
+

@@ -13,6 +13,10 @@ A personnel device tracking server has gone offline. Perform memory analysis to 
 - [T0286](https://niccs.cisa.gov/workforce-development/nice-framework): Perform file system forensic analysis.
 - [T0532](https://niccs.cisa.gov/workforce-development/nice-framework): Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information.
 
+## ⚠️ Large Files ⚠️
+
+This challenge includes large files as a separate download. Please [download the required pcap file and memory dump](https://presidentscup.cisa.gov/files/pc5/individuala-round3-untangling-the-web.zip) to get started. The zipped file is ~1.39GBs and the memory dump is 2GBs while the pcap file is 726MBs when extracted.
+
 
 ## Background
 
@@ -54,17 +58,6 @@ Using the information from Objective #1 and the pcapng file retrieved from `http
 Based on when Louie's locator device came online, investigate the traffic for more events following its appearance and determine what actions were taken on the network.
 
 Critical systems can be accessed remotely for investigation. User systems are also configured with `auditd` for tracking terminal commands.
-
-## System Tools and Credentials
-
-| system | OS type | username | password |
-|--------|---------|----------|--------|
-| Kali | Kali | user | tartans|
-| All remotely accessed systems | Ubuntu | user | tartans |
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (`10.5.5.5` or `64.100.100.102`), k3s-server (10.3.3.10), and app-server (10.3.3.3), is forbidden. You may only use the provided webpage to view challenge progress and download any challenge artifacts that are provided.
 
 ## Challenge Questions
 

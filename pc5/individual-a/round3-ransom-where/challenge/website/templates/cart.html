@@ -1,0 +1,44 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Your Cart{% endblock %}</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/cart.css')}}" />
+  <!--<link rel="stylesheet" href="{{url_for('static', filename='css/topStyle.css') }}" />-->
+{% endblock %}
+
+{% block content %}
+
+<div id="cartItems">
+	<h2>Shopping Cart</h2>
+	<div id="tableItems">
+		{% for row in products %}
+		<div style="width:400px;">
+			<hr id="seperator">
+			<div id="itemImage">
+				<img src="{{url_for('static', filename='uploads/'+row[3])}}" class="cartimage"/>
+			</div>
+			<div id="itemName">
+				<span id="itemNameTag">{{row[1]}}</span><br>
+				In stock<br>
+				<a href="/removeFromCart?productId={{row[0]}}">Remove</a>
+			</div>
+			<div id="itemPrice">
+				${{row[2]}}
+			</div>
+		</div>
+		{% endfor %}
+		<hr id="seperator">
+		<div id="total">
+			<span id="subtotal">Subtotal</span> : ${{totalPrice}}
+		</div>
+	</div>
+</div>
+<!--<a href="/checkout">Proceed to checkout</a>-->
+{% endblock %}
