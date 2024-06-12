@@ -12,6 +12,9 @@ The entire ship network must be upgraded to the IPv6 routing protocol.
 - [T0081](https://niccs.cisa.gov/workforce-development/nice-framework/): Diagnose network connectivity problems.
 - [T0121](https://niccs.cisa.gov/workforce-development/nice-framework/): Implement new system design procedures, test procedures, and quality standards.
 
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
+
 ## Background
 
 The current ship network uses IPv4 and consists of several networks connected by two VyOS routers. You can ping (and connect to) two different servers using their IPv4 addresses. You have administrator access to the two routers. 

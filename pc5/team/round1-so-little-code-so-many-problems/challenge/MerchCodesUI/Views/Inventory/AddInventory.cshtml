@@ -1,0 +1,41 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@{
+    ViewData["Title"] = "Add Inventory";
+}
+
+<h1>Add Inventory</h1>
+
+<div>
+    <a asp-area="" asp-controller="Inventory" asp-action="Index">View Inventory</a>
+</div>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert" style="margin-top:20px">
+        @ViewBag.Message
+    </div>
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div style="margin-top:20px">
+        Item Name: <br />
+        <input type="text" name="name" />
+    </div>
+    <div style="margin-top:20px">
+        Description: <br />
+        <input type="text" name="description" />
+    </div>
+    <div style="margin-top:20px">
+        Count: <br />
+        <input type="text" name="count" />
+    </div>
+    <div style="margin-top:20px">
+        <button type="submit">Add Inventory Item</button>
+    </div>
+</form>

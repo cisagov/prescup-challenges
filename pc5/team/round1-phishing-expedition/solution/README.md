@@ -36,8 +36,6 @@ This solution guide uses Autopsy and Wireshark to open and analyze the files, bu
 
 ## Question 2
 
-<!-- Add an example timestamp in addition to the format to make it explicitly clear -->
-
 *According to the logs, what time was the avcleaner malware first executed?  (Answer is in MM/DD/YYYY H:MM:SS XM format)*
 
 1. Search the file system for the avcleaner binary. It's located at `/home/user/Downloads`. There is a log file in the directory as well.

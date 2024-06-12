@@ -1,0 +1,44 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@using MerchCodesInventoryApi.Data.Models;
+@model ViewInventoryModel
+@{
+    ViewData["Title"] = "View Inventory";
+}
+
+<h1>View Inventory</h1>
+
+<div>
+    <a asp-area="" asp-controller="Inventory" asp-action="SearchInventory">Search Inventory</a>
+</div>
+<div>
+    <a asp-area="" asp-controller="Inventory" asp-action="AddInventory">Add Inventory</a>
+</div>
+
+@if (Model != null && Model.InventoryItems != null && Model.InventoryItems.Count > 0)
+{
+    <div style="margin-top: 20px;">
+        <table style="width: 100%; border:1px solid black; padding: 5px;">
+            <tr>
+                <td style="border:1px solid black; padding: 5px;">ID</td>
+                <td style="border:1px solid black; padding: 5px;">Name</td>
+                <td style="border:1px solid black; padding: 5px;">Number in Inventory</td>
+            </tr>
+            @foreach (Inventory inventoryItem in Model.InventoryItems)
+            {
+                <tr>
+                    <td style="border:1px solid black; padding: 5px;">@inventoryItem.Id</td>
+                    <td style="border:1px solid black; padding: 5px;">@Html.Raw(inventoryItem.Name)</td>
+                    <td style="border:1px solid black; padding: 5px;">@inventoryItem.Count</td>
+                </tr>
+            }
+        </table>
+    </div>
+}
+
+

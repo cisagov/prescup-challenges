@@ -1,0 +1,35 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+
+@{
+    ViewData["Title"] = "Upload Files";
+}
+
+<h1>Upload Files</h1>
+
+<div>
+    <a asp-area="" asp-controller="Files" asp-action="ViewFiles">View Files</a>
+</div>
+
+<form method="post" enctype="multipart/form-data">
+    <div style="margin-top:20px">
+        <input type="file" name="file" />
+    </div>
+    <div style="margin-top:20px">
+        <button type="submit">Upload File</button>
+    </div>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert" style="margin-top:20px">
+        @ViewBag.Message
+    </div>
+}
+
+

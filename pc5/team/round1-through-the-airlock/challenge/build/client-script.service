@@ -1,0 +1,20 @@
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+[Unit]
+Description=Client Script Startup
+After=network.target
+
+[Service]
+Type=simple
+User=user
+WorkingDirectory=/home/user/client
+ExecStart=/home/user/.pyenv/versions/client/bin/python3.11 /home/user/client/main.py
+Environment=API_URL=http://10.3.3.3:3000
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+

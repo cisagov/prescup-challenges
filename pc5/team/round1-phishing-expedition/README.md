@@ -14,6 +14,12 @@ Examine forensic artifacts and exploit a web server.
 - [T0266](https://niccs.cisa.gov/workforce-development/nice-framework/): Perform penetration testing as required for new or updated applications.
 - [T0171](https://niccs.cisa.gov/workforce-development/nice-framework/): Perform integrated quality assurance testing for security functionality and resiliency attack.
 
+## ⚠️ Large Files ⚠️
+This challenge includes large files as a separate download. Please download the large files [here](https://presidentscup.cisa.gov/files/pc5/teams-round1-phishing-expedition.zip). The packet capture file extracted from the large file zip was provided to competitors as an ISO during the competition. The zipped file is ~6 GBs and the extracted file is ~14 GBs.
+
+## IMPORTANT
+This challenge is only partially open sourced. The files [here](https://presidentscup.cisa.gov/files/pc5/teams-round1-phishing-expedition.zip) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
+
 ## Background
 
 One of our employees fell prey to a phishing email! Examine the provided disk image and pcap file then delete the exfiltrated files.
