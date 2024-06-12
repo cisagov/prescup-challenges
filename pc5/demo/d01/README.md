@@ -12,8 +12,6 @@ Analyze and correlate organizational data to identify the insider threat who pro
 
 - [T0103](https://niccs.cisa.gov/workforce-development/nice-framework): Examine recovered data for information of relevance to the issue at hand.
 
-<!-- cut -->
-
 ## IMPORTANT
 This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
 

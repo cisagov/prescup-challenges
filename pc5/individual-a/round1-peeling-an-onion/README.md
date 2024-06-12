@@ -13,6 +13,9 @@ Respond to, and investigate, a network attack scenario.
 - [T0175](https://niccs.cisa.gov/workforce-development/nice-framework/): Perform real-time cyber defense incident handling (e.g., forensic collections, intrusion correlation and tracking, threat analysis, and direct system remediation) tasks to support deployable Incident Response Teams (IRTs).
 - [T0240](https://niccs.cisa.gov/workforce-development/nice-framework/): Capture and analyze network traffic associated with malicious activities using network monitoring tools.
 
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
+
 
 ## Background
 
