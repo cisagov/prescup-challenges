@@ -1,3 +1,8 @@
+
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
 # This sample web server template will host a payload file that will be automatically downloaded when the page is accessed
 # Create the payload and point to it in the template correctly
 
@@ -38,3 +43,4 @@ os.chdir(directory)
 # Start the web server
 print(f"Server running on port {port}")
 httpd.serve_forever()
+

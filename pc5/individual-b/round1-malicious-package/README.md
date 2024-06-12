@@ -11,6 +11,8 @@ You're sick and tired of getting spam email messages about an "*oppertunity* to 
 - [T0641](https://niccs.cisa.gov/workforce-development/nice-framework/): Create comprehensive exploitation strategies that identify exploitable technical or operational vulnerabilities.
 - [T0572](https://niccs.cisa.gov/workforce-development/nice-framework/): Apply cyber collection, environment preparation and engagement expertise to enable new exploitation and/or continued collection operations, or in support of customer requirements.
 
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
 
 ## Background
 
