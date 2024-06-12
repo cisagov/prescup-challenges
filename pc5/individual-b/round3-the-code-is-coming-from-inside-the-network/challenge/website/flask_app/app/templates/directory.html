@@ -1,0 +1,93 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Files{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<br>
+<h1>User Directory</h1>
+<br>
+<form method="POST" action="{{url_for('auth.user_directory')}}">
+<fieldset>
+<legend align='center'>Search User</legend>
+    <table>
+        <tr class="bodypost">
+            <td align='left'><label>Parameters to search:</label></td>
+            <td align='right'>
+                <select name = 'param' required>
+                    <option value="name" selected>Name</option>
+                    <option value="username" selected>Username</option>
+                    <option value="email" selected>Email</option>
+                    <option value="role" selected>Role</option>
+            </select>
+            </td>
+        </tr>
+        <tr class="bodypost">
+            <td align='left'><label>Search string:</label></td>
+            <td align='left'><input class="input is-large" type="text" name="searchStr" required></td>
+        </tr>
+    </table>
+</fieldset><br>
+<input style="text-align: center;" type="submit" name="submit" value="Submit">
+</form>
+<br>
+
+{% if empty %}
+<fieldset>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                {% if current_user.role == 'admin' %}
+                <th>Profile Link</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tr>
+            {% if current_user.role == 'admin' %}
+                <td colspan="5" style="text-align: center;">No users found</td>
+            {% else %}
+                <td colspan="4" style="text-align: center;">No users found</td>
+            {% endif %}
+    </table>
+</fieldset>
+{% elif users %}
+<fieldset>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                {% if current_user.role == 'admin' %}
+                <th>Profile Link</th>
+                {% endif %}
+            </tr>
+        </thead>
+        {% for u in users %}
+        <tr>
+            <td style="text-align: center;">{{u.name}}</td>
+            <td style="text-align: center;">{{u.username}}</td>
+            <td style="text-align: center;">{{u.email}}</td>
+            <td style="text-align: center;">{{u.role}}</td>
+            {% if current_user.role == 'admin' %}
+            <td style="text-align: center;"><a href="{{url_for('auth.get_profile',uid=u.id) }}">Profile</a></td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
+</fieldset>
+{% endif %}
+{% endblock %}

@@ -12,6 +12,9 @@ Having lost administrative (root) credentials to a server, exploit a vulnerable 
 - [T0664](https://niccs.cisa.gov/workforce-development/nice-framework): Develop new techniques for gaining and keeping access to target systems.
 - [T0696](https://niccs.cisa.gov/workforce-development/nice-framework): Exploit network devices, security devices, and/or terminals or environments using various methods or tools.
 
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
+
 
 ## Background
 
@@ -28,17 +31,6 @@ You have access to a `kali` workstation. From there, use `ssh` to log into the `
 Focus your attention on the `/usr/sbin/validate_string` utility normally intended to verify the formatting of various ASCII input strings.
 
 You should be able to "trick" this utility into allowing you to view the contents of a protected configuration file: `/etc/key_data`.
-
-## System and Tool Credentials
-
-|system/tool|username|password|
-|-----------|--------|--------|
-|kali       |user    |tartans |
-|server     |user    |tartans |
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
 
 ## Challenge Questions
 

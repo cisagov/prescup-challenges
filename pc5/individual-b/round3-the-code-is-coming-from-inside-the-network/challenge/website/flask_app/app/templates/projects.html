@@ -1,0 +1,93 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Projects Tracking{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<h2 class="title">Project Tracking</h2>
+    <form method="POST" action="{{url_for('auth.projects')}}" class="inline">
+        <button type="submit" name="value" value="old" class="link-button">Past Projects</button>
+        <button type="submit" name="value" value="current" class="link-button">Current Projects</button>
+        <button type="submit" name="value" value="future" class="link-button">Future Projects</button>
+    </form>
+    <br>
+{% if choice %}
+    <fieldset>
+    {% if choice == "old"%}
+        <legend align='center'>Past Projects</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer</th>
+                    <th>Start Date</th>
+                    <th>Date Completed</th>
+                    <th>Price</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            {% for p in projects %}
+                <tr>
+                    <td style="text-align: center;">{{p.customer_name}}</td>
+                    <td style="text-align: center;">{{p.start_date}}</td>
+                    <td style="text-align: center;">{{p.date_completed}}</td>
+                    <td style="text-align: center;">{{p.price}}</td>
+                    <td style="text-align: center;">{{p.details}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% elif choice == "current"%}
+        <legend align='center'>Current Projects</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer</th>
+                    <th>Start Date</th>
+                    <th>Projected End Date</th>
+                    <th>Projected Price</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            {% for p in projects %}
+                <tr>
+                    <td style="text-align: center;">{{p.customer_name}}</td>
+                    <td style="text-align: center;">{{p.start_date}}</td>
+                    <td style="text-align: center;">{{p.projected_end_date}}</td>
+                    <td style="text-align: center;">{{p.projected_price}}</td>
+                    <td style="text-align: center;">{{p.details}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% elif choice == "future"%}
+        <legend align='center'>Future Projects</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer</th>
+                    <th>Projected Start Date</th>
+                    <th>Projected Price</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            {% for p in projects %}
+                <tr>
+                    <td style="text-align: center;">{{p.customer_name}}</td>
+                    <td style="text-align: center;">{{p.projected_start_date}}</td>
+                    <td style="text-align: center;">{{p.projected_price}}</td>
+                    <td style="text-align: center;">{{p.details}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+    </fieldset>
+    {% endif %}
+{% endblock %}
+
+

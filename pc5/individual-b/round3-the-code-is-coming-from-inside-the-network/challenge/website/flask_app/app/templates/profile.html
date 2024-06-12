@@ -1,0 +1,62 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Profile{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<br>
+<h1>{{user.name}} Profile!</h1>
+<br><br>
+    <table id="data" class="table table-striped">
+        <thead>
+        <tr>
+          {% if current_user.role == 'admin' %}
+            <th>Id</th>
+          {% endif %}
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Created</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+            {% if current_user.role == 'admin' %}
+            <td style="text-align: center;">{{ user.id }}</td style="text-align: center;">
+            {% endif %}
+            <td style="text-align: center;">{{ user.name }}</td style="text-align: center;">
+            <td style="text-align: center;">{{ user.username }}</td style="text-align: center;">
+            <td style="text-align: center;">{{ user.email }}</td style="text-align: center;">
+            <td style="text-align: center;">{{ user.role }}</td style="text-align: center;">  
+            <td style="text-align: center;">{{ user.created }}</td style="text-align: center;">
+            </tr>  
+    </tbody>
+</table>
+
+{% if current_user == user %}
+
+</form>
+<br><br>
+<form method='POST' action="{{url_for('auth.get_profile',uid=user.id)}}">
+  <label for='updateName'>Update Name:</label>
+  <input class="input is-large" type="text" name="name" value=""><br><br>
+  <label for='updateUsername'>Update Username:</label>
+  <input class="input is-large" type="username" name="username" value=""><br><br>
+  <label for='updateEmail'>Update Email:</label>
+  <input class="input is-large" type="email" name="email" value=""><br><br>
+  <label for='updatePassword'>Update Password:</label>
+  <input class="input is-large" type="password" name="password" value=""><br><br>
+  <button class="button is-block is-info is-large is-fullwidth" name="update" value="True">Submit</button>
+</form>
+{% endif %}
+{% endblock %}
+
