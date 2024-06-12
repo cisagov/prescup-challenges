@@ -43,8 +43,6 @@ def generate_users():
         is_admin = 1
         cursor.execute("UPDATE users SET username=?, password=?, email=?, country=?, is_admin=? WHERE id=?",
                         (username, password, email, country, is_admin, admin_id))
-        #cursor.execute("INSERT INTO users (id, username, password, email, country, is_admin) VALUES (?, ?, ?, ?, ?, ?)",
-        #               (admin_id, username, password, email, country, is_admin))
 
     conn.commit()
     conn.close()
