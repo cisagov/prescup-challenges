@@ -1,0 +1,68 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+    <title>
+        {% block title %}Canello's ID's{% endblock %}
+    </title>
+{% endblock %}
+
+{% block content %}
+
+<br>
+<span style="font-size: 22px;">Update Existing ID</span><br>
+<span style="font-size: 15px;color: brown;">*** BETA FEATURE ***</span>
+<br><br>
+<span>To be used by admins in order to update an existing User's Digital ID.</span>
+
+<form method="POST" action="{{url_for('main.update_id')}}">
+<fieldset>
+    <table><br>
+        <tr>
+            <td class="left"><label for="old_username">Old Username</label></td>
+            <td class="right"><input type="text" name="old_username" id="old_username" required></td>
+        </tr>
+        <tr>
+            <td class="left"><label for="new_username">New Username</label></td>
+            <td class="right"><input type="text" name="new_username" id="new_username" required></td>
+        </tr>
+        <tr>
+            <td class="left"><label for="email">Updated Email</label></td>
+            <td class="right"><input type="text" name="email" id="email" required></td>
+        </tr>
+        <tr>
+            <td class="left"><label for="role">Updated Role</label></td>
+            <td class="right">
+                <select name="role" id="role" required>
+                    <option style="display:none;" value="" disabled selected>Select One</option>
+                    <option value="system_admin">Admin</option>
+                    <option value="system_user">User</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="left"><label for="key">Updated Key</label></td>
+            <td class="right"><input type="text" name="key" id="key" required></td>
+        </tr>
+        <tr>
+            <td class="left"><label for="code">Admin Approval Code</label></td>
+            <td class="right"><input type="text" name="code" id="code" required></td>
+        </tr>
+        <!-- For Beta testing
+            <tr>
+            <td class="left"><label for="override">Test Admin Override</label></td>
+            <td class="right"><input type="checkbox" name="override" id="override" value="yes"></td>
+        </tr>
+        -->
+    </table><br>
+    <button type="submit" style="font-size: 20px;">Submit</button>
+</fieldset>
+</form>
+
+{% endblock %}

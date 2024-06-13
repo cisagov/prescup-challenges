@@ -1,0 +1,27 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Submit Digital Identification File{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<br><br><br>
+<div class="login">
+  <h2 class="final">Congratulations!!!</h2>
+  <form>
+     <h3 class="form">You have gained access to the vault</h3><br>
+     <h3 class="form">Here is your token: {{t2}}</h3>
+    <br><br><br><br>
+  </form>
+</div>
+{% endblock %}
+
+
+

@@ -16,16 +16,6 @@ You have been provided with a compressed directory that contains the `passwd` an
 
 Download the required files from `challenge.us/files` to the cyber workstation. 
 
-## System and Tool Credentials 
-
-|system/tool|username|password|
-|-----------|--------|--------|
-|shadows-kali|user|tartans|
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.200.200.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
-
 ## Challenge Questions
 
 1. What is the password of the florist user account?

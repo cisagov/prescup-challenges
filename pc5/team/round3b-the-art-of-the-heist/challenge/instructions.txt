@@ -1,0 +1,68 @@
+===========
+VAULT INTEL
+===========
+
+This document provides additional intel about the "Vault".
+
+Vault URL:      vault.merch.codes
+Firewall URL:   pfsense.merch.codes
+
+The Vault has various security measures in place to prevent unauthorized access. Vault authentication is a multi-stage process. Determine how you will get through each stage of the authentication process without getting detected.  
+
+The Vault is under constant surveillance. If, at any time, a session is found that has an unauthorized IP or host that session is ended.
+
+What intel was gathered about the Vault can be found below.
+
+First, here is what is known about the authentication process.
+
+Stages of the authentication process have been compartmentalized so a different admin controls each part, but they are all located in the 'merch.codes' domain.
+    
+This is what is required to pass each stage:
+
+- Stage 1: Submit the valid username and password credentials.
+- Stage 2: Submit the pin code created for the account used to log in during Stage 1.
+- Stage 3: Submit the Digital Identification File created for the account used to log in during Stage 1.
+
+Information has been gathered on each admin and their stages implementation.
+       
+Stage 1:
+--------
+
+- The admin responsible for username and password credentials is Topsy Kretts.
+- Topsy Kretts' username is "tkretts".
+- Topsy's method of authorization is unknown, but it is suspected that they complete the authentication by verifying the login credentials against a remote system on the network. 
+
+        
+Stage 2:
+--------
+            
+- The admin responsible for creating and verifying PINs is Mr. Shiamazu.
+- Mr.Shiamazu's username is "shiamazu".
+- A PIN is a four (4) character hex string.
+
+Stage 3:
+--------
+            
+- The admin responsible for creating and verifying Digital Identification Files is Calogero Anello.
+- Calogero Anello's username is "canello".
+- Vault's verification of submitted Digital Identification File compares the submitted file's hash against the hash during creation rather than verifying its contents. 
+
+Second, here is the information gathered about the occurring surveillance.
+
+An automated service is able to monitor the Vault and retrieve information about current sessions.
+
+If this service finds any present sessions with a client connected from an IP that that isn't authorized to connect, then it terminates that session.
+
+This automated monitoring service doesn't activate unless a user passes the first stage. Thus, it will not interfere until you have solved the first phase.
+    
+Lastly, these credentials give you low-level access to the firewall. Access will provide insight to the network topology and help with passing authentication.
+
+Firewall credentials are:
+
+Username:   bookworm
+Password:   read-only
+
+
+PLEASE NOTE:
+
+You can break this challenge if you attempt to run SQL Injections against the 'vault.merch.codes' site. If this occurs, you will need to destroy and restart your gamespace.

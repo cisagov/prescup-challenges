@@ -56,16 +56,6 @@ nft list ruleset
 
 Any time you wish to receive feedback or be graded when both userspace queueing and  filtering `deadbeef` anagrams are set up), proceed to `http://challenge.us` and click the `Grade Challenge` button.
 
-## System and Tool Credentials
-
-|system/tool|username|password|
-|-----------|--------|--------|
-|dead-beef-kali      | user   |tartans |
-|nat-fw     | user   |tartans |
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
 
 ## Challenge Questions
 

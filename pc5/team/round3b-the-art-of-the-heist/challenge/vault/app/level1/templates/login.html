@@ -1,0 +1,31 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}User Login{% endblock %}</title>
+  <!--<link rel="stylesheet" type="text/css" href="static/login.css">-->
+{% endblock %}
+
+{% block content %}
+<br><br><br>
+<div class="login">
+  <h2 class="l1">User Login</h2>
+  <form method="POST" action="{{url_for('level1.login')}}">
+    <input type="email" class="text" name="email" required>
+     <span class="form">email</span>
+    <br><br>
+    <input type="password" class="text" name="password">
+    <span class="form">password</span>
+    <br><br><br><br>
+    <button class="signin">
+      Sign In
+    </button>
+  </form>
+</div>
+{% endblock %}

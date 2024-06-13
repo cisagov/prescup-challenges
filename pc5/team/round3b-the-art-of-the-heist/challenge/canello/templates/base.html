@@ -1,0 +1,51 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="Vault" content="Vault">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='base.css')}}">
+    {% block header %}{% endblock %}
+</head>
+
+<body>
+    <section>
+        <div>
+            <ul class="navbar">
+                <li><a class="navbar_elements" href="{{url_for('main.index')}}">Home</a></li>
+                <li><a class="navbar_elements" href="{{url_for('main.create_id')}}">Create Digital ID</a></li>
+                <li><a class="navbar_elements" href="{{url_for('main.verify_id')}}">Verify Hash</a></li>
+                <li><a class="navbar_elements" href="{{url_for('main.update_id')}}">Update ID</a></li>
+            </ul>
+        </div>
+        <div>
+            <div>
+                <center>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <h3 class="notification" >
+                            {{ messages[-1] }}
+                            </h3>
+                        {% endif %}
+                    {% endwith %}
+                    {% block content %}{% endblock %}
+                </center>
+            </div>
+        </div>
+    </section>
+</body>
+{% if url_for(request.endpoint) == "/" %}
+<footer> 
+    <br><div class="links">Supported by <strong><a href="https://mail.merch.codes">Roundcube</a></strong></div>
+</footer>
+{% endif %}
+</html>
+
+

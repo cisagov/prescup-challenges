@@ -18,17 +18,6 @@ Match the attack to the IP address.
 
 In the gamespace, download the pcap from `challenge.us/files`.  Determine who performed a directory traversal attack.
 
-
-## System and Tool Credentials
-
-|system/tool|username|password|
-|-----------|--------|--------|
-|apt-kali |user|tartans|
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
-
 ## Challenge Questions
 
 1. Enter the IP address that performed a directory traversal attack.

@@ -1,0 +1,40 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+    <title>
+        {% block title %}Canello's ID's{% endblock %}
+    </title>
+{% endblock %}
+{% block content %}
+
+<br>
+<span style="font-size: 25px;">Verify Identification File Hash</span>
+<br><br>
+<span>Digital Identification Verification process used by the Vault during its authentication process.</span>
+
+
+<form method="POST" action="{{url_for('main.verify_id')}}">
+<fieldset>
+    <table><br>
+        <tr>
+            <td class="left"><label for="username">ID Username</label></td>
+            <td class="right"><input type="text" name="username" id="username" required></td>
+        </tr>
+        <tr>
+            <!--MD5 hash verification-->
+            <td class="left"><label for="hash">Identification Hash</label></td>
+            <td class="right"><input type="text" name="hash" id="hash" required></td>
+        </tr>
+    </table><br>
+    <button type="submit" style="font-size: 20px;">Submit</button>
+</fieldset>
+</form>
+
+{% endblock %}

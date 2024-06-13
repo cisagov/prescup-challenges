@@ -14,7 +14,8 @@ Your crew is planning an epic heist! The target is a digital safe known only as 
 - [T0591](https://niccs.cisa.gov/workforce-development/nice-framework/): Perform analysis for target infrastructure exploitation activities.
 - [T0695](https://niccs.cisa.gov/workforce-development/nice-framework/): Examine intercept-related metadata and content with an understanding of targeting significance.
 
-<!-- cut -->
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
 
 ## Background
 
@@ -32,17 +33,6 @@ Intel also includes the document,`instructions.txt`, which provides additional d
 ## Getting Started
 
 In the gamespace, browse to `challenge.us` and download the file `instructions.txt`. Review `instructions.txt`, enumerate the network, gain access to the Vault.
-
-## System and Tool Credentials
-
-|system/tool|username|password|
-|-----------|--------|--------|
-|heist-kali|user|tartans|
-|pfsense.merch.codes (10.0.0.1)|bookworm|read-only|
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
 
 ## Challenge Questions
 

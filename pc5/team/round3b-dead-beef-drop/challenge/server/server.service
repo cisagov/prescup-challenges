@@ -1,0 +1,18 @@
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+[Unit]
+Description=PresCup C46 service
+After=network.target
+
+[Service]
+Type=simple
+Environment=SVC_KEY=f00b4rb1a4ccdddddeadbeefccccdddd
+# on Fedora, the following would be "/etc/sysconfig/pc5c46.srv"
+# NOTE: definition of SVC_KEY in the EnvironmentFile supersedes default above
+EnvironmentFile=-/etc/default/pc5c46.srv
+ExecStart=/usr/sbin/pc5c46.srv ${SVC_KEY}
+
+[Install]
+WantedBy=multi-user.target

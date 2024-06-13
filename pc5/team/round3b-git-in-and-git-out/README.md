@@ -13,6 +13,8 @@ Leverage a vulnerable developer environment and exploit a web server.
 - [T0266](https://niccs.cisa.gov/workforce-development/nice-framework/): Perform penetration testing as required for new or updated applications.
 - [T0171](https://niccs.cisa.gov/workforce-development/nice-framework/): Perform integrated quality assurance testing for security functionality and resiliency attack.
 
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
 
 ## Background
 
@@ -21,17 +23,6 @@ Given access to a developer machine through SSH, exploit their development envir
 ## Getting Started
 
 You've been given access to a developer machine (`10.1.1.50`). Use the tools available to assess how vulnerable our systems and forward-facing website are to attack if a developer machine should be compromised. There are two tokens to retrieve. Both tokens are six-character hexadecimal strings.
-
-## System and Tool Credentials
-
-| system/tool                   | username | password |
-|-------------------------------|----------|----------|
-| git-in-kali                 | user     | tartans  |
-|10.1.1.50                      | user     | tartans  ||
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
 
 ## Challenge Questions
 

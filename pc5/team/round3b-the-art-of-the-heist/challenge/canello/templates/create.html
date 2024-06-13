@@ -1,0 +1,57 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+    <title>
+        {% block title %}Canello's ID's{% endblock %}
+    </title>
+{% endblock %}
+
+{% block content %}
+
+<br>
+<span style="font-size: 25px;">Create New ID</span>
+<br><br>
+<span>To be used by admins in order to create Digital Identification files for new users to the Vault.</span>
+
+<form method="POST" action="{{url_for('main.create_id')}}">
+<fieldset>
+    <table><br>
+        <tr>
+            <td class="left"><label for="username">Username</label></td>
+            <td class="right"><input type="text" name="username" id="username" required></td>
+        </tr>
+        <tr>
+            <td class="left"><label for="email">Email</label></td>
+            <td class="right"><input type="text" name="email" id="email" required></td>
+        </tr>
+        <tr>
+            <td class="left"><label for="role">Role</label></td>
+            <td class="right">
+                <select name="role" id="role" required>
+                    <option style="display:none;" value="" disabled selected>Select One</option>
+                    <option value="system_admin">Admin</option>
+                    <option value="system_user">User</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="left"><label for="key">Key To Lock/Unlock</label></td>
+            <td class="right"><input type="text" name="key" id="key" required></td>
+        </tr>
+        <tr>
+            <td class="left"><label for="code">Admin Approval Code</label></td>
+            <td class="right"><input type="text" name="code" id="code" required></td>
+        </tr>
+    </table><br>
+    <button type="submit" style="font-size: 20px;">Submit</button>
+</fieldset>
+</form>
+
+{% endblock %}

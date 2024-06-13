@@ -14,6 +14,8 @@ A live attack is happening! Monitor alerts to identify the source of the attack 
 - [T0161](https://niccs.cisa.gov/workforce-development/nice-framework/): Perform analysis of log files from a variety of sources (e.g., individual host logs, network traffic logs, firewall logs, and intrusion detection system [IDS] logs) to identify possible threats to network security.
 - [T0175](https://niccs.cisa.gov/workforce-development/nice-framework/): Perform real-time cyber defense incident handling (e.g., forensic collections, intrusion correlation and tracking, threat analysis, and direct system remediation) tasks to support deployable Incident Response Teams (IRTs). 
 
+## IMPORTANT
+This challenge does not have any downloadable artifacts. You may complete this challenge in the hosted environment.
 
 ## Background
 
@@ -34,38 +36,6 @@ For grading purposes, this challenge is split in two parts.
 **Part 1:** The first part focuses on incident response. Once you have collected any useful data, stopped the attack and removed any signs or persistence, go to `challenge.us`, enter "Initiate" into the top text box and click **Submit**. This initiates grading for both parts. 
 
 **Part 2:** The second part is focuses on digital forensics. Once you have  identified the attacker's location, go to `challenge.us`, enter the location into the bottom text box and click **Submit**. This initiates grading for both parts. 
-
-## System and Tool Credentials
-
-|system/tool|username|password|
-|-----------|--------|--------|
-|stay-calm-kali|user|tartans|
-|k3s-server (10.3.3.10)|user|tartans|
-|k3s-client (10.3.3.11)|user|tartans|
-
-### Mattermost Credentials
-
-|application|username|password|
-|-----------|--------|--------|
-|https://chat.merch.codes|analyst1|tartans|
-|https://chat.merch.codes|analyst2|tartans|
-|https://chat.merch.codes|analyst3|tartans|
-|https://chat.merch.codes|analyst4|tartans|
-|https://chat.merch.codes|analyst5|tartans|
-
-### Other Application Credentials
-
-|application|username|password|
-|-----------|--------|--------|
-|https://mail.merch.codes|analyst1@merch.codes|tartans|
-|https://mail.merch.codes|analyst2@merch.codes|tartans|
-|https://mail.merch.codes|analyst3@merch.codes|tartans|
-|https://mail.merch.codes|analyst4@merch.codes|tartans|
-|https://mail.merch.codes|analyst5@merch.codes|tartans|
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
 
 ## Challenge Questions
 

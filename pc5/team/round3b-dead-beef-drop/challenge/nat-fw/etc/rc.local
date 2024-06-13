@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# NOTE: Migrated to nftables!
+exit 0
+
+# DNAT (forward 31337 to srv):
+iptables -t nat -A PREROUTING -p tcp -i ens32 --dport 31337 \
+         -j DNAT --to-destination 192.168.5.254:31337
+
+# Enqueue traffic to srv for userspace filtering:
+# (NOTE: `--queue-bypass` implies `ACCEPT` in the absence of userspace filter)
+iptables -A FORWARD -p tcp --dport 31337 \
+         -j NFQUEUE --queue-num 0 --queue-bypass
+
