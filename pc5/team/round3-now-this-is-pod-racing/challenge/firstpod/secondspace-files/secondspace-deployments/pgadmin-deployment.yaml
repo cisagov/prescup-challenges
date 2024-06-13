@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pgadmin
+spec:
+  selector:
+    matchLabels:
+      app: pgadmin
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pgadmin
+    spec:
+      containers:
+      - name: pgadmin4
+        image: registry.merch.codes:5000/pgadmin4:latest
+        env:
+        - name: PGADMIN_DEFAULT_EMAIL
+          value: "admin@merch.codes"
+        - name: PGADMIN_DEFAULT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: pgadmin-secret
+              key: pgadmin-default-password
+        - name: PGADMIN_PORT
+          value: "80"
+        ports:
+        - containerPort: 80
+          name: pgadminport
+        volumeMounts:
+        - name: config
+          mountPath: "/pgadmin4/"
+          subPath: "pgadmin-conf"
+      volumes:
+      - name: config
+        persistentVolumeClaim:
+          claimName: appdata-pvc

@@ -1,0 +1,36 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}User Login{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<div>
+    <ul class="navbar"> 
+        <li class="timer navbar_elements">Welcome to the Baratie!</li>
+    </ul>
+</div>
+<br><br><br>
+<div class="login">
+  <h2 class="portal">Login Portal</h2>
+  <form method="POST" action="{{url_for('main.login')}}">
+    <input type="text" class="text" name="username" required>
+     <span class="form">username</span>
+    <br><br>
+    <input type="password" class="text" name="password">
+    <span class="form">password</span>
+    <br><br><br><br>
+    <button class="signin">
+      Sign In
+    </button>
+  </form>
+</div>
+{% endblock %}
+

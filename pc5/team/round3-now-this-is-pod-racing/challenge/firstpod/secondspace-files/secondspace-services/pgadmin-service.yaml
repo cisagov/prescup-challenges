@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pgadmin-service
+  labels:
+    app: pgadmin
+spec:
+  selector:
+    app: pgadmin
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    name: http
+    protocol: TCP

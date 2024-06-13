@@ -1,0 +1,50 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('shop.static',filename='cart.css')}}">
+{% endblock %}
+
+{% block content %}
+    {% if cart['total'] ==  '$0'%}
+        <span id="title" style="padding-top:40px; padding-bottom: 40px;;">
+            No items currently in cart
+        </span>
+        <h4>Go check out the shop to view and add items to your cart!</h4>
+    {% else %}
+        <span id="title" style="padding-top:30px; padding-bottom: 30px;;">
+            Shopping Cart
+        </span>
+        <div id="cart-container">
+            <table id="cart-table">
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+                {% for item_id,value in cart.items() %}
+                    <tr>
+                        <td>{{value['name']}}</td>
+                        <td>{{value['quantity']}}</td>
+                        <td>{{value['price']}}</td>
+                        <td>{{value['total']}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <div id="total-container">
+                <strong>Total Cost: </strong><span id="total-cost">{{cart['total']}}</span>
+            </div>
+        </div>
+    {% endif %}
+    <div class="notice-box">
+        <span style="font-size: 20px;text-decoration: underline;">NOTICE:</span><br>The third-party company we use to process all purchases seems to be having technical difficulties. As such, we will not be able to process any purchases. We are sorry for the inconvience.
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+/*
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*/
+
+#feed {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.feed-item {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}

@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pgadmin
+spec:
+  tls:
+    - hosts:
+      - db.merch.codes
+      secretName: merch-codes-secret
+  rules:
+  - host: db.merch.codes
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: pgadmin-service
+            port:
+              number: 80
+
+

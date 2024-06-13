@@ -1,0 +1,10 @@
+config:
+  change_device_server_pointer: /update-server-pointer
+  endpoint: /freezer
+  port: 28572
+  update_server: http://179.77.202.10
+device_info:
+  location: lab
+  type: sensor
+  version: 0.3.3
+

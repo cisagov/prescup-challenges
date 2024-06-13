@@ -1,0 +1,84 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8;application/javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Owned, Created, and Managed by Mr. Serpentine">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='base.css')}}">
+    <script src="{{url_for('main.fetch_js',js='search.js')}}"></script>
+    {% block header %}{% endblock %}
+</head>
+
+<body>
+    <section>
+        <nav class="navbar">
+            <div class="navbar-side left">
+                <ul>
+                    <li class="navfloat"><a class="navbar_elements" href="{{url_for('main.home')}}">Home</a></li>
+                    <li class="navfloat"><a class="navbar_elements" href="{{url_for('shop.browse')}}">Shop</a></li>
+                    <li class="navfloat"><a class="navbar_elements" href="{{url_for('shop.cart')}}">Cart</a></li>
+                    <li class="navfloat"><a class="navbar_elements" href="{{url_for('main.feed')}}">Feed</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-center">
+                <input type="text" id="searchQuery" placeholder="Search...">
+                <select name="search_type" id="search_type" required>
+                    <option style="display:none;" value="" disabled selected>Select One</option>
+                    {% if current_user.is_authenticated %}
+                        <option value="user">Users</option>
+                    {% endif %}
+                    <option value="shop">Products</option>
+                </select>
+                <button id="search_brn" onclick="performSearch()">Search</button>
+            </div>
+
+            <div class="navbar-side right">
+                <ul>
+                    <li class="navfloat"><a class="navbar_elements" href="{{url_for('main.faq')}}">FAQ</a></li>
+                    <li class="navfloat"><a class="navbar_elements" href="{{url_for('main.support')}}">Support</a></li>
+                    {% if current_user.is_authenticated %}
+                        <li class="navfloat"><a class="navbar_elements" href="{{url_for('social.messages')}}">Message Inbox</a></li>
+                        <li class="navfloat"><a class="navbar_elements" href="{{url_for('social.my_profile')}}">My Profile</a></li>
+                        <li class="navfloat"><a class="navbar_elements" href="/logout">Logout {{current_user.username}}</a></li>
+                    {% else %}
+                        <li class="navfloat"><a class="navbar_elements" href="{{url_for('main.signup')}}">Signup</a></li>
+                        <li class="navfloat"><a class="navbar_elements" href="{{url_for('main.login')}}">Login</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <div>
+                <center>
+                {% if (current_user.username == 'lserp') and (current_user.user_id == 'fc4ddb') %}
+                    <span id="title" style="padding-top:40px; padding-bottom: 40px;;">
+                        Token: #t3
+                    </span>
+                {% endif %}
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for msg in messages %}
+                                <h3 class="notification" >
+                                {{ msg|safe }}
+                            {% endfor %}
+                            </h3>
+                        {% endif %}
+                    {% endwith %}
+                    {% block content %}{% endblock %}
+                </center>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+

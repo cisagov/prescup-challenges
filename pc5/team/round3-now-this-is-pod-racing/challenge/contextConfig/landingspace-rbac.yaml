@@ -1,0 +1,53 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: landingspace
+  name: landingspace-view-list
+rules:
+- apiGroups: [""] # "" indicates the core API group
+  resources: ["configmaps", "secrets"]
+  verbs: ["list"]
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: landingspace
+  name: landingspace-pods-admin
+rules:
+- apiGroups: [""] # "" indicates the core API group
+  resources: ["pods"]
+  verbs: ["*"]
+
+---
+
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: landingspace-view-list
+  namespace: landingspace
+subjects:
+- kind: User
+  name: landingspace-user
+  apiGroup: ""
+roleRef:
+  kind: Role
+  name: landingspace-view-list
+  apiGroup: ""
+
+---
+
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: landingspace-pods-admin
+  namespace: landingspace
+subjects:
+- kind: User
+  name: landingspace-user
+  apiGroup: ""
+roleRef:
+  kind: Role
+  name: landingspace-pods-admin
+  apiGroup: ""

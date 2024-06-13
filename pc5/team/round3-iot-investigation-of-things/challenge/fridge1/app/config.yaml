@@ -1,0 +1,16 @@
+config:
+  change_device_server_pointer: /update-server-pointer
+  endpoint: /fr1dge
+  port: 28572
+  update_server: http://179.77.202.10
+data:
+  measurement: f
+  status: good
+  temperature: 34
+  temperature_value: '1'
+device_info:
+  id: fridge_001
+  location: '???'
+  next_update: '2024-02-22 14:11:48'
+  type: 'cold'
+  version: 0.2.1

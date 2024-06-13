@@ -1,0 +1,39 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="Baratie" content="Baratie">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='base.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='form.css')}}">
+    
+    {% block header %}{% endblock %}
+</head>
+
+<body>
+    <section>
+        <div>
+            <div>
+                <center>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <h3 class="notification" >
+                            {{ messages[-1] }}
+                            </h3>
+                        {% endif %}
+                    {% endwith %}
+                    {% block content %}{% endblock %}
+                </center>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Success{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<br><br><br>
+<div class="done">
+  <h2 class="success">Success</h2><br>
+  <form method="GET" action="{{url_for('auth.logout')}}">
+    <span class="token">Here is your Token:<br><br>#t2</span>
+    <button class="signin">
+      Logout
+    </button>
+  </form>
+</div>
+{% endblock %}
+

@@ -1,0 +1,54 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}FAQ{% endblock %}</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .support-container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid #333;
+    }
+    .support-item {
+        
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+    .title {
+        font-weight: bold;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<span id="title" style="padding-top:40px; padding-bottom: 40px;;">
+    Support Center
+</span>
+
+<div class="support-container">
+    <div class="support-item">
+        <p class="title">Payment and Billing</p>
+        <p>The Third-party company that handles our payment and billing is currently having outages and unfortunately we have had to remove the ability to add and/or remove new payment types. We hope to have fixed ASAP.</p>
+    </div>
+    <div class="support-item">
+        <p class="title">Account and Login Issues</p>
+        <p>Facing problems with your account or login process? Our support team is here to help. For issues requiring immediate attention, feel free to reach out to our owner "lserp" through our internal messaging system for a swift response.</p>
+    </div>
+    <div class="support-item">
+        <p class="title">Report a Bug or Glitch</p>
+        <p>Encountered a bug or glitch on our site? Please report it immediately to our support team. You can do this by filling out and submitting <a href="{{url_for('main.bug')}}">this form!</a></p>
+    </div>
+</div>
+
+{% endblock %}
+

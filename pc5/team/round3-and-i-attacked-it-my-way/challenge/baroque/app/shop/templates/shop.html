@@ -1,0 +1,97 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+    <title>Shop</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('shop.static',filename='shop.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div id="shop-navbar" class="sticky-navbar">
+        <ul>
+            <li><a class="shop_navbar_elements" href="/shop/add_item">List Item!</a></li>
+            <li style="pointer-events:none;"><u>Category List</u></li>
+            <li><a class="shop_navbar_elements" href="/shop">Clear Filter</a></li>
+            {% for key,category in all_categories.items() %}
+                <li><a class="shop_navbar_elements" href="/shop/{{category}}">{{category}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% if items %}
+    {% if not cur_category %}
+    <span id="title" style="padding-top:10px; padding-bottom: 10px;;">
+        Welcome to the shop!
+    </span>
+    {% else %}
+    <span id="title" style="padding-top:10px; padding-bottom: 10px;;">
+        Category {% for c in cur_category %} {{c[0]}}:&emsp;{{c[1]}}&nbsp;{% endfor %}
+    </span>
+    {% endif %}
+    <div id="main-content">
+        <div class="product-box">
+            <div class="product-header">
+                    <span class="product-name" style="width:20%">Product Name</span>
+                    <span class="product-price" style="width:40%">Product Desciption</span>
+                    <span class="product-description" style="width:10%">Price</span>
+                    <span class="product-description" style="width:20%">Category</span>
+                    <span class="product-description" style="width:10%">Link</span>
+                </div>
+            {% for item in items %}
+                <div class="product-item">
+                    <span class="product-name" style="width:20%">{{item.name}}</span>
+                    <span class="product-price" style="width:40%">{{item.desc}}</span>
+                    <span class="product-description" style="width:10%">{{item.price}}</span>
+                    <span class="product-description" style="width:20%">{{all_categories[item.category_id]}}</span>
+                    <span class="product-description" style="width:10%"><a href="{{url_for('shop.browse')}}{{all_categories[item.category_id]}}/{{item.item_id}}">Product Page</a></span>
+                </div>
+           {% endfor %}
+        </div>
+    </div>
+
+{% else %}
+    {% if not cur_item %}
+        <h2> {{items}}</h2>
+    {% else %}
+    <form method="POST" action="{{url_for('shop.cart')}}" enctype="multipart/form-data" id="max-top-padding">
+    <fieldset>
+        <legend align='center'>{{cur_item.name}}</legend>
+        <table>
+            <tr class="bodypost">
+                <th style="width:25%;"><label>Description</label></th>
+                <td style="width:50%; text-align: center;"><label>{{cur_item.desc}}</label></td>
+            </tr>
+            <tr class="bodypost">
+                <th style="width:25%;"><label>Price</label></th>
+                <td style="width:50%; text-align: center;"><label>{{cur_item.price}}</label></td>
+            </tr>
+            <tr class="bodypost">
+                <th style="width:25%;"><label>Seller</label></th>
+                <td style="width:50%; text-align: center;">
+                {% if seller == None %}
+                    <label>Account No Longer Exists</label>
+                {% else %}
+                    <a href="{{ url_for('social.user_profile',id=cur_item.owner_id) }}">{{seller.username}}</a>
+                {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th style="width:25%;"><label>Quantity</label></th>
+                <td style="width:50%; text-align: center;">
+                    <select name="quantity" id="quantity"></select>
+                </td>
+                <script src="{{url_for('main.fetch_js',js='dropdown.js')}}"></script>
+            </tr>
+            <input type="hidden" name="item_id" value="{{cur_item.item_id}}">
+        </table>
+        <button type='submit' style="font-size: 20px;">Add to Cart</button>
+    </fieldset>
+{% endif %}
+{% endif %}
+    <script src="{{url_for('main.fetch_js',js='navbar.js')}}"></script>
+{% endblock %}

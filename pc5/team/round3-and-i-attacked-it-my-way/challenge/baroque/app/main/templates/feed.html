@@ -1,0 +1,26 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Feed{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('main.static',filename='feed.css')}}">
+{% endblock %}
+
+{% block content %}
+
+<span id="title" style="padding-top:40px; padding-bottom: 40px;;">
+            Purchase Reviews
+        </span>
+        <h4>See what other users had to say about their purchases!</h4>
+
+<div id="feed"></div>
+  <script src="{{url_for('main.fetch_js',js='feed.js')}}"></script>
+
+{% endblock %}
+

@@ -1,0 +1,63 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}{{current_user.username}} Profile{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<span id="title" style="padding-top:20px;">
+    Welcome to {{user.username}} Profile!
+</span><br>
+<span>Member since: {{user.created}}</span>
+<form method="POST" action="{{url_for('social.user_profile',id=user.user_id)}}" id="min-top-padding">
+    <span style="padding:0 10px;"><button id="profile_btns" type="submit" name="value" value="shop" class="link-button">View Listed Products</button></span>
+    <span style="padding:0 10px;"><button id="profile_btns" type="submit" name="value" value="msg" class="link-button">Send Message</button></span>
+</form>
+
+{% if choice %}
+    <form method="POST" action="{{url_for('social.user_profile',id=user.user_id)}}" enctype="multipart/form-data" id="min-top-padding">
+    <fieldset>
+    {% if choice == 'shop' %}
+        {% if products == [] %}
+            <h2>No products have been listed by this user</h2>
+        {% else %}
+        <table>
+            <tr>
+                <td>Product Name</td>
+                <td>Product Description</td>
+                <td>Product Price</td>
+                <td>Link</td>
+            </tr>
+            {% for product in products %}
+                <tr>
+                    <th>{{product.name}}</th>
+                    <th>{{product.desc}}</th>
+                    <th>{{product.price}}</th>
+                    <th><a href="{{url_for('shop.products',pid=product.item_id)}}"> </a></th>
+                </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    {% elif choice == 'msg' %}
+        <table>
+            <tr>
+                <td style="width:40%;padding-right: 30px;">Message:</td>
+                <td style="width:40%;padding-left: 30px;"><textarea style="font-size: 15px;;" name="note" rows="5" cols="50" placeholder="Type a message..."></textarea></td>
+            </tr>
+        </table><br>
+        <input type="submit" name="{{choice}}" value="Submit" style="font-size: 20px;">
+    {% endif %}
+    </fieldset>
+    </form>
+{% endif %}
+{% endblock %}
+
+
+

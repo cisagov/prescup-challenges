@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dovecot
+  labels:
+    service: dovecot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: dovecot
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        service: dovecot
+    spec:
+      containers:
+      - name: dovecot
+        image: registry.merch.codes:5000/dovecot_compose:latest
+        imagePullPolicy: ""
+        resources:
+          requests:
+            cpu: 50m
+            memory: 32Mi
+        ports:
+          - name: imap
+            containerPort: 143
+          - name: lmtp
+            containerPort: 24
+          - name: auth
+            containerPort: 12345
+          - name: ssh
+            containerPort: 22
+        volumeMounts:
+        - mountPath: /srv/mail
+          name: dovecot
+          subPath: maildir
+        - mountPath: /etc/dovecot/
+          name: dovecot
+          subPath: dovecot-conf
+        - mountPath: /var/log/
+          name: dovecot
+          subPath: dovecot-logs/
+      restartPolicy: Always
+      # serviceAccountName: ""
+      volumes:
+      - name: dovecot
+        persistentVolumeClaim:
+          claimName: appdata-pvc

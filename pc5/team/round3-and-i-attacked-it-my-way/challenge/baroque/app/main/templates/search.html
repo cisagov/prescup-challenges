@@ -1,0 +1,71 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+    <title>Messages Inbox</title>
+{% endblock %}
+
+{% block content %}
+
+{% if results %}
+    {% if type == 'user' %}
+    <div style="padding-top:40px; padding-bottom: 40px;">
+        <fieldset>
+            <legend align='center' style="font-size: 25px;">{{type.capitalize()}} Search Results</legend>
+                <table style="width:500px;padding-top: 15px;">
+                    <thead style="text-decoration: underline; font-size: 23px;">
+                        <th style="width:40%;padding-right: 30px;">Username</th>
+                        <th style="width:40%;padding-left: 30px;">Profile Link</th>
+                    </thead>
+                    {% for id,un in results.items() %}
+                        {% if (id != current_user.user_id) and (un.role == 'user') %}
+                            <tr class="bodypost">
+                                <td style="width:40%;padding-right: 30px;text-align: center;">{{un.username}}</td>
+                                <td style="width:40%;padding-left: 30px;text-align: center;"><a href="{{ url_for('social.user_profile',id=un.user_id) }}">View Profile</a></td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                </table>
+        </fieldset>
+    </div>
+    {% elif type == 'shop' %}
+    <div style="padding-top:40px; padding-bottom: 40px;">
+        <fieldset>
+            <legend align='center' style="font-size: 25px;">{{type.capitalize()}} Search Results</legend>
+                <table style="width:inherit;padding-top: 15px;">
+                    <thead style="text-decoration: underline; font-size: 23px;">
+                        <th style="width:30%;">Name</th>
+                        <th style="width:30%;">Description</th>
+                        <th style="width:10%;">Price</th>
+                        <th style="width:20%;">Link</th>
+                    </thead>
+                    {% for key,value in results.items() %}
+                            <tr class="bodypost">
+                                <td style="width:25%;text-align: center;">{{value['name']}}</td>
+                                <td style="width:25%;text-align: center;">{{value['desc'][:10]}}</td>
+                                <td style="width:25%;text-align: center;">{{value['price']}}</td>
+                                <td style="width:25%;text-align: center;"><a href="{{ url_for('shop.browse')}}{{categories[value['category_id']]}}/{{value['item_id']}}">View Product</a></td>
+                            </tr>
+                    {% endfor %}
+                </table>
+        </fieldset>
+    </div>
+    {% endif %}
+{% elif results == {} %}
+    <span id="title" style="padding-top:40px; padding-bottom: 40px;;">
+        No results found.
+    </span>
+    <h4>Please refine search and try again.</h4>
+{% else %}
+    <span id="title" style="padding-top:40px; padding-bottom: 40px;;">
+        No search has been made.
+    </span>
+    <h4>Use search bar above to search for Users or Products on the site!</h4>
+{% endif %}
+{% endblock %}

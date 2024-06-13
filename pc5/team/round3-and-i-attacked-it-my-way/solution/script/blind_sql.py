@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+
 import sys, subprocess, requests, json, string, time
 
 character_list = list(string.ascii_lowercase) + list(string.digits)

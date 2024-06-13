@@ -1,0 +1,26 @@
+,Uploads scripts that collect credentials,Uploads scripts that perform network recon,Uploads reverse shells to the following domains,Uploads scripts that encrypt data,Uploads scripts that delete logs,"Attempts to retrieve financial information file types (account information, bank statements, credit card data, purchase histories, etc)",Attempts to retrieve credential file types (passwords and account names),"Attempts to retrieve IP and secret information file types (secret data, plans, schematics, and other proprietary data related to research and development or products)","Attempts to retrieve personnel information and PII file types(names, social security numbers, addresses, phone numbers, employee listings)"
+CosmicEagle,TRUE,TRUE,147.234.97.240,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
+NovaGiraffe,TRUE,FALSE,147.234.97.240,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE
+QuantumShark,TRUE,FALSE,147.234.97.240,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE
+IllusionaryRhino,FALSE,TRUE,147.234.97.240,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
+AstralKoala,FALSE,TRUE,147.234.97.240,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE
+EmeraldWolf,TRUE,FALSE,212.34.190.65,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE
+CosmicOctopus,TRUE,FALSE,212.34.190.65,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE
+CelestialJaguar,FALSE,TRUE,212.34.190.65,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
+MysticMongoose,FALSE,TRUE,212.34.190.65,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE
+CelestialToad,TRUE,TRUE,189.230.41.101,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE
+CrimsonGiraffe,TRUE,FALSE,189.230.41.101,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE
+SolarBear,FALSE,TRUE,189.230.41.101,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+AstralRaven,FALSE,TRUE,189.230.41.101,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE
+RadiantEagle,TRUE,TRUE,147.234.97.240,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE
+PixelViper,TRUE,FALSE,147.234.97.240,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE
+ElectricFox,FALSE,TRUE,147.234.97.240,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE
+SilentCheetah,FALSE,TRUE,147.234.97.240,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE
+AbyssalChameleon,TRUE,TRUE,212.34.190.65,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+VenomousRat,TRUE,FALSE,212.34.190.65,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE
+AuroraFalcon,FALSE,TRUE,212.34.190.65,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE
+ShadowyCoyote,TRUE,TRUE,212.34.190.65,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE
+SteelChameleon,TRUE,TRUE,189.230.41.101,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE
+QuantumKangaroo,TRUE,FALSE,189.230.41.101,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE
+OmegaZebra,TRUE,TRUE,189.230.41.101,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
+PlasmaticWeasel,FALSE,TRUE,189.230.41.101,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE

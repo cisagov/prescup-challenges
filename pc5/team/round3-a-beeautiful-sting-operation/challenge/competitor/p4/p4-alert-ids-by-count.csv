@@ -1,0 +1,355 @@
+﻿ID,Description,Count
+2012997,"ET WEB_SERVER PHP Possible http Remote File Inclusion Attempt",4454
+2009151,"ET WEB_SERVER PHP Generic Remote File Include Attempt (HTTP)",1492
+2009714,"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt",534
+2101122,"GPL WEB_SERVER /etc/passwd",392
+2002681,"ET WEB_SPECIFIC_APPS Mambo Exploit",202
+2003099,"ET WEB_SERVER Poison Null Byte",166
+2102466,"GPL NETBIOS SMB-DS IPC$ unicode share access",150
+2010920,"ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)",132
+2101288,"GPL WEB_SERVER /_vti_bin/ access",126
+2022028,"ET WEB_SERVER Possible CVE-2014-6271 Attempt",124
+2002731,"ET WEB_SPECIFIC_APPS Generic phpbb arbitrary command attempt",118
+2036431,"ET WEB_SERVER Possible SSRF Attempt Inbound Using Common Dork M4",98
+2006445,"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM",73
+2001669,"ET POLICY Proxy GET Request",72
+2101402,"GPL EXPLOIT iissamples access",52
+2036445,"ET WEB_SERVER Possible SSRF Attempt Inbound Using Common Dork M18",50
+2009362,"ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt",46
+2009361,"ET WEB_SERVER cmd.exe In URI - Possible Command Execution Attempt",44
+2016935,"ET WEB_SERVER SQL Injection Select Sleep Time Delay",42
+2001218,"ET WEB_SPECIFIC_APPS PHPNuke general XSS attempt",40
+2017442,"ET WEB_SERVER PHP ENV SuperGlobal in URI",34
+2019526,"ET WEB_SERVER WEB-PHP phpinfo access",34
+2018056,"ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.",32
+2021390,"ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315",28
+2101945,"GPL WEB_SERVER unicode directory traversal attempt",28
+2002996,"ET WEB_SPECIFIC_APPS GeekLog Remote File Include Vulnerability",26
+2101245,"GPL EXPLOIT ISAPI .idq access",26
+2100977,"GPL EXPLOIT .cnf access",22
+2021005,"ET WEB_SPECIFIC_APPS Vulnerable Magento Adminhtml Access",18
+2036452,"ET WEB_SERVER Possible SSRF Attempt Inbound Using Common Dork M25",18
+2009004,"ET POLICY Login Credentials Possibly Passed in POST Data",16
+2100981,"GPL EXPLOIT unicode directory traversal attempt",16
+2100987,"GPL EXPLOIT .htr access",16
+2003670,"ET WEB_SPECIFIC_APPS Workbench Survival Guide Remote Inclusion Attempt -- headerfile.php path",14
+2006446,"ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT",13
+2017440,"ET WEB_SERVER PHP SESSION SuperGlobal in URI",12
+2021951,"ET EXPLOIT Possible Magento Directory Traversal Attempt",12
+2101156,"GPL WEB_SERVER apache directory disclosure attempt",12
+2101244,"GPL EXPLOIT ISAPI .idq attempt",12
+2009582,"ET SCAN NMAP -sS window 1024",11
+2011042,"ET WEB_SERVER MYSQL SELECT CONCAT SQL Injection Attempt",11
+2100988,"GPL WEB_SERVER SAM Attempt",10
+2101018,"GPL EXPLOIT iisadmpwd attempt",10
+2101111,"GPL EXPLOIT Tomcat server exploit access",10
+2003715,"ET WEB_SPECIFIC_APPS TellTarget CMS Remote Inclusion ref_kd_rubrik.php tt_docroot",8
+2006609,"ET WEB_SPECIFIC_APPS iWare Professional SQL Injection Attempt -- index.php D SELECT",8
+2009001,"ET POLICY Login Credentials Possibly Passed in URI",8
+2009180,"ET WEB_SPECIFIC_APPS SnippetMaster pcltar.lib.php g_pcltar_lib_dir Parameter Remote File Inclusion",8
+2030337,"ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)",8
+2036433,"ET WEB_SERVER Possible SSRF Attempt Inbound Using Common Dork M6",8
+2100884,"GPL EXPLOIT formmail access",8
+2100937,"GPL WEB_SERVER _vti_rpc access",8
+2101129,"GPL WEB_SERVER .htaccess access",8
+2002901,"ET WEB_SPECIFIC_APPS PHP Aardvark Topsites PHP CONFIG PATH Remote File Include Attempt",6
+2002910,"ET SCAN Potential VNC Scan 5800-5820",6
+2002911,"ET SCAN Potential VNC Scan 5900-5920",6
+2003333,"ET WEB_SPECIFIC_APPS PHP Gnopaster Common.php remote file include",6
+2003739,"ET WEB_SPECIFIC_APPS Yaap Remote Inclusion Attempt -- common.php root_path",6
+2004589,"ET WEB_SPECIFIC_APPS PsychoStats XSS Attempt -- register.php",6
+2008538,"ET SCAN Sqlmap SQL Injection Scan",6
+2009485,"ET WEB_SERVER /etc/shadow Detected in URI",6
+2009955,"ET WEB_SERVER Tilde in URI - potential .php~ source disclosure vulnerability",6
+2010935,"ET SCAN Suspicious inbound to MSSQL port 1433",6
+2010936,"ET SCAN Suspicious inbound to Oracle SQL port 1521",6
+2010937,"ET SCAN Suspicious inbound to mySQL port 3306",6
+2010939,"ET SCAN Suspicious inbound to PostgreSQL port 5432",6
+2011040,"ET WEB_SERVER Possible Usage of MYSQL Comments in URI for SQL Injection",6
+2014384,"ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt",6
+2023997,"ET INFO Potentially unsafe SMBv1 protocol in use",6
+2036223,"ET HUNTING Potential Forced OGNL Evaluation - HTTP Header",6
+2036438,"ET WEB_SERVER Possible SSRF Attempt Inbound Using Common Dork M11",6
+2100615,"GPL POLICY SOCKS Proxy attempt",6
+2100993,"GPL WEB_SERVER iisadmin access",6
+2101013,"GPL EXPLOIT fpcount access",6
+2101242,"GPL EXPLOIT ISAPI .ida access",6
+2101401,"GPL EXPLOIT /msadc/samples/ access",6
+2101418,"GPL SNMP request tcp",6
+2101738,"GPL WEB_SERVER global.inc access",6
+2101877,"GPL WEB_SERVER printenv access",6
+2102472,"GPL NETBIOS SMB-DS C$ unicode share access",6
+2102475,"GPL NETBIOS SMB-DS ADMIN$ unicode share access",6
+2221015,"SURICATA HTTP Host header ambiguous",6
+2260002,"SURICATA Applayer Detect protocol only one direction",6
+2002800,"ET WEB_SPECIFIC_APPS PHP PHPNuke Remote File Inclusion Attempt",4
+2002815,"ET WEB_SPECIFIC_APPS Plume CMS prepend.php Remote File Inclusion attempt",4
+2002879,"ET WEB_SPECIFIC_APPS PHP phpMyAgenda rootagenda Remote File Include Attempt",4
+2003677,"ET WEB_SPECIFIC_APPS Berylium2 Remote Inclusion Attempt -- berylium-classes.php beryliumroot",4
+2003693,"ET WEB_SPECIFIC_APPS PHPtree Remote Inclusion Attempt -- cms2.php s_dir",4
+2003698,"ET WEB_SPECIFIC_APPS pfa CMS Remote Inclusion index.php abs_path",4
+2003699,"ET WEB_SPECIFIC_APPS pfa CMS Remote Inclusion checkout.php abs_path",4
+2003706,"ET WEB_SPECIFIC_APPS TellTarget CMS Remote Inclusion class.csv.php tt_docroot",4
+2003707,"ET WEB_SPECIFIC_APPS TellTarget CMS Remote Inclusion produkte_nach_serie.php tt_docroot",4
+2003708,"ET WEB_SPECIFIC_APPS TellTarget CMS Remote Inclusion ref_kd_rubrik.php tt_docroot",4
+2003709,"ET WEB_SPECIFIC_APPS TellTarget CMS Remote Inclusion hg_referenz_jobgalerie.php tt_docroot",4
+2003710,"ET WEB_SPECIFIC_APPS TellTarget CMS Remote Inclusion surfer_anmeldung_NWL.php tt_docroot",4
+2003711,"ET WEB_SPECIFIC_APPS TellTarget CMS Remote Inclusion produkte_nach_serie_alle.php tt_docroot",4
+2003712,"ET WEB_SPECIFIC_APPS TellTarget CMS Remote Inclusion surfer_aendern.php tt_docroot",4
+2003713,"ET WEB_SPECIFIC_APPS TellTarget CMS Remote Inclusion referenz.php tt_docroot",4
+2003714,"ET WEB_SPECIFIC_APPS TellTarget CMS Remote Inclusion lay.php tt_docroot",4
+2003717,"ET WEB_SPECIFIC_APPS miplex2 Remote Inclusion SmartyFU.class.php system",4
+2003731,"ET WEB_SPECIFIC_APPS PHPLojaFacil Remote Inclusion Attempt -- ftp.php path_local",4
+2003738,"ET WEB_SPECIFIC_APPS Beacon Remote Inclusion Attempt -- splash.lang.php languagePath",4
+2003740,"ET WEB_SPECIFIC_APPS PHPFirstPost Remote Inclusion Attempt block.php Include",4
+2003867,"ET WEB_SPECIFIC_APPS TellTarget CMS Remote Inclusion 3_lay.php tt_docroot",4
+2008897,"ET WEB_SPECIFIC_APPS MODx CMS snippet.reflect.php reflect_base Remote File Inclusion",4
+2008922,"ET WEB_SPECIFIC_APPS Nitrotech common.php root Parameter Remote File Inclusion",4
+2008996,"ET WEB_SPECIFIC_APPS Simple Text-File Login script slogin_path parameter remote file inclusion",4
+2009167,"ET WEB_SPECIFIC_APPS AdaptCMS Lite rss_importer_functions.php sitepath Parameter Remote File Inclusion",4
+2009179,"ET WEB_SPECIFIC_APPS SnippetMaster vars.inc.php _SESSION Parameter Remote File Inclusion",4
+2009382,"ET WEB_SPECIFIC_APPS Agares Media ThemeSiteScript frontpage_right.php Remote File Inclusion",4
+2010766,"ET POLICY Proxy TRACE Request - inbound",4
+2011031,"ET SCAN HTTP GET invalid method case",4
+2011564,"ET WEB_SPECIFIC_APPS PHP Classifieds class.phpmailer.php lang_path Parameter Remote File Inclusion Attempt",4
+2016100,"ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory",4
+2016184,"ET WEB_SERVER ColdFusion administrator access",4
+2017441,"ET WEB_SERVER PHP REQUEST SuperGlobal in URI",4
+2022039,"ET WEB_CLIENT Possible vBulletin object injection vulnerability Attempt",4
+2025883,"ET EXPLOIT MVPower DVR Shell UCE",4
+2036451,"ET WEB_SERVER Possible SSRF Attempt Inbound Using Common Dork M24",4
+2100952,"GPL WEB_SERVER author.exe access",4
+2100971,"GPL WEB_SERVER ISAPI .printer access",4
+2100982,"GPL EXPLOIT unicode directory traversal attempt",4
+2101016,"GPL WEB_SERVER global.asa access",4
+2101071,"GPL WEB_SERVER .htpasswd access",4
+2101332,"GPL WEB_SERVER /usr/bin/id command attempt",4
+2101403,"GPL WEB_SERVER viewcode access",4
+2102056,"GPL WEB_SERVER TRACE attempt",4
+2221028,"SURICATA HTTP Host header invalid",4
+2001343,"ET WEB_SERVER IIS ASP.net Auth Bypass / Canonicalization % 5 C",2
+2001949,"ET WEB_SPECIFIC_APPS Athena Web Registration Remote Command Execution Attempt",2
+2002133,"ET WEB_SERVER Oracle Reports OS Command Injection Attempt",2
+2002898,"ET WEB_SPECIFIC_APPS PHP Web Calendar Remote File Inclusion Attempt",2
+2002902,"ET WEB_SPECIFIC_APPS PHP VWar Remote File Inclusion functions_install.php",2
+2003331,"ET WEB_SPECIFIC_APPS PHP Generic membreManager.php remote file include",2
+2003517,"ET WEB_SPECIFIC_APPS iPhotoAlbum header.php remote file include",2
+2003660,"ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt - Headerfile.php System",2
+2003661,"ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- latest_files.php System",2
+2003662,"ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- latest_posts.php System",2
+2003663,"ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- groups_headerfile.php System",2
+2003664,"ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- filters_headerfile.php System",2
+2003665,"ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- links.php System",2
+2003666,"ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- menu_headerfile.php System",2
+2003667,"ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- latest_news.php System",2
+2003668,"ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- settings_headerfile.php System",2
+2003669,"ET WEB_SPECIFIC_APPS TopTree Remote Inclusion Attempt -- tpl_message.php right_file",2
+2003671,"ET WEB_SPECIFIC_APPS Versado CMS Remote Inclusion Attempt -- ajax_listado.php urlModulo",2
+2003672,"ET WEB_SPECIFIC_APPS PMECMS Remote Inclusion Attempt -- mod_image_index.php config pathMod",2
+2003673,"ET WEB_SPECIFIC_APPS PMECMS Remote Inclusion Attempt -- mod_liens_index.php config pathMod",2
+2003674,"ET WEB_SPECIFIC_APPS PMECMS Remote Inclusion Attempt -- mod_liste_index.php config pathMod",2
+2003675,"ET WEB_SPECIFIC_APPS PMECMS Remote Inclusion Attempt -- mod_special_index.php config pathMod",2
+2003676,"ET WEB_SPECIFIC_APPS PMECMS Remote Inclusion Attempt -- mod_texte_index.php config pathMod",2
+2003678,"ET WEB_SPECIFIC_APPS Tropicalm Remote Inclusion Attempt -- dosearch.php RESPATH",2
+2003679,"ET WEB_SPECIFIC_APPS DynamicPAD Remote Inclusion Attempt -- dp_logs.php HomeDir",2
+2003680,"ET WEB_SPECIFIC_APPS DynamicPAD Remote Inclusion Attempt -- index.php HomeDir",2
+2003681,"ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- users_headerfile.php System",2
+2003682,"ET WEB_SPECIFIC_APPS E-Gads Remote Inclusion Attempt -- common.php locale",2
+2003688,"ET WEB_SPECIFIC_APPS TurnKeyWebTools Remote Inclusion Attempt -- global.php abs_path",2
+2003689,"ET WEB_SPECIFIC_APPS TurnKeyWebTools Remote Inclusion Attempt -- libsecure.php abs_path",2
+2003694,"ET WEB_SPECIFIC_APPS NoAH Remote Inclusion Attempt -- mfa_theme.php tpls",2
+2003696,"ET WEB_SPECIFIC_APPS Wikivi5 Remote Inclusion Attempt -- show.php sous_rep",2
+2003700,"ET WEB_SPECIFIC_APPS pfa CMS Remote Inclusion libsecure.php abs_path",2
+2003701,"ET WEB_SPECIFIC_APPS pfa CMS Remote Inclusion index.php repinc",2
+2003702,"ET WEB_SPECIFIC_APPS Pixaria Gallery Remote Inclusion class.Smarty.php cfg sys base_path",2
+2003703,"ET WEB_SPECIFIC_APPS phpMyPortal Remote Inclusion Attempt -- articles.inc.php GLOBALS CHEMINMODULES",2
+2003704,"ET WEB_SPECIFIC_APPS AForum Remote Inclusion func.php CommonAbsDir",2
+2003705,"ET WEB_SPECIFIC_APPS TellTarget CMS Remote Inclusion site_conf.php ordnertiefe",2
+2003716,"ET WEB_SPECIFIC_APPS LaVague Remote Inclusion Attempt -- printbar.php views_path",2
+2003718,"ET WEB_SPECIFIC_APPS gnuedu Remote Inclusion Attempt -- lom.php ETCDIR",2
+2003719,"ET WEB_SPECIFIC_APPS gnuedu Remote Inclusion Attempt -- lom_update.php ETCDIR",2
+2003720,"ET WEB_SPECIFIC_APPS gnuedu Remote Inclusion Attempt -- check-lom.php ETCDIR",2
+2003721,"ET WEB_SPECIFIC_APPS gnuedu Remote Inclusion Attempt -- weigh_keywords.php ETCDIR",2
+2003726,"ET WEB_SPECIFIC_APPS CGX Remote Inclusion Attempt -- mtdialogo.php pathCGX",2
+2003727,"ET WEB_SPECIFIC_APPS CGX Remote Inclusion Attempt -- ltdialogo.php pathCGX",2
+2003728,"ET WEB_SPECIFIC_APPS CGX Remote Inclusion Attempt -- logingecon.php pathCGX",2
+2003729,"ET WEB_SPECIFIC_APPS CGX Remote Inclusion Attempt -- login.php pathCGX",2
+2003732,"ET WEB_SPECIFIC_APPS PHPLojaFacil Remote Inclusion Attempt -- db.php path_local",2
+2003733,"ET WEB_SPECIFIC_APPS PHPLojaFacil Remote Inclusion Attempt -- libs_ftp.php path_local",2
+2003737,"ET WEB_SPECIFIC_APPS CJG Explorer Remote Inclusion Attempt -- pcltrace.lib.php g_pcltar_lib_dir",2
+2003741,"ET WEB_SPECIFIC_APPS Open Translation Engine Remote Inclusion Attempt -- header.php ote_home",2
+2003743,"ET WEB_SPECIFIC_APPS PHPChess Remote Inclusion Attempt -- layout_admin_cfg.php Root_Path",2
+2003744,"ET WEB_SPECIFIC_APPS PHPChess Remote Inclusion Attempt -- layout_cfg.php Root_Path",2
+2003745,"ET WEB_SPECIFIC_APPS PHPChess Remote Inclusion Attempt -- layout_t_top.php Root_Path",2
+2003957,"ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- index.php view SELECT",2
+2004313,"ET WEB_SPECIFIC_APPS WBBlog SQL Injection Attempt -- index.php e_id SELECT",2
+2004588,"ET WEB_SPECIFIC_APPS PsychoStats XSS Attempt -- login.php",2
+2004592,"ET WEB_SPECIFIC_APPS Jelsoft vBulletin XSS Attempt -- calendar.php",2
+2008826,"ET WEB_SPECIFIC_APPS Way Of The Warrior crea.php plancia Remote File Inclusion",2
+2008833,"ET WEB_SPECIFIC_APPS Enthusiast path parameter Remote File Inclusion",2
+2008871,"ET WEB_SPECIFIC_APPS phpFan init.php Remote File Inclusion",2
+2008879,"ET WEB_SPECIFIC_APPS Free Directory Script 1.1.1 API_HOME_DIR parameter Remote File Inclusion",2
+2008899,"ET WEB_SPECIFIC_APPS Pie RSS module lib parameter remote file inclusion",2
+2008900,"ET WEB_SPECIFIC_APPS ModernBill export_batch.inc.php DIR Parameter Remote File Inclusion",2
+2008901,"ET WEB_SPECIFIC_APPS ModernBill run_auto_suspend.cron.php DIR Parameter Remote File Inclusion",2
+2008902,"ET WEB_SPECIFIC_APPS ModernBill send_email_cache.php DIR Parameter Remote File Inclusion",2
+2008903,"ET WEB_SPECIFIC_APPS ModernBill 2checkout_return.inc.php DIR Parameter Remote File Inclusion",2
+2008904,"ET WEB_SPECIFIC_APPS ModernBill nettools.popup.php DIR Parameter Remote File Inclusion",2
+2008962,"ET WEB_SPECIFIC_APPS PHPmyGallery confdir parameter Remote File Inclusion",2
+2008964,"ET WEB_SPECIFIC_APPS lcxBBportal Alpha portal_block.php phpbb_root_path parameter Remote File Inclusion",2
+2009051,"ET WEB_SPECIFIC_APPS PHPOF DB_AdoDB.Class.PHP PHPOF_INCLUDE_PATH parameter Remote File Inclusion",2
+2009059,"ET WEB_SPECIFIC_APPS Recly Feederator add_tmsp.php mosConfig_absolute_path parameter remote file inclusion",2
+2009060,"ET WEB_SPECIFIC_APPS Recly Feederator edit_tmsp.php mosConfig_absolute_path parameter remote file inclusion",2
+2009061,"ET WEB_SPECIFIC_APPS Recly Feederator subscription.php GLOBALS mosConfig_absolute_path parameter remote file inclusion",2
+2009062,"ET WEB_SPECIFIC_APPS Recly Feederator tmsp.php mosConfig_absolute_path parameter remote file inclusion",2
+2009071,"ET WEB_SPECIFIC_APPS phpSkelSite theme parameter remote file inclusion",2
+2009101,"ET WEB_SPECIFIC_APPS REALTOR define.php Remote File Inclusion",2
+2009123,"ET WEB_SPECIFIC_APPS SezHoo SezHooTabsAndActions.php IP Parameter Remote File Inclusion",2
+2009163,"ET WEB_SPECIFIC_APPS GBook header.php abspath Parameter Remote File Inclusion",2
+2009164,"ET WEB_SPECIFIC_APPS openEngine filepool.php oe_classpath parameter Remote File Inclusion",2
+2009166,"ET WEB_SPECIFIC_APPS Concord Consortium CoAST header.php sections_file parameter remote file inclusion",2
+2009188,"ET WEB_SPECIFIC_APPS gapicms toolbar.php dirDepth Parameter Remote File Inclusion",2
+2009196,"ET WEB_SPECIFIC_APPS Basebuilder main.inc.php mj_config Parameter Remote File inclusion",2
+2009225,"ET WEB_SPECIFIC_APPS ea-gBook index_inc.php inc_ordner parameter remote file inclusion",2
+2009229,"ET WEB_SPECIFIC_APPS TECHNOTE shop_this_skin_path Parameter Remote File Inclusion",2
+2009307,"ET WEB_SPECIFIC_APPS WeBid cron.php include_path Parameter Remote File Inclusion",2
+2009311,"ET WEB_SPECIFIC_APPS WeBid ST_countries.php include_path Parameter Remote File Inclusion",2
+2009313,"ET WEB_SPECIFIC_APPS WeBid ST_platforms.php include_path Parameter Remote File Inclusion",2
+2009316,"ET WEB_SPECIFIC_APPS YapBB class_yapbbcooker.php cfgIncludeDirectory Parameter Remote File Inclusion",2
+2009317,"ET WEB_SPECIFIC_APPS DesktopOnNet don3_requiem.php app_path Parameter Remote File Inclusion",2
+2009318,"ET WEB_SPECIFIC_APPS DesktopOnNet frontpage.php app_path Parameter Remote File Inclusion",2
+2009321,"ET WEB_SPECIFIC_APPS rgboard footer.php _path parameter remote file inclusion",2
+2009325,"ET WEB_SPECIFIC_APPS phPortal gunaysoft.php icerikyolu Parameter Remote File Inclusion",2
+2009326,"ET WEB_SPECIFIC_APPS phPortal gunaysoft.php sayfaid Parameter Remote File Inclusion",2
+2009333,"ET WEB_SPECIFIC_APPS ODARS resource_categories_view.php CLASSES_ROOT parameter Remote file inclusion",2
+2009364,"ET WEB_SPECIFIC_APPS Beerwins PHPLinkAdmin linkadmin.php page Parameter Remote File Inclusion",2
+2009367,"ET WEB_SPECIFIC_APPS cmsWorks lib.module.php mod_root Parameter Remote File Inclusion",2
+2009369,"ET WEB_SPECIFIC_APPS Joomla Simple RSS Reader admin.rssreader.php mosConfig_live_site Parameter Remote File Inclusion",2
+2009370,"ET WEB_SPECIFIC_APPS Boonex Dolphin HTMLSax3.php Remote File Inclusion",2
+2009371,"ET WEB_SPECIFIC_APPS Boonex Dolphin safehtml.php Remote File Inclusion",2
+2009372,"ET WEB_SPECIFIC_APPS Boonex Dolphin content.inc.php Remote File Inclusion",2
+2009378,"ET WEB_SPECIFIC_APPS Acute Control Panel container.php theme_directory parameter remote file inclusion",2
+2009379,"ET WEB_SPECIFIC_APPS Acute Control Panel header.php theme_directory parameter remote file inclusion",2
+2009381,"ET WEB_SPECIFIC_APPS Interact embedforum.php Remote File Inclusion",2
+2009384,"ET WEB_SPECIFIC_APPS Joomla Dada Mail Manager Component config.dadamail.php GLOBALS Parameter Remote File Inclusion",2
+2009386,"ET WEB_SPECIFIC_APPS Interact lib.inc.php Remote File Inclusion",2
+2009391,"ET WEB_SPECIFIC_APPS Joomla Onguma Time Sheet Component onguma.class.php mosConfig_absolute_path Parameter Remote File Inclusion",2
+2009397,"ET WEB_SPECIFIC_APPS phpProfiles body_comm.inc.php content parameter remote file inclusion",2
+2009398,"ET WEB_SPECIFIC_APPS HoMaP plugin_admin.php _settings Parameter Remote File Inclusion",2
+2009415,"ET WEB_SPECIFIC_APPS PhpBlock basicfogfactory.class.php PATH_TO_CODE Parameter Remote File Inclusion",2
+2009427,"ET WEB_SPECIFIC_APPS Grape Web Statistics functions.php location Parameter Remote File Inclusion",2
+2009435,"ET WEB_SPECIFIC_APPS e107 123 FlashChat Module 123flashchat.php e107path Parameter Remote File Inclusion",2
+2009459,"ET WEB_SPECIFIC_APPS Orlando CMS classes init.php GLOBALS Parameter Remote File Inclusion",2
+2009466,"ET WEB_SPECIFIC_APPS Recly Competitions Component add.php GLOBALS Parameter Remote File Inclusion",2
+2009467,"ET WEB_SPECIFIC_APPS Recly Competitions Component competitions.php GLOBALS Parameter Remote File Inclusion",2
+2009468,"ET WEB_SPECIFIC_APPS Recly Competitions Component settings.php mosConfig_absolute_path Parameter Remote File Inclusion",2
+2009502,"ET WEB_SPECIFIC_APPS Quantum Game Library server_request.php CONFIG Parameter Remote File Inclusion",2
+2009504,"ET WEB_SPECIFIC_APPS Quantum Game Library smarty.inc.php CONFIG Parameter Remote File Inclusion",2
+2009506,"ET WEB_SPECIFIC_APPS Falcon Series One sitemap.xml.php dir Parameter Remote File Inclusion",2
+2009653,"ET WEB_SPECIFIC_APPS SMA-DB format.php _page_css Parameter Remote File Inclusion",2
+2009656,"ET WEB_SPECIFIC_APPS SMA-DB format.php _page_content Parameter Remote File Inclusion",2
+2009717,"ET WEB_SPECIFIC_APPS 1024 CMS standard.php page_include Parameter Remote File Inclusion",2
+2009723,"ET WEB_SPECIFIC_APPS QuickTeam qte_web.php qte_web_path Parameter Remote File Inclusion",2
+2009733,"ET WEB_SPECIFIC_APPS Golabi index_logged.php cur_module Parameter Remote File Inclusion",2
+2009754,"ET WEB_SPECIFIC_APPS Clickheat install.clickheat.php mosConfig_absolute_path Remote File Inclusion",2
+2009755,"ET WEB_SPECIFIC_APPS Clickheat _main.php mosConfig_absolute_path Parameter Remote File Inclusion - 1",2
+2009756,"ET WEB_SPECIFIC_APPS Clickheat main.php mosConfig_absolute_path Parameter Remote File Inclusion - 2",2
+2009757,"ET WEB_SPECIFIC_APPS Clickheat Cache.php mosConfig_absolute_path Remote File Inclusion",2
+2009758,"ET WEB_SPECIFIC_APPS Clickheat Clickheat_Heatmap.php mosConfig_absolute_path Remote File Inclusion",2
+2009759,"ET WEB_SPECIFIC_APPS Clickheat GlobalVariables.php mosConfig_absolute_path Remote File Inclusion - 1",2
+2009760,"ET WEB_SPECIFIC_APPS Clickheat main.php mosConfig_absolute_path Parameter Remote File Inclusion -2",2
+2009788,"ET WEB_SPECIFIC_APPS RSS-aggregator display.php path Parameter Remote File Inclusion",2
+2009793,"ET WEB_SPECIFIC_APPS PHP Crawler footer.php footer_file Parameter Remote File Inclusion",2
+2009848,"ET WEB_SPECIFIC_APPS Dragoon header.inc.php root Parameter Remote File Inclusion",2
+2009871,"ET WEB_SPECIFIC_APPS PHPauction GPL converter.inc.php include_path Parameter Remote File Inclusion",2
+2009872,"ET WEB_SPECIFIC_APPS PHPauction GPL messages.inc.php include_path Parameter Remote File Inclusion",2
+2009873,"ET WEB_SPECIFIC_APPS PHPauction GPL settings.inc.php include_path Parameter Remote File Inclusion",2
+2009877,"ET WEB_SPECIFIC_APPS VirtueMart Google Base Component admin.googlebase.php Remote File Inclusion",2
+2009887,"ET WEB_SPECIFIC_APPS ProjectButler RFI attempt",2
+2009892,"ET WEB_SPECIFIC_APPS PHP-Paid4Mail RFI attempt",2
+2009898,"ET WEB_SPECIFIC_APPS Pragyan CMS form.lib.php sourceFolder Parameter Remote File Inclusion",2
+2009903,"ET WEB_SPECIFIC_APPS AdaptBB latestposts.php forumspath Parameter Remote File Inclusion",2
+2009931,"ET WEB_SPECIFIC_APPS Possible OpenSiteAdmin pageHeader.php Remote File Inclusion Attempt",2
+2009932,"ET WEB_SPECIFIC_APPS Possible eFront database.php Remote File Inclusion Attempt",2
+2009933,"ET WEB_SPECIFIC_APPS Possible Mambo/Joomla! com_koesubmit Component 'koesubmit.php' Remote File Inclusion Attempt",2
+2010027,"ET WEB_SPECIFIC_APPS DM Albums album.php SECURITY_FILE Parameter Remote File Inclusion",2
+2010095,"ET WEB_SPECIFIC_APPS PHPGenealogy CoupleDB.php DataDirectory Parameter Remote File Inclusion",2
+2010099,"ET WEB_SPECIFIC_APPS News Manager ch_readalso.php read_xml_include Parameter Remote File Inclusion",2
+2010124,"ET WEB_SPECIFIC_APPS SERWeb load_lang.php configdir Parameter Remote File Inclusion",2
+2010125,"ET WEB_SPECIFIC_APPS SERWeb main_prepend.php functionsdir Parameter Remote File Inclusion",2
+2010126,"ET WEB_SPECIFIC_APPS Ultrize TimeSheet timesheet.php include_dir Parameter Remote File Inclusion",2
+2010197,"ET WEB_SPECIFIC_APPS KingCMS menu.php CONFIG Parameter Remote File Inclusion",2
+2010252,"ET WEB_SPECIFIC_APPS Datalife Engine api.class.php dle_config_api Parameter Remote File Inclusion",2
+2010254,"ET WEB_SPECIFIC_APPS Ve-EDIT edit_htmlarea.php highlighter Parameter Remote File Inclusion",2
+2010260,"ET WEB_SPECIFIC_APPS Joomla AjaxChat Component ajcuser.php GLOBALS Parameter Remote File Inclusion Attempt",2
+2010276,"ET WEB_SPECIFIC_APPS ProdLer prodler.class.php sPath Parameter Remote File Inclusion Attempt",2
+2010354,"ET WEB_SPECIFIC_APPS Achievo debugger.php config_atkroot parameter Remote File Inclusion Attempt",2
+2010355,"ET WEB_SPECIFIC_APPS OBOphiX fonctions_racine.php chemin_lib parameter Remote File Inclusion Attempt",2
+2010362,"ET WEB_SPECIFIC_APPS AjaxPortal di.php pathtoserverdata Parameter Remote File Inclusion Attempt",2
+2010377,"ET POLICY JBOSS/JMX port 80 access from outside",2
+2010466,"ET WEB_SPECIFIC_APPS PointComma pctemplate.php pcConfig Parameter Remote File Inclusion Attempt",2
+2010473,"ET WEB_SPECIFIC_APPS p-Table for WordPress wptable-tinymce.php ABSPATH Parameter RFI Attempt",2
+2010475,"ET WEB_SPECIFIC_APPS KR-Web krgourl.php DOCUMENT_ROOT Parameter Remote File Inclusion Attempt",2
+2010484,"ET WEB_SPECIFIC_APPS FormMailer formmailer.admin.inc.php BASE_DIR Parameter Remote File Inclusion Attempt",2
+2010485,"ET WEB_SPECIFIC_APPS phptraverse mp3_id.php GLOBALS Parameter Remote File Inclusion Attempt",2
+2010564,"ET WEB_SPECIFIC_APPS Sisplet CMS komentar.php site_path Parameter Remote File Inclusion Attempt",2
+2010963,"ET WEB_SERVER SELECT USER SQL Injection Attempt in URI",2
+2011141,"ET WEB_SERVER PHP Easteregg Information-Disclosure (phpinfo)",2
+2011142,"ET WEB_SERVER PHP Easteregg Information-Disclosure (php-logo)",2
+2011143,"ET WEB_SERVER PHP Easteregg Information-Disclosure (zend-logo)",2
+2011144,"ET WEB_SERVER PHP Easteregg Information-Disclosure (funny-logo)",2
+2011160,"ET WEB_SERVER Apache Axis2 xsd Parameter Directory Traversal Attempt",2
+2011259,"ET WEB_SPECIFIC_APPS MAXcms fm_includes_special Parameter Remote File Inclusion Attempt",2
+2011274,"ET WEB_SPECIFIC_APPS OpenX phpAdsNew phpAds_geoPlugin Parameter Remote File Inclusion Attempt",2
+2011384,"ET WEB_SPECIFIC_APPS MAXcms fm_includes_special Parameter Remote File Inclusion Attempt",2
+2011696,"ET WEB_SPECIFIC_APPS Possible JBoss JMX Console Beanshell Deployer WAR Upload and Deployment Exploit Attempt",2
+2012013,"ET WEB_SPECIFIC_APPS Mambo Component com_smf smf.php Remote File Inclusion Attempt",2
+2012369,"ET WEB_SPECIFIC_APPS Joomla swMenuPro ImageManager.php Remote File Inclusion Attempt",2
+2012373,"ET WEB_SPECIFIC_APPS Horde type Parameter Local File Inclusion Attempt",2
+2012795,"ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path Parameter Remote File inclusion Attempt",2
+2014180,"ET WEB_SPECIFIC_APPS SAPID get_infochannel.inc.php Remote File inclusion Attempt",2
+2015940,"ET SCAN SFTP/FTP Password Exposure via sftp-config.json",2
+2016182,"ET WEB_SERVER ColdFusion componentutils access",2
+2017436,"ET WEB_SERVER PHP SERVER SuperGlobal in URI",2
+2017808,"ET WEB_SERVER Possible MySQL SQLi Attempt Information Schema Access",2
+2019524,"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include",2
+2019904,"ET EXPLOIT QNAP Shellshock CVE-2014-6271",2
+2021992,"ET WEB_SPECIFIC_APPS Possible Joomla SQLi Attempt (CVE-2015-7297 CVE-2015-7857 CVE-2015-7858)",2
+2025756,"ET EXPLOIT D-Link DSL-2750B - OS Command Injection",2
+2027883,"ET EXPLOIT FortiOS SSL VPN - Information Disclosure (CVE-2018-13379)",2
+2029206,"ET EXPLOIT Possible Citrix Application Delivery Controller Arbitrary Code Execution Attempt (CVE-2019-19781)",2
+2030469,"ET EXPLOIT F5 TMUI RCE vulnerability CVE-2020-5902 Attempt M1",2
+2030483,"ET EXPLOIT F5 TMUI RCE vulnerability CVE-2020-5902 Attempt M2",2
+2030581,"ET EXPLOIT Cisco ASA/Firepower Unauthenticated File Read (CVE-2020-3452) M1",2
+2030585,"ET EXPLOIT Cisco ASA/Firepower Unauthenticated File Read  (CVE-2020-3452) M3",2
+2031502,"ET INFO Request to Hidden Environment File - Inbound",2
+2033089,"ET EXPLOIT Cisco RV320/RV325 Config Disclosure Attempt Inbound (CVE-2019-1653)",2
+2034005,"ET EXPLOIT Fortinet FortiOS/FortiProxy SSL VPN Web Portal Path Traversal (CVE-2018-13379)",2
+2034253,"ET SCAN FTPSync Settings Disclosure Attempt",2
+2034262,"ET EXPLOIT Cisco ASA and Firepower Path Traversal Vulnerability M1 (CVE-2020-3452)",2
+2035109,"ET EXPLOIT Possible Citrix Application Delivery Controller Arbitrary Code Execution Attempt (CVE-2019-19781) M4",2
+2035110,"ET EXPLOIT Citrix Application Delivery Controller Arbitrary Code Execution Attempt Scanner Attempt (CVE-2019-19781)",2
+2036436,"ET WEB_SERVER Possible SSRF Attempt Inbound Using Common Dork M9",2
+2044504,"ET INFO Request for Visual Studio Code sftp.json - Possible Information Leak",2
+2100824,"GPL EXPLOIT php.cgi access",2
+2100951,"GPL WEB_SERVER authors.pwd access",2
+2100953,"GPL EXPLOIT administrators.pwd access",2
+2100958,"GPL WEB_SERVER service.cnf access",2
+2100959,"GPL WEB_SERVER service.pwd",2
+2100961,"GPL WEB_SERVER services.cnf access",2
+2100965,"GPL WEB_SERVER writeto.cnf access",2
+2101023,"GPL WEB_SERVER msadcs.dll access",2
+2101108,"GPL WEB_SERVER Tomcat server snoop access",2
+2101110,"GPL WEB_SERVER apache source.asp file access",2
+2101145,"GPL WEB_SERVER /~root access",2
+2101193,"GPL WEB_SPECIFIC_APPS oracle web arbitrary command execution attempt",2
+2101256,"GPL EXPLOIT CodeRed v2 root.exe access",2
+2101487,"GPL EXPLOIT /iisadmpwd/aexp2.htr access",2
+2101489,"GPL WEB_SERVER /~nobody access",2
+2101662,"GPL WEB_SERVER /~ftp access",2
+2101847,"GPL WEB_SERVER webalizer access",2
+2101852,"GPL WEB_SERVER robots.txt access",2
+2101874,"GPL WEB_SERVER Oracle Java Process Manager access",2
+2102073,"GPL WEB_SERVER globals.pl access",2
+2102131,"GPL WEB_SERVER IISProtect access",2
+2102156,"GPL WEB_SERVER mod_gzip_status access",2

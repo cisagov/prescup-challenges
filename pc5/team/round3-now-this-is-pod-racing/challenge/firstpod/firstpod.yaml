@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: firstpod
+  namespace: landingspace
+spec:
+  containers:
+  - args:
+    - "-c"
+    - "while true; do echo Flag: $(landingspace); sleep 30; done"
+    command:
+    - "/bin/bash"
+    env:
+    - name: landingspace
+      valueFrom:
+        configMapKeyRef:
+          key: landingspace-flag
+          name: landingspace-configs
+    image: registry.merch.codes:5000/landingspace:latest
+    imagePullPolicy: Always
+    name: firstpod
+    volumeMounts:
+    - mountPath: /opt/secondspace-config
+      name: landingspace-config-volume
+    - mountPath: /opt/secondspace-deployments
+      name: secondspace-deployments-volume
+    - mountPath: /opt/secondspace-services
+      name: secondspace-services-volume
+    - mountPath: /opt/secondspace-ingresses
+      name: secondspace-ingresses-volume
+  restartPolicy: Always
+  volumes:
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: secondspace.kubeconfig
+        path: secondspace.kubeconfig
+      name: landingspace-configs
+    name: landingspace-config-volume
+  - configMap:
+      defaultMode: 420
+      name: secondspace-deployments
+    name: secondspace-deployments-volume
+  - configMap:
+      defaultMode: 420
+      name: secondspace-services
+    name: secondspace-services-volume
+  - configMap:
+      defaultMode: 420
+      name: secondspace-ingresses
+    name: secondspace-ingresses-volume

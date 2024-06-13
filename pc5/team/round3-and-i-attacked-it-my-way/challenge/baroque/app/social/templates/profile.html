@@ -1,0 +1,111 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}{{current_user.username}} Profile{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<span id="title" style="padding-top:20px;">
+    Welcome, {{current_user.fname}}!
+</span>
+<span>Member since: {{current_user.created}}</span>
+<form method="POST" action="{{url_for('social.my_profile')}}" id="min-top-padding">
+    <span style="padding:0 10px;"><button id="profile_btns" type="submit" name="value" value="up" class="link-button">Update Information</button></span>
+    <span style="padding:0 10px;"><button id="profile_btns" type="submit" name="value" value="shop" class="link-button">View Listed Products</button></span>
+    <span style="padding:0 10px;"><button id="profile_btns" type="submit" name="value" value="rec" class="link-button">View Receipts</button></span>
+    <span style="padding:0 10px;"><button id="profile_btns" type="submit" name="value" value="add" class="link-button">List Item to Sell</button></span>
+</form>
+
+{% if choice %}
+    <form method="POST" action="{{url_for('social.my_profile')}}" enctype="multipart/form-data" id="min-top-padding">
+    <fieldset>
+    {% if choice == "up"%}
+        <legend align='center'>Update User</legend>
+        <table>
+            <tr class="bodypost">
+                <td align='left' style="width:25%;"><label>First Name</label></td>
+                <td align='right' style="width:50%"><input type='text' name='fname' value="{{current_user.fname}}" required></td>
+            </tr>
+            <tr class="bodypost">
+                <td align='left' style="width:25%;"><label>Last Name</label></td>
+                <td align='right' style="width:50%"><input type='text' name='lname' value="{{current_user.lname}}" required></td>
+            </tr>
+            <tr class="bodypost">
+                <td align='left' style="width:25%;"><label>Username</label></td>
+                <td align='right' style="width:50%"><input type='text' name='un' value="{{current_user.username}}" required></td>
+            </tr>
+            <tr class="bodypost">
+                <td align='left' style="width:25%;"><label>Email</label></td>
+                <td align='right' style="width:50%"><input type='text' name='email' value="{{current_user.email}}" required></td>
+            </tr>
+            <tr class="bodypost">
+                <td align='left' style="width:25%;"><label>New Password</label></td>
+                <td align='right' style="width:50%"><input type='text' name='pwd' value=""></td>
+            </tr>
+            <tr class="bodypost">
+                <td align='left' style="width:25%;"><label>Update Personal Notes</label></td>
+                <td align='right' style="width:50%"><input type='text' name='notes' value="{{current_user.notes}}"></td>
+            </tr>
+        </table>
+    {% elif choice == 'shop' %}
+        {% if products == [] %}
+            <br><h2>You havent listed any products to sell</h2>
+            <h3><a href="{{url_for('shop.add_item')}}" >Click here to list an item!</a></h3>
+        {% else %}
+        <table>
+            <tr>
+                <td>Product Name</td>
+                <td>Product Description</td>
+                <td>Product Price</td>
+                <td>Link</td>
+            </tr>
+            {% for product in products %}
+                <tr>
+                    <th>{{product.name}}</th>
+                    <th>{{product.desc}}</th>
+                    <th>{{product.price}}</th>
+                    <th>{{product.url}}</th>
+                </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    {% elif choice == 'rec' %}
+        {% if rec == [] %}
+            <br><h2>You havent made any purchases</h2>
+            <h3><a href="{{url_for('shop.home')}}" >Come check out the shop!</a></h3>
+        {% else %}
+        <table>
+            <tr>
+                <td>Product Name</td>
+                <td>Product Description</td>
+                <td>Product Price</td>
+                <td>Link</td>
+            </tr>
+            {% for product in products %}
+                <tr>
+                    <th>{{product.name}}</th>
+                    <th>{{product.desc}}</th>
+                    <th>{{product.price}}</th>
+                    <th>{{product.url}}</th>
+                </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    {% endif %}
+    {% if choice == 'up' %}
+        <input type="submit" name="{{choice}}" value="Submit" style="font-size: 20px;">
+    {% endif %}
+    </fieldset>
+    </form>
+{% endif %}
+{% endblock %}
+
+
+

@@ -1,0 +1,66 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}FAQ{% endblock %}</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .faq-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 15px;
+            border: 2px solid #333;
+        }
+        .faq {
+            padding: 5px;
+           
+        }
+        .question {
+            font-weight: bold;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<span id="title" style="padding-top:40px; padding-bottom: 40px;;">
+    Frequently Asked Questions
+</span>
+
+<div class="faq-container">
+    <div class="faq">
+        <p class="question">1. What is Baroque and how does it work?</p>
+        <p>Baroque is an innovative platform that combines the interactive features of social media with the convenience of online shopping. Here, users can connect with friends, share their experiences, and shop for a wide range of products all in one place.</p>
+    </div>
+
+    <div class="faq">
+        <p class="question">2. How do I create an account?</p>
+        <p>Creating an account is easy! Just click on the "Sign Up" button in the navigation bar at the top of the page to begin the process.</p>
+    </div>
+
+    <div class="faq">
+        <p class="question">3. Is there a mobile app available for Baroque?</p>
+        <p>No, we are still in the process of development although when it is finished you'll be the first to know!</p>
+    </div>
+
+    <div class="faq">
+        <p class="question">4. How can I find products to buy?</p>
+        <p>All products on our site have been uploaded and offered by other people like you. You can browse the currently available products by category or search for specific items using our search bar.</p>
+    </div>
+
+    <div class="faq">
+        <p class="question">5. How do I connect with other users on the platform?</p>
+        <p>We have integrated a messaging platform so that you can reach out to any other user and discuss whatever youd like!</p>
+    </div>
+
+</div>
+
+{% endblock %}
+

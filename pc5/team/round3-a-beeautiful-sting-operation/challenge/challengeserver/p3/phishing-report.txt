@@ -1,0 +1,100 @@
+EmberOwl Phishing Report
+=================================================
+Countries of Origin:
+ - Austria
+ - Venezuela
+Malicious Domains:
+ - cyberthreatsolutions.inc
+ - hackerhideout.org
+ - malwaremasters.net
+
+ToxicHawk Phishing Report
+=================================================
+Countries of Origin:
+ - South Africa
+ - Vietnam
+Malicious Domains:
+ - hackerhideout.org
+ - hacksforquacks.com
+ - maliciousness.biz
+
+PixelZebra Phishing Report
+=================================================
+Countries of Origin:
+ - Austria
+ - Spain
+Malicious Domains:
+ - hacksforquacks.com
+ - maliciousness.biz
+ - malwaremasters.net
+
+FrostbiteBadger Phishing Report
+=================================================
+Countries of Origin:
+ - South Africa
+ - Venezuela
+Malicious Domains:
+ - cyberthreatsolutions.inc
+ - maliciousness.biz
+ - malwaremasters.net
+
+MirageRat Phishing Report
+=================================================
+Countries of Origin:
+ - Spain
+ - Vietnam
+Malicious Domains:
+ - cyberthreatsolutions.inc
+ - hacksforquacks.com
+ - maliciousness.biz
+
+AuroraChameleon Phishing Report
+=================================================
+Countries of Origin:
+ - Austria
+ - Spain
+Malicious Domains:
+- cyberthreatsolutions.inc
+- hackerhideout.org
+- hacksforquacks.com
+
+ChronoSloth Phishing Report
+=================================================
+Countries of Origin:
+ - Austria
+ - Vietnam
+Malicious Domains:
+ - cyberthreatsolutions.inc
+ - hackerhideout.org
+ - maliciousness.biz
+
+PlasmaticHyena Phishing Report
+=================================================
+Countries of Origin:
+ - Spain
+ - South Africa
+Malicious Domains:
+ - cyberthreatsolutions.inc
+ - hacksforquacks.com
+ - malwaremasters.net
+
+ScarletPython Phishing Report
+=================================================
+Countries of Origin:
+ - South Africa
+ - Venezuela
+Malicious Domains:
+ - hackerhideout.org
+ - hacksforquacks.com
+ - malwaremasters.net
+
+EnigmaticTurtle Phishing Report
+=================================================
+Countries of Origin:
+ - Venezuela
+ - Vietnam
+Malicious Domains:
+ - hacksforquacks.com
+ - maliciousness.biz
+ - malwaremasters.net
+ 

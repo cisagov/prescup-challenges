@@ -1,0 +1,27 @@
+
+
+The information below has been shared and should help with solving each task.
+
+ZIP:
+The filename of the ZIP that needs repairing is `corrupt.zip`.
+There are four files that are within the ZIP. The names of the files as well as the order that the files were added when the zip was being created are as follows:
+1. joyous
+2. whimsical
+3. bingo
+4. sad
+
+
+Images:
+There are 8 images that need to be repaired within the `image` folder.
+Each images data is stored in its own directory. 
+In each image folder, each chunk of the image has been split up and put into its own 'chunk' folder.
+In each chunks folder, the data that makes up that chunk has been split up and put into its own file.
+
+PCAP:
+The filename of the PCAP that needs repairing is `capture.pcap`
+The traffic within the PCAP contains a picture that you need to extract.
+When it was captured and saved, the traffic was originally caught on the normal `Ethernet` Link-layer.
+
+
+PDF:
+The filename of the PDF that needs repairing is `file.pdf`

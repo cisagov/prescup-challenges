@@ -1,0 +1,102 @@
+/*
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*/
+
+.shop-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+#shop-navbar {
+    width: 200px;
+    position: fixed;
+    left: 0;
+    top: 15%; /* Start at 15% from the top */
+    height: 70%; /* Cover only 70% of the page height */
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Enable scroll if content is more */
+}
+
+.sticky {
+    position: fixed;
+    top: 15%;
+}
+
+#shop-navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#shop-navbar li {
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #444;
+    cursor: pointer;
+}
+
+#main-content {
+    margin-left: 210px;
+    padding: 20px;
+    width: calc(100% - 240px);
+}
+
+.product-box {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.product-item {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border: 1px solid black;
+}
+
+
+.shop_navbar_elements {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: auto;
+}
+
+.shop_navbar_elements:hover {
+    cursor:pointer;
+    background-color: #5e5d5d;
+    color: black;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #b3a9a9;
+    border: 1px solid black;
+}
+
+/*
+.product-name, .product-price, .product-description {
+    margin-right: 20px; /* Adjust spacing as needed 
+    }
+*/

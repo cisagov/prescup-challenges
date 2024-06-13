@@ -1,0 +1,26 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Files</title>
+</head>
+<body>
+    {% if no_file %}
+        <h3>File in request does not exist. All available files listed below</h3>
+    {% endif %}
+<h1>List of Files Hosted for <a href="https://baroque.merch.codes">Baroque</a></h1>
+    <ul>
+        {% for file in files %}
+            <li><a href="{{ url_for('static', filename=file) }}">{{ file }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
