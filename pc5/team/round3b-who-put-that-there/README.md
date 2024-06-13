@@ -12,7 +12,8 @@ Identify which IP address sent a file by **SHA-256** hash.
 - [T0260](https://niccs.cisa.gov/workforce-development/nice-framework/): Analyze identified malicious activity to determine weaknesses exploited, exploitation methods, effects on system and information.
 
 ## ⚠️ Large Files ⚠️
-This challenge includes large files as a separate download. Please download the large files [here](https://presidentscup.cisa.gov/files/pc5/teams-round3b-who-put-that-there-largefiles.zip). The packet capture file extracted from the large file zip was provided to competitors as an ISO during the competition. The zipped file is ~74 MBs and the extracted file is ~83 MBs.
+
+This challenge includes large files as a separate download. Please download the large files [here](https://presidentscup.cisa.gov/files/pc5/team-round3b-who-put-that-there-largefiles.zip). The packet capture file extracted from the large file zip was provided to competitors as an ISO during the competition. The zipped file is ~74 MBs and the extracted file is ~83 MBs.
 
 ## Background
 
@@ -25,4 +26,4 @@ In the gamespace, browse to `challenge.us/files` and download the pcap file. Exa
 
 ## Challenge Questions
 
-1.  Enter Token 1.
+1. Enter Token 1.
