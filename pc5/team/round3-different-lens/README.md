@@ -23,16 +23,6 @@ Show you are different by demonstrating you can look at data differently. Look f
 
 Some files may not be found in standard Kali wordlists. Look around. Create your own, if needed. The security of this operation depends on you.
 
-## System and Tool Credentials
-
-| system/tool | username | password |
-| ----------- | -------- | -------- |
-|kali     |user    |tartans |
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
-
 *No stego-specific tools are required for this challenge.*
 
 ## Challenge Questions

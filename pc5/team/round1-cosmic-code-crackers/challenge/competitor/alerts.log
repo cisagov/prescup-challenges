@@ -1,0 +1,72 @@
+2024/05/01 9:35:11  ossec-agentd: INFO: New syslog message from 10.1.1.10 (localhost), log sender: /var/log/secure, source: sshd, keyword: Authentication, level: info  
+2024/05/01 9:40:22  ossec-agentd: WARNING: File integrity checksum changed for /etc/passwd (user: kevin)         
+2024/05/01 9:40:23  ossec-agentd: ALERT: File modified: /etc/passwd, user: amber, group: root, permission: 644, uid: 0, gid: 0, checksum: B3D84A7C81E0C48E7CE0DE1DE2267BFF, host: 10.2.2.12
+2024/05/01 9:45:17  ossec-agentd: ALERT: Rootkit check: Possible shared library trojan, user: kevin, path: /lib/libc.so.6, host: 10.1.1.45     
+2024/05/01 9:45:33  ossec-agentd: INFO: User zelda executed 'sudo ls' on 10.2.2.5          
+2024/05/01 9:50:12  ossec-agentd: ALERT: Access denied to file: /etc/shadow, user: user, group: root, permission: 640, host: 10.2.2.31    
+2024/05/01 9:50:44  ossec-agentd: ERROR: Failed to authenticate user rowan from 10.1.1.23          
+2024/05/01 9:55:06  ossec-agentd: ALERT: Directory modified: /var/log, user: jason, group: root, permission: 755, uid: 0, gid: 0, checksum: 58F27A91C13F8A36453BEF1F75C3D9A3, host: 10.1.1.78
+2024/05/01 9:55:55  ossec-agentd: WARNING: Suspicious file access detected on /etc/shadow by user haley on 10.1.1.5      
+2024/05/01 10:00:01  ossec-agentd: ALERT: Process started: /usr/bin/python3, user: eliza, pid: 10541, ppid: 10521, host: 10.2.2.19      
+2024/05/01 10:00:06  ossec-agentd: INFO: New syslog message from 10.2.2.12 (localhost), log sender: /var/log/messages, source: kernel, keyword: memory, level: warning  
+2024/05/01 10:05:10  ossec-agentd: ALERT: User added: aiden, uid: 1040, gid: 100, home directory: /home/aiden, shell: /bin/bash, host: 10.1.1.61   
+2024/05/01 10:05:17  ossec-agentd: WARNING: File /usr/bin/python3 has been modified by user jason on 10.1.1.2       
+2024/05/01 10:10:09  ossec-agentd: ALERT: File deleted: /var/log/auth.log, user: fiona, group: adm, permission: 640, uid: 0, gid: 4, host: 10.2.2.4  
+2024/05/01 10:10:28  ossec-agentd: ERROR: Authentication failure for user greta on 10.2.2.6 (received: 3)        
+2024/05/01 10:15:23  ossec-agentd: ALERT: Network connection detected: destination: 198.51.100.10, protocol: TCP, port: 80, user: keira, host: 10.1.1.99    
+2024/05/01 10:15:39  ossec-agentd: INFO: User tyler logged in to 10.1.1.12 via SSH         
+2024/05/01 10:20:11  ossec-agentd: ALERT: Sudo command executed: /bin/bash, user: diane, arguments: -l, host: 10.2.2.27       
+2024/05/01 10:20:50  ossec-agentd: WARNING: Suspicious network connection from 10.2.2.15 to 10.1.1.20 (port: 445, protocol: tcp)      
+2024/05/01 10:25:01  ossec-agentd: INFO: New syslog message from 10.1.1.7 (localhost), log sender: /var/log/secure, source: sshd, keyword: Authentication, level: info  
+2024/05/01 10:25:16  ossec-agentd: ALERT: User login failed: user: rowan, host: 10.1.1.33, port: 22, authentication method: publickey     
+2024/05/01 10:30:01  ossec-agentd: ALERT: Disk space usage over threshold: partition: /dev/sda1, usage: 90%, user: jaden, host: 10.2.2.9    
+2024/05/01 10:30:12  ossec-agentd: ERROR: Authentication failure for user fiona on 10.2.2.3 (received: 2)        
+2024/05/01 10:35:23  ossec-agentd: WARNING: File /etc/shadow has been modified by user aiden on 10.1.1.11       
+2024/05/01 10:40:34  ossec-agentd: INFO: User jaden executed 'sudo ps aux' on 10.2.2.4         
+2024/05/01 10:45:45  ossec-agentd: ERROR: Failed to authenticate user eliza from 10.1.1.20
+2024/05/01 11:48:31  ossec-agentd: ALERT: Rule: 5504 (level 7) -> 'File added to a watched directory.' | OSSEC HIDS | 10.1.1.50 | user: jason | directory: /usr/share/fonts | file: e018a156.o
+2024/05/01 10:50:56  ossec-agentd: WARNING: Suspicious network connection from 10.2.2.8 to 10.1.1.18 (port: 23, protocol: tcp)      
+2024/05/01 11:42:31  ossec-agentd: WARNING: File modified: /etc/passwd by user amber           
+2024/05/01 12:05:15  ossec-agentd: INFO: New syslog message from 10.2.2.5 (webserver), log sender: /var/log/nginx/access.log, source: nginx, keyword: GET, level: info  
+2024/05/01 12:20:01  ossec-agentd: ALERT: System time has been changed to 45042 0.513900462962963 by user kevin      
+2024/05/01 12:22:12  ossec-agentd: INFO: Hostname: myserver.local - Logged in user: jason - File /etc/shadow added      
+2024/05/01 12:26:18  ossec-agentd: INFO: Hostname: 10.2.2.15 - User: aiden - Executed command cat /etc/passwd        
+2024/05/01 12:31:04  ossec-agentd: INFO: New syslog message from 10.1.1.5 (server1), log sender: /var/log/messages, source: kernel, keyword: Oops, level: error  
+2024/05/01 12:40:29  ossec-agentd: ALERT: Host 10.2.2.7 (client2) is trying to connect to TCP port 22 on 10.1.1.2 (server2) using SSH protocol
+2024/05/01 12:45:05  ossec-agentd: WARNING: File deleted: /etc/shadow by user fiona           
+2024/05/01 12:48:41  ossec-agentd: WARNING: File '/var/log/nginx/access.log' has been modified. User: tyler, Group: nginx, Permission: 640      
+2024/05/01 12:57:12  ossec-agentd: ALERT: Host 10.1.1.12 (client5) is trying to connect to TCP port 3389 on 10.2.2.15 (server3) using RDP protocol
+2024/05/01 13:05:49  ossec-agentd: INFO: New syslog message from 10.2.2.12 (client3), log sender: /var/log/secure, source: sshd, keyword: Failed Password, level: warning 
+2024/05/01 13:10:01  ossec-agentd: INFO: New syslog message from 10.1.1.15 (server), log sender: /var/log/syslog, source: CRON, keyword: running, level: info  
+2024/05/01 13:14:18  ossec-agentd: ALERT: File '/etc/shadow' has been modified. User: kevin, Group: shadow, Permission: 640      
+2024/05/01 13:14:45  ossec-agentd: WARNING: Hostname: 10.1.1.23 - User: eliza - File /usr/bin/python modified        
+2024/05/01 13:22:59  ossec-agentd: WARNING: File '/var/log/mysql/error.log' has been modified. User: zelda, Group: mysql, Permission: 640      
+2024/05/01 13:30:45  ossec-agentd: ALERT: Suspicious process found running: /usr/bin/perl by user jason         
+2024/05/01 13:37:59  ossec-agentd: ERROR: Hostname: myserver.local - User: kevin - File /etc/sudoers permission changed to 777     
+2024/05/01 13:40:06  ossec-agentd: ALERT: Host 10.2.2.18 (client4) is trying to connect to TCP port 1433 on 10.1.1.9 (server4) using MSSQL protocol
+2024/05/01 13:48:23  ossec-agentd: ALERT: Hostname: 10.1.1.8 - User: fiona - File /var/log/auth.log changed (inode modified)      
+2024/05/01 13:49:12  ossec-agentd: WARNING: File '/etc/passwd' has been modified. User: diane, Group: root, Permission: 644      
+2024/05/01 13:50:20  ossec-agentd: WARNING: File modified: /etc/hosts by user rowan           
+2024/05/01 13:57:44  ossec-agentd: ALERT: Host 10.1.1.7 (client6) is trying to connect to TCP port 5900 on 10.2.2.13 (server5) using VNC protocol
+2024/05/01 14:02:39  ossec-agentd: INFO: Hostname: 10.2.2.41 - User: amber - Executed command top        
+2024/05/01 14:05:01  ossec-agentd: INFO: New syslog message from 10.2.2.10 (database), log sender: /var/log/mysql.log, source: mysql, keyword: Access denied, level: warning 
+2024/05/01 14:06:22  ossec-agentd: INFO: New syslog message from 10.2.2.9 (client7), log sender: /var/log/messages, source: kernel, keyword: Out of Memory, level: error
+2024/05/01 14:07:54  ossec-agentd: WARNING: Hostname: myserver.local - User: oscar - File /var/log/messages modified        
+2024/05/01 14:11:12  ossec-agentd: ALERT: Rule: 5504 (level 7) -> 'File added to a watched directory.' | OSSEC HIDS | 10.2.2.50 | user: jason | directory: /usr/share/bug | file: user.exe
+2024/05/01 14:11:15  ossec-agentd: ALERT: Rule: 5504 (level 7) -> 'File added to a watched directory.' | OSSEC HIDS | 10.2.2.50 | user: jason | directory: /usr/share/bug | file: pwd-p1.exe
+2024/05/01 14:11:18  ossec-agentd: ALERT: Rule: 5504 (level 7) -> 'File added to a watched directory.' | OSSEC HIDS | 10.2.2.50 | user: jason | directory: /usr/share/bug | file: pwd-p2.exe
+2024/05/01 14:14:21  ossec-agentd: INFO: Hostname: 10.1.1.6 - User: dylan - Executed command ls /etc        
+2024/05/01 14:20:30  ossec-agentd: ALERT: Privileged command executed: sudo cat /etc/passwd by user user        
+2024/05/01 14:23:18  ossec-agentd: ALERT: Hostname: 10.2.2.88 - User: rowan - File /etc/passwd changed (attributes)       
+2024/05/01 14:31:45  ossec-agentd: ERROR: Hostname: myserver.local - User: kevin - File /var/log/syslog permission changed to 777     
+2024/05/01 14:39:12  ossec-agentd: WARNING: Hostname: 10.1.1.13 - User: greta - File /etc/group modified        
+2024/05/01 14:45:05  ossec-agentd: WARNING: File deleted: /var/log/messages by user zelda           
+2024/05/01 14:46:39  ossec-agentd: INFO: Hostname: 10.2.2.72 - User: jason - Executed command netstat -anp        
+2024/05/01 14:53:54  ossec-agentd: ALERT: Hostname: 10.1.1.47 - User: chase - File /var/log/messages changed (owner/group)       
+2024/05/01 15:07:18  ossec-agentd: ERROR: Hostname: myserver.local - User: user - File /etc/crontab permission changed to 777     
+2024/05/01 15:10:01  ossec-agentd: INFO: New syslog message from 10.1.1.20 (printer), log sender: /var/log/cups/access.log, source: cupsd, keyword: Print-Job, level: info  
+2024/05/01 15:12:45  ossec-agentd: WARNING: Hostname: 10.2.2.27 - User: zelda - File /usr/sbin/sshd modified        
+2024/05/01 15:30:15  ossec-agentd: ALERT: Large amount of failed login attempts from IP address 10.1.1.30 by user diane    
+2024/05/01 15:50:25  ossec-agentd: ERROR: Failed to open file: /etc/sudoers by user oscar         
+2024/05/01 16:05:01  ossec-agentd: INFO: New syslog message from 10.2.2.15 (application server), log sender: /var/log/tomcat.log, source: catalina, keyword: SEVERE, level: error 
+2024/05/01 16:30:50  ossec-agentd: ALERT: Suspicious outbound network traffic detected to IP address 192.168.0.1 by user haley     

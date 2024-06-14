@@ -14,6 +14,9 @@ A merchant spaceship of dubious renown is collaborating with a client of equally
 - [T0591](https://niccs.cisa.gov/workforce-development/nice-framework/): Perform analysis for target infrastructure exploitation activities.
 - [T0736](https://niccs.cisa.gov/workforce-development/nice-framework/): Lead or enable exploitation operations in support of organization objectives and target requirements.
 
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
+
 
 ## Background 
 
@@ -22,16 +25,6 @@ This merchant ship of unsavory reputation specializes in creating and deploying 
 ## Getting Started 
 
 Log into the `kali` VM and enumerate the spaceship's network to discover hosts and network services present. It has been confirmed that subnets present are: `10.3.3.0/24`, `10.0.0.0/30`, and `10.7.7.0/24`.
-
-## System and Tool Credentials
-
-|system/tool|username|password|
-|-----------|--------|--------|
-|kali|user|tartans|
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
 
 ## Challenge Questions
 

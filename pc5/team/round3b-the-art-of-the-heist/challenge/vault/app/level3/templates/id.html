@@ -1,0 +1,30 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Submit Digital Identification File{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<br><br><br>
+<div class="login">
+  <h2 class="l3">Submit Digital ID</h2>
+  <form method="POST" action="{{url_for('level3.submit_id')}}" enctype="multipart/form-data">
+    <input type="file" class="text" name="id_upload" required>
+     <span class="form">File</span>
+    <br><br><br><br>
+    <button class="signin">
+      Submit
+    </button>
+  </form>
+</div>
+{% endblock %}
+
+
+

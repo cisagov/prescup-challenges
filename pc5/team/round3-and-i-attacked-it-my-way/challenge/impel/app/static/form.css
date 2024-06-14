@@ -1,0 +1,192 @@
+/*
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*/
+
+body,
+.signin {
+  /*background-color: #d3d3d3;
+  color: #fff;*/
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight:bold;
+}
+
+.login {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  padding: 60px 60px;
+  background-color: rgb(120, 199, 199);   /*rgb(17, 165, 81)*/
+  background-size: cover;
+  box-shadow: 0px 30px 60px -5px #000;
+}
+
+.done {
+  position: relative;
+  height: 300px;
+  width: 400px;
+  margin: auto;
+  padding: 60px 60px;
+  background-color: darkcyan;   /*rgb(17, 165, 81)*/
+  background-size: cover;
+  box-shadow: 0px 30px 60px -5px #000;
+}
+
+form {
+  padding-top: 80px;
+}
+
+.portal{
+  margin:0;
+  justify-content: center;
+  align-items:center;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+}
+
+.portal::after {
+  content:"";
+  position:absolute;
+  margin:0 auto;
+  width:37%;
+  padding-top:30px;
+  border-bottom: 1px solid black;
+}
+
+.success{
+  margin:0;
+  justify-content: center;
+  align-items:center;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+}
+
+.success::after {
+  content:"";
+  position:absolute;
+  margin:0 auto;
+  width:29%;
+  padding-top:30px;
+  border-bottom: 1px solid black;
+}
+
+span.token {
+  text-transform: uppercase;
+  font-size: 23px;
+  opacity: 0.9; 
+  display: inline-block;
+  position: relative;
+  top: -65px;
+  transition: all 0.5s ease-in-out;
+}
+
+h2:first-child {
+  padding-left: 0px;
+}
+
+span.form {
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0.8; 
+  display: inline-block;
+  position: relative;
+  top: -65px;
+  transition: all 0.5s ease-in-out;
+}
+
+.text {
+  border: none;
+  width: 89%;
+  padding: 10px 20px;
+  display: block;
+  height: 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0);
+  overflow: hidden;
+  margin-top: 15px;
+  transition: all 0.5s ease-in-out;
+}
+
+.text:focus {
+  outline: 0;
+  border: 2px solid black;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0);
+}
+
+input[type="text"],
+input[type="password"] {
+  color: black;
+  border: 1px solid black;
+}
+
+input {
+  display: inline-block;
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+
+label {
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.signin {
+  background-color: darkcyan;
+  color: black;
+  width: 25%;
+  padding: 10px 20px;
+  display: block;
+  height: 39px;
+  border-radius: 20px;
+  margin-top: 30px;
+  transition: all 0.3s ease, color 0.3s ease;
+  border: 1px solid black;
+  text-transform: uppercase;
+}
+
+.signin:hover {
+  background: rgb(7, 100, 100);        /*rgb(58, 126, 58);*/
+  cursor: pointer;
+}
+
+.signin:focus {
+  outline: none;
+}
+
+#myProgress {
+  width:100%;
+  background: grey;
+}
+
+#myBar {
+  width:1%;
+  height:30px;
+  background: darkcyan;
+}
+
+.notice-box {
+    position:absolute;
+    left:50%;
+    bottom:50px;
+    transform: translateX(-50%);
+    padding: 15px;
+    border: 3px solid Red;
+    text-align: center;
+    font-size: 18px;
+    display:inline-block;
+    background-color: rgb(120, 199, 199);
+}
+

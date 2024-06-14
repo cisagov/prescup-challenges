@@ -14,6 +14,9 @@ Investigate device lists and network traffic to access ship security cameras and
  - [T0260](https://niccs.cisa.gov/workforce-development/nice-framework/): Analyze identified malicious activity to determine weaknesses exploited, exploitation methods, effects on system and information.
  - [T0298](https://niccs.cisa.gov/workforce-development/nice-framework/): Reconstruct a malicious attack or activity based off network traffic.
 
+## ⚠️ Large Files ⚠️
+This challenge includes large files as a separate download. Please download the large files [here](https://presidentscup.cisa.gov/files/pc5/individuala-round1-a-view-to-a-spill.zip). This package provides the webserver files in lieu of access to the webserver itself. Unnecessary video files were removed to reduce the overall size of the archive. The zipped file is ~300 MBs and the extracted file set is ~330 MBs.
+
 ## Background
 
 Flaws in the configuration of security cameras used ship-wide have been reported. One ship in the fleet noticed chain codes specific to it were compromised and used to forge transmissions to other ships and stations within the system. *The security team could not find evidence that credentials were exposed or used in the data leak, and that the security.merch.codes website is secure. Some other way of accessing the data must have been unintentionally left open **on the network**.*

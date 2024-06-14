@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 
-import os, pathlib, requests, itertools, base64,json, subprocess
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+import  requests
 
 def upload():
     install_path = '/home/user/Desktop/flask_app/app/main/main.py'

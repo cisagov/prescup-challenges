@@ -1,0 +1,112 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Administration{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<h2 class="title">Admin Page</h2>
+    <form method="POST" action="{{url_for('auth.admin')}}" class="inline">
+        <button type="submit" name="value" value="create" class="link-button">Create User</button>
+        <button type="submit" name="value" value="up" class="link-button">Update User</button>
+        <button type="submit" name="value" value="del" class="link-button">Delete User</button>
+    </form>
+
+
+{% if choice %}
+    <form method="POST" action="{{url_for('auth.admin')}}" enctype="multipart/form-data">
+    <fieldset>
+    {% if choice == "create"%}    
+        <legend align='center'>Create User</legend>
+        <table>
+            <tr class="bodypost">
+                <td align='left'><label>Full Name</label></td>
+                <td align='right'><input type='text' name='create_name' required></td>
+            </tr>
+            <tr class="bodypost">
+                <td align='left'><label>Username</label></td>
+                <td align='right'><input type='text' name='create_un' required></td>
+            </tr>
+            <tr class="bodypost">
+                <td align='left'><label>Email</label></td>
+                <td align='right'><input type='text' name='create_email' required></td>
+            </tr>
+            <tr class="bodypost">
+                <td align='left'><label>Password</label></td>
+                <td align='right'><input type='text' name='create_pwd' required></td>
+            </tr>
+            <tr class="bodypost">
+                <td align='left'><label>Role</label></td>
+                <td align='right'><input type='text' name='create_role' required></td>
+            </tr>
+        </table>
+    {% elif choice == "up"%}
+        {% if users %}
+        <table><tr class="bodypost">
+            <td align='left'><label>Select user to update:</label></td>
+            <td align='right'>
+                <select name = 'up_user' required>
+                    <option value="None" selected>None</option>
+                    {% for u in users %}
+                    <option name="{{u.name}}">{{u.name}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr></table>
+        {% else %}
+        <legend align='center'>Update User</legend>
+        <table>
+            <tr class="bodypost">
+                <td align='left'><label>User ID</label></td>
+                <td align='right'><input type='text' name='up_id' value="{{user.id}}" readonly></td>
+            </tr>
+            <tr class="bodypost">
+                <td align='left'><label>Full Name</label></td>
+                <td align='right'><input type='text' name='up_name' value="{{user.name}}" required></td>
+            </tr>
+            <tr class="bodypost">
+                <td align='left'><label>Username</label></td>
+                <td align='right'><input type='text' name='up_un' value="{{user.username}}" required></td>
+            </tr>
+            <tr class="bodypost">
+                <td align='left'><label>Email</label></td>
+                <td align='right'><input type='text' name='up_email' value="{{user.email}}" required></td>
+            </tr>
+            <tr class="bodypost">
+                <td align='left'><label>New Password</label></td>
+                <td align='right'><input type='text' name='up_pwd' value=""></td>
+            </tr>
+            <tr class="bodypost">
+                <td align='left'><label>Role</label></td>
+                <td align='right'><input type='text' name='up_role' value="{{user.role}}" required></td>
+            </tr>
+        </table>
+        {%endif%}
+    {% elif choice == "del"%}
+        <legend align='center'>Delete User</legend>
+            <table><tr class="bodypost">
+                <td align='left'><label>Select user to delete:</label></td>
+                <td align='right'>
+                    <select name = 'delete' required>
+                        <option value="None" selected>None</option>
+                        {% for u in users %}
+                        <option name="{{u.name}}">{{u.name}}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr></table>
+    {% endif %}
+    <input type="submit" name="{{choice}}" value="Submit">
+    </fieldset>
+    </form>
+    {% endif %}
+{% endblock %}
+
+

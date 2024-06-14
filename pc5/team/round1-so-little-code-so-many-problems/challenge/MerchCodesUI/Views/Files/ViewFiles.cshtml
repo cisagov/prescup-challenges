@@ -1,0 +1,32 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@model ViewFilesModel
+@{
+    ViewData["Title"] = "Files";
+}
+
+<h1>File Repository</h1>
+
+<div>
+    <a asp-area="" asp-controller="Files" asp-action="UploadFile">Upload Files</a>
+</div>
+
+<div style="margin-top: 20px;">
+@{
+    int count = 1;
+    foreach (string file in Model.FileNames)
+    {
+        <div style="margin-top:5px;">@(count). @(file)</div>
+        count++;
+    }
+}
+</div>
+
+
+
+

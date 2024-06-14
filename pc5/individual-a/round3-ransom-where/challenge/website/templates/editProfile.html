@@ -1,0 +1,52 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Edit Profile{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/editProfile.css') }}" />
+<!--<link rel="stylesheet" href="{{ url_for('static', filename='css/topStyle.css') }}" />-->
+{% endblock %}
+
+{% block content %}
+
+
+<div class="display">
+	<h2>Edit profile</h2>
+	<form action="/updateProfile" method="POST">
+		<table>
+			<tr><th style="text-align:left;">Email</th><td><input type="email" name="email" value={{profileData[1]}} readonly="readonly"></td></tr>
+			<tr><th style="text-align:left;">First Name:</th><td><input type="text" name="firstName" value={{profileData[2]}}></td></tr>
+			<tr><th style="text-align:left;">Last Name:</th><td><input type="text" name="lastName" value={{profileData[3]}}></td></tr>
+			<tr><th style="text-align:left;">Address Line 1:</th><td><input type="text" name="address1" value={{profileData[4]}}></td></tr>
+			<tr><th style="text-align:left;">Address Line 2:</th><td><input type="text" name="address2" value={{profileData[5]}}></td></tr>
+			<tr><th style="text-align:left;">Zipcode:</th><td><input type="text" name="zipcode" value={{profileData[6]}}></td></tr>
+			<tr><th style="text-align:left;">City:</th><td><input type="text" name="city" value={{profileData[7]}}></td></tr>
+			<tr><th style="text-align:left;">State:</th><td><input type="text" name="state" value={{profileData[8]}}></td></tr>
+			<tr><th style="text-align:left;">Country:</th><td><input type="text" name="country" value={{profileData[9]}}></td></tr>
+			<tr><th style="text-align:left;">Phone Number:</th><td><input type="text" name="phone" value={{profileData[10]}}></td></tr>
+		
+			<tr><th colspan="2"><input type="submit" value="save"></th></tr>
+		</table>
+	</form>
+</div>
+{% endblock %}
+<table>
+    <tr><th style="text-align:left;">Email</th><td><input type="email" name="email" value={{profileData[1]}} readonly="readonly"></td></tr>
+    <tr><th style="text-align:left;">First Name:</th><td><input type="text" name="firstName" value={{profileData[2]}}></td></tr>
+    <tr><th style="text-align:left;">Last Name:</th><td><input type="text" name="lastName" value={{profileData[3]}}></td></tr>
+    <tr><th style="text-align:left;">Address Line 1:</th><td><input type="text" name="address1" value={{profileData[4]}}></td></tr>
+    <tr><th style="text-align:left;">Address Line 2:</th><td><input type="text" name="address2" value={{profileData[5]}}></td></tr>
+    <tr><th style="text-align:left;">Zipcode:</th><td><input type="text" name="zipcode" value={{profileData[6]}}></td></tr>
+    <tr><th style="text-align:left;">City:</th><td><input type="text" name="city" value={{profileData[7]}}></td></tr>
+    <tr><th style="text-align:left;">State:</th><td><input type="text" name="state" value={{profileData[8]}}></td></tr>
+    <tr><th style="text-align:left;">Country:</th><td><input type="text" name="country" value={{profileData[9]}}></td></tr>
+    <tr><th style="text-align:left;">Phone Number:</th><td><input type="text" name="phone" value={{profileData[10]}}></td></tr>
+
+    <tr><th colspan="2"><input type="submit" value="save"></th></tr>
+</table>

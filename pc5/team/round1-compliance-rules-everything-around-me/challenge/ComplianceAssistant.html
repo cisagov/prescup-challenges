@@ -1,0 +1,112 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Compliance Assistant</h1>
+<h4>To comply with the first half of the Security Posture Password Management control, default service/application passwords 
+must be changed to unique, more complex passwords. Every time you change a password from a service/application, make sure to enter 
+that new password in the field below to evaluate its complexity and uniqueness (make sure to select the service/application from the dropdown as well). 
+Once all necessary passwords are updated and submitted, a token will be provided. This assistant will also make sure other controls are also compliant
+and provide you tokens upon success.</h4>
+
+<h3>Notes:</h3>
+    <ul>
+        <li>When you click the Submit button, the Compliance Assistant will start checking your environment.</li>
+        <li>Only Checks 1 and 2 are divided into two parts each. </li>
+        <li>Passing the first part will give you the first half of the token. Passing the second part will give you the second half of the token.</li>
+        <li>You will need to pass both parts to obtain the full token. You can concatenate both half tokens to obtain the full token.</li>
+    </ul>
+
+<h4>Check 5</h4>
+    <ul>
+        <li>Check 5 is a special case. In order to trigger Check 5, you will need to select FINAL_TOKEN from dropdown <b>*AND*</b> also type the string "FINAL_TOKEN" into the text field and click Submit.</li>
+        <li>This check will take approximately 2 minutes to complete.</li>
+        <li>This will perform an environment check by redeploying all the kubernetes applications, waiting for them to come back up, and then trying to log in to all services again with your new provided passwords.</li>
+        <li>If this check fails, it will be because one of the following reasons:</li>
+        <ol>
+            <li>Your team did not pass Check 1 and Check 2.</li>
+            <li>Your team did not correctly updated the manifests with the new unique and complex passwords.</li>
+            <li>Your team made changes to the manifest that resulted in an error booting up a service.</li>
+        </ol>
+        <li>In all those scenarios, check the pods logs to make sure your environment is good to go.</li>
+        <li><b>Important:</b> <u>If Check 5 fails, you will need to provide all passwords again to the Compliance Assistant once you fix the problem/s BEFORE entering FINAL_TOKEN again. Otherwise, it will fail.</u> </li>
+        <ul>
+            <li>In other words, Check 1 and Check 2 must be CURRENTLY providing/showing you the token in order for Check 5 to pass.</li>
+        </ul>
+    </ul>
+
+
+<form method="POST" enctype="multipart/form-data" action="/grade">
+    
+        <h3>Check 1: Token 1 First Half - Password Management: Unique and Complex Passwords</h3>
+        <select name="GradingCheck1_dropdown">
+            <option value="postgres">postgres</option>
+            <option value="mattermost">mattermost</option>
+            <option value="pgadmin">pgadmin</option>
+            <!-- <option value="pfsense">pfsense</option> -->
+            <option value="keycloak">keycloak</option>
+            <option value="FINAL_TOKEN">FINAL_TOKEN</option>
+            <!-- Add more options as needed -->
+        </select>
+        <input type="text" name="GradingCheck1_input">
+    
+    <input type="submit" value="Submit"> 
+</form>
+<br>
+<br>
+<div class='center'>
+    <p>If this challenge has files to download, you can access them <a href="/files">here</a> </p>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

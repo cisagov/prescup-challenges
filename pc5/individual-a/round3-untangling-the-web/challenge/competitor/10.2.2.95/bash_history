@@ -1,0 +1,7 @@
+scp louie@10.1.1.79:/home/louie/splitter.sh /home/louie/
+mv splitter.sh .splitter.sh
+ssh olimar@10.1.1.123
+scp minipik-counts.zip louie@10.1.1.79:/home/louie/
+srm minipik-counts.zip 
+ls
+exit

@@ -1,0 +1,23 @@
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+[package]
+name = "api"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.70"
+axum = "0.6.15"
+axum-macros = "0.3.7"
+dotenvy = "0.15.7"
+serde = "1.0.160"
+serde_with = { version = "2.3.2", features = ["time_0_3"] }
+sqlx = { version = "0.6.3", features = ["runtime-tokio-native-tls", "postgres", "tls", "migrate"] }
+thiserror = "1.0.40"
+tokio = { version = "1.27.0", features = ["macros", "rt-multi-thread"] }
+tracing-subscriber = "0.3.17"
+validator = { version = "0.16.0", features = ["derive"] }

@@ -1,0 +1,52 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Welcome{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+
+
+<div style="font-size:20px;">
+	<ul class="category">
+		<li><a style="pointer-events: none;">Categories:</a></li>
+
+		{% for row in categoryData %}
+		<li><a href="/displayCategory?categoryId={{row[0]}}">{{row[1]}}</a></li>
+		{% endfor %}
+	</ul>
+</div>
+
+<div style="padding:20px;">
+<table class="products">
+	<thead>
+		<tr>
+			<th style="column-width: 25%;">Product</th>
+			<th style="column-width: 25%;">price</th>
+			<th style="column-width: 25%;">Image</th>
+			<th style="column-width: 25%;"></th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for data in itemData %}
+			{% for row in data %}
+				<tr>
+					<td class="info">{{row[1]}}</td>
+					<td class="info">{{row[2]}}</td>
+					<td class="info"><img src="{{ url_for('static', filename='uploads/' + row[4]) }}" class="itemimage" /></td>
+					<td class="info"><a href="/addToCart?productId={{row[0]}}">Add To Cart</a></td>
+				</tr>
+			{% endfor %}
+		{% endfor %}
+	</tbody>
+</table>
+</div>
+
+{% endblock %}

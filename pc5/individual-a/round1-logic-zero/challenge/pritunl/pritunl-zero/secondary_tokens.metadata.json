@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"pritunl-zero.secondary_tokens"},{"v":2,"key":{"timestamp":1},"name":"timestamp_1","ns":"pritunl-zero.secondary_tokens","background":true,"expireAfterSeconds":180}],"uuid":"33474860f7ba4cd08302c98c5b8e3f26"}

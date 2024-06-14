@@ -47,18 +47,6 @@ For each task or question, think about which Kibana dashboards and data logs can
 
     **Part 4: b.)** How many total Suricata log events (not unique types) match the Suricata alert signature IDs attributed to scans used by the threat actor in the scan report based on the activities observed on January 10th, 2023? Your answer should be in the hundreds.
 
-## System Tools and Credentials
-
-| system | OS type | username | password |
-|--------|---------|----------|--------|
-| Buzz | Kali | user | tartans|
-| T-Pot (OS) | Debian | tsec | tartans |
-| T-Pot web tools |  `https://10.7.7.200:64297/` | web-user | tartans |
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (`10.5.5.5` or `64.100.100.102`) is forbidden. You may only use the provided webpage to view challenge progress and download any challenge artifacts that are provided.
-
 ## Challenge Questions
 
 1. Which threat actor was responsible for breaching and then attempting to use a set of credentials that is present in your organization via SSH, Telnet, and FTP services on January 11th (UTC), 2024?

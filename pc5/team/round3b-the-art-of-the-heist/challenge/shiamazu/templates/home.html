@@ -1,0 +1,53 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head></head>
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='home.css')}}">
+<body>
+    <table>
+        <tr>
+            <th class="title" colspan="4">Mr. Shiamazu's Vault Pin Service</th>
+        </tr>
+        <tr class="top">
+            <th class="row" style="width:10%;">Function</th>
+            <th style="width:30%;">Description</th>
+            <th style="width:30%;">Post request JSON syntax</th>
+            <th style="width:30%;">Response</th>
+        </tr>
+        <tr>
+            <td class="row">Verify PIN</td>
+            <td class="row">Used to verify four (4) character hex PIN against stored PIN for specific user.<br>Currently used by the Vault.</td>
+            <td class="row">
+                <div class="json-container"><pre>
+                {
+                    "function":"verify",
+                    "username":**USERNAME**,
+                    "pin":**PIN_TO_CHECK**
+                }
+                </pre></div></td>
+            <td class="row">Returns "Success" if correct;<br>"Failure" if incorrect;<br>or JSON if issue occured during request.</td>
+        </tr>
+        <tr>
+            <td class="row">Create a PIN for new user</td>
+            <td class="row">Used by authenticated users.<br>Requires an existing users username and PIN to complete the process.</td>
+            <td class="row">
+                <div class="json-container"><pre>
+                {
+                    "function":"create",
+                    "auth_username":**AUTH_USERNAME**,
+                    "auth_pin":**AUTH_PIN**,
+                    "new_user_username":**NEW_USER_USERNAME**
+                }
+                </pre></div></td>
+            <td class="row">Return new users PIN if correct;<br>"Failure" if authentication fails;<br>or JSON if issue occured during request.</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,97 @@
+/*
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*/
+
+#inbox-container {
+    width: 600px;
+    height: auto;
+    border: 1px solid #ccc;
+    overflow-y: hidden;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.conversation {
+    padding: 20px 10px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.conversation:hover {
+    background-color: rgb(179, 124, 62);
+}
+
+/* style.css */
+
+#conversation-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#messages {
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    background-color: rgb(228, 209, 189);
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.sent {
+    background-color: #daf1da;
+}
+
+.received {
+    background-color: #f1f1da;
+}
+
+#message-form {
+    gap: 10px;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    width:75%;
+    font-size: 16px;
+}
+
+#msgbtn {
+    padding: 5px 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#msgbtn:hover {
+    background-color: #45a049;
+}
+
+.msg_un {
+    text-align: center;
+    width: 10%;
+}
+
+.msg_content {
+    width:80%;
+}
+
+.msg_time {
+    font-size: 12px;
+}

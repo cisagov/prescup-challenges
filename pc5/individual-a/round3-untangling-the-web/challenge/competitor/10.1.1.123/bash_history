@@ -1,0 +1,6 @@
+scp louie@10.2.2.95:/home/louie/.splitter.sh /home/olimar/
+sudo sh .splitter.sh minipik-counts.zip 
+scp minipik-counts.zip louie@10.2.2.95:/home/louie/
+srm .splitter.sh 
+srm minipik-counts.zip 
+exit

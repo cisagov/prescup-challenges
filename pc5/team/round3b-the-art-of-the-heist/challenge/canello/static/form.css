@@ -1,0 +1,125 @@
+/*
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*/
+
+body,
+.signin {
+  /*background-color: #d3d3d3;
+  color: #fff;*/
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight:bold;
+}
+
+.login {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  padding: 60px 60px;
+  background-color: rgb(140, 171, 211);
+  background-size: cover;
+  box-shadow: 0px 30px 60px -5px #000;
+}
+
+form {
+  padding-top: 80px;
+}
+
+h2::after {
+  content:"";
+  position:absolute;
+  margin:0 auto;
+  width:20%;
+  padding-top:30px;
+  border-bottom: 2px solid #1161ed;
+}
+
+h2 {
+  margin:0;
+  justify-content: center;
+  align-items:center;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+}
+
+h2:first-child {
+  padding-left: 0px;
+}
+
+span.form {
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0.8; 
+  display: inline-block;
+  position: relative;
+  top: -65px;
+  transition: all 0.5s ease-in-out;
+}
+
+.text {
+  border: none;
+  width: 89%;
+  padding: 10px 20px;
+  display: block;
+  height: 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0);
+  overflow: hidden;
+  margin-top: 15px;
+  transition: all 0.5s ease-in-out;
+}
+
+.text:focus {
+  outline: 0;
+  border: 2px solid black;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0);
+}
+
+input[type="text"],
+input[type="password"] {
+  color: black;
+}
+
+input {
+  display: inline-block;
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+
+label {
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.signin {
+  background-color: #1161ed;
+  color: #FFF;
+  width: 100%;
+  padding: 10px 20px;
+  display: block;
+  height: 39px;
+  border-radius: 20px;
+  margin-top: 30px;
+  transition: all 0.3s ease, color 0.3s ease;
+  border: none;
+  text-transform: uppercase;
+}
+
+.signin:hover {
+  background: #4082f5;
+  cursor: pointer;
+}
+
+.signin:focus {
+  outline: none;
+}

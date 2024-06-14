@@ -1,0 +1,63 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+    <title>Messages Inbox</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('social.static',filename='message.css')}}">
+{% endblock %}
+
+{% block content %}
+
+
+{% if empty == True %}
+    <br><h3>Zero Conversations Found</h3>
+{% elif convo_list %}
+    <span id="title" style="padding-top:40px; padding-bottom: 40px;;">
+        My Conversations
+    </span>
+    <fieldset id="inbox-container min-top-padding">
+        {% for convo in convo_list %}
+            <div class="conversation" data-url="{{ url_for('social.messages',cid=convo['conversation_id']) }}" data-conversation-id="{{convo['conversation_id']}}" other="{{convo['other_participant']}}">Conversation with {{convo['other_participant']}}</div>
+        {% endfor %}
+    </fieldset>
+    <script src="{{url_for('main.fetch_js',js='message.js')}}"></script>
+{% elif msgs %}
+    <span id="title" style="padding-top:40px; padding-bottom: 40px;;">
+        Conversation With {{other_user}}
+    </span>
+    {% if msgs == None %}
+        <h3>Zero Messages Present</h3>
+    {% else %}
+    <div id="conversation-container">
+        <div id="messages">
+            <table style="width:600px;">
+            {% for msg in msgs %}
+                {% if msg['me'] %}
+                    <tr>
+                        <td class="msg_un"><div class="message">{{msg['sender_un']}}</div></td>
+                        <td class="msg_content"><div class="message sent">{{msg['content']}}</div></td>
+                        <td class="msg_time"><div class="message">{{msg['sent_time']}}</div></td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td class="msg_un">{{msg['sender_un']}}</td>
+                        <td class="msg_content"><div class="message received">{{msg['content']}}</div></td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+            </table>
+        </div>
+        <form id="message-form" method="POST" action="{{url_for('social.messages',cid=cid)}}">
+            <input type="text" id="message-input" name="msg" placeholder="Type a message...">
+            <button id='msgbtn' type="submit">Send</button>
+        </form>
+    </div>
+    {% endif %}
+{% endif %}
+{% endblock %}

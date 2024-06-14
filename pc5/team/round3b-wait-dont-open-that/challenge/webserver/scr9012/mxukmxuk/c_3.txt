@@ -1,0 +1,7 @@
+Dim lowerbound As Integer
+lowerbound = 1
+Dim upperbound As Integer
+upperbound = 9999
+Dim ret As Integer
+ret = Int((upperbound - lowerbound + 1) * Rnd + lowerbound)
+MsgBox "Random seed value: " & ret

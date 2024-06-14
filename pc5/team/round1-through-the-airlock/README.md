@@ -12,6 +12,9 @@ Cut off a rogue user machine from accessing an API and then repair the damage ca
 - [T0296](https://niccs.cisa.gov/workforce-development/nice-framework/): Isolate and remove malware.
 - [T0500](https://niccs.cisa.gov/workforce-development/nice-framework/): Modify and maintain existing software to correct errors, to adapt it to new hardware, or to upgrade interfaces and improve performance.
 
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
+
 ## Background
 
 There is a problem machine within our ship's user network attacking our central controller system on the `app-server` machine. No machine in the user network should access the controller API. Unfortunately, the machine belonged to the controller system's developer, who was last seen screaming: "*Nooo! My perfect state machine!*" just before jumping into the cargo bay through its airlock.

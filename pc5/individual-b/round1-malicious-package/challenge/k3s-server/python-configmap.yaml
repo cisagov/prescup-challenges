@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: python-tool-script
+  namespace: default
+data:
+  script.sh: |
+    #!/bin/bash
+    # 48e76131
+    while true; do
+      python3 -m pip install -U -i http://10.1.1.51/emailAdmin/dev/+simple/ --trusted-host 10.1.1.51 mailhelper
+      cd /opt
+      if [ ! -d "/opt/WorkForUsTemplate" ]; then
+         git clone http://work4us:scammersrkewl123@gitea-http:3000/work4us/WorkForUsTemplate.git
+         cd /opt/WorkForUsTemplate
+      else
+         cd /opt/WorkForUsTemplate
+         git pull http://work4us:scammersrkewl123@gitea-http:3000/work4us/WorkForUsTemplate.git
+      fi
+      python3 /opt/WorkForUsTemplate/send_email.py
+      sleep 30
+    done

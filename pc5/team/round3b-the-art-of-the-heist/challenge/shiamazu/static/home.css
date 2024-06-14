@@ -1,0 +1,54 @@
+/*
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*/
+
+/************** Basic layout **************/
+body {
+    background: lightgray;
+    text-align: center;
+    /*font: 400 14px "Calibri", "Arial";
+    padding: 20px;
+    font-size: 18px;*/
+}
+
+table {
+    /*font-family: 400 10px "Sans-serif","Helvetica";*/
+    border-collapse: collapse;
+    border: 2px solid black;
+    background: rgb(145, 143, 143);
+    overflow: hidden;
+    max-width: 80%;
+    width:100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+table * {
+    position:relative;
+}
+
+.title {
+    font-size: 20px;
+    padding-top:20px;
+    padding-bottom:40px;
+}
+
+.row {
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+.top {
+    border-bottom: 2px solid black;
+    padding-bottom: 30px;
+}
+
+.json-container {
+    text-align:left;
+}
+
+pre {
+    white-space: pre-wrap;
+}

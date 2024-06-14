@@ -1,0 +1,87 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keycloak
+  labels:
+    app: keycloak
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: keycloak
+  template:
+    metadata:
+      labels:
+        app: keycloak
+    spec:
+      containers:
+      - name: keycloak
+        image: registry.merch.codes:5000/keycloak:20.0.5
+        volumeMounts:
+        - name: tls
+          mountPath: "/etc/certs/"
+          subPath: keycloak-conf/certs/
+        - name: keycloak-truststore
+          mountPath: "/etc/ssl/certs/"
+        args: ["start"]
+        env:
+        - name: KEYCLOAK_ADMIN
+          value: 'superadmin'
+        - name: KEYCLOAK_ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: keycloak-secret
+              key: KEYCLOAK_ADMIN_PASSWORD
+        - name: KC_PROXY
+          value: 'edge'
+        - name: KC_HOSTNAME
+          value: keycloak.merch.codes
+        - name: KC_HOSTNAME_STRICT_HTTPS
+          value: 'true'
+        - name: KC_HTTPS_CERTIFICATE_FILE
+          value: '/etc/certs/root-ca.crt'
+        - name: KC_HTTPS_CERTIFICATE_KEY_FILE
+          value: '/etc/certs/merch-codes-key.key'
+        - name: KC_LOG_LEVEL
+          value: 'INFO'
+        - name: KC_DB
+          value: 'postgres'
+        - name: KC_DB_URL
+          value: 'jdbc:postgresql://10.3.3.10:30432/keycloak_db'
+        - name: KC_DB_USERNAME
+          value: 'root'
+        - name: KC_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secret
+              key: postgres-root-password
+        - name: KC_TRANSACTION_XA_ENABLED
+          value: 'true'
+        - name: KC_HEALTH_ENABLED
+          value: 'true'
+        - name: KC_METRICS_ENABLED
+          value: 'true'
+        - name: TRUSTSTORE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: keycloak-secret
+              key: TRUSTSTORE_PASSWORD
+        - name: JAVA_OPTS
+          value: "-Djavax.net.ssl.trustStore=/etc/ssl/certs/keycloak-truststore.jks -Djavax.net.ssl.trustStorePassword=$(TRUSTSTORE_PASSWORD)"
+        ports:
+        - name: http
+          containerPort: 8080
+        readinessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /realms/master
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 1
+      volumes:
+      - name: tls
+        persistentVolumeClaim:
+          claimName: appdata-pvc
+      - name: keycloak-truststore
+        secret:
+          secretName: keycloak-truststore

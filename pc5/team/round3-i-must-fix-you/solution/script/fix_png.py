@@ -1,3 +1,8 @@
+
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
 #!/usr/img/python3
 
 import zlib, os, sys, subprocess
@@ -45,3 +50,4 @@ def read_files():
 
 if __name__ == "__main__":
     read_files()
+

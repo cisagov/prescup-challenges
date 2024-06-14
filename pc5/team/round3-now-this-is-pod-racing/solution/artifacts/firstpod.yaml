@@ -1,267 +1,267 @@
-1   apiVersion: v1
-2   kind: Pod
-3   metadata:
-4     annotations:
-5       kubectl.kubernetes.io/last-applied-configuration: |
-6         {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"name":"firstpod","namespace":"landingspace"},"spec":{"containers":[{"args":["-c","while true; do echo Flag: $(landingspace); sleep 30; done"],"command":["/bin/bash"],"env":[{"name":"landingspace","valueFrom":{"configMapKeyRef":{"key":"landingspace-flag","name":"landingspace-configs"}}}],"image":"registry.merch.codes:5000/landingspace:latest","imagePullPolicy":"Always","name":"firstpod","volumeMounts":[{"mountPath":"/opt/secondspace","name":"landingspace-config-volume"},{"mountPath":"/opt/secondspace-deployments","name":"secondspace-deployments-volume"},{"mountPath":"/opt/secondspace-services","name":"secondspace-services-volume"},{"mountPath":"/opt/secondspace-ingresses","name":"secondspace-ingresses-volume"}]}],"restartPolicy":"Always","volumes":[{"configMap":{"defaultMode":420,"items":[{"key":"secondspace.kubeconfig","path":"secondspace.kubeconfig"}],"name":"landingspace-configs"},"name":"landingspace-config-volume"},{"configMap":{"defaultMode":420,"name":"secondspace-deployments"},"name":"secondspace-deployments-volume"},{"configMap":{"defaultMode":420,"name":"secondspace-services"},"name":"secondspace-services-volume"},{"configMap":{"defaultMode":420,"name":"secondspace-ingresses"},"name":"secondspace-ingresses-volume"}]}}
-7     creationTimestamp: "2024-02-19T19:20:58Z"
-8     managedFields:
-9     - apiVersion: v1
-10       fieldsType: FieldsV1
-11       fieldsV1:
-12         f:metadata:
-13           f:annotations:
-14             .: {}
-15             f:kubectl.kubernetes.io/last-applied-configuration: {}
-16         f:spec:
-17           f:containers:
-18             k:{"name":"firstpod"}:
-19               .: {}
-20               f:args: {}
-21               f:command: {}
-22               f:env:
-23                 .: {}
-24                 k:{"name":"landingspace"}:
-25                   .: {}
-26                   f:name: {}
-27                   f:valueFrom:
-28                     .: {}
-29                     f:configMapKeyRef: {}
-30               f:image: {}
-31               f:imagePullPolicy: {}
-32               f:name: {}
-33               f:resources: {}
-34               f:terminationMessagePath: {}
-35               f:terminationMessagePolicy: {}
-36               f:volumeMounts:
-37                 .: {}
-38                 k:{"mountPath":"/opt/secondspace"}:
-39                   .: {}
-40                   f:mountPath: {}
-41                   f:name: {}
-42                 k:{"mountPath":"/opt/secondspace-deployments"}:
-43                   .: {}
-44                   f:mountPath: {}
-45                   f:name: {}
-46                 k:{"mountPath":"/opt/secondspace-ingresses"}:
-47                   .: {}
-48                   f:mountPath: {}
-49                   f:name: {}
-50                 k:{"mountPath":"/opt/secondspace-services"}:
-51                   .: {}
-52                   f:mountPath: {}
-53                   f:name: {}
-54           f:dnsPolicy: {}
-55           f:enableServiceLinks: {}
-56           f:restartPolicy: {}
-57           f:schedulerName: {}
-58           f:securityContext: {}
-59           f:terminationGracePeriodSeconds: {}
-60           f:volumes:
-61             .: {}
-62             k:{"name":"landingspace-config-volume"}:
-63               .: {}
-64               f:configMap:
-65                 .: {}
-66                 f:defaultMode: {}
-67                 f:items: {}
-68                 f:name: {}
-69               f:name: {}
-70             k:{"name":"secondspace-deployments-volume"}:
-71               .: {}
-72               f:configMap:
-73                 .: {}
-74                 f:defaultMode: {}
-75                 f:name: {}
-76               f:name: {}
-77             k:{"name":"secondspace-ingresses-volume"}:
-78               .: {}
-79               f:configMap:
-80                 .: {}
-81                 f:defaultMode: {}
-82                 f:name: {}
-83               f:name: {}
-84             k:{"name":"secondspace-services-volume"}:
-85               .: {}
-86               f:configMap:
-87                 .: {}
-88                 f:defaultMode: {}
-89                 f:name: {}
-90               f:name: {}
-91       manager: kubectl-client-side-apply
-92       operation: Update
-93       time: "2024-02-19T19:20:58Z"
-94     - apiVersion: v1
-95       fieldsType: FieldsV1
-96       fieldsV1:
-97         f:status:
-98           f:conditions:
-99             k:{"type":"ContainersReady"}:
-100               .: {}
-101               f:lastProbeTime: {}
-102               f:lastTransitionTime: {}
-103               f:message: {}
-104               f:reason: {}
-105               f:status: {}
-106               f:type: {}
-107             k:{"type":"Initialized"}:
-108               .: {}
-109               f:lastProbeTime: {}
-110               f:lastTransitionTime: {}
-111               f:status: {}
-112               f:type: {}
-113             k:{"type":"Ready"}:
-114               .: {}
-115               f:lastProbeTime: {}
-116               f:lastTransitionTime: {}
-117               f:message: {}
-118               f:reason: {}
-119               f:status: {}
-120               f:type: {}
-121           f:containerStatuses: {}
-122           f:hostIP: {}
-123           f:podIP: {}
-124           f:podIPs:
-125             .: {}
-126             k:{"ip":"10.42.1.7"}:
-127               .: {}
-128               f:ip: {}
-129           f:startTime: {}
-130       manager: k3s
-131       operation: Update
-132       subresource: status
-133       time: "2024-02-19T19:22:01Z"
-134     name: firstpod
-135     namespace: landingspace
-136     resourceVersion: "1820835"
-137     uid: 49db1ddf-419d-4dfe-9b12-bcb9793956da
-138   spec:
-139     containers:
-140     - args:
-141       - -c
-142       - while true; do echo Flag: $(landingspace); sleep 30; done
-143       command:
-144       - /bin/bash
-145       env:
-146       - name: landingspace
-147         valueFrom:
-148           configMapKeyRef:
-149             key: landingspace-flag
-150             name: landingspace-configs
-151       image: registry.merch.codes:5000/landingspace:latest
-152       imagePullPolicy: Always
-153       name: firstpod
-154       resources: {}
-155       terminationMessagePath: /dev/termination-log
-156       terminationMessagePolicy: File
-157       volumeMounts:
-158       - mountPath: /opt/secondspace
-159         name: landingspace-config-volume
-160       - mountPath: /opt/secondspace-deployments
-161         name: secondspace-deployments-volume
-162       - mountPath: /opt/secondspace-services
-163         name: secondspace-services-volume
-164       - mountPath: /opt/secondspace-ingresses
-165         name: secondspace-ingresses-volume
-166       - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-167         name: kube-api-access-d9lqt
-168         readOnly: true
-169     dnsPolicy: ClusterFirst
-170     enableServiceLinks: true
-171     nodeName: k3s-server
-172     preemptionPolicy: PreemptLowerPriority
-173     priority: 0
-174     restartPolicy: Always
-175     schedulerName: default-scheduler
-176     securityContext: {}
-177     serviceAccount: default
-178     serviceAccountName: default
-179     terminationGracePeriodSeconds: 30
-180     tolerations:
-181     - effect: NoExecute
-182       key: node.kubernetes.io/not-ready
-183       operator: Exists
-184       tolerationSeconds: 300
-185     - effect: NoExecute
-186       key: node.kubernetes.io/unreachable
-187       operator: Exists
-188       tolerationSeconds: 300
-189     volumes:
-190     - configMap:
-191         defaultMode: 420
-192         items:
-193         - key: secondspace.kubeconfig
-194           path: secondspace.kubeconfig
-195         name: landingspace-configs
-196       name: landingspace-config-volume
-197     - configMap:
-198         defaultMode: 420
-199         name: secondspace-deployments
-200       name: secondspace-deployments-volume
-201     - configMap:
-202         defaultMode: 420
-203         name: secondspace-services
-204       name: secondspace-services-volume
-205     - configMap:
-206         defaultMode: 420
-207         name: secondspace-ingresses
-208       name: secondspace-ingresses-volume
-209     - name: kube-api-access-d9lqt
-210       projected:
-211         defaultMode: 420
-212         sources:
-213         - serviceAccountToken:
-214             expirationSeconds: 3607
-215             path: token
-216         - configMap:
-217             items:
-218             - key: ca.crt
-219               path: ca.crt
-220             name: kube-root-ca.crt
-221         - downwardAPI:
-222             items:
-223             - fieldRef:
-224                 apiVersion: v1
-225                 fieldPath: metadata.namespace
-226               path: namespace
-227   status:
-228     conditions:
-229     - lastProbeTime: null
-230       lastTransitionTime: "2024-02-19T19:20:58Z"
-231       status: "True"
-232       type: Initialized
-233     - lastProbeTime: null
-234       lastTransitionTime: "2024-02-19T19:20:58Z"
-235       message: 'containers with unready status: [firstpod]'
-236       reason: ContainersNotReady
-237       status: "False"
-238       type: Ready
-239     - lastProbeTime: null
-240       lastTransitionTime: "2024-02-19T19:20:58Z"
-241       message: 'containers with unready status: [firstpod]'
-242       reason: ContainersNotReady
-243       status: "False"
-244       type: ContainersReady
-245     - lastProbeTime: null
-246       lastTransitionTime: "2024-02-19T19:20:58Z"
-247       status: "True"
-248       type: PodScheduled
-249     containerStatuses:
-250     - image: registry.merch.codes:5000/landingspace:latest
-251       imageID: ""
-252       lastState: {}
-253       name: firstpod
-254       ready: false
-255       restartCount: 0
-256       started: false
-257       state:
-258         waiting:
-259           message: Back-off pulling image "registry.merch.codes:5000/landingspace:latest"
-260           reason: ImagePullBackOff
-261     hostIP: 10.3.3.10
-262     phase: Pending
-263     podIP: 10.42.1.7
-264     podIPs:
-265     - ip: 10.42.1.7
-266     qosClass: BestEffort
-267     startTime: "2024-02-19T19:20:58Z"
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"name":"firstpod","namespace":"landingspace"},"spec":{"containers":[{"args":["-c","while true; do echo Flag: $(landingspace); sleep 30; done"],"command":["/bin/bash"],"env":[{"name":"landingspace","valueFrom":{"configMapKeyRef":{"key":"landingspace-flag","name":"landingspace-configs"}}}],"image":"registry.merch.codes:5000/landingspace:latest","imagePullPolicy":"Always","name":"firstpod","volumeMounts":[{"mountPath":"/opt/secondspace","name":"landingspace-config-volume"},{"mountPath":"/opt/secondspace-deployments","name":"secondspace-deployments-volume"},{"mountPath":"/opt/secondspace-services","name":"secondspace-services-volume"},{"mountPath":"/opt/secondspace-ingresses","name":"secondspace-ingresses-volume"}]}],"restartPolicy":"Always","volumes":[{"configMap":{"defaultMode":420,"items":[{"key":"secondspace.kubeconfig","path":"secondspace.kubeconfig"}],"name":"landingspace-configs"},"name":"landingspace-config-volume"},{"configMap":{"defaultMode":420,"name":"secondspace-deployments"},"name":"secondspace-deployments-volume"},{"configMap":{"defaultMode":420,"name":"secondspace-services"},"name":"secondspace-services-volume"},{"configMap":{"defaultMode":420,"name":"secondspace-ingresses"},"name":"secondspace-ingresses-volume"}]}}
+  creationTimestamp: "2024-02-19T19:20:58Z"
+  managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          f:containers:
+            k:{"name":"firstpod"}:
+              .: {}
+              f:args: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"landingspace"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:configMapKeyRef: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/opt/secondspace"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/opt/secondspace-deployments"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/opt/secondspace-ingresses"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/opt/secondspace-services"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+          f:volumes:
+            .: {}
+            k:{"name":"landingspace-config-volume"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+                f:name: {}
+              f:name: {}
+            k:{"name":"secondspace-deployments-volume"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:name: {}
+              f:name: {}
+            k:{"name":"secondspace-ingresses-volume"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:name: {}
+              f:name: {}
+            k:{"name":"secondspace-services-volume"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:name: {}
+              f:name: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2024-02-19T19:20:58Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.42.1.7"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: k3s
+      operation: Update
+      subresource: status
+      time: "2024-02-19T19:22:01Z"
+  name: firstpod
+  namespace: landingspace
+  resourceVersion: "1820835"
+  uid: 49db1ddf-419d-4dfe-9b12-bcb9793956da
+spec:
+  containers:
+    - args:
+        - -c
+        - while true; do echo Flag: $(landingspace); sleep 30; done
+      command:
+        - /bin/bash
+      env:
+        - name: landingspace
+          valueFrom:
+            configMapKeyRef:
+              key: landingspace-flag
+              name: landingspace-configs
+      image: registry.merch.codes:5000/landingspace:latest
+      imagePullPolicy: Always
+      name: firstpod
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+        - mountPath: /opt/secondspace
+          name: landingspace-config-volume
+        - mountPath: /opt/secondspace-deployments
+          name: secondspace-deployments-volume
+        - mountPath: /opt/secondspace-services
+          name: secondspace-services-volume
+        - mountPath: /opt/secondspace-ingresses
+          name: secondspace-ingresses-volume
+        - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+          name: kube-api-access-d9lqt
+          readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: k3s-server
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+  volumes:
+    - configMap:
+        defaultMode: 420
+        items:
+          - key: secondspace.kubeconfig
+            path: secondspace.kubeconfig
+        name: landingspace-configs
+      name: landingspace-config-volume
+    - configMap:
+        defaultMode: 420
+        name: secondspace-deployments
+      name: secondspace-deployments-volume
+    - configMap:
+        defaultMode: 420
+        name: secondspace-services
+      name: secondspace-services-volume
+    - configMap:
+        defaultMode: 420
+        name: secondspace-ingresses
+      name: secondspace-ingresses-volume
+    - name: kube-api-access-d9lqt
+      projected:
+        defaultMode: 420
+        sources:
+          - serviceAccountToken:
+              expirationSeconds: 3607
+              path: token
+          - configMap:
+              items:
+                - key: ca.crt
+                  path: ca.crt
+              name: kube-root-ca.crt
+          - downwardAPI:
+              items:
+                - fieldRef:
+                    apiVersion: v1
+                    fieldPath: metadata.namespace
+                  path: namespace
+status:
+  conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-19T19:20:58Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-19T19:20:58Z"
+      message: "containers with unready status: [firstpod]"
+      reason: ContainersNotReady
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-19T19:20:58Z"
+      message: "containers with unready status: [firstpod]"
+      reason: ContainersNotReady
+      status: "False"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-19T19:20:58Z"
+      status: "True"
+      type: PodScheduled
+  containerStatuses:
+    - image: registry.merch.codes:5000/landingspace:latest
+      imageID: ""
+      lastState: {}
+      name: firstpod
+      ready: false
+      restartCount: 0
+      started: false
+      state:
+        waiting:
+          message: Back-off pulling image "registry.merch.codes:5000/landingspace:latest"
+          reason: ImagePullBackOff
+  hostIP: 10.3.3.10
+  phase: Pending
+  podIP: 10.42.1.7
+  podIPs:
+    - ip: 10.42.1.7
+  qosClass: BestEffort
+  startTime: "2024-02-19T19:20:58Z"

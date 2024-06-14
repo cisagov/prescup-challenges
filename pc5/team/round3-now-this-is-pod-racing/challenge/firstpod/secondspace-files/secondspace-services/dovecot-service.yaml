@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dovecot-service
+  labels:
+    service: dovecot
+spec:
+  type: ClusterIP
+  ports:
+  - port: 143
+    targetPort: 143
+    protocol: TCP
+    name: imap
+  - port: 24
+    targetPort: 24
+    protocol: TCP
+    name: lmtp
+  - port: 12345
+    targetPort: 12345
+    protocol: TCP
+    name: auth
+  - port: 22
+    targetPort: 22
+    name: ssh
+  selector:
+    service: dovecot
+

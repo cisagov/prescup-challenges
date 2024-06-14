@@ -10,6 +10,9 @@ Scan and fix the network topology of *Daunted*, an Aurellian spaceship, so that 
 - [T0010](https://niccs.cisa.gov/workforce-development/nice-framework/): Analyze organization's cyber defense policies and configurations and evaluate compliance 
 - [T0142](https://niccs.cisa.gov/workforce-development/nice-framework/): Maintain knowledge of applicable cyber defense policies, regulations, and compliance documents specifically related to cyber defense auditing.
 
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.  
+
 ## Background
 
 Your team must identify and remediate security weaknesses in *Daunted*'s network, including: default application passwords, unauthorized open ports, firewall rules, and misconfigured files -- all the while ensuring that the network environment works.

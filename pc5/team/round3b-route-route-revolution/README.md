@@ -40,17 +40,6 @@ To successfully complete the two grading checks, you must:
 
 >Assume uniform transmission times between routes, and linear distance is not a factor due to technological advancements.
 
-## System Tools and Credentials
-
-| system | OS type | username | password |
-|--------|---------|----------|--------|
-| route-kali | Kali | user | tartans|
-| All Routers | VyOS | vyos | tartans |
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5 or 64.100.100.102) is forbidden. You may only use the provided webpage to view challenge progress and download any challenge artifacts that are provided.
-
 ## Challenge Questions
 
 1. Did you optimize the friendly network route?

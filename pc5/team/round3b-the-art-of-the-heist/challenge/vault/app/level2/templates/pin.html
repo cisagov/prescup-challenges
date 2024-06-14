@@ -1,0 +1,30 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Submit Pin{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<br><br><br>
+<div class="login">
+  <h2 class="l2">Submit Pin</h2>
+  <form method="POST" action="{{url_for('level2.submit_pin')}}">
+    <input type="text" class="text" name="pin" required>
+     <span class="form">Pin</span>
+    <br><br><br><br>
+    <button class="signin">
+      Submit
+    </button>
+  </form>
+</div>
+{% endblock %}
+
+
+

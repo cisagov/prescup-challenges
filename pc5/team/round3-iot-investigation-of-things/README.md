@@ -17,6 +17,8 @@ An operations center full of "Internet of Things" (IoT) devices has reported ano
 - [T0259](https://niccs.cisa.gov/workforce-development/nice-framework): Use cyber defense tools for continual monitoring and analysis of system activity to identify malicious activity.
 - [T0291](https://niccs.cisa.gov/workforce-development/nice-framework): Examine network topologies to understand data flows through the network.
 
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
 
 ## Background
 
@@ -93,20 +95,6 @@ Break the tasks for the challenge down room-by-room. The final task involves *tw
 The challenge is internally verifying your firewall blocks as they are implemented, but it may take 2 minutes or more for the status checks to be collected. Please wait 2-3 minutes **after** applying your firewall changes **before** you trigger the grading check.
 
 To grade the remediations, visit `https://challenge.us/files` and select **Grade Challenge**. Each remediation will be validated independently. You will be notified if, and why, the check fails.
-
-## System and Tool Credentials
-
-| system | OS type | username | password |
-|--------|---------|----------|--------|
-| Kali | Kali | user | tartans|
-| pfSense | 10.0.0.1 | admin | tartans |
-| pfSense Admin Web GUI | https://10.0.0.1 | admin | tartans |
-| SecurityOnion | Ubuntu | so | tartans |
-| SecurityOnion Web Tools |  `https://10.4.4.4` | admin@so.org | tartans@1 |
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (`10.5.5.5` or `64.100.100.102`) is forbidden. You may only use the provided webpage to view challenge progress and download any challenge artifacts that are provided.
 
 ## Challenge Questions
 

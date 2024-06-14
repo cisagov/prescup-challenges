@@ -1,0 +1,15 @@
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+[Unit]
+Description=Deploy Challenge Variables
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/etc/systemd/system/deploy/
+ExecStart=/etc/systemd/system/deploy/deploy.sh
+
+[Install]
+WantedBy=default.target

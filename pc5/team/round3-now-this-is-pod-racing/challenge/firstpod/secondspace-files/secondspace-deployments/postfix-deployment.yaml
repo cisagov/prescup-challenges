@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postfix
+  labels:
+    service: postfix
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: postfix
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        service: postfix
+    spec:
+      containers:
+      - name: postfix
+        image: registry.merch.codes:5000/postfix_compose:latest
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 10m
+            memory: 32Mi
+        ports:
+        - name: smtp
+          containerPort: 25
+        - name: submission
+          containerPort: 587
+        volumeMounts:
+          - mountPath: /etc/postfix/
+            name: postfix
+            subPath: postfix-conf
+          - mountPath: /var/log/mail.log
+            name: postfix
+            subPath: postfix-logs/mail.log
+      restartPolicy: Always
+      volumes:
+      - name: postfix
+        persistentVolumeClaim:
+          claimName: appdata-pvc

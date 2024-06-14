@@ -1,0 +1,72 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+    <title>
+        {% block title %}Canello's ID's{% endblock %}
+    </title>
+{% endblock %}
+
+{% block content %}
+
+<br>
+{% if success %}
+    <h3 class="success">Process completed successfully and file sent to: {{success}}</h3><br>
+{% endif %}
+
+<span style="font-size: 25px;">Canello's Digital ID's</span><br><br>
+
+<table>
+    <fieldset>
+        <legend align="center">We offer...</legend>
+        <span></span>
+        <div class="list">
+            <ul class="center">
+                <li>Digital Identification Creation</li>
+                <li>Digital Identification Hash Verification</li>
+                **NEW BETA FEATURE**:<li>Digital Identification Updater</li>
+            </ul>
+        </div><br>
+        <div class="footer">
+            <strong>Please Note:</strong><br>
+            Admin Approval Codes are required to create a new Digital Identification File or update an existing file. 
+            <br>
+            If you are not an admin or not authorized to use an admin code, please contact your manager for assistance. 
+            
+            <br><br>
+            During Digital ID creation you are required to provide a valid '@merch.codes' email address.
+            Your Digital ID is emailed to the address you provide. Make sure you can access that email Inbox during the Digital ID creation process.
+            <br><br>
+            ---
+            <br>
+            Create New ID<br><br>
+
+            This form is used by admins to create Digital Identification files for new Vault users.<br><br>
+            
+            ---
+            <br>
+            Verify ID File Hash<br><br>
+
+            Digital Identification Verification process used by the Vault during its authentication process.<br><br>
+            
+            ---
+            <br>
+            Update Existing ID<br>
+
+            ***BETA FEATURE***<br><br>
+
+            This form is used by admins to update an existing Vault user's Digital Identification file.
+
+        </div>
+
+    </fieldset>
+</table>
+
+{% endblock %}
+

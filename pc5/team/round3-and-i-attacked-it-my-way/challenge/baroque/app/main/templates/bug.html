@@ -1,0 +1,70 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Bug Report{% endblock %}</title>
+    <style>
+        .form-container {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #333;
+            background-color: rgb(218, 152, 78);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: gray;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<span id="title" style="padding-top:40px; padding-bottom: 40px;;">
+    Bug Report Form
+</span>
+    <div class="form-container">
+        <form action="{{url_for('main.bug')}}" method="post">
+        <table>
+            <tr class="bodypost">
+                <td style="width:25%;"><label for="email">Your Email:</label></td>
+                <td style="width:75%;"><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr class="bodypost">
+                <td style="width:25%;"><label for="bug-description">Description of the Bug:</label></td>
+                <td style="width:75%;"><textarea id="bug-description" name="bugDescription" rows="4" required></textarea></td>
+            </tr>
+            <tr class="bodypost">
+                <td style="width:25%;"><label for="bug-location">Where did you encounter the bug? (e.g., Homepage, Checkout Page):</label></td>
+                <td style="width:75%;"><input type="text" id="bug-location" name="bugLocation" required></td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit" style="font-size: 20px;">
+        </form>
+    </div>
+{% endblock %}
+

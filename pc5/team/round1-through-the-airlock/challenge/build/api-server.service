@@ -1,0 +1,20 @@
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+[Unit]
+Description=Challenge API
+After=network.target
+
+[Service]
+Type=simple
+User=user
+WorkingDirectory=/home/user/api
+ExecStart=/home/user/api/start-challenge-server.sh
+Environment=PATH=/home/user/.cargo/bin
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+

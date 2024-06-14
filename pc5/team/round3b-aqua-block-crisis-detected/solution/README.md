@@ -15,7 +15,7 @@
 1. On the Kali machine, browse to`http://10.1.1.15/scada` and verify you can see the HMI of the three dams.
 2. On the Kali machine, run the following commands in four different tabs to enumerate the networks.
 
-    ```
+    ```bash
     sudo nmap 10.1.1.0/24 -oN 1-basic.scan
     sudo nmap -p- -sV 10.1.1.0/24 -oN 1-all-tcp.scan
     sudo nmap 10.2.2.0/24 -oN 2-basic.scan

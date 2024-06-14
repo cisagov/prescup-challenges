@@ -15,6 +15,9 @@ Analyze a communication relay's running code to determine how it works, how to a
 - [T0436](https://niccs.cisa.gov/workforce-development/nice-framework): Conduct trial runs of programs and software applications to ensure that the desired information is produced and instructions and security levels are correct.
 - [T0616](https://niccs.cisa.gov/workforce-development/nice-framework): Conduct network scouting and vulnerability analyses of systems within a network.
 
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
+
 
 ## Background
 

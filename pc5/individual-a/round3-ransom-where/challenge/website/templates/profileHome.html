@@ -1,0 +1,22 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Profile Home{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/profileHome.css') }}" />
+  <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/topStyle.css') }}" />-->
+{% endblock %}
+
+{% block content %}
+
+<div class="display"><br>
+	<a href="/account/profile/edit">Edit Profile</a><br>
+	<a href="/account/profile/changePassword">Change password</a>
+</div>
+{% endblock %}

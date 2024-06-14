@@ -1,3 +1,8 @@
+
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
 ## read the unencrypted value
 with open("./unencrypted.txt", "r", encoding="utf-8") as file1:
     text1 = file1.read()

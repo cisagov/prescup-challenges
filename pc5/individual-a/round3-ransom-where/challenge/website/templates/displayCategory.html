@@ -1,0 +1,49 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Category: {{categoryName}}{% endblock %}</title>
+  <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" />*-->
+  <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/topStyle.css') }}" />-->
+{% endblock %}
+
+{% block content %}
+<div style="font-size:20px;">
+	<ul class="category">
+		<li><a style="pointer-events: none;">Categories:</a></li>
+
+		{% for row in categoryData %}
+		<li><a href="/displayCategory?categoryId={{row[0]}}">{{row[1]}}</a></li>
+		{% endfor %}
+	</ul>
+</div>
+<div>
+	<h2>Showing all products of Category {{categoryName}}:</h2>
+	
+	<table class="products">
+		<thead>
+			<tr>
+				<th style="column-width: 25%;">Product</th>
+				<th style="column-width: 25%;">price</th>
+				<th style="column-width: 25%;">Image</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for itemData in data %}
+				{% for row in itemData %}
+					<tr>
+						<td class="info">{{row[1]}}</td>
+						<td class="info">{{row[2]}}</td>
+						<td class="info"><img src="{{ url_for('static', filename='uploads/' + row[3]) }}" class="itemimage" /></td>
+					</tr>
+				{% endfor %}
+			{% endfor %}
+		</tbody>
+</div>
+{% endblock%}

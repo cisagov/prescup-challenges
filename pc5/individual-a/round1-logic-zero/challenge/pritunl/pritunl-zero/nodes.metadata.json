@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"pritunl-zero.nodes"},{"v":2,"key":{"name":1},"name":"name_1","ns":"pritunl-zero.nodes","background":true}],"uuid":"02e7d229ffd040f49d32fee572872da6"}

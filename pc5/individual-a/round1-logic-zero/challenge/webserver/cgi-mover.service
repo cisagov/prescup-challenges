@@ -1,0 +1,14 @@
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+[Unit]
+Description=CGI Mover
+After=network.target
+
+[Service]
+ExecStart=/etc/systemd/system/cgi-mover.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

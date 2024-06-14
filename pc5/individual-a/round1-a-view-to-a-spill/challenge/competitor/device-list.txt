@@ -1,0 +1,180 @@
+Make: VigilEye
+Model: VE5000
+Serial Number: VIGEY5000-7892-47-503
+Location: Loading Bay
+
+Make: VigilEye
+Model: VE5000
+Serial Number: VIGEY5000-3265-82-965
+Location: Corridor A, Deck 1
+
+Make: VigilEye
+Model: VE5000
+Serial Number: VIGEY5000-5417-59-812
+Location: Corridor A, Deck 2
+
+Make: VigilEye
+Model: VE5000
+Serial Number: VIGEY5000-9384-10-246
+Location: Corridor B, Deck 1
+
+Make: VigilEye
+Model: VE5000
+Serial Number: VIGEY5000-6732-74-682
+Location: Corridor B, Deck 2
+
+Make: VigilEye
+Model: VE5000
+Serial Number: VIGEY5000-1856-38-497
+Location: Corridor B, Deck 3
+
+Make: VigilEye
+Model: VE5000
+Serial Number: VIGEY5000-2567-15-103
+Location: Bridge
+
+Make: VigilEye
+Model: VE5000
+Serial Number: VIGEY5000-4203-91-381
+Location: Security Control Room
+
+Make: VigilEye
+Model: VE5000
+Serial Number: VIGEY5000-7094-69-524
+Location: Airlock 1
+
+Make: VigilEye
+Model: VE5000
+Serial Number: VIGEY5000-8371-23-865
+Location: Airlock 2
+
+
+
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-8912-456
+Location: Loading Bay
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-3421-987
+Location: Corridor A, Deck 1, East
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-5764-123
+Location: Corridor A, Deck 1, West
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-2098-765
+Location: Corridor A, Deck 2, East
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-6345-890
+Location: Corridor A, Deck 2, East
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-4532-178
+Location: Corridor A, Deck 3, East
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-7098-321
+Location: Corridor A, Deck 3, East
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-1234-567
+Location: Corridor B, Deck 1, North
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-9876-543
+Location: Corridor B, Deck 1, South
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-4567-890
+Location: Corridor B, Deck 2, North
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-7364-219
+Location: Corridor B, Deck 2, South
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-5189-643
+Location: Corridor B, Deck 3, North
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-2978-435
+Location: Corridor B, Deck 3, South
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-6542-198
+Location: Bridge
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-8721-356
+Location: Engineering
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-1256-908
+Location: Storage A
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-7834-562
+Location: Storage B
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-4590-273
+Location: Captain's Quarters
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-6312-847
+Location:  Maintenance
+
+Make: KeyScan
+Model: KS200
+Serial Number: KEYKS200-2945-736
+Location: Engine Room
+
+
+
+
+Make: AlarmTech
+Model: AT3000
+Serial Number: ALMTECH3000-038
+Location: Engineering
+
+Make: AlarmTech
+Model: AT3000
+Serial Number: ALMTECH3000-456
+Location: Loading Bay
+
+Make: AlarmTech
+Model: AT3000
+Serial Number: ALMTECH3000-231
+Location: Bridge
+
+Make: AlarmTech
+Model: AT3000
+Serial Number: ALMTECH3000-391
+Location: Mess Hall
+
+Make: AlarmTech
+Model: AT3000
+Serial Number: ALMTECH3000-176
+Location: Crew Quarters

@@ -1,0 +1,59 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@using MerchCodesInventoryApi.Data.Models;
+@model ViewInventoryModel
+@{
+    ViewData["Title"] = "Search Inventory";
+}
+
+<h1>Search Inventory</h1>
+
+<div>
+    <a asp-area="" asp-controller="Inventory" asp-action="Index">View Inventory</a>
+</div>
+<div>
+    <a asp-area="" asp-controller="Inventory" asp-action="AddInventory">Add Inventory</a>
+</div>
+
+@if (Model.Message != null)
+{
+    <div class="alert" style="margin-top:20px">
+        @Model.Message
+    </div>
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div style="margin-top:20px">Search Term:</div>
+    <div style="margin-top:10px">
+        <input type="text" name="searchTerm" />
+    </div>
+    <div style="margin-top:20px">
+        <button type="submit">Search Inventory</button>
+    </div>
+</form>
+
+@if (Model != null && Model.InventoryItems != null && Model.InventoryItems.Count > 0)
+{
+    <div style="margin-top: 20px">
+    <table style="width: 100%; border:1px solid black">
+            <tr>
+                <td style="border:1px solid black; padding:5px;">ID</td>
+                <td style="border:1px solid black; padding:5px;">Name</td>
+                <td style="border:1px solid black; padding:5px;">Number in Inventory</td>
+            </tr>
+        @foreach (Inventory inventoryItem in Model.InventoryItems)
+        {
+            <tr>
+                <td style="border:1px solid black; padding:5px;">@inventoryItem.Id</td>
+                <td style="border:1px solid black; padding:5px;">@inventoryItem.Name</td>
+                <td style="border:1px solid black; padding:5px;">@inventoryItem.Count</td>
+            </tr>
+        }
+    </table>
+</div>
+}

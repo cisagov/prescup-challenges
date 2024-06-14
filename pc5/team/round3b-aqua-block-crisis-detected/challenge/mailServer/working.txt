@@ -1,0 +1,1716 @@
+From alice@dam.local Sat May 04 08:05:00 2023
+Return-Path: <alice@dam.local>
+X-Original-To: bob@dam.local
+Delivered-To: bob@dam.local
+Received: by mail-server (Postfix, from userid 1001)
+    id AE123E0F34; Sat, 04 May 2023 08:05:00 -0700 (PDT)
+Subject: Structural Assessments Due
+To: <bob@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 08:05:00 -0700
+Message-Id: <20240504080500.AE123E0F34@mail-server>
+From: alice <alice@dam.local>
+X-IMAPbase:           1697823450                   10
+X-UID: 10
+Status: O
+
+Bob,
+
+We need the final structural assessment by Tuesday. Can you manage?
+
+Alice
+
+From bob@dam.local Sat May 04 09:15:00 2023
+Return-Path: <bob@dam.local>
+X-Original-To: alice@dam.local
+Delivered-To: alice@dam.local
+Received: by mail-server (Postfix, from userid 1002)
+    id AF987F0G45; Sat, 04 May 2023 09:15:00 -0700 (PDT)
+Subject: RE: Structural Assessments Due
+To: <alice@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 09:15:00 -0700
+Message-Id: <20240504091500.AF987F0G45@mail-server>
+From: bob <bob@dam.local>
+X-IMAPbase:           1697823451                   11
+X-UID: 11
+Status: O
+
+Alice,
+
+Yes, I'll have it ready by then. There were some minor issues, but we're on top of it.
+
+Bob
+
+From charlie@dam.local Sat May 04 09:45:00 2023
+Return-Path: <charlie@dam.local>
+X-Original-To: dan@dam.local
+Delivered-To: dan@dam.local
+Received: by mail-server (Postfix, from userid 1003)
+    id BG124G0H56; Sat, 04 May 2023 09:45:00 -0700 (PDT)
+Subject: Turbine Calibration
+To: <dan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 09:45:00 -0700
+Message-Id: <20240504094500.BG124G0H56@mail-server>
+From: charlie <charlie@dam.local>
+X-IMAPbase:           1697823460                   20
+X-UID: 20
+Status: O
+
+Dan,
+
+Can you handle the calibration of the new turbines?
+
+Charlie
+
+From dan@dam.local Sat May 04 10:05:00 2023
+Return-Path: <dan@dam.local>
+X-Original-To: erin@dam.local
+Delivered-To: erin@dam.local
+Received: by mail-server (Postfix, from userid 1004)
+    id CH567I0J78; Sat, 04 May 2023 10:05:00 -0700 (PDT)
+Subject: Equipment Check
+To: <erin@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 10:05:00 -0700
+Message-Id: <20240504100500.CH567I0J78@mail-server>
+From: dan <dan@dam.local>
+X-IMAPbase:           1697823461                   21
+X-UID: 21
+Status: O
+
+Erin,
+
+Do we have all the tools for the upcoming overhaul? Let's meet tomorrow to review.
+
+Dan
+
+From erin@dam.local Sat May 04 10:25:00 2023
+Return-Path: <erin@dam.local>
+X-Original-To: frank@dam.local
+Delivered-To: frank@dam.local
+Received: by mail-server (Postfix, from userid 1005)
+    id DI890K0L91; Sat, 04 May 2023 10:25:00 -0700 (PDT)
+Subject: Safety Protocols
+To: <frank@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 10:25:00 -0700
+Message-Id: <20240504102500.DI890K0L91@mail-server>
+From: erin <erin@dam.local>
+X-IMAPbase:           1697823462                   22
+X-UID: 22
+Status: O
+
+Frank,
+
+Did we get the updated safety protocols for next month? Need them ASAP.
+
+Erin
+
+From frank@dam.local Sat May 04 10:50:00 2023
+Return-Path: <frank@dam.local>
+X-Original-To: grace@dam.local
+Delivered-To: grace@dam.local
+Received: by mail-server (Postfix, from userid 1006)
+    id EJ901L0M23; Sat, 04 May 2023 10:50:00 -0700 (PDT)
+Subject: Team Briefing
+To: <grace@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 10:50:00 -0700
+Message-Id: <20240504105000.EJ901L0M23@mail-server>
+From: frank <frank@dam.local>
+X-IMAPbase:           1697823463                   23
+X-UID: 23
+Status: O
+
+Grace,
+
+Schedule a team briefing for Tuesday. We need to discuss the upcoming inspection.
+
+Frank
+
+From grace@dam.local Sat May 04 11:20:00 2023
+Return-Path: <grace@dam.local>
+X-Original-To: heidi@dam.local
+Delivered-To: heidi@dam.local
+Received: by mail-server (Postfix, from userid 1007)
+    id FK234M0N45; Sat, 04 May 2023 11:20:00 -0700 (PDT)
+Subject: Documentation
+To: <heidi@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 11:20:00 -0700
+Message-Id: <20240504112000.FK234M0N45@mail-server>
+From: grace <grace@dam.local>
+X-IMAPbase:           1697823464                   24
+X-UID: 24
+Status: O
+
+Heidi,
+
+Do you have the documentation for the recent safety drills? I can't find it anywhere.
+
+Grace
+
+From heidi@dam.local Sat May 04 11:50:00 2023
+Return-Path: <heidi@dam.local>
+X-Original-To: ivan@dam.local
+Delivered-To: ivan@dam.local
+Received: by mail-server (Postfix, from userid 1008)
+    id GL567N0O78; Sat, 04 May 2023 11:50:00 -0700 (PDT)
+Subject: Power Grid Update
+To: <ivan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 11:50:00 -0700
+Message-Id: <20240504115000.GL567N0O78@mail-server>
+From: heidi <heidi@dam.local>
+X-IMAPbase:           1697823465                   25
+X-UID: 25
+Status: O
+
+Ivan,
+
+We're updating the power grid next week. Make sure all the systems are ready for it.
+
+Heidi
+
+From ivan@dam.local Sat May 04 12:20:00 2023
+Return-Path: <ivan@dam.local>
+X-Original-To: judy@dam.local
+Delivered-To: judy@dam.local
+Received: by mail-server (Postfix, from userid 1009)
+    id HM890P0Q91; Sat, 04 May 2023 12:20:00 -0700 (PDT)
+Subject: Network Security
+To: <judy@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 12:20:00 -0700
+Message-Id: <20240504122000.HM890P0Q91@mail-server>
+From: ivan <ivan@dam.local>
+X-IMAPbase:           1697823466                   26
+X-UID: 26
+Status: O
+
+Judy,
+
+I noticed some unusual traffic on the network last night. Can you check it out?
+
+Ivan
+
+From judy@dam.local Sat May 04 13:00:00 2023
+Return-Path: <judy@dam.local>
+X-Original-To: mallory@dam.local
+Delivered-To: mallory@dam.local
+Received: by mail-server (Postfix, from userid 1010)
+    id IN123Q0R34; Sat, 04 May 2023 13:00:00 -0700 (PDT)
+Subject: Meeting Reminder
+To: <mallory@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 13:00:00 -0700
+Message-Id: <20240504130000.IN123Q0R34@mail-server>
+From: judy <judy@dam.local>
+X-IMAPbase:           1697823467                   27
+X-UID: 27
+Status: O
+
+Mallory,
+
+Just a reminder about our meeting tomorrow. Please don't be late.
+
+Judy
+
+From mallory@dam.local Sat May 04 13:30:00 2023
+Return-Path: <mallory@dam.local>
+X-Original-To: niaj@dam.local
+Delivered-To: niaj@dam.local
+Received: by mail-server (Postfix, from userid 1011)
+    id JO456R0S56; Sat, 04 May 2023 13:30:00 -0700 (PDT)
+Subject: Project Update
+To: <niaj@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 13:30:00 -0700
+Message-Id: <20240504133000.JO456R0S56@mail-server>
+From: mallory <mallory@dam.local>
+X-IMAPbase:           1697823468                   28
+X-UID: 28
+Status: O
+
+Niaj,
+
+Please send me the latest update on our project. We need to finalize it soon.
+
+Mallory
+
+From niaj@dam.local Sat May 04 14:00:00 2023
+Return-Path: <niaj@dam.local>
+X-Original-To: alice@dam.local
+Delivered-To: alice@dam.local
+Received: by mail-server (Postfix, from userid 1012)
+    id JP789S0T78; Sat, 04 May 2023 14:00:00 -0700 (PDT)
+Subject: RE: Project Update
+To: <alice@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 14:00:00 -0700
+Message-Id: <20240504140000.JP789S0T78@mail-server>
+From: niaj <niaj@dam.local>
+X-IMAPbase:           1697823469                   29
+X-UID: 29
+Status: O
+
+Alice,
+
+I forwarded the project update to Mallory, but I wanted to check in with you as well. Let me know if you need any additional details.
+
+Niaj
+
+From alice@dam.local Sat May 04 14:30:00 2023
+Return-Path: <alice@dam.local>
+X-Original-To: bob@dam.local
+Delivered-To: bob@dam.local
+Received: by mail-server (Postfix, from userid 1001)
+    id KA123T0U45; Sat, 04 May 2023 14:30:00 -0700 (PDT)
+Subject: RE: Project Status
+To: <bob@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 14:30:00 -0700
+Message-Id: <20240504143000.KA123T0U45@mail-server>
+From: alice <alice@dam.local>
+X-IMAPbase:           1697823470                   30
+X-UID: 30
+Status: O
+
+Bob,
+
+I spoke with Niaj about the project. We might need some additional resources. Discuss with your team and let me know.
+
+Alice
+
+From bob@dam.local Sat May 04 15:00:00 2023
+Return-Path: <bob@dam.local>
+X-Original-To: charlie@dam.local
+Delivered-To: charlie@dam.local
+Received: by mail-server (Postfix, from userid 1002)
+    id KB456U0V67; Sat, 04 May 2023 15:00:00 -0700 (PDT)
+Subject: Resource Allocation
+To: <charlie@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 15:00:00 -0700
+Message-Id: <20240504150000.KB456U0V67@mail-server>
+From: bob <bob@dam.local>
+X-IMAPbase:           1697823471                   31
+X-UID: 31
+Status: O
+
+Charlie,
+
+After talking with Alice, we might need to shuffle some resources around. Thoughts?
+
+Bob
+
+From charlie@dam.local Sat May 04 15:30:00 2023
+Return-Path: <charlie@dam.local>
+X-Original-To: dan@dam.local
+Delivered-To: dan@dam.local
+Received: by mail-server (Postfix, from userid 1003)
+    id KC789V0W89; Sat, 04 May 2023 15:30:00 -0700 (PDT)
+Subject: Equipment Shift
+To: <dan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 15:30:00 -0700
+Message-Id: <20240504153000.KC789V0W89@mail-server>
+From: charlie <charlie@dam.local>
+X-IMAPbase:           1697823472                   32
+X-UID: 32
+Status: O
+
+Dan,
+
+Might need to move some of the heavy equipment next week. Prepare the crew.
+
+Charlie
+
+From dan@dam.local Sat May 04 16:00:00 2023
+Return-Path: <dan@dam.local>
+X-Original-To: erin@dam.local
+Delivered-To: erin@dam.local
+Received: by mail-server (Postfix, from userid 1004)
+    id KD123W0X12; Sat, 04 May 2023 16:00:00 -0700 (PDT)
+Subject: Crew Schedule
+To: <erin@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 16:00:00 -0700
+Message-Id: <20240504160000.KD123W0X12@mail-server>
+From: dan <dan@dam.local>
+X-IMAPbase:           1697823473                   33
+X-UID: 33
+Status: O
+
+Erin,
+
+Charlie mentioned equipment movement. Can we adjust the crew schedule accordingly?
+
+Dan
+
+From erin@dam.local Sat May 04 16:30:00 2023
+Return-Path: <erin@dam.local>
+X-Original-To: frank@dam.local
+Delivered-To: frank@dam.local
+Received: by mail-server (Postfix, from userid 1005)
+    id KE456X0Y34; Sat, 04 May 2023 16:30:00 -0700 (PDT)
+Subject: Schedule Shift
+To: <frank@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 16:30:00 -0700
+Message-Id: <20240504163000.KE456X0Y34@mail-server>
+From: erin <erin@dam.local>
+X-IMAPbase:           1697823474                   34
+X-UID: 34
+Status: O
+
+Frank,
+
+I need your input on the new schedule after our talk with Dan. Check it when you can.
+
+Erin
+
+From frank@dam.local Sat May 04 17:00:00 2023
+Return-Path: <frank@dam.local>
+X-Original-To: grace@dam.local
+Delivered-To: grace@dam.local
+Received: by mail-server (Postfix, from userid 1006)
+    id KF789Y0Z56; Sat, 04 May 2023 17:00:00 -0700 (PDT)
+Subject: Overtime Hours
+To: <grace@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 17:00:00 -0700
+Message-Id: <20240504170000.KF789Y0Z56@mail-server>
+From: frank <frank@dam.local>
+X-IMAPbase:           1697823475                   35
+X-UID: 35
+Status: O
+
+Grace,
+
+With the recent changes, we might need to allocate some overtime hours. Thoughts?
+
+Frank
+
+From grace@dam.local Sat May 04 17:30:00 2023
+Return-Path: <grace@dam.local>
+X-Original-To: heidi@dam.local
+Delivered-To: heidi@dam.local
+Received: by mail-server (Postfix, from userid 1007)
+    id KG123Z1A78; Sat, 04 May 2023 17:30:00 -0700 (PDT)
+Subject: Budgeting Overtime
+To: <heidi@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 17:30:00 -0700
+Message-Id: <20240504173000.KG123Z1A78@mail-server>
+From: grace <grace@dam.local>
+X-IMAPbase:           1697823476                   36
+X-UID: 36
+Status: O
+
+Heidi,
+
+Frank mentioned potential overtime. Do we have the budget for it?
+
+Grace
+
+From heidi@dam.local Sat May 04 18:00:00 2023
+Return-Path: <heidi@dam.local>
+X-Original-To: ivan@dam.local
+Delivered-To: ivan@dam.local
+Received: by mail-server (Postfix, from userid 1008)
+    id KH456A1B90; Sat, 04 May 2023 18:00:00 -0700 (PDT)
+Subject: Budget Inquiry
+To: <ivan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sat, 04 May 2023 18:00:00 -0700
+Message-Id: <20240504180000.KH456A1B90@mail-server>
+From: heidi <heidi@dam.local>
+X-IMAPbase:           1697823477                   37
+X-UID: 37
+Status: O
+
+Ivan,
+
+Do we have any wiggle room in the tech budget? Grace asked about overtime.
+
+Heidi
+
+From bob@dam.local Sun May 05 09:00:00 2023
+Return-Path: <bob@dam.local>
+X-Original-To: charlie@dam.local
+Delivered-To: charlie@dam.local
+Received: by mail-server (Postfix, from userid 1002)
+    id AA1DFG2H34; Sun, 05 May 2023 09:00:00 -0700 (PDT)
+Subject: Safety Protocols
+To: <charlie@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 09:00:00 -0700
+Message-Id: <20240505090000.AA1DFG2H34@mail-server>
+From: bob <bob@dam.local>
+X-IMAPbase:           1697823483                   43
+X-UID: 43
+Status: O
+
+Charlie,
+
+Given the changes, we need to review our safety protocols ASAP. Reach out to Dan and see if he's available.
+
+Bob
+
+From charlie@dam.local Sun May 05 09:30:00 2023
+Return-Path: <charlie@dam.local>
+X-Original-To: dan@dam.local
+Delivered-To: dan@dam.local
+Received: by mail-server (Postfix, from userid 1003)
+    id AB2EJH3I56; Sun, 05 May 2023 09:30:00 -0700 (PDT)
+Subject: Safety Meeting
+To: <dan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 09:30:00 -0700
+Message-Id: <20240505093000.AB2EJH3I56@mail-server>
+From: charlie <charlie@dam.local>
+X-IMAPbase:           1697823484                   44
+X-UID: 44
+Status: O
+
+Dan,
+
+We're organizing an emergency safety meeting. Let me know your availability. This is critical.
+
+Charlie
+
+From dan@dam.local Sun May 05 10:00:00 2023
+Return-Path: <dan@dam.local>
+X-Original-To: erin@dam.local
+Delivered-To: erin@dam.local
+Received: by mail-server (Postfix, from userid 1004)
+    id AC3FLI4J78; Sun, 05 May 2023 10:00:00 -0700 (PDT)
+Subject: Protocol Documents
+To: <erin@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 10:00:00 -0700
+Message-Id: <20240505100000.AC3FLI4J78@mail-server>
+From: dan <dan@dam.local>
+X-IMAPbase:           1697823485                   45
+X-UID: 45
+Status: O
+
+Erin,
+
+Before this meeting, I need all protocol documents related to our current operations. Can you gather and forward those?
+
+Dan
+
+From erin@dam.local Sun May 05 10:30:00 2023
+Return-Path: <erin@dam.local>
+X-Original-To: frank@dam.local
+Delivered-To: frank@dam.local
+Received: by mail-server (Postfix, from userid 1005)
+    id AD4GMI5K90; Sun, 05 May 2023 10:30:00 -0700 (PDT)
+Subject: Current Schedules
+To: <frank@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 10:30:00 -0700
+Message-Id: <20240505103000.AD4GMI5K90@mail-server>
+From: erin <erin@dam.local>
+X-IMAPbase:           1697823486                   46
+X-UID: 46
+Status: O
+
+Frank,
+
+I'm gathering documentation for Dan. Can you provide the current work schedules for all teams?
+
+Erin
+
+From frank@dam.local Sun May 05 11:00:00 2023
+Return-Path: <frank@dam.local>
+X-Original-To: grace@dam.local
+Delivered-To: grace@dam.local
+Received: by mail-server (Postfix, from userid 1006)
+    id AE1JKH6L12; Sun, 05 May 2023 11:00:00 -0700 (PDT)
+Subject: Schedule Info
+To: <grace@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 11:00:00 -0700
+Message-Id: <20240505110000.AE1JKH6L12@mail-server>
+From: frank <frank@dam.local>
+X-IMAPbase:           1697823493                   47
+X-UID: 47
+Status: O
+
+Grace,
+
+I've attached the schedules. Check the roster for any changes.
+
+Frank
+
+From grace@dam.local Sun May 05 11:30:00 2023
+Return-Path: <grace@dam.local>
+X-Original-To: heidi@dam.local
+Delivered-To: heidi@dam.local
+Received: by mail-server (Postfix, from userid 1007)
+    id AF2LKN7M34; Sun, 05 May 2023 11:30:00 -0700 (PDT)
+Subject: Shift Changes?
+To: <heidi@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 11:30:00 -0700
+Message-Id: <20240505113000.AF2LKN7M34@mail-server>
+From: grace <grace@dam.local>
+X-IMAPbase:           1697823494                   48
+X-UID: 48
+Status: O
+
+Heidi,
+
+Can you confirm if there were any shift changes last week? Frank sent over the schedules, but something seems off.
+
+Grace
+
+From heidi@dam.local Sun May 05 12:00:00 2023
+Return-Path: <heidi@dam.local>
+X-Original-To: ivan@dam.local
+Delivered-To: ivan@dam.local
+Received: by mail-server (Postfix, from userid 1008)
+    id AG3LPO8N56; Sun, 05 May 2023 12:00:00 -0700 (PDT)
+Subject: Shift Confusion
+To: <ivan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 12:00:00 -0700
+Message-Id: <20240505120000.AG3LPO8N56@mail-server>
+From: heidi <heidi@dam.local>
+X-IMAPbase:           1697823495                   49
+X-UID: 49
+Status: O
+
+Ivan,
+
+Grace brought to my attention potential errors in the shift scheduling. I need your inputs by EOD.
+
+Heidi
+
+From ivan@dam.local Sun May 05 12:30:00 2023
+Return-Path: <ivan@dam.local>
+X-Original-To: judy@dam.local
+Delivered-To: judy@dam.local
+Received: by mail-server (Postfix, from userid 1009)
+    id AH4MPQ9O78; Sun, 05 May 2023 12:30:00 -0700 (PDT)
+Subject: Machinery Check
+To: <judy@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 12:30:00 -0700
+Message-Id: <20240505123000.AH4MPQ9O78@mail-server>
+From: ivan <ivan@dam.local>
+X-IMAPbase:           1697823496                   50
+X-UID: 50
+Status: O
+
+Judy,
+
+While we sort the shifts, can you do a complete machinery check? Better safe than sorry.
+
+Ivan
+
+From judy@dam.local Sun May 05 13:00:00 2023
+Return-Path: <judy@dam.local>
+X-Original-To: mallory@dam.local
+Delivered-To: mallory@dam.local
+Received: by mail-server (Postfix, from userid 1010)
+    id AI5QRS0A12; Sun, 05 May 2023 13:00:00 -0700 (PDT)
+Subject: Inventory Check
+To: <mallory@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 13:00:00 -0700
+Message-Id: <20240505130000.AI5QRS0A12@mail-server>
+From: judy <judy@dam.local>
+X-IMAPbase:           1697823497                   51
+X-UID: 51
+Status: O
+
+Mallory,
+
+Following up on our last discussion. Can you do an inventory check on the tools?
+
+Judy
+
+From mallory@dam.local Sun May 05 14:00:00 2023
+Return-Path: <mallory@dam.local>
+X-Original-To: niaj@dam.local
+Delivered-To: niaj@dam.local
+Received: by mail-server (Postfix, from userid 1011)
+    id A12ABC1D34; Sun, 05 May 2023 14:00:00 -0700 (PDT)
+Subject: Safety Protocols
+To: <niaj@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 14:00:00 -0700
+Message-Id: <20240505140000.A12ABC1D34@mail-server>
+From: mallory <mallory@dam.local>
+X-IMAPbase:           1697823508                   52
+X-UID: 52
+Status: O
+
+Niaj,
+
+With the shifts confusion and equipment checks, I think it's high time we revisited our safety protocols. Thoughts?
+
+Mallory
+
+From niaj@dam.local Sun May 05 14:30:00 2023
+Return-Path: <niaj@dam.local>
+X-Original-To: alice@dam.local
+Delivered-To: alice@dam.local
+Received: by mail-server (Postfix, from userid 1000)
+    id B23DEF2E45; Sun, 05 May 2023 14:30:00 -0700 (PDT)
+Subject: Safety Meeting
+To: <alice@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 14:30:00 -0700
+Message-Id: <20240505143000.B23DEF2E45@mail-server>
+From: niaj <niaj@dam.local>
+X-IMAPbase:           1697823509                   53
+X-UID: 53
+Status: O
+
+Alice,
+
+I concur with Mallory. We should schedule a safety meeting for the team. Your thoughts?
+
+Niaj
+
+From alice@dam.local Sun May 05 15:00:00 2023
+Return-Path: <alice@dam.local>
+X-Original-To: bob@dam.local
+Delivered-To: bob@dam.local
+Received: by mail-server (Postfix, from userid 1001)
+    id C34GHI3F56; Sun, 05 May 2023 15:00:00 -0700 (PDT)
+Subject: Re: Safety Meeting
+To: <bob@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 15:00:00 -0700
+Message-Id: <20240505150000.C34GHI3F56@mail-server>
+From: alice <alice@dam.local>
+X-IMAPbase:           1697823510                   54
+X-UID: 54
+Status: O
+
+Bob,
+
+I'm in agreement with Niaj. When can we have this meeting? Do check with the others and finalize a time.
+
+Alice
+
+From bob@dam.local Sun May 05 15:30:00 2023
+Return-Path: <bob@dam.local>
+X-Original-To: charlie@dam.local
+Delivered-To: charlie@dam.local
+Received: by mail-server (Postfix, from userid 1002)
+    id D45JKL4G67; Sun, 05 May 2023 15:30:00 -0700 (PDT)
+Subject: Meeting Time
+To: <charlie@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 15:30:00 -0700
+Message-Id: <20240505153000.D45JKL4G67@mail-server>
+From: bob <bob@dam.local>
+X-IMAPbase:           1697823511                   55
+X-UID: 55
+Status: O
+
+Charlie,
+
+Alice wants us to finalize a time for the safety meeting. When are you free?
+
+Bob
+
+From charlie@dam.local Sun May 05 16:00:00 2023
+Return-Path: <charlie@dam.local>
+X-Original-To: dan@dam.local
+Delivered-To: dan@dam.local
+Received: by mail-server (Postfix, from userid 1003)
+    id E56MNO5H78; Sun, 05 May 2023 16:00:00 -0700 (PDT)
+Subject: Available Slots?
+To: <dan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 16:00:00 -0700
+Message-Id: <20240505160000.E56MNO5H78@mail-server>
+From: charlie <charlie@dam.local>
+X-IMAPbase:           1697823512                   56
+X-UID: 56
+Status: O
+
+Dan,
+
+Bob's checking everyone's availability for the safety meeting. When can you slot in?
+
+Charlie
+
+From dan@dam.local Sun May 05 16:30:00 2023
+Return-Path: <dan@dam.local>
+X-Original-To: erin@dam.local
+Delivered-To: erin@dam.local
+Received: by mail-server (Postfix, from userid 1004)
+    id F67PQR6I89; Sun, 05 May 2023 16:30:00 -0700 (PDT)
+Subject: Meeting Availability
+To: <erin@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 16:30:00 -0700
+Message-Id: <20240505163000.F67PQR6I89@mail-server>
+From: dan <dan@dam.local>
+X-IMAPbase:           1697823513                   57
+X-UID: 57
+Status: O
+
+Erin,
+
+Need your availability for the safety meeting this week. It's crucial we all attend.
+
+Dan
+
+From erin@dam.local Sun May 05 17:00:00 2023
+Return-Path: <erin@dam.local>
+X-Original-To: frank@dam.local
+Delivered-To: frank@dam.local
+Received: by mail-server (Postfix, from userid 1005)
+    id G78STU7J90; Sun, 05 May 2023 17:00:00 -0700 (PDT)
+Subject: Re: Meeting Availability
+To: <frank@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 17:00:00 -0700
+Message-Id: <20240505170000.G78STU7J90@mail-server>
+From: erin <erin@dam.local>
+X-IMAPbase:           1697823514                   58
+X-UID: 58
+Status: O
+
+Frank,
+
+I'm free on Wednesday and Thursday after lunch. Have you given Dan your slots?
+
+Erin
+
+From frank@dam.local Sun May 05 17:30:00 2023
+Return-Path: <frank@dam.local>
+X-Original-To: grace@dam.local
+Delivered-To: grace@dam.local
+Received: by mail-server (Postfix, from userid 1006)
+    id H89VWX8K01; Sun, 05 May 2023 17:30:00 -0700 (PDT)
+Subject: Meeting Times
+To: <grace@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 17:30:00 -0700
+Message-Id: <20240505173000.H89VWX8K01@mail-server>
+From: frank <frank@dam.local>
+X-IMAPbase:           1697823515                   59
+X-UID: 59
+Status: O
+
+Grace,
+
+I can only do Thursday evening. Erin mentioned you haven't given your availability yet. Let Dan know soon!
+
+Frank
+
+From grace@dam.local Sun May 05 18:00:00 2023
+Return-Path: <grace@dam.local>
+X-Original-To: heidi@dam.local
+Delivered-To: heidi@dam.local
+Received: by mail-server (Postfix, from userid 1007)
+    id I90YZA9L02; Sun, 05 May 2023 18:00:00 -0700 (PDT)
+Subject: Times for Safety Meeting
+To: <heidi@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 18:00:00 -0700
+Message-Id: <20240505180000.I90YZA9L02@mail-server>
+From: grace <grace@dam.local>
+X-IMAPbase:           1697823516                   60
+X-UID: 60
+Status: O
+
+Heidi,
+
+I'm traveling on Wednesday but should be back for a late evening meeting on Thursday. What about you? Also, do inform Dan.
+
+Grace
+
+From heidi@dam.local Sun May 05 18:30:00 2023
+Return-Path: <heidi@dam.local>
+X-Original-To: ivan@dam.local
+Delivered-To: ivan@dam.local
+Received: by mail-server (Postfix, from userid 1008)
+    id J01BCD0M03; Sun, 05 May 2023 18:30:00 -0700 (PDT)
+Subject: Availability for Meeting
+To: <ivan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 18:30:00 -0700
+Message-Id: <20240505183000.J01BCD0M03@mail-server>
+From: heidi <heidi@dam.local>
+X-IMAPbase:           1697823517                   61
+X-UID: 61
+Status: O
+
+Ivan,
+
+Thursday sounds increasingly packed. I think I can adjust. How's your schedule looking?
+
+Heidi
+
+From ivan@dam.local Sun May 05 19:00:00 2023
+Return-Path: <ivan@dam.local>
+X-Original-To: judy@dam.local
+Delivered-To: judy@dam.local
+Received: by mail-server (Postfix, from userid 1009)
+    id K02EFG1N04; Sun, 05 May 2023 19:00:00 -0700 (PDT)
+Subject: Time Slots
+To: <judy@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 19:00:00 -0700
+Message-Id: <20240505190000.K02EFG1N04@mail-server>
+From: ivan <ivan@dam.local>
+X-IMAPbase:           1697823518                   62
+X-UID: 62
+Status: O
+
+Judy,
+
+Thursday evening seems to be the common choice. Are you available?
+
+Ivan
+
+From judy@dam.local Sun May 05 19:30:00 2023
+Return-Path: <judy@dam.local>
+X-Original-To: mallory@dam.local
+Delivered-To: mallory@dam.local
+Received: by mail-server (Postfix, from userid 1010)
+    id L03GHI2O05; Sun, 05 May 2023 19:30:00 -0700 (PDT)
+Subject: Availability
+To: <mallory@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 19:30:00 -0700
+Message-Id: <20240505193000.L03GHI2O05@mail-server>
+From: judy <judy@dam.local>
+X-IMAPbase:           1697823519                   63
+X-UID: 63
+Status: O
+
+Mallory,
+
+Can you make it Thursday? Everyone seems to be leaning that way.
+
+Judy
+
+From mallory@dam.local Sun May 05 20:00:00 2023
+Return-Path: <mallory@dam.local>
+X-Original-To: niaj@dam.local
+Delivered-To: niaj@dam.local
+Received: by mail-server (Postfix, from userid 1011)
+    id M04JKL3P06; Sun, 05 May 2023 20:00:00 -0700 (PDT)
+Subject: Re: Thursday Meeting
+To: <niaj@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 20:00:00 -0700
+Message-Id: <20240505200000.M04JKL3P06@mail-server>
+From: mallory <mallory@dam.local>
+X-IMAPbase:           1697823520                   64
+X-UID: 64
+Status: O
+
+Niaj,
+
+I'm good for Thursday, but it'll have to be after 6pm for me. What about you?
+
+Mallory
+
+From niaj@dam.local Sun May 05 20:30:00 2023
+Return-Path: <niaj@dam.local>
+X-Original-To: alice@dam.local
+Delivered-To: alice@dam.local
+Received: by mail-server (Postfix, from userid 1000)
+    id N05MNO4Q07; Sun, 05 May 2023 20:30:00 -0700 (PDT)
+Subject: Finalizing Time Slots
+To: <alice@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 20:30:00 -0700
+Message-Id: <20240505203000.N05MNO4Q07@mail-server>
+From: niaj <niaj@dam.local>
+X-IMAPbase:           1697823521                   65
+X-UID: 65
+Status: O
+
+Alice,
+
+I think we're converging on Thursday. Can you coordinate with Dan to finalize? I can do anytime after 5pm.
+
+Niaj
+
+From alice@dam.local Sun May 05 21:00:00 2023
+Return-Path: <alice@dam.local>
+X-Original-To: bob@dam.local
+Delivered-To: bob@dam.local
+Received: by mail-server (Postfix, from userid 1001)
+    id O06PQR5R08; Sun, 05 May 2023 21:00:00 -0700 (PDT)
+Subject: Thursday's Meeting Time
+To: <bob@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 21:00:00 -0700
+Message-Id: <20240505210000.O06PQR5R08@mail-server>
+From: alice <alice@dam.local>
+X-IMAPbase:           1697823522                   66
+X-UID: 66
+Status: O
+
+Bob,
+
+Thursday it is. I'll check with Dan and let everyone know. Please confirm your time.
+
+Alice
+
+From bob@dam.local Sun May 05 21:30:00 2023
+Return-Path: <bob@dam.local>
+X-Original-To: charlie@dam.local
+Delivered-To: charlie@dam.local
+Received: by mail-server (Postfix, from userid 1002)
+    id P07STU6S09; Sun, 05 May 2023 21:30:00 -0700 (PDT)
+Subject: Meeting Confirmation
+To: <charlie@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 21:30:00 -0700
+Message-Id: <20240505213000.P07STU6S09@mail-server>
+From: bob <bob@dam.local>
+X-IMAPbase:           1697823523                   67
+X-UID: 67
+Status: O
+
+Charlie,
+
+Alice will confirm with Dan for Thursday. Just waiting on a few more time slots. When can you make it?
+
+Bob
+
+From charlie@dam.local Sun May 05 22:00:00 2023
+Return-Path: <charlie@dam.local>
+X-Original-To: dan@dam.local
+Delivered-To: dan@dam.local
+Received: by mail-server (Postfix, from userid 1003)
+    id Q08VWX7T10; Sun, 05 May 2023 22:00:00 -0700 (PDT)
+Subject: Meeting Time Thursday
+To: <dan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 22:00:00 -0700
+Message-Id: <20240505220000.Q08VWX7T10@mail-server>
+From: charlie <charlie@dam.local>
+X-IMAPbase:           1697823524                   68
+X-UID: 68
+Status: O
+
+Dan,
+
+Looks like everyone is gravitating towards Thursday. I'm flexible. Finalize the time, will you?
+
+Charlie
+
+From charlie@dam.local Sun May 05 22:00:00 2023
+Return-Path: <charlie@dam.local>
+X-Original-To: dan@dam.local
+Delivered-To: dan@dam.local
+Received: by mail-server (Postfix, from userid 1003)
+    id Q08VWX7T10; Sun, 05 May 2023 22:00:00 -0700 (PDT)
+Subject: Meeting Time Thursday
+To: <dan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 22:00:00 -0700
+Message-Id: <20240505220000.Q08VWX7T10@mail-server>
+From: charlie <charlie@dam.local>
+X-IMAPbase:           1697823525                   69
+X-UID: 69
+Status: O
+
+Dan,
+
+Looks like everyone is gravitating towards Thursday. I'm flexible. Finalize the time, will you?
+
+Charlie
+
+From erin@dam.local Sun May 05 23:00:00 2023
+Return-Path: <erin@dam.local>
+X-Original-To: frank@dam.local
+Delivered-To: frank@dam.local
+Received: by mail-server (Postfix, from userid 1005)
+    id S10ABC9V12; Sun, 05 May 2023 23:00:00 -0700 (PDT)
+Subject: Meeting Set
+To: <frank@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Sun, 05 May 2023 23:00:00 -0700
+Message-Id: <20240505230000.S10ABC9V12@mail-server>
+From: erin <erin@dam.local>
+X-IMAPbase:           1697823526                   70
+X-UID: 70
+Status: O
+
+Frank,
+
+Looks like we're set for Thursday, 6:30 pm. Can you bring the new schematics with you?
+
+Erin
+
+From frank@dam.local Mon May 06 08:00:00 2023
+Return-Path: <frank@dam.local>
+X-Original-To: grace@dam.local
+Delivered-To: grace@dam.local
+Received: by mail-server (Postfix, from userid 1006)
+    id T11DEF0W13; Mon, 06 May 2023 08:00:00 -0700 (PDT)
+Subject: Schematics for Meeting
+To: <grace@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 08:00:00 -0700
+Message-Id: <20240506080000.T11DEF0W13@mail-server>
+From: frank <frank@dam.local>
+X-IMAPbase:           1697823527                   71
+X-UID: 71
+Status: O
+
+Grace,
+
+Erin asked for the new schematics. Do you have the finalized version?
+
+Frank
+
+From grace@dam.local Mon May 06 09:00:00 2023
+Return-Path: <grace@dam.local>
+X-Original-To: heidi@dam.local
+Delivered-To: heidi@dam.local
+Received: by mail-server (Postfix, from userid 1007)
+    id U12GHI1X14; Mon, 06 May 2023 09:00:00 -0700 (PDT)
+Subject: Re: Schematics
+To: <heidi@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 09:00:00 -0700
+Message-Id: <20240506090000.U12GHI1X14@mail-server>
+From: grace <grace@dam.local>
+X-IMAPbase:           1697823528                   72
+X-UID: 72
+Status: O
+
+Heidi,
+
+Frank inquired about the schematics. I have the draft but not the finalized version. Do you?
+
+Grace
+
+From heidi@dam.local Mon May 06 10:00:00 2023
+Return-Path: <heidi@dam.local>
+X-Original-To: ivan@dam.local
+Delivered-To: ivan@dam.local
+Received: by mail-server (Postfix, from userid 1008)
+    id V13JKL2Y15; Mon, 06 May 2023 10:00:00 -0700 (PDT)
+Subject: Final Schematics
+To: <ivan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 10:00:00 -0700
+Message-Id: <20240506100000.V13JKL2Y15@mail-server>
+From: heidi <heidi@dam.local>
+X-IMAPbase:           1697823529                   73
+X-UID: 73
+Status: O
+
+Ivan,
+
+Do you know where the finalized schematics ended up? Need it for the meeting on Thursday.
+
+Heidi
+
+From ivan@dam.local Mon May 06 11:00:00 2023
+Return-Path: <ivan@dam.local>
+X-Original-To: judy@dam.local
+Delivered-To: judy@dam.local
+Received: by mail-server (Postfix, from userid 1009)
+    id W14MNO3Z16; Mon, 06 May 2023 11:00:00 -0700 (PDT)
+Subject: Missing Schematics
+To: <judy@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 11:00:00 -0700
+Message-Id: <20240506110000.W14MNO3Z16@mail-server>
+From: ivan <ivan@dam.local>
+X-IMAPbase:           1697823530                   74
+X-UID: 74
+Status: O
+
+Judy,
+
+I had passed the schematics to Mallory last week. Do you know if she's checked them?
+
+Ivan
+
+From judy@dam.local Mon May 06 12:00:00 2023
+Return-Path: <judy@dam.local>
+X-Original-To: mallory@dam.local
+Delivered-To: mallory@dam.local
+Received: by mail-server (Postfix, from userid 1010)
+    id X15PQR4A17; Mon, 06 May 2023 12:00:00 -0700 (PDT)
+Subject: Schematics
+To: <mallory@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 12:00:00 -0700
+Message-Id: <20240506120000.X15PQR4A17@mail-server>
+From: judy <judy@dam.local>
+X-IMAPbase:           1697823531                   75
+X-UID: 75
+Status: O
+
+Mallory,
+
+Ivan mentioned passing you the schematics. Have you reviewed them? We need them by Thursday's meeting.
+
+Judy
+
+From mallory@dam.local Mon May 06 13:00:00 2023
+Return-Path: <mallory@dam.local>
+X-Original-To: judy@dam.site
+Delivered-To: judy@dam.site
+Received: by mail-server (Postfix, from userid 1011)
+    id Y16STU5B18; Mon, 06 May 2023 13:00:00 -0700 (PDT)
+Subject: Voicemail Received
+To: <judy@dam.site>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 13:00:00 -0700
+Message-Id: <20240506130000.Y16STU5B18@mail-server>
+From: mallory <mallory@dam.local>
+X-IMAPbase:           1697823532                   76
+X-UID: 76
+Status: O
+
+Judy,
+
+Got your voicemail. The phrase for 'remote' is ##password##. Hope all turns out well. 
+
+Mallory
+
+From niaj@dam.local Mon May 06 14:00:00 2023
+Return-Path: <niaj@dam.local>
+X-Original-To: alice@dam.local
+Delivered-To: alice@dam.local
+Received: by mail-server (Postfix, from userid 1012)
+    id Z17VWX6C19; Mon, 06 May 2023 14:00:00 -0700 (PDT)
+Subject: Meeting Preparation
+To: <alice@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 14:00:00 -0700
+Message-Id: <20240506140000.Z17VWX6C19@mail-server>
+From: niaj <niaj@dam.local>
+X-IMAPbase:           1697823533                   77
+X-UID: 77
+Status: O
+
+Alice,
+
+I heard about the missing schematics. It seems Mallory has them. Are we still set for the meeting on Thursday?
+
+Niaj
+
+From alice@dam.local Mon May 06 15:00:00 2023
+Return-Path: <alice@dam.local>
+X-Original-To: bob@dam.local
+Delivered-To: bob@dam.local
+Received: by mail-server (Postfix, from userid 1001)
+    id A18XYZ7D20; Mon, 06 May 2023 15:00:00 -0700 (PDT)
+Subject: Meeting Prep
+To: <bob@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 15:00:00 -0700
+Message-Id: <20240506150000.A18XYZ7D20@mail-server>
+From: alice <alice@dam.local>
+X-IMAPbase:           1697823534                   78
+X-UID: 78
+Status: O
+
+Bob,
+
+Yes, we're still on for Thursday. I trust we'll have the schematics by then. Could you also prepare a short presentation on the structural integrity?
+
+Alice
+
+From bob@dam.local Mon May 06 16:00:00 2023
+Return-Path: <bob@dam.local>
+X-Original-To: charlie@dam.local
+Delivered-To: charlie@dam.local
+Received: by mail-server (Postfix, from userid 1002)
+    id B19ABC8E21; Mon, 06 May 2023 16:00:00 -0700 (PDT)
+Subject: Presentation Help
+To: <charlie@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 16:00:00 -0700
+Message-Id: <20240506160000.B19ABC8E21@mail-server>
+From: bob <bob@dam.local>
+X-IMAPbase:           1697823535                   79
+X-UID: 79
+Status: O
+
+Charlie,
+
+Need some help with the presentation. Can we sync up tomorrow?
+
+Bob
+
+From charlie@dam.local Mon May 06 17:00:00 2023
+Return-Path: <charlie@dam.local>
+X-Original-To: dan@dam.local
+Delivered-To: dan@dam.local
+Received: by mail-server (Postfix, from userid 1003)
+    id C20DEF9F22; Mon, 06 May 2023 17:00:00 -0700 (PDT)
+Subject: Presentation Materials
+To: <dan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 17:00:00 -0700
+Message-Id: <20240506170000.C20DEF9F22@mail-server>
+From: charlie <charlie@dam.local>
+X-IMAPbase:           1697823536                   80
+X-UID: 80
+Status: O
+
+Dan,
+
+Bob asked for help with the presentation. Do we have any recent data on the dam's stability?
+
+Charlie
+
+From dan@dam.local Mon May 06 18:00:00 2023
+Return-Path: <dan@dam.local>
+X-Original-To: erin@dam.local
+Delivered-To: erin@dam.local
+Received: by mail-server (Postfix, from userid 1004)
+    id D21GHI0G23; Mon, 06 May 2023 18:00:00 -0700 (PDT)
+Subject: Re: Dam's Stability Data
+To: <erin@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 18:00:00 -0700
+Message-Id: <20240506180000.D21GHI0G23@mail-server>
+From: dan <dan@dam.local>
+X-IMAPbase:           1697823537                   81
+X-UID: 81
+Status: O
+
+Erin,
+
+Do you have the recent analysis from the sensors? Charlie and Bob are preparing a presentation and it might be handy.
+
+Dan
+
+From erin@dam.local Mon May 06 19:00:00 2023
+Return-Path: <erin@dam.local>
+X-Original-To: frank@dam.local
+Delivered-To: frank@dam.local
+Received: by mail-server (Postfix, from userid 1005)
+    id E22JKL1H24; Mon, 06 May 2023 19:00:00 -0700 (PDT)
+Subject: Sensor Analysis
+To: <frank@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 19:00:00 -0700
+Message-Id: <20240506190000.E22JKL1H24@mail-server>
+From: erin <erin@dam.local>
+X-IMAPbase:           1697823538                   82
+X-UID: 82
+Status: O
+
+Frank,
+
+I retrieved the sensor data, but there seems to be an anomaly. Can you check the sensors on the south wall tomorrow?
+
+Erin
+
+From frank@dam.local Mon May 06 20:00:00 2023
+Return-Path: <frank@dam.local>
+X-Original-To: grace@dam.local
+Delivered-To: grace@dam.local
+Received: by mail-server (Postfix, from userid 1006)
+    id F23MNO2I25; Mon, 06 May 2023 20:00:00 -0700 (PDT)
+Subject: Sensor Inspection
+To: <grace@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 20:00:00 -0700
+Message-Id: <20240506200000.F23MNO2I25@mail-server>
+From: frank <frank@dam.local>
+X-IMAPbase:           1697823539                   83
+X-UID: 83
+Status: O
+
+Grace,
+
+Can you assist with the sensor inspection? We might need to recalibrate.
+
+Frank
+
+From grace@dam.local Mon May 06 21:00:00 2023
+Return-Path: <grace@dam.local>
+X-Original-To: heidi@dam.local
+Delivered-To: heidi@dam.local
+Received: by mail-server (Postfix, from userid 1007)
+    id G24PQR3J26; Mon, 06 May 2023 21:00:00 -0700 (PDT)
+Subject: Equipment Request
+To: <heidi@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 21:00:00 -0700
+Message-Id: <20240506210000.G24PQR3J26@mail-server>
+From: grace <grace@dam.local>
+X-IMAPbase:           1697823540                   84
+X-UID: 84
+Status: O
+
+Heidi,
+
+Frank and I will need some equipment for the sensor inspection. Can you prep the recalibration tools and the drone?
+
+Grace
+
+From heidi@dam.local Mon May 06 22:00:00 2023
+Return-Path: <heidi@dam.local>
+X-Original-To: ivan@dam.local
+Delivered-To: ivan@dam.local
+Received: by mail-server (Postfix, from userid 1008)
+    id H25STU4K27; Mon, 06 May 2023 22:00:00 -0700 (PDT)
+Subject: Equipment and Drones
+To: <ivan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Mon, 06 May 2023 22:00:00 -0700
+Message-Id: <20240506220000.H25STU4K27@mail-server>
+From: heidi <heidi@dam.local>
+X-IMAPbase:           1697823541                   85
+X-UID: 85
+Status: O
+
+Ivan,
+
+I might need a hand with prepping the drone. Also, do you have an updated software for the drone's sensors?
+
+Heidi
+
+From ivan@dam.local Tue May 07 08:00:00 2023
+Return-Path: <ivan@dam.local>
+X-Original-To: judy@dam.local
+Delivered-To: judy@dam.local
+Received: by mail-server (Postfix, from userid 1009)
+    id I26VWX5L28; Tue, 07 May 2023 08:00:00 -0700 (PDT)
+Subject: Drone Software Update
+To: <judy@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Tue, 07 May 2023 08:00:00 -0700
+Message-Id: <20240507080000.I26VWX5L28@mail-server>
+From: ivan <ivan@dam.local>
+X-IMAPbase:           1697823542                   86
+X-UID: 86
+Status: O
+
+Judy,
+
+I'm uploading the latest drone software. Do you think you can help review the code? We want it running smoothly for the dam inspection.
+
+Ivan
+
+From judy@dam.local Tue May 07 09:00:00 2023
+Return-Path: <judy@dam.local>
+X-Original-To: mallory@dam.local
+Delivered-To: mallory@dam.local
+Received: by mail-server (Postfix, from userid 1010)
+    id J27YZA6M29; Tue, 07 May 2023 09:00:00 -0700 (PDT)
+Subject: Code Review - Drone Software
+To: <mallory@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Tue, 07 May 2023 09:00:00 -0700
+Message-Id: <20240507090000.J27YZA6M29@mail-server>
+From: judy <judy@dam.local>
+X-IMAPbase:           1697823543                   87
+X-UID: 87
+Status: O
+
+Mallory,
+
+Ivan and I are reviewing the drone software update. Can you assist? We'll need someone with a keen eye for algorithms.
+
+Judy
+
+From mallory@dam.local Tue May 07 10:00:00 2023
+Return-Path: <mallory@dam.local>
+X-Original-To: niaj@dam.local
+Delivered-To: niaj@dam.local
+Received: by mail-server (Postfix, from userid 1011)
+    id M28ABC7N30; Tue, 07 May 2023 10:00:00 -0700 (PDT)
+Subject: Drone Algorithms
+To: <niaj@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Tue, 07 May 2023 10:00:00 -0700
+Message-Id: <20240507100000.M28ABC7N30@mail-server>
+From: mallory <mallory@dam.local>
+X-IMAPbase:           1697823544                   88
+X-UID: 88
+Status: O
+
+Niaj,
+
+We're diving into the drone software update. I heard you worked on a similar project last year. Your expertise would be invaluable right now.
+
+Mallory
+
+From niaj@dam.local Tue May 07 11:00:00 2023
+Return-Path: <niaj@dam.local>
+X-Original-To: alice@dam.local
+Delivered-To: alice@dam.local
+Received: by mail-server (Postfix, from userid 1001)
+    id N29DEF8O31; Tue, 07 May 2023 11:00:00 -0700 (PDT)
+Subject: Drone Project Collaboration
+To: <alice@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Tue, 07 May 2023 11:00:00 -0700
+Message-Id: <20240507110000.N29DEF8O31@mail-server>
+From: niaj <niaj@dam.local>
+X-IMAPbase:           1697823545                   89
+X-UID: 89
+Status: O
+
+Alice,
+
+Gathering a team for the drone software deep dive. Think you can oversee the project and ensure all sections communicate seamlessly?
+
+Niaj
+
+From alice@dam.local Tue May 07 12:00:00 2023
+Return-Path: <alice@dam.local>
+X-Original-To: bob@dam.local
+Delivered-To: bob@dam.local
+Received: by mail-server (Postfix, from userid 1002)
+    id A30GHI9P32; Tue, 07 May 2023 12:00:00 -0700 (PDT)
+Subject: Leading Drone Initiative for Dam Inspection
+To: <bob@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Tue, 07 May 2023 12:00:00 -0700
+Message-Id: <20240507120000.A30GHI9P32@mail-server>
+From: alice <alice@dam.local>
+X-IMAPbase:           1697823556                   90
+X-UID: 90
+Status: O
+
+Bob,
+
+Given the urgency to inspect the dam's structure using the drone, I'll be leading the initiative. Coordinate with Charlie and make sure we have all the necessary permits in place.
+
+Alice
+
+From bob@dam.local Tue May 07 13:00:00 2023
+Return-Path: <bob@dam.local>
+X-Original-To: charlie@dam.local
+Delivered-To: charlie@dam.local
+Received: by mail-server (Postfix, from userid 1003)
+    id B31JKL0Q33; Tue, 07 May 2023 13:00:00 -0700 (PDT)
+Subject: Permits for Drone Inspection
+To: <charlie@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Tue, 07 May 2023 13:00:00 -0700
+Message-Id: <20240507130000.B31JKL0Q33@mail-server>
+From: bob <bob@dam.local>
+X-IMAPbase:           1697823557                   91
+X-UID: 91
+Status: O
+
+Charlie,
+
+We need those permits ASAP for the drone's flyover inspection of the dam. Can you work with the local authorities to expedite the process?
+
+Bob
+
+From charlie@dam.local Tue May 07 14:00:00 2023
+Return-Path: <charlie@dam.local>
+X-Original-To: dan@dam.local
+Delivered-To: dan@dam.local
+Received: by mail-server (Postfix, from userid 1004)
+    id C32MNO1R34; Tue, 07 May 2023 14:00:00 -0700 (PDT)
+Subject: Assistance with Local Authorities
+To: <dan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Tue, 07 May 2023 14:00:00 -0700
+Message-Id: <20240507140000.C32MNO1R34@mail-server>
+From: charlie <charlie@dam.local>
+X-IMAPbase:           1697823558                   92
+X-UID: 92
+Status: O
+
+Dan,
+
+I need help navigating the bureaucracy for the drone permits. Can you liaise with the local government offices?
+
+Charlie
+
+From dan@dam.local Tue May 07 15:00:00 2023
+Return-Path: <dan@dam.local>
+X-Original-To: erin@dam.local
+Delivered-To: erin@dam.local
+Received: by mail-server (Postfix, from userid 1005)
+    id D33PQR2S35; Tue, 07 May 2023 15:00:00 -0700 (PDT)
+Subject: Research on Previous Drone Approvals
+To: <erin@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Tue, 07 May 2023 15:00:00 -0700
+Message-Id: <20240507150000.D33PQR2S35@mail-server>
+From: dan <dan@dam.local>
+X-IMAPbase:           1697823559                   93
+X-UID: 93
+Status: O
+
+Erin,
+
+I recall you documenting previous instances where we got drone approvals for dam inspections. Can you pull that out? It might help our current situation.
+
+Dan
+
+From erin@dam.local Tue May 07 16:00:00 2023
+Return-Path: <erin@dam.local>
+X-Original-To: frank@dam.local
+Delivered-To: frank@dam.local
+Received: by mail-server (Postfix, from userid 1006)
+    id E34STU3T36; Tue, 07 May 2023 16:00:00 -0700 (PDT)
+Subject: Found Documentation on Past Drone Approvals
+To: <frank@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Tue, 07 May 2023 16:00:00 -0700
+Message-Id: <20240507160000.E34STU3T36@mail-server>
+From: erin <erin@dam.local>
+X-IMAPbase:           1697823560                   94
+X-UID: 94
+Status: O
+
+Frank,
+
+I've located the documentation on our previous drone approvals. Can you cross-check these with the current requirements to ensure we're on track?
+
+Erin
+
+From frank@dam.local Tue May 07 17:00:00 2023
+Return-Path: <frank@dam.local>
+X-Original-To: grace@dam.local
+Delivered-To: grace@dam.local
+Received: by mail-server (Postfix, from userid 1007)
+    id F35VWX4U37; Tue, 07 May 2023 17:00:00 -0700 (PDT)
+Subject: Cross-checking Documentation
+To: <grace@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Tue, 07 May 2023 17:00:00 -0700
+Message-Id: <20240507170000.F35VWX4U37@mail-server>
+From: frank <frank@dam.local>
+X-IMAPbase:           1697823561                   95
+X-UID: 95
+Status: O
+
+Grace,
+
+I'm currently swamped with the dam's structural integrity reports. Can you help cross-check the drone approval documentation Erin provided?
+
+Frank
+
+From grace@dam.local Tue May 07 18:00:00 2023
+Return-Path: <grace@dam.local>
+X-Original-To: heidi@dam.local
+Delivered-To: heidi@dam.local
+Received: by mail-server (Postfix, from userid 1008)
+    id G36YZA5V38; Tue, 07 May 2023 18:00:00 -0700 (PDT)
+Subject: Permission Documents Review
+To: <heidi@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Tue, 07 May 2023 18:00:00 -0700
+Message-Id: <20240507180000.G36YZA5V38@mail-server>
+From: grace <grace@dam.local>
+X-IMAPbase:           1697823562                   96
+X-UID: 96
+Status: O
+
+Heidi,
+
+I've received the past drone approval documentation. We need to ensure everything's up to code. Given your expertise, I'd appreciate your review.
+
+Grace
+
+From heidi@dam.local Tue May 07 19:00:00 2023
+Return-Path: <heidi@dam.local>
+X-Original-To: ivan@dam.local
+Delivered-To: ivan@dam.local
+Received: by mail-server (Postfix, from userid 1009)
+    id H37BCD6W39; Tue, 07 May 2023 19:00:00 -0700 (PDT)
+Subject: Possible Discrepancies in Drone Permissions
+To: <ivan@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Tue, 07 May 2023 19:00:00 -0700
+Message-Id: <20240507190000.H37BCD6W39@mail-server>
+From: heidi <heidi@dam.local>
+X-IMAPbase:           1697823563                   97
+X-UID: 97
+Status: O
+
+Ivan,
+
+I've reviewed the drone permission documents and noticed some discrepancies. We might have overlooked a few clauses last time. This could delay our drone survey. Can you consult with the legal team to clarify?
+
+Heidi
+
+From ivan@dam.local Wed May 08 09:00:00 2023
+Return-Path: <ivan@dam.local>
+X-Original-To: judy@dam.local
+Delivered-To: judy@dam.local
+Received: by mail-server (Postfix, from userid 1010)
+    id I45DEE7X40; Wed, 08 May 2023 09:00:00 -0700 (PDT)
+Subject: Drone Permissions: Legal Consultation
+To: <judy@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Wed, 08 May 2023 09:00:00 -0700
+Message-Id: <20240508090000.I45DEE7X40@mail-server>
+From: ivan <ivan@dam.local>
+X-IMAPbase:           1697823564                  98
+X-UID: 98
+Status: O
+
+Judy,
+
+Heidi has highlighted some discrepancies in our past drone permissions. We need a legal review. Are you available to consult?
+
+Ivan
+
+From judy@dam.local Wed May 08 10:00:00 2023
+Return-Path: <judy@dam.local>
+X-Original-To: mallory@dam.local
+Delivered-To: mallory@dam.local
+Received: by mail-server (Postfix, from userid 1011)
+    id J46FGF8Y41; Wed, 08 May 2023 10:00:00 -0700 (PDT)
+Subject: Legal Team's Input on Drone Permissions
+To: <mallory@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Wed, 08 May 2023 10:00:00 -0700
+Message-Id: <20240508100000.J46FGF8Y41@mail-server>
+From: judy <judy@dam.local>
+X-IMAPbase:           1697823565                  99
+X-UID: 99
+Status: O
+
+Mallory,
+
+I need your input on the drone permission documents. There are potential legal implications. Can you dedicate some time to this?
+
+Judy
+
+From mallory@dam.local Wed May 08 11:00:00 2023
+Return-Path: <mallory@dam.local>
+X-Original-To: niaj@dam.local
+Delivered-To: niaj@dam.local
+Received: by mail-server (Postfix, from userid 1012)
+    id M47GHH9Z42; Wed, 08 May 2023 11:00:00 -0700 (PDT)
+Subject: Legal Review Findings
+To: <niaj@dam.local>
+User-Agent: mail (GNU Mailutils 3.14)
+Date: Wed, 08 May 2023 11:00:00 -0700
+Message-Id: <20240508110000.M47GHH9Z42@mail-server>
+From: mallory <mallory@dam.local>
+X-IMAPbase:           1697823566                 100
+X-UID: 100
+Status: O
+
+Niaj,
+
+We've reviewed the permissions, and there are indeed some areas of concern. We need a joint meeting to address this. Can you coordinate with Heidi and Ivan?
+
+Mallory
+

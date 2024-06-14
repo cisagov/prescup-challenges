@@ -1,0 +1,30 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Overload{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<div>
+    <ul class="navbar"> 
+        <li class="timer navbar_elements">Website Overloaded</li>
+    </ul>
+</div>
+<br><br><br>
+<div class="login">
+    <h2 class="portal">Apologies for the Delay</h2><br>
+    <h3>our website has hit capacity for the moment.<br><br><br>
+    Feel free to view our favorite dad jokes to help pass the time until this surge has been handled.</h3><br>
+    <a style="font-size: 15px;" href="{{ url_for('main.download',fn='dad_jokes') }}">Dad Jokes</a>
+    <br><br>
+    <h3>You can view information on the status of the website <a style="font-size: 15px;" href="/queue_status">here</a> to track how much longer until the basic functionality is restored.</h3>
+</div>
+{% endblock %}
+

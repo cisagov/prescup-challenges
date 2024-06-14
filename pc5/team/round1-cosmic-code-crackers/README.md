@@ -14,8 +14,6 @@ Investigate systems and IDS logs in order to locate, detect, analyze, reverse en
 - [T0286](https://niccs.cisa.gov/workforce-development/nice-framework): Perform file system forensic analysis.
 - [T0432](https://niccs.cisa.gov/workforce-development/nice-framework): Collect and analyze intrusion artifacts (e.g., source code, malware, and system configuration) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise.
 
-<!-- cut -->
-
 ## Background
 
 The ship network has been compromised by malicious code! Some files may contain sensitive data--investigate these suspicious files and reverse engineer or crack the code to gain access. *Cosmic Code Crackers* is comprised of several parts. Each part can be solved independently and simultaneously by a team.

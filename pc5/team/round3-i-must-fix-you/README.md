@@ -32,16 +32,6 @@ The organization has information on some of these files and has provided it via 
 
 Log into the Kali VM and browse to: `https://challenge.us/files`. Download `instructions.txt` and `corrupted_files.zip`.
 
-## System and Tool Credentials
-
-|system/tool|username|password|
-|-----------|--------|--------|
-|kali|user|tartans|
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
-
 ## Challenge Questions
 
 1. What is the 8-character hex string found in the PDF after successfully repairing it?

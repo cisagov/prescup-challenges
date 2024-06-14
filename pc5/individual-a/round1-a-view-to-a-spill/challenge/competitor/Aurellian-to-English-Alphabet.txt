@@ -1,0 +1,32 @@
+﻿English Character,Aurellian Character
+A,ƾ
+B,Ꭷ
+C,˧
+D,ॽ
+E,ʯ
+F,ͼ
+G,Ϩ
+H,˨
+I,थ
+J,ɤ
+K,Ꮺ
+L,ͽ
+M,ৡ
+N,ʢ
+O,ଞ
+P,߷
+Q,੪
+R,˦
+S,ૹ
+T,७
+U,ୟ
+V,Ϡ
+W,ɮ
+X,୶
+Y,ன
+Z,ʧ
+.,⚆
+",",⚇
+?,⚙
+!,⛯
+ , 

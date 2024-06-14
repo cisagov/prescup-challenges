@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tools
+  namespace: default
+spec:
+  containers:
+  - name: tools
+    image: registry.merch.codes:5000/tools:latest
+    command:
+      - sleep
+      - "infinity"
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always
+

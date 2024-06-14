@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+
 import zlib
 
 #Read the bytes of the files `type.txt` and `data.txt` in the current `chunk#` folder and then concatenate them.

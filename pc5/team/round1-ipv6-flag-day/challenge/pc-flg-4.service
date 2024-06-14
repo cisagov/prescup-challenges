@@ -1,0 +1,14 @@
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+[Unit]
+Description=PresCup ipv4 flag service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ncat -l -k -4 --no-shutdown -c /usr/share/prescup/pc-flg-4.sh
+
+[Install]
+WantedBy=multi-user.target

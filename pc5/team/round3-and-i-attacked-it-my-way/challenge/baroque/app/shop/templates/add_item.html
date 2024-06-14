@@ -1,0 +1,44 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}List Item{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<span id="title" style="padding-top:20px;">
+    List an Item to Sell!
+</span>
+
+<form method="POST" action="{{url_for('shop.add_item')}}" enctype="multipart/form-data" id="min-top-padding">
+    <fieldset>
+    <legend align='center'>Item Details</legend>
+    <table>
+        <tr class="bodypost">
+            <td align='left' style="width:25%;"><label>Name</label></td>
+            <td align='right' style="width:50%"><input type='text' name='name' required></td>
+        </tr>
+        <tr class="bodypost">
+            <td align='left' style="width:25%;"><label>Description</label></td>
+            <td align='right' style="width:50%"><textarea style="font-size: 15px;width:100%;" name="desc" rows="5" cols="50" placeholder="2-3 sentences please..." required></textarea></td>
+        </tr>
+        <tr class="bodypost">
+            <td align='left' style="width:25%;"><label>Category</label></td>
+            <td align='right' style="width:50%"><input type='text' name='category' required></td>
+        </tr>
+        <tr class="bodypost">
+            <td align='left' style="width:25%;"><label>Price</label></td>
+            <td align='right' style="width:50%"><input type='text' name='price' required></td>
+        </tr>
+    </table>
+    <input type="submit" name="submit" value="Submit" style="font-size: 20px;">
+    </fieldset>
+</form>
+
+{% endblock %}

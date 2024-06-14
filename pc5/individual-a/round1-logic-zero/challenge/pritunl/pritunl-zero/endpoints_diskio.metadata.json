@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"pritunl-zero.endpoints_diskio"},{"v":2,"key":{"t":1,"e":1},"name":"t_1_e_1","ns":"pritunl-zero.endpoints_diskio","background":true}],"uuid":"a15c18aa54aa4f8da240161eb0963163"}

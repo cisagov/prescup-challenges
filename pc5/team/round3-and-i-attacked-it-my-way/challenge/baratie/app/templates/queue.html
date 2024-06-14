@@ -1,0 +1,31 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Login Queue{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<div>
+    <ul class="navbar"> 
+        <li class="timer navbar_elements">Welcome to the Baratie!</li>
+    </ul>
+</div>
+<br><br><br>
+<div class="login">
+    <h2 class="portal">Login Queue</h2>
+    <br><br>
+    <div id="myProgress">
+        <div id="myBar"></div>
+    </div><br><br>
+    <div id="msg" style="font-size:18px;"></div>
+    <script id="queue_check" my_id="{{my_id}}" src="{{url_for('static',filename='queue.js')}}"></script> 
+</div>
+{% endblock %}
+

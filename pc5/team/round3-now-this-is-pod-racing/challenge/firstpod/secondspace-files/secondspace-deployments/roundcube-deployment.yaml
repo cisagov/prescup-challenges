@@ -1,0 +1,77 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: roundcubemail
+  labels:
+    service: roundcubemail
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: roundcubemail
+  template:
+    metadata:
+      labels:
+        service: roundcubemail
+    spec:
+      containers:
+      - name: roundcubemail
+        image: registry.merch.codes:5000/roundcube_trusted:latest
+        imagePullPolicy: "Always"
+        resources:
+          requests:
+            cpu: 200m
+            memory: 256Mi
+        env:
+        - name: ROUNDCUBEMAIL_DB_TYPE
+          value: pgsql
+        - name: ROUNDCUBEMAIL_DB_NAME
+          value: roundcube_db
+        - name: ROUNDCUBEMAIL_DB_PORT
+          value: "30432"
+        - name: ROUNDCUBEMAIL_DB_HOST
+          valueFrom:
+            secretKeyRef:
+              name: roundcubemail-secret
+              key: DB_HOST
+        - name: ROUNDCUBEMAIL_DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: roundcubemail-secret
+              key: DB_USER
+        - name: ROUNDCUBEMAIL_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: roundcubemail-secret
+              key: DB_PASSWORD
+        - name: ROUNDCUBEMAIL_DES_KEY
+          valueFrom:
+            secretKeyRef:
+              name: roundcubemail-secret
+              key: DES_KEY
+        - name: ROUNDCUBEMAIL_DEFAULT_HOST
+          value: dovecot-service
+        - name: ROUNDCUBEMAIL_SMTP_SERVER
+          value: postfix-service
+        - name: ROUNDCUBEMAIL_SMTP_PORT
+          value: "25"
+        - name: ROUNDCUBEMAIL_SKIN
+          value: elastic
+        - name: ROUNDCUBEMAIL_PLUGINS
+          value: archive,zipdownload,newmail_notifier,archive,zipdownload,newmail_notifier,userinfo
+        ports:
+        - containerPort: 80
+        volumeMounts:
+      # - mountPath: /usr/src/roundcubemail
+        #  name: www-data
+        #  subPath: roundcubemail-update
+        - mountPath: /var/www/html/
+          name: www-data
+          subPath: roundcubemail-installed
+      restartPolicy: Always
+      volumes:
+      - name: www-data
+        persistentVolumeClaim:
+          claimName: appdata-pvc
+      - name: temp-data
+        emptyDir: {}

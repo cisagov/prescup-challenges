@@ -1,0 +1,23 @@
+required_services:
+  - host: 10.3.3.3
+    type: web
+    port: 3000
+    path: /airlocks
+  - host: 10.10.10.20
+    type: socket
+    port: 22
+grading:
+  enabled: true
+  mode: button
+  grading_script: challengeGrading.py
+  rate_limit: 30
+  token_location: guestinfo
+  submission:
+    method: display
+  parts:
+    GradingCheck1:
+      token_name: token1
+      text: "Cut off the insider threat from the API without taking down the API." 
+    GradingCheck2:
+      token_name: token2
+      text: "Reset the 'cargo' airlock so that both doors are closed and the airlock is pressurized."

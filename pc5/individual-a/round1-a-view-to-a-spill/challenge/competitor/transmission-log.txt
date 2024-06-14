@@ -1,0 +1,50 @@
+April 25th, 2023 08:20:15 00:03:42 Ship-Voyager MAJ Nova Non-sensitive
+April 25th, 2023 09:10:59 00:02:17 Station-Galaxy ENS Stardust Non-sensitive
+April 25th, 2023 10:25:43 00:01:51 Ship-Centauri LT Vega Sensitive/Non-mission critical
+April 25th, 2023 11:40:20 00:02:58 Station-Polaris ENS Stardust Non-sensitive
+April 25th, 2023 13:15:07 00:01:23 Ship-Orion MAJ Nebula Non-sensitive
+April 25th, 2023 14:32:55 00:02:46 Station-Nebula ENS Starfire Non-sensitive
+April 25th, 2023 15:45:39 00:01:57 Ship-Sirius LT Vega Non-sensitive
+April 25th, 2023 16:34:10 00:00:34 Station-Bravo CPT Rogers Sensitive/Mission critical
+April 25th, 2023 16:58:14 00:03:12 Station-Andromeda LT Vega Non-sensitive
+April 25th, 2023 17:45:21 00:01:51 Ship-Apollo LT Vega Sensitive/Non-mission critical
+April 25th, 2023 18:10:49 00:02:04 Ship-Nova ENS Stardust Non-sensitive
+April 25th, 2023 18:12:03 00:03:07 Station-Omega LCDR Orion Non-sensitive
+April 25th, 2023 19:40:33 00:01:39 Station-Centaurus MAJ Nova Non-sensitive
+April 25th, 2023 19:28:56 00:02:19 Ship-Neptune MAJ Nova Non-sensitive
+April 26th, 2023 07:15:42 00:00:34 Station-Alpha CDR Starfire Sensitive/Mission critical
+April 26th, 2023 08:15:30 00:02:49 Station-Bravo CPT Rogers Non-sensitive
+April 26th, 2023 09:30:45 00:01:59 Ship-Neptune MAJ Nova Non-sensitive
+April 26th, 2023 10:45:12 00:03:07 Station-Omega CDR Orion Non-sensitive
+April 26th, 2023 11:55:21 00:02:22 Ship-Orion MAJ Nebula Non-sensitive
+April 26th, 2023 13:10:38 00:01:34 Station-Alpha COL Starfire Sensitive/Non-mission critical
+April 26th, 2023 14:25:59 00:02:18 Ship-Centauri LT Vega Non-sensitive
+April 26th, 2023 15:40:12 00:01:57 Station-Galaxy ENS Stardust Non-sensitive
+April 26th, 2023 16:55:29 00:03:10 Ship-Sirius LT Vega Non-sensitive
+April 26th, 2023 18:05:44 00:02:09 Station-Polaris LCDR Orion Non-sensitive
+April 26th, 2023 19:20:57 00:01:47 Ship-Nova MAJ Nova Non-sensitive
+April 27th, 2023 08:05:17 00:00:34 Ship-Sirius LT Vega Sensitive/Mission critical
+April 27th, 2023 09:15:34 00:01:42 Station-Galaxy ENS Stardust Non-sensitive
+April 27th, 2023 10:25:51 00:03:12 Ship-Orion MAJ Nebula Non-sensitive
+April 27th, 2023 11:35:48 00:02:09 Station-Alpha COL Starfire Non-sensitive
+April 27th, 2023 12:45:56 00:01:57 Ship-Neptune MAJ Nova Non-sensitive
+April 27th, 2023 14:00:02 00:02:22 Station-Polaris LCDR Orion Non-sensitive
+April 27th, 2023 15:10:14 00:01:39 Ship-Centauri LT Vega Sensitive/Non-mission critical
+April 27th, 2023 16:20:27 00:02:49 Station-Omega CDR Starfire Non-sensitive
+April 27th, 2023 17:30:39 00:02:18 Ship-Nova MAJ Nebula Non-sensitive
+April 27th, 2023 18:40:47 00:01:54 Station-Bravo CPT Rogers Non-sensitive
+April 28th, 2023 08:15:20 00:00:34 Station-Polaris LCDR Orion Sensitive/Mission critical
+April 28th, 2023 09:25:45 00:01:51 Ship-Orion MAJ Nebula Sensitive/Non-mission critical
+April 28th, 2023 10:35:10 00:02:36 Station-Galaxy ENS Stardust Non-sensitive
+April 28th, 2023 11:45:29 00:01:59 Ship-Sirius LT Vega S
+April 28th, 2023 13:00:12 00:02:22 Station-Alpha COL Starfire Non-sensitive
+April 28th, 2023 14:10:37 00:01:34 Ship-Nova MAJ Nova  Non-sensitive
+April 28th, 2023 15:20:54 00:02:18 Station-Bravo CPT Rogers Sensitive/Non-mission critical
+April 29th, 2023 08:05:15 00:00:34 Ship-Centauri LT Vega Sensitive/Mission critical
+April 29th, 2023 09:15:32 00:01:42 Station-Galaxy ENS Stardust Non-sensitive
+April 29th, 2023 10:25:49 00:03:12 Ship-Orion MAJ Nebula Sensitive/Non-mission critical
+April 29th, 2023 11:35:46 00:02:09 Station-Alpha COL Starfire Non-sensitive
+April 29th, 2023 12:45:54 00:01:57 Ship-Neptune MAJ Nova Non-sensitive
+April 29th, 2023 14:00:00 00:02:22 Station-Polaris LCDR Orion Non-sensitive
+April 29th, 2023 15:10:12 00:01:39 Ship-Sirius LT Vega Non-sensitive
+April 29th, 2023 16:20:25 00:02:49 Station-Bravo CPT Rogers Non-sensitive

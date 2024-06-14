@@ -13,6 +13,9 @@ Important sensitive data was stolen from the network of the Aurellian commercial
 - [T0259](https://niccs.cisa.gov/workforce-development/nice-framework/): Use cyber defense tools for continual monitoring and analysis of system activity to identify malicious activity.
 - [T0291](https://niccs.cisa.gov/workforce-development/nice-framework/): Examine network topologies to understand data flows through the network.
 
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
+
 ## Background
 
 Someone on the *Daunted*'s network stole important customer data related to the *Daunted*'s online shop.

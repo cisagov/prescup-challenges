@@ -12,6 +12,9 @@ Perform credential vault recovery in order to gain access to a data recovery web
 - [T0103](https://niccs.cisa.gov/workforce-development/nice-framework): Examine recovered data for information of relevance to the issue at hand.
 - [T0238](https://niccs.cisa.gov/workforce-development/nice-framework): Extract data using data carving techniques (e.g., Forensic Tool Kit [FTK], Foremost).
 
+## ⚠️ Large Files ⚠️
+This challenge includes large files as a separate download. Please download the large files [here](https://presidentscup.cisa.gov/files/pc5/individuala-round3-the-passed-of-us.zip). The zip contains the webroot directory for the secrets page and the backup file storage page. The zipped file is ~230 MBs and the extracted file set is ~500 MBs.
+
 
 ## Background
 
@@ -29,15 +32,6 @@ Using this information, derive the vault's symmetric encryption key to recover M
 
 After finally accessing the data recovery site and backups, scour the backups for evidence of PDF files deleted on **February 28** and analyze these files for information relevant to the  medical mission.
 
-## System Tools and Credentials
-
-| system | OS type | username | password |
-|--------|---------|----------|--------|
-| Kali | Kali | user | tartans|
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (`10.5.5.5` or `64.100.100.102`) is forbidden. You may only use the provided webpage to view challenge progress and download any challenge artifacts that are provided.
 
 ## Challenge Questions
 

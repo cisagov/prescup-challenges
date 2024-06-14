@@ -1,0 +1,109 @@
+/*
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*/
+
+/************** Basic layout **************/
+body {
+    background: SteelBlue;
+    /*font: 400 14px "Calibri", "Arial";*/
+    font-family: 400 14px "Sans-serif","Helvetica";
+    padding: 20px;
+    font-size: 18px;
+}
+
+fieldset {
+    max-width: 1000px;
+    width:100%;
+    border-color:black;
+    border-style:solid;
+}
+
+legend {
+    padding: 5px 10px;
+    border:1px solid black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.important {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+div.list {
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    display: table;
+}
+
+div.center {
+    width:900px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    display: table;
+}
+
+p.center ul.center {
+    text-align:left;
+}
+
+.notification {
+    color: burlywood;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/************** Simple Navbar **************/
+ul.navbar {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color: rgb(140, 171, 211);
+    position: sticky;
+    border: 1px solid black;
+    display:flex;
+    justify-content: space-between;
+}
+
+.navbar_elements {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a.navbar_elements:hover {
+    cursor:pointer;
+    background-color: rgb(114, 156, 211);
+    color: black;
+}
+/* navbar elements, left to right */
+
+li.timer {
+    margin: 0;
+    flex-grow: 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor:default;
+}
+
+footer {
+    text-align: center;
+    font-size:12px;
+    width:100%;
+    clear:both;
+    padding-top: 20px;
+    position: relative;
+}
+
+.token {
+    font-size: 15px;
+    text-align: left;
+}

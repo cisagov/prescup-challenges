@@ -1,0 +1,23 @@
+fridge:
+    current_version: "0.2.7"
+    files: 
+        update.py: "http://145.100.100.101:28572/fridge/update.py"
+        config.yaml: "http://145.100.100.101:28572/fridge/config.yaml"
+
+freezer:
+    current_version: "0.3.3"
+    files: 
+        update.py: "http://145.100.100.101:28572/freezer/update.py"
+        config.yaml: "http://145.100.100.101:28572/freezer/config.yaml"
+
+fr1dge:
+    current_version: "O.2.7"
+    files: 
+        updat3.py : "http://145.100.100.101:28572/fr1dge/updat3.py"
+        conf1g.yaml : "http://145.100.100.101:28572/fr1dge/conf1g.yaml"
+
+
+###  note: Could insert bad config for a 3rd device, 
+#  like `fr1dge`. As in someone edited device + server so that they pointed to the wrong config & they uploaded that config on the server.
+# Could then require user to fix device and/or server to remove bad config + change what the device is pointing too (fridge instead of fr1dge)
+###

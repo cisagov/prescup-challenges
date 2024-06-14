@@ -1,0 +1,50 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Signup Page{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+
+<form method="POST" action="{{ url_for('main.signup') }}" id="max-top-padding">
+<fieldset>
+<legend align="center">Signup!</legend><br>
+    <table>
+        <tr id="signin-table">
+            <th>First Name*</th>
+            <td><input class="input is-large" type="text" name="fname" autofocus="" required></td>
+        </tr>
+        <tr id="signin-table">
+            <th>Last Name*</th>
+            <td><input class="input is-large" type="text" name="lname" required></td>
+        </tr>
+        <tr id="signin-table">
+            <th>Username</th>
+            <td><input class="input is-large" type="text" name="username"></td>
+        </tr>
+        <tr id="signin-table">
+            <th>Email*</th>
+            <td><input class="input is-large" type="text" name="email"  required></td>
+        </tr>
+        <tr id="signin-table">
+            <th>Password*</th>
+            <td><input class="input is-large" type="password" name="password" minlength="5" required></td>
+        </tr>
+    </table><br>
+<button id="signup-btn">Submit</button>
+</fieldset></form>
+
+<div class="login-note">
+    <span style="font-size: 20px;text-decoration: underline;">Please Note:</span><br>If a username is not entered, a default username will be assigned upon account creation based on information submitted.
+</div>
+
+{% endblock %}
+
+

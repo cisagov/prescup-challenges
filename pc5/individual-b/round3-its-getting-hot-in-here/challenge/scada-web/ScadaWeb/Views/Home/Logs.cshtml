@@ -1,0 +1,43 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@model LogsViewModel
+@{
+    ViewData["Title"] = "SCADA Event Logs";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Search the SCADA event logs.</p>
+
+<form method="POST" action="Logs">
+    <input type="text" name="query" /><br /><br />
+    <input type="submit" name="submit" value="Search Logs" />
+</form>
+
+<br /><br />
+<h4>Search Results:</h4>
+<br /><br />
+
+@if (ViewBag != null && ViewBag.Result != null)
+{
+    @foreach(string s in ViewBag.Result)
+    {
+        <span>@s</span><br />
+    }
+}
+
+@* <br /><br />
+
+@if (Model != null && Model.Logs != null)
+{
+    @foreach(LogEntry l in Model.Logs)
+    {
+        <span>@l.Id</span><br />
+    }
+} *@
+

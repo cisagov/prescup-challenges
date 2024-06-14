@@ -1,0 +1,51 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}User Login{% endblock %}</title>
+  <script id="time_check" my_id="{{my_id}}" src="{{url_for('static',filename='timeout.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+{% if not timeout %}
+<div id="login">
+    <ul class="navbar"> 
+        <li class="timer navbar_elements">Welcome to Impel!</li>
+    </ul>
+</div>
+<br><br><br>
+<div id="loginForm" class="login">
+  <h2 class="portal">Login Portal</h2>
+  <form method="POST" action="{{url_for('main.login')}}">
+    <input type="text" class="text" name="username" required>
+     <span class="form">username</span>
+    <br><br>
+    <input id='pwd' type="password" class="text" name="password">
+    <span class="form">password</span><br>
+    <input type="checkbox" onclick="togglePassword()"> Show Password
+    <br><br><br>
+    <button class="signin">
+      Sign In
+    </button>
+  </form>
+  <script id="password" src="{{url_for('static',filename='password.js')}}"></script>
+</div>
+{% else %}
+<div id="timeout_msg"><br>
+  <h3 id="msg" style="font-size: 25px;text-decoration: underline;">Incorrect Login Timeout</h3>
+</div>
+{% endif %}
+
+<div class="notice-box">
+  <span style="font-size: 20px;text-decoration: underline;">Please Note:</span><br>Both the Username AND Password field ARE case sensitive.
+</div>
+
+
+{% endblock %}
+

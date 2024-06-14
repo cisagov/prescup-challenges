@@ -1,0 +1,19 @@
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+[Unit]
+Description=Attacker Script
+After=network.target
+
+[Service]
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/user/.Xauthority
+User=user
+Group=user
+Type=oneshot
+ExecStart=/etc/systemd/system/attacker.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

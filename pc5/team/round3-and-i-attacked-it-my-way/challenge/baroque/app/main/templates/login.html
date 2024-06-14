@@ -1,0 +1,29 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}User Login{% endblock %}</title>
+  <script src="{{url_for('main.fetch_js',js='login.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+<br><br><br>
+<div id="login-form">
+  <span id="title">User Login</span>
+  <form id="max-top-padding">
+    <input id="login-input-em" type="text" class="text" name="email" placeholder="EMAIL" required>
+    <br><br>
+    <input id="login-input-pwd" type="password" class="text" name="password" placeholder="PASSWORD" required>
+    <br><br><br>
+    <button id="login-signin">
+      Sign In
+  </form>
+</div>
+{% endblock %}
+

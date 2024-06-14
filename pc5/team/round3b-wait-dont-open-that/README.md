@@ -33,16 +33,6 @@ From the Kali VM, navigate to `https://challenge.us` to enter the token values a
 
 To find the string values associated with Parts 1 - 5, start by analyzing the files in the `Documents` folder of the Kali VM. Look at a combination of documents, scripts and executables. Locate, isolate, and execute potentially malicious code to see how it interacts with a host machine and see the kind of network calls made. 
 
-## System and Tool Credentials
-
-| system/tool                         | username                   | password  |
-|-------------------------------------|----------------------------|-----------|
-| open-that-kali                                | user                       | tartans   |
-
-## Note
-
-Attacking or unauthorized access to `challenge.us` (10.5.5.5) is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
-
 ## Challenge Questions
 
 1. Provide the value for token 1.

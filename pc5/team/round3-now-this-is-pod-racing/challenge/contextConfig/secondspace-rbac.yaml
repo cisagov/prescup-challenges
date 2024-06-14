@@ -1,0 +1,53 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: secondspace
+  name: secondspace-view-list
+rules:
+- apiGroups: [""] # "" indicates the core API group
+  resources: ["configmaps", "secrets", "persistentvolumes", "persistentvolumeclaims"]
+  verbs: ["list"]
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: secondspace
+  name: secondspace-admin
+rules:
+- apiGroups: [""] # "" indicates the core API group
+  resources: ["pods", "deployments", "services", "ingress"]
+  verbs: ["*"]
+
+---
+
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: secondspace-view-list
+  namespace: secondspace
+subjects:
+- kind: User
+  name: secondspace-user
+  apiGroup: ""
+roleRef:
+  kind: Role
+  name: secondspace-view-list
+  apiGroup: ""
+
+---
+
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: secondspace-admin
+  namespace: secondspace
+subjects:
+- kind: User
+  name: secondspace-user
+  apiGroup: ""
+roleRef:
+  kind: Role
+  name: secondspace-admin
+  apiGroup: ""

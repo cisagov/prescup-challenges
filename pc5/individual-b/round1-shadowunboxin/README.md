@@ -12,6 +12,8 @@ Exploit weaknesses and crack a spaceship's network!
 - [T0028](https://niccs.cisa.gov/workforce-development/nice-framework): Conduct and/or support authorized penetration testing on enterprise network assets.
 - [T0570](https://niccs.cisa.gov/workforce-development/nice-framework): Apply and utilize authorized cyber capabilities to enable access to targeted networks.
 
+## IMPORTANT
+This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
 
 ## Background
 

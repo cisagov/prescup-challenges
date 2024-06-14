@@ -1,0 +1,35 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Login{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<p> {{error}} </p>
+<form action="/login" method="POST">
+	<table>
+		<tr>
+			<th>Email</th> 
+			<td><input type="text" name="email"></td>
+		</tr>
+		<tr>
+			<th>Password</th>
+			<td><input type="password" name="password"></td>
+		</tr>
+		<tr>
+			<th colspan="2"> 
+				<button is-block is-info is-large is-fullwidth>Login</button>
+			</th>
+		</tr>
+	</table>
+	<br>
+	<a href="/registerationForm">Register here</a>
+</form>
+{% endblock %}

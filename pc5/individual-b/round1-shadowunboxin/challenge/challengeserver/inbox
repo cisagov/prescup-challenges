@@ -1,0 +1,52 @@
+From customer@merch.codes  Mon Sep 25 08:28:27 2023
+Return-Path: <customer@merch.codes>
+Delivered-To: user@merch.codes
+Received: from mail.merch.codes ([10.42.1.77])
+	by dovecot-d98c9fcb-7nj6n with LMTP
+	id NMxVGKtEEWU3AAAAZQ148A
+	(envelope-from <customer@merch.codes>)
+	for <user@merch.codes>; Mon, 25 Sep 2023 08:28:27 +0000
+Received: by mail.merch.codes (Postfix, from userid 1000)
+	id 5F200CC5CF; Mon, 25 Sep 2023 08:28:27 +0000 (UTC)
+Received: from mail.merch.codes (10-42-1-86.roundcubemail-service.default.svc.cluster.local [10.42.1.86])
+	by mail.merch.codes (Postfix) with ESMTPA id 51201CC5CC
+	for <user@merch.codes>; Mon, 25 Sep 2023 08:28:27 +0000 (UTC)
+MIME-Version: 1.0
+Date: Mon, 25 Sep 2023 04:28:27 -0400
+From: customer@merch.codes
+To: user@merch.codes
+Message-ID: <d258acf4d8b75c4eb1f097dfb6be0518@merch.codes>
+X-Sender: customer@merch.codes
+Content-Type: multipart/alternative;
+ boundary="=_43a8762e8ae66a00d6ee9b93869f4dfd"
+X-IMAPbase: 1682620782 0000000001
+X-UID: 1
+Status: 
+X-Keywords:                                                                       
+Content-Length: 599
+
+--=_43a8762e8ae66a00d6ee9b93869f4dfd
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=US-ASCII;
+ format=flowed
+
+
+
+order15887.pdf [1]
+
+Links:
+------
+[1] http://order15887.pdf
+--=_43a8762e8ae66a00d6ee9b93869f4dfd
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DUTF-8" /></head><body style=3D'font-size: 10pt; font-family: Verdana,Gen=
+eva,sans-serif'>
+<p><a href=3D"http://order15887.pdf">order15887.pdf</a></p>
+
+</body></html>
+
+--=_43a8762e8ae66a00d6ee9b93869f4dfd--
+
