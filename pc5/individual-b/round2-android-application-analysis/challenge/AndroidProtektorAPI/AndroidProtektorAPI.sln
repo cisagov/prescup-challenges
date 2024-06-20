@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidProtektorAPI", "AndroidProtektorAPI.csproj", "{7066BD80-8F3B-413E-AC63-7612AE5E8CFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7066BD80-8F3B-413E-AC63-7612AE5E8CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7066BD80-8F3B-413E-AC63-7612AE5E8CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7066BD80-8F3B-413E-AC63-7612AE5E8CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7066BD80-8F3B-413E-AC63-7612AE5E8CFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3750A68-1E26-45D3-9035-DCD580FB63A3}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,22 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@{
+    ViewData["Title"] = "GPS";
+}
+
+<div class="text-center">
+    <h4 class="display-4">GPS Tracking</h1>
+    <h6>Current GPS Coordinates: @ViewBag.Coordinates</h6>
+</div>
+
+@if(ViewBag.GPSToken != null)
+{
+    <div class="text-center">
+    GPS Token: @ViewBag.GPSToken
+    </div>
+}

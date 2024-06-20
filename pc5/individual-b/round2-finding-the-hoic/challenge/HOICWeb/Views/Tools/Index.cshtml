@@ -1,0 +1,22 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@{
+    ViewData["Title"] = "Tools";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Tools</h1>
+    <p><a href="~/Tools/DownloadHOIC">Download the HOIC Client</a></p>
+    <div>
+        @if (Context.Request.Query.Keys.Contains("Message"))
+        {
+            <span>@Html.Raw(Context.Request.Query["Message"])</span>
+        }
+    </div>
+</div>
+

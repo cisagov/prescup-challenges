@@ -1,0 +1,92 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Files{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<h2 class="title">Feel free to store any files here!</h2>
+    <form method="POST" action="{{url_for('auth.files')}}" class="inline">
+        <button type="submit" name="value" value="list" class="link-button">List Files</button>
+        <button type="submit" name="value" value="up" class="link-button">Upload File</button>
+        <button type="submit" name="value" value="del" class="link-button">Delete File</button>
+        <button type="submit" name="value" value="down" class="link-button">Download File</button>
+    </form>
+
+
+{% if list %}
+<br><br>
+    <form><fieldset>
+    <legend align='center'>List Files</legend>
+        <table>
+            <thead class="headpost"><tr>
+                <td>File Name</td>
+                <td>Uploaded By</td>
+                <td>Date Uploaded</td>
+            </tr></thead>
+            {% if fileList == [] %}
+            <tbody class="bodypost"><tr>
+                <th colspan="3" >No Files currently uploaded.</th>
+            </tr></tbody>
+            {% else %}
+                {% for f in fileList %}
+                    <tbody class="bodypost"><tr>
+                        <td>{{f.name }}</td>
+                        <td>{{f.user_username}}</td>
+                        <td>{{f.uploaded}}</td>
+                    </tr></tbody>
+                {% endfor %}
+            {% endif %}
+        </table>
+    </fieldset></form>
+{% else %}
+    {% if choice %}
+        <form method="POST" action="{{url_for('auth.files')}}" enctype="multipart/form-data">
+        <fieldset>
+        {% if choice == "up"%}    
+            <legend align='center'>Upload File</legend>
+                <table><tr class="bodypost">
+                    <td align='left'><label>Select file to upload:</label></td>
+                    <td align='right'><input type='file' name='up'></td>
+                </tr></table>
+        {% elif choice == "down"%}
+            <legend align='center'>Download File</legend>
+                <table><tr class="bodypost">
+                    <td align='left'><label>Select file to download:</label></td>
+                    <td align='right'>
+                        <select name = 'download' required>
+                            <option value="None" selected>None</option>
+                            {% for f in fileList %}
+                            <option name="{{f.name}}">{{f.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr></table>
+        {% elif choice == "del"%}
+            <legend align='center'>Delete File</legend>
+                <table><tr class="bodypost">
+                    <td align='left'><label>Select file to delete:</label></td>
+                    <td align='right'>
+                        <select name = 'delete' required>
+                            <option value="None" selected>None</option>
+                            {% for f in fileList %}
+                            <option name="{{f.name}}">{{f.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr></table>
+        {% endif %}
+        <input type="submit" name="{{choice}}" value="Submit">
+        </fieldset>
+        </form>
+    {% endif %}
+{% endif %}
+{% endblock %}
+

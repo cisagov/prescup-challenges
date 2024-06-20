@@ -1,0 +1,16 @@
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+[Unit]
+Description=sender script
+After=loader.service
+
+[Service]
+ExecStart=/usr/bin/python3 /etc/systemd/system/sender.py
+Restart=no
+User=user
+WorkingDirectory=/home/user/challenge
+
+[Install]
+WantedBy=default.target

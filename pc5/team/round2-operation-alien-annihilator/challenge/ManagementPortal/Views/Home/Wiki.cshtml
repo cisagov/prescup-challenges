@@ -1,0 +1,43 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@model ManagementPortal.Models.WikiViewModel
+
+@{
+    ViewData["Title"] = "Wiki";
+}
+
+<h1>WIKI</h1>
+
+<div>
+    Until the new wiki has been completed, you can download documents from our existing content repository.
+</div>
+<br />
+<br />
+<table>
+    <tr>
+        <th>Files</th>
+        <th></th>
+    </tr>
+    @foreach (string file in Model.Files)
+    {
+        <tr>
+            <td>@file.Substring(file.IndexOf("/Files/") + 7)</td>
+            <td>&nbsp;</td>
+            @if (file.Contains("admin"))
+            {
+                <td>Download</td>
+            }
+            else
+            {
+                <td>@Html.ActionLink("Download", "DownloadFile", new { filePath = file.Substring(file.IndexOf("/Files/") + 7) })</td>
+            }
+        </tr>
+    }
+</table>
+
+

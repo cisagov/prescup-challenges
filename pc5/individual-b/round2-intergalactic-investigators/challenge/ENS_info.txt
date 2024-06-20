@@ -1,0 +1,11 @@
+-----------------------------------
+ElysiumMap Information
+-----------------------------------
+
+This file contains supplemental information about the Elysium Nova star map. Review the notes carefully! 
+
+- The map has been simplified and represented in a 2D format to make it easier to reference.
+- The map is an 1800 x 1024px image file (PNG), please keep this in mind when you are plotting points on the map.
+- The X-axis is Galactic Longitude: it ranges in value from 0 to 360 degrees.
+- The Y-axis is Galactic Latitude: it ranges in value from -180 to 180 degrees.
+- Major celestial bodies are identified; it is unknown if a celestial body is a star or a planet.

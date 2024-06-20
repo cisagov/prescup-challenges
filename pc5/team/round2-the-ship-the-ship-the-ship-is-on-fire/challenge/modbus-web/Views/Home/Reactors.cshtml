@@ -1,0 +1,119 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@*@model ReactorViewModel*@
+@{
+    ViewData["Title"] = "Reactors";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Reactors</h1>
+</div>
+@*
+<div>
+    @ViewBag.Message
+</div>
+
+<div class="text-left">
+    <h4>Reactor 1</h4>
+    Temperature: <span>@Model.Reactor1Temp</span> F
+    <br />
+    Max Temperature: 200 F
+    <br />
+    Min Temperature: 160 F
+    <br />
+    @if (Model.Reactor1Temp > 200)
+    {
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">!!! Reactor Overheat Alert !!!</h4>
+            <hr>
+            <p>Reactor 1 has exceeded the safe operating temperature and may catastrophically fail.</p>
+        </div>
+        <br />
+    }
+    <div class="progress">
+        @if (Model.Reactor1Temp > 0 && Model.Reactor1Temp < 180)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.Reactor1Temp / 2)%" aria-valuenow="@Model.Reactor1Temp" aria-valuemin="160" aria-valuemax="200"></div>
+        }
+        else if (Model.Reactor1Temp >= 180 && Model.Reactor1Temp < 190)
+        {
+        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: @(Model.Reactor1Temp / 2)%" aria-valuenow="@Model.Reactor1Temp" aria-valuemin="160" aria-valuemax="200"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.Reactor1Temp / 2)%" aria-valuenow="@Model.Reactor1Temp" aria-valuemin="160" aria-valuemax="200"></div>
+        }
+    </div>
+    <br />
+</div>
+<form method="POST" action="reactors">
+    <input type="submit" name="SubmitButton" value="Increase Reactor 1 Temperature" />&nbsp;&nbsp;&nbsp;
+    <input type="submit" name="SubmitButton" value="Decrease Reactor 1 Temperature" />
+</form>
+<br /><br />
+<div class="text-left">
+    <h4>Reactor 2</h4>
+    Temperature: <span>@Model.Reactor2Temp</span> F
+    <br />
+    Max Temperature: 250 F
+    <br />
+    Min Temperature: 180 F
+    <br />
+    @if (Model.Reactor2Temp > 250)
+    {
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">!!! Reactor Overheat Alert !!!</h4>
+            <hr>
+            <p>Reactor 2 has exceeded the safe operating temperature and may catastrophically fail.</p>
+        </div>
+        <br />
+    }
+    <div class="progress">
+        @if (Model.Reactor2Temp > 0 && Model.Reactor2Temp < 210)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.Reactor2Temp / 2.5)%" aria-valuenow="@Model.Reactor2Temp" aria-valuemin="180" aria-valuemax="250"></div>
+        }
+        else if (Model.Reactor2Temp >= 210 && Model.Reactor2Temp < 230)
+        {
+        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: @(Model.Reactor2Temp / 2.5)%" aria-valuenow="@Model.Reactor2Temp" aria-valuemin="180" aria-valuemax="250"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.Reactor2Temp / 2.5)%" aria-valuenow="@Model.Reactor2Temp" aria-valuemin="180" aria-valuemax="250"></div>
+        }
+    </div>
+    <br />
+</div>
+<form method="POST" action="reactors">
+    <input type="submit" name="SubmitButton" value="Increase Reactor 2 Temperature" />&nbsp;&nbsp;&nbsp;
+    <input type="submit" name="SubmitButton" value="Decrease Reactor 2 Temperature" />
+</form>
+<br /><br />
+<div class="text-left">
+    <h4>Cooling Tank 1</h4>
+    Remaining: <span>@Model.Coolant1Percent</span>%
+    <br />
+    <div class="progress">
+        <div class="progress-bar bg-info" role="progressbar" style="width: @Model.Coolant1Percent%" aria-valuenow="@Model.Coolant1Percent" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</div>
+<br /><br />
+<div class="text-left">
+    <h4>Cooling Tank 2</h4>
+    Remaining: <span>@Model.Coolant2Percent</span>%
+    <br />
+    <div class="progress">
+        <div class="progress-bar bg-info" role="progressbar" style="width: @Model.Coolant2Percent%" aria-valuenow="@Model.Coolant2Percent" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</div>
+*@
+
+
+
+
+
