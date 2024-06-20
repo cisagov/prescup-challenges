@@ -1,0 +1,66 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends 'base.html' %}
+
+{% block header %}
+  <title>{% block title %}Posts{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+  {% if posts %}
+  <table>
+    <h1 style="font-size:30px"><u>Blog Posts</u></h1>
+    <thead><tr class="headpost">
+      <td>Title</td>
+      <td>Description</td>
+      <td>Creation Info</td>
+      <td>Link</td>
+    </tr></thead>
+    {% for p in posts %}
+      <tbody><tr class="bodypost">
+        <td>{{ p.title }}</td>
+        <td> {{p.body[:20]}}...</td>
+        <td>Created by <u>{{ p.user_username}}</u> on {{ p.created }}</td>
+        <td><a href="{{url_for('blog.getPosts',postid=p.id)}}">View Post</a></td>
+      </tr></tbody>
+    {% endfor %}
+  </table>
+  {% elif post %}
+    <h1 style="font-size:40px"><u>{{ post.title }}</u></h1>
+    <p >{{ post.body }}</p>
+    <div style="font-size:20px;">Created by <u>{{ post.user_username}}</u> on {{ post.created }}</div>
+    {% if comments %}
+      <table><br><br>
+      <h2  style="font-size:20px">Comments</h2>
+      {% for c in comments %}
+        <tr class="bodypost">
+          <td align='left'>{{ c.author }} said:</td>
+          <td align='right'><div class="comment">{{ c.body }}</div></td>
+          <td style="text-align:end;">Written on: {{ c.created }}</td>
+        </tr>
+      {% endfor %}
+      </table>
+    {% endif %}
+    {% if current_user.is_authenticated  %}
+      <form method='POST' action="{{ url_for('blog.getPosts',postid=post.id) }}">
+        <table>
+            <tr class="post">
+              <td align='left'><label for='commentLabel' style="font-size:15px;">Create new Comment:</label></td>
+              <td align='right'><textarea id='comment' name='comment' rows=4 cols='50'></textarea></td>
+            </tr>
+        </table>
+        <button class="button is-block is-info is-large is-fullwidth">Submit</button>
+      </form>
+    {% endif %}
+  {% else %}
+        <h1>There are currently no posts.</h1>
+        <h2>Feel free to start a discussion of your own!</h2>
+  {% endif %}
+    
+{% endblock %}
+

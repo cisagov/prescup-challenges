@@ -1,0 +1,44 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@model ManagementPortal.Models.LogsViewModel
+
+@{
+    ViewData["Title"] = "Logs";
+}
+
+<h1>Logs</h1>
+<hr />
+@{
+    if (!string.IsNullOrWhiteSpace(Model.Message))
+    {
+        <div class="row mb-3 fw-bold bg-success">
+              @Model.Message
+        </div>
+    }
+}
+<div class="row">
+    @Model.LogData
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Logs">
+            <div class="row mb-3">
+                <div class="form-group">
+                    <input type="hidden" asp-for="LogEndpoint" value="@Model.LogEndpoint" />
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="form-group">
+                    <input type="submit" value="Refresh Logs" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+

@@ -1,0 +1,27 @@
+{
+    "t1": {
+        "plain": "protect hyrulezz",    
+        "key": "heroheroo",
+        "encrypted": "vvnbqrx vdwgvhto"
+    },
+    "t2": {
+        "c1": {
+            "original": ["./task_files/t3/c1.png", "c1.png", "png"],
+            "converted": ["./task_files/t3/c1.txt", "c1.txt", "txt"],
+            "answer": "We've been trying to reach you about your cars extended warranty."
+        },
+        "c2": {
+            "original": ["./task_files/t3/c2.pdf", "c2.pdf", "pdf"],
+            "converted": ["./task_files/t3/c2.odt", "c2.odt", "odt"],
+            "answer": "Theres...something on the wing….SOME…..THING"
+        }
+    },
+    "t3": {
+      "plain": "Mr. Green, candlestick, in the observatory."
+    },
+    "t4": {
+        "pin": "D2B9F",
+        "combinations": "./task_files/t5/combos",
+        "numCom": 17496
+    }
+}

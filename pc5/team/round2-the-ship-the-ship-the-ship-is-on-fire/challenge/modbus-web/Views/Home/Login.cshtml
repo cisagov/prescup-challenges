@@ -1,0 +1,40 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Login</h1>
+</div>
+
+<div>
+    @if (ViewBag.Message != null)
+    {
+        <span>@Html.Raw(ViewBag.Message)</span>
+    }
+</div>
+
+<form method="post" action="Login">
+    <div>
+        Username:
+    </div>
+    <div>
+        <input type="text" name="username" />
+    </div>
+    <div>
+        Password:
+    </div>
+    <div>
+        <input type="password" name="password" />
+    </div>
+    <br />
+    <div>
+        <input type="submit" name="Login" value="Login" />
+    </div>
+</form>

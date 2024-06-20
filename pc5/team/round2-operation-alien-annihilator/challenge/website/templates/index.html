@@ -1,0 +1,22 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Welcome!{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+
+<h1 style="font-size:25px;">Welcome to our company file server</h1>
+<fieldset style="max-width:1200px;width:100%;">
+    <h2>If you have an account login <a href="{{ url_for('auth.login') }}">here</a></h2>
+    <h2>If you dont, feel free to create one <a href="{{ url_for('auth.signup') }}">here</a></h2>
+</fieldset>
+
+{% endblock %}

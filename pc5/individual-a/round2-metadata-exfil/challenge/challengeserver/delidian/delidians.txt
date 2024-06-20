@@ -1,0 +1,1 @@
+The humans and Galorians have discovered the machine. We cannot allow them to discover more about its power, so we have cast a spell that prevents them from remembering information about it. We still have the backup file containing the true secrets of the machine. The password to this backup is INSERT_PASS. Once you have access to the backup delete all traces of this file.

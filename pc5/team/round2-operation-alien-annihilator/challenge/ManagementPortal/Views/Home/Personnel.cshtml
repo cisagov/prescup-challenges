@@ -1,0 +1,120 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@using ManagementPortal.Data.Models
+@model PersonnelViewModel
+
+@{
+    ViewData["Title"] = "Personnel";
+}
+
+<h1>Personnel</h1>
+
+@if (Model != null && !string.IsNullOrWhiteSpace(Model.Message))
+{
+<div class="alert alert-danger alert-dismissible d-flex align-items-center fade show">
+    <i class="bi-exclamation-octagon-fill"></i>
+    <strong class="mx-2">Error!</strong> @Model.Message
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+}
+
+<div class="container">
+    <form asp-action="Personnel">
+        <div class="row">
+            Search the personnel directory by name:
+        </div>
+
+        <div class="row pb-3">
+            <input type="text" name="Search" />
+        </div>
+
+        <div class="row pb-3">
+            <input type="submit" value="Search" class="btn btn-primary" />
+        </div>
+    </form>
+
+    <form asp-action="PersonnelId">
+        <div class="row">
+            Search the personnel directory by role id:
+        </div>
+
+        <div class="row pb-3">
+            <input type="text" name="Search" />
+        </div>
+
+        <div class="row pb-3">
+            <input type="submit" value="Search" class="btn btn-primary" />
+        </div>
+    </form>    
+    
+    <div class="row pb-3 fw-bold">
+        Results:
+    </div>
+
+    <div class="row pb-3">
+        <div class="col-3 fw-bold">
+            First Name
+        </div>
+        <div class="col-2 fw-bold">
+            Last Name
+        </div>
+        <div class="col-2 fw-bold">
+            Username
+        </div>
+        <div class="col-2 fw-bold">
+            Role
+        </div>
+        <div class="col-1 fw-bold">
+            Role Id
+        </div>
+        <div class="col-2 fw-bold">
+            Edit
+        </div>
+    </div>
+
+    @{
+        if (Model.Users != null)
+        {
+            foreach (User user in Model.Users)
+            {
+                <div class="row pb-3">
+                    <div class="col-3">
+                    @user.FirstName 
+                    </div>
+                    <div class="col-2">
+                        @user.LastName
+                    </div>
+                    <div class="col-2">
+                        @user.Username
+                    </div>
+                    <div class="col-2">
+                        @((Enums.Roles)user.RoleId)
+                    </div>
+                        <div class="col-1">
+                        @((int)user.RoleId)
+                    </div>
+                    <div class="col-2 fw-bold">
+                        @Html.ActionLink("Edit", "EditUser", new {id = user.Id})
+                    </div>
+                </div>
+            }
+        }
+    }
+
+    @* @{
+        if (Context.Session.GetString("CurrentUserRole") == "5")
+        {
+            <div class="row">
+                <div class="col-2">
+                    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="CreateUser">Create User</a>
+                </div>
+            </div>
+        }
+    } *@
+</div>
+

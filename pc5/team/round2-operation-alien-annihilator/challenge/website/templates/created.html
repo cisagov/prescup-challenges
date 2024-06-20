@@ -1,0 +1,34 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends "base.html" %}
+
+{% block header %}
+  <title>{% block title %}Welcome!{% endblock %}</title>
+{% endblock %}
+
+{% block content %}
+<br><br>
+<fieldset style="max-width:1200px;width:100%;">
+    <legend align='center' style="font-size:25px;"><b>New Account Created</b></legend>
+    <table style="max-width:1200px;width:100%;font-size:20px;">
+      <thead>
+        <tr><td class="created">PLEASE NOTE:</td></tr>
+      </thead>
+      <tbody>
+        <tr><td class="created">
+          <ul style="font-size:18px; margin-left: auto; margin-right: auto;display: table;width: 90%;list-style-type: none;">
+            <li><b>Your temporary password is:&emsp13;{{temp}}</b></li>
+            <li>An account for the email {{email}} has been created on our Mattermost Chat Server with matching credentials</li>
+            <li>If lost, The temp password can be created by taking the SHA1 hash of your email concatenated with a random number between 0 and 9 followed by a new line character.</li>
+            <li>Please update password ASAP</li>
+          </ul>
+      </tbody>
+    </table>
+</fieldset>
+
+{% endblock %}

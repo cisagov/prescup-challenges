@@ -1,0 +1,135 @@
+Below contains information on each of your tasks as well as information on grading.
+
+PLEASE NOTE: Each script has specific inputs and outputs that are required. Please READ CAREFULLY to make sure they are implemented correctly.
+
+Hill Cipher:
+    
+    What it does:
+        The Hill Cipher is a polygraphic substitution cipher that uses various linear algebra equations to handle encryption and decryption.
+        This version of the Hill Cipher uses a 3x3 matrix.
+        Because of the matrix type, the key must consist of exactly 9 characters. (a-z,A-Z)
+        Because matrix multiplication is performed with a 3x3 matrix, the script will check if the string to be encrypted is a multiple of 3.
+            If it is not, the character 'z' will be appended to the string until the length is a multiple of 3.
+            Example:
+                If the string 'hello' is to be encrypted, it would be altered to 'helloz' before being encrypted.
+        Currently, "hill_cipher.py" takes in 3 arguments:
+            1. 'e' or 'd' to specify if encryption or decryption is occurring.
+            2. The string that will either be encrypted or decrypted. 
+            3. The key that will be used during encryption or decryption. 
+        Currently, it can correctly handle doing encryption.
+    
+    Task:
+        You must create the decryption functionality to complete this cipher.
+        The script is case-sensitive and so case should be maintained after decryption.
+        The arguments passed to the script must stay the same.
+        The output of the decryption process should be the same format as the encryption.
+    
+    Example Test Commands:
+        python3 hill_cipher.py e retreatnowxx backupabc would produce the encrypted string: dpqrqevkpqlr
+        python3 hill_cipher.py d dpqrqevkpqlr backupabc would produce the decrypted string: retreatnowxx
+
+File Conversion:
+    
+    Task:
+        Create a script that can handle converting different file types.
+        The conversion needs to be able to read any text in the original file and have it be present in the newly created file.
+        The conversions it needs to handle are:
+            1. PNG --> TXT
+            2. PDF --> ODT
+        The script will require the following arguments:
+            1. Full path of the file to be converted.
+            2. the file-type you want the file to be converted to. (txt, odt)
+            3. the directory you want to write the new file to.
+        The newly created file needs to have the same name as the original file just with its new extension.
+            example: test.png --> test.txt
+        The files "test_image.png" and "test_pdf.pdf" have been provided for you to test against your script.
+    
+    Example Command:
+        python3 convert.py /path/to/file.png txt /directory/to/write/
+
+Morse Code:
+    
+    Task:
+        Create a script that handles both encryption and decryption of Morse Code.
+        The customer has asked for a custom variation of Morse Code to be implemented that slightly alters how the encryption and decryption work.
+        
+        For Encryption:
+            1. Encryption is selected by passing "encrypt" as the first argument to the script.
+            2. When encryption is run, it will take each plain text character represented in the "morse_map.txt" file and then randomly pair it with an encrypted string represented in the "morse_map.txt" file.
+            3. It will then use this custom mapping to encrypt the string that was passed to the script.
+            4. If the submitted string has a space present in it, it should be encrypted and represented as a standalone '/'.
+            5. When it finishes, it will print the encrypted string to terminal and then write the custom mapping generated during the encryption to a file location that is passed to the script.
+            The script's arguments for encryption are:
+                1. 'encrypt'
+                2. The string to be converted.
+                3. The full path of the output file, which will contain the custom Morse Code mapping used for this encryption.
+            Example:
+                The command ran will be:
+                    python3 morse_code.py encrypt 'hi bob' ./custom_mapping.txt
+                The script will then randomize pairing plain and encrypted characters. For this example, the pairings of the characters in the string passed will be:
+                    "h": ".-",
+                    "i": "..---"
+                    "b": "-.-"
+                    "o": ".--."
+                It should print ".- ..--- / -.- .--. -.-"
+                Then it will write the entire mapping to the output file passed to the script.
+
+        For Decryption:
+            1. Decryption is selected by passing "Decryption" as the first argument to the script.
+            1. When decryption is run, instead of looking to write to a file, it should look to read the filename passed for the mapping that was generated during encryption.
+            3. It will then use this custom mapping to decrypt the string that was passed to the script.
+            4. If the submitted string has a standalone '/' present in it, it should be decrypted and represented as a space.
+            5. When it finishes, it will print the decrypted string to terminal.
+            The scripts arguments for decryption are:
+                1. 'decrypt'.
+                2. The string to be converted.
+                3. The full path to the file containing the mapping file generated during encryption.
+            Example:
+                Following the example used above:
+                The command ran will be:
+                    python3 morse_code.py decrypt ".- ..--- / -.- .--. -.-" ./custom_mapping.txt
+                The script will then read the passed file to get the mapping used and decrypt the passed string.
+                It should print "hi bob"
+
+
+        PLEASE NOTE:
+            The file "morse_map.txt" has been provided, it contains the default mappings in Morse Code.
+            All characters within the "morse_map.txt" file are the only ones that are required/expected to be used in the script.
+            You DO NOT need to incorporate the file "morse_map.txt" into your script.
+                It is provided as reference to represent all the expected plain and encrypted characters, as long as each character in the "morse_map.txt" file is represented in your script, how you implement that part is up to you.
+            If there are any characters passed to the script that are not represented in the "morse_map.txt" file mapping, they must be removed.
+            The script MUST BE case-insensitive. Given an identical scenario, a capital letter string and its lowercase counterpart should provide the same answer. 
+        
+Pin Code:
+    
+    Task:
+        A customer described the following scenario:
+            They saw someone enter a pin and think they saw what the person entered but can't say for certain. 
+            They believe that the pin number they entered could be the one they saw, or that the person could have hit any number that is either adjacent or diagonal to the original pin number hit.
+        You must create a script that if it is given any length pin P, will produce all possible pin combinations of the same length that follow the concept above.
+        
+        Example:
+            If we are using the pin pad:
+                | A | B |
+                | D | E |
+            If the entered pin was "DB", it would produce the following list of possible pin combinations:
+                AA, AB, AD, AE, BA, BB, BD, BE, DA, DB, DD, DE, EA, EB, ED, EE.
+            This is because each pin character submitted can be itself, or any character that is either adjacent or diagonal.
+            So for the pin character "D", the following possibilities are:
+                It could be substituted with "A"
+                It could be substituted with "B"
+                It could be substituted with "E"
+                It could remain a "D"
+
+        The customer has provided an image of the custom pin pad that they need you to base this script off of--it is available as the file "pin_pad.png".
+        The required script arguments are:
+            1. pin code that you must generate all possible combinations for.
+            2. Full path to the file you wish to write all possible combinations too.
+                i. The file MUST list ONE pin per line.
+            Example Command:
+                python3 pin.py 1234 ./pin_combos.txt
+
+Grading:
+    Each task will be graded by having its associated script tested and run by the challenge.us site.
+    The scripts themselves will not be submitted to the grader, rather you will submit the information required for the grader to execute the script on the machine it was created on.
+    Please take a look at the grading page on "https://challenge.us". It will contain more information on how to format each tasks submission.

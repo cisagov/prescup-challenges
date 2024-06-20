@@ -1,0 +1,4 @@
+API locations:
+1. admin - http://10.1.1.172/admin/index.html
+2. tokens - http://10.1.1.172/tokens/index.html
+3. accounts - http://10.1.1.172/accounts/index.html

@@ -1,0 +1,73 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@using ManagementPortal.Data.Models
+@model InventoryViewModel
+
+@{
+    ViewData["Title"] = "Inventory";
+}
+
+<h1>Inventory</h1>
+
+@if (Model != null && !string.IsNullOrWhiteSpace(Model.Message))
+{
+<div class="alert alert-danger alert-dismissible d-flex align-items-center fade show">
+    <i class="bi-exclamation-octagon-fill"></i>
+    <strong class="mx-2">Error!</strong> @Model.Message
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+}
+
+<div class="container">
+    <form asp-action="Inventory">
+        <div class="row">
+            Search the ship's inventory:
+        </div>
+
+        <div class="row pb-3">
+            <input type="text" name="SearchTerm" />
+        </div>
+
+        <div class="row pb-3">
+            <input type="submit" value="Search" class="btn btn-primary" />
+        </div>
+    </form>
+
+    @* @{
+        if (!string.IsNullOrEmpty(Model.InventoryToken))
+        {
+            <div class="row mb-3 fw-bold bg-success">
+                  TOKEN #3: @Model.InventoryToken
+            </div>
+        }
+    } *@
+
+    <div class="row">
+        <div class="col-3 fw-bold">
+            Item
+        </div>
+        <div class="col-3 fw-bold">
+            Quantity in Stock
+        </div>
+    </div>
+    @{
+        foreach(Inventory item in Model.InventoryItems)
+        {
+        <div class="row">
+            <div class="col-3">
+            @(item.Name)
+            </div>
+            <div class="col-3">
+            @(item.Count)
+            </div>
+        </div>
+        }
+    }
+</div>
+
+
