@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidProtektor</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Status</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_about">About</string>
+    <string name="api_url">aHR0cDovL21vYmlsZWFwaS5tZXJjaC5jb2Rlcy9hcGkvcHJvdGVrdG9yLw==</string>
+    <string name="client_id">a56ed67f10bc25c9</string>
+</resources>

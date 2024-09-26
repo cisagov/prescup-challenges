@@ -1,0 +1,36 @@
+<!--
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+-->
+{% extends 'base.html' %}
+
+{% block header %}
+  <title>{% block title %}Create New Post{% endblock %}</title>
+{% endblock %}
+
+
+{% block content %}
+<h1 class="title">
+    Create New Post!
+</h1>
+
+<form method='POST' action="{{url_for('blog.create')}}">
+  <table>
+      <tr>
+        <td align='left'><label for='createTitle'>Title:</label></td>
+        <td align='right'><input style="width:375px;" type="text" name="title" placeholder="Title"></td>
+      </tr>
+      <tr>
+        <td align='left'><label for='addDescription'>Description:</label></td>
+        <td align='right'><textarea id='body' name='body' rows=4 cols='50' placeholder="Description"></textarea></td>
+      </tr>
+  </table>
+  <button class="button is-block is-info is-large is-fullwidth">Submit</button>
+</form>
+
+{% endblock %}
+
+

@@ -1,0 +1,68 @@
+@*
+
+Copyright 2024 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@model ManagementPortal.Models.EditUserViewModel
+
+@{
+    ViewData["Title"] = "EditUser";
+}
+
+<h1>Edit User</h1>
+<hr />
+@{
+    if (!string.IsNullOrWhiteSpace(Model.Message))
+    {
+        <div class="row mb-3 fw-bold bg-success">
+              @Model.Message
+        </div>
+    }
+}
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditUser">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row mb-3">
+                <div class="form-group">
+                    <label asp-for="Username" class="control-label"></label>
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div>
+                <input type="hidden" asp-for="Password" />
+            </div>
+            <div class="row mb-3">
+                <div class="form-group">
+                    <input type="submit" value="Save Changes" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+

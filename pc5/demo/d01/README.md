@@ -13,6 +13,7 @@ Analyze and correlate organizational data to identify the insider threat who pro
 - [T0103](https://niccs.cisa.gov/workforce-development/nice-framework): Examine recovered data for information of relevance to the issue at hand.
 
 ## IMPORTANT
+
 This challenge is only partially open sourced. The files in the [challenge directory](./challenge) are provided to give a starting point if you want to recreate the challenge on your own. The full challenge can be completed on the hosted site.
 
 ## Background
@@ -48,7 +49,7 @@ Note that `challenge.us` inside the gamespace may take a few minutes to load as 
 
 - Open the files in the **Gringotts Documentation.zip** folder with the password used to answer Question 1. Please remember that the Zip password is case sensitive.
 
-  > **Note:** If you enter an incorrect password to open the Zip folder, you will have to close the folder and then re-open it to try again. 
+  > **Note:** If you enter an incorrect password to open the Zip folder, you will have to close the folder and then re-open it to try again.
 
 - Carefully read each email to determine which one is the phishing email. Only the number of the email is needed for the answer.
 

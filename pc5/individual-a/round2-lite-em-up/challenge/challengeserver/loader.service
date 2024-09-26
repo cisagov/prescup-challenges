@@ -1,0 +1,16 @@
+# Copyright 2024 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+[Unit]
+Description=loader script
+After=litecoind.service
+
+[Service]
+ExecStart=/etc/systemd/system/loader.sh
+Restart=no
+User=user
+WorkingDirectory=/home/user/challenge
+
+[Install]
+WantedBy=default.target
