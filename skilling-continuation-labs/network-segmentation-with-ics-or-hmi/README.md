@@ -80,7 +80,9 @@ Each phase of the lab will be graded separately. Once you submit all parts of th
 
 For this lab, you will be implementing a new password policy using Pluggable Authentication Modules (PAM). For the sake of simplicity, the new policy will require that all passwords are at least 8 characters long and disallow passwords that use consecutively repeating characters, e.g. `aaaa` (which is also a recommendation by NIST).
 
-1. Open the `HMI-Admin-Console` and open the Terminal: ![terminal-icon.png](./img/terminal-icon.png)
+1. Open the `HMI-Admin-Console` and open the Terminal:
+
+![terminal-icon.png](./img/terminal-icon.png)
 
 | &#128270; INFORMATION |
 |---|
