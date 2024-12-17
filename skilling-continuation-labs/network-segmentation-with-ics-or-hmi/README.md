@@ -543,6 +543,8 @@ The new remote client resides in user network of 10.1.1.0/24.
 
 A new requirement has been added that this remote client system must also be able to interact with the HMI-Server through a VNC connection and access the web status page on the aplpciation server. While this does add a minor security concern, you will continue to operate under the rule of least-privilege by adding **only** this new exception to the previous rulesets. For the purpose of the lab, assume that this client is compliant with all security requirements and safe to add to the network. You do not need to protect the remote client or the user network beyond the stated objectives below.
 
+*A solution guide link is available following the grading section, should you need it.*
+
 ### Mini-Challenge Objectives
 
 Your objectives for the mini-challenge are as follows:
@@ -568,6 +570,8 @@ Grading Check 7: Update and apply the router firewall ACL rules and the HMI Serv
  - Your changes did not allow any previously disallowed traffic to/from the HMI network or the HMI-Server or break previously allowed communications
 
 `Copy any token or flag strings to the corresponding question submission field to receive credit.`
+
+*Please attempt the mini-challenge as best you can, but if you get stuck you can use the solution guide found <a href="https://github.com/cisagov/prescup-challenges/tree/main/skilling-continuation-labs/network-segmentation-with-ics-or-hmi/solution/README.md" target="_blank">here</a> for assistance.*
 
 </p>
 </details>

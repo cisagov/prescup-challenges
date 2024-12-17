@@ -709,6 +709,8 @@ python3 /home/user/minichallenge.py
 
 The script will send several emails to your mail server. It will randomly select two malicious domains from a list and randomly select the recipients, so your output will look different from the screenshot above. You can run this script as many times as needed to test your work.
 
+*A solution guide link is available following the grading section, should you need it.*
+
 ### Mini-challenge Objectives
 
 Once the email script has been executed, you must do the following. Draw on your previous experience in the lab and apply the same concepts to the mini-challenge objectives:
@@ -736,6 +738,8 @@ Grading Check 6: Successfully blocked traffic to the domains identified from the
  - DNS lookups for these domains will respond with the 0.0.0.0 address
 
 `Copy the token or flag strings to the corresponding question submission field to receive credit.`
+
+*Please attempt the mini-challenge as best you can, but if you get stuck you can use the solution guide found <a href="https://github.com/cisagov/prescup-challenges/tree/main/skilling-continuation-labs/network-segmentation-with-ics-or-hmi/solution/README.md" target="_blank">here</a> for assistance.*
 
 </p>
 </details>
