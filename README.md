@@ -8,13 +8,14 @@ This repository contains cybersecurity challenges and virtual machine builds for
 
 All of the challenge content can be found in the respective year season directory. See the README.md in each directory for more information about the respective competition.
 
-| Directory | Year(s) | Competition                  |
+| Directory | Year(s) | Description                 |
 | --------- | ------- | ---------------------------- |
 | `/pc1`    | 2019    | President's Cup: **Season 1** |
 | `/pc2`    | 2020-21 | President's Cup: **Season 2** |
 | `/pc3`    | 2021    | President's Cup: **Season 3** |
 | `/pc4`    | 2022    | President's Cup: **Season 4** |
 | `/pc5`    | 2024    | President's Cup: **Season 5** |
+| `/skilling-continuation-labs`    | 2024    | CISA Skilling Continuation Labs |
 
 ## ⚠️ Large Files ⚠️
 
