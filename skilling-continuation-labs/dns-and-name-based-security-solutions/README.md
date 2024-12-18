@@ -739,7 +739,7 @@ Grading Check 6: Successfully blocked traffic to the domains identified from the
 
 `Copy the token or flag strings to the corresponding question submission field to receive credit.`
 
-*Please attempt the mini-challenge as best you can, but if you get stuck you can use the solution guide found <a href="https://github.com/cisagov/prescup-challenges/tree/main/skilling-continuation-labs/network-segmentation-with-ics-or-hmi/solution/README.md" target="_blank">here</a> for assistance.*
+*Please attempt the mini-challenge as best you can, but if you get stuck you can use the solution guide found <a href="https://github.com/cisagov/prescup-challenges/tree/main/skilling-continuation-labs/enhanced-security-with-dns-and-domain-name-based-solutions/solution/README.md" target="_blank">here</a> for assistance.*
 
 </p>
 </details>
