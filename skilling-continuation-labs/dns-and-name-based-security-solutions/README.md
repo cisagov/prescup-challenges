@@ -1,4 +1,4 @@
-# Enhanced Security with DNS and Domain Name-based Solutions
+# DNS and Name-based Security Solutions
 
 DNS tooling is essential for developing skills in network management and cybersecurity, directly supporting CISA's mission to manage and reduce risks to both cyber and physical infrastructure. Recognizing the importance of DNS is crucial, as it plays a key role in safeguarding domain name services against cyber-attacks.
 
