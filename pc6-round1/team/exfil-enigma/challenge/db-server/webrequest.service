@@ -1,0 +1,12 @@
+[Unit]
+Description=Web Request  Service
+
+[Service]
+User=root
+Group=root
+ExecStart=/usr/bin/bash /home/user/Desktop/web-request.sh
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Townsville Community Pool - Login";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Townsville Community Pool</h1>
+    <p>Welcome to the Townsville Community Pool</p>
+</div>
+
+<h2>Login</h2>
+
+<div>
+    @if (ViewBag.Message != null)
+    {
+        <span>@Html.Raw(ViewBag.Message)</span>
+    }
+</div>
+
+<form method="post" action="Login">
+    <div>
+        Email:
+    </div>
+    <div>
+        <input type="text" name="username" />
+    </div>
+    <div>
+        Password:
+    </div>
+    <div>
+        <input type="password" name="password" />
+    </div>
+    <br />
+    <div>
+        <input type="submit" name="Login" value="Login" />
+    </div>
+</form>

@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Townsville Community Pool - Contact Us";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Townsville Community Pool</h1>
+    <p>Welcome to the Townsville Community Pool</p>
+    @if (ViewBag.Message != null)
+    {
+        <div class="alert alert-success">
+            <span>@Html.Raw(ViewBag.Message)</span>
+        </div>
+    }
+    <img src="~/img/relaxing-3112750_1280.jpg" />
+</div>
+
+<h2>Contact Us</h2>
+
+<form method="post" action="contactus">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" value=""><br>
+  <labe for="message">Message:</label><br>
+  <input type="textarea" rows=10 cols=60 id="message" name="message" value=""><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+

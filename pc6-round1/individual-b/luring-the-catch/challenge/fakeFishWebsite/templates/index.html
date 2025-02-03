@@ -1,0 +1,133 @@
+<!--
+Copyright 2025 Carnegie Mellon University.
+
+NO WARRANTY. THIS CARNEGIE MELLON UNIVERSITY AND SOFTWARE ENGINEERING INSTITUTE MATERIAL IS FURNISHED ON AN "AS-IS" BASIS. CARNEGIE MELLON UNIVERSITY MAKES NO WARRANTIES OF ANY KIND, EITHER EXPRESSED OR IMPLIED, AS TO ANY MATTER INCLUDING, BUT NOT LIMITED TO, WARRANTY OF FITNESS FOR PURPOSE OR MERCHANTABILITY, EXCLUSIVITY, OR RESULTS OBTAINED FROM USE OF THE MATERIAL. CARNEGIE MELLON UNIVERSITY DOES NOT MAKE ANY WARRANTY OF ANY KIND WITH RESPECT TO FREEDOM FROM PATENT, TRADEMARK, OR COPYRIGHT INFRINGEMENT.
+
+Licensed under a MIT (SEI)-style license, please see license.txt or contact permission@sei.cmu.edu for full terms.
+
+[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.
+
+This Software includes and/or makes use of Third-Party Software each subject to its own license.
+DM25-0166-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Fish Company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #006699;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .about,
+        .products {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #006699;
+        }
+
+        .products ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .products li {
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Fake Fish Company</h1>
+        <nav>
+            <a href="#about">About Us</a>
+            <a href="#products">Our Products</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Welcome to Fake Fish Company, your trusted source for the finest fake fish products. Do you like looking at
+            fish, but hate taking care of fish? That's what we are here for!</p>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <ul>
+            <li><strong>The Original Fantastically Fake Fish</strong> - The one that didn't get away! It's all the fish
+                without the smell!</li>
+            <br>
+            <!--Need to update this link. We no longer use s3.merch.codes for our S3 bucket storage-->
+            <img src="https://lure.fakefish.co/bigmouth.png"
+                alt="alt text: Close-up photograph showing scale detail of a hyper realistic fish model."
+                style="display: block; margin-left: auto; margin-right: auto; padding: 10px; border: 1px solid #006699;">
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have any questions? Reach out to us at <a href="mailto:william@fakefish.co">william@fakefish.co</a>.</p>
+    </section>
+
+    <footer>
+        <p>Created with Ubuntu Linux - The Best OS There Is!</p>
+    </footer>
+</body>
+
+</html>

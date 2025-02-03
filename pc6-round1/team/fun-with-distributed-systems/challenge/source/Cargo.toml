@@ -1,0 +1,61 @@
+[package]
+name = "distributed-key-value-store-example"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "MIT"
+
+[package.metadata.release]
+release = false
+
+[dependencies]
+async-std = { version = "1.12", features = ["attributes"] }
+async-trait = "0.1"
+bs58 = "0.5.1"
+clap = { version = "4.5.17", features = ["derive"] }
+futures = "0.3.30"
+libp2p = { version = "0.54.1", features = [ "async-std", "dns", "kad", "mdns", "noise", "macros", "tcp", "yamux"] }
+libp2p-identity = { version = "0.2.9", features = ["ed25519", "rand", "peerid"] }
+rand = "0.8.5"
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[[bin]]
+name = "part1"
+path = "src/part1.rs"
+required-features = ["part1"]
+
+[[bin]]
+name = "hidden1"
+path = "src/part1.rs"
+required-features = ["part1", "hidden"]
+
+[[bin]]
+name = "part2"
+path = "src/part2.rs"
+required-features = ["part2"]
+
+[[bin]]
+name = "hidden2"
+path = "src/part2.rs"
+required-features = ["part2", "hidden"]
+
+[[bin]]
+name = "part3"
+path = "src/part3.rs"
+required-features = ["part3"]
+
+[[bin]]
+name = "hidden3"
+path = "src/part3.rs"
+required-features = ["part3", "hidden"]
+
+[[bin]]
+name = "generate_static_keypairs"
+path = "src/generate_static_keypairs.rs"
+
+[features]
+part1 = []
+part2 = []
+part3 = []
+hidden = []

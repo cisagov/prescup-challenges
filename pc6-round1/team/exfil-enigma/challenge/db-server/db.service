@@ -1,0 +1,10 @@
+[Unit]
+Description=Database Uploader Service
+
+[Service]
+ExecStart=/usr/bin/bash /home/user/Desktop/db-post.sh
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,17 @@
+﻿@model IndexViewModel
+@{
+    ViewData["Title"] = "Townsville Community Pool - Home";
+}
+
+@if (Model != null && !string.IsNullOrWhiteSpace(Model.Token1))
+{
+    <div class="alert alert-success">
+        <h2>Token 1: @Model.Token1</h2>
+    </div>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Townsville Community Pool</h1>
+    <p>Welcome to the Townsville Community Pool</p>
+    <img src="~/img/pool-191972_1280.jpg" />
+</div>

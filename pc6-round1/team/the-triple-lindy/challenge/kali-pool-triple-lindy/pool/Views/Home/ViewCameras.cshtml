@@ -1,0 +1,31 @@
+﻿@model CameraViewModel
+@{
+    ViewData["Title"] = "Townsville Community Pool - View Cameras";
+}
+
+@if (Model != null && !string.IsNullOrWhiteSpace(Model.Token3))
+{
+    <div class="alert alert-success">
+        <h2>Token 3: @Model.Token3</h2>
+    </div>
+}
+
+@if (Model != null && !string.IsNullOrWhiteSpace(Model.Message))
+{
+    <div class="alert alert-success">
+        <h2>Message: @Model.Message</h2>
+    </div>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Townsville Community Pool</h1>
+    <p>Live Camera Views</p>
+    @if (Model != null)
+    { 
+    <img src='@(Model.ImagePath1)' width="35%" /><br /><br />
+    <img src='@(Model.ImagePath2)' width="35%" /><br /><br />
+    <img src='@(Model.ImagePath3)' width="35%" /><br /><br />
+    <img src='@(Model.ImagePath4)' width="35%" /><br /><br />
+    <img src='@(Model.ImagePath5)' width="35%" />
+    }
+</div>

@@ -1,0 +1,13 @@
+[Unit]
+Description=Pool Server
+After=network.target
+
+[Service]
+User=user
+WorkingDirectory=/home/user/Documents/
+ExecStart=/bin/python3 /home/user/Documents/poolserver.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

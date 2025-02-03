@@ -1,0 +1,15 @@
+[Unit]
+Description=Fake Fish Website
+After=network-online.target
+Wants=network-online.target
+
+
+[Service]
+Type=simple
+WorkingDirectory=/home/user/c07/fakefish-co-FlaskWebsite
+ExecStart=python3 /home/user/c07/fakefish-co-FlaskWebsite/app.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=fakefishwebsite.service

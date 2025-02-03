@@ -1,0 +1,16 @@
+from pathlib import Path
+import subprocess
+import requests
+import base64
+    
+filePath = "/home/user/.local/fschecker"
+file = Path(filePath)
+
+if file.is_file():
+    args = (filePath)
+    process = subprocess.Popen(args, stdout=subprocess.PIPE)
+    process.wait()
+    output = process.stdout.read()
+    print(output)
+
+
