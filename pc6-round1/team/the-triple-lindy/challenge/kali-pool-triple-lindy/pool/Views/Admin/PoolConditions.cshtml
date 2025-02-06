@@ -1,0 +1,175 @@
+﻿@model PoolConditionsViewModel
+@{
+    ViewData["Title"] = "Townsville Community Pool - Pool Conditions";
+}
+
+<script>
+    window.addEventListener("load", function() {
+        setTimeout(function(){ document.location.reload(); }, 60000)
+    });
+</script>
+
+@if (Model != null && Model.Token4 != null && !String.IsNullOrWhiteSpace(Model.Token4))
+{
+    <div class="alert alert-success">
+        <h2>Token 4: @Model.Token4</h2>
+    </div>
+}
+
+@if (Model != null && !string.IsNullOrWhiteSpace(Model.Message))
+{
+    <div class="alert alert-warning">
+        <h2>@Model.Message</h2>
+    </div>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Townsville Community Pool - Admin Control Panel</h1>
+    <p>Welcome to the remote pool chemical monitoring control panel.</p>
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">Pool Chemical Balancing System</h1>
+</div>
+
+<br /><br />
+<div>
+    <h4>Pool pH</h4>
+    <p>Main Pool pH: @Model.pH (7.4-7.6)</p>
+    <div class="progress">
+        @if (Model.pH > 7.3 && Model.pH < 7.7)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.pH)%" aria-valuenow="@Model.pH" aria-valuemin="6" aria-valuemax="10"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.pH)%" aria-valuenow="@Model.pH" aria-valuemin="6" aria-valuemax="10"></div>
+        }
+    </div>
+    <br />
+
+    <h4>Pool Total Alkalinity</h4>
+    <p>Main Pool TotalAlkalinity: @Model.TotalAlkalinity (80-120 ppm)</p>
+    <div class="progress">
+        @if (Model.TotalAlkalinity > 79 && Model.TotalAlkalinity < 121)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.TotalAlkalinity)%" aria-valuenow="@Model.TotalAlkalinity" aria-valuemin="60" aria-valuemax="130"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.TotalAlkalinity)%" aria-valuenow="@Model.TotalAlkalinity" aria-valuemin="60" aria-valuemax="130"></div>
+        }
+    </div>
+    <br />
+
+    <h4>Pool Free Available Chlorine</h4>
+    <p>Main Pool Free Available Chlorine: @Model.FreeAvailableChlorine (2.0-4.0 ppm)</p>
+    <div class="progress">
+        @if (Model.FreeAvailableChlorine > 1.9 && Model.FreeAvailableChlorine < 4.1)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.FreeAvailableChlorine)%" aria-valuenow="@Model.FreeAvailableChlorine" aria-valuemin="0" aria-valuemax="6"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.FreeAvailableChlorine)%" aria-valuenow="@Model.FreeAvailableChlorine" aria-valuemin="0" aria-valuemax="6"></div>
+        }
+    </div>
+    <br />
+
+    <h4>Pool Bromine</h4>
+    <p>Main Pool Bromine: @Model.Bromine (3.0-5.0 ppm)</p>
+    <div class="progress">
+        @if (Model.Bromine > 2.9 && Model.Bromine < 5.1)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.Bromine)%" aria-valuenow="@Model.Bromine" aria-valuemin="0" aria-valuemax="8"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.Bromine)%" aria-valuenow="@Model.Bromine" aria-valuemin="0" aria-valuemax="8"></div>
+        }
+    </div>
+    <br />
+
+    <h4>Pool Cyanuric Acid</h4>
+    <p>Main Pool CyanuricAcid: @Model.CyanuricAcid (30-50 ppm)</p>
+    <div class="progress">
+        @if (Model.CyanuricAcid > 29 && Model.CyanuricAcid < 51)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.CyanuricAcid)%" aria-valuenow="@Model.CyanuricAcid" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.CyanuricAcid)%" aria-valuenow="@Model.CyanuricAcid" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+    </div>
+    <br />
+
+    <h4>Pool Calcium Hardness</h4>
+    <p>Main Pool Calcium Hardness: @Model.CalciumHardness (200-400 ppm)</p>
+    <div class="progress">
+        @if (Model.CalciumHardness > 199 && Model.CalciumHardness < 401)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.CalciumHardness)%" aria-valuenow="@Model.CalciumHardness" aria-valuemin="0" aria-valuemax="600"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.CalciumHardness)%" aria-valuenow="@Model.CalciumHardness" aria-valuemin="0" aria-valuemax="600"></div>
+        }
+    </div>
+    <br />
+
+    <h4>Pool Metals</h4>
+    <p>Main Pool Metals: @Model.Metals (0 ppm)</p>
+    <div class="progress">
+        @if (Model.Metals == 0)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.Metals)%" aria-valuenow="@Model.Metals" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.Metals)%" aria-valuenow="@Model.Metals" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+    </div>
+    <br />
+
+    <h4>Pool Total Dissolved Solids</h4>
+    <p>Main Pool Total Dissolved Solids: @Model.TotalDissolvedSolids (0-2500 ppm)</p>
+    <div class="progress">
+        @if (Model.TotalDissolvedSolids >= 0 && Model.TotalDissolvedSolids < 2501)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.TotalDissolvedSolids)%" aria-valuenow="@Model.TotalDissolvedSolids" aria-valuemin="0" aria-valuemax="5000"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.TotalDissolvedSolids)%" aria-valuenow="@Model.TotalDissolvedSolids" aria-valuemin="0" aria-valuemax="5000"></div>
+        }
+    </div>
+    <br />
+
+    <h4>Pool Phosphates</h4>
+    <p>Main Pool Phosphates: @Model.Phosphates (0 ppm)</p>
+    <div class="progress">
+        @if (Model.Phosphates == 0)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.Phosphates)%" aria-valuenow="@Model.Phosphates" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.Phosphates)%" aria-valuenow="@Model.Phosphates" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+    </div>
+    <br />
+
+    @* Main Pool Target Temperature: 80 degrees F<br />
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="120"></div>
+    </div>
+    <br /><br />
+    <h4>Update Pool Temperature</h4>
+    <form method="post" action="AdminMain">
+        Temperature: &nbsp;&nbsp; <input type="range" name="SetMainPoolTemperature" id="SetMainPoolTemperature" max="100" min="60" step="1" value="80" /><br /><br />
+        <input type="hidden" name="AutomatedPoolManagementUsername" id="AutomatedPoolManagementUsername" />
+        <input type="hidden" name="AutomatedPoolManagementPassword" id="AutomatedPoolManagementPassword" />
+        <input type="submit" name="Submit" value="Update Main Pool Temperature" />
+    </form> *@
+</div>

@@ -1,0 +1,40 @@
+﻿@model DocumentationViewModel
+@{
+    ViewData["Title"] = "Documentation";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Documentation Search</h1>
+    <p>Search our system documentation by keyword or model number.</p>
+    <p><img src="~/img/code-1839406_1280.jpg" width="80%" /></p>
+</div>
+<div class="text-left">
+    <form method="post" action="Documentation">
+        <div>
+            Search Term:
+        </div>
+        <div>
+            <input type="text" name="SearchTerm" />
+        </div>
+        <br />
+        <div>
+            <input type="submit" name="Search" value="Search" />
+        </div>
+    </form>
+    <br /><br />
+    @if (Model != null)
+    {
+        if (!string.IsNullOrWhiteSpace(Model.Message))
+        {
+            <p>@Model.Message</p>
+        }
+
+        if (Model.SearchResults != null)
+        {
+            foreach(string s in Model.SearchResults)
+            {
+                <p>@Html.Raw(s)</p>
+            }
+        }
+    }
+</div>

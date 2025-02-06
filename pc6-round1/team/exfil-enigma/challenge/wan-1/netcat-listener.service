@@ -1,0 +1,10 @@
+[Unit]
+Description=Netcat Listener for PDF Transfer
+After=network.target
+
+[Service]
+ExecStart=/home/user/Documents/netcatlistener.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

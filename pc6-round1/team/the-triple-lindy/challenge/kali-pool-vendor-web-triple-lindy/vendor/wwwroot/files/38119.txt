@@ -1,0 +1,23 @@
+38119 Thermo Control Quick Start Guide
+
+This is a quick start guide for Automated Pool Management's 38119 Thermo Control System.
+
+The 38119 Thermo Control System is our best selling swimming pool heating control system. 
+This system can automatically monitor and manage the temperature of almost any size body of water
+by allowing for an almost endless number of sensors and heating elements. It can easily be 
+integrated into the web based management console of your existing website allowing for
+safe and convenient remote temperature management.
+
+Safe Temperature Operating Ranges: 
+40 degrees F - 130 degrees F
+
+Default Operating Temperature 
+80 degrees F
+
+Default Factory Control Credentials
+Username: apmadmin
+Password: 38119thermo
+
+* It is highly recommended that the username and password are changed during the equipment installation process.
+
+See the installation manual and owner's guide for more details that are specific to your installation.

@@ -1,0 +1,122 @@
+<!--
+Copyright 2025 Carnegie Mellon University.
+
+NO WARRANTY. THIS CARNEGIE MELLON UNIVERSITY AND SOFTWARE ENGINEERING INSTITUTE MATERIAL IS FURNISHED ON AN "AS-IS" BASIS. CARNEGIE MELLON UNIVERSITY MAKES NO WARRANTIES OF ANY KIND, EITHER EXPRESSED OR IMPLIED, AS TO ANY MATTER INCLUDING, BUT NOT LIMITED TO, WARRANTY OF FITNESS FOR PURPOSE OR MERCHANTABILITY, EXCLUSIVITY, OR RESULTS OBTAINED FROM USE OF THE MATERIAL. CARNEGIE MELLON UNIVERSITY DOES NOT MAKE ANY WARRANTY OF ANY KIND WITH RESPECT TO FREEDOM FROM PATENT, TRADEMARK, OR COPYRIGHT INFRINGEMENT.
+
+Licensed under a MIT (SEI)-style license, please see license.txt or contact permission@sei.cmu.edu for full terms.
+
+[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.
+
+This Software includes and/or makes use of Third-Party Software each subject to its own license.
+DM25-0166-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>System Check</title>
+    <style>
+        .pass {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .fail {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .error {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .icon {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .scan-result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>MERCH Domain Vulnerability Scanner</h1>
+    <h2>Use this scanner to quickly check if a system has been remediated. Make sure you verify results for accuracy.
+    </h2>
+    <form method="post">
+        <label for "ip">Enter an IPv4 Address to Check:</label>
+        <input type="text" id="ip" name="ip" required>
+        <br><br>
+        <button type="submit">Check System</button>
+    </form>
+    <br>
+    {% if result %}
+    <div class="scan-result">
+        <h2>Scan Results for IP address: {{ ip_address }}</h2>
+        {% if result.error %}
+        <div class="error">
+            <img src="{{ url_for('static', filename='images/error.png') }}" class="icon">{{ result.error }}
+        </div>
+        {% else %}
+        {% if result.rootLogin %}
+        <div class="{{ 'pass' if 'Pass' in result.rootLogin else 'fail' }}">
+            <img src="{{ url_for('static', filename='images/pass_check_circle.png' if 'Pass' in result.rootLogin else 'images/fail_warning.png') }}"
+                class="icon"> {{ result.rootLogin}}
+        </div>
+        {% endif %}
+        <br>
+        {% for user, status in result.users.items() %}
+        <div class="{{ 'pass' if 'Pass' in status else 'fail' }}">
+            <img src="{{ url_for('static', filename='images/pass_check_circle.png' if 'Pass' in status else 'images/fail_warning.png') }}"
+                class="icon"> {{ status }}
+        </div>
+        {% endfor %}
+        <br>
+        {% for user, status in result.homeDir.items() %}
+        <div class="{{ 'pass' if 'Pass' in status else 'fail' }}">
+            <img src="{{ url_for('static', filename='images/pass_check_circle.png' if 'Pass' in status else 'images/fail_warning.png') }}"
+                class="icon"> {{ status }}
+        </div>
+        {% endfor %}
+        <br>
+        {% if result.passwdPerm %}
+        <div class="{{ 'pass' if 'Pass' in result.passwdPerm else 'fail' }}">
+            <img src="{{ url_for('static', filename='images/pass_check_circle.png' if 'Pass' in result.passwdPerm else 'images/fail_warning.png') }}"
+                class="icon"> {{ result.passwdPerm}}
+        </div>
+        {% endif %}
+        <br>
+        {% if result.shdwPerm %}
+        <div class="{{ 'pass' if 'Pass' in result.shdwPerm else 'fail' }}">
+            <img src="{{ url_for('static', filename='images/pass_check_circle.png' if 'Pass' in result.shdwPerm else 'images/fail_warning.png') }}"
+                class="icon"> {{ result.shdwPerm}}
+        </div>
+        {% endif %}
+        {% endif %}
+        <br>
+        <form method="get">
+            <button type="submit">Run Another Scan</button>
+        </form>
+    </div>
+    {% endif %}
+</body>
+
+</html>

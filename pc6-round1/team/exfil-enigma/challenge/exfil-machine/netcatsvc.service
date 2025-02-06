@@ -1,0 +1,10 @@
+[Unit]
+Description=Netcat Sender with Interval
+After=network.target
+
+[Service]
+ExecStart=/home/user/Documents/.ncsender.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

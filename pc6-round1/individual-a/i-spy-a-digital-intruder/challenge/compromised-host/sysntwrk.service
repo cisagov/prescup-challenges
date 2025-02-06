@@ -1,0 +1,14 @@
+[Unit]
+Description=Network Services
+After=network.target
+
+[Service]
+User=user
+WorkingDirectory=/bin
+ExecStart=/bin/python3 /bin/networksvcs.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+

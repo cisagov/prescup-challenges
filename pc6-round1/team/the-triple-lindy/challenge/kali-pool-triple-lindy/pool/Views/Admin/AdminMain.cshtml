@@ -1,0 +1,182 @@
+﻿@model AdminViewModel
+@{
+    ViewData["Title"] = "Townsville Community Pool - Admin";
+}
+
+<script>
+    window.addEventListener("load", function() {
+        setTimeout(function(){ document.location.reload(); }, 60000)
+    });
+</script>
+
+@if (Context.Request.Cookies["Token2"] != null && !String.IsNullOrWhiteSpace(Context.Request.Cookies["Token2"]))
+{
+    <div class="alert alert-success">
+        <h2>Token 2: @Context.Request.Cookies["Token2"]</h2>
+    </div>
+}
+
+@if (Model != null && !string.IsNullOrWhiteSpace(Model.Message))
+{
+    <div class="alert alert-warning">
+        <h2>@Model.Message</h2>
+    </div>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Townsville Community Pool - Admin Control Panel</h1>
+    <p>We are in the process of integrating multiple new systems to allow for safe and reliable remote management and monitoring of our facilities.</p>
+    <img src="~/img/pool-191972_1280.jpg" />
+</div>
+
+<p>The admin console and API is still under development. Please check back with us every week for new features.</p>
+
+<div class="text-center">
+    <h1 class="display-4">System Status</h1>
+</div>
+
+<br /><br />
+<div>
+    <h4>Pool Temperature</h4>
+    <p>Welcome to the Automated Pool Management Pool Temperature Control System (Model No. 38119)</p>
+    <p>Main Pool Current Temperature: @Model.MainPoolTemperature degrees F</p>
+    <div class="progress">
+        @if (Model.MainPoolTemperature > 0 && Model.MainPoolTemperature < 110)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.MainPoolTemperature)%" aria-valuenow="@Model.MainPoolTemperature" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.MainPoolTemperature)%" aria-valuenow="@Model.MainPoolTemperature" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+    </div>
+    <br />
+    Main Pool Target Temperature: 80 degrees F<br />
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="120"></div>
+    </div>
+    <br /><br />
+    <h4>Update Pool Temperature</h4>
+    <form method="post" action="AdminMain">
+        Temperature: &nbsp;&nbsp; <input type="range" name="SetMainPoolTemperature" id="SetMainPoolTemperature" max="100" min="60" step="1" value="80" /><br /><br />
+        <input type="hidden" name="AutomatedPoolManagementUsername" id="AutomatedPoolManagementUsername" />
+        <input type="hidden" name="AutomatedPoolManagementPassword" id="AutomatedPoolManagementPassword" />
+        <input type="submit" name="Submit" value="Update Main Pool Temperature" />
+    </form>
+</div>
+@* <div>
+    <h4>Room Temperatures</h4>
+    Piloting Room Temperature: @Model.PilotingRegisterRoomTempAddress degrees F<br />
+    <div class="progress">
+        @if (Model.PilotingRegisterRoomTempAddress > 0 && Model.PilotingRegisterRoomTempAddress < 80)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.PilotingRegisterRoomTempAddress)%" aria-valuenow="@Model.PilotingRegisterRoomTempAddress" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.PilotingRegisterRoomTempAddress)%" aria-valuenow="@Model.PilotingRegisterRoomTempAddress" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+    </div>
+    <br />
+    Engineering Room Temperature: @Model.EngineeringRegisterRoomTempAddress degrees F<br />
+    <div class="progress">
+        @if (Model.EngineeringRegisterRoomTempAddress > 0 && Model.EngineeringRegisterRoomTempAddress < 80)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.EngineeringRegisterRoomTempAddress)%" aria-valuenow="@Model.EngineeringRegisterRoomTempAddress" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.EngineeringRegisterRoomTempAddress)%" aria-valuenow="@Model.EngineeringRegisterRoomTempAddress" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+    </div>
+    <br />
+    DC Room Temperature: @Model.DCRegisterRoomTempAddress degrees F<br />
+    <div class="progress">
+        @if (Model.DCRegisterRoomTempAddress > 0 && Model.DCRegisterRoomTempAddress < 80)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.DCRegisterRoomTempAddress)%" aria-valuenow="@Model.DCRegisterRoomTempAddress" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.DCRegisterRoomTempAddress)%" aria-valuenow="@Model.DCRegisterRoomTempAddress" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+    </div>
+    <br />
+    Comms Room Temperature: @Model.CommsRegisterRoomTempAddress degrees F<br />
+    <div class="progress">
+        @if (Model.CommsRegisterRoomTempAddress > 0 && Model.CommsRegisterRoomTempAddress < 80)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.CommsRegisterRoomTempAddress)%" aria-valuenow="@Model.CommsRegisterRoomTempAddress" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.CommsRegisterRoomTempAddress)%" aria-valuenow="@Model.CommsRegisterRoomTempAddress" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+    </div>
+    <br />
+    Port Shuttle Room Temperature: @Model.PShuttleRegisterRoomTempAddress degrees F<br />
+    <div class="progress">
+        @if (Model.PShuttleRegisterRoomTempAddress > 0 && Model.PShuttleRegisterRoomTempAddress < 80)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.PShuttleRegisterRoomTempAddress)%" aria-valuenow="@Model.PShuttleRegisterRoomTempAddress" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.PShuttleRegisterRoomTempAddress)%" aria-valuenow="@Model.PShuttleRegisterRoomTempAddress" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+    </div>
+    <br />
+    Ops Room Temperature: @Model.OpsRegisterRoomTempAddress degrees F<br />
+    <div class="progress">
+        @if (Model.OpsRegisterRoomTempAddress > 0 && Model.OpsRegisterRoomTempAddress < 80)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.OpsRegisterRoomTempAddress)%" aria-valuenow="@Model.OpsRegisterRoomTempAddress" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.OpsRegisterRoomTempAddress)%" aria-valuenow="@Model.OpsRegisterRoomTempAddress" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+    </div>
+    <br />
+    Starboard Shuttle Room Temperature: @Model.SShuttleRegisterRoomTempAddress degrees F<br />
+    <div class="progress">
+        @if (Model.SShuttleRegisterRoomTempAddress > 0 && Model.SShuttleRegisterRoomTempAddress < 80)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.SShuttleRegisterRoomTempAddress)%" aria-valuenow="@Model.SShuttleRegisterRoomTempAddress" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.SShuttleRegisterRoomTempAddress)%" aria-valuenow="@Model.SShuttleRegisterRoomTempAddress" aria-valuemin="0" aria-valuemax="100"></div>
+        }
+    </div>
+    <br /><br />
+        
+    @*// Doors:*
+    <h4>Ship Doors</h4>
+    Door 1: @if(Model.Door1Coil) { <span style="font-weight: bold;">Closed</span> } else { <span>Open</span> } <br />
+    Door 2: @if(Model.Door2Coil) { <span style="font-weight: bold;">Closed</span> } else { <span>Open</span> } <br />
+    Door 3: @if(Model.Door3Coil) { <span style="font-weight: bold;">Closed</span> } else { <span>Open</span> } <br />
+    Door 4: @if(Model.Door4Coil) { <span style="font-weight: bold;">Closed</span> } else { <span>Open</span> } <br />
+    Door 5: @if(Model.Door5Coil) { <span style="font-weight: bold;">Closed</span> } else { <span>Open</span> } <br />
+    Door 6: @if(Model.Door6Coil) { <span style="font-weight: bold;">Closed</span> } else { <span>Open</span> } <br /> 
+
+    @*// Fire Suppression:
+    <br />
+    <h4>Fire Suppression Systems</h4>
+    Piloting Fire Suppression: @if(Model.PilotingFireSuppressionDoor1Coil) { <span style="font-weight: bold;">Fire Suppression Enabled</span> } else { <span>Fire Suppression Disabled</span> }  <br />
+    Engineering Fire Suppression: @if(Model.EngineeringFireSuppressionDoor2Coil) { <span style="font-weight: bold;">Fire Suppression Enabled</span> } else { <span>Fire Suppression Disabled</span> } <br />
+    DC Fire Suppression: @if(Model.DCFireSuppressionDoor3Coil) { <span style="font-weight: bold;">Fire Suppression Enabled</span> } else { <span>Fire Suppression Disabled</span> } <br />
+    Comms Fire Suppression: @if(Model.CommsFireSuppressionDoor4Coil) { <span style="font-weight: bold;">Fire Suppression Enabled</span> } else { <span>Fire Suppression Disabled</span> } <br />
+    Ops Fire Suppression: @if(Model.OpsFireSuppressionDoor5Coil) { <span style="font-weight: bold;">Fire Suppression Enabled</span> } else { <span>Fire Suppression Disabled</span> } <br />
+
+    @*// Smoke Sensors:
+    <br />
+    <h4>Smoke Detector Sensors</h4>
+    Piloting Smoke Sensor: @if(Model.PilotingSmokeSensor1Coil) { <span style="font-weight: bold;">Smoke Detected</span> } else { <span>No Smoke Detected</span> } <br />
+    Engineering Smoke Sensor: @if(Model.EngineeringSmokeSensor2Coil) { <span style="font-weight: bold;">Smoke Detected</span> } else { <span>No Smoke Detected</span> } <br />
+    DC Smoke Sensor: @if(Model.DCSmokeSensor3Coil) { <span style="font-weight: bold;">Smoke Detected</span> } else { <span>No Smoke Detected</span> } <br />
+    Comms Smoke Sensor: @if(Model.CommsSmokeSensor4Coil) { <span style="font-weight: bold;">Smoke Detected</span> } else { <span>No Smoke Detected</span> } <br />
+    Port Shuttle Smoke Sensor: @if(Model.PShuttleSmokeSensor6Coil) { <span style="font-weight: bold;">Smoke Detected</span> } else { <span>No Smoke Detected</span> } <br />
+    Ops Smoke Sensor: @if(Model.OpsSmokeSensor5Coil) { <span style="font-weight: bold;">Smoke Detected</span> } else { <span>No Smoke Detected</span> } <br />
+    Starboard Shuttle Smoke Sensor: @if(Model.SShuttleSmokeSensor7Coil) { <span style="font-weight: bold;">Smoke Detected</span> } else { <span>No Smoke Detected</span> } <br />
+</div> *@
