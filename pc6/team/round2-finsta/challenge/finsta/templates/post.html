@@ -1,0 +1,33 @@
+{% macro render_post(post) %}
+<div class="post">
+    <h3>{{ title }}</h3>
+    <p>{{ content }}</p>
+</div>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        {{post.title}}
+        <a href="{{url_for('profile', user=post.username)}}">
+            {{post.username}}
+            <svg xmlns="http://www.w3.org/2000/svg" style="margin-left:5px;"width="16" height="16" fill="currentColor"
+                class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+            </svg>
+        </a>
+    </div>
+    <div class="card-body">
+        <p class="card-text">{{post.text}}</p>
+        {% for tag in post.tags.split("~") %}
+        <span class="badge bg-secondary">#{{tag}}</span>
+
+        {% endfor %}
+    </div>
+    {% if post.id == 2 %}
+        <img src="{{url_for('static', filename='imgs/newAPI.png')}}" class="card-img-bottom" alt="New Finsta API image!">
+    {% endif %}
+
+</div>
+
+{% endmacro %}
