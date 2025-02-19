@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'post.html' import render_post %}
+
+
+{% block title %}
+Finsta | Home
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+
+            {% if user.userIsPremium %}
+            <div class="alert alert-danger" role="alert" style="margin-top:2rem;">
+                <p>Congratulations! You are our first ever premium user!</p>
+                <p>You won't regret this purchase, I promise.</p>
+                <p>{{ tokenJWT }}</p>
+            </div>
+            {% endif %}
+
+            {% for post in posts %}
+            {{ render_post(post) }}
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}500 ERROR | DEBUG{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/atom-one-dark.min.css') }}">
+<style>
+    /* for block of numbers */
+    .hljs-ln-n {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #CCC;
+        vertical-align: top;
+        padding-right: 5px;
+        margin-right: 10px;
+        /* your custom style here */
+    }
+
+    /* for block of code */
+    .hljs-ln-code {
+        padding-left: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+            <h1 class="pt-5 pb-2">SERVER IN DEV MODE</h1>
+            <p>Here's your broken code. Fix it and commit. </p>
+            <p>Error message or exception: <br />{{ error }}</p>
+            <pre><code class="python">{{ code_snippet }}</code></pre>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/highlight.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/highlightjs-line-numbers.min.js') }}"></script>
+<script>hljs.highlightAll(); hljs.initLineNumbersOnLoad({ startFrom: {{line}} }); </script>
+{% endblock %}

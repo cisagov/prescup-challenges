@@ -1,4 +1,4 @@
-<img src="pc6-banner.jpg" height="150px"/>
+<img src="pc6-banner.png" height="150px"/>
 
 # President's Cup Cybersecurity Competition 2025 Round 1 Content (Season 6)
 

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block title %}
+Finsta | Login
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+
+      <h1 class="pt-5 pb-2">Login</h1>
+
+      <p class="lead">Welcome back to Finsta!</p>
+
+      {{ render_form(form) }}
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'post.html' import render_post %}
+
+
+{% block title %}
+Finsta | {{user.username}}
+{% endblock %}
+
+{% block styles %}
+<style>
+    {% if user.style %}
+    {{user.style | safe}}
+    {% endif %}
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+
+            <div class="card" style="margin-top:2rem;">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" style="margin-left:5px;"width="16" height="16" fill="currentColor"
+                            class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                        </svg>
+                        {{user.username}}
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{user.bio}}</p>
+                    {% if current_user.is_authenticated and user.username == current_user.username %}
+                    <a href="{{url_for('edit_profile')}}" class="btn btn-primary">Edit Profile</a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <h3 style="margin-top:5rem;">Posts by {{ user.username }}</h3>
+            <hr/>
+            {% for post in user.posts %}
+            {{ render_post(post) }}
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

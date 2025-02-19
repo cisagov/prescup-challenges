@@ -1,0 +1,15 @@
+[Unit]
+Description=CA Signing service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/user/certs/csr.py
+StandardOutput=journal
+StandardError=journal
+Restart=always
+
+
+[Install]
+WantedBy=multi-user.target
+
+#on rootca.us
