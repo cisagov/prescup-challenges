@@ -8,6 +8,10 @@ You will implement and enact many of the security principles found in these arti
 
 - This lab is expected to take 1 (one) hour
 
+*Please consider filling out the lab feedback survey at the bottom of your screen. The survey is available to you at any time while conducting the lab.*
+
+**Caution!** You must complete _all_ phases of the lab and complete the mini-challenge to receive your completion certificate. We encourage you to attempt mini-challenges on your own, but links to the solution guides are available in the Mini-Challenge section of the lab document if you need them.
+
 ## Learning Objectives
 
  - Explain the principles of network segmentation
@@ -287,8 +291,6 @@ Grading Check 3: Update and apply the HMI Server's local UFW rules.
 `Copy the token or flag strings to the corresponding question submission fields to receive credit.`
 
 `You should complete all phase 1 tasks before moving on to phase 2. Successfully submitting the correct answers for phase 1 will unlock the question set for phase 2.`
-
-**Will update this if/when we know auto-submissions will not affect the releasing of question sets prematurely.**
 
 </p>
 </details>
@@ -591,6 +593,12 @@ To recap:
  - You added local Ubuntu firewall rules to a critical system to reduce its footprint on the network and to secure it from unwanted network traffic.
  - You moved a necessary system out of the critical network to reduce the traffic flow in and out of the critical network. This allowed you to better secure the critical systems while making a necessary feature accessible in it's own network.
  - You added router access control list rules to further restrict all unwanted network traffic in and out of the critical network, again decreasing the visibility of the systems in this network and denying unwanted bad traffic.
+
+Skills exercised:
+ - S0553: Skill in applying network access controls
+ - S0584: Skill in configuring network devices
+ - S0667: Skill in assessing security controls
+ - S0741: Skill in administering servers
 
 With these new security additions in place, your critical HMI systems are much better protected and the ability for an intruder to gain access has been reduced to a near-zero possibility without physical access to the air-gapped HMI-Admin-Console.
 

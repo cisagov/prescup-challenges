@@ -16,7 +16,7 @@
 
 ![s01-image48.png](./img/s01-sol1.png)
 
-You should see two malicious sounding sender addresses that are sending messages to 5 different users in your organization. Note that these addresses and domains are dynamically generated for each lab instance. Your sender addresses will differ from the screenshot shown above.
+You should see two malicious-seeming sender addresses that are sending messages to 5 different users in your organization. Note that these addresses and domains are dynamically generated for each lab instance. Your sender addresses will differ from the screenshot shown above.
 
 Record the domains for these senders, i.e. just the part after the @ symbol in the sender address.
 
