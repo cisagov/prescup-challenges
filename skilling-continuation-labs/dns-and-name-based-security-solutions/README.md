@@ -8,6 +8,10 @@ Additional guidance on the implementation of Encrypted DNS can be found <a href=
 
  - This lab is expected to take 1 (one) hour
 
+*Please consider filling out the lab feedback survey at the bottom of your screen. The survey is available to you at any time while conducting the lab.*
+
+**Caution!** You must complete _all_ phases of the lab and complete the mini-challenge to receive your completion certificate. We encourage you to attempt mini-challenges on your own, but links to the solution guides are available in the Mini-Challenge section of the lab document if you need them.
+
 ## Learning Objectives
 
  - Explain the principles of Domain Name Services
@@ -271,7 +275,7 @@ You should see that while the rest of the content is displayed for the page and 
 
 ![s01-image17-1543296315.png](./img/s01-image17.png)
 
-Note that you can see which client or system in your environment made the requests. This data might be of value to understand trends or commonalities in user behaviors in order to implement further security controls to help prevent malicious content or actions on the network.
+Note that you can see which client or system in your environment made the requests. This data might be of value to understand trends or commonalities in user behaviors to implement further security controls to help prevent malicious content or actions on the network.
 
 </p>
 </details>
@@ -570,7 +574,7 @@ You will be presented with the settings for the upstream DNS resolver.
 
 ![s01-image36-420550788.png](./img/s01-image36.png)
 
- - Change the `SSL/TLS Certificate` to `Encrypted DNS` from the dropdown menu. This file was pre-generated for you. If a certificate did not already exist, you would need to create one in order to complete the TLS handshake (an example of this is provided at the end of this step).
+ - Change the `SSL/TLS Certificate` to `Encrypted DNS` from the dropdown menu. This file was pre-generated for you. If a certificate did not already exist, you would need to create one to complete the TLS handshake (an example of this is provided at the end of this step).
 
 ![s01-image37-583682002.png](./img/s01-image37.png)
 
@@ -759,7 +763,13 @@ To recap:
  - You implemented a malicious domain blocklist and redirect using Pi-hole's domain blocking and DNS features
  - You implemented a Postfix blocklist using domain and IP address information found within mail logs to block future mail messages from these sources
  - You configured the upstream DNS resolver on pfSense to serve DNS over TLS, further protecting outbound DNS requests by encrypting the traffic from traffic sniffers
- 
+
+Skills exercised:
+ - S0517: Skill in anticipating threats
+ - S0596: Skill in encrypting network communications
+ - S0641: Skill in reviewing logs
+ - S0667: Skill in assessing security controls
+
 Preventing unwanted access to external sites and blocking malicious or otherwise unwanted email messages certainly protects users, their systems, and the network. Malicious domains and email messages pose constant threats, but leveraging DNS and domain-based information to strengthen security—integrated within a defense-in-depth strategy—is essential for any organization.
 
 ### References
