@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mirror Systems: Operator Manual</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #00ffcc;
+            font-family: "Courier New", Courier, monospace;
+            padding: 30px;
+        }
+        h1 {
+            color: #00ffff;
+            text-align: center;
+        }
+        .console {
+            background: #1a1a1a;
+            border: 1px solid #444;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #003333;
+            border: 1px solid #00ffff;
+            color: #00ffff;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00ffff;
+            color: #000;
+        }
+        .typed {
+            white-space: pre-wrap;
+            overflow: hidden;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Mirror Systems Operator Console</h1>
+
+<div class="console">
+    <div class="section">
+        <p id="intro" class="typed"></p>
+    </div>
+
+    <ection" id="zoneSection" style="display: none;">
+        <h3> Restricted Zones</h3>
+        <button disabled>/secrets</button>
+        <button disabled>/XXXX</button>
+        <button disabled>/ZZZZ</button>
+        <button disabled>/DDDD</button>
+        <button disabled>/BBBB</button>
+    </div>
+
+    <div class="section" id="headerSection" style="display: none;">
+        <h3> Identity Fragments Required</h3>
+        <ul>
+            <li><code>X-Forwarded-Mind</code>  cognitive anchor</li>
+            <li><code>X-Forwarded-X</code>  physical conduit</li>
+            <li><code>X-Forwarded-X</code>  spirit validation</li>
+            <li><code>X-Perspective</code>  context seal</li>
+        </ul>
+        <p> Ensure all headers are aligned before each gateway interaction.</p>
+    </div>
+
+    <div class="section" id="footerSection" style="display: none;">
+        <h3> Operator Footn      <p>Ref: <em>Appendix A</em>  Traversing the Mirrors</p>
+        <p>Ref: <em>Appendix D</em>  Header Integrity & Transmission</p>
+        <p> The key is not the door but what you carry through it.</p>
+    </div>
+</div>
+
+<script>
+    const text = `SYSTEM ACCESS NOTICE:
+This portal is for verified hunters only.
+Stateless traversals will be rejected.
+All self fragements must travel together.`;
+
+    const introElement = document.getElementById("intro");
+    let i = 0;
+
+    function typeWriter() {
+        if (i < text.length) {
+            introElement.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 35);
+        } else {
+            setTimeout(() => {
+                documtById("zoneSection").style.display = "block";
+                setTimeout(() => {
+                    document.getElementById("headerSection").style.display = "block";
+                    setTimeout(() => {
+                        document.getElementById("footerSection").style.display = "block";
+                    }, 800);
+                }, 800);
+            }, 600);
+        }
+    }
+
+    window.onload = typeWriter;
+</script>
+
+</body>
+</html>
+

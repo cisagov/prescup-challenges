@@ -1,0 +1,13 @@
+...
+router.post('/set', (req, res) => {
+    const payload = JSON.parse(req.body);
+    if (!payload.userId) throw new Error('User ID is required');
+    if (payload.isAdmin) throw new Error('Cannot create new admin users');
+
+    const user = userStore[payload.userId] || payload;
+
+    ...
+
+    res.status(200).send('User successfully updated');
+});
+...

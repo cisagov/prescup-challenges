@@ -1,0 +1,13 @@
+[Unit]
+Description=Braodcast Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /data/broadcast_spammer.py
+StandardOutput=journal
+StandardError=journal
+Restart=always
+RestartSec=1s
+
+[Install]
+WantedBy=multi-user.target

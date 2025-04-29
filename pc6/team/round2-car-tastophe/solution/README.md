@@ -8,7 +8,7 @@ In Car-tastrophe, the team uses an insecure smart car API to remotely enable a c
 
 The team then uses a remote connection to the CAN bus using python-can and socketcand to connect to the car's CAN bus and complete several tasks. The first CAN bus task is to extract the flag being emitted by device ID 0x12345678. The second task is to extract a flag being emitted byte-by-byte from a randomly-chosen ID. The third task is to signal a waiting agent by turning on the climate control of the vehicle's audio/visual (A/V) system. The final CAN bus task is to stop the car by messing with the car's brake pressures. All of the CAN bus modules are based on Nissan CAN bus messages extracted by the [open source community](https://github.com/dalathegreat/leaf_can_bus_messages), with slight modifications to reduce some of the necessary bit operations or add more guidance. 
 
-One thing to note is that the documentation records hexadecimal values very haparzadly; most of the time, values are lacking a leading `0x`. This can cause confusion when attempting to craft your own CAN bus messages. All two byte values should be considered hexadecimal by default.   
+One thing to note is that the documentation records hexadecimal values very haphazardly; most of the time, values are lacking a leading `0x`. This can cause confusion when attempting to craft your own CAN bus messages. All two byte values should be considered hexadecimal by default.   
 
 Car-tastrophe uses randomly-generated 16-digit hexadecimal tokens for all questions; there are no variants. The [solver.py](./solver.py) script contains code that will solve all five parts.
 

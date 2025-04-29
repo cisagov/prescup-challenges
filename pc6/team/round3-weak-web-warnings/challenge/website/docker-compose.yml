@@ -1,0 +1,67 @@
+services:
+  proxy:
+    build:
+      context: ./proxy
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - web
+    networks:
+      - web-network
+    restart: always
+    logging:
+      driver: journald
+      options:
+        tag: "{{.Name}}"
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    expose:
+      - "8080"
+    networks:
+      - web-network
+    security_opt:
+      - "no-new-privileges=true"
+      - "seccomp=unconfined"
+    restart: always
+    environment:
+      token: TOKENSERIAL
+    logging:
+      driver: journald
+      options:
+        tag: "{{.Name}}"
+  db:
+    image: mysql:latest
+    command:
+      - "/usr/local/bin/mysqld.sh"
+    expose:
+      - "3306"
+    networks:
+      - web-network
+    security_opt:
+      - "no-new-privileges=true"
+      - "seccomp=unconfined"
+    environment:
+      MYSQL_ROOT_PASSWORD: tartans
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_USER: user
+      MYSQL_PASSWORD: tartans
+      MYSQL_DATABASE: web_alerts
+    volumes:
+      - ./storage/db:/var/lib/mysql  # Allows DB to persist; clear with "sudo rm -r ./storage/db/*" to reset DB
+      - ./storage/logs:/var/logs/mysql
+      - ./db/db.sql:/docker-entrypoint-initdb.d/db.sql  # Only runs if the above storage has been cleared
+      # Logging modified from https://stackoverflow.com/questions/32938120/how-to-log-queries-to-stdout-on-mysql
+      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf:ro  
+      - ./db/mysqld.sh:/usr/local/bin/mysqld.sh
+    restart: always
+    logging:
+      driver: journald
+      options:
+        tag: "{{.Name}}"
+
+networks:
+  web-network:
+    driver: bridge

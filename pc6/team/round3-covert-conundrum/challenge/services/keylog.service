@@ -1,0 +1,15 @@
+[Unit]
+Description=Keylog Receiver Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/user/keylogReceiver.py
+StandardOutput=journal
+StandardError=journal
+Restart=always
+RestartSec=1s
+
+
+[Install]
+WantedBy=multi-user.target
+

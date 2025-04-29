@@ -1,0 +1,18 @@
+services:
+  victim:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    command: [ "/usr/bin/python3", "/app/victim.py" ]
+    container_name: victim
+    volumes:
+      - ./src:/app
+    working_dir: /app
+    restart: always
+    network_mode: host
+    logging: &default-logging
+      driver: journald  # Comment this out on Windows
+      options:
+        tag: "{{.Name}}"
+
+

@@ -1,0 +1,15 @@
+{
+  "name": "p1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "lodash": "^4.17.21"
+  },
+  "author": "",
+  "license": "ISC"
+}

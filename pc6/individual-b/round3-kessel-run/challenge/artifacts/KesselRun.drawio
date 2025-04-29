@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" version="25.0.3">
+  <diagram name="Page-1" id="k_4-_3BotilRAbILrPDF">
+    <mxGraphModel dx="1037" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5bXUzycwHYQgxf87-0Ci-17" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;labelPosition=left;verticalLabelPosition=top;align=right;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="70" y="480" width="810" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="5bXUzycwHYQgxf87-0Ci-4" value="/kessel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" edge="1" parent="1" source="5bXUzycwHYQgxf87-0Ci-1" target="5bXUzycwHYQgxf87-0Ci-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5bXUzycwHYQgxf87-0Ci-1" value="maw.us:8080&lt;div&gt;/maw&lt;/div&gt;&lt;div&gt;/token&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="570" y="525" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="5bXUzycwHYQgxf87-0Ci-2" value="kessel.us:8080&lt;div&gt;/kessel&lt;/div&gt;&lt;div&gt;/token&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="770" y="530" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="5bXUzycwHYQgxf87-0Ci-8" value="/maw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" edge="1" parent="1" source="5bXUzycwHYQgxf87-0Ci-7" target="5bXUzycwHYQgxf87-0Ci-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5bXUzycwHYQgxf87-0Ci-7" value="maelstrom.us:8080&lt;div&gt;/maelstrom&lt;/div&gt;&lt;div&gt;/token&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="370" y="525" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="5bXUzycwHYQgxf87-0Ci-12" value="/maelstrom" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" edge="1" parent="1" source="5bXUzycwHYQgxf87-0Ci-11" target="5bXUzycwHYQgxf87-0Ci-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5bXUzycwHYQgxf87-0Ci-11" value="channel.us:8080&lt;div&gt;/channel&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="170" y="525" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="5bXUzycwHYQgxf87-0Ci-16" value="/channel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="579.75" as="sourcePoint" />
+            <mxPoint x="170" y="579.75" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5bXUzycwHYQgxf87-0Ci-18" value="The Hackadese Maelstrom" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="480" width="170" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

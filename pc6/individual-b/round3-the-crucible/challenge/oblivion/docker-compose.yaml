@@ -1,0 +1,18 @@
+services:
+  server:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    command: [ "/usr/bin/python3", "/app/server.py" ]
+    container_name: server
+    ports:
+      - "1337:1337/udp" # Documentation purposes only; droped as using host net 
+    volumes:
+      - ./src:/app
+    working_dir: /app
+    restart: always
+    network_mode: host
+    logging: &default-logging
+      driver: journald  # Comment this out on Windows
+      options:
+        tag: "{{.Name}}"

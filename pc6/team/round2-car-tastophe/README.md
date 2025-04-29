@@ -14,8 +14,6 @@ Your team has been tasked with infiltrating a smart car. Gain access using an un
 - [T1635](https://niccs.cisa.gov/workforce-development/nice-framework/): Access targeted networks.
 - [T1118](https://niccs.cisa.gov/workforce-development/nice-framework/): Identify vulnerabilities.
 
-<!-- cut --> 
-
 ## Background
 
 Use the provided Kali machine to exploit a vulnerable smart car API and extract a critical encryption key being stored on a vehicle's CAN bus. An introduction to the CAN Bus can be found [here](https://www.csselectronics.com/pages/can-bus-simple-intro-tutorial). An introduction to the CAN Bus can be found [here](https://www.csselectronics.com/pages/can-bus-simple-intro-tutorial).
