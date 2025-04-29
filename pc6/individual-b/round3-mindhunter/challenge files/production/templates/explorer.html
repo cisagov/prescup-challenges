@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Explorer - Breaking the Fourth Wall</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 20px; }
+        h1 { color: #333; }
+        .endpoint { background: white; padding: 10px; margin: 5px 0; border-radius: 5px; cursor: pointer; border: 1px solid #ddd; }
+        .endpoint:hover { background: #eee; }
+        .response { display: none; padding: 5px; margin-top: 5px; background: #fafafa; border-left: 5px solid #007bff; }
+        .interactive-btn { padding: 5px 10px; margin: 5px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>🔍 API Explorer </h1>
+    <p>Explore available API endpoints. Click an endpoint to view details and sample responses.</p>
+
+    <div id="endpoint-list">
+        <!-- Endpoints will be injected here by JavaScript -->
+    </div>
+
+    <script>
+        const endpoints = {
+            "admin": "Manages user accounts, roles, and system-wide settings.",
+            "login": "Authenticates users and generates session tokens.",
+            "logout": "Terminates the user session and clears authentication tokens.",
+            "dashboard": "Provides an overview of system statistics, active users, and server load.",
+            "settings": "Allows users to modify their personal and account settings.",
+            "profile": "Retrieves user profile information including name, email, and preferences.",
+            "help": "Returns a set of API documentation links and support contact details.",
+            "api": "Displays API version and supported features.",
+            "status": "Checks the server health and service uptime.",
+            "config": "Retrieves system configuration settings.",
+            "debug": "Used for internal diagnostics. Requires admin privileges.",
+            "update": "Triggers a system update check and fetches available updates.",
+            "upload": "Handles file uploads with security verification.",
+            "download": "Generates file download links and access permissions.",
+            "backup": "Creates a secure backup of the current system state.",
+            "restore": "Restores data from a previous backup.",
+            "reset": "Resets user-specific configurations to default.",
+            "user": "Manages user data including authentication, permissions, and activity logs.",
+            "data": "Handles structured data retrieval and processing.",
+            "search": "Performs indexed searches across the system’s datasets.",
+            "report": "Generates system reports for audits and monitoring.",
+            "export": "Exports selected data in JSON, CSV, or XML format.",
+            "import": "Imports external data into the system.",
+            "activity": "Logs all user interactions and system events.",
+            "audit": "Retrieves security and compliance audit logs.",
+            "analytics": "Processes system usage data and generates insights.",
+            "cache": "Manages in-memory data caching for performance optimization.",
+            "queue": "Handles asynchronous job queue processing.",
+            "worker": "Manages distributed task execution workers.",
+            "jobs": "Lists background jobs currently running or pending.",
+            "monitor": "Monitors system metrics and generates alerts.",
+            "logs": "Retrieves server and application logs.",
+            "notifications": "Manages real-time user notifications and alerts.",
+            "messages": "Handles private and system messages.",
+            "preferences": "Allows users to set preferences for notifications, privacy, etc.",
+            "security": "Manages authentication methods, 2FA, and API keys.",
+            "access": "Handles permission settings and access control lists (ACLs).",
+            "permissions": "Defines role-based access control (RBAC) permissions.",
+            "fetch": "Acquires job queues and their status.",
+            "roles": "Manages user role definitions and assignments.",
+            "tokens": "Generates, revokes, and manages API access tokens.",
+            "sessions": "Tracks and terminates active user sessions.",
+            "hooks": "Manages webhooks for external integrations.",
+            "events": "Tracks system-generated events for integrations.",
+            "integrations": "Manages third-party service integrations.",
+            "webhooks": "Registers webhooks to receive external system notifications.",
+            "sync": "Performs data synchronization between services.",
+            "database": "Handles database queries and data persistence.",
+            "system": "Provides general system information and statistics.",
+            "support": "Lists available support channels for assistance.",
+            "file": "Handles document management and access control.",
+            "admin_panel": "Provides access to the administrative dashboard.",
+            "billing": "Manages billing cycles, invoices, and payments.",
+            "customer": "Retrieves customer details and interaction history.",
+            "developer": "Lists available APIs and developer documentation.",
+            "server_status": "Provides detailed server diagnostics and logs.",
+            "stop": "Terminates an active job.",
+            "payment": "Processes user payments via multiple gateways.",
+            "encode": "Stores requested information in a different format",
+            "checkout": "Handles e-commerce checkout and payment processing.",
+            "cart": "Manages shopping cart operations and contents.",
+            "order": "Processes customer orders and fulfillment status.",
+            "subscription": "Manages subscription-based services and renewals.",
+            "timeout": "Triggers default session ending timer.",
+            "renew": "Handles subscription renewal requests.",
+            "user_settings": "Stores user-defined preferences and configurations.",
+            "team": "Manages team collaboration features and access.",
+            "workspace": "Handles workspace and project management.",
+            "audit_log": "Stores records of security-sensitive system actions.",
+            "email": "Handles outbound email services and logs.",
+            "verification": "Processes email, phone, and identity verification."
+        };
+
+        function toggleResponse(endpoint) {
+            let responseDiv = document.getElementById(`response-${endpoint}`);
+            responseDiv.style.display = (responseDiv.style.display === "none") ? "block" : "none";
+        }
+
+        function populateEndpoints() {
+            let list = document.getElementById("endpoint-list");
+            for (let endpoint in endpoints) {
+                let div = document.createElement("div");
+                div.className = "endpoint";
+                div.innerHTML = `<b>/${endpoint}</b> - ${endpoints[endpoint]} 
+                    <button class="interactive-btn" onclick="toggleResponse('${endpoint}')">Try API</button>`;
+                
+                let responseDiv = document.createElement("div");
+                responseDiv.className = "response";
+                responseDiv.id = `response-${endpoint}`;
+                responseDiv.innerHTML = `<b>Response:</b> <code>${JSON.stringify({"message": "Success", "endpoint": endpoint, "status": "200 OK"})}</code>`;
+                responseDiv.style.display = "none";
+
+                div.appendChild(responseDiv);
+                list.appendChild(div);
+            }
+        }
+
+        window.onload = populateEndpoints;
+    </script>
+</body>
+</html>
