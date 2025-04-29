@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.3">
+  <diagram name="Page-1" id="e3a06f82-3646-2815-327d-82caf3d4e204">
+    <mxGraphModel dx="1315" dy="1952" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" style=";html=1;" />
+        <mxCell id="1" style=";html=1;" parent="0" />
+        <mxCell id="-iTfnB530NI448s6nOTq-44" value="" style="whiteSpace=wrap;html=1;fontSize=14;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="844" y="-270.5" width="530" height="468.5" as="geometry" />
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-16" value="LAN" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=14;strokeColor=none;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1085.5" y="-253" width="265.5" height="213" as="geometry" />
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-10" value="DMZ" style="whiteSpace=wrap;html=1;fillColor=#FFD470;gradientColor=none;fontSize=14;strokeColor=none;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="860" y="-260" width="198.5" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-4" value="WAN" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;fontSize=14;strokeColor=none;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1211.75" y="-8.5" width="138.5" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-6" value="OPCUA Server&lt;div&gt;10.7.7.2&lt;/div&gt;" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;shape=mxgraph.citrix.cache_server;fillColor=#66B2FF;gradientColor=#0066CC;fontSize=14;labelPosition=center;align=center;" vertex="1" parent="1">
+          <mxGeometry x="879" y="22.5" width="71" height="97.5" as="geometry" />
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-14" value="Modbus Device&lt;div&gt;10.7.7.3&lt;/div&gt;" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;shape=mxgraph.citrix.web_service;fillColor=#66B2FF;gradientColor=#0066CC;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="887" y="-99" width="63" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-24" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1304" y="-116" as="sourcePoint" />
+            <mxPoint x="1304" y="-116" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1304" y="-66" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.506;entryY=0.893;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1128" y="43" as="sourcePoint" />
+            <mxPoint x="1128" y="-54" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-25" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1192" y="-117" as="sourcePoint" />
+            <mxPoint x="1192" y="-117" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1192" y="-66" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-29" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1020" y="-180" as="sourcePoint" />
+            <mxPoint x="1020" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-30" value="" style="endArrow=none;html=1;rounded=0;entryX=0.008;entryY=0.537;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="-iTfnB530NI448s6nOTq-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1020" y="80" as="sourcePoint" />
+            <mxPoint x="1090" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-31" value="" style="endArrow=none;html=1;rounded=0;entryX=0.008;entryY=0.537;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="950" y="80" as="sourcePoint" />
+            <mxPoint x="1021" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-32" value="" style="endArrow=none;html=1;rounded=0;entryX=0.008;entryY=0.537;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="949" y="-65" as="sourcePoint" />
+            <mxPoint x="1020" y="-65" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-33" value="" style="endArrow=none;html=1;rounded=0;entryX=0.008;entryY=0.537;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="949" y="-180" as="sourcePoint" />
+            <mxPoint x="1020" y="-180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-34" value="Kali (You) &#xa;10.7.7.4 on eth0" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Kali-dragon-icon.svg/2048px-Kali-dragon-icon.svg.png;clipPath=inset(12.33% 12% 14% 1.33%);" vertex="1" parent="1">
+          <mxGeometry x="879" y="-220" width="83" height="70.54728664282143" as="geometry" />
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-35" value="Kali (You) &#xa;dhcp on eth2" style="shape=image;verticalLabelPosition=top;labelBackgroundColor=default;verticalAlign=bottom;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Kali-dragon-icon.svg/2048px-Kali-dragon-icon.svg.png;clipPath=inset(12.33% 12% 14% 1.33%);labelPosition=center;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="-185" width="83" height="70.54728664282143" as="geometry" />
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-42" value="" style="endArrow=none;html=1;rounded=0;entryX=1.013;entryY=0.427;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.361;exitY=0.603;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="-iTfnB530NI448s6nOTq-41" target="-iTfnB530NI448s6nOTq-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1046.5" y="127" as="sourcePoint" />
+            <mxPoint x="1179.9999999999995" y="116.47600000000011" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-41" value="Kali (You) &#xa;123.45.67.3 on eth1" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Kali-dragon-icon.svg/2048px-Kali-dragon-icon.svg.png;clipPath=inset(12.33% 12% 14% 1.33%);" vertex="1" parent="1">
+          <mxGeometry x="1230" y="27.500000000000004" width="83" height="70.54728664282143" as="geometry" />
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-43" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1110" y="-66" as="sourcePoint" />
+            <mxPoint x="1304" y="-66" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-2" value="Router" style="verticalLabelPosition=top;aspect=fixed;html=1;verticalAlign=bottom;strokeColor=none;shape=mxgraph.citrix.router;fillColor=#66B2FF;gradientColor=#0066CC;fontSize=14;labelPosition=center;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="-87.25" width="55" height="36.5" as="geometry" />
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-3" value="pfSenseFirewall&lt;div&gt;pfsense.merch.codes&lt;/div&gt;&lt;div&gt;123.45.67.89&lt;/div&gt;" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;shape=mxgraph.citrix.firewall;fillColor=#66B2FF;gradientColor=#0066CC;fontSize=14;labelPosition=center;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1093" y="30" width="75" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="-iTfnB530NI448s6nOTq-8" value="challenge.us" style="verticalLabelPosition=top;aspect=fixed;html=1;verticalAlign=bottom;strokeColor=none;shape=mxgraph.citrix.proxy_server;fillColor=#66B2FF;gradientColor=#0066CC;fontSize=14;labelPosition=center;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1166" y="-197.73000000000002" width="76.5" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

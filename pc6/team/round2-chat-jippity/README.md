@@ -16,8 +16,6 @@ Complete three challenges involving repairing an environment after insider sabot
 - [T1499](https://niccs.cisa.gov/workforce-development/nice-framework/work-role/secure-software-development) : Integrate public key cryptography into applications
 - [T1616](https://niccs.cisa.gov/workforce-development/nice-framework/work-role/defensive-cybersecurity): Resolve computer security incidents
 
-<!-- cut -->
-
 ## Background 
 
 An insider infiltrated the office’s AI chat service, compromising several critical components. They invalidated its HTTPS certificate, disabled the AI model, and altered the URL of the Certificate Authority’s certificate signing service. To make matters worse, they embedded the password to a critical HR database within the AI model itself. Although the insider has since been terminated by HR, the team urgently needs assistance restoring the AI service—and recovering the HR database password!

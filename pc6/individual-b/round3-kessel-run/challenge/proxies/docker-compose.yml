@@ -1,0 +1,63 @@
+services:
+  channel:
+    image: python:3.10.5
+    hostname: channel.us
+    ports:
+    - "8080:8080"
+    command: ["/usr/bin/python3", "./channel.py", "-X", "maelstrom.us"]
+    networks:
+      - channel-maelstrom
+    volumes:
+      - ./channel:/app
+    working_dir: /app
+    restart: always
+    logging: &default-logging
+      driver: journald  # Comment this out on Windows
+      options:
+        tag: "{{.Name}}"
+  maelstrom:
+    image: python:3.10.5
+    hostname: maelstrom.us
+    command: ["/usr/bin/python3", "./maelstrom.py", "-X", "maw.us"]
+    networks:
+      - channel-maelstrom
+      - maelstrom-maw
+    volumes:
+      - ./maelstrom:/app
+    working_dir: /app
+    restart: always
+    logging:
+      <<: *default-logging
+  maw:
+    image: python:3.10.5
+    hostname: maw.us
+    command: ["/usr/bin/python3", "./maw.py", "-X", "kessel.us"]
+    networks:
+      - maelstrom-maw
+      - maw-kessel
+    volumes:
+      - ./maw:/app
+    working_dir: /app
+    restart: always
+    logging:
+      <<: *default-logging
+  kessel:
+    image: python:3.10.5
+    hostname: kessel.us
+    command: ["/usr/bin/python3", "./kessel.py", "-X", "kessel.us"] # Just routes back to itself as it doesn't need a proxy
+    networks:
+      - maw-kessel
+    volumes:
+      - ./kessel:/app
+    working_dir: /app
+    restart: always
+    logging:
+      <<: *default-logging
+  
+networks:
+  channel-maelstrom:
+    driver: bridge
+  maelstrom-maw:
+    driver: bridge
+  maw-kessel:
+    driver: bridge
