@@ -12,8 +12,6 @@ Your team has been tasked with infiltrating a social media site.
 - [T1091](https://niccs.cisa.gov/workforce-development/nice-framework/): Perform authorized penetration testing on enterprise network assets.
 - [T1118](https://niccs.cisa.gov/workforce-development/nice-framework/): Identify vulnerabilities.
 
-<!-- cut -->
-
 ## Background
 
 Use the provided Kali machine to investigate and exploit `finsta.us`, a new social media site. 

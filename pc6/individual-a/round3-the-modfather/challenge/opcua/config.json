@@ -1,0 +1,59 @@
+{
+    "url": "ModbusServer",
+    "port": 8080,
+    "modbusdevices": [
+        {
+            "modbushost": "10.7.7.3",
+            "modbusport": 8880,
+            "unit": 2,
+            "pollrate":500,
+            "onebased":true,
+            "deviceaddressspace": [
+                {
+                    "type": "holdingregister",
+                    "addresses": [
+                        {
+                            "address": 1,
+                            "count": 1
+                        },
+                        {
+                            "address": 5,
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "coils",
+                    "addresses": [
+                        {
+                            "address": 1,
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "discreteinputs",
+                    "addresses": [
+                        {
+                            "address": 1,
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "inputregisters",
+                    "addresses": [
+                        {
+                            "address": 1,
+                            "count": 1
+                        },
+                        {
+                            "address": 5,
+                            "count": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

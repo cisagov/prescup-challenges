@@ -1,0 +1,18 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "body-parser-xml": "^2.0.5",
+    "express": "^4.21.2",
+    "libxmljs": "^1.0.11",
+    "lodash": "^4.17.21"
+  },
+  "author": "",
+  "license": "ISC"
+}

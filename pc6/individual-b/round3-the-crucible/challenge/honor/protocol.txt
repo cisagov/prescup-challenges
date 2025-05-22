@@ -1,0 +1,8 @@
+If a phantom shouted a datagram into oblivion, what would it look like?
+
+| Field                     | Size (Bytes)| Description                          |
+|---------------------------|-------------|--------------------------------------|
+| IV                        | 4           | Initialization Vector for CBC        |
+| Encrypted Payload         | 8-1024      | Encrypted data                       |
+| |-> Sequence Number       | 4           | Message Ordering, 1-indexed          |
+| |-> Message               | 4+          | User data, padded (PKCS#7)          |

@@ -1,0 +1,62 @@
+ATM Packet Specification
+
+- `magic` (4 bytes): A 4-byte sequence that identifies the packet as a valid packet. A valid packet should be identified by the sequence `0x3fa95c1d`.
+- `sequence number` (uint32): A sequence number that identifies the order of the packet in the stream.
+- `timestamp` (uint64): A timestamp that indicates the time at which the packet was sent.
+- `type` (uint8): A type number that identifies the type of the packet.
+-- 0: Keep-alive
+-- 1: Check balance
+-- 2: Deposit money
+-- 3: Withdraw money
+-- 4: Transfer money
+-- 10: keep-alive response
+-- 11: check balance response
+-- 12: deposit money response
+-- 13: withdraw money response
+-- 14: transfer money response
+
+- `length` (uint32): The length of the payload in the packet.
+- `checksum` (2 bytes): A 16-bit CRC checksum value that is used to verify the integrity of the packet.
+- `payload` (bytes): The payload data of the packet.
+
+The payload for each packet type is as follows:
+
+Note: All amounts of money are in units of cents, not dollars.
+
+Keep-alive (0): Empty payload
+
+Check balance (1): 
+- 4 bytes: Account number
+
+Deposit money (2):
+- 4 bytes: Account number
+- 4 bytes: Amount to deposit
+
+Withdraw money (3):
+- 4 bytes: Account number
+- 4 bytes: Amount to withdraw
+
+Transfer money (4):
+- 4 bytes: Source account number
+- 4 bytes: Destination account number
+- 4 bytes: Amount to transfer
+
+Keep-alive Response (10): Empty payload
+
+Check balance Response (11):
+- 1 byte: Status (0: Success, 1: Account not found)
+- 4 bytes: Account number
+- 4 bytes: Balance
+
+Deposit money Response (12):
+- 1 byte: Status (0: Success, 1: Account not found, 2: Untrusted client)
+- 4 bytes: Account number
+- 4 bytes: New balance
+
+Withdraw money Response (13):
+- 1 byte: Status (0: Success, 1: Account not found, 2: Insufficient funds, 3: Untrusted client)
+- 4 bytes: Account number
+- 4 bytes: New balance
+
+Transfer money Response (14): Empty payload
+- 1 byte: Status (0: Success, 1: Sender account not found, 2: Recipient account not found, 3: Insufficient funds, 4: Untrusted client)

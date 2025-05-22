@@ -1,0 +1,67 @@
+<html>
+<body>
+
+<h2>Welcome to App2!</h2>
+
+<p>Use the links and forms below to interact with the API</p>
+
+<p>
+    <a href="/list">List Users</a> 
+    <span>&nbsp;</span>
+    <a href="/reset">Reset Server State</a>
+</p>
+
+<br /><br />
+
+<p>
+    <h3>Check if a user is an admin or not</h3>
+    <input type="text" id="adminCheck" placeholder="User id"></input>
+    <button onclick="checkAdmin()">Check</button>
+    <script>
+        function checkAdmin() {
+            const query = document.getElementById('adminCheck').value;
+            window.location.href = `/isAdmin/${query}`;
+        }
+    </script>
+</p>
+
+<br /><br />
+
+<form id="myForm">
+    <h3>Create or update a user</h3>
+    <label>Id:</label>
+    <input type="text" id="id" name="User id">
+    <br />
+    <label>Name:</label>
+    <input type="text" id="name" name="name">
+    <br />
+    <button type="submit">Update</button>
+</form>
+
+<script>
+    document.getElementById('myForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const id = document.getElementById('id').value;
+        const name = document.getElementById('name').value;
+
+        const data = {
+            userId : id,
+            name : name,
+            isAdmin : false,
+        };
+
+        fetch('/set', {
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            body : JSON.stringify(data)
+        })
+        .then(response => response.text())
+        .then(data => alert(data.toString()))
+        .catch(error => alert('Error: ', error.toString()))
+    });
+</script>
+
+</body>
+</html>
