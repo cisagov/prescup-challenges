@@ -122,11 +122,11 @@ Prior to AI, spelling, grammar, and syntax were well-known indicators of an atte
 
 When accessing a resource that uses MFA, you must first provide the correct username and password credentials. Afterwards, you are asked for a second authentication token. Typically, this second authentication token is sent to either a mobile device application or email account. You must either approve and accept a prompt or enter the token into an additional logon field.
 
-![mfa-122169479.png](./img/mfa-122169479.png)
+![mfa-122169479.png](./img/mfa.png)
 
 Only the holder of the mobile device, token, or account can retrieve the correct code and then pass it into the second authentication field.
 
-![duo1-1623689028.png](./img/duo1-1623689028.png)
+![duo1-1623689028.png](./img/duo1.png)
 
 *Retrieved from Duo's <a href="https://guide.duo.com/" target="_blank">Guide to Two-Factor Authentication</a>*
 
@@ -134,7 +134,7 @@ MFA tokens expire after a certain period, when a new token is requested, or when
 
 Mobile device applications like Duo or Google Authenticator provide in-app mechanisms for providing MFA tokens, but one of the most common methods of transmitting these tokens is via text message. In the case of MFA apps such as Duo or Google Authenticator an under-the-hood algorithm predetermines the codes to be used at specific times. For this to work, both the MFA service and the MFA application have to be synchronized with each other. However, this means that you do not have to explicitly request an MFA code be sent to you, you only need to enter the current code displayed in your MFA application.
 
-![duo2-896963105.png](./img/duo2-896963105.png)
+![duo2-896963105.png](./img/duo2.png)
 
 *Retrieved from Duo's <a href="https://guide.duo.com/" target="_blank">Guide to Two-Factor Authentication</a>*
 
@@ -144,7 +144,7 @@ While the use of MFA adds an extra layer of authentication security, it also pro
 
 Additionally, users should never act upon unsolicited MFA requests. For example, when email addresses are leaked in a data breach, malicious actors will try to login to various services by using those email addresses. In the case of in-app MFA authentication prompts, the user might receive an unsolicited MFA prompt on their device and should ignore them.
 
-![duo3-567402300.png](./img/duo3-567402300.png)
+![duo3-567402300.png](./img/duo3.png)
 
 *Retrieved from Duo's <a href="https://guide.duo.com/" target="_blank">Guide to Two-Factor Authentication</a>*
 
@@ -173,14 +173,14 @@ Phishing continues to pose a cybersecurity risk to users and their organization.
 
 2. (**Ubuntu-Desktop**, **Firefox**) In Firefox, open a second tab (leaving the home page of `https://skills.hub` open) and browse to the URL `https://steelbankofbravos.skills.hub`. When prompted with the certificate warning page, click `Advanced`, and then `Accept the Risk and Continue`. You should then be presented with the bank's welcome page.
 
-![p1_1-1181519826.png](./img/p1_1-1181519826.png)
+![p1_1-1181519826.png](./img/p1_1.png)
 
 3. (**Ubuntu-Desktop**, **Firefox**) Click on the `Login` tab, and then login to the website with the following credentials:
 
 Username: `the_hand`
 Password: `noDebts`
 
-![p1_2-1188364056.png](./img/p1_2-1188364056.png)
+![p1_2-1188364056.png](./img/p1_2.png)
 
 *Note: You can ignore any popups that ask if you would like to save your password in the browser.*
 
@@ -200,7 +200,7 @@ Just like a normal bank account, each account's page lists the previous transact
 
 6. (**Ubuntu-Desktop**, **Firefox**) Click on the `Settings` tab at the top. 
 
-![p1_3-613567977.png](./img/p1_3-613567977.png)
+![p1_3-613567977.png](./img/p1_3.png)
 
 On this page you can configure the various details of your account, such as resetting your password and the associated email account. Additionally, you can view a record of all logins that have occurred for your account and enable multifactor authentication.
 
@@ -232,7 +232,7 @@ Password:   `tartans@1`
 
 You will see a successful creation message for the email account `tlannister@skills.hub`.
 
-![p1_4-94715130.png](./img/p1_4-94715130.png)
+![p1_4-94715130.png](./img/p1_4.png)
 
 5. (**Ubuntu-Desktop**, **Firefox**) Once completed, click on the link that says `Click here to Login`.
 
@@ -263,7 +263,7 @@ Password: `noDebts`
 
 2. (**Ubuntu-Desktop**, **Firefox**) Browse to the `Settings` page. Click on the `Email` text field, enter the email address `tlannister@skills.hub` and then click `Submit`. The process may take a second as it is verifying the authenticity of the email address provided. Once complete, you should see the following message at the top of the page:
 
-![p1_5-1203048741.png](./img/p1_5-1203048741.png)
+![p1_5-1203048741.png](./img/p1_5.png)
 
 You should also see that the pre-populated value of the Email field now shows your email address. This means it has been configured correctly.
 
@@ -278,7 +278,7 @@ You should also see that the pre-populated value of the Email field now shows yo
 
 1. (**Ubuntu-Desktop**, **Firefox**) Go back to the third tab that is logged into our email account. You should see that you have received a confirmation email that states your email address has been linked to your bank account. 
 
-![p1_6-930561347.png](./img/p1_6-930561347.png)
+![p1_6-930561347.png](./img/p1_6.png)
 
 | &#9888; ALERT |
 |---|
@@ -288,13 +288,13 @@ You should also see that the pre-populated value of the Email field now shows yo
 
 2. (**Ubuntu-Desktop**, **Firefox**) Around the same time you should receive another email with the headline reading `CRITICAL: MUST UPDATE ACCOUNT`. 
 
-![p1_7-1704609695.png](./img/p1_7-1704609695.png)
+![p1_7-1704609695.png](./img/p1_7.png)
 
 This email will explain that your account is at risk of being accessed by malicious actors and that you should update your password immediately using the provided link.
 
 3. (**Ubuntu-Desktop**, **Firefox**) Click on the link and you will be directed to a page that appears to allow you to update your account password.  
 
-![p1_8-1655771141.png](./img/p1_8-1655771141.png)
+![p1_8-1655771141.png](./img/p1_8.png)
 
 4. (**Ubuntu-Desktop**, **Firefox**) Enter the bank account's password, `noDebts`, in the first two 'Old Password' fields. For the 'New Password' fields, enter any matching password you like. Once completed, click `Submit`.
 
@@ -304,7 +304,7 @@ This email will explain that your account is at risk of being accessed by malici
 
 This check will verify that you successfully triggered the phishing attack and that it has completed properly.
 
-![p1_grading-1345740.png](./img/p1_grading-1345740.png)
+![p1_grading-1345740.png](./img/p1_grading.png)
 
 Grading Check 1: Trigger the phishing attack
  - Email link was clicked
@@ -327,7 +327,7 @@ Password: `noDebts`
 
 7. (**Ubuntu-Desktop**, **Firefox**) The login will succeed, and you'll be presented with your accounts page. 
 
-![p1_9-363011394.png](./img/p1_9-363011394.png)
+![p1_9-363011394.png](./img/p1_9.png)
 
 If you look at the balances of your accounts, you should see that they have been altered and no longer have the same values as before. Open each of the accounts to view their transactions.
 
@@ -343,7 +343,7 @@ You should see that most of the logins have occurred from a single IP address, b
 ip a
 ```
 
-![p1_ip_edited-766349214.png](./img/p1_ip_edited-766349214.png)
+![p1_ip_edited-766349214.png](./img/p1_ip_edited.png)
 
 This command will tell you the IP address of your machine. In the above example, the IP of the host is `10.5.5.130`. **Please note**: Your IP may not match the example in the image.
 
@@ -368,7 +368,7 @@ Before continuing with the lab, lets rewind a bit and review which phishing indi
 
 1. (**Ubuntu-Desktop**, **Firefox**) Open the tab that has your email account and re-open the email that has the subject `CRITICAL: MUST UPDATE ACCOUNT` in it.
 
-![p1_7-2101872541.png](./img/p1_7-2101872541.png)
+![p1_7-2101872541.png](./img/p1_7.png)
 
  - The header of the email includes the word "CRITICAL" and the body includes the words "IMMEDIATELY" and "URGENT", which are intended to convey a sense of immediate need or urgency. 
  - If you read the email in full, you should gather that the grammar of some of the writing is off or is not syntactically correct. 
@@ -377,7 +377,7 @@ Before continuing with the lab, lets rewind a bit and review which phishing indi
 
 2. (**Ubuntu-Desktop**, **Firefox**) Hover over the link in the email and you should see a pop-up in the browser's lower left corner showing what the link actually points to.
 
-![redirect-1809883143.png](./img/redirect-1809883143.png)
+![redirect-1809883143.png](./img/redirect.png)
 
 This URL looks like the real one, but if you look closely there are some differences, with the most noticeable one being that it uses zeroes - `0` instead of the letter `O`. 
 
@@ -401,11 +401,11 @@ Password: `noDebts`
 
 You should be directed to a new page that states that an email with a code has been sent to your email and that you need to submit it to verify the email. 
 
-![p2_mfa-804513260.png](./img/p2_mfa-804513260.png)
+![p2_mfa-804513260.png](./img/p2_mfa.png)
 
 3. (**Ubuntu-Desktop**, **Firefox**) Open the tab that has your email inbox open. You should see a new email with the MFA code in it. If the email isn't there, make sure to refresh the inbox.
 
-![p2_mfa_email-1820470272.png](./img/p2_mfa_email-1820470272.png)
+![p2_mfa_email-1820470272.png](./img/p2_mfa_email.png)
 
 4. (**Ubuntu-Desktop**, **Firefox**) Copy the code and then go back to the banking website that's asking for the MFA code and submit it. You should see a message that MFA has been configured successfully.
 
@@ -413,7 +413,7 @@ We will now test it by re-logging in.
 
 5. (**Ubuntu-Desktop**, **Firefox**) Click the `Logout` button, and then submit your credentials on the `Login` page.
 
-![p2_mfa_login-407089087.png](./img/p2_mfa_login-407089087.png)
+![p2_mfa_login-407089087.png](./img/p2_mfa_login.png)
 
 6. (**Ubuntu-Desktop**, **Firefox**) You should be presented with a new page saying an MFA code has been sent to your email and that you will need it to login.
 
@@ -427,7 +427,7 @@ We will now test it by re-logging in.
 
 This check will verify that you successfully configured MFA on your bank account.
 
-![p2_grading-1067407317.png](./img/p2_grading-1067407317.png)
+![p2_grading-1067407317.png](./img/p2_grading.png)
 
 Grading Check 1: Configure bank account with MFA
  - Completed login using MFA code.
@@ -456,7 +456,7 @@ Now that you have MFA configured on your account, let's re-trigger the phishing 
 
 3. (**Ubuntu-Desktop**, **Firefox**) This time, you should get a response stating that the form couldn't be submitted.
 
-![p3_failed_phishing-396002982.png](./img/p3_failed_phishing-396002982.png)
+![p3_failed_phishing-396002982.png](./img/p3_failed_phishing.png)
 
 The form now fails with the same information due to the account not requiring an MFA code.
 
@@ -476,7 +476,7 @@ You should see that a new login attempt occurred, but that the login was unsucce
 
 This check will verify that you mitigated the phishing attack by configuring MFA.
 
-![p3_grading-1624757321.png](./img/p3_grading-1624757321.png)
+![p3_grading-1624757321.png](./img/p3_grading.png)
 
 Grading Check 3: Re-trigger phishing attack
  - Email link was clicked
