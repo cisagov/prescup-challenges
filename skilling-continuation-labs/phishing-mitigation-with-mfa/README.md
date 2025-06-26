@@ -283,8 +283,8 @@ You should also see that the pre-populated value of the Email field now shows yo
 | &#9888; ALERT |
 |---|
 |If the email has not appeared in your inbox, you may need to refresh the inbox. This can be done with the following methods.
- - Click the `Refresh` button at the top of the page.<br>![refresh1-369063739.png](./img/refresh1-369063739.png)
- - Click on `Inbox` on the panel present on the left side of the screen.<br>![refresh2-268864173.png](./img/refresh2-268864173.png)
+ - Click the `Refresh` button at the top of the page.<br>![refresh1-369063739.png](./img/refresh1.png)
+ - Click on `Inbox` on the panel present on the left side of the screen.<br>![refresh2-268864173.png](./img/refresh2.png)
 
 2. (**Ubuntu-Desktop**, **Firefox**) Around the same time you should receive another email with the headline reading `CRITICAL: MUST UPDATE ACCOUNT`. 
 
