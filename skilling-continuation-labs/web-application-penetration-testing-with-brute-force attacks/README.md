@@ -329,7 +329,7 @@ In the next section, you will use Burp Suite to perform a password spraying atta
 </summary>
 <p>
 
-*Note: Steps 1-5 rehash the process taken in the previous section of the lab. If you still have Burp open at the Proxy** tab, Intercept is turned on, and have the `http://market.skills.hub` home page open, you can skip to step 6*
+*Note: Steps 1-5 rehash the process taken in the previous section of the lab. If you still have Burp open at the Proxy tab, Intercept is turned on, and have the `http://market.skills.hub` home page open, you can skip to step 6*
 
 1. (**Kali**) Open the `Kali` console and login with these credentials: `user` | `tartans`.
 
@@ -371,7 +371,7 @@ The last few steps demonstrated how Burp Suite is behaving as a proxy between th
 
 ![42.png](./img/42.png)
 
-13. (**Kali, Burp Suite**) On line 16 of the `POST` body, hightlight the value of email address and click **Add** to wrap the value in delimeters. For the purposes of this lab, we will use the password `delicious`. Change the value of the `password` field on line 16 from `test` to `delicious`.
+13. (**Kali, Burp Suite**) On line 16 of the `POST` body, highlight the value of email address and click **Add** to wrap the value in delimeters. For the purposes of this lab, we will use the password `delicious`. Change the value of the `password` field on line 16 from `test` to `delicious`.
 
 ![43.png](./img/43.png)
 
