@@ -4,6 +4,8 @@
 
 This repository contains cybersecurity challenges and virtual machine builds for the President's Cup Cybersecurity Competition. For more information about the President's Cup and why it was established, visit <https://cisa.gov/presidentscup>.
 
+Federal civilian employees and military personnel can access the Skilling Continuation Labs in the [President's Cup Practice Area](https://presidentscup.cisa.gov/gb/home).
+
 ## Layout
 
 All of the challenge content can be found in the respective year season directory. See the README.md in each directory for more information about the respective competition.
