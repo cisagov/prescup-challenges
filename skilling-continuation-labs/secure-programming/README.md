@@ -13,6 +13,7 @@ Throughout this lab, you will examine examples of both secure and insecure code,
 **Caution!** You must complete _all_ phases of the lab and complete the mini-challenge to receive your completion certificate. We encourage you to attempt mini-challenges on your own, but links to the solution guides are available in the Mini-Challenge section of the lab document if you need them.
 
 ## Learning Objectives
+
 - Explain the principles of memory safety.
 - Explain, implement, and patch a buffer overflow vulnerability in the programming language C.
 - Explain, implement, and patch an integer overflow vulnerability in the programming language C.
@@ -37,7 +38,6 @@ This lab maps with <a href="https://www.cisa.gov/resources-tools/resources/feder
 
 - <a href="https://niccs.cisa.gov/workforce-development/nice-framework" target="_blank">Secure Software Development</a>
 - <a href="https://niccs.cisa.gov/workforce-development/nice-framework" target="_blank">Software Security Assessment</a>
-
 
 **NICE Tasks**
 
@@ -471,18 +471,18 @@ gcc -o integer_vuln integer_overflow.c
 
 8. You should see multiple lines printed explaining tickets are for sale and they are priced at $1250 each. You should be prompted to enter the number of tickets you want to purchase, enter the value `5`. You should get a response that the total comes out to $6250, which is correct.
 
-![s03-image9.png](./img/s04-image9.png)
+![Results of running ./integer_vuln](./img/s04-image9.png)
 
 9. Now let's run it again, but with the intention of causing an integer overflow. Run the executable and when prompted, enter the amount `999999999999999` (fifteen 9's).
 You should see that the response will state that the total cost is `$-1,858,274,530`. 
 
-![s04-image29.png](./img/s04-image29.png)
+![Results of ./integer_vuln after integer overflow](./img/s04-image29.png)
 
 | &#128736; Roll Over Concept |
 |---|
 |_We discussed before that there are different datatypes available in C, and each datatype can hold a specified amount of data. When the variable is given a value that surpasses the amount it can hold signified by its datatype, the value "rolls over". To better understand, let's go over how a "roll over" could occur to an int data type._|
 
-![s04_c_int_roll_over.png](./img/s04_c_int_roll_over.png)
+![C Int Data Type values](./img/s04_c_int_roll_over.png)
 
 The above diagram represents the range of values that a C integer data type can hold. The range goes from the negative value of `-2,147,483,648` to the positive value of `2,147,483,647`. 
 
@@ -523,7 +523,7 @@ Once again, we'll return to this code and fix the insecurities in the next phase
 
 These two checks will verify that you were able to successfully complete the C programs and compile them with the vulnerabilities present.
 
-![s04-image14.png](./img/s04-image14.png)
+![Grading page tasks](./img/s04-image14.png)
 
 Grading Check 1: Finish, compile, and execute a C program that has a buffer overflow vulnerability present. (C executable should be named 'buffer_vuln' and in the directory '/home/user/Desktop')
  - Additional code was inserted correctly to finish script.
@@ -610,7 +610,7 @@ gcc -o buffer_patched buffer_overflow.c
 
 6. (**kali**, **Terminal** ) You can test the program with the correct and incorrect passwords to see that the basic functionality has not changed. Next, try to enter the same value that we used previously to create the buffer overflow, `aaaaaaaaaaaa`.
 
-![s03-image11.png](./img/s04-image11.png)
+![Result of running command with correct and incorrect password](./img/s04-image11.png)
 
 You should see the response is now `Access denied`. 
 
@@ -692,7 +692,7 @@ gcc -o integer_patched integer_overflow.c
 
 6. (**kali**, **Terminal**) You can test it with different values and see that the basic functionality has not changed. Try to enter the same value we entered previously to trigger the integer overflow, `999999999999999`.
 
-![s03-image12.png](./img/s04-image12.png)
+![Result of running ./integer_patched](./img/s04-image12.png)
 
 You should see that it now responds with the new response stating that too many tickets have been entered and states the maximum number of tickets that can be purchased. The safeguards we implemented now help in preventing an integer overflow vulnerability.
 
@@ -703,7 +703,7 @@ You should see that it now responds with the new response stating that too many 
 
 These two checks will verify that you were able to successfully edit the C programs and compile them with the vulnerabilities patched.
 
-![s03image13.png](./img/s04-image13.png)
+![Grading checks](./img/s04-image13.png)
 
 Grading Check 3: Finish, compile, and execute a C program so that the buffer overflow vulnerabilities are patched. (C executable should be named 'buffer_patched' and in the directory '/home/user/Desktop')
  - Provided code was inserted correctly to fix the script.
@@ -743,7 +743,6 @@ Some of the basic actions that can be performed using SQL are:
 - Creating new structures or formats of data
 
 Databases can be configured to store data with different formats or schemas, and they can be tailored to provide information in the way that is the most beneficial. Databases are structured into tables. Each table in a database is often labeled or named specifically to indicate what kind of information it contains. Additionally, each table is configured with columns and rows where a row represents a singular record, and the columns represent the specific datatypes and attributes.
-
 
 For example:
 
@@ -816,13 +815,13 @@ During this section you will be interacting with a website that presents informa
 
 1. (**kali**, **Firefox**) In a new Firefox tab browse to the URL `http://target.skills.hub`. You should be greeted with a home screen that has some information regarding the pages available.
 
-![s04-image15.png](./img/s04-image15.png)
+![Lab Home Page](./img/s04-image15.png)
 
 2. (**kali**, **Firefox**, **target.skills.hub**) Click on the `Lab Home` tab at the top and it will bring you to the home page for the tasks you will perform during this phase. Here you can read about the fictional company by reviewing the two available links. 
 
 3. (**kali**, **Firefox**, **target.skills.hub**) Click on the `Employee Directory` tab at the top of the page.
 
-![s04-image16.png](./img/s04-image16.png)
+![Employee Directory](./img/s04-image16.png)
 
 4. (**kali**, **Firefox**, **target.skills.hub/lab/search**) On the page you should see a search bar and message stating you can search for agents that work at the company. 
 
@@ -834,7 +833,7 @@ You should see that an empty search returns all agents and their information. Un
 
 6. (**kali**, **Firefox**, **target.skills.hub/lab/search**) Right-click on the page, and select `view page source` from the dropdown. 
 
-![s04-image17.png](./img/s04-image17.png)
+![Right click View Page Source](./img/s04-image17.png)
 
 Viewing the page source shows the code that is being used in the current page. In some cases, this code can contain information regarding the website and offer insight into its functionality.
 
@@ -869,7 +868,7 @@ SELECT * FROM **table** WHERE **columns** LIKE **%search_string%**
 
 You should get a response that an exception has occurred. The response also states that it was unable to process the query.
 
-![s04-image18.png](./img/s04-image18.png)
+![Exception occurred during search](./img/s04-image18.png)
 
 This is an indicator that the search bar is vulnerable, because if it was correctly validating the input, it would state that there were no results. Instead we were able to manipulate the query and cause it to fail.
 
@@ -883,7 +882,7 @@ We've found that the implemented database is SQLite3, and SQLite3 has a built-in
 * from sqlite_master where type='table'--'  
 ```
 
-![s04-image19.png](./img/s04-image19.png)
+![Search using SQL string](./img/s04-image19.png)
 
 You should see in the output that there are two tables present in the database being referenced: `Employees` and `EmployeePrivateData`. The `Employees` table holds all the information for each agent that is presented through the search bar, and the `EmployeePrivateData` holds sensitive information about each agent that is not publicly available. That will be the target.
  
@@ -893,7 +892,7 @@ You should see in the output that there are two tables present in the database b
 * from EmployeePrivateData union select id,firstname,lastname,address,price from Employees--'
 ```
 
-![s04-image20.png](./img/s04-image20.png)
+![Result of SQL search string](./img/s04-image20.png)
 
 Now you have access to the private information of every agent who works for this company.
 
@@ -1000,7 +999,7 @@ def execute_sql_query(user_input):
 
 This check will verify that you were able to successfully trigger a SQL injection on the vulnerable page present on the website.
 
-![s04-image21.png](./img/s04-image21.png)
+![Grading Check](./img/s04-image21.png)
 
 Grading Check 5: Successfully perform SQL injection on the Employee Directory 'search' page to retrieve sensitive data.
  - Analyze web page to gather information to help generate SQL injection.
@@ -1041,7 +1040,7 @@ During this section, you will be interacting with a website that presents inform
 
 1. (**kali**, **Firefox**, **target.skills.hub**) Return to the target website and click on the `Lab Home` tab, and then click on the `About Us` tab.
 
-![s04-image22.png](./img/s04-image22.png)
+![About Us](./img/s04-image22.png)
 
 You should see some background information about the company, as well as a side panel that has other tabs. 
 
@@ -1069,7 +1068,7 @@ http://target.skills.hub/lab/info/about-us?filename=background.txt;uname -a;
 
 Scroll down to the very bottom of the page and you should see the following:
 
-![s04-image23.png](./img/s04-image23.png)
+![New output at bottom of page](./img/s04-image23.png)
 
 At the bottom of the page new output is printed, and it states some information about the underlying host. Now we just need to continue crafting our commands to retrieve more information from this type of operating system.
 
@@ -1081,7 +1080,7 @@ http://target.skills.hub/lab/info/about-us?filename=background.txt;ls -l;
 
 You should see there are a handful of files, but the target is the directory `creds`. 
 
-![s04-image24.png](./img/s04-image24.png)
+![Directory creds](./img/s04-image24.png)
 
 7. (**kali**, **Firefox**, **target.skills.hub**) Enter the following URL to get a list of files present in the creds directory:
 
@@ -1091,7 +1090,7 @@ http://target.skills.hub/lab/info/about-us?filename=background.txt;ls -l creds/;
 
 You should see there is only one file present, `firewall.json`.
 
-![s04-image25.png](./img/s04-image25.png)
+![firewall.json](./img/s04-image25.png)
 
 8. (**kali**, **Firefox**, **target.skills.hub**) Enter the following URL to get contents of the firewall.json file:
 
@@ -1101,7 +1100,7 @@ http://target.skills.hub/lab/info/about-us?filename=background.txt;cat creds/fir
 
 You should see the credentials are now leaked to a fictional firewall.
 
-![s04-image26.png](./img/s04-image26.png)
+![Leaked credentials](./img/s04-image26.png)
 
 </p>
 </details>
@@ -1187,7 +1186,7 @@ To mitigate the chances of implementing an OS command injection vulnerability, t
 
 This check will verify that you were able to successfully trigger a SQL injection on the vulnerable page present on the website.
 
-![s04-image27.png](./img/s04-image27.png)
+![Grading Check](./img/s04-image27.png)
 
 Grading Check 6: Successfully perform OS command injection on the 'About Us' page to retrieve sensitive data.
  - Analyze web page to gather information to help generate OS command injection.
@@ -1240,7 +1239,7 @@ If you wish to learn more about C syntax and functionality to help with these ta
 
 (**kali**, **Firefox**) To check your work, browse to the grading page at `https://skills.hub/lab/tasks` or `(https://10.5.5.5/lab/tasks)`. Click the `Submit/Re-Grade Tasks` button to trigger the grading checks. Refresh the results after a few moments to see your results.
 
-![s04-image28.png](./img/s04-image28.png)
+![Grading check results](./img/s04-image28.png)
 
 Grading Check 7: Successfully implemented correct code to ensure C program does not have buffer overflow vulnerability present. (C executable should be named 'mini_challenge_buffer' and in the directory '/home/user/Desktop')
  - Executable is named `mini_challenge_buffer` and is present on Desktop.
