@@ -168,7 +168,7 @@ These are only some of the vulnerabilities that can be present when creating pro
 
 3. (**kali**, **Firefox**) Once the page has loaded you should see a welcome page. In the navigation bar at the top, you will see a tab labeled `Hosted Files`. Click on it. You will find the files `buffer_overflow.c` and `integer_overflow.c` available for download. Click and download both. 
 
-![s03-image1.png](./img/s04-image1.png)
+![Skills Hub Hosted Files](./img/s04-image1.png)
 
 4. (**kali**) Minimize Firefox and open the Terminal by double-clicking the Terminal-Emulator icon from the Desktop.
 
@@ -182,17 +182,17 @@ The lab directions will use the text editor `VS Code`, or Visual Studio Code, to
 
 6. (**kali**) Open VS Code by double-clicking the Visual Studio Code icon from the Desktop.
 
-![s03-image2.png](./img/s04-image2.png)
+![VS Code screen](./img/s04-image2.png)
 
 7. (**kali**, **VS Code**) We will be opening the directory `Desktop` in VS Code as that is where the files we will be editing will be located. You can do this by clicking on the `Open Folder` link currently showing on the open page, selecting the Desktop, and clicking `Select`. You could also click on the `File` tab in the taskbar at the top, and then select `Desktop`.
 
-![s03-image3.png](./img/s04-image3.png)
+![Open Folder Desktop](./img/s04-image3.png)
 
 *Note: If prompted whether or not to trust the authors of the files, choose `Yes, I trust the authors`*
 
 8. (**kali**, **VS Code**) You should see the two downloaded files will now be present in the box located on the left of VS Code. Click on the file `buffer_overflow.c`.
 
-![s03-image4.png](./img/s04-image4.png)
+![buffer_overflow.c - Desktop - VS Code](./img/s04-image4.png)
 
 *Note that the directory structure is visible in the pane on the left, while the specific file being viewed is visible on the right. You can switch between files using the Explorer pane and each file viewed will receive its own tab on the right.*
 
@@ -283,11 +283,11 @@ gcc -o buffer_vuln buffer_overflow.c
 
 If your code has any errors that prevent it from being compiled, the output will point you to the issue and line of the error.
 
-![s03-image5.png](./img/s04-image5.png)
+![Output of previous command](./img/s04-image5.png)
 
 On the Desktop, you should now see the file `buffer_vuln`.
 
-![s03-image6.png](./img/s04-image6.png)
+![buffer_vuln Desktop icon](./img/s04-image6.png)
 
 16.   (**kali**, **Terminal** ) We will now run the new executable to see how it behaves. Run the executable with the command: 
 
@@ -297,13 +297,13 @@ On the Desktop, you should now see the file `buffer_vuln`.
 
 17.  (**kali**, **Terminal** ) You should see a prompt asking you to enter a password for the user `Admin`, which matches what we wrote into the program. Enter the password `testing`. You should get a response that it failed, which is correct behavior. Re-run the executable and this time enter the correct password, `password`. You should see that it succeeds, which again is correct behavior. 
 
-![s03-image7.png](./img/s04-image7.png)
+![Enter Admin Password](./img/s04-image7.png)
 
 Now we'll run it again, but this time with the intention of trying to perform a Buffer Overflow to see how it responds. 
 
 18.  (**kali**, **Terminal** ) Run the executable and when prompted, enter the string: `aaaaaaaaaaaa` (Note that you are entering 12 characters, though the string entered does not matter). Despite this not being the accepted password, you should see that it succeeds, and access is granted.
 
-![s03-image8.png](./img/s04-image8.png)
+![Enter Admin Password Access Granted](./img/s04-image8.png)
 
 We mentioned before that C stores data in the buffer and a buffer overflow attempts to write more data than allocated into a variable to write the data into the location next to it.
 
