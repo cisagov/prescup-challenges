@@ -55,7 +55,7 @@ The concept of secure programming revolves entirely around the development and h
 
 The lab environment consists of a single server hosting a website with a router and pfSense firewall to serve as networking devices to allow for connectivity. Below is a diagram of the network.
 
-![networkdiagram.png](./img/networkdiagram.png)
+![Secure Programming lab network diagram](./img/networkdiagram.png)
 
 ---
 
