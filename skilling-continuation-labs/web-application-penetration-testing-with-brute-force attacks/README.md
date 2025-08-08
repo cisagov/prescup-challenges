@@ -98,14 +98,14 @@ Start by creating a custom word list to use for the brute force password attack.
 
 2. (**Kali, Firefox**) Open Firefox and navigate to `http://market.skills.hub`. This lab **does not** use HTTPS. The web server has no SSL/TLS certificate, so all data between your browser and the server is sent in plain text. This setup is intentional.
 
-![1.png](./img/1.png)
+![market.skills.hub website](./img/1.png)
 
 3. (**Kali, Terminal**) Open a terminal window and run `cewl -h` to view all of the options. You will see the list of available options and arguments that can be used when crawling the website. Start by searching the site for email addresses and writing them to a file named `emails.txt`. In the terminal window, enter the following command:
 
 ```text
 cewl -e --email_file /home/user/emails.txt http://market.skills.hub
 ```
-![2.png](./img/2.png)
+![Results of previous command](./img/2.png)
 
 4. (**Kali, Terminal**) Enter the following command to view the contents of the `emails.txt` file:
 
@@ -113,7 +113,7 @@ cewl -e --email_file /home/user/emails.txt http://market.skills.hub
 cat /home/user/emails.txt
 ```
 
-![3.png](./img/3.png)
+![Results of cat command](./img/3.png)
 
 We are not using the `emails.txt` file in the first part of the lab. However, we were already using CeWL to scrape the website for useful information so this was a good time to gather email addresses to use in the password spraying attack later in the lab.
 
@@ -123,7 +123,7 @@ We are not using the `emails.txt` file in the first part of the lab. However, we
 cewl -m 8 -w /home/user/wordlist.txt http://market.skills.hub
 ```
 
-![4.png](./img/4.png)
+![Results of cewl command](./img/4.png)
 
 6. (**Kali, Terminal**) View the contents of  `wordlist.txt` file with this command:
 
@@ -131,37 +131,37 @@ cewl -m 8 -w /home/user/wordlist.txt http://market.skills.hub
 cat -n /home/user/wordlist.txt
 ```
 
-![5.png](./img/5.png)
+![wordlist.txt](./img/5.png)
 
 Now that we have a custom password list, let's use it with Burp Suite to access the website. Remember: CeWL only scrapes visible content from `http://market.skills.hub`; it doesn't crack passwords or access the site's database. Using CeWL demonstrates another way to gather custom words and terminology to enhance existing word lists.
 
 7. (**Kali, Burp Suite**) Open **Burp Suite**.
 
-![6.png](./img/6.png)
+![Search bar burpsuite](./img/6.png)
 
 - If you see a message like the one below, click **OK**. You can ignore this warning.
 
-![7.png](./img/7.png)
+![Burp Suite Community Edition message](./img/7.png)
 
 - Accept the Terms and Conditions.
 
-![8.png](./img/8.png)
+![Terms and Conditions](./img/8.png)
 
 8. (**Kali, Burp Suite**) On the Welcome screen, select **Temporary project in memory** then click **Next**.
 
-![9.png](./img/9.png)
+![Temporary project in memory option](./img/9.png)
 
 9. (**Kali, Burp Suite**) Select **Use Burp defaults** then click **Start Burp**.
 
-![10.png](./img/10.png)
+![Use Burp defaults](./img/10.png)
 
 - If you see a message like the one below, click **OK**. You can ignore this warning.
 
-![11.png](./img/11.png)
+![Burp Suite is out of date](./img/11.png)
 
 10. (**Kali, Burp Suite**) Select the **Proxy** tab.
 
-![12.png](./img/12.png)
+![Burp Suite Proxy tab](./img/12.png)
 
 11. Before you can intercept web traffic, you need a web browser configured to use Burp Suite as a proxy.
 
@@ -173,19 +173,19 @@ Now that we have a custom password list, let's use it with Burp Suite to access 
 
 - (**Kali, Firefox**) In the upper right corner, click the **hamburger menu** (it's next to the puzzle piece).
 
-![16.png](./img/16.png)
+![Firefox settings](./img/16.png)
 
  - Select **Settings**.
  - In the **Find in Settings** field, type `proxy`.
  - Click the **Settings** button.
 
-![17.png](./img/17.png)
+![Firefox proxy Settings](./img/17.png)
 
  - In the **Connection Settings** box, select **Manual proxy configuration**.
  - Enter `127.0.0.1` in the **HTTP Proxy** field and `8080` in the **Port** field.
  - Click **OK**.
 
-![18.png](./img/18.png)
+![Connection Settings](./img/18.png)
 
 - Close the **Settings** tab.
 
@@ -195,45 +195,45 @@ Now that we have a custom password list, let's use it with Burp Suite to access 
 
 14. (**Kali, Burp Suite**) Select the **Intercept** sub tab.
 
-![19.png](./img/19.png)
+![Burp Suite Proxy tab, Intercept tab](./img/19.png)
 
 15. (**Kali, Burp Suite**) If the **Intercept** button shows **Intercept is off**, click it. It should show as: **Intercept is on**.
 
-![20.png](./img/20.png)
+![Intercept is on](./img/20.png)
 
 16. (**Kali, Firefox**) In Firefox click the **Login** link on the Market website. Before being redirected to the Login page, you are instead taken to Burp Suite.
 
-![21.png](./img/21.png)
+![Burp Suite GET request](./img/21.png)
 
 Here you see the `GET` request made by the browser as you navigated to the Login page. The request was captured by Burp Suite, but hasn't been delivered to the web server hosting the Market website.
 
 17. (**Kali, Burp Suite**) Click **Forward** and return to Firefox. You're looking at the Login page.
 
-![22.png](./img/22.png)
+![Login E-Commerce](./img/22.png)
 
 The last few steps demonstrated how Burp Suite is behaving as a proxy between the client web browser and the Market website. All traffic traveling between them is captured and made visible to the user in Burp Suite.
 
 18. (**Kali, Firefox**) Next, we capture the traffic generated during a login attempt. We will attempt to login with the `bcampbell@skills.hub` account. In the browser, navigate to the login page and try logging in with: username `bcampbell@skills.hub` and password `test`. Click the **Login** button.
 
-![23.png](./img/23.png)
+![Login E-Commerce.png](./img/23.png)
 
 19. (**Kali, Burp Suite**) In Burp Suite, find the `HTTP POST` that was captured during your login attempt.
 
-![24.png](./img/24.png)
+![Burp Suite HTTP POST](./img/24.png)
 
 20. (**Kali, Burp Suite**) Click the **Forward** button to send the login attempt to the server. The browser says INVALID PASSWORD.
 
-![25.png](./img/25.png)
+![INVALID PASSWORD](./img/25.png)
 
 21. (**Kali, Burp Suite**) In Burp Suite, under the **Proxy** tab, click **HTTP history**. Here you see your previous `HTTP GET` and `POST` requests. 
 
-![26.png](./img/26.png)
+![Previous GET and POST](./img/26.png)
 
 22. (**Kali, Burp Suite**) Right-click the `POST` request and select **Send to Intruder**, then select the **Intruder** tab.
 
-![27.png](./img/27.png)
+![POST context menu](./img/27.png)
 
-![28.png](./img/28.png)
+![Burp Suite Intruder tab](./img/28.png)
 
 23. (**Kali, Burp Suite**) Look at line 16 in the **Payload positions**. The line should look like this:
 
@@ -247,37 +247,37 @@ Select and highlight the `test` value for the `password` form data, then click *
 email=bcampbell%40skills.hub&password=§test§&login=
 ```
 
-![29.png](./img/29.png)
+![Payload positions](./img/29.png)
 
 24. (**Kali, Burp Suite**) The Positions tab is currently selected. Swap to the **Payloads** tab, then click **Load**. Select the `wordlist.txt` file you generated with CeWL from the `/home/user/` directory, then click **Open**.
 
-![30.png](./img/30.png)
+![Burp Suite Intruder tab](./img/30.png)
 
-![31.png](./img/31.png)
+![Burp Suite Intruder tab, Payloads](./img/31.png)
 
 25. (**Kali, Burp Suite**) Click the **Start Attack** button (top-right corner).
 
-![32.png](./img/32.png)
+![Burp Suite Intruder tab, Payloads, Start Attack](./img/32.png)
 
 26. (**Kali, Burp Suite**) If you are greeted with this dialog box, click **OK** to continue.
 
-![33.png](./img/33.png)
+![Community Edition popup](./img/33.png)
 
 You can now watch the progress of the brute force attack. The bottom of the screen shows the number of attempts out of the total number of words from the `wordlist.txt` file. Remember, the Community Edition of Burp Suite is time throttled so a short word list can take a significant amount of time to complete a brute force attack.
 
-![34.png](./img/34.png)
+![Intruder attack](./img/34.png)
 
 As you observe the results of the login attempts, note the various values for fields like **Status code** and **Length**. Scrolling through the results you see mostly 200 values for the Status Codes and roughly 1505 for the Length. However, where you see Status Code 302, which indicates a temporary redirect, and a length of 395. This could indicate that a user was logged in and redirected to a different page on the website.
 
-![35.png](./img/35.png)
+![Intruder attack](./img/35.png)
 
 27. (**Kali, Burp Suite, Firefox**) Note the value for the Payload field of this attempt. The value is `operating`. In the web browser, enter: **Email:** `bcampbell@skills.hub` and **Password:** `operating`. Click **Login**.
 
-![36.png](./img/36.png)
+![Bcampbell Login](./img/36.png)
 
 28. (**Kali, Burp Suite**) In Burp Suite, look at the **Intercept** sub tab under the **Proxy** tab. Click **Forward** twice then return to your web browser. You should be logged into the Market website and the token for completing the first part of the lab is displayed.
 
-![37.png](./img/37.png)
+![Token](./img/37.png)
 
 (**Kali, Firefox**) Success! You can see the token you've been rewarded with for discovering the password for the `bcampbell` account. Your token will be different from the one below because tokens are randomly generated for each lab.
 
@@ -339,21 +339,21 @@ In the next section, you will use Burp Suite to perform a password spraying atta
 
 4. (**Kali, Burp Suite**) Select the **Proxy** tab, then select the **Intercept** sub tab.
 
-![38.png](./img/38.png)
+![Burp Suite, Proxy tab, Intercept](./img/38.png)
 
 5. (**Kali, Burp Suite**) If the **Intercept** button shows **Intercept is off**, click it. It should show as **Intercept is on**.
 
-![20.png](./img/20.png)
+![Intercept is on](./img/20.png)
 
 6. (**Kali, Firefox**) In your browser, click the **Login** link on the Market website. Before being redirected to the login page, you are taken to Burp Suite.
 
-![39.png](./img/39.png)
+![Burp Suite](./img/39.png)
 
 7. (**Kali, Burp Suite**) Notice the `GET` request made by the browser as you navigated to the login page. The request was captured by Burp Suite, but hasn't been delivered to the web server hosting the Market website.
 
 8. (**Kali, Burp Suite**) Click the **Forward** button in Burp Suite then return to Firefox. You are looking at the login page.
 
-![22.png](./img/22.png)
+![Login E-Commerce](./img/22.png)
 
 The last few steps demonstrated how Burp Suite is behaving as a proxy between the client web browser and the Market website. All traffic traveling between them is captured and made visible to the user in Burp Suite.
 
@@ -361,19 +361,19 @@ The last few steps demonstrated how Burp Suite is behaving as a proxy between th
 
 10. (**Kali, Burp Suite**) In Burp Suite, find the `HTTP POST` that was captured during your login attempt.
 
-![40.png](./img/40.png)
+![Burp Suite HTTP POST](./img/40.png)
 
 11. (**Kali, Burp Suite**) Right-click anywhere in the text of the `POST` body and select **Send to Intruder**.
 
-![41.png](./img/41.png)
+![Burp Suite context menu, Send to Intruder](./img/41.png)
 
 12. (**Kali, Burp Suite**) Click the **Intruder** tab.
 
-![42.png](./img/42.png)
+![Burp Suite Intruder tab](./img/42.png)
 
 13. (**Kali, Burp Suite**) On line 16 of the `POST` body, highlight the value of email address and click **Add** to wrap the value in delimeters. For the purposes of this lab, we will use the password `delicious`. Change the value of the `password` field on line 16 from `test` to `delicious`.
 
-![43.png](./img/43.png)
+![Burp Suite, Payload positions](./img/43.png)
 
 Line 16 should now look like this:
 
@@ -383,29 +383,29 @@ email=§bcampbell%40skills.hub§&password=delicious&login=
 
 14. (**Kali, Burp Suite**) Select the**Payloads** tab.
 
-![44.png](./img/44.png)
+![Burp Suite, Payloads tab](./img/44.png)
 
 15. (**Kali, Burp Suite**) Click **Load** and select the `/home/user/emails.txt` file we generated with CeWL in the first phase of the lab, then click **Open**.
 
-![45.png](./img/45.png)
+![Open emails.txt](./img/45.png)
 
 In this password spraying attack, we modified our procedure from the original brute force password attack to use a single password against a list of known logins.
 
 16. (**Kali, Burp Suite**) Click the **Start Attack** button (right side of the screen).
 
-![46.png](./img/46.png)
+![Burp Suite, Start Attack](./img/46.png)
 
 17. (**Kali, Burp Suite**) Click **OK** on the dialog box that appears to inform you about the Community Edition of Burp Suite.
 
 18. (**Kali, Burp Suite**) Analyze the results of the password spraying attack. Notice three results with a Status code of 302. Take note of the number of results with a 302 Status code because this is the answer to the question if you can confirm your results below.
 
-![47.png](./img/47.png)
+![302 Status Code](./img/47.png)
 
 19. (**Kali, Burp Suite**) To confirm our results, copy the email from a result with Status code 302, e.g., `bsudo@mushmarket%2ecom`. Replace `%2e` with a period (`.`) so it becomes `bsudo@mushmarket.com`, or the login won't work.
 
 20. (**Kali, Burp Suite**) In Burp Suite, click the **Proxy** tab and make sure to turn off the **Intercept** feature. 
 
-![48.png](./img/48.png)
+![Intercept is off](./img/48.png)
 
 21. (**Kali, Firefox**) Browse to `http://market.skills.hub` and click the LOGIN link. Enter these credentials: **Email:** `bsudo@mushmarket.com` and **Password:** `delicious`. Click **Login**.
 
@@ -465,9 +465,9 @@ If needed, follow the steps from the *Configuring Firefox to work with Burp Suit
 
 3. (**Kali, Firefox, Burp Suite**) In Firefox, click the **REGISTER** link at the top of the page. Then click the **Forward** button again in Burp Suite.
 
-![49.png](./img/49.png)
+![Home E-Commerce screen](./img/49.png)
 
-![50.png](./img/50.png)
+![Burp Suite, Proxy tab, Intercept](./img/50.png)
 
 4. (**Kali, Burp Suite**) In Firefox, complete the registration form:
 
@@ -477,33 +477,33 @@ Password: password123
 Email: jdoe@skills.hub
 ```
 
-![51.png](./img/51.png)
+![Register E-Commerce screen](./img/51.png)
 
 5. (**Kali, Firefox, Burp Suite**) Click the **Register** button. Then click the **Forward** button in Burp Suite to complete the `HTTP POST` request.
 
-![52.png](./img/52.png)
+![Burp Suite, Proxy tab, Intercept, HTTP POST](./img/52.png)
 
 6. (**Kali, Firefox**) In Firefox, you should see a page confirming that the account registration was successful.
 
-![53.png](./img/53.png)
+![registration successful!](./img/53.png)
 
 7. (**Kali, Burp Suite**) In Burp Suite, go to the **HTTP history** tab and find the `POST` request to `/register.php`. You’ll see that the request is posting to `/register.php?is_admin=0`.
 
-![54.png](./img/54.png)
+![HTTP History, POST](./img/54.png)
 
 8. It looks like the developers are passing a flag for admin permissions in the query string of the `POST` request. Let’s try tampering with that value to see what happens..
 
 9. (**Kali, Burp Suite**) Right-click the `POST` request used to register the `jdoe` account and select **Send to Repeater**.
 
-![55.png](./img/55.png)
+![Burp Suite Context menu](./img/55.png)
 
 10. (**Kali, Burp Suite**) Click the **Repeater** tab at the top of the Burp Suite screen.
 
-![56.png](./img/56.png)
+![Burp Suite, Repeater tab](./img/56.png)
 
 11. (**Kali, Burp Suite**) We are going to modify lines 1 and 16 of the captured request.
 
-![57.png](./img/57.png)
+![Captured POST](./img/57.png)
 
 12. (**Kali, Burp Suite**) Change the `0` in the `is_admin` query string value on line 1 to a `1`. Before the change, line 1 should look like this:
 
@@ -529,11 +529,11 @@ username=jdoe&password=password123&email=jdoe%40skills.hub&register=
 username=jdoe2&password=password123&email=jdoe2%40skills.hub&register=
 ```
 
-![58.png](./img/58.png)
+![Line 16](./img/58.png)
 
 15. (**Kali, Burp Suite**) Click the **Send** button to submit the modified `POST` request to the web server.
 
-![59.png](./img/59.png)
+![Burp Suite, Repeater tab, Send](./img/59.png)
 
 You should see the response appear in Burp Suite to the right of the request you just sent. Line 1 of the response should show a success with an `HTTP` status code of 200.
 
@@ -541,7 +541,7 @@ You should see the response appear in Burp Suite to the right of the request you
 HTTP/1.1 200 OK
 ```
 
-![60.png](./img/60.png)
+![HTTP status code 200](./img/60.png)
 
 16. Scroll to the bottom of the response. You’ll see HTML text confirming that the account registration was successful.
 
@@ -549,13 +549,13 @@ HTTP/1.1 200 OK
 <div class='alert alert-success'>Registration successful!</div>
 ```
 
-![61.png](./img/61.png)
+![Registration successful!](./img/61.png)
 
 17. (**Kali, Firefox**) Go back to Firefox and click the **LOGIN** link.
 
 18. (**Kali, Burp Suite**) Return to Burp Suite and click the **Proxy** tab at the top of the page. Then click the **Intercept** sub-tab. Click the **Intercept is on** button to turn off traffic interception.
 
-![62.png](./img/62.png)
+![Burp Suite, Proxy tab, Intercept, Intercept is on](./img/62.png)
 
 19. (**Kali, Firefox**) Go back to Firefox and then go to the **LOGIN** page (remember to forward as necessary on the **Proxy**->**Intruder** tab).
 
@@ -570,7 +570,7 @@ Password: password123
 
 22. (**Kali, Firefox**) 🎉 Success! After logging in, you’ll see a message confirming your new administrator account. By changing the query string value to 1 when creating the account, you successfully elevated your privileges to administrator level.
 
-![63.png](./img/63.png)
+![Token](./img/63.png)
 
 **Knowledge Check Question 4**: *Which Burp Suite feature can we use to send the modified user registration POST when performing the web parameter tampering attack?*
 
@@ -639,7 +639,7 @@ You can find additional guidance for creating strong passwords here: <a href="ht
 
 This poster from Hive Systems shows how long it would take to brute force passwords of various lengths and complexities.
 
-![hive-brute-force-password.jpg](./img/hive-brute-force-password.jpg)
+![Hive Systems poster](./img/hive-brute-force-password.jpg)
 
 #### Multifactor Authentication
 
@@ -678,7 +678,7 @@ According to `www.captcha.net`, a CAPTCHA is:
 
 ...a program that protects websites against bots by generating and grading tests that humans can pass but current computer programs cannot. For example, humans can read distorted text as the one shown below, but current computer programs can't:
 
-![recaptcha-example.gif](./img/recaptcha-example.gif)
+![Recaptcha example](./img/recaptcha-example.gif)
 
 The term CAPTCHA (for Completely Automated Public Turing Test To Tell Computers and Humans Apart) was coined in 2000 by Luis von Ahn, Manuel Blum, Nicholas Hopper and John Langford of Carnegie Mellon University. `[13]`
 
