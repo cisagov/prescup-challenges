@@ -10,11 +10,15 @@ The <a href="https://www.cisa.gov/topics/cybersecurity-best-practices/executive-
 
 <a href="https://www.cisa.gov/sites/default/files/2024-08/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf" target="_blank">CISA's Cybersecurity Incident & Vulnerability Response Playbooks</a> recommends the use of honeypots to detect attempted exploitations as a measure of active defense.
 
- - This lab is expected to take 90 minutes
+| &#9201; LAB TIME |
+|---|
+| This lab is expected to take one 90 minutes. |
 
 *Please consider filling out the lab feedback survey at the bottom of your screen. The survey is available to you at any time while conducting the lab.*
 
-**Caution!** You must complete _all_ phases of the lab and complete the mini-challenge to receive your completion certificate. We encourage you to attempt mini-challenges on your own, but links to the solution guides are available in the Mini-Challenge section of the lab document if you need them.
+| &#9888; CAUTION |
+|---|
+| You must complete *all*  phases of the lab and complete the mini-challenge to receive your completion certificate. We encourage you to attempt mini-challenges on your own, but links to the solution guides are available in the Mini-Challenge section of the lab document if you need them. |
 
 ## Learning Objectives
 
@@ -55,7 +59,7 @@ This lab maps with <a href="https://www.cisa.gov/resources-tools/resources/feder
 
 The lab environment consists of a small network of systems. A single Ubuntu client will serve to demonstrate Endpoint Detection and Response techniques and will act as your main desktop system for the lab. Additionally, you will leverage an external-attacker Kali Linux system to conduct test attacks against the firewall. The firewall protects the network and performs port forwarding to a variety of fake services on the honeypot system in a demilitarized zone (DMZ). Port-forwarding ensures that only a single address is exposed externally, yet internal services are made available to the public. The honeypot system includes several services used in the lab - such as email, SSH, and web services - that will be targeted by attackers. 
 
-![network-diagram.png](./img/network-diagram.png)
+![Automated Defenses lab network diagram](./img/network-diagram.png)
 
 ## System Tools and Credentials
 
@@ -84,7 +88,7 @@ In this phase, you will create a simulated EDR process that monitors for bulk fi
 
 *Note: The Skills Hub website takes roughly 5 minutes before it is available after starting the lab. This ensures the lab is properly configured before beginning.*
 
-![s05-image1.png](./img/s05-image1.png)
+![Skills Hub Hosted Files web page](./img/s05-image1.png)
 
 3. (**Ubuntu-Desktop, Firefox**) Download the zip file named `EDR-Files.zip`. The default download location of /home/user/Downloads is assumed in the next step. You can ignore the `emailer.sh` script for now.
 
@@ -92,7 +96,7 @@ You may minimize the browser for the time being.
 
 4. (**Ubuntu-Desktop**) Open a Terminal from the shortcut on the left side of the screen.
 
-![terminal-icon.png](./img/terminal-icon.png)
+![Terminal icon.png](./img/terminal-icon.png)
 
 5. (**Ubuntu-Desktop, Terminal**) Extract the contents of the zip file to the home folder with the following command:
 
@@ -104,7 +108,7 @@ Leave the Terminal window open, as you will use it again in later steps.
 
 6. (**Ubuntu-Desktop**) Open the `user` folder from the Desktop shortcut. You should see the following files.
 
-![s05-image2.png](./img/s05-image2.png)
+![Contents of the user folder](./img/s05-image2.png)
 
 7. (**Ubuntu-Desktop**)Take inventory of the various items necessary for this phase of the lab:
 
@@ -130,9 +134,9 @@ This connects a network share on a remote server which hosts the backups to the 
 ls /mnt/backup
 ```
 
-![s05-image3.png](./img/s05-image3.png)
+![Results of command](./img/s05-image3.png)
 
-You should see all six(6) files duplicated in the backup network share.
+You should see all six (6) files duplicated in the backup network share.
 
 #### Grading Check
 
@@ -140,7 +144,7 @@ You should see all six(6) files duplicated in the backup network share.
 
 This first check will validate the network share has been mounted and ensure all files are in the proper location before moving on.
 
-![s05-image8.png](./img/s05-image8.png)
+![Tasks on the Grading Page](./img/s05-image8.png)
 
 Grading Check 1: Successfully mount the backup network share and copy files to the Documents directory 
  - All six(6) text and image files were copied to the Documents directory
@@ -281,7 +285,7 @@ sudo python3 file_monitor.py
 
 The script will check the integrity of the files every 30 seconds and compare their current MD5 hashes to the hashes stored in the file_hashes.txt file.
 
-![s05-image4.png](./img/s05-image4.png)
+![Results of the monitoring script](./img/s05-image4.png)
 
 | &#129513; HASHES |
 |---|
@@ -301,11 +305,11 @@ python3 encryptor.py
 
 This will XOR each file in the Documents directory.
 
-![s05-image5.png](./img/s05-image5.png)
+![Results of running the encryption script](./img/s05-image5.png)
 
 6. (**Ubuntu-Desktop, Terminal**) Within 30 seconds, you should see the file monitor's output change, indicating that bulk changes were made.
 
-![s05-image6.png](./img/s05-image6.png)
+![File monitor's output change](./img/s05-image6.png)
 
 The follow-on commands will disable the network interface to ensure the system remains isolated until it can be investigated and locks out the current Gnome Desktop user.
 
@@ -313,7 +317,7 @@ The follow-on commands will disable the network interface to ensure the system r
 
 8. (**Ubuntu-Desktop, Documents Directory**) Notice that the files in the Documents directory were restored from the backup and that the encrypted files were also moved to /home/user/bad for further investigation. The files may no longer show their respective thumbnail preview icons, and the text files will be illegible if you open them.
 
-![s05-image7.png](./img/s05-image7.png)
+![Files in the documents directory after backup restore (Terminal CLI)](./img/s05-image7.png)
 
 If, for some reason, there was a malfunction in the restoration script, you can repeat the process of unzipping the files and placing them in the Documents folder and try again.
 
@@ -338,7 +342,7 @@ This process emulates what some types of Endpoint Detection and Response tools c
 
 The second check will verify that you were able to achieve both results during your lab attempt.
 
-![s05-image8.png](./img/s05-image8.png)
+![Tasks on the Grading Page](./img/s05-image8.png)
 
 Grading Check 2: Successfully restore encrypted data
  - Encrypted files were moved to the "bad" directory
@@ -375,7 +379,7 @@ If at any time the system loses its IP settings, you can rerun this command as n
 
 4. (**External-Attacker, Firefox**) Download the emailer.sh script found on the Hosted Files page. You will use this script later in the lab. For now you do not need to do anything further with it.
 
-![s05-image1.png](./img/s05-image1.png)
+![Skills Hub Hosted Files page](./img/s05-image1.png)
 
 5. (**External-Attacker**) Open a Terminal using either the Desktop shortcut or the icon in the top menu bar.
 
@@ -391,7 +395,7 @@ Here, "ab" stands for Apache Benchmarking tool, and the tool can be used by deve
 
 7. (**External-Attacker, Terminal**) You'll see progress noting every 250 requests (or 10% of the total) being handled. Once all 2500 requests are complete scroll up slightly and note the following information in the Terminal. Note that your data will differ slightly.
 
-![s05-image9.png](./img/s05-image9.png)
+![Apache Benchmark tool command result](./img/s05-image9.png)
 
 Note a few items in the screenshot above:
 
@@ -407,7 +411,7 @@ Luckily, many modern-day firewalls and routing devices have the ability to throt
 
 9. (**Ubuntu-Desktop, Firefox**) Open Firefox, open a new tab and browse to the pfSense Admin webGUI at `https://pfsense.skills.hub`, ignore and bypass any certificate warnings, and login with the credentials: `user` | `tartans`
 
-![s05-image10.png](./img/s05-image10.png)
+![ pfSense Admin webGUI sign in](./img/s05-image10.png)
 
 10.  (**Ubuntu-Desktop, Firefox, pfSense Admin WebGUI**) Click on the Firewall heading from the top menu and select "Traffic Shaper".
 
@@ -419,9 +423,9 @@ Luckily, many modern-day firewalls and routing devices have the ability to throt
  - Add a name of `Throttle` (this will be used for grading purposes)
  - Set the bandwidth amount to `100` and ensure the "Bw type" is "Kbits/s"
  - Change the Mask setting to `Source address`
- - Change the Queue Management Algorithm to `CoDel` (CoDel stands for Controlled Delay and was designed to help prevent congestion in network traffic, and it just happens to work better in this lab environment)
+ - Change the Queue Management Algorithm to `CoDel` (CoDel stands for Controlled Delay and was designed to help prevent congestion in network traffic, and it just happens to work better in this lab environment.)
 
-![s05-image11.png](./img/s05-image11.png)
+![pfSense Limiters tab](./img/s05-image11.png)
 
 Here, we are creating a limit or throttle on the amount of traffic that any unique host can send with a threshold of 100 kb/s. We can then apply this limiter to a firewall rule, specifying the type of traffic that we wish to limit.
 
@@ -450,7 +454,7 @@ This rule applies our limiter/throttle to all HTTP traffic coming "IN" to the fi
 
 You will see the new firewall rule at the top of the rules list, meaning it will be the first rule checked and applied. The cog wheel icon on the left implies that advanced settings have been applied, i.e. our limiter being applied to the "IN" pipe.
 
-![s05-image12.png](./img/s05-image12.png)
+![pfSense WAN settings after firewall rule creation](./img/s05-image12.png)
 
 18. Return to the External-Attacker console.
 
@@ -464,7 +468,7 @@ You should notice that the requests take quite a bit longer than before, though 
 
 At the very least, the total time, requests per second, and transfer rate will be lower than the earlier test, signifying that we were successful in rate limiting web traffic for any individual host.
 
-![s05-image13.png](./img/s05-image13.png)
+![Results of running benchmark again](./img/s05-image13.png)
 
 This process not only helps tune all http web traffic to a consistent maximum per host but can be used to prevent overloading of the web server and WAN interface by denial-of-service type attacks.
 
@@ -483,15 +487,15 @@ Queue Management is another option for limiting certain types of traffic while p
 
 2. (**Ubuntu-Desktop, Firefox, pfSense Admin WebGUI**) Click on the Wizards tab and then click on the dedicated link for `traffic_shaper_wizard_dedicated.xml`. This will help us create our queueing rules.
 
-3. (**Ubuntu-Desktop, Firefox, pfSense Admin WebGUI**) Click the Next button six(6) times until you are presented with the "Raise or lower other Applications" settings page and check the box next to "Enable" at the top.
+3. (**Ubuntu-Desktop, Firefox, pfSense Admin WebGUI**) Click the Next button six (6) times until you are presented with the "Raise or lower other Applications" settings page and check the box next to "Enable" at the top.
 
-![s05-image14.png](./img/s05-image14.png)
+![pfSense Admin WebGUI, Raise or lower other Applications](./img/s05-image14.png)
 
 This will allow us to select certain TCP, UDP, and even ICMP protocols and define priority levels for each. If one protocol is higher than another, and bandwidth is consumed for a specific host, then the higher priority traffic will be processed and passed while the lower priority traffic is queued for later sending.
 
 4. (**Ubuntu-Desktop, Firefox, pfSense Admin WebGUI**) Scroll further down so you can see the "Web" and "Mail" headings in the same view. Set the HTTP priority to `Higher priority` and the SMTP priority to `Lower priority`.
 
-![s05-image15.png](./img/s05-image15.png)
+![pfSense Admin WebGUI, Web and Mail](./img/s05-image15.png)
 
 5. (**Ubuntu-Desktop, Firefox, pfSense Admin WebGUI**) Scroll down to click "Next" and on the following screen, click "Finish"
 
@@ -550,7 +554,7 @@ This simple SMTP email script will attempt to send 25 email messages to the emai
 ./emailer.sh
 ```
 
-![s05-image16.png](./img/s05-image16.png)
+![Executing the email script](./img/s05-image16.png)
 
 The results should be nearly instantaneous.
 
@@ -574,7 +578,7 @@ You may end the benchmarking command with CTRL+C at this time, if it has not com
 
 (**Ubuntu-Desktop, Firefox, New Tab**) To check your work, browse to the grading page at `https://skills.hub/lab/tasks` or `(https://10.5.5.5/lab/tasks)` from the Ubuntu-Desktop. Click the `Submit/Re-Grade Tasks` button to trigger the grading checks. Refresh the results after a few moments to see your results.
 
-![s05-image30.png](./img/s05-image30.png)
+![Tasks on the Grading Page](./img/s05-image30.png)
 
 Grading Check 3: Throttling and Queue Management Settings and Rules Were Implemented Correctly
  - Throttle rule exists and was triggered while running the benchmarking tests
@@ -601,11 +605,11 @@ Let's be a little more proactive about blocking specific types of Dos/DDoS type 
 
 The rule should now be dimmed.
 
-![s05-image17.png](./img/s05-image17.png)
+![pfSense Admin WebGUI WAN Firewall Rules](./img/s05-image17.png)
 
 2. (**Ubuntu-Desktop, Firefox, pfSense Admin WebGUI**) Go to Services -> Suricata. You should see the following:
 
-![s05-image18.png](./img/s05-image18.png)
+![pfSense Admin WebGUI Suricata Interfaces tab](./img/s05-image18.png)
 
 3. (**Ubuntu-Desktop, Firefox, pfSense Admin WebGUI**) Click on the Edit button - &#9999; - for the WAN interface.
 
@@ -627,7 +631,7 @@ Additionally, Suricata has been preconfigured to automatically block any sources
 
 You should notice the rule that you just added at the top of the list, thanks to the low SID value of 10001.
 
-![s05-image19.png](./img/s05-image19.png)
+![pfSense Admin WebGUI WAN Rules Active Rules category](./img/s05-image19.png)
 
 8. Return to the External-Attacker console.
 
@@ -658,11 +662,11 @@ The hping3 command has a few notable components:
 
 12. (**Ubuntu-Desktop, Firefox, pfSense Admin WebGUI**) You should still be on the main Suricata page viewing the WAN rules. If not, click on Services -> Suricata. In either case, find the Alerts tab and click on it to view the recent alerts. You should see some alerts for the SYN flood rule.
 
-![s05-image20.png](./img/s05-image20.png)
+![pfSense Admin WebGUI Suricata Alerts tab](./img/s05-image20.png)
 
 13. (**Ubuntu-Desktop, Firefox, pfSense Admin WebGUI**) Click on the next tab over - "Blocks". Here you should see that the IP of the External-Attacker is now recorded and blocked.
 
-![s05-image21.png](./img/s05-image21.png)
+![pfSense Admin WebGUI Suricata blocked by Suricata](./img/s05-image21.png)
 
 Note that this block is implemented purely by Suricata and Suricata does not create an additional rule in the firewall's main rule set.
 
@@ -674,7 +678,7 @@ Note that this block is implemented purely by Suricata and Suricata does not cre
 ping -c 4 123.45.67.89
 ```
 
-![s05-image22.png](./img/s05-image22.png)
+![Results of ping command](./img/s05-image22.png)
 
 These pings will not go through due to the block. Not only is our access to the web site blocked, but all traffic from our source IP of 123.45.67.201 is dropped at the firewall. If we were a malicious actor trying to perform a DoS, this would at the very least prevent this IP address from conducting the same type of attack again until or unless an administrator removes the block.
 
@@ -682,7 +686,7 @@ These pings will not go through due to the block. Not only is our access to the 
 
 (**Ubuntu-Desktop, Firefox, New Tab**) To check your work, browse to the grading page at `https://skills.hub/lab/tasks` or `(https://10.5.5.5/lab/tasks)` from the Ubuntu-Desktop. Click the `Submit/Re-Grade Tasks` button to trigger the grading checks. Refresh the results after a few moments to see your results.
 
-![s05-image30.png](./img/s05-image30.png)
+![Tasks on the Grading Page](./img/s05-image30.png)
 
 Grading Check 4: Suricata Rules Have Blocked SYN Flood Attempts
  - Suricata successfully blocked the SYN flood attack and flagged/blocked the 123.45.67.9 IP address
@@ -720,13 +724,13 @@ T-pot comes with its own set of dashboards to monitor and log activities and inc
 
 Each tab should eventually be titled with the honeypot you are viewing.
 
-![s05-image26-2053243345.png](./img/s05-image26-2053243345.png)
+![Various Dashboard tabs](./img/s05-image26.png)
 
 *Note that you can safely mute and/or dismiss any warning or popup messages that Elastic/Kibana displays in the lower right of the browser pages*
 
 4. (**Ubuntu-Desktop, Firefox**) Start with the Cowrie dashboard. You should see some "attack" logs present in the dashboard.
 
-![s05-image27.png](./img/s05-image27.png)
+![Cowrie Dashboard](./img/s05-image27.png)
 
 Scroll down to find the username and password tagcloud visualizations. Use these visualizations to answer the following question:
 
@@ -738,7 +742,7 @@ Further down from the user/password visualizations you will see a "Cowrie Input 
 
 Your visualization is empty, but if attackers were to attempt to enter commands, it would look like the following image.
 
-![s05-image28.png](./img//s05-image28.png)
+![Cowrie Input - Top 10](./img//s05-image28.png)
 
 The information or responses returned from these commands may even look real to the attacker, but it is all fake and part of the honeypot.
 
@@ -758,7 +762,7 @@ Mailoney also logs the specific message and attachment names of the messages rec
 
 Our prior hping3 SYN flood traffic has already created some IDS alerts for the IP address of 123.45.67.201. Scroll down to see the alerts flagged under the "Suricata Alert Signature - Top 10" list labelled as "SURICATA STREAM Packet with broken ack". The exact count of alerts may vary depending on how quickly the firewall blocked the traffic in phase 2.
 
-![s05-image24.png](./img/s05-image24.png)
+![Suricata Alert Signature - Top 10](./img/s05-image24.png)
 
 5. (**Ubuntu-Desktop, Firefox**) Further down and near the center of the page you should find the "Suricata Source Ip - Top 10" visualization. Note the IP address of 123.45.67.206 that was found in the previous Cowrie and Mailoney logs.
 
@@ -769,7 +773,7 @@ Our prior hping3 SYN flood traffic has already created some IDS alerts for the I
  - Type the value as `123.45.67.206`
  - Click on "Add Filter to apply it
 
-![s05-image29.png](./img/s05-image29.png)
+![Suricata Add filter](./img/s05-image29.png)
 
 7. (**Ubuntu-Desktop, Firefox**) Scroll back down to the "Suricata Alert Signature - Top 10" visualization. You should see some additional alerts that are tied to traffic from this source. This traffic is what we want to investigate. Use the following table to identify the type of scan that was conducted against the honeypot based on the unique alert ID found in the visualization.
 
@@ -842,7 +846,7 @@ Each threat actor is responsible for certain types of scans and for sending phis
 
 You can ID the new source IP address and filter for just this new IP, or you can also set the time filter on the dashboards to only view the last 15 or 30 minutes, which should help reduce the logs and alerts in the visualizations to only the logs and alerts related to the mini-challenge.
 
-![s05-image31.png](./img/s05-image31.png)
+![Time filter on Suricata Dashboard](./img/s05-image31.png)
 
 #### Mini-Challenge Traffic Trigger
 

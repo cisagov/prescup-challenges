@@ -4,7 +4,7 @@ There are numerous ways in which vulnerabilities can be introduced during code d
 
 This lab is a continuation of the first Secure Programming lab and will discuss the vital importance of implementing safe and secure code. The lab will reference code samples and concepts used in the first Secure Programming lab, doing a deeper dive into buffer overflows and integer overflows, while also covering a new bug that developers commonly face. You will be introduced to the programming language Rust and how it handles these memory-related errors. It is recommended that the user complete the first lab prior to attempting this one, although it is not required.
 
-the first secure programming lab can be found here: <a href="https://presidentscup.cisa.gov/gb/practice/f0a60d7ce2774da58337cc11f2b56637/secure-programming?practiceSearchTerm=secure" target="_blank">Secure Programming</a>.
+The first secure programming lab can be found here: <a href="https://presidentscup.cisa.gov/gb/practice/f0a60d7ce2774da58337cc11f2b56637/secure-programming?practiceSearchTerm=secure" target="_blank">Secure Programming</a>.
 
 Additional guidance on secure programming and the **Secure by Design** mission statement can be found here: <a href="https://www.cisa.gov/securebydesign" target="_blank">Secure by Design</a>.
 
@@ -388,7 +388,7 @@ Another modern security feature in code execution is Address Space Layout Random
 
 Attacks performed by malicious actors are typicaly able to succeed due to the ability to know or guess the location of processes and functions in memory. The randomization of the location of that data is intended to help generate better protections against memory-based attacks like buffer overflows.
 
-ASLR has improved memory security, but like the Stack Canary, it does not fully prevent memory-based attacks from succeeding. As you can see from the recent code execution, memory-based attacks can still occur despite ASR safeguards. 
+ASLR has improved memory security, but like the Stack Canary, it does not fully prevent memory-based attacks from succeeding. As you can see from the recent code execution, memory-based attacks can still occur despite ASLR safeguards. 
 
 If you would like to read more about it, <a href="https://www.cs.ucr.edu/~nael/pubs/micro16.pdf">this research paper</a> discusses a vulnerability that allows attackers to get around ASLR.
 
@@ -870,7 +870,7 @@ It is also important to note the reason why integer overflow isn't caught by C S
    1. Ensure you are in the `c_overflow` directory in the `integer_overflow` folder.
    2. Run the commands:
    ```bash
-    gcc -o checked_iof checked_int_overflow
+    gcc -o checked_iof checked_int_overflow.c
     ./checked_iof
    ```
 
@@ -1713,7 +1713,7 @@ To recap:
  - You were introduced to Rust and how it encourages secure coding with its syntax and structure.
  - You demonstrated the C "use after free" bug and how Rust mitigates it.
  - You were shown the additional functionality Rust has that can be used by developers to support the secure creation of programs.
-  
+
 Skills exercised:
  - S0097: Skill in applying security controls.
  - S0172: Skill in applying secure coding techniques.
@@ -1725,6 +1725,8 @@ Skills exercised:
 
 Memory-safe errors are a common vector that malicious actors are trying to exploit. The Rust programming language offers an improved way to create fast and efficient code that rivals the speed of C, but also greatly enhances its security. Rust inherently supports the priciples of "Secure by Design" by making it more difficult to implement unsafe code, and by having some restrictions in place to help catch and prevent an unwanted operation from occuring. 
 
+In a recent article published by CISA and the NSA, they discussed the importance of using Memory Safe languages and mentioned Rust as a viable option. Additionally, they emphasize how using them can help reduce memory related vulnerabilities during software development. This article can be read <a href="https://www.cisa.gov/resources-tools/resources/memory-safe-languages-reducing-vulnerabilities-modern-software-development">here.</a>
+
 ### References
  - <a href="https://www.cisa.gov/resources-tools/resources/secure-demand-guide" target="_blank">Secure by Demand Guide: How Software Customers Can Drive a Secure - Technology Ecosystem</a>
  - <a href="https://www.cisa.gov/securebydesign" target="_blank">Secure by Design</a>
@@ -1735,3 +1737,4 @@ Memory-safe errors are a common vector that malicious actors are trying to explo
  - <a href="https://www.sans.org/blog/stack-canaries-gingerly-sidestepping-the-cage/" target="_blank">Sidestepping Stack Canaries</a>
  - <a href="https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/" target="_blank">Malloc, Calloc, Free, realloc</a>
  - <a href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/stdbool.h.html" target="_blank">Standard Header</a>
+ - <a href="https://www.cisa.gov/resources-tools/resources/memory-safe-languages-reducing-vulnerabilities-modern-software-development">Memory Safe Languages: Reducing Vulnerabilities in Modern Software Development</a>
