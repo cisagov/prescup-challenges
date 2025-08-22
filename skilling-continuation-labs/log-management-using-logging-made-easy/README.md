@@ -1,12 +1,16 @@
 # Log Management Using Logging Made Easy
 
-This lab introduces core concepts in log management, focusing on inventorying log sources and logging infrastructure, identifying gaps in logging, and creating Elastic policies to remediate the gaps. <a href="https://www.cisa.gov/resources-tools/services/logging-made-easy" target="_blank">CISA's Logging Made Easy</a> solution is used to provide the logging infrastructure.
+This lab introduces core concepts in log management, focusing on inventorying log sources and logging infrastructure, identifying gaps in logging, and creating Elastic policies to remediate the gaps. <a href="https://www.cisa.gov/resources-tools/services/logging-made-easy" target="_blank">CISA's Logging Made Easy (LME)</a> solution is used to provide the <a href="https://www.elastic.co/" target="_blank">Elastic</a> logging infrastructure.
 
- - This lab is expected to take 1 (one) hour
+| &#9201; LAB TIME |
+|---|
+| This lab is expected to take one (1) hour. |
 
 *Please consider filling out the lab feedback survey at the bottom of your screen. The survey is available to you at any time while conducting the lab.*
 
-**Caution!** You must complete *all* phases of the lab and complete the mini-challenge to receive your completion certificate. We encourage you to attempt mini-challenges on your own, but links to the solution guides are available in the Mini-Challenge section of the lab document if you need them.
+| &#9888; CAUTION |
+|---|
+| You must complete _all_ phases of the lab and mini-challenge to receive your completion certificate. We encourage you to attempt the mini-challenge on your own, but a link to the solution guide is available in the Mini-Challenge section of the lab document if you need it. |
 
 ## Learning Objectives
 - Identify log sources on an Ubuntu operating system
@@ -31,11 +35,11 @@ This lab maps with <a href="https://www.cisa.gov/resources-tools/resources/feder
 <!-- cut -->
 
 ## Scenario
-In this lab you will examine log sources and logging infrastructure to identify gaps between what is currently being logged and what is required to be logged. You will implement configuration changes to resolve these gaps and meet the logging requirements of the organization.
+In this lab you examine log sources and logging infrastructure to identify gaps between what is currently being logged and what is required to be logged. You implement configuration changes to resolve these gaps and meet the logging requirements of the organization.
 
 | &#9888; NOTE |
 |---|
-| Every organization has different logging needs and requirements. The intent of this lab is not to offer a "one size fits all" method, but rather give actionable guidance to establish or enhance log management. |
+| Every organization has different logging needs and requirements. The intent of this lab is not to offer a "one size fits all" method but rather give actionable guidance to establish or enhance log management. |
 
 ## System Tools and Credentials
 
@@ -50,6 +54,10 @@ In this lab you will examine log sources and logging infrastructure to identify 
 | --- | --- | --- | --- |
 | Elastic | `https://elastic.skills.lab` | user | tartans |
 
+| &#8987; IT CAN TAKE UP TO FIVE (5) MINUTES FOR ELASTIC TO FULLY START. |
+| --- |
+| If you see a "502 Bad Gateway" or "Timeout" page when accessing Elastic, please wait a few minutes and then refresh the page. |
+
 ## Phase 1
 
 <details>
@@ -57,7 +65,7 @@ In this lab you will examine log sources and logging infrastructure to identify 
 <h3>Definitions</h3>
 </summary>
 <p>
- 
+
 - **Log** - a record of events occurring within an organization's computing assets, including physical and virtual platforms, networks, services, and cloud environments. [3]
 - **Log Management** - a process for generating, transmitting, storing, accessing, and disposing of log data. [3]
 - **Log Source** - a computing asset, such as an operating system, container, application, etc., capable of generating cybersecurity log entries. [3]
@@ -78,19 +86,15 @@ In this lab you will examine log sources and logging infrastructure to identify 
 
     ![Screenshot of the Ubuntu Desktop launcher. The terminal icon is outlined in orange](./img/Elastic-ClickOnTerminal.png)
 
-3. (**Webserver**, **Terminal**) Since nothing beyond the operating system (Ubuntu) is known, gather some preliminary information to learn more about the system. Do this by entering the following commands, one at a time:
+3. (**Webserver**, **Terminal**) Since nothing beyond the operating system (Ubuntu) is known, gather some preliminary information to learn more about the system. Do this by typing the following commands and pressing <kbd>Enter</kbd>, one at a time:
 
     ```bash
-    # Get the hostname of the system
     hostname
 
-    # Get the IP address of the system
     hostname -I | awk '{print $1}'
 
-    # Get the OS version of the system
     lsb_release -d
 
-    # Get the Kernel version of the system
     uname -r
     ```
 
@@ -100,20 +104,21 @@ In this lab you will examine log sources and logging infrastructure to identify 
     - `lsb_release -d` - Prints (displays) to the Terminal specific information about the Linux distribution. The `-d` option provides a description of the currently installed distribution.
     - `uname -r` - The `uname` command is used to print (display) system information. Using the `-r` option shows specifically the current kernel release.
 
-    | &#128204; Leave the terminal open. We will use it again in a later step. |
+
+    | &#128204; Leave the terminal open. We use it again in a later step. |
     | ---|
 
 4. (**Webserver**) Open Visual Studio Code by clicking on the Visual Studio Code shortcut in the left launcher.
 
     ![Screenshot of the Ubuntu Desktop launcher. The Visual Studio Code icon is outlined in orange](./img/PH1-04-ClickOnVSCode.png)
 
-5. (**Webserver**, **Visual Studio Code**) In the Menu bar, click **File** > **New Text File** to open a blank text file. You will use this text file to record information about the system.
+5. (**Webserver**, **Visual Studio Code**) In the Menu bar, click **File** > **New Text File** to open a blank text file. Use this text file to record information about the system.
 
 6. (**Webserver**, **Visual Studio Code**) In the file, click **Select a language**.
 
     ![Screenshot of Visual Studio Code. A new text file is open and the blue hyperlink to "Select a language" is outlined in orange](./img/PH1-06-SelectLanguage.png)
 
-7. (**Webserver**, **Visual Studio Code**) In the Search box, locate **Markdown** and click it to select it.
+7. (**Webserver**, **Visual Studio Code**) In the Search box, locate **Markdown** and click on it to select.
 
     ![Screenshot of Visual Studio Code search bar. The text "mark" has been entered to filter results. The filtered result "Markdown (markdown)" is outlined in orange](./img/PH1-07-SelectMarkdown.png)
 
@@ -143,7 +148,7 @@ In this lab you will examine log sources and logging infrastructure to identify 
 
 10. (**Webserver**, **Terminal**) Exit the service units display by pressing <kbd>Ctrl</kbd>+<kbd>c</kbd>.
 
-11. (**Webserver**, **Terminal**) What services are part of a base Ubuntu Desktop installation and which are added? To make the installed services easier to review, run the same `systemctl` command again. This time use `>` to redirect the output to a text file named "current-services.txt":
+11. (**Webserver**, **Terminal**) What services are part of a base Ubuntu Desktop installation and which are added? To make the installed services easier to review, run the same `systemctl` command. This time use `>` to redirect the output to a text file named "current-services.txt":
 
     ```bash
     sudo systemctl list-unit-files --type=service > /home/user/Desktop/current-services.txt
@@ -157,9 +162,9 @@ In this lab you will examine log sources and logging infrastructure to identify 
 
     ![screenshot of the Hosted Files page in Skills Hub.](./img/PH1-skillshub-filedownload.png)
 
-14. (**Webserver**, **Firefox**) Download the file "fresh-os-services.txt" by clicking the filename.
+14. (**Webserver**, **Firefox**) Download the file "fresh-os-services.txt" by clicking the file name.
 
-    | &#129513; The "fresh-os-services.txt" file was created by running the same `systemctl` command on an system that just had Ubuntu installed on it. This provides a baseline of what services are expected as part of a normal installation. In the following steps, we will compare these two files. The differences between the two files will highlight what services have been added to the `webserver` system. |
+    | &#129513; The "fresh-os-services.txt" file was created by running the same `systemctl` command on an system that just had Ubuntu installed on it. This provides a baseline of services expected as part of a normal installation. In the following steps, we compare these two files. The differences between the two files highlight what services have been added to the `webserver` system. |
     | --- |
 
 15. (**Webserver**, **Terminal**) Return to the Terminal. Use `mv` to move the downloaded file to the Desktop by entering the command:
@@ -178,7 +183,7 @@ In this lab you will examine log sources and logging infrastructure to identify 
 |---|
 | Encountered a command you are not familiar with? Linux systems have a built-in reference manual you can access from the Terminal. Simply type `man` followed by the name of the program, utility, or function you want to look up. For example, `man diff` will open the manual page for `diff` and give you information about the command and available options. Not everything has a manual page, but it is a good place to start whenever you have a question about a command. |
 
-17. (**Webserver**, **Terminal**) Review the output. The `<` and `>` operators show if differing content is in the first file or second file. Here a majority of the differing content is present in the "current-services.txt" file and shows what services have been added. They are services for Apache, Auditd, and Elastic.
+17. (**Webserver**, **Terminal**) Review the output. The `<` and `>` operators show if differing content is in the first file or second file. Here a majority of the differing content is present in the "current-services.txt" file and shows what services have been added. They are Apache, Auditd, and Elastic.
 
     ```bash
     user@webserver:~$ diff /home/user/Desktop/fresh-os-services.txt /home/user/Desktop/current-services.txt
@@ -221,12 +226,12 @@ In this lab you will examine log sources and logging infrastructure to identify 
 
 | &#128270; INFORMATION |
 | --- |
-| Adding `-n` or `--number` to the `cat` command will number all output lines. We use it here to make any referenced configurations easier to locate. |
+| The `cat` command is short for concatenate. It is a Linux command used for displaying the contents of a file. Adding `-n` or `--number` to the `cat` command will number all output lines. We use it here to make any referenced configurations easier to locate. |
 
 2. (**Webserver**, **Terminal**) Examining the output, take note of the following:
     - There are no configurations in the file for sending the logs to a remote syslog server.
     - On line 6 the comment directs us to `/etc/rsyslog.d/50-default.conf` for the default logging configurations.
-    - On line 59 the configuration tells us that files in `/etc/rsyslog.d/` are included in the `rsyslog` configuration.
+    - On line 59 the configuration tells us that the files in `/etc/rsyslog.d/` are included in the `rsyslog` configuration.
 
     ```conf
     1	# /etc/rsyslog.conf configuration file for rsyslog
@@ -364,7 +369,7 @@ In this lab you will examine log sources and logging infrastructure to identify 
     20-ufw.conf  50-default.conf
     ```
 
-7. (**Webserver**, **Terminal**) There are two configuration files in the directory. You already examined `50-default.conf`. Open the `20-ufw.conf` configuration file by entering the command:
+7. (**Webserver**, **Terminal**) There are two configuration files in the directory. You examined `50-default.conf`. Now, open the `20-ufw.conf` configuration file by entering the command:
 
     ```bash
     cat -n 20-ufw.conf
@@ -398,10 +403,9 @@ In this lab you will examine log sources and logging infrastructure to identify 
 | --- | --- |
 | apache2 directory | Contains Apache web server logs |
 | audit directory | Contains Auditd logs |
-| auth.log | Tracks authentication events (logins, sudo usage, SSH authentication attempts) |
+| auth.log | Tracks authentication events (logins, `sudo` usage, SSH authentication attempts) |
 | kern.log | Detailed messages from the Ubuntu Linux kernel |
 | syslog | The system log containing messages on system services and daemons |
-
 
 </p>
 </details>
@@ -422,7 +426,7 @@ Log files consume disk space. To prevent storage from filling to capacity, local
 
 2. (**Webserver**, **Terminal**) Examining the output, take note of the following:
     - Line 3: Log files are rotated weekly.
-    - Line 10: Keep four (4) rotated log files. Since rotation is weekly, this keeps about 4 weeks worth of logs.
+    - Line 10: Keep four (4) rotated log files. Since rotation is weekly, this keeps about four (4) weeks' worth of logs.
     - Line 22: Package log rotation configuration files are placed in `/etc/logrotate.d`.
 
     ```conf
@@ -474,12 +478,12 @@ Log files consume disk space. To prevent storage from filling to capacity, local
     cat -n apache2
     ```
 
-6. (**Webserver**, **Terminal**) These are the configurations specific to `apache`.Examining the output, take note of the following:
+6. (**Webserver**, **Terminal**) These are the configurations specific to `apache`. Examining the output, take note of the following:
     - Line 1: This configuration file handles any files that end in ".log" in the `/var/log/apache2/` directory.
     - Line 2: Rotate logs once per day.
     - Line 4: Keep 14 log files. After 14, the oldest log file(s) are deleted.
     - Line 5: Compress logs files after they are rotated.
-    - Line 6: The compression is delayed meaning the current active log and the most recently rotated log remain uncompressed. Logs after this are compressed.
+    - Line 6: The compression is delayed meaning the current active log and the most recently rotated log both remain uncompressed. Logs after this are compressed.
 
     ```conf
     1	/var/log/apache2/*.log {
@@ -510,10 +514,10 @@ Log files consume disk space. To prevent storage from filling to capacity, local
     cat -n /etc/logrotate.d/rsyslog
     ```
 
-8. (**Webserver**, **Terminal**) These are the configurations specific to `rsyslog`. Examining the output, take note of the following:
+8. (**Webserver**, **Terminal**) These are the configurations specific to `rsyslog`. Examine the output and take note of the following:
     - The configuration on lines 2-12 applies to `/var/log/syslog`.
         - Some notable differences from the global logrotate configuration are that the logs are rotated daily and 7 rotated log files are kept.
-    - The configuration on lines 26-37 apply to the other logs managed by `rsyslog`.
+    - The configurations on lines 26-37 apply to the other logs managed by `rsyslog`.
 
     ```conf
     1	/var/log/syslog
@@ -561,7 +565,7 @@ Log files consume disk space. To prevent storage from filling to capacity, local
     sudo cat -n /etc/audit/auditd.conf
     ```
 
-10. (**Webserver**, **Terminal**) Examining the output, take note of the following:
+10. (**Webserver**, **Terminal**) Examine the output and take note of the following:
     - Line 7: The Log file for Auditd is located at `/var/log/audit/audit.log`
     - Line 12: The `max_log_file` is eight (8) megabytes. When a log file reaches this maximum, `max_log_file_action` is triggered.
     - Line 19: The `max_log_file_action` is set to "ROTATE". When the action is triggered, the logs will be rotated.
@@ -611,7 +615,6 @@ Log files consume disk space. To prevent storage from filling to capacity, local
 | --- |
 | The Elastic Agent was installed using Fleet. This allowed it to have immediate access to the Elastic server. Log files from the Elastic Agent are sent to the Fleet Server where they can be viewed. The log files also provide information about the health of the agent allowing agents in an unhealthy state to be quickly identified. While log files for the Elastic Agent do exist locally, the recommended way to view Elastic Agent logs is within Fleet. |
 
-
 </p>
 </details>
 
@@ -620,7 +623,7 @@ Log files consume disk space. To prevent storage from filling to capacity, local
 <h3>Log Source Inventory Documentation</h3>
 </summary>
 <p>
- 
+
 (**Webserver**, **Visual Studio Code** ) Return to your log source inventory document in Visual Studio Code and add the log sources information:
 
 ```markdown
@@ -636,7 +639,7 @@ Log files consume disk space. To prevent storage from filling to capacity, local
 | System Logs | Syslog | ` /var/log/syslog` | 7 days |
 ```
 
-Documenting the information you identified about the `webserver` system will make it easier to reference later when you meet with stakeholders to discuss logging requirements. Your log source inventory document should now look like the following:
+Documenting information you identified about the `webserver` system makes it easier to reference later when you meet with stakeholders to discuss logging requirements. Your log source inventory document should now look like the following:
 
 ```markdown
 # System Information
@@ -675,9 +678,9 @@ Documenting the information you identified about the `webserver` system will mak
 
 3. (**Webserver**, **Firefox**, **Skills Hub Tasks**) Type your answers in the submission fields and click **Submit** to check your answers.
 
-4. (**Webserver**, **Firefox**, **Skills Hub Grading Results**) A correct answer will provide you with a "Result" token. Copy this eight (8) character hex token into the corresponding question submission field to receive credit.
+4. (**Webserver**, **Firefox**, **Skills Hub Grading Results**) A correct answer provides a "Result" token. Copy this eight (8) character hex token into the corresponding question submission field to receive credit.
 
-*You should complete all Phase 1 tasks before moving on to Phase 2.*
+*Complete all Phase 1 tasks before moving on to Phase 2.*
 
 </p>
 </details>
@@ -686,13 +689,13 @@ Documenting the information you identified about the `webserver` system will mak
 
 <details>
 <summary>
-<h3>Update the Logging Infrastructure Inventory</h3>
+<h3>Update Logging Infrastructure Inventory</h3>
 </summary>
 <p>
 
 Logging infrastructure encompasses the hardware, software, systems, services, and networks used to receive, store, analyze, and dispose of log data generated by the log sources. The core of the logging infrastructure in this environment is <a href="https://www.cisa.gov/resources-tools/services/logging-made-easy" target="_blank">CISA's Logging Made Easy (LME)</a> platform. It is a no cost, open source platform designed to help small to medium-sized organizations secure their infrastructure. It does this by centralizing log collection, enhancing threat detection, and enabling real-time alerting. At its core LME runs Elastic. During installation, Ansible is used to install Elasticsearch, Kibana, ElastAlert, and Wazuh as containers on an Ubuntu server. This automation reduces the amount of user interaction required to get the service running.
 
-Document the logging infrastructure by finding the same system information you did for the log sources. This has already been completed so you can focus on additional inventory tasks. Open a new Markdown file in Visual Studio Code and copy the content below to start your logging infrastructure inventory document.
+Document the logging infrastructure by finding the same system information you found for the log sources. This has already been completed so you can focus on additional inventory tasks. Open a new Markdown file in Visual Studio Code and copy the content below to start your logging infrastructure inventory document.
 
 ```markdown
 # System Information
@@ -728,7 +731,7 @@ Document the logging infrastructure by finding the same system information you d
 
     ![Screenshot of the Elastic homepage focused on the upper left quadrant. The hamburger menu icon (three stacked horizontal lines) is highlighted in orange.](./img/Elastic-HamburgerMenu.png)
 
-6. (**Webserver**, **Firefox**, **Elastic**) In the left menu expand **Management** and click **Dev Tools**.
+6. (**Webserver**, **Firefox**, **Elastic**) In the left menu, expand **Management** and click **Dev Tools**.
 
     ![Screenshot of the Elastic menu. The words Dev Tools is highlighted in orange.](./img/Elastic-Mgmt-DevTools.png)
 
@@ -778,7 +781,6 @@ Document the logging infrastructure by finding the same system information you d
     - **Node Name(s)**: lme-elasticsearch
     ```
 
-
 </p>
 </details>
 
@@ -790,7 +792,7 @@ Document the logging infrastructure by finding the same system information you d
 
 The preferred method of ingesting logs into Elastic is using the Elastic Agent. One of the advantages of this method is the ability to manage multiple agents by using Elastic Fleet. This provides a single place to quickly check agent status and push updates.
 
-1. (**Webserver**) If you are still connected to the Elastic interface, proceed to Step 4. If not, Open Firefox by clicking on the Firefox shortcut in the left launcher.
+1. (**Webserver**) If still connected to the Elastic interface, proceed to Step 4. If not, Open Firefox by clicking on the Firefox shortcut in the left launcher.
 
     ![Screenshot of the Ubuntu Desktop launcher. The Firefox icon is outlined in orange](./img/Elastic-ClickOnFirefox.png)
 
@@ -804,7 +806,7 @@ The preferred method of ingesting logs into Elastic is using the Elastic Agent. 
 
     ![Screenshot of the Elastic homepage focused on the upper left quadrant. The hamburger menu icon (three stacked horizontal lines) is highlighted in orange.](./img/Elastic-HamburgerMenu.png)
 
-5. (**Webserver**, **Firefox**, **Elastic**) In the left menu expand **Management** and click **Fleet**.
+5. (**Webserver**, **Firefox**, **Elastic**) In the left menu, expand **Management** and click **Fleet**.
 
     ![Screenshot of the Elastic menu. The word Fleet is highlighted in orange.](./img/Elastic-Mgmt-Fleet.png)
 
@@ -821,7 +823,7 @@ The preferred method of ingesting logs into Elastic is using the Elastic Agent. 
     sudo ./elastic-agent install --url=https://10.4.4.10:8220 --enrollment-token=NlRENzY1VUJVenhjWUVGOXBNYkc6NG5IOHVmSXhTZ09QVlJJdWF5RGpCUQ==
     ```
 
-    Elastic uses a short-term enrollment token to allow an agent to communicate with Kibana as it installs. After establishing communication, an API key is exchanged to allow the agent to communicate with the Fleet Server, Elasticsearch, and Kibana. These API keys can be revoked at any time. Communication between the Elastic Agent and logging infrastructure is encrypted using TLS. Recall when completing the log source inventory that the Elastic Agent had already been installed on the `webserver` system.
+    Elastic uses a short-term enrollment token to allow an agent to communicate with Kibana as it installs. After establishing communication, an API key is exchanged allowing the agent to communicate with the Fleet Server, Elasticsearch, and Kibana. These API keys can be revoked at any time. Communication between the Elastic Agent and logging infrastructure is encrypted using Transport Layer Security (TLS). Recall when completing the log source inventory that the Elastic Agent had already been installed on the `webserver` system.
 
 8. (**Webserver**, **Firefox**, **Elastic**, **Fleet**) Click **Close** to exit the "Add agent" menu.
 
@@ -833,7 +835,7 @@ The preferred method of ingesting logs into Elastic is using the Elastic Agent. 
 
     ![Screenshot of the Fleet Agents menu. The host webserver is highlighted in orange.](./img/PH2-EA-10.png)
 
-11. (**Webserver**, **Firefox**, **Elastic**, **Fleet**, **webserver**) In the "Overview" column key information about the Elastic Agent installed on `webserver` is displayed. In the "Integrations" column the integrations currently added to the Elastic Agent are displayed.
+11. (**Webserver**, **Firefox**, **Elastic**, **Fleet**, **webserver**) In the "Overview" column, key information about the Elastic Agent installed on `webserver` is displayed. In the "Integrations" column, the integrations currently added to the Elastic Agent are displayed.
 
     ![Screenshot showing the agent details of the Elastic agent installed on the webserver system.](./img/PH2-EA-11.png)
 
@@ -856,11 +858,11 @@ The preferred method of ingesting logs into Elastic is using the Elastic Agent. 
     - `/var/log/syslog*`
     - `/var/log/system*`
 
-    Recall from your log source inventory that additional notable log sources (Apache and Auditd) are present on the system. These logs not being captured by the Elastic Agent identify a gap. We will address this gap in Phase 3 of the lab.
+    Recall from your log source inventory that additional notable log sources (Apache and Auditd) are present on the system. These logs, not being captured by the Elastic Agent, identify a gap. We address this gap in Phase 3 of the lab.
 
     | &#128270; WAIT, I DON'T SEE SOME OF THOSE LOGS ON MY SYSTEM? |
     | --- |
-    | You might have noted `/var/log/system*` and `/var/log/secure*` as collection paths that are configured in the Elastic agent, but which are not present on your system. The Elastic system integration is configured to capture system logs from a variety of different Linux systems by default. In this lab the system you are examining is Ubuntu, a Debian-based Linux distribution. Another popular Linux distribution is Red Hat. These two log source paths are specific to Red Hat Linux distributions which is why they are not present on your system. <br><br>Ubuntu had previously used `/var/log/messages*` but now those logs are sent to the syslog log file by default. |
+    | You might have noted `/var/log/system*` and `/var/log/secure*` as collection paths configured in the Elastic agent, but not present on your system. The Elastic system integration is configured to capture system logs from a variety of different Linux systems by default. In this lab the system you are examining is Ubuntu, a Debian-based Linux distribution. Another popular Linux distribution is Red Hat. These two log source paths are specific to Red Hat Linux distributions, which is why they are not present on your system. <br><br>Ubuntu had previously used `/var/log/messages*` but now those logs are sent to the syslog log file by default. |
 
 </p>
 </details>
@@ -883,7 +885,7 @@ Elastic's Index Lifecycle Management defines five (5) lifecycle phases.
 
 ILM controls the flow of indices through these phases. Data does not have to pass through all phases; some ILM policies can be configured to only keep data in the hot tier before deleting. The advantage of these phases is data can be moved from higher performance nodes to those optimized for storage, giving a potential cost savings when logs are required to be retained for a set period of time.
 
-1. (**Webserver**) If you are still connected to the Elastic interface, proceed to Step 4. If not, Open Firefox by clicking on the Firefox shortcut in the left launcher.
+1. (**Webserver**) If still connected to the Elastic interface, proceed to Step 4. If not, Open Firefox by clicking on the Firefox shortcut in the left launcher.
 
     ![Screenshot of the Ubuntu Desktop launcher. The Firefox icon is outlined in orange](./img/Elastic-ClickOnFirefox.png)
 
@@ -897,7 +899,7 @@ ILM controls the flow of indices through these phases. Data does not have to pas
 
     ![Screenshot of the Elastic homepage focused on the upper left quadrant. The hamburger menu icon (three stacked horizontal lines) is highlighted in orange.](./img/Elastic-HamburgerMenu.png)
 
-5. (**Webserver**, **Firefox**, **Elastic**) In the left menu expand **Management** and click **Dev Tools**..
+5. (**Webserver**, **Firefox**, **Elastic**) In the left menu expand **Management** and click **Dev Tools**.
 
     ![Screenshot of the Elastic menu. The words Dev Tools is highlighted in orange.](./img/Elastic-Mgmt-DevTools.png)
 
@@ -977,10 +979,9 @@ ILM controls the flow of indices through these phases. Data does not have to pas
 
 3. (**Webserver**, **Firefox**, **Skills Hub Tasks**) Type your answers in the submission fields and click **Submit** to check your answers.
 
-4. (**Webserver**, **Firefox**, **Skills Hub Grading Results**)  A successful configuration check will provide you with a "Result" token. Copy this eight (8) character hex token into the corresponding question submission field to receive credit.
+4. (**Webserver**, **Firefox**, **Skills Hub Grading Results**)  A successful configuration check will provide a "Result" token. Copy this eight (8) character hex token into the corresponding question submission field to receive credit.
 
-*You should complete all Phase 2 tasks before moving on to Phase 3.*
-
+*Complete all Phase 2 tasks before moving on to Phase 3.*
 
 </p>
 </details>
@@ -995,16 +996,16 @@ ILM controls the flow of indices through these phases. Data does not have to pas
 
 You identified log sources and how logs are captured by the logging infrastructure. Now you must review why you are collecting logs. Some common reasons for collecting logs are compliance requirements and to enable threat detection and threat hunting.
 
-Working with stakeholders and system owners, review log sources and determine which need to be captured and how long they should be retained. Collaboratively create a plan to mitigate identified gaps.
+Working with stakeholders and system owners, review log sources and determine which logs need to be captured and how long they should be retained. Collaboratively create a plan to mitigate identified gaps.
 
 | &#129513; WHY NOT CAPTURE IT ALL? |
 | --- |
-| There is a temptation to capture everything in `/var/log/` so nothing is missed. Consider the implications of this; not every log generated has significant troubleshooting or security value. Sending these logs to a central logging platform means more processing required to handle the number of events per second, requiring more storage, and more events that have to be reviewed. This last point can have serious consequences; more alerts can lead to alert fatigue increasing the possibility of missing a significant alert. |
+| There is a temptation to capture everything in `/var/log/` so nothing is missed. Consider the implications of this; not every log generated has significant troubleshooting or security value. Sending these logs to a central logging platform means more processing required to handle the number of events per second, requiring more storage, and more events that have to be reviewed. This last point can have serious consequences; more alerts can lead to alert fatigue, increasing the possibility of missing a significant alert. |
 
 **Required End Logging State**
 After meeting with stakeholders, the following requirements were identified:
 - Logs from Apache and Auditd need to be captured by Elastic.
-- Additional web servers are going to be added in the future. Logging needs to be the same on them all.
+- Additional web servers are going to be added in the future. Logging needs to be the same on each one.
 - Logs should be kept for 90 days before being deleted.
 - Logs that are newer than 30 days are accessed frequently.
 
@@ -1017,7 +1018,7 @@ After meeting with stakeholders, the following requirements were identified:
 </summary>
 <p>
 
-1. (**Webserver**) If you are still connected to the Elastic interface, proceed to Step 4. If not, Open Firefox by clicking on the Firefox shortcut in the left launcher.
+1. (**Webserver**) If still connected to the Elastic interface, proceed to Step 4. If not, Open Firefox by clicking on the Firefox shortcut in the left launcher.
 
     ![Screenshot of the Ubuntu Desktop launcher. The Firefox icon is outlined in orange.](./img/Elastic-ClickOnFirefox.png)
 
@@ -1031,7 +1032,7 @@ After meeting with stakeholders, the following requirements were identified:
 
     ![Screenshot of the Elastic homepage focused on the upper left quadrant. The hamburger menu icon (three stacked horizontal lines) is highlighted in orange.](./img/Elastic-HamburgerMenu.png)
 
-5. (**Webserver**, **Firefox**, **Elastic**) In the left menu expand **Management** and click **Integrations**.
+5. (**Webserver**, **Firefox**, **Elastic**) In the left menu, expand **Management** and click **Integrations**.
 
     ![Screenshot of the Elastic menu. The word Integrations is highlighted in orange.](./img/Elastic-Mgmt-Integrations.png)
 
@@ -1045,7 +1046,7 @@ After meeting with stakeholders, the following requirements were identified:
 
     ![Screenshot of the Apache Integration. The word Settings in the upper menu is highlighted in orange.](./img/PH3-CapLogs-8.png)
 
-9. (**Webserver**, **Firefox**, **Elastic**, **Integrations**, **Apache HTTP Server**, **Configs**) In the configuration locate the "paths:" key to see what log files will be captured (Lines 10-12 and 24-25).
+9. (**Webserver**, **Firefox**, **Elastic**, **Integrations**, **Apache HTTP Server**, **Configs**) In the configuration, locate the "paths:" key to see what log files will be captured (Lines 10-12 and 24-25).
 
     ```yaml
     1  inputs:
@@ -1097,7 +1098,7 @@ After meeting with stakeholders, the following requirements were identified:
 
     ![Screenshot of the Auditd Logs Integration. The word Settings in the upper menu is highlighted in orange.](./img/PH3-CapLogs-14.png)
 
-15. (**Webserver**, **Firefox**, **Elastic**, **Integrations**, **Auditd Logs**, **Configs**) In the configuration locate the "paths:" key to see what log files will be captured (Line 10).
+15. (**Webserver**, **Firefox**, **Elastic**, **Integrations**, **Auditd Logs**, **Configs**) In the configuration, locate the "paths:" key to see what log files will be captured (Line 10).
 
     ```yaml
     1  inputs:
@@ -1119,7 +1120,6 @@ After meeting with stakeholders, the following requirements were identified:
 
 16. (**Webserver**, **Firefox**, **Elastic**, **Integrations**, **Auditd Logs**, **Configs**) Comparing the logs to be captured versus the logs that need to be captured, adding the Auditd Logs integration will capture the desired logs and address that gap.
 
-
 </p>
 </details>
 
@@ -1131,7 +1131,7 @@ After meeting with stakeholders, the following requirements were identified:
 
 Making modifications to multiple Elastic Agent instances is time consuming and increases the possibility of a misconfiguration occurring. Using Fleet you can create an Elastic Agent Policy that contains the configurations you need to implement. This policy can be applied to multiple agents ensuring the configuration is applied consistently.
 
-1. (**Webserver**) If you are still connected to the Elastic interface, proceed to Step 4. If not, Open Firefox by clicking on the Firefox shortcut in the left launcher.
+1. (**Webserver**) If still connected to the Elastic interface, proceed to Step 4. If not, Open Firefox by clicking on the Firefox shortcut in the left launcher.
 
     ![Screenshot of the Ubuntu Desktop launcher. The Firefox icon is outlined in orange](./img/Elastic-ClickOnFirefox.png)
 
@@ -1145,7 +1145,7 @@ Making modifications to multiple Elastic Agent instances is time consuming and i
 
     ![Screenshot of the Elastic homepage focused on the upper left quadrant. The hamburger menu icon (three stacked horizontal lines) is highlighted in orange.](./img/Elastic-HamburgerMenu.png)
 
-5. (**Webserver**, **Firefox**, **Elastic**) In the left menu expand **Management** and click **Fleet**.
+5. (**Webserver**, **Firefox**, **Elastic**) In the left menu, expand **Management** and click **Fleet**.
 
     ![Screenshot of the Elastic menu. The word Fleet is highlighted in orange.](./img/Elastic-Mgmt-Fleet.png)
 
@@ -1171,7 +1171,7 @@ Making modifications to multiple Elastic Agent instances is time consuming and i
 
     ![Screenshot of the agent policies page for the webserver policy. The system-2 integration is highlighted in orange.](./img/PH3-AgentPolicy-11.png)
 
-12. (**Webserver**, **Firefox**, **Elastic**) Under "Collect logs from System instances" review the logs being captured to verify the required system logs are being captured.
+12. (**Webserver**, **Firefox**, **Elastic**) Under "Collect logs from System instances", review the logs being captured to verify the required system logs are being captured.
 
     System Auth Logs:
     - `/var/log/auth.log*`
@@ -1222,7 +1222,7 @@ Making modifications to multiple Elastic Agent instances is time consuming and i
 
     ![](./img/PH3-AgentPolicy-24.png)
 
-25. (**Webserver**, **Firefox**, **Elastic**) Scroll to the bottom of the "Add Auditd Logs integration" page. In the "Agent Policy" dropdown select "Webserver Policy" if it is not already selected.
+25. (**Webserver**, **Firefox**, **Elastic**) Scroll to the bottom of the "Add Auditd Logs integration" page. In the "Agent Policy" dropdown, select "Webserver Policy" if it is not already selected.
 
 26. (**Webserver**, **Firefox**, **Elastic**) Click **&#128427; Save and continue**.
 
@@ -1238,7 +1238,7 @@ Making modifications to multiple Elastic Agent instances is time consuming and i
 
     ![](./img/PH3-AgentPolicy-29.png)
 
-30. (**Webserver**, **Firefox**, **Elastic**) In the actions column, click &#8943; on the webserver agent row.
+30. (**Webserver**, **Firefox**, **Elastic**) In the "Actions" column, click &#8943; on the webserver agent row.
 
     ![](./img/PH3-AgentPolicy-30.png)
 
@@ -1260,7 +1260,6 @@ Making modifications to multiple Elastic Agent instances is time consuming and i
 
     ![Screenshot of the webserver agent. The Integrations panel is highlighted showing the system, apache, and auditd integrations present.](./img/PH3-AgentPolicy-35.png)
 
-
 </p>
 </details>
 
@@ -1278,7 +1277,7 @@ Making modifications to multiple Elastic Agent instances is time consuming and i
 
     ![Screenshot of the Elastic homepage focused on the upper left quadrant. The hamburger menu icon (three stacked horizontal lines) is highlighted in orange.](./img/Elastic-HamburgerMenu.png)
 
-2. (**Webserver**, **Firefox**, **Elastic**) Under Management click **Stack Management**.
+2. (**Webserver**, **Firefox**, **Elastic**) Under Management, click **Stack Management**.
 
     ![Screenshot of the Elastic menu. The words Dev Tools is highlighted in orange.](./img/Elastic-Mgmt-StackMgmt.png)
 
@@ -1290,7 +1289,7 @@ Making modifications to multiple Elastic Agent instances is time consuming and i
 
     ![Animated screenshot showing the Include managed system policies toggle being enabled.](./img/PH3-NewPolicy-4.gif)
 
-5. (**Webserver**, **Firefox**, **Elastic**) In the search bar type "logs@lifecycle".
+5. (**Webserver**, **Firefox**, **Elastic**) In the search bar, type "logs@lifecycle".
 
 6. (**Webserver**, **Firefox**, **Elastic**) Click **logs@lifecycle**.
 
@@ -1316,7 +1315,6 @@ Making modifications to multiple Elastic Agent instances is time consuming and i
 
 14. (**Webserver**, **Firefox**, **Elastic**) Click **Save as new policy**.
 
-
 </p>
 </details>
 
@@ -1330,7 +1328,7 @@ Making modifications to multiple Elastic Agent instances is time consuming and i
 
     ![Screenshot of the Elastic homepage focused on the upper left quadrant. The hamburger menu icon (three stacked horizontal lines) is highlighted in orange.](./img/Elastic-HamburgerMenu.png)
 
-2. (**Webserver**, **Firefox**, **Elastic**) In the left menu click **Management**.
+2. (**Webserver**, **Firefox**, **Elastic**) In the left menu, click **Management**.
 
     ![](./img/PH3-ILM-2.png)
 
@@ -1352,7 +1350,6 @@ Making modifications to multiple Elastic Agent instances is time consuming and i
 
 | &#129513; The logs@custom component template is used to customize Elasticsearch indices by overriding and extending default mappings or settings. |
 | --- |
-
 
 7. (**Webserver**, **Firefox**, **Elastic**) Click **Next**.
 
@@ -1404,7 +1401,6 @@ Making modifications to multiple Elastic Agent instances is time consuming and i
 
     ![](./img/PH3-LogLifecyclePreview.png)
 
-
 </p>
 </details>
 
@@ -1420,11 +1416,11 @@ Making modifications to multiple Elastic Agent instances is time consuming and i
     - Grading Check 1 will perform a check of the Elastic Agent policy "Webserver Policy" to verify it was created and the correct integrations were added.
     - Grading Check 2 will perform a check of the Index Lifecycle Management (ILM) policy "log-lme" to verify it was created and that the retentions are set correctly.
 
-3. (**Webserver**, **Firefox**, **Skills Hub Tasks**) Click **Submit** to check if your configuration are correct.
+3. (**Webserver**, **Firefox**, **Skills Hub Tasks**) Click **Submit** to check if your configurations are correct.
 
-4. (**Webserver**, **Firefox**, **Skills Hub Grading Results**) A successful configuration check will provide you with a "Result" token. Copy this eight (8) character hex token into the corresponding question submission field to receive credit.
+4. (**Webserver**, **Firefox**, **Skills Hub Grading Results**) A successful configuration check provides a "Result" token. Copy this eight (8) character hex token into the corresponding question submission field to receive credit.
 
-*You should complete all Phase 3 tasks before moving on to the mini-challenge.*
+*Complete all Phase 3 tasks before moving on to the mini-challenge.*
 
 </p>
 </details>
@@ -1462,7 +1458,7 @@ Remember to draw upon and apply examples used in the lab to complete the mini-ch
 
 3. (**Webserver**, **Firefox**, **Skills Hub Tasks**) Click **Submit** to check if your configurations are correct.
 
-4. (**Webserver**, **Firefox**, **Skills Hub Grading Results**) A successful configuration check will provide you with a "Result" token. Copy this eight (8) character hex token into the corresponding question submission field to receive credit.
+4. (**Webserver**, **Firefox**, **Skills Hub Grading Results**) A successful configuration check provides a "Result" token. Copy this eight (8) character hex token into the corresponding question submission field to receive credit.
 
 *Please attempt the mini-challenge as best you can, but if you get stuck you can reference the solution guide by using the link below*
 
@@ -1477,7 +1473,7 @@ Remember to draw upon and apply examples used in the lab to complete the mini-ch
 </summary>
 <p>
 
-By completing this lab you have become more familiar with log management including identifying log sources and implementing solutions to ensure those logs are being properly captured and retained. This lab also provided an introduction to CISA's Logging Made Easy log management tool.
+By completing this lab, were able to practice log management including identifying log sources and implementing solutions to ensure those logs were being properly captured and retained. This lab also provided an introduction to CISA's Logging Made Easy log management tool.
 
 During this lab, you:
 - Identified log sources and local log rotation configuration on an Ubuntu system
