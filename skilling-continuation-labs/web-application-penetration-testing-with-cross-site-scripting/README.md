@@ -538,23 +538,6 @@ Skills exercised:
 - S0667: Skill in assessing security controls
 - S0544: Skill in recognizing vulnerabilities
 
-### Answer Key
-
-**Knowledge Check Question 1**: *Which three-letter acronym is also used to describe cross-site scripting?*
- - *`XSS`*
-
-**Knowledge Check Question 2**: *What kind of cross-site scripting occurs when a web site takes input from an HTTP request and incorporates that input in the HTTP response without any form of validation or encoding?*
- - *`reflected`*
-
-**Knowledge Check Question 3**: *What 10 letter word is another name for stored cross-site scripting?*
- - *`persistent`*
-
- **Knowledge Check Question 4**: *In the context of a web site, what does DOM stand for?*
-  - *`document object model`*
-
-**Knowledge Check Question 5**: *What is the HTML encoded equivalent of the & character?*
- - *`&amp;`*
-
 ### References
 
 - [1] <a href="https://www.cisa.gov/resources-tools/resources/secure-design-alert-eliminating-cross-site-scripting-vulnerabilities" target="_blank">Malicious Cyber Actors Use Cross-Site Scripting Vulnerability to Compromise Systems</a>
@@ -578,6 +561,31 @@ Skills exercised:
 - [10] <a href="https://www.cisa.gov/resources-tools/resources/federal-civilian-executive-branch-fceb-operational-cybersecurity-alignment-focal-plan" target="_blank">Federal Civilian Executive Branch (FCEB) Operational Cybersecurity Alignment (FOCAL)</a>
 
 - [11] <a href="https://niccs.cisa.gov/workforce-development/nice-framework" target="_blank">NICE Framework</a>
+
+</p>
+</details>
+
+
+<details>
+<summary>
+<h3>Answer Key</h3>
+</summary>
+<p>
+
+**Knowledge Check Question 1**: *Which three-letter acronym is also used to describe cross-site scripting?*
+ - *`XSS`*
+
+**Knowledge Check Question 2**: *What kind of cross-site scripting occurs when a web site takes input from an HTTP request and incorporates that input in the HTTP response without any form of validation or encoding?*
+ - *`reflected`*
+
+**Knowledge Check Question 3**: *What 10 letter word is another name for stored cross-site scripting?*
+ - *`persistent`*
+
+ **Knowledge Check Question 4**: *In the context of a web site, what does DOM stand for?*
+  - *`document object model`*
+
+**Knowledge Check Question 5**: *What is the HTML encoded equivalent of the & character?*
+ - *`&amp;`*
 
 </p>
 </details>
