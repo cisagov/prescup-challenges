@@ -781,3 +781,24 @@ Preventing unwanted access to external sites and blocking malicious or otherwise
  - <a href="https://pi-hole.net/" target="_blank">Pi-hole</a>
  - <a href="https://www.cisa.gov/resources-tools/resources/federal-civilian-executive-branch-fceb-operational-cybersecurity-alignment-focal-plan" target="_blank">Federal Civilian Executive Branch (FCEB) Operational Cybersecurity Alignment (FOCAL) Plan</a>
  - <a href="https://niccs.cisa.gov/workforce-development/nice-framework" target="_blank">NICE Framework</a>
+
+</p>
+</details>
+
+<details>
+<summary>
+<h2>Answer Key</h2>
+</summary>
+<p>
+
+**Knowledge Check Question 1**: *Which site is already blacklisted by Pi-hole?*
+
+- The answer is randomized per lab session, but is always one of the following: *www.badware.com*, *www.evilindeed.com*, *www.notsosafe.com*, *www.returntosafety.com*, or *www.dangerahead.com*
+
+**Knowledge Check Question 2**: *What username@domain has already sent emails to your mail server?*
+
+- The answer is randomized per lab session, but is always one of the following: *jack@badguys.net*, *jill@malworm.com*, *sandra@malificent.org*, *brian@evildoer.com*, or *jenny@badware.com* 
+
+</p>
+</details>
+
