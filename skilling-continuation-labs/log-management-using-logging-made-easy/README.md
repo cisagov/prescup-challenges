@@ -1465,13 +1465,13 @@ Remember to draw upon and apply examples used in the lab to complete the mini-ch
 </p>
 </details>
 
-## Lab Wrap Up
-
 <details>
 <summary>
-<h3>Conclusion</h3>
+<h3>Lab Wrap Up</h3>
 </summary>
 <p>
+
+### Conclusion
 
 By completing this lab, were able to practice log management including identifying log sources and implementing solutions to ensure those logs were being properly captured and retained. This lab also provided an introduction to CISA's Logging Made Easy log management tool.
 
@@ -1485,14 +1485,7 @@ Skills exercised:
 - S0451: Skill in deploying continuous monitoring technologies
 - S0141: Skill in assessing security systems designs
 
-</p>
-</details>
-
-<details>
-<summary>
-<h3>References</h3>
-</summary>
-<p>
+### References
 
 - [1] <a href="https://www.cisa.gov/resources-tools/services/logging-made-easy" target="_blank">Webpage: CISA Logging Made Easy</a>
 - [2] <a href="https://github.com/cisagov/LME" target="_blank">GitHub Repository: CISA Logging Made Easy</a>
@@ -1500,11 +1493,11 @@ Skills exercised:
 - [4] <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf" target="_blank">PDF Document: NIST SP800-92 - Guide to Computer Security Log Management PDF Document</a>
 
 </p>
-</details
+</details>
 
 <details>
 <summary>
-<h2>Answer Key</h2>
+<h3>Answer Key</h3>
 </summary>
 <p>
 
