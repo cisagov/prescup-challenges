@@ -807,3 +807,50 @@ Skills exercised:
 
 </p>
 </details>
+
+<details>
+<summary>
+<h2>Answer Key</h2>
+</summary>
+<p>
+
+**Knowledge Check Question 1**: *What was the "Last Seen IP" for CLIENT-X?*
+
+- `10.2.2.51`
+
+**Knowledge Check Question 2**: *What is the Process ID/PID for the unknown process in the compromised pslist.txt output?*
+
+- *7540*
+
+**Knowledge Check Question 3**: *What file is called at startup to create persistence for the malware? (Hint, it's not an executable)*
+
+- *citrio.vbs*
+
+**Knowledge Check Question 4**: *What is the external IP address associated with the citrio.exe process in the TCP View output?*
+
+- `45.114.209.111`
+
+**Knowledge Check Question 5**: *What process is spawned by EXCEL in the proexp-excel.txt output file?*
+
+- *file.exe*
+
+**Knowledge Check Question 6**: *What is the Process ID/PID for the file.exe in the compromised pslist.txt output?*
+
+- *8676*
+
+**Knowledge Check Question 7**: *What is the external IP address associated with the file.exe process in the TCP View output?*
+
+- *27.0.128.34*
+
+**Knowledge Check Question 8**: *What suspicious port number is discovered in the netstat output?*
+
+- *55555*
+
+**Knowledge Check Question 9**: *What is the token found in the other file located with the suspicious service file?*
+
+- *The token string is randomly generated for each session*
+
+</p>
+</details>
+
+
