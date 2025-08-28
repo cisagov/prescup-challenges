@@ -1500,4 +1500,29 @@ Skills exercised:
 - [4] <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf" target="_blank">PDF Document: NIST SP800-92 - Guide to Computer Security Log Management PDF Document</a>
 
 </p>
+</details
+
+<details>
+<summary>
+<h2>Answer Key</h2>
+</summary>
+<p>
+
+**Knowledge Check 1**: *Which log file tracks logins, SSH authentication attempts, and use of sudo?*
+
+- *auth.log* (then submit the token provided by the grading page)
+
+**Knowledge Check 2**: *Multiple Choice - What is log management?*
+
+- *The practice of generating, collecting, storing, analyzing, and disposing of logs* (then submit the token provided by the grading page)
+
+**Knowledge Check 3**: *How many Elastic agents are installed and enrolled in Fleet?*
+
+- *3* (then submit the token provided by the grading page)
+
+**Knowledge Check 4**: *Which ILM phase typically holds data that is occasionally searched and is often retained for compliance or policy reasons?*
+
+- *Frozen* (then submit the token provided by the grading page)
+
+</p>
 </details>
