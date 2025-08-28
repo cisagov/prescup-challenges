@@ -620,3 +620,33 @@ Enabling additional logging to detect abuse of PowerShell increases the likeliho
  - <a href="https://www.cisa.gov/resources-tools/resources/identifying-and-mitigating-living-land-techniques" target="_blank">Identifying and Mitigating Living Off the Land Techniques</a>
  - <a href="https://www.cisa.gov/resources-tools/resources/federal-civilian-executive-branch-fceb-operational-cybersecurity-alignment-focal-plan" target="_blank">Federal Civilian Executive Branch (FCEB) Operational Cybersecurity Alignment (FOCAL) Plan</a>
  - <a href="https://niccs.cisa.gov/workforce-development/nice-framework" target="_blank">NICE Framework</a>
+
+</p>
+</details>
+
+
+<details>
+<summary>
+<h2>Answer Key</h2>
+</summary>
+<p>
+
+**Knowledge Check Question 1**: *What is the IPv4 address of base-ubuntu in the output of the http-listener?*
+
+- `10.1.1.151`
+
+**Knowledge Check Question 2**: *Which type of encoding did you use to obfuscate the powershell script - XOR, ROT13, or Base64?*
+
+- *Base64 | base64*
+
+**Knowledge Check Question 3**: *What is the full path of the powershell binary on the logging-ubuntu system (include the "pwsh" filename)?*
+
+- `/opt/microsoft/powershell/7/pwsh`
+
+**Knowledge Check Question 4**: *What system file contains information about a user's account (do not include the path)?*
+
+- *passwd*
+
+</p>
+</details>
+
