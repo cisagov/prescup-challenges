@@ -1,4 +1,4 @@
-# Studying SVG Phishing Campaigns
+# Weaponized SVG Files: The Hidden Threat in Vector Graphics
 
 In the summer of 2025, weaponized Scalable Vector Graphic (SVG) files have been used in phishing campaigns. SVGs are a file type that can render graphics similar to PNG or JPEG file types, but they also allow for advanced customization where JavaScript code can be embedded within. Because of this, malicious actors have started to add customized SVG files to their phishing attacks as another vector for stealing credentials and other data from their victims. This lab will cover how these SVGs are weaponized, how the attacks are carried out and the defensive measures that mitigate these types of attacks.
 
