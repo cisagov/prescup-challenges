@@ -1,0 +1,25 @@
+services:
+  server:
+    image: python:3
+    container_name: server
+    command: [ "/usr/bin/python3", "/app/server.py" ]
+    restart: always
+    ports:
+      - "61234:61234"
+    volumes:
+      - ./src:/app
+      - ./public:/public
+    working_dir: /app
+    logging: &default-logging
+      driver: journald  # Comment this out on Windows
+      options:
+        tag: "{{.Name}}"
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./public:/usr/share/nginx/html
+    restart: always
+

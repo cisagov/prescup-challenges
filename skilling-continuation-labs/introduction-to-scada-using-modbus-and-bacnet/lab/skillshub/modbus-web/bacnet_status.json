@@ -1,0 +1,14 @@
+{
+    "GarageDoor": {
+        "DoorState": "active"
+    },
+    "Thermostat": {
+        "RoomTemp": 72.5,
+        "SetTemp": 80.0,
+        "SystemMode": 1
+    },
+    "AlarmPanel": {
+        "AlarmState": "inactive",
+        "DisarmCode": 0.0
+    }
+}
