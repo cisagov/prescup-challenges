@@ -482,7 +482,7 @@ Protecting against cross-site scripting is hard. As is true in most security con
 *A solution guide link is available following the grading section, should you need it.*
 
 ### Mini-Challenge Objectives
-- Exploit the `SITE FEEDBACK` feature of the market web site to execute a stored cross-site scripting vulnerability.
+- Exploit the `SITE FEEDBACK` feature of the market web site (`http://market.skills.hub/feedback.php`) to execute a stored cross-site scripting vulnerability.
 - Use stored cross-site scripting to send a logged-in user's `PHPSESSID` cookie value to a server you control, such as a web server or netcat listener. 
 - Use this cookie to impersonate another market user and obtain the last 4 digits of their credit card number from their profile page.
   - Cookies are available in Firefox under the `Storage` tab of the `Web Developer Tools`. 
@@ -510,6 +510,9 @@ Success -- The user browsed the feedback site with their session token.
 `Copy any token or flag strings to the corresponding question submission field to receive credit.`
 
 *Please attempt the mini-challenge as best you can, but if you get stuck you can reference the solution guide using the link below.*
+
+</p>
+</details>
 
 <details>
 <summary>
