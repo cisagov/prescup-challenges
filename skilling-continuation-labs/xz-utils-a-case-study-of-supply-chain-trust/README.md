@@ -349,7 +349,7 @@ It's quite impressive that the researcher was able to notice this small differen
 </summary>
 <p>
 
-For this phase of the lab you will be generating and reviewing a few sample SBOMs, including one taken from the vulnerable systems.
+For this phase of the lab you will be generating and reviewing a few sample SBOMs, including one taken from the vulnerable system.
 
 | &#128270; Software Bill of Materials (SBOM) |
 |---|
