@@ -4,7 +4,7 @@ Kubernetes has become a critical part of modern IT infrastructure as organizatio
 
 | &#9201; LAB TIME |
 |---|
-| This lab is expected to take ninety (90) minutes. |
+| This lab is expected to take two (2) hours. |
 
 *Please consider filling out the lab feedback survey at the bottom of your screen. The survey is available to you at any time while conducting the lab.*
 
