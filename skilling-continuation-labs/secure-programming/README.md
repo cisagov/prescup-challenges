@@ -1307,7 +1307,7 @@ Preventing unwanted access to internal databases and blocking malicious executio
  - <a href="https://www.cisa.gov/resources-tools/resources/secure-design-alert-eliminating-os-command-injection-vulnerabilities" target="_blank">Secure by Design Alert: Eliminating OS Command Injection Vulnerabilities</a>
  - <a href="https://www.cisa.gov/resources-tools/resources/secure-design-alert-eliminating-sql-injection-vulnerabilities-software" target="_blank">Secure by Design Alert: Eliminating SQL Injection Vulnerabilities in Software</a>
  - <a href="https://www.cisa.gov/resources-tools/resources/product-security-bad-practices" target="_blank">Product Security Bad Practices</a>
- - <a href="https://www.php.net/manual/en/security.database.sql-injection.php/" target="_blank">PHP SQL Injection</a>
+ - <a href="https://www.php.net/manual/en/security.database.sql-injection.php" target="_blank">PHP SQL Injection</a>
  - <a href="https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#Data-Types" target="_blank">C Data Types Documentation</a>
  - [C Language Manual](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/index.html)
  - [C Documentation](https://devdocs.io/c/)
