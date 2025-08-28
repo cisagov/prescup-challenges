@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer for logInject Service
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=3min
+
+[Install]
+WantedBy=timers.target

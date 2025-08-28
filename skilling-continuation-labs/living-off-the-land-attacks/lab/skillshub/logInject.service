@@ -1,0 +1,21 @@
+
+# Copyright 2025 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+[Unit]
+Description= Service to run logInject Script
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash /opt/logInjection.sh
+WorkingDirectory=/opt
+StandardOutput=journal
+StandardError=journal
+Restart=on-failure
+User=user
+
+[Install]
+WantedBy=multi-user.target

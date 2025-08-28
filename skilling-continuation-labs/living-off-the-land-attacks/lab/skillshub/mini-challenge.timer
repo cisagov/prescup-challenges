@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Mini_Challenge script every 5 minutes
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=1min
+Unit=mini-challenge.service
+
+[Install]
+WantedBy=timers.target
