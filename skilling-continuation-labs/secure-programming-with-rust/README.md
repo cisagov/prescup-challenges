@@ -160,9 +160,9 @@ The severity of the vulnerability depends on the program, so it's important that
 
 2. (**kali**, **Firefox**) The home page should be the `https://skills.hub/lab` landing page. NOTE: If you see the page stating that the server is starting up, please wait a minute or two for the site to initialize and refresh the page. 
 
-3. (**kali**, **Firefox**) In the navigation bar at the top, you will see a tab labeled `Hosted Files`. You should see a folder labeled `buffer overflows` - click it. Inside should be the files: `buffer_overflow.c`, `bypass_canary.c`, `rs_safe.rs`, and `rs_unsafe.rs`. Click and download each of the to the default location. 
+3. (**kali**, **Firefox**) In the navigation bar at the top, you will see a tab labeled `Hosted Files`. You should see a folder labeled `buffer overflows` - click it. Inside should be the files: `buffer_overflow.c`, `bypass_canary.c`, `rs_safe.rs`, and `rs_unsafe.rs`. Click and download each of the files to the default location. 
 
-![p1_download_files-673168179.png](./img/p1_download_files.png)
+![Download buffer overflow lab files from Hosted Files](./img/p1_download_files.png)
 
 4. (**kali**) Back on the Desktop, double-click the Terminal icon.
 
@@ -180,9 +180,9 @@ This will move the downloaded files into the newly created `c_overflow` director
 
 7. (**kali**, **VS Code**) We will be opening the directory `Desktop` in VS Code, as that is where the lab files are located. Ensure you have this folder open in VS Code. You can do this by clicking on the `Open Folder` link currently showing on the open page, selecting the `Desktop`, and clicking `Select`. You could also click on the `File` tab in the taskbar at the top, selecting `Open Folder`, and then choosing the `Desktop` folder.
 
-![p1_VSCode_opened-169979880.png](./img/p1_VSCode_opened.png)
+![pVS Code opened on Kali](./img/p1_VSCode_opened.png)
 
-![p1_select_desktop-33480655.png](./img/p1_select_desktop.png)
+![VS Code file selection dialog, Desktop chosen](./img/p1_select_desktop.png)
 
 *Note: If prompted whether or not to trust the authors of the files, choose "Yes, I trust the authors"*
 
@@ -190,7 +190,7 @@ This will move the downloaded files into the newly created `c_overflow` director
 
 *Note that the directory structure is visible in the pane on the left, while the specific file being viewed is visible on the right. You can switch between files using the Explorer pane and each file viewed will receive its own tab on the right.*
 
-![p1_VSCode_bof-1199980648.png](./img/p1_VSCode_bof.png)
+![VS Code showing buffer_overflow.c code](./img/p1_VSCode_bof.png)
 
 In the previous lab we went over the following example of a buffer overflow in C and the same code should be visible in the opened file. It should look like this:
 
@@ -243,7 +243,7 @@ You should see the familiar prompt asking for the admin password. The correct pa
 
 You should see that it responds saying that it succeeded. 
 
-![p1_c_bof_triggered-294572660.png](./img/p1_c_bof_triggered.png)
+![C buffer overflow triggered, access granted after long input](./img/p1_c_bof_triggered.png)
 
 **NOTE:** The program was executed, and the buffer overflow vulnerability was successfully triggered without any message or response. 
 
@@ -288,7 +288,7 @@ gcc -o old_buffer_overflow buffer_overflow.c
 
 You should see that the program responds differently despite it being the same exact code we ran on the kali machine. 
 
-![p1_bof_stack_smashing-1415611666.png](./img/p1_bof_stack_smashing.png)
+![Ubuntu terminal shows stack smashing detected](./img/p1_bof_stack_smashing.png)
 
 It is able to identify that a buffer overflow attack has been triggered and terminates the programs execution to prevent the vulnerability from being taken advantage of. This is possible thanks to the implementation of something called the `Stack Canary`.
 
@@ -374,7 +374,7 @@ gcc -o bypass bypass_canary.c
 
 10. (**ubuntu-desktop**, **Terminal**) When prompted, enter the string: `aaaaaaaaaaa` (11 `a` characters).
 
-![p1_stack_bypass-1837554306.png](./img/p1_stack_bypass.png)
+![Bypass stack canary, variable overwritten](./img/p1_stack_bypass.png)
 
 In the output, you should see that it printed the values of each of the variables prior to submitting the value. Then after submitting each value, you should see that the buffer overflow did succeed with the extra character written to the variable `var2`. 
 
@@ -640,7 +640,7 @@ It should respond correctly. Let's see what happens when we attempt a buffer ove
 
 You can repeat this process as many times as you'd like, but you should see that regardless of the string length, no buffer overflow occurs. 
 
-![p1_rust_bof_failed-184857073.png](./img/p1_rust_bof_failed.png)
+![Rust program resists buffer overflow, access denied](./img/p1_rust_bof_failed.png)
 
 Rust was designed in a way that makes implementing insecure code significantly more difficult than writing memory-safe code, as demonstrated by the example we just reviewed.
 
@@ -772,7 +772,7 @@ In the example code above, we had to implement the unsafe code block as well as 
 
 These two checks will verify that you were able to successfully complete the C programs and compile them with the vulnerabilities present.
 
-![p1_grading-1281352605.png](./img/p1_grading.png)
+![Grading page results for Phase 1](./img/p1_grading.png)
 
 Grading Check 1: Compile, and execute the C program on the `ubuntu` host to view modern security implementations against buffer overflows. (C executable should be named `old_buffer_overflow` and be in the directory `/home/user/Desktop/buffer_overflow/`)
    - Script was compiled and written as "old_buffer_overflow" and is present in `buffer_overflow` directory.
@@ -811,13 +811,13 @@ An integer overflow vulnerability occurs when a variable is assigned a value tha
 |---|
 |_In the first Secure Programming lab, we presented this image of an int data type to help explain the "roll-over" concept._|
 
-![p2_roll_over-1845098051.png](./img/p2_roll_over.png)
+![Diagram of integer overflow rollover](./img/p2_roll_over.png)
 
 The int data type has an accepted range of -2,147,483,648 to 2,147,483,647, meaning that it can hold any value in that range without an issue. But say an int variable has the value 2,147,483,647 and we attempt to add to it, that is when the roll-over would occur. 
 
 1. (**kali**, **Firefox**) On the Skills Hub site, click on the tab `Hosted Files`. You should see a folder labeled `Integer Overflow`, click it. Inside should be the files `unchecked_int_overflow.c`, `checked_int_overflow.c`, `checked.rs`, `pointers.c`, and `overflow.rs`. Click and download all of them.
 
-![p2_download_files-2107818268.png](./img/p2_download_files.png)
+![Download integer overflow lab files](./img/p2_download_files.png)
 
 2. (**kali**, **Terminal**) In the terminal, run the following commands:
 
@@ -1033,7 +1033,7 @@ It prints the value of the variable `max_int` to present what it is prior to tri
 cargo run
 ```
 
-![p2_rs_int_panic-2018246011.png](./img/p2_rs_int_panic.png)
+![Rust integer overflow triggers panic](./img/p2_rs_int_panic.png)
 
 In the response you should see that a `panic` occurred due to an attempted overflow. Also, in the response, you can view what line caused the panic to occur as well as a message describing it. 
 
@@ -1196,7 +1196,7 @@ More can be read about Rust Release Profiles in their <a href="https://doc.rust-
 These two checks will verify that you were able to successfully complete the C programs and compile them with the vulnerabilities present.
 
 
-![p2_grading-402060867.png](./img/p2_grading.png)
+![Grading page results for Phase 2](./img/p2_grading.png)
 
 Grading Check 3: Finish, compile, and execute a C program on the `kali` host to view how pointers can be manipulated using offsets. (C executable should be named `pointer_offset` and be in the directory `/home/user/Desktop/c_pointer/`)
    - Provided code was inserted correctly to finish the script.
@@ -1270,7 +1270,7 @@ The use after free bug occurs when a program continues to access a location of m
 
 1. (**kali**, **Firefox**) On the Skills Hub site, click on the tab `Hosted Files`. You should see a folder labeled `Use After Free`, click it. Inside should be the files `use_after_free.c`, `unsafe.rs`, and `safe.rs`. Click and download all files.
 
-![p3_download_files-672670625.png](./img/p3_download_files.png)
+![Download use-after-free lab files](./img/p3_download_files.png)
 
 2. (**kali**, **Terminal**) Run the following commands to setup the folder where we will interact with our code:
 
@@ -1514,7 +1514,7 @@ You should see a response stating the value at index 10 is the value `10`, which
 cargo run
 ```
 
-![p3_rs_uaf_safe-1922632636.png](./img/p3_rs_uaf_safe.png)
+![Rust compilation error blocking use-after-free](./img/p3_rs_uaf_safe.png)
 
 You should now see an error during compilation. Rust recognizes that the code has the "use after free" bug present and that it will attempt to access data at a memory location after it has been released. 
 
@@ -1603,11 +1603,11 @@ valgrind ./rs_unsafe
 
 The output may seem a bit overwhelming, but it's not as bad as it looks. The first thing we'll look at is the last line in the output that starts with `ERROR SUMMARY`.
 
-![p3_valgrind_err-1982248201.png](./img/p3_valgrind_err.png)
+![Valgrind error summary showing memory issue](./img/p3_valgrind_err.png)
 
 Here it's stating that it found 1 error, so that means we have to look back through the output to see where it is. Look for a block that starts with `Invalid read size of 4`.
 
-![p3_invalid_msg-1200598780.png](./img/p3_invalid_msg.png)
+![Valgrind invalid read size error detail](./img/p3_invalid_msg.png)
 
 This is where the information will be that is on the error found. If you look at the line under `Invalid read...` line, it will have some information about where it occurred. The important thing to take away is the information inside the parenthesis (`()`) at the end of the line.
 
@@ -1635,7 +1635,7 @@ The line it is referencing is the line that triggers the use after free bug wher
 
 These two checks will verify that you were able to successfully complete the C programs and compile them with the vulnerabilities present.
 
-![p3_grading-294619788.png](./img/p3_grading.png)
+![Grading page results for Phase 3](./img/p3_grading.png)
 
 Grading Check 5: Compile and execute a C program on the `kali` host to view the "use after free" bug. (C executable should be named `cleanup_uaf` and be in the directory `/home/user/Desktop/use_after_free/c_uaf`)
     - Script was compiled and written as "cleanup_uaf" and is present in `c_uaf` directory.
