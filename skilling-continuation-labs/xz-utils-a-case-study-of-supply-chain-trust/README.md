@@ -525,7 +525,7 @@ Skills exercised:
  - `[2]` <a href="https://en.wikipedia.org/wiki/XZ_Utils" target="_blank">Wikipedia</a>
  - `[3]` <a href="https://research.swtch.com/xz-timeline" target="_blank">Timeline of the xz open source attack</a>
  - `[4]` <a href="https://www.openwall.com/lists/oss-security/2024/03/29/4" target="_blank">Andres Freund's Report to Openwall</a>
- - <a href="https://www.cisa.gov/news-events/alerts/2024/03/29/reported-supply-chain-compromise-affecting-XZ Utils-data-compression-library-cve-2024-3094" target="_blank">CISA Alert on XZ Utils</a>
+ - <a href="https://www.cisa.gov/news-events/alerts/2024/03/29/reported-supply-chain-compromise-affecting-xz-utils-data-compression-library-cve-2024-3094" target="_blank">CISA Alert on XZ Utils</a>
  - <a href="https://www.cisa.gov/sbom" target="_blank">CISA SBOM information page<a>
  - <a href="https://www.cisa.gov/sites/default/files/2023-01/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN_CUSTOMER.PDF" target="_blank">CISA Securing the Software Supply Chain Guide</a>
  - <a href="https://github.com/anchore/grype" target="_blank">Grype</a>
