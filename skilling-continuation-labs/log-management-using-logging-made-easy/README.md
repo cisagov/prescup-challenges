@@ -1465,13 +1465,13 @@ Remember to draw upon and apply examples used in the lab to complete the mini-ch
 </p>
 </details>
 
-## Lab Wrap Up
-
 <details>
 <summary>
-<h3>Conclusion</h3>
+<h3>Lab Wrap Up</h3>
 </summary>
 <p>
+
+### Conclusion
 
 By completing this lab, were able to practice log management including identifying log sources and implementing solutions to ensure those logs were being properly captured and retained. This lab also provided an introduction to CISA's Logging Made Easy log management tool.
 
@@ -1485,19 +1485,37 @@ Skills exercised:
 - S0451: Skill in deploying continuous monitoring technologies
 - S0141: Skill in assessing security systems designs
 
-</p>
-</details>
-
-<details>
-<summary>
-<h3>References</h3>
-</summary>
-<p>
+### References
 
 - [1] <a href="https://www.cisa.gov/resources-tools/services/logging-made-easy" target="_blank">Webpage: CISA Logging Made Easy</a>
 - [2] <a href="https://github.com/cisagov/LME" target="_blank">GitHub Repository: CISA Logging Made Easy</a>
 - [3] <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-92r1.ipd.pdf" target="_blank">PDF Document: NIST SP800-92r1 - Cybersecurity Log Management Planning Guide PDF Document</a>
 - [4] <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf" target="_blank">PDF Document: NIST SP800-92 - Guide to Computer Security Log Management PDF Document</a>
+
+</p>
+</details>
+
+<details>
+<summary>
+<h3>Answer Key</h3>
+</summary>
+<p>
+
+**Knowledge Check 1**: *Which log file tracks logins, SSH authentication attempts, and use of sudo?*
+
+- *auth.log* (then submit the token provided by the grading page)
+
+**Knowledge Check 2**: *Multiple Choice - What is log management?*
+
+- *The practice of generating, collecting, storing, analyzing, and disposing of logs* (then submit the token provided by the grading page)
+
+**Knowledge Check 3**: *How many Elastic agents are installed and enrolled in Fleet?*
+
+- *3* (then submit the token provided by the grading page)
+
+**Knowledge Check 4**: *Which ILM phase typically holds data that is occasionally searched and is often retained for compliance or policy reasons?*
+
+- *Frozen* (then submit the token provided by the grading page)
 
 </p>
 </details>

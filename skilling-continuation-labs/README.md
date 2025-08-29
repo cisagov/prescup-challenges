@@ -16,4 +16,4 @@ This repository contains the student documentation for each lab.
 
 ## License
 
-Copyright 2024 Carnegie Mellon University. See the [LICENSE.md](../LICENSE.md) file for details.
+Copyright 2024-2025 Carnegie Mellon University. See the [LICENSE.md](../LICENSE.md) file for details.

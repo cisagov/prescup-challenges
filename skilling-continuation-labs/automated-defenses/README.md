@@ -901,3 +901,25 @@ Automated defenses are a more proactive response to cybersecurity risks. When us
 
 </p>
 </details>
+
+<details>
+<summary>
+<h3>Answer Key</h3>
+</summary>
+<p>
+
+**Knowledge Check Question 1**: *What is the user/username that tried to log in via SSH?*
+
+- The answer is randomized per lab session, but is always one of the following: *phil*, *sarah*, *dave*, *tom*, or *jessica*
+
+**Knowledge Check Question 2**: *What is the domain of the sender who sent email to the honeypot?*
+
+- The answer is randomized per lab session, but is always one of the following: *badguys.net*, *malworm.com*, *malificent.org*, *evildoer.com*, or *badware.com* 
+
+**Knowledge Check Question 3**: *What type of scan did the attackers attempt against the honeypot website?*
+
+- *sqlmap*
+
+</p>
+</details>
+

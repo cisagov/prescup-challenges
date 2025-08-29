@@ -725,33 +725,6 @@ Skills exercised:
 - S0667: Skill in assessing security controls
 - S0544: Skill in recognizing vulnerabilities
 
-### Answer Key
-
-**Knowledge Check Question 1**: Which command line option is used with CeWL to scrape email addresses from a website?
-
- - *-e* or *--email*
-
-**Knowledge Check Question 2**: What is the name of the feature in Burp Suite that is used to capture a web browser's interaction with a server?
-
- - *Proxy*
-
-**Knowledge Check Question 3**: What is the name of the feature in Burp Suite that we used to send the same HTTP request multiple times with different payloads (In this case, the payload is the admin's password)?
- - *Intruder*
-
-**Knowledge Check Question 3**: What payload type must be selected in Burp Suite Intruder to perform a true brute force attack?
-
- - *Brute forcer*
-
-**Knowledge Check Question 4**: Which Burp Suite feature can we use to send the modified user registration POST when performing the web parameter tampering attack?
- - *Repeater*
-
-**Knowledge Check Question 5**: What is the acronym for the security method that requires users to verify their identity using multiple authentication factors?
-
- - *MFA*
-
-**Knowledge Check Question 6**: True or false, the following three pieces of information are common identifiers in multifactor authentication: Something you know, Something you don't have, Something you are.
- - *False*
-
 ### References
 
 - [1] <a href="https://github.com/digininja/CeWL" target="_blank">CeWL</a>
@@ -790,3 +763,42 @@ Skills exercised:
 
 </p>
 </details>
+
+</p>
+</details>
+
+<details>
+<summary>
+<h3>Answer Key</h3>
+</summary>
+<p>
+
+**Knowledge Check Question 1**: Which command line option is used with CeWL to scrape email addresses from a website?
+
+ - *-e* or *--email*
+
+**Knowledge Check Question 2**: What is the name of the feature in Burp Suite that is used to capture a web browser's interaction with a server?
+
+ - *Proxy*
+
+**Knowledge Check Question 3**: What is the name of the feature in Burp Suite that we used to send the same HTTP request multiple times with different payloads (In this case, the payload is the admin's password)?
+ - *Intruder*
+
+**Knowledge Check Question 3**: What payload type must be selected in Burp Suite Intruder to perform a true brute force attack?
+
+ - *Brute forcer*
+
+**Knowledge Check Question 4**: Which Burp Suite feature can we use to send the modified user registration POST when performing the web parameter tampering attack?
+ - *Repeater*
+
+**Knowledge Check Question 5**: What is the acronym for the security method that requires users to verify their identity using multiple authentication factors?
+
+ - *MFA*
+
+**Knowledge Check Question 6**: True or false, the following three pieces of information are common identifiers in multifactor authentication: Something you know, Something you don't have, Something you are.
+ - *False*
+
+</p>
+</details>
+
+

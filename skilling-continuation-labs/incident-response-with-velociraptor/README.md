@@ -49,7 +49,7 @@ The lab first walks through the process of adding client agents to remote system
 
 Network diagram:
 
-![network-diagram.png](./img/network-diagram.png)
+![Velociraptor lab network diagram](./img/network-diagram.png)
 
 The lab environment consists of the following systems:
  - A Kali workstation that you will use to retrieve and analyze digital evidence artifacts
@@ -95,11 +95,11 @@ You can read more about Velociraptor at their <a href="https://docs.velociraptor
 
 The home page displays dashboards with relevant system status information such as memory, CPU, and disk usage. There is also a graph that displays how many active clients are currently connected. There are currently 0 clients connected, but we will be adding one later.
 
-![s14-image1.png](./img/s14-image1.png)
+![Velociraptor home page](./img/s14-image1.png)
 
 4. (**Velociraptor, Firefox, Velociraptor Web GUI**) Click on the "hamburger" icon (&#9776;) in the upper-left to expand the side menu bar and see the following options:
 
-![s14-image2.png](./img/s14-image2.png)
+![Velociraptor Web GUI](./img/s14-image2.png)
 
 **Artifacts**
 
@@ -123,11 +123,11 @@ You may also notice that the "Host Information", "Virtual Filesystem", "Collecte
 
 5. (**Velociraptor, Firefox, Velociraptor Web GUI**) In the "Search Clients" field enter "Desktop". Velociraptor will automatically populate the option for the host named "DESKTOP-I6U3VR7". Click on this entry to view this client.
 
-![s14-image3.png](./img/s14-image3.png)
+![Velociraptor Web GUI search field](./img/s14-image3.png)
 
 Velociraptor will display a header for this client that shows its Client ID, hostname, FQDN (if it has one), OS Version description, and any labels that may be associated with this client. The client currently shows the label "windows10", which matches the OS version, but also two labels of "Quarantine" and "offline".
 
-![s14-image4.png](./img/s14-image4.png)
+![Velociraptor Web GUI results of search for DESKTOP](./img/s14-image4.png)
 
 6. (**Velociraptor, Firefox, Velociraptor Web GUI**) Click on the green bar that makes up the Client ID and Velociraptor to the Host Information page for this client.
 
@@ -141,7 +141,7 @@ Keep these items in mind for later.
 
 7. (**Velociraptor, Firefox, Velociraptor Web GUI**) We know that there is at least one Windows 10 system, so now let's search for any others using the label of "windows10". In the "Search Clients" field, type "windows10" and Velociraptor should once again populate the existing label option for you. Click this to view all clients with that label.
 
-![s14-image5.png](./img/s14-image5.png)
+![Velociraptor Web GUI result of search for windows10](./img/s14-image5.png)
 
 You should notice another system with the "windows10" label named "CLIENT-X" that is also offline and quarantined. Applying labels to hosts allows you to easily group and filter for specific hosts in Velociraptor.
 
@@ -164,7 +164,7 @@ We'll return to these hosts later to investigate why they are quarantined. Now, 
 
 You should see a few existing artifacts, including one named "Server.Utils.CreateMSI". This Velociraptor artifact was used to generate a custom MSI agent installer file for Windows clients. This installer was used on the two Windows 10 clients reviewed in the previous section.
 
-![s14-image6.png](./img/s14-image6.png)
+![Velociraptor Web GUI side menu with Server Artifacts](./img/s14-image6.png)
 
 2. (**Velociraptor, Firefox, Velociraptor Web GUI**) Click on the "Server.Utils.CreateMSI" artifact line and new information should with several tabs.
 
@@ -177,7 +177,7 @@ You should see a few existing artifacts, including one named "Server.Utils.Creat
 
 3. (**Velociraptor, Firefox, Velociraptor Web GUI**) Lastly, if you click on the "Artifact Collection" tab and then click on the green button that represents the "Artifact Names" you can see more details about the artifact. This detailed information includes a description of what the artifact does (used when selecting the artifact initially), optional parameters that can be applied, and any dependent tools of the server.
 
-![s14-image7.png](./img/s14-image7.png)
+![Velociraptor Web GUI Artifact Collection tab and Artifact Names](./img/s14-image7.png)
 
 For this specific artifact, the task creates the MSI installer for Windows clients to add the agent. The package specifically includes the information and configuration information for this server to include its IP, server ID, certificate, and other metadata. You may close this popup once you are finished reviewing the information.
 
@@ -189,7 +189,7 @@ Now that you've reviewed an existing artifact, let's generate a custom agent ins
 
 5. (**Velociraptor, Firefox, Velociraptor Web GUI**) Click on the Home menu button to return to the home page. Scroll down to the "Current Orgs" section and click the green button under "Client Config" to download a copy of the current root client config.
 
-![s14-image8.png](./img/s14-image8.png)
+![Velociraptor Web GUI Current Orgs and Client config](./img/s14-image8.png)
 
 This will download the config file to the Downloads folder. If we had more orgs in this setup, there would/could be a unique client config for each, depending on your needs.
 
@@ -205,7 +205,7 @@ By default, the installer is named with the version of the client. The `--output
 
 8. (**Velociraptor, Terminal**) Ensure the agent installer is present in the home directory with the `ls`. command.
 
-![s14-image9.png](./img/s14-image9.png)
+![Terminal after running Velociraptor setup and ls](./img/s14-image9.png)
 
 The next step is to transfer the package to the client endpoint and install it. To make this easier in larger environments you could host this file on a simple web or file share. We will do the former and you can use it as needed throughout the remainder of the lab.
 
@@ -231,7 +231,7 @@ ssh user@10.1.1.51
 wget http://10.4.4.10:8080/agent-installer.deb
 ```
 
-![s14-image10.png](./img/s14-image10.png)
+![SSH Session to Client-A running wget for agent-installer.deb](./img/s14-image10.png)
 
 13. (**Velociraptor, Terminal, SSH Session to Client-A**) Install the endpoint client with the following command, using the sudo password of "tartans" when prompted:
 
@@ -239,7 +239,7 @@ wget http://10.4.4.10:8080/agent-installer.deb
 sudo dpkg -i agent-installer.deb
 ```
 
-![s14-image11.png](./img/s14-image11.png)
+![SSH Session to Client-A running sudo dpkg -i agent-installer.deb](./img/s14-image11.png)
 
 14. (**Velociraptor, Terminal**) You can then exit the connection by typing and entering `exit` or simply closing the Terminal tab/window.
 
@@ -247,19 +247,19 @@ sudo dpkg -i agent-installer.deb
 
 You should see an additional client on the "Currently Connected Clients" graph.
 
-![s14-image12.png](./img/s14-image12.png)
+![Velociraptor Web GUI Home page showing connected clients](./img/s14-image12.png)
 
 16. (**Velociraptor, Firefox, Velociraptor Web GUI**) To confirm the client details, type and enter "client-a" in the "Search Clients" field and then click on the populated entry for `host:client-a`.
 
-![s14-image13.png](./img/s14-image13.png)
+![Velociraptor Web GUI search result for client-a](./img/s14-image13.png)
 
 17. (**Velociraptor, Firefox, Velociraptor Web GUI**) Lastly, add a label to this system to identify it as an "Ubuntu 20.04" system. Click on the "Add Label" button (the icon looks like a tag), type the label name of "Ubuntu 20.04", click on 'Create Ubuntu 20.04', and then click on "Add it!".
 
-![s14-image14.png](./img/s14-image14.png)
+![Velociraptor Web GUI Add Label screen](./img/s14-image14.png)
 
 If done correctly, there is a new label for the system.
 
-![s14-image15.png](./img/s14-image15.png)
+![Velociraptor Web GUI label successfully added](./img/s14-image15.png)
 
 In this phase you have reviewed some of the basic features of Velociraptor, reviewed how to install client endpoint agents on hosts, and how to apply labels to hosts.
 
@@ -269,7 +269,7 @@ We'll dig deeper (pun intended) into more of Velociraptor's features and functio
 
 (**Kali-Investigator, Firefox**) To check your work, browse to the grading page at `https://skills.hub/lab/tasks` or `(https://10.5.5.5/lab/tasks)` from the Kali-Investigator system. Click the `Submit/Re-Grade Tasks` button to trigger the grading checks. Refresh the results after a few moments to see your results.
 
-![gc1.png](./img/gc1.png)
+![Grading page for skills.hub tasks](./img/gc1.png)
 
 Grading Check 1: Verify that the Velociraptor endpoint agent was successfully installed on Client-A
  - Velociraptor sees Client-A as an attached client endpoint
@@ -318,13 +318,13 @@ We learned how to view specific hosts/clients in Velociraptor. Now let’s revie
 
 6. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) Next, click on the "Collected" tab to review data collected from this system. You should see an entry with an Artifact named "System.VFS.DownloadFile".
 
-![s14-image17.png](./img/s14-image17.png)
+![Velociraptor Collected tab](./img/s14-image17.png)
 
 This artifact was used to collect files from the host via the Virtual File System (VFS) feature of Velociraptor. This makes a convenient way to collect, store, and share data files retrieved from endpoints. We will go further into the VFS of Client-A in the next phase. For now, we can retrieve the files that were collected and stored on the Velociraptor server.
 
 7. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) Click on the row for the "System.VFS.DownloadFile" entry and then click on the "Uploaded Files" tab of the dashboard that renders the filenames that were collected from this host.
 
-![s14-image18.png](./img/s14-image18.png)
+![Velociraptor System.VFS.DownloadFile row and uploaded files tab](./img/s14-image18.png)
 
 Each file is represented in its own row, and each can be downloaded to your local system for further investigation.
 
@@ -348,7 +348,7 @@ mv ~/Downloads/*.{txt,CSV,csv,exe,vbs} ~/DESKTOP-I6U3VR7
 cd ~/DESKTOP-I6U3VR7
 ```
 
-![s14-image19.png](./img/s14-image19.png)
+![Terminal running mkdir, mv, cd, and ls](./img/s14-image19.png)
 
 The `mv` command options will ensure you get every file with the extensions found in the collected evidence. The files consist of the following:
 
@@ -374,8 +374,7 @@ However, none of this information is useful if we don't have a baseline to compa
 
 12. (**Kali-Investigator, Firefox**) Click on the `windows10-baseline.zip` link to download the files.
 
-![files.png](./img/files.png)
-
+![Browser view of `skills.hub/files` for windows10-baseline.zip](./img/files.png)
 
 13. (**Kali-Investigator, Terminal**) Back in the Terminal, create a new folder and then unzip these files to it with the following commands:
 
@@ -400,7 +399,7 @@ If a result is found, the arrow direction implies which file the content exists 
 
 **Knowledge Check Question 2:** *What is the Process ID/PID for the unknown process in the compromised pslist.txt output?*
 
-![kc2.png](./img/kc2.png)
+![Kali terminal diff command showing process ID in pslist.txt](./img/kc2.png)
 
 We now have a suspicious process to investigate. Let's check if this process was a one-off or if there is some sort of persistence in place to continue running the malware if we were to kill the process. 
 
@@ -408,11 +407,11 @@ We now have a suspicious process to investigate. Let's check if this process was
 
 **Knowledge Check Question 3:** *What file is called at startup to create persistence for the malware? (Hint: it's not a .exe)*
 
-![kc3.png](./img/kc3.png)
+![Kali terminal showing startup items for persistence](./img/kc3.png)
 
 We can now be confident that citrio is the malicious process in question and is set to run again at startup. The startup folder includes the citrio.vbs script, which further calls the citrio.exe executable that is buried in another innocuous AppData folder.
 
-![s14-image21.png](./img/s14-image21.png)
+![Kali terminal showing file location path](./img/s14-image21.png)
 
 To remove it, we would remove both the base file and its persistence method. We may also want to add monitors for this startup folder to alert if other items are added. While best practices for eradication and recovery, you don't need to perform these tasks in this lab.
 
@@ -420,7 +419,7 @@ Since we know citrio was running, let's parse the collected TCP View output from
 
 **Knowledge Check Question 4:** *What is the external IP address associated with the citrio.exe process in the TCP View output?*
 
-![kc4.png](./img/kc4.png)
+![TCP view output file](./img/kc4.png)
 
 Based on our findings, the malicious `citrio.vbs` script runs in the Startup folder, which will ensure that `citrio.exe` is run each time the system boots up. These files were originally dropped on the system via a malicious PDF. In this instance, `citrio.exe` had a process ID of `7540`. The `citrio.exe` process calls out to `45.114.209.111`.
 
@@ -476,7 +475,7 @@ The `mv` command will ensure you get every file with the extensions found in the
 **Knowledge Check Question 5:** *What process is spawned by EXCEL in the proexp-excel.txt output file?*
 
 
-![kc5.png](./img/kc5.png)
+![Kali Investigator output file](./img/kc5.png)
 
 We now have an understanding that the "balance - 2020.xlsm" file somehow spawns the malicious executable. But how?
 
@@ -484,19 +483,19 @@ We now have an understanding that the "balance - 2020.xlsm" file somehow spawns 
 
 6. (**Kali-Investigator, Calc**) Expand the heading for "balance - 2020.xlsm" -> "VBAProject" -> "Document Objects" and then double-click the "ThisWorkbook" entry to show the macro.
 
-![s14-image20.png](./img/s14-image20.png)
+![LibreOffice Calc output](./img/s14-image20.png)
 
 The macro is creating a file named file.exe and then writing/dumping the contents of the data below into the file, creating the malicious.exe, which is embedded in the .xlsm file itself.
 
 **Knowledge Check Question 6:** *What is the Process ID/PID for file.exe in the compromised pslist.txt output?*
 
-![kc6.png](./img/kc6.png)
+![TCP View output](./img/kc6.png)
 
 Like the previous Windows client, review the TCP View output to determine if the file.exe process was creating a suspicious external connection.
 
 **Knowledge Check Question 7:** *What is the external IP address associated with the file.exe process in the TCP View output?*
 
-![kc7.png](./img/kc7.png)
+![TCP View output](./img/kc7.png)
 
 Based on our findings, the malicious `file.exe` process was running as process id `8676`. The file is created via an .xlsm file that includes malicious macros. Running/opening the Excel file creates the `file.exe` file and runs it. Even if Excel is closed after this point, `file.exe` will continue to run. `file.exe` reaches out to `27.0.128.34`.
 
@@ -537,11 +536,11 @@ In the previous phase, you interacted with and analyzed previously collected dat
 
 (**Kali-Investigator, Firefox**) When ready, browse to the grading page at `https://skills.hub/lab/tasks` or `(https://10.5.5.5/lab/tasks)` from the Ubuntu-Desktop system. Click the `Submit/Re-Grade Tasks` button to trigger the malicious activities for phase 3. The page will automatically refresh once the activities are complete, which will take roughly 45-60 seconds.
 
-![gc2.png](./img/gc2.png)
+![Grading page and Submit button for `skills.hub/lab/tasks`](./img/gc2.png)
 
 Once you see the following message on the grading page you are ready to proceed.
 
-![gc2-1.png](./img/gc2-1.png)
+![Grading check task successfully completed](./img/gc2-1.png)
 
 </p>
 </details>
@@ -558,7 +557,7 @@ Once you see the following message on the grading page you are ready to proceed.
 
 2. (**Kali-Investigator, Firefox**) From the Skills Hub site, click on the 'Bookmarks' tab and then click on the bookmarked link for Velociraptor (`https://10.4.4.10:8889`), if not already open.
 
-![s14-image22.png](./img/s14-image22.png)
+![Bookmarks page for skills.hub tasks](./img/s14-image22.png)
 
 You can safely ignore any certificate warnings by clicking 'Advanced' and then 'Accept the Risk and Continue'.
 
@@ -574,25 +573,25 @@ We'll imagine that a user reported that their password is no longer working and 
 
 7. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) On the following screen, click on the folder entry for "auto" on the left and then click the "Refresh" icon on the right side of the window. This will refresh the contents of the filesystem in Velociraptor.
 
-![s14-image23.png](./img/s14-image23.png)
+![Velociraptor auto directory](./img/s14-image23.png)
 
 8. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) Click on the entry for "auto" again on the left side of the window, which should expand the content of the directory. Click on the entry for the "etc" directory to highlight it and then click on the "Refresh" icon on the right side once again.
 
-![s14-image24.png](./img/s14-image24.png)
+![Velociraptor etc diectory](./img/s14-image24.png)
 
 This will list all the contents of the `etc` directory, though Velociraptor initially limits the contents to 5 per page.
 
 9. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) Since we know that the shadow file can provide evidence of password changes we can filter for it directly. Click on the heading for "Name" and a green filter button should appear. Within the Regex Filter field, type and enter the string "shadow".
 
-![s14-image25.png](./img/s14-image25.png)
+![Velociraptor shadow file filter applied](./img/s14-image25.png)
 
 10. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) Now, click on the entry for the shadow file and you should see a button to "Collect from the client" in the bottom half of the screen.
 
-![s14-image26.png](./img/s14-image26.png)
+![Velociraptor shadow file collect option](./img/s14-image26.png)
 
 11. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) Click this button and the file will be collected and stored in Velociraptor, just like the previous Windows artifact files were retrieved before you began this lab. This action will produce a download link for the retrieved file and a preview option to the right.
 
-![s14-image27.png](./img/s14-image27.png)
+![Velociraptor shadow file preview](./img/s14-image27.png)
 
 Use the preview option by clicking the green button to view the contents of the file.
 
@@ -630,7 +629,7 @@ Hunts are a way for us to collect specific data about a system all at once.
  - Orgs: select the "root" org
  - Check the box next to "Start Hunt Immediately"
 
-![s14-image28.png](./img/s14-image28.png)
+![Velociraptor collection from client](./img/s14-image28.png)
 
 These settings will ensure the Hunt runs only against systems tagged with "ubuntu 22.04" label within the root organization and will run the Hunt as soon as we complete the configuration.
 
@@ -639,23 +638,23 @@ These settings will ensure the Hunt runs only against systems tagged with "ubunt
  - Linux.Network.Netstat
  - Linux.Syslog. SSHLogin
 
-![s14-image29.png](./img/s14-image29.png)
+![Velociraptor artifact selection for hunt](./img/s14-image29.png)
 
-![s14-image30.png](./img/s14-image30.png)
+![Velociraptor artifact selection for hunt](./img/s14-image30.png)
 
 4. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) Click on the "Configure Parameters" tab to verify you have both Artifacts added and then click the "Launch" button at the bottom. You will be taken back to the main Hunt Manager page and see that the Hunt has been added and launched.
 
-![s14-image31.png](./img/s14-image31.png)
+![Velociraptor artifact selection for hunt](./img/s14-image31.png)
 
 5. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) Click on the button for `client-a` at the top of the screen or follow the path of searching for this client to view its information.
 
 6. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) While viewing `client-a` click on the green "Collected" tab and then find and click on the artifact entry for the Hunt you just launched. The artifact will have the Artifacts description of "Linux.Network.Netstat | Linux.Syslog.SSHLogin".
 
-![s14-image32.png](./img/s14-image32.png)
+![Velociraptor configure parameters](./img/s14-image32.png)
 
 7. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) From the bottom half of the screen, click on the Notebook tab. The notebook has been prepopulated with the results of our Hunt.
 
-![s14-image33.png](./img/s14-image33.png)
+![Velociraptor Notebook results](./img/s14-image33.png)
 
 8. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) Let's review this information. Scroll down through the netstat output. You should notice a listener on port 55555, which is an odd port to listen on. Also, pay attention to the "CommandLine" entry for this process.
 
@@ -669,13 +668,13 @@ So it seems that something is running an unwanted listener on port 55555 on this
 
 9. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) Scroll further down through the notebook and note the SSH login activity. You should see several failed login attempts followed by a successful password authentication.
 
-![s14-image35.png](./img/s14-image35.png)
+![Velociraptor SSH login activity](./img/s14-image35.png)
 
 This could be indicative of a brute force attack that was successful prior to the password change.
 
 10. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) Return to the view of `client-a`'s information and look for the `>_Shell` button in the upper right.
 
-![s14-image36.png](./img/s14-image36.png)
+![Velociraptor Shell button](./img/s14-image36.png)
 
 11. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) Enter the following command and then click the "Launch" button.
 
@@ -683,15 +682,15 @@ This could be indicative of a brute force attack that was successful prior to th
 ps -eo pid,ppid,cmd --forest
 ```
 
-![s14-image37.png](./img/s14-image37.png)
+![Velociraptor ps -eo pid,ppid,cmd – forest command launch](./img/s14-image37.png)
 
 Once you see a timestamp associated with the command, the output has been saved under the "Collected" screen output. Click on the Artifact for "Linux.Sys.BashShell" and then look at the Notebook tab below like before.
 
-![s14-image38.png](./img/s14-image38.png)
+![Velociraptor Collected Notebook tab](./img/s14-image38.png)
 
 12. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) Scroll down to the process output and look for the PID you noticed previously in the netstat output. Alternatively you can search the page for this value/number or search for the command "nc -lkp 55555".
 
-![s14-image39.png](./img/s14-image39.png)
+![Velociraptor process output](./img/s14-image39.png)
 
 You should notice that there is another process associated with the netcat process named `software-update-service.sh` and this is running out of the `/home/user/Pictures` directory. This is also highly suspicious.
 
@@ -706,7 +705,7 @@ nc -lkp 55555
 
 15. (**Kali-Investigator, Firefox, Velociraptor Web GUI**) Click the button to collect and optionally download the *other* file found alongside the service shell script. Review the contents for the following question.
 
-![s14-image40.png](./img/s14-image40.png)
+![Velociraptor collect from client](./img/s14-image40.png)
 
 **Knowledge Check Question 9:** *What is the token found in the other file located with the suspicious service file?*
 
@@ -766,7 +765,7 @@ A baseline set of data is available at `https://skills.hub/files` in case you ne
 
 (**Kali-Investigator, Firefox**) To check your work, browse to the grading page at `https://skills.hub/lab/tasks` or `(https://10.5.5.5/lab/tasks)` from the Kali-Investigator system. Click the `Submit/Re-Grade Tasks` button to trigger the grading checks. Refresh the results after a few moments to see your results.
 
-![gc3.png](./img/gc3.png)
+![Grading page for https://skills.hub/lab/tasks](./img/gc3.png)
 
 **Mini-Challenge Grading Check 1:** *Verify that client-a has been quarantined in Velociraptor.*
 
@@ -807,3 +806,50 @@ Skills exercised:
 
 </p>
 </details>
+
+<details>
+<summary>
+<h2>Answer Key</h2>
+</summary>
+<p>
+
+**Knowledge Check Question 1**: *What was the "Last Seen IP" for CLIENT-X?*
+
+- `10.2.2.51`
+
+**Knowledge Check Question 2**: *What is the Process ID/PID for the unknown process in the compromised pslist.txt output?*
+
+- *7540*
+
+**Knowledge Check Question 3**: *What file is called at startup to create persistence for the malware? (Hint, it's not an executable)*
+
+- *citrio.vbs*
+
+**Knowledge Check Question 4**: *What is the external IP address associated with the citrio.exe process in the TCP View output?*
+
+- `45.114.209.111`
+
+**Knowledge Check Question 5**: *What process is spawned by EXCEL in the proexp-excel.txt output file?*
+
+- *file.exe*
+
+**Knowledge Check Question 6**: *What is the Process ID/PID for the file.exe in the compromised pslist.txt output?*
+
+- *8676*
+
+**Knowledge Check Question 7**: *What is the external IP address associated with the file.exe process in the TCP View output?*
+
+- *27.0.128.34*
+
+**Knowledge Check Question 8**: *What suspicious port number is discovered in the netstat output?*
+
+- *55555*
+
+**Knowledge Check Question 9**: *What is the token found in the other file located with the suspicious service file?*
+
+- *The token string is randomly generated for each session*
+
+</p>
+</details>
+
+

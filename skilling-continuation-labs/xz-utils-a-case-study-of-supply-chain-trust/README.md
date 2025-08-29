@@ -52,7 +52,7 @@ The lab environment consists of three systems:
  
 You will test each system to identify which is vulnerable based on interactions with the OpenSSH service and then demonstrate an exploit of the vulnerability. The lab will also review the concept of Software Bill of Materials (SBOM). Then the lab will demonstrate how tools like Grype and Trivy can identify vulnerable libraries before using them in software.
 
-![network-diagram.png](./img/network-diagram.png)
+![Network diagram for the XZ Utils lab showing Kali, vulnerable, and unaffected system](./img/network-diagram.png)
 
 ## System Tools and Credentials
 
@@ -98,7 +98,7 @@ Part of the reason that the backdoor went relatively unnoticed to others was bec
 
 An infographic created by Thomas Roccia is included below: 
 
-![xz-infographic.jpg](./img/xz-infographic.jpg) 
+![Infographic of XZ Utils supply chain compromise](./img/xz-infographic.jpg) 
 
 *https://x.com/fr0gger_/status/1774342248437813525/photo/1* 
 
@@ -148,7 +148,7 @@ First, we'll walk through how to know if a system could be affected by the backd
 sshd -V
 ```
 
-![s08-image1.png](./img/s08-image1.png)
+![Terminal output of sshd -V showing OpenSSH version](./img/s08-image1.png)
 
 We can see from the output that our system is indeed using OpenSSH.
 
@@ -158,7 +158,7 @@ We can see from the output that our system is indeed using OpenSSH.
 ldd $(which sshd)
 ```
 
-![s08-image2.png](./img/s08-image2.png)
+![Terminal output of ldd $(which sshd) showing liblzma dependency](./img/s08-image2.png)
 
 The output lists all the shared library dependencies and objects for the service in question. The output also clearly shows that OpenSSH is dependent on the liblzma library.
 
@@ -170,7 +170,7 @@ ps -eo pid,ppid,cmd | head
 ls -l /sbin/init
 ```
 
-![s08-image3.png](./img/s08-image3.png)
+![Process list showing sshd started by systemd](./img/s08-image3.png)
 
 All of the relevant output will fit onto the screen. The first output prints the process id, parent process id, and command name for any running process that includes the name "sshd". We can see from this output that the parent process id for the sshd service is `1`. The second output simply lists the same information for the first 10 entries of the process list, allowing us to see that process 1 corresponds to `/sbin/init`. The third and final output highlights that /sbin/init is symlinked (another way of saying shortcut) to `/lib/systemd/systemd`. Since systemd is responsible for managing services at startup, this tells us that the sshd service is started at boot by the systemd account.
 
@@ -186,7 +186,7 @@ Therefore, we have proven that the first three criteria pass:
 xz --version
 ```
 
-![s08-image4.png](./img/s08-image4.png)
+![Terminal output of xz --version](./img/s08-image4.png)
 
 We can see from the output that this system is not using one of the vulnerable xz-util version. Therefore, the final criteria for being a candidate for the backdoor is not true.
 
@@ -196,7 +196,7 @@ We can see from the output that this system is not using one of the vulnerable x
 
 7. (**Vulnerable-System**) Repeat steps 2-5 above for this system. Everything should be more less the same until you check the version of xz.
 
-![s08-image5.png](./img/s08-image5.png)
+![Terminal output of xz --version showing vulnerable 5.6.1](./img/s08-image5.png)
 
 This time we see that the system is using version 5.6.1, which is one of the vulnerable versions of XZ Utils.
 
@@ -208,7 +208,7 @@ ls -l /usr/local/lib/liblzma.so.5
 
 When you ran the `ldd $(which sshd)` command you would have noticed that OpenSSH is still pointing to the liblzma.so.5 shared object, but the above output shows that this is symlinked to the vulnerable shared object of liblzma (liblzma.so.5.6.1).
 
-![s08-image7.png](./img/s08-image7.png)
+![Terminal output showing symlink to vulnerable liblzma.so.5.6.1](./img/s08-image7.png)
 
 In the next section, you will exploit the vulnerable system and test the effects.
 
@@ -229,7 +229,7 @@ In this section you will perform the exploitation of the XZ Utils backdoor using
 
 3. (**Kali-XZ, Firefox**) Download the `xzbot` standalone executable file to the default Downloads directory.
 
-![s08-files.png](./img/s08-files.png)
+![Browser showing xzbot file available on Skills Hub for download](./img/s08-files.png)
 
 The vulnerable server has been preconfigured with a private key that matches the public key used by the xzbot executable. Recall that in the published backdoor the private key of the attacker was unknown, so the keys in the lab were replaced using a pre-generated key pair that will allow us to perform the exploit.
 
@@ -241,7 +241,7 @@ chmod +x xzbot
 ./xzbot -h
 ```
 
-![s08-image8.png](./img/s08-image8.png)
+![Terminal showing xzbot help options](./img/s08-image8.png)
 
 Based on the help options, we need to supply the SSH server IP and port, a command, and a seed value. For the lab we can ignore the seed value option as the default seed value of 0 was already used to generate the new key pair. This leaves just the IP, port, and command to run.
 
@@ -253,7 +253,7 @@ Based on the help options, we need to supply the SSH server IP and port, a comma
 
 You should see the following output.
 
-![s08-image9.png](./img/s08-image9.png)
+![Terminal showing xzbot exploit command execution attempt](./img/s08-image9.png)
 
 Even though the output says the SSH handshake failed, we can verify that the command was run by looking on the vulnerable system.
 
@@ -263,7 +263,7 @@ Even though the output says the SSH handshake failed, we can verify that the com
 cat /home/user/id
 ```
 
-![s08-image10.png](./img/s08-image10.png)
+![Terminal output of cat /home/user/id](./img/s08-image10.png)
 
 The output shows that when we ran `id` through the xzbot backdoor connection, we were running as the root user. So, what could we do with this level of access as a malicious actor?
 
@@ -310,7 +310,7 @@ You have just circumvented the standard protections for this system by creating 
 
 (**Kali-XZ, Firefox**) To check your work, browse to the grading page at `https://skills.hub/lab/tasks` or `(https://10.5.5.5/lab/tasks)` from the Kali system. Click the `Submit/Re-Grade Tasks` button to trigger the grading checks. Refresh the results after a few moments to see your results.
 
-![s08-image13.png](./img/s08-image13.png)
+![Grading check page showing exploit tasks passed](./img/s08-image13.png)
 
 Grading Check 1: Successfully added the attacker user to the vulnerable system and added the attacker to the sudoers group.
  - New user `attacker` was added to the Vulnerable-System
@@ -328,13 +328,13 @@ Grading Check 1: Successfully added the attacker user to the vulnerable system a
 
 2. (**Unaffected-System**) For the Unaffected-System you will first have to run `ip addr` locally to determine the system's IP address.
 
-![s08-image11.png](./img/s08-image11.png)
+![Terminal output of ip addr showing system IP](./img/s08-image11.png)
 
 3. (**Kali-XZ, Terminal**) Then use this IP address in the same command as above, replacing the `.250` with the correct final octet of the Unaffected-System's Ip address.
 
 You should notice, even on repeated tests, that the Vulnerable-System always connects more slowly than the Unaffected-System.
 
-![s08-image12.png](./img/s08-image12.png)
+![Terminal output comparing SSH connection times](./img/s08-image12.png)
 
 It's quite impressive that the researcher was able to notice this small difference simply by "feel", which caused him to dig deeper and led to the discovery of the backdoor.
 
@@ -349,7 +349,7 @@ It's quite impressive that the researcher was able to notice this small differen
 </summary>
 <p>
 
-For this phase of the lab you will be generating and reviewing a few sample SBOMs, including one taken from the vulnerable systems.
+For this phase of the lab you will be generating and reviewing a few sample SBOMs, including one taken from the vulnerable system.
 
 | &#128270; Software Bill of Materials (SBOM) |
 |---|
@@ -370,7 +370,7 @@ For this phase of the lab you will be generating and reviewing a few sample SBOM
  - xz.json: An SPDX formatted SBOM based on the Vulnerable-System's xz-5.6.1 package
  - xz-5.6.1.tar.gz: The original XZ-Utils tarball including the vulnerable version of XZ Utils
 
-![s08-files.png](./img/s08-files.png)
+![Browser showing hosted files page on Skills Hub](./img/s08-files.png)
 
 3. (**Kali-XZ, Terminal**) Change working directories to the Downloads directory with the following commands:
 
@@ -384,7 +384,7 @@ cd /home/user/Downloads
 syft -o spdx xz-5.6.1.tar.gz > my-xz.json
 ```
 
-![s08-image16.png](./img/s08-image16.png)
+![Terminal output of syft creating SBOM file](./img/s08-image16.png)
 
 Syft can view the contents of the tarball file and gather the list of libraries and packages within. The `-o` option allows you to specify the output format; SPDX in this case.
 
@@ -398,7 +398,7 @@ An important item of note is that when Syft runs in an offline fashion it might 
 diff -y my-xz.json xz.json
 ```
 
-![s08-image17.png](./img/s08-image17.png)
+![Terminal output comparing SBOM files with diff](./img/s08-image17.png)
 
 As you scroll through the differences, you'll see that there are some sections and additional information available in the xz.json SBOM that was taken while Syft was online.
 
@@ -410,7 +410,7 @@ Let's check the pre-generated SBOM for any vulnerabilities flagged in the xz-5.6
 grype xz.json
 ```
 
-![s08-image18.png](./img/s08-image18.png)
+![Terminal output of grype showing CVEs for xz-utils](./img/s08-image18.png)
 
 You'll see that Grype flags the vulnerable version of XZ Utils right away, as well as lists the exact CVE and the version in which the CVE was fixed or resolved.
 
@@ -462,7 +462,7 @@ The `sbom` flag tells Trivy that we are reviewing an SBOM file, which is the `ju
 
 The output will display a table of the libraries that have known CVE's attached and whether or not the vulnerability is still active or it has been fixed.
 
-![s08-image15.png](./img/s08-image15.png)
+![Terminal output of trivy scan showing known CVEs](./img/s08-image15.png)
 
 2. Use the table's information and Internet research to answer the following questions.
 
@@ -508,24 +508,24 @@ Skills exercised:
 **Knowledge Check Question 2**: What is the CVE associated with the "Unknown" severity vulnerability in the Grype output?
  - *CVE-2024-47611*
 
-![kc2.png](./img/kc2.png)  
+![Screen capture of Knowledge Check 2 correct answer](./img/kc2.png)  
   
 **Knowledge Check Question 3**: How many unique _libraries_ (not unique CVE's) are identified as having at least one CVE with a `HIGH` severity level based on the Juice Shop SBOM?
  - *16*
 
-![kc3.png](./img/kc3.png)
+![Screen capture of Knowledge Check 3 correct answer](./img/kc3.png)
   
 **Knowledge Check Question 4**: How many 'CRITICAL' severity _CVE's/vulnerabilities_ (not unique libraries) are ALSO still marked as _affected_ based on the Juice Shop SBOM?
  - *5*
 
-![kc4.png](./img/kc4.png)
+![Screen capture of Knowledge Check 4 correct answer](./img/kc4.png)
   
 ### References
  - `[1]`<a href="https://github.com/tukaani-project/xz" target="_blank">XZ Utils GitHub Project page</a>
  - `[2]` <a href="https://en.wikipedia.org/wiki/XZ_Utils" target="_blank">Wikipedia</a>
  - `[3]` <a href="https://research.swtch.com/xz-timeline" target="_blank">Timeline of the xz open source attack</a>
  - `[4]` <a href="https://www.openwall.com/lists/oss-security/2024/03/29/4" target="_blank">Andres Freund's Report to Openwall</a>
- - <a href="https://www.cisa.gov/news-events/alerts/2024/03/29/reported-supply-chain-compromise-affecting-XZ Utils-data-compression-library-cve-2024-3094" target="_blank">CISA Alert on XZ Utils</a>
+ - <a href="https://www.cisa.gov/news-events/alerts/2024/03/29/reported-supply-chain-compromise-affecting-xz-utils-data-compression-library-cve-2024-3094" target="_blank">CISA Alert on XZ Utils</a>
  - <a href="https://www.cisa.gov/sbom" target="_blank">CISA SBOM information page<a>
  - <a href="https://www.cisa.gov/sites/default/files/2023-01/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN_CUSTOMER.PDF" target="_blank">CISA Securing the Software Supply Chain Guide</a>
  - <a href="https://github.com/anchore/grype" target="_blank">Grype</a>
