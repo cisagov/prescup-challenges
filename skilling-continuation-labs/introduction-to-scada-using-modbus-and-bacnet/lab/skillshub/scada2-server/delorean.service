@@ -1,0 +1,20 @@
+
+# Copyright 2025 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+[Unit]
+Description=delorean console server
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/home/user/Documents/
+ExecStart= /usr/bin/python3 /home/user/Documents/delorean_server.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+
+

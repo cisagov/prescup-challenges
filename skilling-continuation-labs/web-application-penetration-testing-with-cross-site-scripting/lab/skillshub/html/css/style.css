@@ -1,0 +1,114 @@
+/*
+Copyright 2025 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*/
+
+
+ body {
+    font-family: 'Ariel Black', 'Impact', 'Verdana', sans-serif;
+    /* Monospace font: blocky, retro-feeling, and built-in everywhere */
+    margin: 0;
+    padding: 0;
+    background-color: #4C9BFB; /* Bright blue sky */
+    color: #050101;
+}
+
+header {
+    background-color: #FC9838; /* Orange main box */
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    border: 4px solid #000000; /* Black outline like sign */
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+header nav a {
+    color: #FFFF00; /* Coin yellow */
+    white-space: nowrap;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #7ED957; /* Bright grass green */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    background-color: #FFD700; /* Coin gold */
+    border: 2px solid #000000; /* Black outline */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 160px !important;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h5 {
+    margin-top: 20px;
+    color: #FF0000; /* Mario red */
+    font-size: 16px;
+}
+
+.alert {
+    padding: 12px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.alert-success {
+    background-color: #00B300; /* Pipe green */
+}
+
+.alert-danger {
+    background-color: #D10000; /* Strong red */
+}
+

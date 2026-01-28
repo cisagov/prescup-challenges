@@ -47,7 +47,7 @@ This lab maps with <a href="https://www.cisa.gov/resources-tools/resources/feder
 
 Currently, your environment exists on a flat network. A flat network is one that is not segmented in any way. This can be less secure as it becomes harder to write effective access control list (ACL) and firewall rules when all your systems are comingled. It also increases the likelihood that a compromise of one system could laterally spread to others.
 
-![networkdiagram1.png](./img/networkdiagram1.png)
+![Flat network diagram](./img/networkdiagram1.png)
 
 An Industrial Control System (ICS) is a system used for operations and maintenance in industrial sectors including critical infrastructure sectors such as energy, water, and communications. A Human Machine Interface (HMI) is the interface for monitoring and controlling an ICS. In this lab, the ICS is represented by a water station sensor and the HMI is a server that controls the water station sensor.
 
@@ -55,7 +55,7 @@ You will begin the lab by configuring the HMI-Server for stronger password requi
 
 Your next goal will be to segment the network, placing systems in separate subnets to write more effective network ACL rules and reduce the risk to each system. You will achieve this by moving the Application Server to its own network and then further restrict the ACLs on the router to allow ONLY what is necessary in and out of the network containing the critical ICS/HMI systems.
 
-![networkdiagram2.png](./img/networkdiagram2.png)
+![Segmented network diagram](./img/networkdiagram2.png)
 
 Each phase of the lab will be graded separately. Once you submit all parts of the lab successfully, a mini-challenge will be revealed at the end of the guide. The mini-challenge will test your ability to apply the lessons learned within the lab without explicit guidance.
 
@@ -86,7 +86,7 @@ For this lab, you will be implementing a new password policy using Pluggable Aut
 
 1. Open the `HMI-Admin-Console` and open the Terminal:
 
-![terminal-icon.png](./img/terminal-icon.png)
+![Ubuntu terminal icon](./img/terminal-icon.png)
 
 | &#128270; INFORMATION |
 |---|
@@ -94,17 +94,17 @@ For this lab, you will be implementing a new password policy using Pluggable Aut
 
 2. (**HMI-Admin-Console**) Open a VNC connection to the HMI Server with the command `vncviewer 10.4.4.250:5902`, where 10.4.4.250 is the IP address of the HMI-Server and 5902 is the port.
 
-![s02-image6.png](./img/s02-image6.png)
+![VNC connect to HMI Server](./img/s02-image6.png)
 
 3. (**HMI-Admin-Console**) Enter the password of `tartans` and click OK to connect. You will then be presented with a pseudo-desktop connection to the HMI-Server.
 
-![s02-image7.png](./img/s02-image7.png)
+![VNC desktop view of HMI Server](./img/s02-image7.png)
 
 If you close this window at any time, you will need to repeat steps 2 and 3 to reconnect.
 
 4. (**HMI-Admin-Console, VNC Connection**) From within the VNC connection viewer, open the HMI-Server's Terminal with the icon found in the bottom center of the window.
 
-![s02-image8.png](./img/s02-image8.png)
+![Terminal icon in VNC desktop](./img/s02-image8.png)
 
 | &#128270; INFORMATION |
 |---|
@@ -118,7 +118,7 @@ sudo nano /etc/pam.d/common-password
 
 6. (**HMI-Admin-Console, VNC Connection, Terminal**) Change the line that reads as `password requisite pam_pwquality.so retry=3` to `password requisite pam_pwquality.so retry=3 maxrepeat=3 minlen=8 `.
 
-![s02-image1.png](./img/s02-image1.png)
+![Editing PAM password file](./img/s02-image1.png)
 
 The `minlen=8` option will require the password to be 8 characters long while the `maxrepeat=3` option will enforce that characters cannot consecutively repeat more than three times.
 
@@ -128,7 +128,7 @@ The `minlen=8` option will require the password to be 8 characters long while th
 
 Your file should look like the image below.
 
-![s02-image2.png](./img/s02-image2.png)
+![Updated PAM settings](./img/s02-image2.png)
 
 
 7. (**HMI-Admin-Console, VNC Connection, Terminal**) Save the common-password file by pressing `CTRL+X` and then type and enter `Y` to confirm saving the changes.
@@ -143,11 +143,11 @@ The changes take effect immediately and you should update the current password.
 
 11. (**HMI-Admin-Console, VNC Connection, Terminal**) Try to enter the password `aaaabbbbcccc` - this should fail also, because while it is 12 characters long, it has multiple repeating characters.
 
-![s02-image3.png](./img/s02-image3.png)
+![Failed weak password attempt](./img/s02-image3.png)
 
 12. (**HMI-Admin-Console, VNC Connection, Terminal**) Finally, enter and then retype/confirm the following password, which should succeed: `tartans1`
 
-![s02-image4.png](./img/s02-image4.png)
+![Successful password change](./img/s02-image4.png)
 
 *Note that future instructions will assume the password has been changed to `tartans1` from this point forward.*
 
@@ -165,7 +165,7 @@ This will update the VNC password the next time you attempt to connect, though t
 
 (**HMI-Admin-Console, Firefox**) To check your work, browse to the grading page at `https://skills.hub/lab/tasks` or `(https://10.5.5.5/lab/tasks)` from the HMI-Admin-Console desktop (not from within the VNC connection). Click the `Submit/Re-Grade Tasks` button to trigger the grading checks. Refresh the results after a few moments to see your results.
 
-![grading.png](./img/grading.png)
+![Grading page for Phase 1](./img/grading.png)
  
 Grading Check 1: Update the HMI Server's password policy
  - Update the local password policy correctly
@@ -209,7 +209,7 @@ Lastly, you will deny or block all other traffic to or from the HMI-Server, whic
 sudo ufw allow from 10.4.4.51 to any port 5902 proto tcp
 ```
 
-![s02-image9.png](./img/s02-image9.png)
+![UFW rule allowing VNC from Admin Console](./img/s02-image9.png)
 
 2. (**HMI-Admin-Console, VNC Connection, Terminal**) Still in the terminal session, add the following ufw rule to allow the HMI Server to send status updates to the web management system and allow those established connections as long as they remain active.:
 
@@ -217,7 +217,7 @@ sudo ufw allow from 10.4.4.51 to any port 5902 proto tcp
 sudo ufw allow out to 10.3.3.3 port 8080 proto tcp
 ```
 
-![s02-image10.png](./img/s02-image10.png)
+![UFW rule allowing outbound to App Server 8080](./img/s02-image10.png)
 
 3. (**HMI-Admin-Console, VNC Connection, Terminal**) Still in the terminal session, add the following ufw rules to allow communications between the HMI Server and the water station sensor over port 5000 for control and status updates.:
 
@@ -226,7 +226,7 @@ sudo ufw allow out to 10.4.4.251 port 5000 proto tcp
 sudo ufw allow in from 10.4.4.251 to any port 5000 proto tcp
 ```
 
-![s02-image11.png](./img/s02-image11.png)
+![UFW rules for sensor comms on port 5000](./img/s02-image11.png)
 
 4. (**HMI-Admin-Console, VNC Connection, Terminal**) Still in the terminal session, add the following ufw rules to block any other types of traffic, ingoing or outgoing, to or from the HMI Server to better minimize its surface area on the network.:
 
@@ -235,7 +235,7 @@ sudo ufw default deny incoming
 sudo ufw default deny outgoing
 ```
 
-![s02-image12.png](./img/s02-image12.png)
+![UFW default deny rules](./img/s02-image12.png)
 
 5. (**HMI-Admin-Console, VNC Connection, Terminal**)Lastly, in the terminal session, enter the following commands to enable the ufw firewall.
 
@@ -243,7 +243,7 @@ sudo ufw default deny outgoing
 sudo ufw enable
 ```
 
-![s02-image13.png](./img/s02-image13.png)
+![UFW enabled](./img/s02-image13.png)
 
 You can check the status of the current rules by entering the command:
 
@@ -251,7 +251,7 @@ You can check the status of the current rules by entering the command:
 sudo ufw status verbose
 ```
 
-![s2-image28.png](./img/s2-image28.png)
+![UFW status output](./img/s2-image28.png)
 
 **NOTE: There is a rule in the HMI Server's UFW to allow SSH connections from the Skills Hub (10.5.5.5) for grading purposes only. This is accounted for in any grading checks that validate the state of your lab environment. You should not remove or disable this rule at any time.**
 
@@ -259,11 +259,11 @@ If all has gone according to plan, you should still be connected to the HMI-Serv
 
 6. (**HMI-Admin-Console, VNC Connection**) To test whether the HMI-Server can still talk to the water station sensor, open the `Connector` application on the HMI-Server Desktop.
 
-![connector.png](./img/connector.png)
+![Connector app icon](./img/connector.png)
 
 If you simply type the command `get` in the connector terminal you will see a list of the water station sensors and their current statuses. The fact that this connecion worked means your UFW rules did not accidentally break connectivity.
 
-![s02-image26.png](./img/s02-image26.png)
+![Connector showing sensor status](./img/s02-image26.png)
 
 7. (**HMI-Admin-Console, VNC Connection, Connector**)Update the current temperature of the reservoir behind station sensor 1 (Twlight Falls) with the following command:
 
@@ -271,7 +271,7 @@ If you simply type the command `get` in the connector terminal you will see a li
 update {"id":"1","temp":"75"}
 ```
 
-![s02-image27.png](./img/s02-image27.png)
+![Connector updating reservoir temp](./img/s02-image27.png)
 
 You will use this value to validate the staus updates on the status web site in a later step.
 
@@ -369,13 +369,13 @@ sudo netplan apply
 
 6. (**Application Server**) Verify the changes are correct with the command `ip a`. You should see something similar to the image below.
 
-![s02-image20.png](./img/s02-image20.png)
+![`ip a` showing App Server at 10.3.3.3](./img/s02-image20.png)
 
 The new address of `10.3.3.3/24` should be applied to interface `ens32` and there should be no IPv4 address applied to interface `ens33`.
 
 Recall the updated network diagram now that the application server has been moved successfully.
 
-![networkdiagram2.png](./img/networkdiagram2.png)
+![Network diagram with App Server moved](./img/networkdiagram2.png)
 
 7. (**Application Server**) Restart the status page service with the following command:
 
@@ -389,14 +389,15 @@ You can now verify that the status page on the Application Server recieved the p
 
 8. (**HMI-Admin-Console, Firefox**) Open Firefox from the HMI-Admin-Console Desktop (not within the VNC session) and browse to `http://10.3.3.3:8080`.
 
-![s02-image29.png](./img/s02-image29.png)
+![Browser showing status page at 10.3.3.3](./img/s02-image29.png)
 
 You should see the updated temperature value of 75 reflected in the displayed status.
 
 #### Grading Check
+
 (**HMI-Admin-Console, Firefox**) To check your work, browse to the grading page at `https://skills.hub/lab/tasks` or `(https://10.5.5.5/lab/tasks)` from the HMI-Admin-Console desktop (not from within the VNC connection). Click the `Submit/Re-Grade Tasks` button to trigger the grading checks. Refresh the results after a few moments to see your results.
 
-![grading2.png](./img/grading2.png)
+![Grading page for Phase 2](./img/grading2.png)
 
 Grading Check 4: Move the Application Server to the Services network at IP address 10.3.3.3
  - The Application Server has the correct IP address of `10.3.3.3/24` and its website can be reached at `http://10.3.3.3:8080`
@@ -451,7 +452,7 @@ set firewall name LAB rule 10 protocol tcp
 set firewall name LAB rule 10 state new enable
 ```
 
-![s02-image14.png](./img/s02-image14.png)
+![Router ACL for HMI -> App Server](./img/s02-image14.png)
 
 Second, you will create the ACL rule that allows the HMI-Admin-Console to talk to the application server at 10.3.3.3 over port 8080 to view the status page.
 
@@ -466,7 +467,7 @@ set firewall name LAB rule 11 protocol tcp
 set firewall name LAB rule 11 state new enable
 ```
 
-![s02-image15.png](./img/s02-image15.png)
+![Router ACL for Admin Console -> App Server](./img/s02-image15.png)
 
 Third, you will create the ACL rule that ensures established connections continue to be allowed until closed. This ensures that you can connect to the legitimate ports and services and also remain connected.
 
@@ -478,7 +479,7 @@ set firewall name LAB rule 20 state established enable
 set firewall name LAB rule 20 state related enable
 ```
 
-![s02-image16.png](./img/s02-image16.png)
+![Router ACL for established connections](./img/s02-image16.png)
 
 Fourth, you will create the ACL rule that will block all other traffic not otherwise specified in our ACL ruleset at the interface that connects the HMI subnet to the rest of the network. 
 
@@ -493,7 +494,7 @@ set interfaces ethernet eth4 firewall out name LAB
 set interfaces ethernet eth4 firewall local name LAB
 ```
 
-![s02-image17.png](./img/s02-image17.png)
+![Router ACL default drop + bindings](./img/s02-image17.png)
 
 The only system that can now make an inbound connection to the HMI-Server is the HMI-Admin-Console. Scan results from outside the HMI network would result in no systems being found.
 
@@ -501,13 +502,13 @@ Finally, you can commit the changes.
 
 7. (**VyOS Router**) Type and enter `commit` and then type and enter `save`. This will write the changes to the running configuration and apply them.
 
-![s02-image18.png](./img/s02-image18.png)
+![Router commit/save firewall rules](./img/s02-image18.png)
 
 8. (**VyOS Router**) You can now type and enter `exit` to leave configuration mode.
 
 If curious, you can visualize the ACL rules in the config by entering the command `sh conf` at the router's command prompt.
 
-![s02-image19.png](./img/s02-image19.png)
+![Router config summary](./img/s02-image19.png)
 
 **NOTE: There is a rule in the Router's ACL to allow SSH and HTTPS connections to/from the Skills Hub (10.5.5.5) for grading purposes only. This is accounted for in any grading checks that validate the state of your lab environment. You should not remove or disable these rules at any time.**
 
@@ -515,7 +516,7 @@ If curious, you can visualize the ACL rules in the config by entering the comman
 
 (**HMI-Admin-Console, Firefox**) To check your work, browse to the grading page at `https://skills.hub/lab/tasks` or `(https://10.5.5.5/lab/tasks)` from the HMI-Admin-Console desktop (not from within the VNC connection). Click the `Submit/Re-Grade Tasks` button to trigger the grading checks. Refresh the results after a few moments to see your results.
 
-![grading3.png](./img/grading3.png)
+![Grading page for Phase 3](./img/grading3.png)
 
 The grading page should show the results of the following items as now being passed successfully.
 
@@ -541,7 +542,7 @@ Grading Check 5: Update and apply the router firewall ACL rules
 
 The new remote client resides in user network of 10.1.1.0/24.
 
-![networkdiagram3.png](./img/networkdiagram3.png)
+![Network diagram with Remote Client](./img/networkdiagram3.png)
 
 A new requirement has been added that this remote client system must also be able to interact with the HMI-Server through a VNC connection and access the web status page on the aplpciation server. While this does add a minor security concern, you will continue to operate under the rule of least-privilege by adding **only** this new exception to the previous rulesets. For the purpose of the lab, assume that this client is compliant with all security requirements and safe to add to the network. You do not need to protect the remote client or the user network beyond the stated objectives below.
 

@@ -1,0 +1,18 @@
+
+# Copyright 2025 Carnegie Mellon University.
+# Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+# root or contact permission@sei.cmu.edu for full terms.
+
+[Unit]
+Description=Runs a script to connect to mini-challenge Ubuntu server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/mini_challenge.py
+WorkingDirectory=/opt
+StandardOutput=append:/var/log/mini_challenge.log
+StandardError=append:/var/log/mini_challenge.log
+Restart=no
+
+[Install]
+WantedBy=multi-user.target

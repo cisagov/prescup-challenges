@@ -1,0 +1,97 @@
+@*
+Copyright 2025 Carnegie Mellon University.
+Released under a MIT (SEI)-style license, please see LICENSE.md in the project 
+root or contact permission@sei.cmu.edu for full terms.
+*@
+@model DeLoreanViewModel
+@{
+    ViewData["Title"] = "DeLorean DMC-12 Status";
+}
+
+<div class="text-center">
+    <h1 class="display-4">DeLorean DMC-12</h1>
+</div>
+
+<div>
+    @ViewBag.Message
+</div>
+
+@if(ViewBag.ModbusToken != null)
+{
+    <div class="text-left">    
+    <p><h3>Modbus Token: @ViewBag.ModbusToken</h3></p>
+    </div>
+}
+
+<div class="text-left">
+    <h4>Speed</h4>
+    <span>@Model.TargetSpeedMPH</span> MPH
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.TargetSpeedMPH)%" aria-valuenow="@Model.TargetSpeedMPH" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>    
+</div>
+<br /><br />
+<div class="text-left">
+    <h4>Plutonium Reactor</h4>
+    Current Temperature: <span>@Model.ReactorTemp</span> C
+    <br />
+    Max Temperature: 950 C
+    <br />
+    Min Temperature: 750 C
+    <br />
+    @if (Model.ReactorTemp > 950)
+    {
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">!!! Reactor Overheat Alert !!!</h4>
+            <hr>
+            <p>The reactor has exceeded the safe operating temperature and may catastrophically fail.</p>
+        </div>
+        <br />
+    }
+    <div class="progress">
+        @if (Model.ReactorTemp > 0 && Model.ReactorTemp < 800)
+        {
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.ReactorTemp / 10)%" aria-valuenow="@Model.ReactorTemp" aria-valuemin="750" aria-valuemax="1000"></div>
+        }
+        else if (Model.ReactorTemp >= 800 && Model.ReactorTemp < 950)
+        {
+        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: @(Model.ReactorTemp / 10)%" aria-valuenow="@Model.ReactorTemp" aria-valuemin="750" aria-valuemax="1000"></div>
+        }
+        else
+        {
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: @(Model.ReactorTemp / 10)%" aria-valuenow="@Model.ReactorTemp" aria-valuemin="750" aria-valuemax="1000"></div>
+        }
+    </div>
+    <br />
+</div>
+<form method="POST" action="delorean">
+    <input type="submit" name="SubmitButton" value="Increase Reactor Temperature" />&nbsp;&nbsp;&nbsp;
+    <input type="submit" name="SubmitButton" value="Decrease Reactor Temperature" />
+</form>
+<br /><br />
+<div class="text-left">
+    <h4>Power</h4>
+    <span>@Model.Gigawatts</span> Gigawatts
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.Gigawatts * 50)%" aria-valuenow="@Model.Gigawatts" aria-valuemin="0" aria-valuemax="2"></div>    
+    </div>
+</div>
+<br /><br />
+<div class="text-left">
+    <h4>Fuel</h4>
+    Remaining: <span>@Model.FuelPercent</span>%
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @(Model.FuelPercent)%" aria-valuenow="@Model.FuelPercent" aria-valuemin="0" aria-valuemax="100"></div>    
+    </div>
+</div>
+<br /><br />
+<div class="text-left">
+    <h4>Cooling Tank</h4>
+    Efficiency: <span>@Model.CoolantPercent</span>%
+    <br />
+    <div class="progress">
+        <div class="progress-bar bg-info" role="progressbar" style="width: @Model.CoolantPercent%" aria-valuenow="@Model.CoolantPercent" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</div>
+<br /><br />
+

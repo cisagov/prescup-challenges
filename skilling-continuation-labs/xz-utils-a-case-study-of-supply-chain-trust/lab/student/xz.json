@@ -1,0 +1,206 @@
+SPDXVersion: SPDX-2.3
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: xz-5.6.1
+DocumentNamespace: https://anchore.com/syft/dir/xz-5.6.1-a0ca31cc-cd5e-4272-9bd1-c3c1957c77d0
+LicenseListVersion: 3.25
+Creator: Organization: Anchore, Inc
+Creator: Tool: syft-1.21.0
+Created: 2025-03-24T18:17:28Z
+
+##### Unpackaged files
+
+FileName: .github/workflows/ci.yml
+SPDXID: SPDXRef-File-.github-workflows-ci.yml-7561d461b00ff11d
+FileType: TEXT
+FileChecksum: SHA1: e206814135db38e9bfabdaf139d902f490e6f09b
+FileChecksum: SHA256: ee77be91278580e05bd3547fe547c1283cb7046bec9d5d42ee82cc8e32acb4f3
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+
+FileName: .github/workflows/windows-ci.yml
+SPDXID: SPDXRef-File-.github-workflows-windows-ci.yml-b04faf0e7fa3d44a
+FileType: TEXT
+FileChecksum: SHA1: f628f5572c058baf485622e8fa88da47751ba845
+FileChecksum: SHA256: 80ed1b179e525eb64c9c5c5613c630a7765d891e6af4c48a78f9f3b4e03f57c1
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+
+FileName: src/liblzma/.libs/liblzma.so.5.6.1
+SPDXID: SPDXRef-File-src-liblzma-.libs-liblzma.so.5.6.1-b6431b565e5d03c6
+FileChecksum: SHA1: 0000000000000000000000000000000000000000
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+
+FileName: src/lzmainfo/.libs/lzmainfo
+SPDXID: SPDXRef-File-src-lzmainfo-.libs-lzmainfo-dfcd54c821dc41ed
+FileChecksum: SHA1: 0000000000000000000000000000000000000000
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+
+FileName: src/xz/.libs/xz
+SPDXID: SPDXRef-File-src-xz-.libs-xz-d8e03dc1c2fd9356
+FileType: APPLICATION
+FileType: BINARY
+FileChecksum: SHA1: b9c0dad8f2867ddd8879bd0832be2f5e0ff553a0
+FileChecksum: SHA256: 8465a1b5e580c315d02c771454ad6e3da0a85894fb775b3a67cacd597d2a5ac1
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+
+FileName: src/xzdec/.libs/lzmadec
+SPDXID: SPDXRef-File-src-xzdec-.libs-lzmadec-fa27b376cedaa295
+FileChecksum: SHA1: 0000000000000000000000000000000000000000
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+
+FileName: src/xzdec/.libs/xzdec
+SPDXID: SPDXRef-File-src-xzdec-.libs-xzdec-5488842c193e2e4d
+FileChecksum: SHA1: 0000000000000000000000000000000000000000
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+
+##### Package: xz-5.6.1
+
+PackageName: xz-5.6.1
+SPDXID: SPDXRef-DocumentRoot-Directory-xz-5.6.1
+PackageSupplier: NOASSERTION
+PackageDownloadLocation: NOASSERTION
+PrimaryPackagePurpose: FILE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+
+##### Package: xz
+
+PackageName: xz
+SPDXID: SPDXRef-Package-binary-xz-222220762a187b8a
+PackageVersion: 5.6.1
+PackageSupplier: NOASSERTION
+PackageDownloadLocation: NOASSERTION
+FilesAnalyzed: false
+PackageSourceInfo: acquired package info from the following paths: /src/xz/.libs/xz
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:tukaani:xz:5.6.1:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:generic/xz@5.6.1
+
+##### Package: actions/checkout
+
+PackageName: actions/checkout
+SPDXID: SPDXRef-Package-github-action-actions-checkout-a61590db47bcb298
+PackageVersion: 8ade135a41bc03ea155e62e844d188df1ea18608
+PackageSupplier: NOASSERTION
+PackageDownloadLocation: NOASSERTION
+FilesAnalyzed: false
+PackageSourceInfo: acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/windows-ci.yml
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:actions\/checkout:actions\/checkout:8ade135a41bc03ea155e62e844d188df1ea18608:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:github/actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608
+
+##### Package: actions/checkout
+
+PackageName: actions/checkout
+SPDXID: SPDXRef-Package-github-action-actions-checkout-f70a8afc560883ee
+PackageVersion: 8ade135a41bc03ea155e62e844d188df1ea18608
+PackageSupplier: NOASSERTION
+PackageDownloadLocation: NOASSERTION
+FilesAnalyzed: false
+PackageSourceInfo: acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/ci.yml
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:actions\/checkout:actions\/checkout:8ade135a41bc03ea155e62e844d188df1ea18608:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:github/actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608
+
+##### Package: actions/upload-artifact
+
+PackageName: actions/upload-artifact
+SPDXID: SPDXRef-Package-github-action-actions-upload-artifact-10e8c566d9c771c1
+PackageVersion: c7d193f32edcb7bfad88892161225aeda64e9392
+PackageSupplier: NOASSERTION
+PackageDownloadLocation: NOASSERTION
+FilesAnalyzed: false
+PackageSourceInfo: acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/windows-ci.yml
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:actions\/upload-artifact:actions\/upload-artifact:c7d193f32edcb7bfad88892161225aeda64e9392:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:actions\/upload-artifact:actions\/upload_artifact:c7d193f32edcb7bfad88892161225aeda64e9392:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:actions\/upload_artifact:actions\/upload-artifact:c7d193f32edcb7bfad88892161225aeda64e9392:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:actions\/upload_artifact:actions\/upload_artifact:c7d193f32edcb7bfad88892161225aeda64e9392:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:actions\/upload:actions\/upload-artifact:c7d193f32edcb7bfad88892161225aeda64e9392:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:actions\/upload:actions\/upload_artifact:c7d193f32edcb7bfad88892161225aeda64e9392:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:github/actions/upload-artifact@c7d193f32edcb7bfad88892161225aeda64e9392
+
+##### Package: actions/upload-artifact
+
+PackageName: actions/upload-artifact
+SPDXID: SPDXRef-Package-github-action-actions-upload-artifact-15cd985d857e8ddb
+PackageVersion: c7d193f32edcb7bfad88892161225aeda64e9392
+PackageSupplier: NOASSERTION
+PackageDownloadLocation: NOASSERTION
+FilesAnalyzed: false
+PackageSourceInfo: acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/ci.yml
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:actions\/upload-artifact:actions\/upload-artifact:c7d193f32edcb7bfad88892161225aeda64e9392:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:actions\/upload-artifact:actions\/upload_artifact:c7d193f32edcb7bfad88892161225aeda64e9392:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:actions\/upload_artifact:actions\/upload-artifact:c7d193f32edcb7bfad88892161225aeda64e9392:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:actions\/upload_artifact:actions\/upload_artifact:c7d193f32edcb7bfad88892161225aeda64e9392:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:actions\/upload:actions\/upload-artifact:c7d193f32edcb7bfad88892161225aeda64e9392:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:actions\/upload:actions\/upload_artifact:c7d193f32edcb7bfad88892161225aeda64e9392:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:github/actions/upload-artifact@c7d193f32edcb7bfad88892161225aeda64e9392
+
+##### Package: msys2/setup-msys2
+
+PackageName: msys2/setup-msys2
+SPDXID: SPDXRef-Package-github-action-msys2-setup-msys2-8063a1301d06e6f5
+PackageVersion: 27b3aa77f672cb6b3054121cfd80c3d22ceebb1d
+PackageSupplier: NOASSERTION
+PackageDownloadLocation: NOASSERTION
+FilesAnalyzed: false
+PackageSourceInfo: acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/windows-ci.yml
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:msys2\/setup-msys2:msys2\/setup-msys2:27b3aa77f672cb6b3054121cfd80c3d22ceebb1d:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:msys2\/setup-msys2:msys2\/setup_msys2:27b3aa77f672cb6b3054121cfd80c3d22ceebb1d:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:msys2\/setup_msys2:msys2\/setup-msys2:27b3aa77f672cb6b3054121cfd80c3d22ceebb1d:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:msys2\/setup_msys2:msys2\/setup_msys2:27b3aa77f672cb6b3054121cfd80c3d22ceebb1d:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:msys2\/setup:msys2\/setup-msys2:27b3aa77f672cb6b3054121cfd80c3d22ceebb1d:*:*:*:*:*:*:*
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:msys2\/setup:msys2\/setup_msys2:27b3aa77f672cb6b3054121cfd80c3d22ceebb1d:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:github/msys2/setup-msys2@27b3aa77f672cb6b3054121cfd80c3d22ceebb1d
+
+##### Relationships
+
+Relationship: SPDXRef-Package-github-action-actions-upload-artifact-10e8c566d9c771c1 OTHER SPDXRef-File-.github-workflows-windows-ci.yml-b04faf0e7fa3d44a
+RelationshipComment: evident-by: indicates the package's existence is evident by the given file
+Relationship: SPDXRef-Package-github-action-actions-upload-artifact-15cd985d857e8ddb OTHER SPDXRef-File-.github-workflows-ci.yml-7561d461b00ff11d
+RelationshipComment: evident-by: indicates the package's existence is evident by the given file
+Relationship: SPDXRef-Package-binary-xz-222220762a187b8a OTHER SPDXRef-File-src-xz-.libs-xz-d8e03dc1c2fd9356
+RelationshipComment: evident-by: indicates the package's existence is evident by the given file
+Relationship: SPDXRef-Package-github-action-msys2-setup-msys2-8063a1301d06e6f5 OTHER SPDXRef-File-.github-workflows-windows-ci.yml-b04faf0e7fa3d44a
+RelationshipComment: evident-by: indicates the package's existence is evident by the given file
+Relationship: SPDXRef-Package-github-action-actions-checkout-a61590db47bcb298 OTHER SPDXRef-File-.github-workflows-windows-ci.yml-b04faf0e7fa3d44a
+RelationshipComment: evident-by: indicates the package's existence is evident by the given file
+Relationship: SPDXRef-Package-github-action-actions-checkout-f70a8afc560883ee OTHER SPDXRef-File-.github-workflows-ci.yml-7561d461b00ff11d
+RelationshipComment: evident-by: indicates the package's existence is evident by the given file
+Relationship: SPDXRef-DocumentRoot-Directory-xz-5.6.1 CONTAINS SPDXRef-Package-github-action-actions-checkout-f70a8afc560883ee
+Relationship: SPDXRef-DocumentRoot-Directory-xz-5.6.1 CONTAINS SPDXRef-Package-github-action-actions-checkout-a61590db47bcb298
+Relationship: SPDXRef-DocumentRoot-Directory-xz-5.6.1 CONTAINS SPDXRef-Package-github-action-actions-upload-artifact-15cd985d857e8ddb
+Relationship: SPDXRef-DocumentRoot-Directory-xz-5.6.1 CONTAINS SPDXRef-Package-github-action-actions-upload-artifact-10e8c566d9c771c1
+Relationship: SPDXRef-DocumentRoot-Directory-xz-5.6.1 CONTAINS SPDXRef-Package-github-action-msys2-setup-msys2-8063a1301d06e6f5
+Relationship: SPDXRef-DocumentRoot-Directory-xz-5.6.1 CONTAINS SPDXRef-Package-binary-xz-222220762a187b8a
+Relationship: SPDXRef-DOCUMENT DESCRIBES SPDXRef-DocumentRoot-Directory-xz-5.6.1

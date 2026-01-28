@@ -53,7 +53,7 @@ In this lab, you will implement several DNS or name-based controls to prevent in
 
 The lab network consists of a Combined Server that hosts local DNS, mail, and web services on one system. A Pi-hole instance has been incorporated into the network, but remains to be configured as a DNS sinkhole as part of the lab. A router and pfSense firewall serve as networking devices for connectivity and the pfSense firewall also serves as your upstream DNS server. Lastly, you will simulate external mail traffic from the Red-Kali system placed outside of the local network.
 
-![network-diagram-355051484.png](./img/network-diagram.png)
+![Lab network diagram DNS and Name-based security solution lab](./img/network-diagram.png)
 
 ## System Tools and Credentials
 
@@ -80,7 +80,7 @@ The lab network consists of a Combined Server that hosts local DNS, mail, and we
 
 1. Open the `Ubuntu-Desktop` and open the Terminal from the left-hand side menu:
 
-![terminal-icon-1116920847.png](./img/terminal-icon.png)
+![Ubuntu Desktop terminal icon](./img/terminal-icon.png)
 
 Currently, the combined server offers DNS at IP address 10.3.3.13. You can perform DNS lookups by pointing directly to this IP as the name server. We will lookup the hostnames of the mail and web services installed on the combined server to verify their IP addresses match the network diagram and to verify that local DNS is working as intended. 
 
@@ -94,15 +94,15 @@ Currently, the combined server offers DNS at IP address 10.3.3.13. You can perfo
 nslookup mail.lab.net 10.3.3.13
 ```
 
-The command `nslookup` will perform a DNS query for the provided hostname, "mail.lab.net", from the DNS server at 10.3.3.13. The 
+The command `nslookup` will perform a DNS query for the provided hostname, "mail.lab.net", from the DNS server at 10.3.3.13.
 
-![s01-image1-1400398984.png](./img/s01-image1.png)
+![Terminal showing nslookup mail.lab.net resolving to 10.3.3.11](./img/s01-image1.png)
 
 The DNS server responds with mail.lab.net's IP address of 10.3.3.11
 
 3. (**Ubuntu-Desktop, Terminal**) Repeat the step above for the hostname "web.lab.net".
 
-![s01-image2-1592338747.png](./img/s01-image2.png)
+![Terminal showing nslookup web.lab.net resolving to 10.3.3.12](./img/s01-image2.png)
 
 The DNS server responds with web.lab.net's IP address of 10.3.3.12
 
@@ -114,7 +114,7 @@ nslookup web.lab.net
 
 This lookup will eventually timeout with an error that 10.3.3.10, our Pi-hole instance, is unreachable.
 
-![s01-image3-1723772375.png](./img/s01-image3.png)
+![Terminal showing failed nslookup with Pi-hole unreachable](./img/s01-image3.png)
 
 Let's investigate why.
 
@@ -124,7 +124,7 @@ Let's investigate why.
 sudo less /etc/resolv.conf
 ```
 
-![s01-image3-269376697.png](./img/s01-image3.png)
+![Terminal showing /etc/resolv.conf listing nameserver 10.3.3.10](./img/s01-image3.png)
 
 The resolv.conf file lists the nameservers set for the system. In this case, our system is already configured to use the address of Pi-hole (10.3.3.10) by default. The reason our lookups fail is because Pi-hole is receiving requests directly and has not yet been configured to forward our requests to the DNS server. To close the resolv.conf file, press `Q` on your keyboard. 
 
@@ -149,11 +149,11 @@ The next section will explain Pi-hole in detail and walk you through the process
 
 2. (**Ubuntu-Desktop, Firefox**) Login with the password `tartans` at the Pi-hole login prompt. You do not need to specify a username.
 
-![s01-image5-1396175829.png](./img/s01-image5.png)
+![Pi-hole login screen](./img/s01-image5.png)
 
 Once logged in, you should see the Pi-hole Dashboard.
 
-![s01-image6-452007333.png](./img/s01-image6.png)
+![Pi-hole dashboard after login](./img/s01-image6.png)
 
 | &#128270; INFORMATION |
 |---|
@@ -165,13 +165,13 @@ Once logged in, you should see the Pi-hole Dashboard.
 
 5. (**Ubuntu-Desktop, Firefox**) Here you will configure the DNS servers that Pi-hole will query when it receives a request from a client system. In the `Upstream DNS Servers` section, enter `10.3.3.13` in the field for `Custom 1` and enter `10.0.0.1` in the field for `Custom 2`. Also check the box for each entry to enable it in the chain.
 
-![s01-image7-1116663274.png](./img/s01-image7.png)
+![Pi-hole DNS settings with upstream servers](./img/s01-image7.png)
 
 This configuration tells Pi-hole to first ask the DNS server at 10.3.3.13 to resolve queried names. If the local DNS server does not contain a record for the requested item, it will then ask the upstream DNS server running on pfSense at 10.0.0.1. If either responds with the IP address of the requested item, Pi-hole will respond to the requesting client.
 
 6. (**Ubuntu-Desktop, Firefox**) Select the option in the Interface settings section to `Permit all origins` since we are using Pi-hole in a safe lab environment. This allows us to query Pi-hole for DNS requests from anywhere within our network.
 
-![s01-image8-635246715.png](./img/s01-image8.png)
+![Pi-hole interface settings set to Permit all origins](./img/s01-image8.png)
 
 In a real-world setup, you might use multiple Pi-hole instances, one per network segment. Otherwise, firewall and network access control lists could be used to restrict who can make requests to Pi-hole.
 
@@ -183,7 +183,7 @@ In a real-world setup, you might use multiple Pi-hole instances, one per network
 nslookup web.lab.net
 ```
 
-![s01-image9-496353110.png](./img/s01-image9.png)
+![Terminal nslookup web.lab.net resolved by Pi-hole at 10.3.3.10](./img/s01-image9.png)
 
 This time the lookup succeeds, and you will notice that the responding server is the address of Pi-hole, 10.3.3.10. This also has the added benefit of obfuscating the actual DNS server's IP address, which could provide additional security benefits.
 
@@ -203,7 +203,7 @@ For the purpose of this lab a simple web site has been configured at `web.lab.ne
 
 1. (**Ubuntu-Desktop, Firefox**) In Firefox, open a new tab and browse to the local website at `web.lab.net`.
 
-![s01-image10-705250240.png](./img/s01-image10.png)
+![Local web page web.lab.net](./img/s01-image10.png)
 
 You will see three tabs across the top of the page. Feel free to explore these pages.
 
@@ -213,7 +213,7 @@ You will see three tabs across the top of the page. Feel free to explore these p
 
 2. (**Ubuntu-Desktop, Firefox, Local Web Site**) Browse to the Ads page and notice there are two ads present: a "safe" ad and a malicious one.
 
-![s01-image11-684212146.png](./img/s01-image11.png)
+![Local web Ads page with safe and malicious ads](./img/s01-image11.png)
 
 If the malicious ad was actually malicious, we may have been presented with inappropriate content or worse, the ad might contain scripts that triggered in the background without us knowing.
 
@@ -223,7 +223,7 @@ If the malicious ad was actually malicious, we may have been presented with inap
 
 3. (**Ubuntu-Desktop, Firefox, Local Web Site**) Right-click within the malicious ad's box and select `View Page Source`. You should see the HTML of the ad displayed in a new tab. Pay attention to the following section.
 
-![s01-image12-1355282806.png](./img/s01-image12.png)
+![Page source showing iframe for www.malicious-ad.com](./img/s01-image12.png)
 
 Note that the iframe for the malicious ad is pointing to `www.malicious-ad.com`.
 
@@ -240,14 +240,14 @@ Here you can add malicious domains manually that are not part of an already publ
 
 6. (**Ubuntu-Desktop, Firefox, Pi-hole Admin Page**) In the `Domain:` field add the domain name of the malicious ad, `www.malicious-ad.com`, and then click on `Add to Blacklist`.
 
-![s01-image13-382523057.png](./img/s01-image13.png)
+![Pi-hole Domain add to blacklist page](./img/s01-image13.png)
 
 If we were sure that the entire domain of malicious-ad.com was unsafe, we could leave off the "www." and block the entire wildcard domain, meaning anything that ended in `malicious-ad.com` would also be blocked.
 
 7. (**Ubuntu-Desktop, Firefox, New Tab**) In a new tab, browse to `http://www.malicious-ad.com`. What happens?
 
 
-![s01-image14-1493941272.png](./img/s01-image14.png)
+![Browser error page for blocked www.malicious-ad.com](./img/s01-image14.png)
 
 The page is now blocked because the request for the domain's lookup was also blocked. Thus, we never received the content from the malicious domain.
 
@@ -257,23 +257,23 @@ The page is now blocked because the request for the domain's lookup was also blo
 nslookup www.malicious-ad.com
 ```
 
-![s01-image46-1212150708.png](./img/s01-image46.png)
+![Terminal nslookup for www.malicious-ad.com returning 0.0.0.0](./img/s01-image46.png)
 
 The server responds with 0.0.0.0 as a null response due to the query for this domain being rejected by the blocklist.
 
 9. (**Ubuntu-Desktop, Firefox, Local Web Site**) Return to the tab displaying the Ads page of the local web site and refresh the page. What happens? *Note that you may need to refresh the page a few times or wait for a minute or two before the cached page expires.*
 
-![s01-image15-104874109.png](./img/s01-image15.png)
+![Local Ads page refreshed with malicious ad blocked](./img/s01-image15.png)
 
 You should see that while the rest of the content is displayed for the page and the safe ad, the malicious ad's iframe content is now blocked.
 
 10. (**Ubuntu-Desktop, Firefox, Pi-hole Admin Page**) Return to the tab displaying the Pi-Hole administration page. Click on the `Dashboard` and notice that the `Queries Blocked` visualization is now showing data. Note that your data will look different than the screenshow below.
 
-![s01-image16-340751705.png](./img/s01-image16.png)
+![Pi-hole dashboard showing blocked queries stats](./img/s01-image16.png)
 
 11. (**Ubuntu-Desktop, Firefox, Pi-hole Admin Page**) Click on the link in the `Queries Blocked` visualization marked with `List Blocked Queries`. Here you can track all the malicious domain requests that have been blocked.
 
-![s01-image17-1543296315.png](./img/s01-image17.png)
+![Pi-hole blocked queries list with client details](./img/s01-image17.png)
 
 Note that you can see which client or system in your environment made the requests. This data might be of value to understand trends or commonalities in user behaviors to implement further security controls to help prevent malicious content or actions on the network.
 
@@ -296,7 +296,7 @@ An additional step you could take for commonly requested malicious pages might b
 
 2. (**Ubuntu-Desktop, Firefox, Pi-hole Admin Page**) In the `Domain:` field enter `www.malicious-ad.com` and in the `IP Address:` field enter `10.3.3.15`.
 
-![s01-image18-982394761.png](./img/s01-image18.png)
+![Pi-hole Local DNS Records adding redirect for www.malicious-ad.com to 10.3.3.15](./img/s01-image18.png)
 
 This setting will automatically preempt any requests for `www.malicious-ad.com` to the DNS server and instead respond with the IP address of 10.3.3.15 for this resource. 
 
@@ -308,7 +308,7 @@ A website has been configured at 10.3.3.15 that provides the warning page.
 
 5. (**Ubuntu-Desktop, Firefox, New Tab**) In a new tab, browse again to `http://www.malicious-ad.com`. This time you should be redirected to the warning page hosted by 10.3.3.15 instead of seeing an error message.
 
-![s01-image19-132351903.png](./img/s01-image19.png)
+![Browser redirected to warning page for www.malicious-ad.com](./img/s01-image19.png)
 
 As you may have guessed, when redirecting lookups for the domain name only, we leave the possibility that someone could still retrieve the contents of `www.malicious-ad.com` by its IP address. If we were to redirect queries for a malicious domain in this manner, you would also want to block access to the domain at the firewall or other networking device. This would achieve both goals of informing the user that they attempted to access a malicious site and prevent access to the actual resource.
 
@@ -322,7 +322,7 @@ As you may have guessed, when redirecting lookups for the domain name only, we l
 
 These two checks will verify that you were able to achieve both results during your lab attempt.
 
-![grading1-686496101.png](./img/grading1.png)
+![Grading page confirming blocklist and redirect checks](./img/grading1.png)
 
 Grading Check 1: Successfully blocked traffic to `www.malicious-ad.com`
  - `www.malicious-ad.com` was added to the Domains blocklist in Pi-hole
@@ -356,15 +356,15 @@ You will begin by staging the various tools for this phase of the lab.
 
 1. (**Ubuntu-Desktop, Firefox, New Tab**) Browse to the webmin webGUI at `http://10.3.3.11:10000`. Ignore and click through any certificate warnings. Use the username `user` and the password `tartans`.
 
-![s01-image21-504652288.png](./img/s01-image21.png)
+![webmin certificate warnings](./img/s01-image21.png)
 
 2. (**Ubuntu-Desktop, Firefox, webmin Landing Page**) Expand the `System` heading from the left side menu and click on `System Logs`.
 
-![s01-image22-1947101837.png](./img/s01-image22.png)
+![webmin interface with System Logs expanded](./img/s01-image22.png)
 
 3. (**Ubuntu-Desktop, Firefox, webmin System Logs Page**) Filter for only the mail.log file by selecting it from the dropdown and change the last log count to 25. This amount will be sufficient for our purposes.
 
-![s01-image23-2002845928.png](./img/s01-image23.png)
+![webmin System Logs showing mail.log entries](./img/s01-image23.png)
 
 The log entries contain useful information:
  - The `to=` entry lists the user the email message was sent to
@@ -376,7 +376,8 @@ Review the logs currently in view. Do you notice anything suspicious? You should
 **Knowledge Check Question2:** *Based on the current mail logs, find the sender that has already sent messages to a user in your organization and submit this sender's full address in the corresponding question.*
 
 4. (**Ubuntu-Desktop**) Open a new Terminal from the left-hand side menu: 
-![terminal-icon-1116920847.png](./img/terminal-icon.png)
+
+![Ubuntu Desktop terminal icon](./img/terminal-icon.png)
 
 5. (**Ubuntu-Desktop, Terminal**) Connect to the Mail Server via Secure Shell (SSH), type and enter "Yes" when asked if you are sure you want to connect, and use the password `tartans` when asked:
 
@@ -384,11 +385,11 @@ Review the logs currently in view. Do you notice anything suspicious? You should
 ssh user@10.3.3.11
 ```
 
-![s01-image24-189626732.png](./img/s01-image24.png)
+![SSH connection attempt to combined-server](./img/s01-image24.png)
 
 The terminal's command prompt should change to the `user@combined-server` context, verifying that you are now interacting with the command line of the server.
 
-![s01-image25-2014761851.png](./img/s01-image25.png)
+![SSH session connected to combined-server](./img/s01-image25.png)
 
 </p>
 </details>
@@ -423,11 +424,11 @@ You will use the Terminal to trigger a Python script that sends bulk email messa
 python3 send_mail1.py -s badguy@baddomain.com -r jsmith@lab.net -p 25 -S 123.45.67.89 -n 10 -c '{"subject":"Malicious Message","body":"This is the message"}'
 ```
 
-![s01-image26-750092927.png](./img/s01-image26.png)
+![Red-Kali terminal running send_mail1.py bulk email script](./img/s01-image26.png)
 
 4. (**Ubuntu-Desktop, Firefox, webmin System Logs Page**) Return to the webmin tab and click the blue Filter button. You should notice that the mail logs have flagged the sender's username and domain, as well as the IP address of the client that sent the email.
 
-![s01-image29-1121162808.png](./img/s01-image29.png)
+![webmin System Logs showing flagged malicious sender and IP](./img/s01-image29.png)
 
 Now we have enough information to create a blocklist by learning the domain of the user and the IP address of the sender.
 
@@ -463,7 +464,7 @@ baddomain.com   REJECT
 123.45.67.202   REJECT
 ```
 
-![s01-image30-240839757.png](./img/s01-image30.png)
+![Nano editor open on Postfix blacklist with baddomain.com and IP 123.45.67.202](./img/s01-image30.png)
 
 4. (**Ubuntu-Desktop, Terminal, SSH Session to Combined-Server**) Press `CTRL+X` to save, type and enter `Y` to confirm, and then press `Enter` to confirm the same filename.
 
@@ -477,7 +478,7 @@ sudo postmap hash:blacklist
 
 If successful, the process will create a file called `blacklist.db` in the same directory. You can view whether this file exists with the `ls` command.
 
-![s01-image31-394589879.png](./img/s01-image31.png)
+![Terminal showing blacklist.db created after postmap](./img/s01-image31.png)
 
 | &#128270; INFORMATION |
 |---|
@@ -495,11 +496,11 @@ This script uses a different IP address for the client than before. This lets us
 
 Notice in the failure message that the sender address was rejected due to the bad domain of `baddomain.com`.
 
-![s01-image32-15907769.png](./img/s01-image32.png)
+![Red-Kali terminal showing send_mail2.py failure due to sender domain rejected](./img/s01-image32.png)
 
 7. (**Ubuntu-Desktop, Firefox, webmin System Logs Page**) Return to the webmin tab and click the blue `Filter` button again to refresh the results. You can confirm that these attempts were indeed blocked with the message `Sender address rejected`, even though the IP address of the client was changed to 123.45.67.201.
 
-![s01-image47-1066267674.png](./img/s01-image47.png)
+![webmin logs showing Sender address rejected for baddomain.com](./img/s01-image47.png)
 
 This validates that even though the sender used a different address than 123.45.67.202, the incoming mail was still blocked based solely on the domain of the sender's address including badddomain.com.
 
@@ -515,11 +516,11 @@ python3 send_mail3.py -s badguy@gooddomain.com -r jsmith@lab.net -p 25 -S 123.45
 
 Notice the same failure message as before.
 
-![s01-image33-296360553.png](./img/s01-image33.png)
+![Red-Kali terminal showing send_mail3.py failure due to client host rejected](./img/s01-image33.png)
 
 9. (**Ubuntu-Desktop, Firefox, webmin System Logs Page**) Return to the webmin tab and click the blue `Filter` button again to refresh the results. You can confirm that these attempts were indeed blocked with the message `Client host rejected`, even though the domain was changed to `gooddomain.com`.
 
-![s01-image34-1240459179.png](./img/s01-image34.png)
+![webmin logs showing Client host rejected for IP 123.45.67.202](./img/s01-image34.png)
 
 This validates that even though the sender used a different domain than baddomain.com, the incoming mail was still blocked based solely on the IP address of the sender's client system.
 
@@ -529,7 +530,7 @@ The ability to monitor incoming mail messages for any suspicious sender domains 
 
 (**Ubuntu-Desktop, Firefox, New Tab**) To check your work, browse to the grading page at `https://skills.hub/lab/tasks` or `(https://10.5.5.5/lab/tasks)` from the Ubuntu-Desktop. Click the `Submit/Re-Grade Tasks` button to trigger the grading checks. Refresh the results after a few moments to see your results.
 
-![s01-image50-161114832.png](./img/s01-image50.png)
+![Grading page confirming Postfix blocklist checks](./img/s01-image50.png)
 
 Grading Check 3: Successfully implement a mailing blocklist for the domain `baddomain.com` and the IP address `123.45.67.202`
  - Incoming mail messages sent from anything@baddomain.com are denied or were denied at least once based on the mail logs, regardless of the IP address of the client
@@ -564,7 +565,7 @@ pfSense has been serving as our simulated upstream DNS server within the lab env
 
 2. (**Ubuntu-Desktop, Firefox, pfSense Admin webGUI**) Click on the `Services` tab and select `DNS Resolver`.
 
-![s01-image35-178364480.png](./img/s01-image35.png)
+![pfSense DNS Resolver settings page](./img/s01-image35.png)
 
 You will be presented with the settings for the upstream DNS resolver.
 
@@ -572,11 +573,11 @@ You will be presented with the settings for the upstream DNS resolver.
 
  - Check the box next to `Enable SSL/TLS Service`
 
-![s01-image36-420550788.png](./img/s01-image36.png)
+![pfSense DNS Resolver with Enable SSL/TLS checked](./img/s01-image36.png)
 
  - Change the `SSL/TLS Certificate` to `Encrypted DNS` from the dropdown menu. This file was pre-generated for you. If a certificate did not already exist, you would need to create one to complete the TLS handshake (an example of this is provided at the end of this step).
 
-![s01-image37-583682002.png](./img/s01-image37.png)
+![pfSense DNS Resolver certificate set to Encrypted DNS](./img/s01-image37.png)
 
  - Note the SSL/TLS Listen port of `853` but do not change it. This is the default/standard port for DNS over TLS.
 
@@ -587,7 +588,7 @@ You will be presented with the settings for the upstream DNS resolver.
   tls-service-pem: "/var/unbound/encrypteddns.pem"
   ```
 
-![s01-image38-478183555.png](./img/s01-image38.png)
+![pfSense DNS Resolver custom options with cert and key paths](./img/s01-image38.png)
 
 Again, the certificate (.pem) and key files were pregenerated for you and are already placed at the listed location on the firewall's file system.
 
@@ -597,7 +598,7 @@ Again, the certificate (.pem) and key files were pregenerated for you and are al
 
 4. (**Ubuntu-Desktop, Firefox, pfSense Admin webGUI**) Review that you have correctly made all the changes listed in the step above and click the blue `Save` button. Afterwards, scroll to the top of the page and click the green `Apply Changes` button as well.
 
-![s01-image39-1323511567.png](./img/s01-image39.png)
+![pfSense confirmation message after applying changes](./img/s01-image39.png)
 
 You will see a new message at the top of the page that states that the changes have been applied successfully.
 
@@ -611,7 +612,7 @@ With the dig command you can specify the DNS server, 10.0.0.1, the server's port
 dig @10.0.0.1 -p 853 +tls www.malicious-ad.com
 ```
 
-![s01-image44-209669864.png](./img/s01-image44.png)
+![Terminal dig over TLS returning result for www.malicious-ad.com](./img/s01-image44.png)
 
 If you see the response above then DNS over TLS is working properly. If you receive an error stating "no servers could be reached," go back and double check that the pfSense DNS Resolver settings match the steps above and that they have been properly saved and applied. Then try again.
 
@@ -628,11 +629,11 @@ Wireshark should then launch normally.
 
 7. (**Ubuntu-Desktop, Wireshark**) Double-click on the `ens32` interface listing and then Wireshark will start sniffing traffic on this interface.
 
-![s01-image40-1208603183.png](./img/s01-image40.png)
+![Wireshark interface selection screen](./img/s01-image40.png)
 
 8. (**Ubuntu-Desktop, Wireshark**) In the Filter field (where it says "Apply a display filter"), type `dns and ip.addr == 10.0.0.1` and press Enter to apply the filter. This filter makes it so we only see DNS requests made to the upstream DNS server (pfSense) at 10.0.0.1.
 
-![s01-image41-978823293.png](./img/s01-image41.png)
+![Wireshark capture filtered for dns and ip.addr == 10.0.0.1](./img/s01-image41.png)
 
 Since we have not sent any requests to the DNS Resolver since starting the capture, seeing 0 packets present is normal.
 
@@ -644,7 +645,7 @@ nslookup www.malicious-ad.com 10.0.0.1
 
 10. (**Ubuntu-Desktop, Wireshark**) Return to Wireshark and you should see the packets generated for this traffic. 
 
-![s01-image42-416700790.png](./img/s01-image42.png)
+![Wireshark capture showing unencrypted DNS query for www.malicious-ad.com](./img/s01-image42.png)
 
 Notice that several pieces of information are visible:
  - The queried domain/site of `www.malicious-ad.com`
@@ -652,7 +653,7 @@ Notice that several pieces of information are visible:
 
 11. (**Ubuntu-Desktop, Wireshark**) Click into the Filter field again and this time change the filter to `tcp.port == 853` to filter for only encrypted DNS over TLS traffic. You do not need to stop or restart the capture.
 
-![s01-image43-145751740.png](./img/s01-image43.png)
+![Wireshark capture filtered for tcp.port == 853](./img/s01-image43.png)
 
 12. (**Ubuntu-Desktop, Terminal**) Return to the Terminal not running Wireshark and rerun the dig lookup over TLS.
 
@@ -662,7 +663,7 @@ dig @10.0.0.1 -p 853 +tls www.malicious-ad.com
 
 13. (**Ubuntu-Desktop, Wireshark**) Return to Wireshark and you should see the packets generated for this traffic. 
 
-![s01-image45-974999469.png](./img/s01-image45.png)
+![Wireshark capture showing encrypted DNS over TLS packets](./img/s01-image45.png)
 
 This time, you will see many more packets due to the overhead heavy nature of TCP versus DNS' standard UDP protocol.
 
@@ -676,7 +677,7 @@ Notice that nowhere in the `Info` field is the requested resource name or IP add
 
 (**Ubuntu-Desktop, Firefox, New Tab**) To check your work, browse to the grading page at `https://skills.hub/lab/tasks` or `(https://10.5.5.5/lab/tasks)` from the Ubuntu-Desktop. Click the `Submit/Re-Grade Tasks` button to trigger the grading checks. Refresh the results after a few moments to see your results.
 
-![s01-image51-289966472.png](./img/s01-image51.png)
+![Grading page confirming DNS over TLS checks](./img/s01-image51.png)
 
 Grading Check 4: Successfully implement DNS over TLS at the pfSense firewall
  - DNS over TLS is working properly in the pfSense DNS Resolver
@@ -709,7 +710,7 @@ To do this, a mailing script has been created for you.
 python3 /home/user/minichallenge.py
 ```
 
-![s01-image49-1998811457.png](./img/s01-image49.png)
+![Red-Kali terminal running minichallenge.py sending emails](./img/s01-image49.png)
 
 The script will send several emails to your mail server. It will randomly select two malicious domains from a list and randomly select the recipients, so your output will look different from the screenshot above. You can run this script as many times as needed to test your work.
 
@@ -731,7 +732,7 @@ The grading server will use IP address 10.5.5.5 to validate whether the emails a
 
 (**Ubuntu-Desktop, Firefox, New Tab**) To check your work, browse to the grading page at `https://skills.hub/lab/tasks` or `(https://10.5.5.5/lab/tasks)` from the Ubuntu-Desktop. Click the `Submit/Re-Grade Tasks` button to trigger the grading checks. Refresh the results after a few moments to see your results.
 
-![s01-image52-181877477.png](./img/s01-image52.png)
+![Grading page confirming Postfix and Pi-hole blocklist checks](./img/s01-image52.png)
 
 Grading Check 5: Successfully implement a mailing blocklist for the domains identified from the mail logs
  - Both domains are present in the Postfix blocklist file
@@ -781,3 +782,24 @@ Preventing unwanted access to external sites and blocking malicious or otherwise
  - <a href="https://pi-hole.net/" target="_blank">Pi-hole</a>
  - <a href="https://www.cisa.gov/resources-tools/resources/federal-civilian-executive-branch-fceb-operational-cybersecurity-alignment-focal-plan" target="_blank">Federal Civilian Executive Branch (FCEB) Operational Cybersecurity Alignment (FOCAL) Plan</a>
  - <a href="https://niccs.cisa.gov/workforce-development/nice-framework" target="_blank">NICE Framework</a>
+
+</p>
+</details>
+
+<details>
+<summary>
+<h2>Answer Key</h2>
+</summary>
+<p>
+
+**Knowledge Check Question 1**: *Which site is already blacklisted by Pi-hole?*
+
+- The answer is randomized per lab session, but is always one of the following: *www.badware.com*, *www.evilindeed.com*, *www.notsosafe.com*, *www.returntosafety.com*, or *www.dangerahead.com*
+
+**Knowledge Check Question 2**: *What username@domain has already sent emails to your mail server?*
+
+- The answer is randomized per lab session, but is always one of the following: *jack@badguys.net*, *jill@malworm.com*, *sandra@malificent.org*, *brian@evildoer.com*, or *jenny@badware.com* 
+
+</p>
+</details>
+
