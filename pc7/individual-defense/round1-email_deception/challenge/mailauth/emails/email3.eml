@@ -1,0 +1,27 @@
+Return-Path: <charlie@mail-auth.example.com>
+Received: from mail-auth.example.com (mail-auth.example.com [172.20.0.20])
+    by mail-auth.example.com with ESMTP id GHI789C;
+    Tue, 27 May 2025 12:27:42 -0500 (CDT)
+Received-SPF: pass (mail-auth.example.com: domain of sender designates permitted sender) client-ip=172.20.0.20; envelope-from=charlie@mail-auth.example.com; helo=mail-auth.example.com
+Authentication-Results: mail-auth.example.com;
+    spf=pass smtp.mailfrom=charlie@mail-auth.example.com;
+    dkim=pass (signature verified) header.d=example.com;
+    dmarc=pass header.from=mail-auth.example.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+    d=example.com; s=default;
+    h=from:to:subject:date:message-id;
+    bh=47DEQpj8HBSa+/TIxW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+    b=AbCdEfGhIjKlMnOp
+Date: Tue, 27 May 2025 12:27:39 -0500
+From: Charlie <charlie@mail-auth.example.com>
+To: Team <team@example.org>
+Subject: Weird Directory
+Message-ID: <20250527122739.charlie@mail-auth.example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Hello,
+
+I received a link to a directory that does not seem correct.
+
+Please read the directory and tell me what doesn't look correct please:  http://website/directory.txt

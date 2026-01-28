@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DEADDROP</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    body {
+      height: 100%;
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+    }
+    #matrix-canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      z-index: 0;
+      background: #000;
+      pointer-events: none;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      color: #00ff41;
+      text-shadow: 0 0 8px #00ff41, 0 0 2px #fff;
+    }
+    .downloads {
+      margin-top: 4em;
+      background: rgba(0,0,0,0.85);
+      border-radius: 10px;
+      box-shadow: 0 2px 12px #000a;
+      padding: 2em 3em;
+    }
+    .downloads h2 {
+      color: #80ff80;
+      margin-bottom: 1em;
+      font-size: 1.5em;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+    .artifact {
+      margin: 1.5em 0;
+      font-size: 1.15em;
+      text-align: center;
+    }
+    .artifact a {
+      color: #00ff41;
+      font-weight: bold;
+      text-decoration: none;
+      border-bottom: 1px solid #00ff41;
+      transition: color 0.15s;
+    }
+    .artifact a:hover {
+      color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+    .footer {
+      margin-top: 3em;
+      text-align: center;
+      color: #99ff99;
+      font-size: 1em;
+      text-shadow: 0 0 6px #080;
+    }
+    @media (max-width: 700px) {
+      .downloads { padding: 1em; }
+    }
+  </style>
+</head>
+<body>
+<canvas id="matrix-canvas"></canvas>
+<div class="container">
+  <img src="deaddrop-logo.svg" alt="DEADDROP Logo" style="margin-top:2em;margin-bottom:1.5em;max-width:90%;filter: drop-shadow(0 0 10px #00FF41);">
+  <div class="downloads">
+    <h2>MENU</h2>
+    <div class="artifact"><a href="dead_drop.img" download>Download dead_drop.img</a></div>
+    <div class="artifact"><a href="mission_briefing.txt" download>Mission Briefing</a></div>
+  </div>
+  <div class="footer">
+    <p>Mount <b>dead_drop.img</b>, use forensics to recover tokens, and solve the final challenge.<br>
+    <span style="font-size:0.95em;">"The mole is among us."</span>
+    </p>
+  </div>
+</div>
+<script>
+  // Matrix rain effect
+  const canvas = document.getElementById('matrix-canvas');
+  const ctx = canvas.getContext('2d');
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+
+  const fontSize = 18;
+  const columns = Math.floor(width / fontSize);
+  const drops = [];
+  for (let x = 0; x < columns; x++)
+    drops[x] = Math.random() * height / fontSize;
+
+  const chars = "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズヅブプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$%#@!^&*";
+
+  function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.07)";
+    ctx.fillRect(0, 0, width, height);
+
+    ctx.font = fontSize + "px monospace";
+    ctx.fillStyle = "#00FF41";
+    for (let i = 0; i < drops.length; i++) {
+      const text = chars[Math.floor(Math.random() * chars.length)];
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+      if (drops[i] * fontSize > height && Math.random() > 0.965)
+        drops[i] = 0;
+      drops[i]++;
+    }
+  }
+
+  setInterval(draw, 43);
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  });
+</script>
+</body>
+</html>

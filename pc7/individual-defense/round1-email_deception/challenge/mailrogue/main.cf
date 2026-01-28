@@ -1,0 +1,13 @@
+# mail_rogue/main.cf
+myhostname      = mail-rogue.example.com
+mydomain        = example.com
+myorigin        = $mydomain
+
+inet_interfaces = all
+inet_protocols  = ipv4
+
+mydestination   = $myhostname, localhost.$mydomain, localhost
+relay_domains   =
+
+# forward all example.com mail to the forwarder
+transport_maps  = hash:/etc/postfix/transport

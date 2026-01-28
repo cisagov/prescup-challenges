@@ -1,0 +1,9 @@
+<svg viewBox="0 0 660 170" width="660" height="170" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#101617"></rect>
+  <!-- DEAD DROP Text -->
+  <text x="50%" y="80" text-anchor="middle" font-family="monospace, Fira Mono, Courier New, monospace" font-size="64" font-weight="bold" fill="#00FF41" letter-spacing="7" style="text-shadow: 0 0 14px #00ff41, 0 0 30px #00ff41;">DEAD DROP</text>
+  <!-- Binary representation -->
+  <text x="50%" y="132" text-anchor="middle" font-family="monospace" font-size="22" fill="#0dff45" opacity="0.88" letter-spacing="4">
+01000100 01000101 01000001 01000100 00100000 01000100 01010010 01001111 01010000
+  </text>
+</svg>

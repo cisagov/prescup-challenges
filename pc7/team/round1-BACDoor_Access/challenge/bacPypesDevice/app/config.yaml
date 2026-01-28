@@ -1,0 +1,1140 @@
+devices:
+- instance: 1001
+  name: Lecture Hall Lighting Controller
+  shorthand: LHLC
+  description: Controls lighting in auditorium building
+  objects:
+  - type: binaryOutput
+    instance: 1
+    name: Entry Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: analogOutput
+    instance: 1
+    name: Entry Dimmer
+    state:
+      type: constant
+      min: 1
+      max: 100
+      value: 80
+      mutable: true
+      units: percent
+  - type: binaryInput
+    instance: 1
+    name: Entry Occupancy Sensor
+    state:
+      type: random
+      value: 1
+      mutable: false
+      delay: 60
+  - type: binaryOutput
+    instance: 2
+    name: Lecture Room Overhead Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: analogOutput
+    instance: 2
+    name: Lecture Room Dimming
+    state:
+      type: constant
+      min: 1
+      max: 100
+      value: 80
+      mutable: true
+      units: percent
+  - type: binaryInput
+    instance: 2
+    name: Lecture Room Occupancy
+    state:
+      type: constant
+      value: 1
+      mutable: false
+  - type: binaryOutput
+    instance: 3
+    name: Men's Bathroom Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryOutput
+    instance: 4
+    name: Women's Bathroom Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryInput
+    instance: 3
+    name: Men's Bathroom Occupancy
+    state:
+      type: random
+      value: 1
+      mutable: false
+  - type: binaryInput
+    instance: 4
+    name: Women's Bathroom Occupancy
+    state:
+      type: random
+      value: 0
+      mutable: false
+  - type: binaryOutput
+    instance: 5
+    name: Maintenance Room Light
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryInput
+    instance: 5
+    name: Maintenance Room Door Sensor
+    state:
+      type: constant
+      value: 0
+      mutable: false
+  - type: binaryOutput
+    instance: 6
+    name: Main Hallway Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryInput
+    instance: 6
+    name: Hallway Occupancy Sensor
+    state:
+      type: random
+      value: 1
+      mutable: false
+  - type: binaryOutput
+    instance: 7
+    name: Lecture Room Front Stage Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: analogOutput
+    instance: 3
+    name: Front Stage Dimming
+    state:
+      type: constant
+      min: 1
+      max: 100
+      value: 75
+      mutable: true
+      units: percent
+  - type: binaryOutput
+    instance: 8
+    name: Lecture Room Aisle Lights (Safety, Always On)
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: analogOutput
+    instance: 4
+    name: Aisle Lighting Dimming
+    state:
+      type: constant
+      min: 1
+      max: 100
+      value: 60
+      mutable: true
+      units: percent
+  - type: binaryOutput
+    instance: 9
+    name: Lecture Room Rear Zone Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: analogOutput
+    instance: 5
+    name: Rear Zone Dimming
+    state:
+      type: constant
+      min: 1
+      max: 100
+      value: 70
+      mutable: true
+      units: percent
+  - type: binaryOutput
+    instance: 10
+    name: Accent/Presentation Lighting
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: analogOutput
+    instance: 6
+    name: Accent Lighting Dimming
+    state:
+      type: constant
+      min: 1
+      max: 100
+      value: 50
+      mutable: true
+      units: percent
+- instance: 1101
+  name: Lecture Hall HVAC Controller
+  description: Controls HVAC zones in the Lecture Hall
+  shorthand: lecHVAC
+  objects:
+  - type: analogInput
+    instance: 1
+    name: Lecture Room Zone Temperature
+    state:
+      type: random
+      min: 59
+      max: 86
+      value: 69.9
+      mutable: false
+      units: degreesFahrenheit
+      randomMin: 69.4
+      randomMax: 70.4
+      randomAmount: 0.1
+      delay: 30
+  - type: analogValue
+    instance: 1
+    name: Lecture Room Temp Setpoint
+    state:
+      type: constant
+      min: 64.4
+      max: 78.8
+      value: 69.8
+      mutable: true
+      units: degreesFahrenheit
+  # - type: multiStateValue
+  #   instance: 1
+  #   name: Lecture Room Mode
+  #   state:
+  #     type: constant
+  #     min: 0
+  #     max: 3
+  #     value: 0
+  #     mutable: true
+  #   states:
+  #     0: idle
+  #     1: active
+  #     2: fault
+  #     3: manual override
+  - type: analogOutput
+    instance: 1
+    name: Lecture Room Cooling Valve
+    state:
+      type: constant
+      min: 0
+      max: 100
+      value: 60
+      mutable: true
+      units: percent
+  - type: analogOutput
+    instance: 2
+    name: Lecture Room Heating Valve
+    state:
+      type: constant
+      min: 0
+      max: 100
+      value: 0
+      mutable: true
+      units: percent
+  - type: binaryInput
+    instance: 1
+    name: Lecture Room Occupancy Sensor
+    state:
+      type: constant
+      value: 1
+      mutable: false
+  - type: analogInput
+    instance: 2
+    name: Entry Hall Temp
+    state:
+      type: random
+      min: 59
+      max: 86
+      value: 69.8
+      mutable: false
+      units: degreesFahrenheit
+      randomMin: 69.3
+      randomMax: 70.3
+      randomAmount: 0.1
+      delay: 30
+  - type: analogValue
+    instance: 2
+    name: Hall Temp Setpoint
+    state:
+      type: constant
+      min: 64.4
+      max: 78.8
+      value: 69.8
+      mutable: true
+      units: degreesFahrenheit
+  - type: analogOutput
+    instance: 3
+    name: Hallway Cooling Valve
+    state:
+      type: constant
+      min: 0
+      max: 100
+      value: 45
+      mutable: true
+      units: percent
+  - type: binaryInput
+    instance: 2
+    name: Entry Occupancy Sensor
+    state:
+      type: constant
+      value: 1
+      mutable: false
+  - type: analogInput
+    instance: 3
+    name: Bathroom Temp Sensor
+    state:
+      type: random
+      min: 59
+      max: 86
+      value: 69.8
+      mutable: false
+      units: degreesFahrenheit
+      randomMin: 69.3
+      randomMax: 70.3
+      randomAmount: 0.1
+      delay: 30
+  - type: binaryInput
+    instance: 3
+    name: Bathroom Occupancy Group Sensor
+    state:
+      type: constant
+      value: 1
+      mutable: false
+  - type: binaryOutput
+    instance: 1
+    name: Exhaust Fan Control
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: analogInput
+    instance: 4
+    name: Maintenance Room Temp
+    state:
+      type: random
+      min: 59
+      max: 86
+      value: 69.8
+      mutable: false
+      units: degreesFahrenheit
+      randomMin: 69.3
+      randomMax: 70.3
+      randomAmount: 0.1
+      delay: 30
+  - type: binaryOutput
+    instance: 2
+    name: Fan Enable
+    state:
+      type: constant
+      value: 1
+      mutable: true
+- instance: 2001
+  name: Engineering Building Lighting Controller
+  description: Controls lighting across 3 floors of classrooms, labs, and offices
+  shorthand: engLights
+  objects:
+  - type: binaryOutput
+    instance: 1
+    name: Classroom 101 Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryOutput
+    instance: 2
+    name: Classroom 102 Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryInput
+    instance: 1
+    name: Classroom 101 Occupancy
+    state:
+      type: constant
+      value: 1
+      mutable: false
+  - type: binaryInput
+    instance: 2
+    name: Classroom 102 Occupancy
+    state:
+      type: constant
+      value: 0
+      mutable: false
+  - type: binaryValue
+    instance: 1
+    name: Classroom Manual Override
+    state:
+      type: constant
+      value: 0
+      mutable: true
+  - type: binaryOutput
+    instance: 3
+    name: Office Corridor Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryOutput
+    instance: 4
+    name: Dean's Office Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryOutput
+    instance: 5
+    name: Faculty Office Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryInput
+    instance: 3
+    name: Dean's Office Occupancy
+    state:
+      type: constant
+      value: 1
+      mutable: false
+  - type: binaryInput
+    instance: 4
+    name: Faculty Area Motion
+    state:
+      type: random
+      value: 0
+      mutable: false
+  - type: binaryValue
+    instance: 2
+    name: Office Manual Override
+    state:
+      type: constant
+      value: 0
+      mutable: true
+  - type: binaryOutput
+    instance: 6
+    name: Lab 301 Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryOutput
+    instance: 7
+    name: Lab 302 Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: analogOutput
+    instance: 1
+    name: Lab 301 Brightness
+    state:
+      type: constant
+      min: 0
+      max: 100
+      value: 75
+      mutable: true
+      units: percent
+  - type: analogOutput
+    instance: 2
+    name: Lab 302 Brightness
+    state:
+      type: constant
+      min: 0
+      max: 100
+      value: 70
+      mutable: true
+      units: percent
+  - type: binaryInput
+    instance: 5
+    name: Lab 301 Occupancy
+    state:
+      type: constant
+      value: 1
+      mutable: false
+  - type: binaryInput
+    instance: 6
+    name: Lab 302 Occupancy
+    state:
+      type: constant
+      value: 0
+      mutable: false
+  - type: binaryOutput
+    instance: 8
+    name: Floor 1 Bathroom Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryOutput
+    instance: 9
+    name: Floor 2 Bathroom Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryOutput
+    instance: 10
+    name: Floor 3 Bathroom Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryInput
+    instance: 7
+    name: Bathroom Floor 1 Occupancy
+    state:
+      type: random
+      value: 1
+      mutable: false
+  - type: binaryInput
+    instance: 8
+    name: Bathroom Floor 2 Occupancy
+    state:
+      type: random
+      value: 0
+      mutable: false
+  - type: binaryInput
+    instance: 9
+    name: Bathroom Floor 3 Occupancy
+    state:
+      type: constant
+      value: 0
+      mutable: false
+  - type: binaryOutput
+    instance: 11
+    name: Engineering Building Lobby Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryOutput
+    instance: 12
+    name: Engineering Stairwell Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryInput
+    instance: 10
+    name: Lobby Occupancy
+    state:
+      type: constant
+      value: 1
+      mutable: false
+  - type: binaryInput
+    instance: 11
+    name: Stairwell Motion Detection
+    state:
+      type: random
+      value: 0
+      mutable: false
+  - type: binaryOutput
+    instance: 13
+    name: Server Room Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryInput
+    instance: 12
+    name: Server Room Occupancy
+    state:
+      type: constant
+      value: 0
+      mutable: false
+  - type: binaryOutput
+    instance: 14
+    name: Maintenance Room Lights
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryInput
+    instance: 13
+    name: Maintenance Room Occupancy
+    state:
+      type: constant
+      value: 1
+      mutable: false
+- instance: 2101
+  name: Engineering HVAC Controller
+  description: Controls HVAC zones in the Engineering Building
+  shorthand: engHVAC
+  objects:
+  - type: analogInput
+    instance: 1
+    name: Classroom 101 Temp
+    state:
+      type: random
+      min: 59
+      max: 86
+      value: 70.0
+      mutable: false
+      units: degreesFahrenheit
+      randomMin: 69.5
+      randomMax: 70.5
+      randomAmount: 0.1
+      delay: 30
+  - type: analogValue
+    instance: 1
+    name: Classroom 101 Setpoint
+    state:
+      type: constant
+      min: 64.4
+      max: 78.8
+      value: 69.8
+      mutable: true
+      units: degreesFahrenheit
+  - type: analogOutput
+    instance: 1
+    name: Classroom 101 Cooling Valve
+    state:
+      type: constant
+      min: 0
+      max: 100
+      value: 55
+      mutable: true
+      units: percent
+  - type: analogInput
+    instance: 2
+    name: Classroom 102 Temp
+    state:
+      type: random
+      min: 59
+      max: 86
+      value: 78.0
+      mutable: false
+      units: degreesFahrenheit
+      randomMin: 77.5
+      randomMax: 78.5
+      randomAmount: 0.1
+      delay: 30
+  - type: analogValue
+    instance: 2
+    name: Classroom 102 Setpoint
+    state:
+      type: constant
+      min: 64.4
+      max: 78.8
+      value: 69.8
+      mutable: true
+      units: degreesFahrenheit
+  - type: analogOutput
+    instance: 2
+    name: Classroom 102 Cooling Valve
+    state:
+      type: constant
+      min: 0
+      max: 100
+      value: 40
+      mutable: true
+      units: percent
+  - type: analogInput
+    instance: 3
+    name: Office Zone Temp
+    state:
+      type: random
+      min: 59
+      max: 86
+      value: 69.6
+      mutable: false
+      units: degreesFahrenheit
+      randomMin: 69.1
+      randomMax: 70.1
+      randomAmount: 0.1
+      delay: 30
+  - type: analogValue
+    instance: 3
+    name: Office Setpoint
+    state:
+      type: constant
+      min: 64.4
+      max: 78.8
+      value: 69.8
+      mutable: true
+      units: degreesFahrenheit
+  - type: analogOutput
+    instance: 3
+    name: HVAC Valve
+    state:
+      type: constant
+      min: 0
+      max: 100
+      value: 60
+      mutable: true
+      units: percent
+  - type: analogInput
+    instance: 4
+    name: Lab 301 Temp
+    state:
+      type: random
+      min: 59
+      max: 86
+      value: 69.7
+      mutable: false
+      units: degreesFahrenheit
+      randomMin: 69.2
+      randomMax: 70.2
+      randomAmount: 0.1
+      delay: 30
+  - type: analogInput
+    instance: 5
+    name: Lab 301 Supply Air Temp
+    state:
+      type: random
+      min: 59
+      max: 86
+      value: 69.5
+      mutable: false
+      units: degreesFahrenheit
+      randomMin: 69.0
+      randomMax: 70.0
+      randomAmount: 0.1
+      delay: 30
+  - type: analogValue
+    instance: 4
+    name: Lab 301 Setpoint
+    state:
+      type: constant
+      min: 64.4
+      max: 78.8
+      value: 69.8
+      mutable: true
+      units: degreesFahrenheit
+  - type: analogOutput
+    instance: 4
+    name: Lab 301 Cooling Valve
+    state:
+      type: constant
+      min: 0
+      max: 100
+      value: 65
+      mutable: true
+      units: percent
+  - type: analogOutput
+    instance: 5
+    name: Lab 301 Exhaust Damper
+    state:
+      type: constant
+      min: 0
+      max: 100
+      value: 80
+      mutable: true
+      units: percent
+  - type: binaryOutput
+    instance: 1
+    name: Lab 301 Exhaust Fan Control
+    state:
+      type: constant
+      value: 1
+      mutable: true
+- instance: 2201
+  name: Security Door Controller
+  description: Controls high-security access doors for labs and entrances
+  shorthand: secDoors
+  objects:
+  - type: binaryOutput
+    instance: 1
+    name: Lab 301 Door Lock
+    state:
+      type: constant
+      value: 1
+      mutable: true
+  - type: binaryInput 
+    instance: 1
+    name: Lab 301 Door Sensor
+    state:
+      type: constant
+      value: 0
+      mutable: false
+  - type: binaryInput
+    instance: 2
+    name: Lab 301 REX Button
+    state:
+      type: constant
+      value: 0
+      mutable: false
+  - type: multiStateInput
+    instance: 1
+    name: Lab 301 Access Status
+    state:
+      type: constant
+      min: 0
+      max: 3
+      value: 0
+      mutable: false
+    states:
+      0: idle
+      1: active
+      2: fault
+      3: manual override
+  - type: binaryOutput
+    instance: 2
+    name: Main Entrance Lock
+    state:
+      type: constant
+      value: 0
+      mutable: true
+  - type: binaryInput
+    instance: 3
+    name: Main Entrance Door Sensor
+    state:
+      type: random
+      value: 0
+      mutable: false
+  - type: multiStateInput
+    instance: 2
+    name: Main Entrance Access Status
+    state:
+      type: constant
+      min: 0
+      max: 3
+      value: 0
+      mutable: false
+    states:
+      0: idle
+      1: active
+      2: fault
+      3: manual override
+  - type: binaryInput
+    instance: 4
+    name: Server Room Door Lock
+    state:
+      type: constant
+      value: 1
+      mutable: false
+- instance: 3001
+  name: Fire & Life Safety
+  description: Monitors building fire systems
+  shorthand: fireSafety
+  objects:
+  - type: binaryInput
+    instance: 1
+    name: Lecture Hall Fire Alarm State
+    state:
+      type: constant
+      value: 0
+      mutable: false
+  - type: binaryInput
+    instance: 2
+    name: Engineering Fire Alarm State
+    state:
+      type: constant
+      value: 0
+      mutable: false
+  - type: binaryValue
+    instance: 1
+    name: Smoke Damper Override
+    state:
+      type: custom
+      class: SmokeDamper
+      value: 0
+      mutable: true
+  - type: multiStateOutput
+    instance: 1
+    name: Fire System Mode
+    state:
+      type: custom
+      class: FireMode
+      min: 0
+      max: 4
+      value: 1
+      mutable: true
+    states:
+      1: Normal
+      2: Test
+      3: Drill
+      4: Service
+  - type: binaryOutput
+    instance: 1
+    name: HVAC Shutdown Command
+    state:
+      type: custom
+      class: HVACDisable
+      value: 0
+      mutable: true
+  # - type: notificationClass
+  #   instance: 1
+  #   name: Alarm Routing
+- instance: 3002
+  name: Power Monitoring System
+  description: Tracks electrical consumption and demand
+  shorthand: power
+  objects:
+  - type: analogInput
+    instance: 1
+    name: Phase A Voltage
+    state:
+      type: random
+      min: 0
+      max: 480
+      value: 120
+      mutable: false
+      units: volts
+      randomMin: 117.6
+      randomMax: 122.4
+      randomAmount: 1.0
+      delay: 10
+  - type: analogInput
+    instance: 2
+    name: Phase A Current
+    state:
+      type: random
+      min: 0
+      max: 100
+      value: 30
+      mutable: false
+      units: amperes
+      randomMin: 28.5
+      randomMax: 31.5
+      randomAmount: 0.5
+      delay: 10
+  - type: analogInput
+    instance: 3
+    name: Total Real Power (kW)
+    state:
+      type: random
+      min: 0
+      max: 500
+      value: 150
+      mutable: false
+      units: kilowatts
+      randomMin: 135.0
+      randomMax: 165.5
+      randomAmount: 2.0
+      delay: 15
+  # - type: analogInput
+  #   instance: 4
+  #   name: Total Energy Consumption (kWh) # Similar to another, should just be growing; random doesn't make sense
+  #   state:
+  #     type: random
+  #     min: 0
+  #     max: 10000
+  #     value: 2200
+  #     mutable: false
+  #     units: kilowattHours
+  #     randomMin: 2156.0
+  #     randomMax: 2244.0
+  #     randomAmount: 4.4
+  #     delay: 30
+  - type: analogValue
+    instance: 1
+    name: Peak Demand Threshold
+    state:
+      type: constant
+      min: 200
+      max: 400
+      value: 275
+      mutable: true
+      units: kilowatts
+- instance: 3003
+  name: Weather Station
+  description: Campus rooftop environmental sensors
+  shorthand: Weather
+  objects:
+  - type: analogInput
+    instance: 1
+    name: Outdoor Air Temperature
+    state:
+      type: random
+      min: -4
+      max: 122
+      value: 74.3
+      mutable: false
+      units: degreesFahrenheit
+      randomMin: 73.8
+      randomMax: 74.8
+      randomAmount: 0.1
+      delay: 30
+  - type: analogInput
+    instance: 2
+    name: Relative Humidity
+    state:
+      type: random
+      min: 0
+      max: 100
+      value: 45
+      mutable: false
+      units: percent
+      randomMin: 44.1
+      randomMax: 45.9
+      randomAmount: 0.5
+      delay: 60
+  - type: analogInput
+    instance: 3
+    name: Wind Speed
+    state:
+      type: random
+      min: 0
+      max: 50
+      value: 5
+      mutable: false
+      units: milesPerHour
+      randomMin: 4.5
+      randomMax: 5.5
+      randomAmount: 0.5
+      delay: 20
+  - type: analogInput
+    instance: 4
+    name: Solar Radiation
+    state:
+      type: random
+      min: 0
+      max: 1000
+      value: 350
+      mutable: false
+      units: wattsPerSquareMeter
+      randomMin: 315.0
+      randomMax: 385.0
+      randomAmount: 10.0
+      delay: 60
+  - type: binaryInput
+    instance: 1
+    name: Rain Detected
+    state:
+      type: constant
+      value: 0
+      mutable: false
+- instance: 3005
+  name: Server Room Monitor
+  description: Monitors temperature and power status of lab server rooms
+  shorthand: server
+  objects:
+  - type: analogInput
+    instance: 1
+    name: Rack Temp Sensor
+    state:
+      type: random
+      min: 50.0
+      max: 122.0
+      value: 80.6
+      units: degreesFahrenheit
+      mutable: false
+      randomMin: 80.1
+      randomMax: 81.1
+      randomAmount: 0.1
+      delay: 30
+  - type: analogInput
+    instance: 2
+    name: Supply Air Temp
+    state:
+      type: random
+      min: 50.0
+      max: 86.0
+      value: 63.5
+      units: degreesFahrenheit
+      mutable: false
+      randomMin: 63.0
+      randomMax: 64.0
+      randomAmount: 0.1
+      delay: 30
+  - type: analogOutput
+    instance: 1
+    name: High Temp Alarm Threshold
+    state:
+      type: custom
+      class: HighTempAlarmThreshold
+      min: 77.0
+      max: 104.0
+      value: 89.6
+      units: degreesFahrenheit
+      mutable: true
+  - type: binaryInput
+    instance: 1
+    name: Door Contact (Cabinet Access)
+    state:
+      type: constant
+      value: 0
+      mutable: false
+  - type: binaryInput
+    instance: 2
+    name: UPS On Battery
+    state:
+      type: constant
+      value: 0
+      mutable: false
+  - type: binaryInput
+    instance: 3
+    name: AC Power Status
+    state:
+      type: constant
+      value: 1
+      mutable: false
+- instance: 3006
+  name: EV Charging Station
+  description: Simulated electric vehicle chargers with status and metering
+  shorthand: EV
+  objects:
+  - type: binaryInput
+    instance: 1
+    name: Charger 1 Plug State
+    state:
+      type: constant
+      value: 1
+      mutable: false
+  - type: binaryInput
+    instance: 2
+    name: Charger 1 Charging Active
+    state:
+      type: constant
+      value: 1
+      mutable: false
+  - type: analogInput
+    instance: 1
+    name: Charger 1 Power Draw (kW)
+    state:
+      type: random
+      min: 0
+      max: 50
+      value: 22.5
+      mutable: false
+      units: kilowatts
+      randomMin: 21.38
+      randomMax: 23.62
+      randomAmount: 1.0
+      delay: 15
+  # - type: analogInput  # Dropping this; should only grow (and should be based on Draw) but I don't support that yet
+  #   instance: 2
+  #   name: Charger 1 Energy Delivered (kWh)
+  #   state:
+  #     type: random
+  #     min: 0
+  #     max: 500
+  #     value: 134
+  #     mutable: false
+  #     units: kilowattHours
+  #     randomMin: 131.32
+  #     randomMax: 136.68
+  #     randomAmount: 0.27
+  #     delay: 30
+  - type: binaryInput
+    instance: 3
+    name: Charger 2 Plug State
+    state:
+      type: constant
+      value: 0
+      mutable: false
+  - type: binaryInput
+    instance: 4
+    name: Charger 2 Charging Active
+    state:
+      type: constant
+      value: 0
+      mutable: false
+  - type: analogInput
+    instance: 3
+    name: Charger 2 Power Draw (kW)
+    state:
+      type: constant
+      value: 0
+      mutable: false
+      units: kilowatts

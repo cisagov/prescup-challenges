@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustFall Bank</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">TrustFall Bank</a>
+            <div class="d-flex">
+                {% if user %}
+                    <a href="/dashboard" class="btn btn-outline-secondary me-2">Dashboard</a>
+                    <a href="/logout" class="btn btn-outline-danger">Logout</a>
+                {% else %}
+                    <a href="/login" class="btn btn-outline-primary">Login</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer class="text-center py-4 border-top mt-5">
+        <p>&copy; 2025 TrustFall Bank. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

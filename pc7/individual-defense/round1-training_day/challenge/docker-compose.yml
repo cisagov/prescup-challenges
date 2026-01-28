@@ -1,0 +1,136 @@
+x-challenge:
+  name: "Training Day"
+  description: |
+    # Training Day
+
+    This is training day. Explore several forensics based training exercises to bring you one step closer to becoming a Specialist. As a part of the Nautical Rapid Response Team (NRRT), you are tasked with completing forensics based training tasks in preparation for testing for Response Recruit (R-2).
+
+    **NICE Work Roles**
+
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework)
+    - [Secure Software Development](https://niccs.cisa.gov/tools/nice-framework)
+
+    **NICE Tasks**
+
+    - [T1091](https://niccs.cisa.gov/tools/nice-framework): Perform authorized penetration testing on enterprise network assets
+    - [T1619](https://niccs.cisa.gov/tools/nice-framework): Perform risk and vulnerability assessments
+    - [T1624](https://niccs.cisa.gov/tools/nice-framework): Conduct vulnerability analysis of software patches and updates
+    
+
+    ## Background
+
+    As a part of the Nautical Rapid Response Team (NRRT), you are tasked with completing forensics based training tasks in preparation for testing for Response Recruit (R-2).
+
+    ## Objectives 
+    * Recover a deleted artifact from an image derived from a recent breach
+    * Decrypt a binary and decode the base64'd secret.
+    * Inspect system logs to find a hidden payload 
+    * Inspect a suspicious packet capture to determine a hidden payload in voice communications
+
+    ## Getting Started 
+
+    To begin, navigate to `http://nrrt.pccc` and retrieve `evidence_collection.tar.gz` from the Title Screen.
+    This is the file you need to begin your training session.
+
+    ## Additional Information (Tokens)
+
+    The token format for this engagement is:
+
+    ```text
+    PCCC{VALUE}
+    ```
+
+    ### For TOKEN2
+
+    The memory dump contains a small structured binary blob embedded at an unknown offset.
+
+    The blob begins with a fixed ASCII marker and uses a simple header layout:
+
+    [ MARKER | VERSION | KEY | LENGTH | DATA ]
+
+    * MARKER (4 bytes) - Identifies the start of the blob (LCM2)
+    * VERSION (1 byte) - Allows future format changes
+    * XOR_KEY (1 byte) - A randomized key between 0xA1 and 0xFF
+    * LENGTH (2 bytes, little-endian) - Length of the encoded payload
+    * XOR_DATA (N bytes) - XOR-encoded base64 string
+
+
+    No filesystem or executable format is present.
+    Analysis requires identifying the marker, parsing the header, and decoding the data accordingly.
+
+    ### For TOKEN4
+
+    Please note that fragments will begin with "Part #:".
+
+    ## System and Tool Credentials
+
+    |system/tool|location|
+    |-----------|--------|
+    |training-day|`http://nrrt.pccc`|
+
+    ## Note
+
+    Attacking or unauthorized access to the challenge platform is forbidden. `nrrt.pccc` is only used to serve the exercise artifacts that you will need for this challenge.
+
+  icon: "TbUser"
+  summary: "This is training day. Explore several forensics based training exercises to bring you one step closer to becoming a Specialist."
+  variables:
+    token1:
+      template: "fake.bothify('PCCC{TD-TK?#?#?#}')"
+      default: &token1 "PCCC{TD-TK199999}"
+    token2:
+      template: "fake.bothify('PCCC{TD-TK?#?#?#}')"
+      default: &token2 "PCCC{TD-TK288888}"
+    token3:
+      template: "fake.bothify('PCCC{TD-TK?#?#?#}')"
+      default: &token3 "PCCC{TD-TK377777}"
+    token4:
+      template: "fake.bothify('PCCC{TD-TK?#?#?#}')"
+      default: &token4 "PCCC{TD-TK466666}"      
+
+  questions:
+    - name: Token 1 - Artifacts of The Past
+      body: Recover a deleted token artifact from an image derived from a recent breach and decode the UTF-8 encoding
+      answer: *token1
+      placeholder: PCCC{TD-?????????}
+      points: 750 # 25%
+      max_attempts: 3
+
+    - name: Token 2 - Memento
+      body: Discover the XOR key (0xA1-0xFF), decrypt the dump, then decode the resulting base64 string.
+      answer: *token2
+      placeholder: PCCC{TD-????????}
+      points: 750 # 25%
+      max_attempts: 3
+
+    - name: Token 3 - Log Investigator
+      body: Inspect the suspicious system log capture to determine a hidden payload being passed in an encrypted protocol command
+      answer: *token3
+      placeholder: PCCC{TD-????????}
+      points: 750 # 25%
+      max_attempts: 3  
+
+    - name: Token 4 - Real Talk
+      body: Inspect a suspicious packet capture to determine a fragmented hidden payload being passed in a voice protocol
+      answer: *token4
+      placeholder: PCCC{TD-????????}
+      points: 750 # 25%
+      max_attempts: 3
+
+services:
+  training_day:
+    build:
+      context: .
+    hostname: nrrt.pccc
+    environment:
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+    networks:
+      - competitor_net
+
+networks:
+  competitor_net:
+    internal: true
+#    external: true  # Comment out for prod

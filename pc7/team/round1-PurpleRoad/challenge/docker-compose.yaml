@@ -1,0 +1,268 @@
+x-challenge:
+  name: "Purple Road"
+  description: |
+    # The Purple Road
+
+    This challenge is a mixture of Red and Blue team tasks ranging from log analysis to service exploitation.
+
+    **NICE Work Roles**
+
+    - [Cyber Defense Analyst](https://niccs.cisa.gov/tools/nice-framework)
+    - [Exploitation Analyst](https://niccs.cisa.gov/tools/nice-framework)
+
+    **NICE Tasks**
+
+    - [T1047](https://niccs.cisa.gov/tools/nice-framework): Perform network reconnaissance and service discovery.
+    - [T1052](https://niccs.cisa.gov/tools/nice-framework): Identify and exploit misconfigurations.
+    - [T1084](https://niccs.cisa.gov/tools/nice-framework): Analyze system and network logs.
+    - [T1101](https://niccs.cisa.gov/tools/nice-framework)
+
+
+    ## Background
+
+    You have been hired to perform Red Team and Blue Team tasks in the provided environment. Your client has a running `fileserver` on the network and wants you to test its security defenses and increase other defenses. They also would like you to investigate the cause of a recent attack on their system.
+
+    ## Getting Started
+
+    **To access the grader**, navigate to `http://grader` in a web browser and you will be provided access to the form.
+
+    ## Team Dynamics
+
+    **Red Team**: The Red Team will be responsible for the objectives for tokens one and two. NOTE: These tasks do not require the `grader`.  
+    **Blue Team**: The Blue Team must conduct deep log analysis on the `logserver` to obtain the remaining six tokens. NOTE: These tasks do require use of the `grader`.
+
+    ## Objectives
+
+    ### Red Team
+    ***Tasks 1 - 2***
+
+    The following table contains a listing of the tokens that are obtainable by the Red Team and which tasks they are tied to. For example, Task 1 corresponds with `Question 1` in the platform:
+
+    |owner|task id|objective|grader required|
+    |------|------|------|-------|
+    |red team|1|Gain access to the `fileserver`|no|
+    |red team|2|Gain `root` access to a hidden server|no|
+
+    ### Blue Team
+    ***Task 3: Blue Team Form Submissions (Grader)***  
+    Conversely, the following table contains a listing of the tokens that are obtainable by the Blue Team. Within the `grader`, answering a question correctly will yield its corresponding token.
+
+    |owner|task id|objective|grader required|
+    |------|------|------|-------|
+    |blue team|3.1|Which user successfully logged in from 172.19.0.5 on port 2222?|yes|
+    |blue team|3.2|Which command did the attacker run with `sudo`? (example: /bin/command /file/arg)|yes|
+    |blue team|3.3|Where did the attacker connect for C2 from? (example: example.com:1234)|yes|
+    |blue team|3.4|Which CVE was used to perform privilege escalation? (example: CVE-999-9999)|yes|
+    |blue team|3.5|Find the token hidden in the logs on the `logserver`|no|
+
+
+    ***Task 4: Secure Configurations***  
+    To obtain the final tokens of this challenge, perform the following tasks on the `fileserver` after the red team has given you access:
+
+    |owner|task id|objective|grader required|
+    |------|------|------|-------|
+    |blue team|4.1|Disable the misconfiguration that allowed the Red Team to gain initial access.|yes|
+    |blue team|4.2|Configure `fail2ban` to protect the `ftp` service|yes|
+    |blue team|4.3|Ensure no world-writable files in `/home`|yes|
+
+    Once complete, use the `grader` to submit your request for validation (located near the bottom of the form). Once submitted, you will be notified on whether or not the objectives were appropriately completed.
+
+
+    ## Tokens 
+    Tokens will be in the format `PCCC{value_XX_XXXX}`.
+
+    ## System and Tool Credentials
+
+    |system/tool|hostname|username|password|
+    |-----------|--------|--------|--------|
+    |logserver|`logserver`|user|password|
+    |fileserver|`fileserver`|N/A|N/A|
+    |*unknown asset|TBD|TBD|TBD|
+
+    * NOTE: The Red Team is tasked with discovering this asset in Question/Task 2.
+
+  summary: |
+    The Red team and Blue team work together to solve this one.
+
+  templates:
+    fileserver_1: &fileserver_1_template "fake.bothify('PCCC{fileserver_??_####}', letters='ABCDEF0123456789')"
+    hidden_2: &hidden_2_template "fake.bothify('PCCC{hidden_??_####}', letters='ABCDEF0123456789')"
+    q1_3: &q1_3_template "fake.bothify('PCCC{q1_??_####}', letters='ABCDEF0123456789')"
+    q2_4: &q2_4_template "fake.bothify('PCCC{q2_??_####}', letters='ABCDEF0123456789')"
+    q3_5: &q3_5_template "fake.bothify('PCCC{q3_??_####}', letters='ABCDEF0123456789')"
+    q4_6: &q4_6_template "fake.bothify('PCCC{q4_??_####}', letters='ABCDEF0123456789')"
+    log_7: &log_7_template "fake.bothify('PCCC{log_??_####}', letters='ABCDEF0123456789')"
+    conf1_8: &conf1_8_template "fake.bothify('PCCC{conf1_??_####}', letters='ABCDEF0123456789')"
+    conf2_9: &conf2_9_template "fake.bothify('PCCC{conf2_??_####}', letters='ABCDEF0123456789')"
+    conf3_10: &conf3_10_template "fake.bothify('PCCC{conf3_??_####}', letters='ABCDEF0123456789')"
+
+  variables:
+    
+    fileserver_1:
+      template: *fileserver_1_template
+      default: &fileserver_1_template_default "PCCC{Fileserver_Flag_1}"
+
+    hidden_2:
+      template: *hidden_2_template
+      default: &hidden_2_template_default "PCCC{Hidden_Flag_2}"
+
+    q1_3:
+      template: *q1_3_template
+      default: &q1_3_template_default "PCCC{Question_1_Pass_Flag_3}"
+    
+    q2_4:
+      template: *q2_4_template
+      default: &q2_4_template_default "PCCC{Question_2_Pass_Flag_4}"
+  
+    q3_5:
+      template: *q3_5_template
+      default: &q3_5_template_default "PCCC{Question_3_Pass_Flag_5}"
+
+    q4_6:
+      template: *q4_6_template
+      default: &q4_6_template_default "PCCC{Question_4_Pass_Flag_6}"
+    
+    log_7:
+      template: *log_7_template
+      default: &log_7_template_default "PCCC{Log_found_7}"
+
+    conf1_8:
+      template: *conf1_8_template
+      default: &conf1_8_template_default "PCCC{Conf1_pass_8}"
+
+    conf2_9:
+      template: *conf2_9_template
+      default: &conf2_9_template_default "PCCC{Conf2_pass_9}"
+
+    conf3_10:
+      template: *conf3_10_template
+      default: &conf3_10_template_default "PCCC{Conf3_pass_10}"
+
+  questions:
+  # total points 3472
+    - name: "Question 1"
+      body: "What is the token on the fileserver?"
+      placeholder: "PCCC{value_XX_XXXX}"
+      points: 500 # 500
+      answer: *fileserver_1_template_default
+      max_attempts: 3
+
+    - name: "Question 2"
+      body: "What is the token on the hidden machine?"
+      placeholder: "PCCC{value_XX_XXXX}"
+      points: 500 # 1000
+      answer: *hidden_2_template_default
+      max_attempts: 3
+      
+    - name: "Question 3.1"
+      body: "(Grader) Which user successfully logged in from 172.19.0.5 on port 2222?"
+      placeholder: "PCCC{value_XX_XXXX}"
+      points: 310 # 1310
+      answer: *q1_3_template_default
+      max_attempts: 3
+
+    - name: "Question 3.2"
+      body: "(Grader) Which command did the attacker run with `sudo`? (example: /bin/command /file/arg)"
+      placeholder: "PCCC{value_XX_XXXX}"
+      points: 310 # 1620
+      answer: *q2_4_template_default
+      max_attempts: 3
+
+    - name: "Question 3.3"
+      body: "(Grader) Where did the attacker connect for C2 from? (example: example.com:1234)"
+      placeholder: "PCCC{value_XX_XXXX}"
+      points: 310 # 1930
+      answer: *q3_5_template_default
+      max_attempts: 3
+
+    - name: "Question 3.4"
+      body: "(Grader) Which CVE was used to perform privilege escalation? (example: CVE-999-9999)"
+      placeholder: "PCCC{value_XX_XXXX}"
+      points: 310 # 2240
+      answer: *q4_6_template_default
+      max_attempts: 3
+
+    - name: "Question 3.5"
+      body: "What is the value of the token in the logs?"
+      placeholder: "PCCC{value_XX_XXXX}"
+      points: 332 # 2572
+      answer: *log_7_template_default
+      max_attempts: 3
+
+    - name: "Question 4.1"
+      body: "(Grader Task) Anonymous FTP disabled"
+      placeholder: "PCCC{value_XX_XXXX}"
+      points: 300 # 2872
+      answer: *conf1_8_template_default
+      max_attempts: 3
+
+    - name: "Question 4.2"
+      body: "(Grader Task) Fail2Ban enabled for vsftpd"
+      placeholder: "PCCC{value_XX_XXXX}"
+      points: 300 # 3172
+      answer: *conf2_9_template_default
+      max_attempts: 3
+
+    - name: "Question 4.3"
+      body: "(Grader Task) No world-writable files present in /home"
+      placeholder: "PCCC{value_XX_XXXX}"
+      points: 300 # 3472
+      answer: *conf3_10_template_default
+      max_attempts: 3
+      
+services:
+  flagserver:
+    build: ./flagserver
+    hostname: flagserver
+    environment:
+      token1: *fileserver_1_template_default
+      token2: *hidden_2_template_default
+      token7: *log_7_template_default
+    networks: 
+      - flagnet
+
+  fileserver:
+    build: ./fileserver
+    hostname: fileserver
+    networks:
+      - competitor_net
+      - hiddennet
+      - flagnet
+  logserver:
+    build: ./logserver
+    hostname: logserver
+    networks:
+      - competitor_net
+      - flagnet
+
+  hidden:
+    build: ./hidden
+    hostname: hidden
+    networks:
+      - hiddennet
+      - flagnet
+
+  grader:
+    build: ./grader
+    hostname: grader
+    environment:    
+      token3: *q1_3_template_default
+      token4: *q2_4_template_default
+      token5: *q3_5_template_default
+      token6: *q4_6_template_default
+      token8: *conf1_8_template_default
+      token9: *conf2_9_template_default
+      token10: *conf3_10_template_default
+
+    networks:
+      - competitor_net
+      - flagnet
+
+networks:
+  competitor_net:
+    internal: true
+    # external: true # Uncomment this line to connect to an existing external network
+  hiddennet:
+    internal: true
+  flagnet:
+    internal: true

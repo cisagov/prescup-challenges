@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nebula Dynamics | API Reference</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+       body {
+            margin: 0;
+            background: url('/static/Nebula Dynamics Home.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #cce7ff;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        header {
+            background-color: #050a1f;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 1em 2em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: row;
+            align-items: left;
+        }
+        .logo-title {
+            display: flex;
+            align-items: center;
+        }
+        .logo-title img {
+            height: 40px;
+            margin-right: 1em;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            margin-top: 0.5em;
+        }
+        nav a {
+            color: #cce7ff;
+            margin-right: 1.5em;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+	    padding: 2em 2em 2em 2em;
+	    max-width: 1200px;
+	    margin: 0 auto;
+	}
+        h1, h2 {
+            color: #a5d7ff;
+        }
+        .event {
+            border-left: 4px solid #1a75ff;
+            margin-bottom: 1.5em;
+            padding-left: 1em;
+        }
+        .event-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #fff;
+        }
+        .event-desc {
+            color: #d0e8ff;
+            margin-top: 0.25em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="/static/Logo.png" alt="Nebula Dynamics Logo">
+        </div>
+        <nav>
+            {% include "nav.html" %}
+        </nav>
+    </header>
+
+<div class="container">
+    <h2>Internal API Reference Guide</h2>
+    <p>This page provides an overview of known functional endpoints and the corresponding actions available through the Nebula Dynamics system. Use responsibly and with authentication where required.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Endpoint</th>
+                <th>Method</th>
+                <th>Description</th>
+                <th>Authentication</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>/telemetry/submit</td>
+                <td>POST</td>
+                <td>Submits spacecraft telemetry data. Expected parameter: <code>node</code>.</td>
+                <td>Optional (flagged if malformed XML)</td>
+            </tr>
+            <tr>
+                <td>/admin</td>
+                <td>GET, POST, OPTIONS</td>
+                <td>Administrative dashboard access.</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>/internal/notes</td>
+                <td>GET</td>
+                <td>Contains debug notes. Use set_debug URI to enable functionality.</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>/progress</td>
+                <td>GET</td>
+                <td>Visualizes rocket mission progress. Primarily static output.</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>/help</td>
+                <td>GET</td>
+                <td>This page. Lists available API methods and usage for developers and operatives.</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>/report/render</td>
+                <td>POST</td>
+                <td>Used to render PDF reports. Only accepts HEX addresses (e.g. 0xHEX VALUE) when using URLs. Accepts XML requests with <report></report> data.</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>/api/submitlog/</td>
+                <td>POST</td>
+                <td>Use the data value "entry=VALUE" to write logs to the system.</td>
+                <td>None</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

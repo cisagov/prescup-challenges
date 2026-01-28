@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Training Day: Welcome Cadet</title>
+  <style>
+    body {
+      background: black;
+      color: #00ff00;
+      font-family: monospace;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    #matrix {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+    }
+    #content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2em;
+      border-bottom: 2px solid #00ff00;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .file-list {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      border: 1px solid #00ff00;
+      border-radius: 5px;
+      max-width: 600px;
+    }
+    .file-list a {
+      color: #00ff00;
+      text-decoration: none;
+    }
+    .file-list a:hover {
+      text-decoration: underline;
+      color: #aaffaa;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <div id="content">
+    <h1>💻 Training Day: NRRT Specialist Pre-Qualification Exercise</h1>
+    <div class="file-list">
+      <p>Available downloads:</p>
+      <ul id="fileLinks">
+        <!-- Dynamically filled -->
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Matrix rain animation
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const letters = Array(256).join("0").split("");
+    function drawMatrix() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#0F0";
+      letters.forEach((y_pos, index) => {
+        const text = String.fromCharCode(3e4 + Math.random() * 33);
+        const x_pos = index * 10;
+        ctx.fillText(text, x_pos, y_pos);
+        letters[index] = y_pos > 758 + Math.random() * 1e4 ? 0 : y_pos + 10;
+      });
+    }
+    setInterval(drawMatrix, 33);
+
+    // Simulated file list (replace with actual file names served in /web/)
+    const files = ["evidence_collection.tar.gz", "mission_briefing.txt"];
+    const fileList = document.getElementById("fileLinks");
+    files.forEach(file => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = `./${file}`;
+      a.download = file;
+      a.textContent = file;
+      li.appendChild(a);
+      fileList.appendChild(li);
+    });
+
+  </script>
+</body>
+</html>

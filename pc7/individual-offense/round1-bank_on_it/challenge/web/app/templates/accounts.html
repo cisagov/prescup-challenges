@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Your Accounts</h2>
+
+    {% for group, accounts in accounts_by_type.items() %}
+    <h4 class="mt-4 text-capitalize">{{ group }} Accounts</h4>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Account Number</th>
+                <th>Balance</th>
+                <th>Opened On</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for account in accounts %}
+            <tr>
+                <td>{{ account.account_number }}</td>
+                <td>{{ account.name }}</td>
+                <td>${{ account.balance }}</td>
+                <td>{{ account.created_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>No accounts found.</p>
+    {% endfor %}
+</div>
+{% endblock %}

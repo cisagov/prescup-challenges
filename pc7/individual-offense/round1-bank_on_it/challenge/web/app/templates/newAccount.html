@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container mt-5" style="max-width: 600px;">
+    <h2 class="mb-4">Open a New Account</h2>
+    {% if error %}<div class="alert alert-danger">{{ error }}</div>{% endif %}
+    <form method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Account Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="e.g. Vacation Fund" required>
+        </div>
+        <div class="mb-3">
+            <label for="type" class="form-label">Account Type</label>
+            <select class="form-select" id="type" name="type" required>
+                <option value="checking">Checking</option>
+                <option value="savings">Savings</option>
+                <option value="investment">Investment</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success">Open Account</button>
+        <a href="/dashboard" class="btn btn-secondary ms-2">Cancel</a>
+    </form>
+</div>
+{% endblock %}

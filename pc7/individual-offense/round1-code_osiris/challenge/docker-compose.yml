@@ -1,0 +1,139 @@
+x-challenge:
+  name: "Code Osiris"
+  description: |
+    # Code Osiris
+
+    In this exploit development driven challenge, you will create the exploit that inevitably took down a secret underwater facility in what is now being called the "Deep Blue Sea" Incident.
+
+    **NICE Work Roles**
+
+    - [Exploitation Analysis](https://niccs.cisa.gov/tools/nice-framework)
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework)
+
+    **NICE Tasks**
+
+    - [T1091](https://niccs.cisa.gov/tools/nice-framework): Perform authorized penetration testing on enterprise network assets
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework): Identify vulnerabilities
+
+    ## Background
+
+    🔥 Preceding the events of the Deep Blue Sea Incident, a scientist and exploit researcher receives a chilling email message regarding the safety of his fellow colleagues and is urged to go to the Control Room immediately Upon arriving, you are met with an offer you cannot refuse...
+
+    The crime syndicate behind this (yara.*) will spare the lives of your colleagues if you join the clan and assemble a new version of `code_osiris`, their flagship malware with global reach.
+
+    ## Getting Started
+
+    For this challenge, tokens are awarded for either successful exploitation of a target based on the provided instruction set.
+
+    The questions for this challenge will guide you through the create of a standard buffer overflow and eventually lead you to exploiting a live facility harboring a vulnerable service that has been identified by the clan.
+
+    IMPORTANT: The `recruit briefing` located on the `HQ site` will help you along your exploit development journey.
+
+    ## Tokens
+
+    The format for each token will be as follows: `PCCC{VALUES}`. In most instances, challengers may find the following output:
+
+    ```text
+    TOKEN#: PCCC{VALUES}
+    ```
+
+    Use this to your advantage when examining the binaries in tokens one and two. Please also note that all tokens are randomly generated.
+
+    ## Objectives
+    * Temporarily distract the syndicate by successfully creating a buffer overflow against their old version of code_osiris.
+    * Next, develop the skills to build version 2 of "code_osiris" using a remote exploit development trainer (program).
+    * Use the exploit against a nuclear facility to launch a missile and prove your loyalty to the syndicate.
+
+    ## System and Tool Credentials
+
+    |system/tool|host|port|
+    |-----------|--------|--------|
+    |code-osiris-hq|lab.yara.hq|tcp/80|
+    |code-osiris-remote|lab2.yara.hq|tcp/9999|
+    |*abyssnet|abyssnet.dbs|tcp/unknown|
+
+    * Scan and enumerate this target to find the port for the hijacked reverse shell to the compromised ABYSSNET service.
+
+    ## Note
+
+    Attacking or unauthorized access to the Challenge Platform is forbidden. 
+
+  icon: "TbFlameFilled"
+  summary: 'In this exploit development driven challenge, you will create the exploit that inevitably took down a secret underwater facility in what is now being called the "Deep Blue Sea" Incident.'
+  variables:
+    token1:
+      template: "fake.bothify('PCCC{????-####}')"
+      default: &token1 "PCCC{CODS-455A}"
+    token2:
+      template: "fake.bothify('PCCC{????-####}')"
+      default: &token2 "PCCC{CODS-9851}"
+    token3:
+      template: "fake.bothify('PCCC{????-####}')"
+      default: &token3 "PCCC{CODS-8921"
+    token4:
+      template: "fake.bothify('PCCC{????-####}')"
+      default: &token4 "PCCC{CODS-7334}" 
+  
+  questions:
+    - name: Token 1 - Find The Offset
+      body: Determine the offset required to exploit the binary (integer) using pwntools or pattern_create and pattern_offset. Once exploited, TOKEN1 will be revealed.
+      answer: *token1
+      placeholder: "PCCC{VALUES}"
+      points: 500
+      max_attempts: 3
+   
+    - name: Token 2 - Classic Redirection
+      body: Revealed after redirecting execution flow of the code_osiris_v2 binary to read the function called "secret".
+      answer: *token2
+      placeholder: "PCCC{VALUES}"
+      points: 980
+      max_attempts: 3
+    
+    - name: Token 3 - Flight Check
+      body: Engage the Code Osiris Remote Trainer* - successful exploitation will yield TOKEN3.
+      answer: *token3
+      placeholder: "PCCC{VALUES}"
+      points: 1500
+      max_attempts: 3  
+    
+    - name: Token 4 - Complete Your Mission and join yara.*
+      body: Revealed after compromising ABYSSNET and launching it's missile.
+      answer: *token4
+      placeholder: "PCCC{VALUES}"
+      points: 1500
+      max_attempts: 3
+
+services: 
+  code-osiris-hq:
+    build: 
+      context: ./code_osiris_hq
+    hostname: lab.yara.hq  
+    networks:
+      - competitor_net
+    environment:
+      TOKEN1: *token1
+      TOKEN2: *token2
+
+  code_osiris_remote:
+    build: 
+      context: ./code_osiris_remote
+    hostname: lab2.yara.hq 
+    networks:
+      - competitor_net
+    environment:
+      TOKEN3: *token3
+
+  code_osiris_abyssnet:
+    build: 
+      context: ./code_osiris_abyssnet
+    hostname: abyssnet.dbs
+    networks:
+      - competitor_net
+    environment:
+      TOKEN4: *token4
+      LISTEN_PORT: "9999" 
+
+networks:
+  competitor_net:
+    # external: true  # Uncomment for local dev
+    internal: true

@@ -1,0 +1,8 @@
+[Unit]
+Description=Code Osiris Abyssnet Socket
+
+[Socket]
+ListenStream=9999
+
+[Install]
+WantedBy=sockets.target

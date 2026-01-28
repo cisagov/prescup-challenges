@@ -1,0 +1,172 @@
+#
+# Challenge Sever
+# Copyright 2024 Carnegie Mellon University.
+# NO WARRANTY. THIS CARNEGIE MELLON UNIVERSITY AND SOFTWARE ENGINEERING INSTITUTE MATERIAL IS FURNISHED ON AN "AS-IS" BASIS. CARNEGIE MELLON UNIVERSITY MAKES NO WARRANTIES OF ANY KIND, EITHER EXPRESSED OR IMPLIED, AS TO ANY MATTER INCLUDING, BUT NOT LIMITED TO, WARRANTY OF FITNESS FOR PURPOSE OR MERCHANTABILITY, EXCLUSIVITY, OR RESULTS OBTAINED FROM USE OF THE MATERIAL. CARNEGIE MELLON UNIVERSITY DOES NOT MAKE ANY WARRANTY OF ANY KIND WITH RESPECT TO FREEDOM FROM PATENT, TRADEMARK, OR COPYRIGHT INFRINGEMENT.
+# Licensed under a MIT (SEI)-style license, please see license.txt or contact permission@sei.cmu.edu for full terms.
+# [DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.
+# DM24-0645
+#
+
+startup:
+  # Note: runInWorkspace is deprecated, no longer has any meaning 
+  # Set this to false if you don't want your startup scripts to run in a workspace (only in a gamespace)
+  # runInWorkspace: false
+  scripts: 
+  # This is a list of all the scripts you want to run at startup
+  # The scripts will run one at a time from the top of this list to the bottom
+  # Add new items to the list by adding a line (starting with a dash -) with the script name
+  # ALL SCRIPTS MUST BE PLACED IN THE CUSTOM_SCRIPTS DIRECTORY
+  # Currently unsupported: passing args to these scripts. 
+    - empty.py
+
+# required_services:
+  # List all services that are required for your challenge operate here
+  # All of the listed services will have periodic connectivity checks logged 
+  # Listed services have the option of preventing startup scripts from executing until they are available (all startup scripts will be blocked until all blocking services are available)
+  #
+  # host (required): This is the hostname or IP address that is hosting a required service
+  # type (required): The type of connectivity check you want to perform (valid types are listed below)
+  #
+  #    ping (default):    Will attempt to ping the defined host.
+  #                       If a ping reply is received, log success. If anything besides a successful ping reply, log failure. 
+  #                       PORT, PATH ARE IGNORED
+  #     
+  #    socket:            Will attempt to initiate a socket connection to the defined port. 
+  #                       If the connection is successful, log success. If the socket connection is not successful, log failure. 
+  #                       REQUIRES PORT TO BE DEFINED
+  #                       PATH IS IGNORED
+  #
+  #    web:               Will send a web request to the defined host/port/path. 
+  #                       If the web request returns a 200, log success. If the web request returns anything besides 200, log failure. 
+  #                       DEFAULTS TO PORT 80 IF NO PORT IS DEFINED
+  #                       DEFAULTS TO A PATH OF / IF NO PATH IS DEFINED
+  #
+  # port: The port to use for connectivity checks
+  #       REQUIRED FOR SOCKET TYPE
+  #       DEFAULTS TO 80 FOR WEB TYPE
+  #       IGNORED FOR PING TYPE
+  # 
+  # path: Include only the URI path to be used in the web request (e.g., /)
+  #       DEFAULTS TO / FOR WEB TYPE
+  #       IGNORED FOR SOCKET AND WEB TYPE
+  #
+  # block_startup_scripts: If true, do not run startup scripts until this check logs success one time
+  #       DEFAULTS TO FALSE
+
+  ## Example: Ensure you can ping this host before startup scripts kick off
+  # - host: example.us
+  #   type: ping
+  #   block_startup_scripts: true
+
+  ## Example: Ensure you can reach this host on port 22 before startup scripts kick off
+  # - host: example.us
+  #   port: 22
+  #   type: socket
+  #   block_startup_scripts: true
+
+  ## Example: Ensure you can complete a web request to http://example.us:8888/example. Don't wait for this to be available before startup scripts. 
+  # - host: example.us
+  #   port: 8888
+  #   type: web
+  #   path: /example
+  #   block_startup_scripts: false
+  
+
+hosted_files: 
+  # Set this to true if you need the hosted files website.  
+  enabled: false
+
+grading:
+  # Set this to true if you need any grading.  
+  enabled: true
+
+  # Modes are:
+  # button - this option is the default. It shows a "Grade" button which runs a script when pressed
+  # cron - this option will run the grading script, then sleep for 60 seconds before running it again (like an every minute cron job)
+  # text - this option will present the user a text box for each part listed below. 
+  #         The user will submit text for all parts and the server will pass the text as arguments to the grading script
+  # text_single - this option will present the user a single text box to enter answers into regardless of how many parts are listed
+  #               The text that is displayed on the web page will be the text that is show for the first part in the config below
+  #               This is useful if your grading script will decide how many tokens to award for a single answer (ex. a partially correct single answer gets awarded some, but not all tokens)
+  mode: text_single
+  
+  # Set how many seconds are between each run of your cron-type grading
+  # Example:  60 -- run the grading every 60 seconds
+  ## Override this setting in guestinfo using test_cron_interval as the variable name
+  cron_interval: 30
+
+  # Start executing the cron job at a certain time - uses 24-hour time format 
+  # Format:   "%H:%M"  where %H is a zero padded hour (24 hour format)  and %M is a zero padded minute
+  # Time must be inside double quotes " "
+  # null will ignore this setting
+  # any delay set below will occur AFTER this time condition is met
+  # Example:  "13:30"
+  ## Override this setting in guestinfo using test_cron_at as the variable name
+  cron_at: null
+
+  # Set how long to wait before the first cron-type grading fires off
+  # Example: 3600 -- run the first cron-type grading check 1 hour after the machine boots 
+  # NOTE:  Any delays will take place AFTER the cron_at time is reached
+  #        If you set cron_at to be 00:00  and delay to be 3600, then the first grading will run at 01:00
+  ## Override this setting in guestinfo using test_cron_delay as the variable name
+  cron_delay: 10
+
+  # Set a limit on the number of times the cron job should run
+  # Example: 5 -- limit the cron job to running 5 times
+  # Example: null -- do not limit the number of times the cron job can run
+  ## Override this setting in guestinfo using test_cron_limit as the variable name
+  cron_limit: null
+
+  # Change this to your own grading script's file name
+  # ALL SCRIPTS MUST BE PLACED IN THE CUSTOM_SCRIPTS DIRECTORY
+  # Make sure you run `chmod +x <your script>` to make your script executable
+  # If you are using 'text' style grading, your script will receive 1 command line argument per text box that the user enters data into
+  # Currently Unsupported: multiple grading scripts that do different things at different times or based on different conditions. 
+  #     If you need this functionality, you should write 1 "driver" script and list it here. 
+  #     That "driver" should handle checking conditions and calling other scripts or doing other grading. 
+  # Currently Unsupported: passing arguments to grading scripts when button/cron style grading are used. 
+  grading_script: grading.py  
+
+  # set this to the number of seconds you want the user to be required to wait in between grading attempts
+  # Example: 10 -- limit the user to 1 grading attempt every 10 seconds
+  # 0 means there is no limit
+  rate_limit: 0
+
+  # set to [guestinfo] if tokens are located in guestinfo variables
+  #   Note that "guestinfo" now pulls standard env variables, but the naming has been unchanged for simplicity
+  # set to [file] if tokens are located in a file on disk
+  token_location: guestinfo
+
+  # NEW: This field stopped being supported by SEI (used only for one version of PCCC). While code is technically present, I've disabled it as an option. Only display is allowed
+  # submission: 
+  #   # set to [display] if you want to display tokens for users to manually submit on the webpage
+  #   # set to [grader_post] if you want the grading server to submit tokens to the grader (e.g., gameboard) on the user's behalf
+  #   #    -- this could be dangerous. Users may only have a limited number of submission attempts (and the grading server may try to submit many times)
+  #   ## grader_post requires that the grading VM be connected to the internet. 
+  #   ## grader_post requires that the grader_url and grader_apikey variables also be set
+  #   ##    
+  #   method: display
+  #   ## these grader variables can be set with guestinfo variables too - use the same variable name in guestinfo
+  #   ## anything in guestinfo for these grader variables will override what is in this file
+  #   grader_url: "https://presidentscup.cisa.gov/gb/pc/"
+  #   grader_key: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+  # Place your "part names" and their corresponding token guestinfoVar/fileName here
+  # For example, when "GradingCheck1" passes, reference the guestinfoVar listed under token_name "token1" to read the token
+  # The "text" section is what is displayed to the user on the website. Ensure this is enclosed in double quotes " "
+  #
+  # If you are referencing a env (guestinfo) variable, only include the variable name
+  # If referencing a file, you must include the full file path
+  parts:
+    tokenGradStudent:  # this is the "check key" and should be printed out by your grading script
+      token_name: tokenGradStudent  # this is the env variable to pull
+      text: "Enter the name of the graduate student."  # this is the text that is displayed to the user
+    tokenLights: 
+      token_name: tokenLights
+      text: "Make the lecture hall completely dark."
+    tokenLabdoor:
+      token_name: tokenLabdoor
+      text: "Open the lab door."
+    tokenServerdoor: 
+      token_name: tokenServerdoor
+      text: "Open the server room door."

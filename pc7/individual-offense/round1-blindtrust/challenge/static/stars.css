@@ -1,0 +1,7 @@
+body {
+  background: black url("Nebula Dynamics Home.png") repeat center center fixed;
+  background-size: cover;
+  color: #cce7ff;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2em;
+}

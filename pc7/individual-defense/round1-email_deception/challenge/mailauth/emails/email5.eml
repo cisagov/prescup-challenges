@@ -1,0 +1,23 @@
+Return-Path: <eve@mail-auth.example.com>
+Received: from mail-auth.example.com (mail-auth.example.com [172.20.0.20])
+    by mail-auth.example.com with ESMTP id MNO345E;
+    Tue, 27 May 2025 14:58:22 -0500 (CDT)
+Received-SPF: pass (mail-auth.example.com: domain of sender designates permitted sender) client-ip=172.20.0.20; envelope-from=eve@mail-auth.example.com; helo=mail-auth.example.com
+Authentication-Results: mail-auth.example.com;
+    spf=pass smtp.mailfrom=eve@mail-auth.example.com;
+    dkim=pass (signature verified) header.d=example.com;
+    dmarc=pass header.from=mail-auth.example.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+    d=example.com; s=default;
+    h=from:to:subject:date:message-id;
+    bh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+    b=ZXCVBNMASDFGHJK
+Date: Tue, 27 May 2025 14:58:20 -0500
+From: Eve <eve@mail-auth.example.com>
+To: support@example.org
+Subject: Password Reset Instructions
+Message-ID: <20250527145820.eve@mail-auth.example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+[Body redacted]

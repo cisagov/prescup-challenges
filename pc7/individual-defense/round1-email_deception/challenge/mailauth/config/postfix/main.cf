@@ -1,0 +1,40 @@
+# Basic identity
+myhostname = mail-auth.example.com
+mydomain   = example.com
+myorigin   = $mydomain
+
+# Listen everywhere, IPv4 only
+inet_interfaces = all
+inet_protocols  = ipv4
+
+# Local deliveries
+mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
+
+# Maildirs in user home
+home_mailbox = Maildir/
+
+# No encryption/TLS
+smtpd_tls_security_level = none
+smtp_tls_security_level  = none
+smtpd_tls_auth_only      = no
+
+# Permit LAN + auth, reject relay
+mynetworks            = 172.20.0.0/16, 127.0.0.0/8
+smtpd_recipient_restrictions =
+    permit_mynetworks,
+    permit_sasl_authenticated,
+    reject_unauth_destination
+
+# DKIM milter
+milter_default_action = accept
+milter_protocol       = 6
+smtpd_milters         = inet:localhost:8891
+non_smtpd_milters     = inet:localhost:8891
+
+
+# SASL Authentication
+
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = private/auth
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_security_options = noanonymous

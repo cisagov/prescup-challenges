@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internal Reporting Portal</title>
+</head>
+<body>
+    <h1>Internal Reporting Tool</h1>
+    <form method="GET" action="reports.php">
+        <label for="type">Search Type:</label>
+        <select name="type" id="type">
+            <option value="clients">Clients</option>
+            <option value="quotes">Quotes</option>
+            <option value="invoices">Invoices</option>
+            <option value="orders">Service Orders</option>
+        </select>
+        <br><br>
+        <label for="query">Search Term:</label>
+        <input type="text" name="query" id="query">
+        <br><br>
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

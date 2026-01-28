@@ -1,0 +1,229 @@
+# Complete Challenge Specification Example
+x-challenge:
+  # Required: Name of the challenge displayed to participants
+  name: "Monkey in the Middle"
+  
+  # Required: Detailed description shown to participants
+  description: |
+    # Monkey in the Middle
+
+    While attending your annual spy training, you made an offhand comment about loving the game "Monkey in the Middle" as a child. Prove you're still at the top of your game by using multiple spoofing 
+    techniques to eavesdrop, tamper, and steal a secure browser cookie.
+
+    **NICE Work Roles**
+
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework)
+    - [Exploitation Analysis](https://niccs.cisa.gov/tools/nice-framework)
+
+    **NICE Tasks**
+
+    - [T1359](https://niccs.cisa.gov/tools/nice-framework): Perform penetration testing
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework): Identify vulnerabilities
+    - [T0591](https://niccs.cisa.gov/tools/nice-framework): Perform analysis for target infrastructure exploitation activities
+
+
+    ## Background
+
+    While enjoying a short lunch break at the mandatory annual spy training, you make an offhand comment about loving the game "Monkey in the Middle" as a child. The instructor makes a weird face and runs from the room, cackling like a maniac and muttering "MitM". The next day, you find the lesson plan has been replaced with a hands-on workshop all about spoofing, intercepting, and tampering with communication on a local network! The instructor challenges you to prove you're still a champion at "Monkey in the Middle" by stealing a `SameSite: Strict` cookie from his browser.
+
+    ## Getting Started
+
+    Use the provided Kali machine to access the workshop's network. The instructor reminds you that **forwarding is enabled by default** on the device. The instructor also tells you that there are six other hosts on the network:
+
+    1. `mathserver.pccc`, running a custom `TCP` server on port `9000`
+    2. `mathclient.pccc`, opens a connection to `mathserver.pccc`
+    3. `dnsmasq.pccc`, provides DNS via `dnsmasq`
+    4. `dnsvictim.pccc`, uses the DNS service from `dnsmasq.pccc`
+    5. `web.pccc`, hosts a simple web server
+    6. `webvictim.pccc`, which uses Selenium to browse `web.pccc`
+
+    ## Tokens
+
+    The instructor provides a list of tokens to retrieve from these devices. The tokens are formatted as `PCCC{some_words_here_??_????}`. *Token 3 uses the alternative format `PCCC-some-words-here-??-????` to be a valid domain name.* 
+
+    Note the following tokens may be collected in any order, although they are designed to naturally lead up to the final task.
+
+    No grading is required.
+
+    1. Intercept the token sent by `mathclient.pccc` to `mathserver.pccc` on port `9000`.
+    2. The `mathserver.pccc` will send this token when all of the math questions passed between `mathclient.pccc` and `mathserver.pccc` are answered correctly.
+    3. Intercept the `DNS` request from `dnsvictim.pccc` and find this token in the first label of the domain name. 
+        - This token uses the alternative format `PCCC-some-words-here-??-????` to be a valid domain name.
+    4. After a successful `DNS` lookup, the `dnsvictim.pccc` host tries to send this token to port `9001` at `{token3}.target.pccc`
+    5. This token is in the header of the `HTTP` request sent by `webvictim.pccc`.
+    6. The `webvictim.pccc` host types this token into the `textarea` on the page retrieved from `web.pccc`.
+    7. Combine all of these skills to steal a cookie from the `webvictim.pccc` host. 
+        - The cookie is named `tokenLax`, and belongs to the domain `external.target.pccc` on port `80`. 
+        - This cookie is marked as `SameSite: Lax`.
+    8. Combine all of these skills to steal a cookie from the `webvictim.pccc` host. 
+        - The cookie is named `tokenStrict`, and belongs to the domain `external.target.pccc` on port `80`. 
+        - This cookie is marked as `SameSite: Strict`.
+
+    ## System and Tool Credentials
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |kali-vnc|user|password|
+
+  
+  icon: "TbPlayHandball"
+
+  summary: |
+    While attending your annual spy training, you made an offhand comment about loving the game "Monkey in the Middle" as a child. Prove you're still at the top of your game by using multiple spoofing techniques to eavesdrop, tamper, and steal a secure browser cookie.
+
+  templates:
+    # Define reusable templates with anchors
+    eavesdropToken-flag: &eavesdropToken-flag_template "fake.bothify('PCCC{Ugh_Math_Homework_##_##??}')"
+    mathToken-flag: &mathToken-flag_template "fake.bothify('PCCC{Academic_dishonesty_##_##??}')"
+    dnsEavesdropToken-flag: &dnsEavesdropToken-flag_template "fake.bothify('PCCC-Domain-Name-Simian-##-##??')"
+    dnsManipulateToken-flag: &dnsManipulateToken-flag_template "fake.bothify('PCCC{Not_the_DNS_U_R_looking_4_##_##??}')"
+    tokenHTTPType-flag: &tokenHTTPType-flag_template "fake.bothify('PCCC{Header_Thieving_Time_Protocol_##_##??}')"
+    tokenHTTPEavesdrop-flag: &tokenHTTPEavesdrop-flag_template "fake.bothify('PCCC{U_Stole_A_Monkeys_Shopping_List_##_##??}')"
+    tokenCookieLax-flag: &tokenCookieLax-flag_template "fake.bothify('PCCC{C00k13_B4nd1t_##_##??}')"
+    tokenCookieStrict-flag: &tokenCookieStrict-flag_template "fake.bothify('PCCC{U_R_The_M0nk3y_M4st3r_##_##??}')"
+  
+  variables:
+    eavesdropToken-flag:
+      template: *eavesdropToken-flag_template
+      default: &eavesdropToken-flag_default "PCCC{Ugh_Math_Homework}"
+    mathToken-flag:
+      template: *mathToken-flag_template
+      default: &mathToken-flag_default "PCCC{Academic_dishonesty}"
+    dnsEavesdropToken-flag:
+      template: *dnsEavesdropToken-flag_template
+      default: &dnsEavesdropToken-flag_default "PCCC-Domain-Name-Simian"
+    dnsManipulateToken-flag:
+      template: *dnsManipulateToken-flag_template
+      default: &dnsManipulateToken-flag_default "PCCC{Not_the_DNS_U_R_looking_4}"
+    tokenHTTPType-flag:
+      template: *tokenHTTPType-flag_template
+      default: &tokenHTTPType-flag_default "PCCC{Header_Thieving_Time_Protocol}"
+    tokenHTTPEavesdrop-flag:
+      template: *tokenHTTPEavesdrop-flag_template
+      default: &tokenHTTPEavesdrop-flag_default "PCCC{U_Stole_A_Monkeys_Shopping_List}"
+    tokenCookieLax-flag:
+      template: *tokenCookieLax-flag_template
+      default: &tokenCookieLax-flag_default "PCCC{C00k13_B4nd1t}"
+    tokenCookieStrict-flag:
+      template: *tokenCookieStrict-flag_template
+      default: &tokenCookieStrict-flag_default "PCCC{U_R_The_M0nk3y_M4st3r}"
+  
+  questions:
+    - name: "Question 1"
+      body: "Enter the token received from intercepting the communication between `mathclient.pccc` and `mathserver.pccc`."
+      placeholder: "PCCC{WORDS_HERE_??_????}"
+      points: 230 # 5%
+      answer: *eavesdropToken-flag_default
+      max_attempts: 3
+    - name: "Question 2"
+      body: "Enter the token received from `mathserver.pccc` after answering all the math questions correctly."
+      placeholder: "PCCC{WORDS_HERE_??_????}"
+      points: 460 # 10%
+      answer: *mathToken-flag_default
+      max_attempts: 3
+    - name: "Question 3"
+      body: "Enter the token found in the DNS request sent by `dnsvictim.pccc`."
+      placeholder: "PCCC-Words-here-??-????"
+      points: 230 # 5%
+      answer: *dnsEavesdropToken-flag_default
+      max_attempts: 3
+    - name: "Question 4"
+      body: "Enter the token `dnsvictim.pccc` sends to `{token3}.target.pccc`."
+      placeholder: "PCCC{WORDS_HERE_??_????}"
+      points: 460 # 10%
+      answer: *dnsManipulateToken-flag_default
+      max_attempts: 3
+    - name: "Question 5"
+      body: "Enter the token in the header of the HTTP request from `webvictim.pccc`."
+      placeholder: "PCCC{WORDS_HERE_??_????}"
+      points: 460 # 10%
+      answer: *tokenHTTPType-flag_default
+      max_attempts: 3
+    - name: "Question 6"
+      body: "Enter the token `webvictim.pccc` tries to type into the textarea of `web.pccc`."
+      placeholder: "PCCC{WORDS_HERE_??_????}"
+      points: 690 # 15%
+      answer: *tokenHTTPEavesdrop-flag_default
+      max_attempts: 3
+    - name: "Question 7"
+      body: "Enter the token found inside the `tokenLax` cookie."
+      placeholder: "PCCC{WORDS_HERE_??_????}"
+      points: 920 # 20%
+      answer: *tokenCookieLax-flag_default
+      max_attempts: 3
+    - name: "Question 8"
+      body: "Enter the token found inside the `tokenStrict` cookie."
+      placeholder: "PCCC{WORDS_HERE_??_????}"
+      points: 1150 # 25%
+      answer: *tokenCookieStrict-flag_default
+      max_attempts: 3
+
+services:
+  mathserver:
+    build:
+      context: ./mathPassing
+    hostname: mathserver.pccc
+    environment:
+      ROLE: server
+      HOST: "0.0.0.0"
+      PORT: "9000"
+      KEY: fQ3Lz9aN7pVJmKcyRgX2U1dBshW8oEiZ
+      eavesdropToken: *eavesdropToken-flag_default
+      mathToken: *mathToken-flag_default
+    networks:
+      - competitor_net
+  mathclient:
+    build:
+      context: ./mathPassing
+    hostname: mathclient.pccc
+    environment:
+      ROLE: client
+      HOST: mathserver.pccc
+      PORT: "9000"
+      KEY: fQ3Lz9aN7pVJmKcyRgX2U1dBshW8oEiZ
+      eavesdropToken: *eavesdropToken-flag_default
+      mathToken: *mathToken-flag_default
+    networks:
+      - competitor_net
+  dnsmasq:
+    build:
+      context: ./dnsmasq
+    hostname: dnsmasq.pccc
+    networks:
+      - competitor_net
+  dnsvictim:
+    build:
+      context: ./dnsVictim
+    hostname: dnsvictim.pccc
+    environment:
+      dnsEavesdropToken: *dnsEavesdropToken-flag_default
+      dnsManipulateToken: *dnsManipulateToken-flag_default
+      DNS_SERVER: dnsmasq.pccc
+    networks:
+      - competitor_net
+  webserver:
+    build:
+      context: ./web
+    hostname: web.pccc
+    networks:
+      - competitor_net
+  webvictim:
+    build:
+      context: ./webvictim
+    hostname: webvictim.pccc
+    environment:
+      TARGET_URL: http://web.pccc
+      tokenHTTPEavesdrop: *tokenHTTPType-flag_default
+      tokenHTTPType: *tokenHTTPEavesdrop-flag_default
+      tokenCookieLax: *tokenCookieLax-flag_default
+      tokenCookieStrict: *tokenCookieStrict-flag_default
+      DNS_SERVER: dnsmasq.pccc
+    
+    mem_limit: 1g
+    networks:
+      - competitor_net
+
+networks:
+  competitor_net:
+    internal: true
+    # external: true  # Comment out for prod

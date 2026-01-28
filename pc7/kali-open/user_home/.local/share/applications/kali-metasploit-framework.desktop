@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=metasploit-framework
+Comment=Framework for exploit development and vulnerability research
+Exec=xfce4-terminal -e "msfconsole"
+Icon=kali-metasploit-framework
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=kali-initial-access;kali-execution;kali-privilege-escalation;kali-command-and-control
+X-Kali-Package=metasploit-framework
+Path=

@@ -1,0 +1,21 @@
+{
+  "terminal.integrated.suggest.enabled": false,
+  "terminal.integrated.gpuAcceleration": "off",
+
+  "chat.disableAIFeatures": true,
+
+  "editor.inlineSuggest.enabled": false,
+
+  "chat.enabled": false,
+  "chat.chatViewProviderEnabled": false,
+
+  "github.copilot.chat.enabled": false,
+  "github.copilot.enable": {
+    "*": false
+  },
+
+  "workbench.enableExperiments": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+
+  "telemetry.telemetryLevel": "off"
+}

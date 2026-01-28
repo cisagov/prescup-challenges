@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Engineering - Some State University</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .banner-img {
+      max-height: 400px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+    }
+
+    .footer-text {
+      padding: 1rem 0;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="/">Some State University - Engineering Department</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/engineering.html">Engineering</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admissions.html">Admissions</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Main Content -->
+  <main class="flex-grow-1 container my-5">
+    <div class="container my-5">
+      <h1 class="mb-4 text-center">Engineering Faculty</h1>
+
+      <!-- Faculty Member Card -->
+      <div class="card mb-5 shadow-lg">
+        <div class="row g-0">
+
+          <!-- Profile Image -->
+          <div class="col-md-4 text-center p-4">
+            <img src="img/faculty_placeholder.png" alt="Dr. Jane Smith" class="img-fluid rounded-circle shadow"
+              style="max-width: 200px;" />
+          </div>
+
+          <!-- Profile Content -->
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title">Dr. Jane Smith</h3>
+              <h5 class="text-muted">Professor of Computer Science</h5>
+              <p class="card-text">
+                Dr. Smith’s research focuses on distributed systems, secure computing, and fault-tolerant architectures.
+                She has authored over 50 peer-reviewed publications and leads several federally funded research
+                projects.
+              </p>
+
+              <h6>Recent Publications:</h6>
+              <ul>
+                <li><a href="papers/resilient_blockchain_infrastructure_for_decentralized_ai.pdf" target="_blank">“Resilient Blockchain Infrastructure for Decentralized AI” – IEEE Transactions, 2024</a></li>
+                <li><a href="papers/latency_aware_scheduling_in_edge_networks.pdf" target="_blank">“Latency-Aware Scheduling in Edge Networks” – ACM SIGCOMM, 2023</a></li>
+              </ul>
+
+              <h6>Graduate Students:</h6>
+              <ul class="mb-0">
+                <li>Sarah Kim (Ph.D. Candidate)</li>
+                <li>David Liu (M.S. Research Track)</li>
+                <li>Kevin James (Ph.D. Student)</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Faculty Member Card -->
+      <div class="card mb-5 shadow-lg">
+        <div class="row g-0">
+
+          <!-- Profile Image -->
+          <div class="col-md-4 text-center p-4">
+            <img src="img/faculty_roberts.png" alt="Dr. Eric Roberts" class="img-fluid rounded-circle shadow"
+              style="max-width: 200px;" />
+          </div>
+
+          <!-- Profile Content -->
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title">Dr. Eric Roberts</h3>
+              <h5 class="text-muted">Associate Professor of Computer Science</h5>
+              <p class="card-text">
+                Dr. Roberts specializes in human-computer interaction, accessible technology design, and cognitive
+                ergonomics. His work bridges the gap between usability and inclusive digital systems, helping design
+                technologies that are intuitive for all users.
+              </p>
+
+              <h6>Recent Publications:</h6>
+              <ul>
+                <li><a href="papers/gesture_based_interaction_in_augmented_reality_learning_tools.pdf" target="_blank">“Gesture-Based Interaction in Augmented Reality Learning Tools” – UIST Conference, 2023</a></li>
+              </ul>
+
+              <h6>Graduate Students:</h6>
+              <ul class="mb-0">
+                <li>Olivia Grant (Ph.D. Student)</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Faculty Member Card -->
+      <div class="card mb-5 shadow-lg">
+        <div class="row g-0">
+
+          <!-- Profile Image -->
+          <div class="col-md-4 text-center p-4">
+            <img src="img/faculty_placeholder.png" alt="Dr. Peter Francis" class="img-fluid rounded-circle shadow"
+              style="max-width: 200px;" />
+          </div>
+
+          <!-- Profile Content -->
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title">Dr. Peter Francis</h3>
+              <h5 class="text-muted">Chair, Department of Electrical & Computer Engineering</h5>
+              <p class="card-text">
+                Dr. Francis is a senior researcher in industrial automation and supervisory control systems. With over
+                25 years in critical infrastructure management, his work focuses on integrating safety protocols with
+                intelligent SCADA environments, including fire/life safety automation and secure facility access.
+              </p>
+
+              <h6>Recent Publication:</h6>
+              <ul>
+                <li><a href="papers/fire_safety_scadalts.pdf" target="_blank">“Integrated Fire Safety Response in
+                    SCADA-LTS for Smart Engineering Facilities”</a></li>
+              </ul>
+
+              <h6>Graduate Students:</h6>
+              <ul class="mb-0">
+                <li>Maxwell Lin (Ph.D. SCADA Systems)</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-auto">
+    <div class="container">
+      <p class="footer-text mb-0">&copy; 2025 Some State University. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
