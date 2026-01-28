@@ -1,0 +1,12 @@
+[Desktop Entry]
+Comment=Graphical Nmap frontend and results viewer
+Exec=xfce4-terminal -x bash -lc 'export SUDO_ASKPASS=/usr/bin/ssh-askpass; export SSH_ASKPASS_REQUIRE=force; setsid -f sudo -A zenmap </dev/null >/dev/null 2>&1; exit'
+Icon=kali-zenmap
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=kali-network-information;kali-vulnerability-scanning;kali-reconnaissance;kali-network-service-discovery;kali-discovery
+X-Kali-Package=zenmap
+Name=zenmap
+Keywords=network;scan;scanner;IP;security;
+Path=

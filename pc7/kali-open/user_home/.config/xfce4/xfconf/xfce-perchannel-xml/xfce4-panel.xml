@@ -1,0 +1,135 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=6;x=0;y=0"/>
+      <property name="length" type="uint" value="100"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="size" type="uint" value="34"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="1"/>
+        <value type="int" value="2"/>
+        <value type="int" value="3"/>
+        <value type="int" value="4"/>
+        <value type="int" value="5"/>
+        <value type="int" value="6"/>
+        <value type="int" value="7"/>
+        <value type="int" value="8"/>
+        <value type="int" value="9"/>
+        <value type="int" value="10"/>
+        <value type="int" value="11"/>
+        <value type="int" value="12"/>
+        <value type="int" value="13"/>
+        <value type="int" value="14"/>
+        <value type="int" value="16"/>
+        <value type="int" value="25"/>
+        <value type="int" value="17"/>
+        <value type="int" value="19"/>
+        <value type="int" value="18"/>
+        <value type="int" value="20"/>
+        <value type="int" value="21"/>
+        <value type="int" value="24"/>
+      </property>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-1" type="string" value="whiskermenu">
+      <property name="show-command-logout" type="bool" value="false"/>
+      <property name="recent" type="array">
+      </property>
+      <property name="favorites" type="array">
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="root-terminal.desktop"/>
+        <value type="string" value="xfce4-file-manager.desktop"/>
+        <value type="string" value="xfce-text-editor.desktop"/>
+        <value type="string" value="xfce4-web-browser.desktop"/>
+        <value type="string" value="org.wireshark.Wireshark.desktop"/>
+        <value type="string" value="code.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-2" type="string" value="separator"/>
+    <property name="plugin-3" type="string" value="showdesktop"/>
+    <property name="plugin-4" type="string" value="directorymenu">
+      <property name="icon-name" type="string" value="system-file-manager"/>
+      <property name="base-directory" type="string" value="/home/user"/>
+    </property>
+    <property name="plugin-5" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="vscode.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-6" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="firefox.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-7" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="terminal.desktop"/>
+        <value type="string" value="root.desktop"/>
+        <value type="string" value="powershell.desktop"/>
+      </property>
+      <property name="move-first" type="bool" value="true"/>
+    </property>
+    <property name="plugin-8" type="string" value="separator"/>
+    <property name="plugin-9" type="string" value="pager">
+      <property name="miniature-view" type="bool" value="false"/>
+    </property>
+    <property name="plugin-900" type="string" value="pager">
+      <property name="miniature-view" type="bool" value="true"/>
+      <property name="rows" type="uint" value="2"/>
+    </property>
+    <property name="plugin-10" type="string" value="separator"/>
+    <property name="plugin-11" type="string" value="tasklist">
+      <property name="show-handle" type="bool" value="false"/>
+      <property name="show-labels" type="bool" value="false"/>
+      <property name="middle-click" type="uint" value="1"/>
+      <property name="grouping" type="uint" value="1"/>
+    </property>
+    <property name="plugin-12" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-13" type="string" value="notification-plugin"/>
+    <property name="plugin-14" type="string" value="clock">
+      <property name="digital-layout" type="uint" value="3"/>
+      <property name="digital-time-format" type="string" value="%_H:%M"/>
+      <property name="digital-time-font" type="string" value="Cantarell 11"/>
+    </property>
+    <property name="plugin-17" type="string" value="genmon">
+      <property name="command" type="string" value="echo &apos;PCCC VII&apos;"/>
+      <property name="use-label" type="bool" value="false"/>
+    </property>
+    <property name="plugin-16" type="string" value="separator"/>
+    <property name="plugin-18" type="string" value="genmon">
+      <property name="command" type="string" value="echo &quot;user:password&quot;"/>
+      <property name="use-label" type="bool" value="false"/>
+      <property name="text" type="string" value="(Creds) "/>
+      <property name="update-period" type="int" value="30000"/>
+      <property name="enable-single-row" type="bool" value="true"/>
+      <property name="font" type="string" value="Cantarell 11"/>
+    </property>
+    <property name="plugin-19" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="false"/>
+    </property>
+    <property name="plugin-20" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-21" type="string" value="separator"/>
+    <property name="plugin-24" type="string" value="genmon">
+      <property name="command" type="string" value="/opt/challenge_panel.sh"/>
+      <property name="use-label" type="bool" value="false"/>
+      <property name="text" type="string" value="(genmon)"/>
+      <property name="update-period" type="int" value="5000"/>
+      <property name="enable-single-row" type="bool" value="true"/>
+      <property name="font" type="string" value="Cantarell 11"/>
+    </property>
+    <property name="plugin-25" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+  </property>
+</channel>

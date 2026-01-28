@@ -1,0 +1,58 @@
+<html>
+<head>
+  <title>Satellite Control</title>
+  <meta charset="UTF-8">
+
+  <script>
+  function fireOrbitalLaser() {
+    return fetch("/fire", { method: "GET" });
+  }
+
+  document.getElementById("fireBtn")?.addEventListener("click", () => {
+    document.getElementById("instructions").style.display = "block";
+  });
+  </script>
+</head>
+<body style="font-family: monospace; background-color: black; color: lime; padding: 20px;">
+  <h2>🛰️ A R E C I B O // U P L I N K  //  P A N E L 🛰️</h2>
+  <hr>
+  <p><strong>📡 Current Mode:</strong>          {{ state["mode"] }}</p>
+  <p><strong>🎯 Coordinates:</strong>           {{ state["coords"] }}</p>
+  <p><strong>📐 Orientation (Angle):</strong>   {{ state["angle"] }}</p>
+  <p><strong>🔐 HMAC Verified:</strong>         {{ state["hmac_ok"] }}</p>
+  <p><strong>🛡️ System Status:</strong>         {% if state["mode"] == "attack" %} ✅ ARMED {% else %} ❌ LOCKED {% endif %}</p>
+  <hr>
+  {% if tokens %}
+    <section style="background:#222;padding:1em;border-radius:1em;margin-bottom:2em;">
+        <h2 style="color:#fff;">Checkpoints / Tokens Unlocked</h2>
+        <ul style="list-style:none;padding-left:0;">
+        {% for token in tokens %}
+            <li style="color:#0f0;font-size:1.2em;margin-bottom:0.5em;">✔️{{ token }}</li>
+        {% endfor %}
+        </ul>
+    </section>
+{% endif %}
+  <hr>
+  <p>🌐 This satellite is currently operating {% if state["mode"] == "attack" %} in attack mode. {% else %} in observation mode. {% endif %}</p>
+  <p>🔄 Awaiting remote MQTT command to update status...</p>
+  <a href="{{ url_for('static', filename='Arecibo_Operators_Manual.md') }}" download>
+         🔽 Download Arecibo Operator's Manual
+  </a>
+  <br/>
+  <hr>
+  {% if ready %}
+    <button
+      id="fireBtn"
+      style="font-size:2em;background:red;color:white;padding:1em;border-radius:1em;">
+    FIRE THE LASER
+    </button>
+
+    <pre id="instructions" style="display:none;margin-top:1em;">
+    Open DevTools and run:
+      fireOrbitalLaser()
+    </pre>
+{% endif %}
+
+
+</body>
+</html>

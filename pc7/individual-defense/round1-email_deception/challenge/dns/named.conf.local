@@ -1,0 +1,5 @@
+# dns/named.conf.local
+zone "example.com" {
+    type master;
+    file "/etc/bind/zones/db.example.com";
+};

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Some State University</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .banner-img {
+            max-height: 400px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+        }
+
+        .footer-text {
+            padding: 1rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="/">Some State University</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/engineering.html">Engineering</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admissions.html">Admissions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Image -->
+    <section class="hero-image text-center my-4">
+        <img src="img/banner.png" alt="Campus Banner" class="img-fluid hero-img rounded shadow" style="width: 35%;" />
+    </section>
+    <!-- Main Content -->
+    <main class="flex-grow-1 container my-5">
+        <h1 class="mb-4 text-center">Welcome to Some State University</h1>
+        <p>
+            At Some State University (SSU), we are committed to providing a transformative education that empowers
+            students to make meaningful contributions to society. With a proud tradition of academic excellence, SSU
+            combines rigorous coursework, groundbreaking research, and a vibrant campus life.
+        </p>
+        <p>
+            From our highly ranked engineering <s>and science programs to our liberal arts and business schools</s>, SSU
+            offers a comprehensive learning experience guided by expert faculty and real-world engagement. Now offering
+            only an Engineering department because we don't want to distract YOU (yes, you) from the game (of Life, I
+            mean).
+        </p>
+        <p>
+            Join a community where innovation thrives, diversity is celebrated, and leaders of tomorrow are made.
+        </p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+        <div class="container">
+            <p class="footer-text mb-0">&copy; 2025 Some State University. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

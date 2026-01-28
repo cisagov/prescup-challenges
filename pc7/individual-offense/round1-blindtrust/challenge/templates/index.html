@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nebula Dynamics | Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            margin: 0;
+            background: url('/static/Nebula Dynamics Home.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #cce7ff;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        header {
+            background-color: #050a1f;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 1em 2em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+        nav a {
+            color: #cce7ff;
+            margin-right: 1.5em;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .warning {
+            background-color: #ff0000;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 3em;
+            background: rgba(0,0,0,0.6);
+        }
+        footer {
+            background-color: #050a1f;
+            color: #888;
+            padding: 2em;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <h3> SYSTEM NAME: NEBULA </h3>
+    <div class="warning">
+        ⚠ WARNING: This application is for INTERNAL USE ONLY. All actions are logged and monitored in real-time. Unauthorized access or tampering will be reported.
+    </div>
+
+    <div class="content">
+        <p>This interface is the entry point to our space-based telemetry, and intelligence processing system.</p>
+    </div>
+
+    <footer>
+        <h3>Legal Notices</h3>
+        <p>This application is provided solely for use by authorized personel under the governance of Nebula Dynamics. All intellectual property, including but not limited to software, images, code, and content, remains the sole property of Nebula Dynamics or its respective licensors.</p>
+        <p>Unauthorized use, reproduction, distribution, or exploitation of any part of this system is strictly prohibited. Violations may result in prosecution under applicable cybercrime statutes and international law.</p>
+        <p>All user activity is logged and monitored in compliance with operational cybersecurity protocols. By interacting with this system, you consent to data collection and analysis for security and auditing purposes.</p>
+        <p>&copy; 2025 Nebula Dynamics. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+{% endblock %}

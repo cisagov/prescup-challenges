@@ -1,0 +1,8 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-danger">Something went wrong</h2>
+    <p>Please reach out to customer support and provide them the following query that caused the issue:</p>
+    <pre class="bg-light p-3 border rounded">{{ query }}</pre>
+</div>
+{% endblock %}

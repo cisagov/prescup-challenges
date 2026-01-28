@@ -1,0 +1,58 @@
+[--- CODE OSIRIS ---]
+
+Welcome, Recruit.
+
+Your mission is to follow in the footsteps of Dante Haroshi and execute the perfect breach:
+
+[--- MISSION 1 (TOKEN1) ---]
+1. Retrieve the file 'code_osiris_v1' from `http://lab.yara.hq` (HQ).
+2. Use fuzzers or python to crash the binary and identify the vulnerable field.
+3. Find the offset required to take control of the binary's execution flow.
+4. Complete the exercise.
+
+
+[--- MISSION 2 (TOKEN2) ---]
+1. From HQ download `code_osiris_v2` which repeats this exercise but features multiple fields for exploitation and reverse engineering execution.
+2. On execution, the app binary details the tasking.
+3. Once you have achieved the desired outcome (correcting execution flow to the secret() function), TOKEN2 will be revealed.
+
+[--- MISSION 3 (TOKEN3) ---]
+
+1. Navigate to TCP port 9999 at lab2.yara.hq using your preferred communication tool (netcat, etc.)
+2. Conduct a training exercise using the CODE OSIRIS REMOTE EXPLOIT TRAINER. 
+2. Exploit the BOF feature to gain an understanding of how to remotely exploit a buffer overflow.
+
+[--- FINAL MISSION (TOKEN4) ---]
+
+[--- 🔴 OPERATION BLUE SANDS ---]
+
+Now that you are fluent with buffer overflows and have successfully fixed Code_Osiris; we have a special mission just for you:
+
+OBJECTIVES
+1. Reach ABYSSNET - we have the IP of the facility but not the port associated with the LAUNCH service.
+
+[*] DEEPCOM Facility (ABYSSNET) :
+    - Hostname: abyssnet.dbs
+    - Port: TCP/UNKNOWN
+
+2. Scan the server to determine the port on which ABYSSNET is loaded.
+3. Interact with the application to gain a better understanding of it's root functionality.
+4. Determine a vector of potential exploitation.
+5. Enter the "key" (or exploit) into the LAUNCH feature of ABYSSNET.
+6. Await further instructions.
+
+
+[--- TEMPLATES ---]
+Several templates and tools are provided in the HQ Web Portal. They are not required for success however, they may help guide you in a more expedient manner.
+Time is of the essence you know...
+
+
+[--- CLOSING ---]
+
+Think of the "tokens" you recieve throughout this exercise as badges of courage.
+
+Your cooperation is greatly appreciated.
+
+No pressure; seems like a lot of people are depending on you 😇.
+
+- yara.*s

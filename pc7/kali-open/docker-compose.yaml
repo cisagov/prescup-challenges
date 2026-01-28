@@ -1,0 +1,28 @@
+# Note that this docker-compose file is not used at all in production (at least at the moment)
+#   It is solely for us to use during local development
+services:
+  kali-open-vnc:
+    build: .
+    hostname: kali-vnc
+    ports:
+      - "6080:6080"
+    networks:
+      - competitor_net
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+    environment:
+      # Specifies which desktop backgrounds to load (if omitted, loads random non-event-specific background)
+      # PCCC_EVENT: "teams" # or "offense" / "defense"
+      # Specify a specific background instead of random
+      # PCCC_BACKGROUND: "2.png"
+      # Can specify timezone here; defaults to UTC if omitted
+      TZ: "EST"
+      # The following env disables the cert for local testing
+      WEB_SOCK_CERT: ""
+      # The following DYNAMIC_VNC_PASS allows us to secure the VNC instance by passing a generated password
+      # DYNAMIC_VNC_PASS: "abc123xyz"
+
+networks:
+  competitor_net:
+    name: competitor_net

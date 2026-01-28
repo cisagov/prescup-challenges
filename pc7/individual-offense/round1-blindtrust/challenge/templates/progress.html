@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nebula Dynamics | Community Initiatives</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+       body {
+            margin: 0;
+            background: url('/static/Nebula Dynamics Home.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #cce7ff;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        header {
+            background-color: #050a1f;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 1em 2em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: row;
+            align-items: left;
+        }
+        .logo-title {
+            display: flex;
+            align-items: center;
+        }
+        .logo-title img {
+            height: 40px;
+            margin-right: 1em;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            margin-top: 0.5em;
+        }
+        nav a {
+            color: #cce7ff;
+            margin-right: 1.5em;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+	    padding: 2em 2em 2em 2em;
+	    max-width: 1200px;
+	    margin: 0 auto;
+	}
+        h1, h2 {
+            color: #a5d7ff;
+        }
+        .event {
+            border-left: 4px solid #1a75ff;
+            margin-bottom: 1.5em;
+            padding-left: 1em;
+        }
+        .event-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #fff;
+        }
+        .event-desc {
+            color: #d0e8ff;
+            margin-top: 0.25em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="/static/Logo.png" alt="Nebula Dynamics Logo">
+        </div>
+        <nav>
+            {% include "nav.html" %}
+        </nav>
+    </header>
+    <div class="content">
+        <h2>Global Impact through Community Space Intelligence</h2>
+        <p>Below is a listing of 30 landmark initiatives powered by Nebula Dynamics and our global collaborators. These events showcase the strength of unified communities using space-based intelligence to advance scientific, humanitarian, and planetary missions.</p>
+
+    <div id="events">
+        <div class="event"><div class="event-title">1. Orbit School Program Launch (Kenya)</div><div class="event-desc">Partnered with rural educators to provide real-time satellite data for climate and agricultural science projects in classrooms.</div></div>
+        <div class="event"><div class="event-title">2. Arctic Signal Sweep (Norway)</div><div class="event-desc">Volunteers and AI teamed up to track disrupted ice flow signatures via radar satellites, helping inform global warming reports in real time.</div></div>
+        <div class="event"><div class="event-title">3. Solar Flare Citizen Watch (Global)</div><div class="event-desc">More than 10,000 citizens worldwide contributed solar observations during flare season, refining predictive telemetry for space weather events.</div></div>
+        <div class="event"><div class="event-title">4. MarsSim Hackathon (Germany)</div><div class="event-desc">Over 100 developers created virtual simulations using real Mars rover data to improve pathfinding algorithms.</div></div>
+        <div class="event"><div class="event-title">5. EarthPulse: Disaster Imaging Grid (Indonesia)</div><div class="event-desc">Local communities used AI-enhanced Earth snapshots to assist in flood response logistics, saving over 5,000 lives.</div></div>
+        <div class="event"><div class="event-title">6. Apollo Trail Revive (USA)</div><div class="event-desc">Students and scientists retraced satellite paths from the original Apollo missions using modern satellites to detect environmental changes over 50 years.</div></div>
+        <div class="event"><div class="event-title">7. Rainforest Reflector Network (Brazil)</div><div class="event-desc">Used thermal imaging satellites to monitor illegal deforestation hotspots and empowered indigenous watchdog groups.</div></div>
+        <div class="event"><div class="event-title">8. Lunar Radio Relay Simulation (India)</div><div class="event-desc">Engineering students simulated a deep-space radio relay using small amateur radio satellites in Earth orbit.</div></div>
+        <div class="event"><div class="event-title">9. Urban Heat Shield Mapping (Mexico)</div><div class="event-desc">Crowdsourced thermal data over metropolitan areas to locate extreme heat islands and promote green planning.</div></div>
+        <div class="event"><div class="event-title">10. Asteroid Alert Community Drill (Japan)</div><div class="event-desc">A simulated asteroid path detection challenge raised global awareness and refined deflection modeling tools.</div></div>
+        <div class="event"><div class="event-title">11. Ocean Glint Rescue Grid (Philippines)</div><div class="event-desc">Used glint-based imagery to rapidly locate shipwreck survivors during typhoon season.</div></div>
+        <div class="event"><div class="event-title">12. NightLight Rural Electrification Study (Africa)</div><div class="event-desc">Satellite imagery analyzed light patterns to map energy distribution and poverty zones.</div></div>
+        <div class="event"><div class="event-title">13. AuroraBot Explorer Network (Scandinavia)</div><div class="event-desc">High school teams built simple bots that detected solar wind variations and logged aurora borealis activity.</div></div>
+        <div class="event"><div class="event-title">14. CropRadar AI (Ukraine)</div><div class="event-desc">Drones and satellites worked together to analyze war-torn farmland for food recovery planning.</div></div>
+        <div class="event"><div class="event-title">15. Cosmic Coding Jam (Canada)</div><div class="event-desc">Teams competed to visualize exoplanet signal anomalies using open NASA telemetry streams.</div></div>
+        <div class="event"><div class="event-title">16. SouthPole Watch (Antarctica)</div><div class="event-desc">Amateur radio astronomers scanned low-bandwidth cosmic microwave data to detect anomalies in real time.</div></div>
+        <div class="event"><div class="event-title">17. Equatorial Storm Tracker (Congo)</div><div class="event-desc">Youth-led satellite imagery projects mapped storm surge behavior for predictive flood warning systems.</div></div>
+        <div class="event"><div class="event-title">18. Nebula CareNet (Australia)</div><div class="event-desc">Used satellite health metrics to detect and track respiratory disease spread in wildfire-prone regions.</div></div>
+        <div class="event"><div class="event-title">19. EcoDrone Relay League (UK)</div><div class="event-desc">Schoolchildren participated in a live drone + satellite relay challenge measuring carbon sink response.</div></div>
+        <div class="event"><div class="event-title">20. StellarStream Journalism Workshop (USA)</div><div class="event-desc">Journalists trained to read and analyze LEO imagery for real-time reporting on disasters and conflict zones.</div></div>
+        <div class="event"><div class="event-title">21. Sandstorm Warning Net (Middle East)</div><div class="event-desc">Built a collaborative radar–satellite prediction model to warn remote villages of advancing sandstorms.</div></div>
+        <div class="event"><div class="event-title">22. Orbit Architecture Festival (France)</div><div class="event-desc">Architects and artists used real orbital mechanics and satellite paths to design kinetic sculptures and urban art pieces.</div></div>
+        <div class="event"><div class="event-title">23. Reconnect Rural Signals Project (Peru)</div><div class="event-desc">Mapped mountainous satellite shadows to optimize rural satellite phone relay systems.</div></div>
+        <div class="event"><div class="event-title">24. Youth Space Diplomacy Day (Geneva)</div><div class="event-desc">Students simulated UN negotiations using real-world space traffic data and orbital deconfliction exercises.</div></div>
+        <div class="event"><div class="event-title">25. Nebula Labs CodeCamp (Remote)</div><div class="event-desc">Over 3,000 global learners built satellite simulators in Python and JavaScript via open-access tutorials.</div></div>
+        <div class="event"><div class="event-title">26. Firefront Predict (California)</div><div class="event-desc">Deployed real-time fire perimeter analysis via satellite and community UAVs to triage emergency response zones.</div></div>
+        <div class="event"><div class="event-title">27. AstroForest Guardians (Amazon)</div><div class="event-desc">Indigenous communities used micro-satellite footage to assert land protection claims against illegal extractive zones.</div></div>
+        <div class="event"><div class="event-title">28. Polar Eyes: Ice Mass Challenge (Iceland)</div><div class="event-desc">University research groups competed to model polar ice retreat with multispectral satellite data.</div></div>
+        <div class="event"><div class="event-title">29. Satellite Art Signals Project (NYC)</div><div class="event-desc">Artists embedded synthetic satellite pulses into audio/visual art installations interpreting environmental collapse.</div></div>
+        <div class="event"><div class="event-title">30. Orbital Beacon Drop (Thailand)</div><div class="event-desc">Local engineers launched beacons via weather balloons tracked with LEO satellites to map underserved infrastructure areas.</div></div>
+    </div>
+</body>
+</html>

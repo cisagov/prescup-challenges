@@ -1,0 +1,173 @@
+# Complete Challenge Specification Example
+x-challenge:
+  # Required: Name of the challenge displayed to participants
+  name: "Off the Hook"
+  
+  # Required: Detailed description shown to participants
+  description: |
+    # Off the Hook
+
+    Find and remove two worms that have infected the system, and mitigate the vulnerabilities that allowed them to gain a foothold on the system.
+
+    **NICE Work Roles**
+
+    - [Incident Response](https://niccs.cisa.gov/tools/nice-framework)
+    - [Defensive Cybersecurity](https://niccs.cisa.gov/tools/nice-framework)
+
+    **NICE Tasks**
+
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework): Identify vulnerabilities
+    - [T1119](https://niccs.cisa.gov/tools/nice-framework): Recommend vulnerability remediation strategies
+    - [T1389](https://niccs.cisa.gov/tools/nice-framework): Remove malware
+
+    ## Background
+
+    You're going undercover as a security engineer to gain access to confidential information being held by a software development agency. However, they've become a bit suspicious of your willingness to take such a job given your qualifications. Before they grant you wider access, they've tasked you to prove your skills are real by resolving a breach on one of their smaller networks. 
+
+    They believe the system has been infected by two worms. Fix the vulnerabilities, remove any artifacts related to the worms, and get yourself... "Off the Hook".
+
+
+    ## Getting Started
+
+    Use your Kali host to get started and investigate the other hosts on the network. The hosts that are believed to be infected are `internalreports.pccc` and `publicsite.pccc`.
+
+    Note that the `attacker.pccc` host represents the entire internet, not a single literal adversary. All of the other hosts on the network must be able to interact with the sites normally for grading to succeed (that is, you cannot simply block all access).
+
+    **The worms and any other related artifacts should be removed entirely, not simply disabled.** Moving the artifacts to the home directory, your Kali host, or another location is also acceptable.
+
+    ## Tokens
+
+    The tokens are formatted as `PCCC{some_words123_here}`.
+
+    Tokens 2, 3, 5, and 6 require a grading check, which is performed by visiting `http://challenge.pccc`. 
+
+    1. Find the token hidden as a comment in the worm script on `internalreports.pccc`
+    2. Remediate the vulnerability that allowed the worm to gain access to `internalreports.pccc`
+    3. Remove all artifacts related to the worm on `internalreports.pccc` (there are two)
+    4. Find the token hidden as a comment in the worm script on `publicsite.pccc`
+    5. Remediate the vulnerability that allowed the worm to gain access to `publicsite.pccc`
+    6. Remove all artifacts related to the worm on `publicsite.pccc` (there are two)
+
+    ## System and Tool Credentials
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |kali-VNC|user|password|
+    |`internalreports.pccc`|user|password|
+    |`publicsite.pccc`|user|password|
+
+    ## Note
+
+    Attacking or unauthorized access to `challenge.pccc` is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
+
+  
+  icon: "TbFishHook"
+
+  summary: |
+    Find and remove two worms that have infected the system, and mitigate the vulnerabilities that allowed them to gain a foothold on the system.
+  
+  templates:
+    # Define reusable templates with anchors
+    reportsWorm-flag: &reportsWorm-flag_template "fake.bothify('PCCC{Just_keep_swimming_??_##??}')"
+    reportsFixed-flag: &reportsFixed-flag_template "fake.bothify('PCCC{oooo_tasty_worm_??_##??}')"
+    reportsRemoved-flag: &reportsRemoved-flag_template "fake.bothify('PCCC{On_the_hook_??_##??}')"
+    publicWorm-flag: &publicWorm-flag_template "fake.bothify('PCCC{wriggle_free_??_##??}')"
+    publicFixed-flag: &publicFixed-flag_template "fake.bothify('PCCC{happy_fish_??_##??}')"
+    publicRemoved-flag: &publicRemoved-flag_template "fake.bothify('PCCC{Fish_R_Friends_??_##??}')"
+  
+  variables:
+    reportsWorm-flag:
+      template: *reportsWorm-flag_template
+      default: &reportsWorm-flag_default "PCCC{Just_keep_swimming}"
+    reportsFixed-flag:
+      template: *reportsFixed-flag_template
+      default: &reportsFixed-flag_default "PCCC{oooo_tasty_worm}"
+    reportsRemoved-flag:
+      template: *reportsRemoved-flag_template
+      default: &reportsRemoved-flag_default "PCCC{On_the_hook}"
+    publicWorm-flag:
+      template: *publicWorm-flag_template
+      default: &publicWorm-flag_default "PCCC{wriggle_free}"
+    publicFixed-flag:
+      template: *publicFixed-flag_template
+      default: &publicFixed-flag_default "PCCC{happy_fish}"
+    publicRemoved-flag:
+      template: *publicRemoved-flag_template
+      default: &publicRemoved-flag_default "PCCC{Fish_R_Friends}"
+
+  questions:
+    - name: "Question 1"
+      body: "Enter the token hidden as a comment in the worm script on `internalreports.pccc`"
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 460 # 10%
+      answer: *reportsWorm-flag_default
+      max_attempts: 3
+    - name: "Question 2"
+      body: "Enter the token received from `challenge.pccc` after remediating the vulnerability that allowed the worm to gain access to `internalreports.pccc`"
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 690 # 15%
+      answer: *reportsFixed-flag_default
+      max_attempts: 3
+    - name: "Question 3"
+      body: "Enter the token received from `challenge.pccc` after removing all artifacts related to the worm on `internalreports.pccc` (there are two)"
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 1150 # 25%
+      answer: *reportsRemoved-flag_default
+      max_attempts: 3
+    - name: "Question 4"
+      body: "Enter the token hidden as a comment in the worm script on `publicsite.pccc`"
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 460 # 10%
+      answer: *publicWorm-flag_default
+      max_attempts: 3
+    - name: "Question 5"
+      body: "Enter the token received from `challenge.pccc` after remediating the vulnerability that allowed the worm to gain access to `publicsite.pccc`"
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 690 # 15%
+      answer: *publicFixed-flag_default
+      max_attempts: 3
+    - name: "Question 6"
+      body: "Enter the token received from `challenge.pccc` after removing all artifacts related to the worm on `publicsite.pccc` (there are two)"
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 1150 # 25%
+      answer: *publicRemoved-flag_default
+      max_attempts: 3
+
+services:
+  internalreports:
+    hostname: internalreports.pccc
+    build:
+      context: ./internalReports
+    networks:
+      - competitor_net
+  publicsite:
+    hostname: publicsite.pccc 
+    build:
+      context: ./publicSite
+    networks:
+      - competitor_net
+  attacker:
+    build:
+      context: attacker
+    hostname: attacker.pccc
+    networks:
+      - competitor_net
+    environment:
+      reportsWormToken: *reportsWorm-flag_default
+      publicWormToken: *publicWorm-flag_default
+      HOSTNAME: attacker.pccc
+  grader:
+    build: ./grading
+    hostname: challenge.pccc
+    networks:
+      - competitor_net
+    environment:
+      reportsRemovedToken: *reportsRemoved-flag_default
+      reportsFixedToken: *reportsFixed-flag_default
+      publicRemovedToken: *publicRemoved-flag_default
+      publicFixedToken: *publicFixed-flag_default
+
+networks:
+  competitor_net:
+    # external: true # Uncomment for local dev
+    internal: true

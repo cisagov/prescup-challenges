@@ -1,0 +1,11 @@
+OrderID,ClientID,Service,Status,Completion Date
+ORD100,C001,Website Hosting,Complete,2024-01-10
+ORD101,C002,Cloud Migration,In Progress,
+ORD102,C003,App Development,Cancelled,2023-10-05
+ORD103,C004,Email Setup,Complete,2024-04-18
+ORD104,C005,IT Audit,Pending,
+ORD105,C006,Server Upgrade,Complete,2024-06-08
+ORD106,C007,Network Assessment,Complete,2023-09-25
+ORD107,C008,Security Training,In Progress,
+ORD108,C009,Data Backup,Pending,
+ORD109,C010,Monitoring Service,Complete,2024-06-12

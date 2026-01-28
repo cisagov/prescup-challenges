@@ -1,0 +1,14 @@
+[Unit]
+Description=Abyssnet Challenge Service
+Requires=abyssnet.socket
+After=network.target
+
+[Service]
+Environment=LISTEN_PORT=8888
+ExecStart=/usr/bin/env python3 /app/abyssnet_simulator.py
+WorkingDirectory=/app
+Restart=on-failure
+User=user
+
+[Install]
+WantedBy=multi-user.target

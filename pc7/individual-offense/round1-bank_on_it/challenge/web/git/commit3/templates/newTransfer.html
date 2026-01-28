@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container mt-5" style="max-width: 600px;">
+    <h2 class="mb-4">Make a Transfer</h2>
+
+    {% if accounts|length < 2 %}
+        <div class="alert alert-warning">You need at least two accounts to make a transfer.</div>
+        <a href="/dashboard" class="btn btn-secondary">Return to Dashboard</a>
+    {% else %}
+        <p>Transfers, if valid, may take up to one full business day to reflect on your account.</p>
+        <p>For your security, making transfers to other users has been disabled. You may mail us a letter to enable it if is needed.</p>
+        {% if error %}<div class="alert alert-danger">{{ error }}</div>{% endif %}
+        <form method="post">
+            <div class="mb-3">
+                <label for="from_account" class="form-label">From Account</label>
+                <select class="form-select" id="from_account" name="from_account" required>
+                    {% for account in accounts %}
+                    <option value="{{ account.account_number }}">{{ account.name }} ({{ account.account_number }})</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="to_account" class="form-label">To Account</label>
+                <select class="form-select" id="to_account" name="to_account" required>
+                    {% for account in accounts %}
+                    <option value="{{ account.account_number }}">{{ account.name }} ({{ account.account_number }})</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="amount" class="form-label">Amount</label>
+                <input type="text" class="form-control" id="amount" name="amount" required>
+            </div>
+            <button type="submit" class="btn btn-warning">Submit Transfer</button>
+            <a href="/dashboard" class="btn btn-secondary ms-2">Cancel</a>
+        </form>
+    {% endif %}
+</div>
+{% endblock %}

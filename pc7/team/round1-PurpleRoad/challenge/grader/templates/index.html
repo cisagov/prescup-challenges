@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Challenge Submission Portal</title>
+</head>
+<body>
+    <h1>Challenge Answer Submission</h1>
+
+    <form method="POST">
+        {% for qid in ['q1', 'q2', 'q3', 'q4'] %}
+            <p>
+                {{ questions_text[qid] }}<br>
+
+                <input type="text" name="{{ qid }}" size="50">
+
+                {% if tokens and tokens[qid] is defined %}
+                    <br>
+                    {% if tokens[qid].passed %}
+                        <strong>PASS</strong> ✅<br>
+                        Token: <code>{{ tokens[qid].token }}</code>
+                    {% else %}
+                        <strong>FAIL</strong> ❌
+                    {% endif %}
+                {% endif %}
+            </p>
+        {% endfor %}
+
+        <button type="submit" name="submit" value="1">Submit Answers</button>
+        <br><br>
+        <button type="submit" name="submit_all" value="1">Submit All (Run Checks)</button>
+    </form>
+
+    {% if checks and checks|length > 0 %}
+        <h2>Check Results</h2>
+        <ul>
+            {% for c in checks %}
+                <li>
+                    <strong>4.{{ loop.index }} {{ c.label }}</strong>:
+                    {% if c.passed %}
+                        PASS ✅ — Token: <code>{{ c.token }}</code>
+                    {% else %}
+                        FAIL ❌
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

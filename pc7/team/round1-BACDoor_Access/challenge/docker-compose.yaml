@@ -1,0 +1,325 @@
+
+x-challenge:
+  # Required: Name of the challenge displayed to participants
+  name: "BACDoor Access"
+  
+  # Required: Detailed description shown to participants
+  summary: |
+    Hunched over your laptop in a cramped and dirty maintenance room, you've obtained access to a university's building automation system. Using BACnet, exploit this access to break into a secure research lab and steal sensitive research documents.
+  
+  icon: "TbTemperatureSun"
+
+  description: |
+    # BACDoor Access
+
+    Hunched over your laptop in a cramped and dirty maintenance room, you've obtained access to a university's building automation system. Using BACnet, exploit this access to break into a secure research lab and steal sensitive research documents. 
+
+    **NICE Work Roles**
+
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework)
+    - [Exploitation Analysis](https://niccs.cisa.gov/tools/nice-framework)
+
+    **NICE Tasks**
+
+    - [T1359](https://niccs.cisa.gov/tools/nice-framework): Perform penetration testing.
+    - [T1635](https://niccs.cisa.gov/tools/nice-framework): Access targeted networks.
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework): Identify vulnerabilities.
+
+    ## Background
+
+    An engineering professor at Some State University (SSU) has decided to keep their vulnerability research private, and your spy organization could desperately use those new techniques. 
+    You've been tasked with breaking into the engineering lab at SSU and retrieving any and all documents related to the research. Traveling to SSU, you've located the lab and server 
+    on the third floor of the engineering building, but both doors are locked. Hearing someone about to leave the lab, you tuck yourself into a nearby maintenance closet. 
+
+    Peeking out the door, you see a student leaving the lab, with someone in the lab angrily yelling "The class is in the lecture hall. Give the intro lecture on BACnet, and we will continue 
+    discussing your poor password habits afterward."  Looking around, the closet contains an exposed Ethernet port; connecting, you realize this gives you access to the building automated 
+    control system! Use this to get the professor out of the lab, unlock both doors, and escape with the research.
+
+    ## Getting Started
+
+    On the provided Kali machine, you have access to the network exposed in the engineering building maintenance room. You can also reach `http://ssu.edu`, the SSU homepage, on the campus-wide network.
+
+    Note that the SCADA dashboard can take 5+ minutes to launch, import, and ensure all BACnet devices have launched and been configured. 
+    If you reset your challenge after completing Token 2 and immediately log in, the dashboard may be blank; log out, wait a minute for the import, and then log back in.
+    
+    ## Tokens
+
+    The tokens are formatted as `PCCC{some_words_here}`.
+
+    Tokens 1-3 are sequential; the other tokens may be completed in any order, although completing tokens 1-3 first may make them easier.
+
+    Tokens 1, 3, 5, and 6 require a grading check. Visit `http://challenge.pccc` to perform the grading check. For Token 1, enter the username into the available text box before hitting Grade. For the other tokens, you may leave the text box empty.
+
+    - Token 1: Investigate `http://ssu.edu` and find the username of the graduate student who was just getting scolded. 
+        - Submit the username to the grading server.
+    - Token 2: Find the SCADA control dashboard and log in as the graduate student. The token is displayed on the HMI in the maintenance room you are hiding in.
+    - Token 3: Get the professor to leave the lab by causing chaos; disable all the lights in the main lecture room. 
+    - Token 4: Find a token hidden in one of the BACnet devices in the engineering building.
+    - Token 5: You need to grab any physical documents from the lab. Use the BACnet access to unlock the lab door.
+    - Token 6: The server room is much more secure. Use BACnet to get into the server room by tampering with the fire and server room devices.
+        - Be careful not to start a fire drill! You don't need that kind of *heat*.
+
+    ## System and Tool Credentials
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |kali-vnc|user|password|
+
+    ## Note
+
+    Attacking or unauthorized access to `challenge.pccc` is forbidden. You may only use the provided web page to view challenge progress and download any challenge artifacts that are provided.
+
+  templates:
+    # Define reusable templates with anchors
+    tokenGradStudent-flag: &tokenGradStudent-flag_template "fake.bothify('PCCC{Max_UNwell_##??##}')"
+    tokenHMI-flag: &tokenHMI-flag_template "fake.bothify('PCCC{HMI_hacked_maxwells_insecurepassword123_##??##}')"
+    tokenLights-flag: &tokenLights-flag_template "fake.bothify('PCCC{Scared_of_the_dark_##??##}')"
+    tokenInObject-flag: &tokenInObject-flag_template "fake.bothify('PCCC{Weather_is_my_specialty_##??##}')"
+    tokenLabdoor-flag: &tokenLabdoor-flag_template "fake.bothify('PCCC{Open_sesame_##??##}')"
+    tokenServerdoor-flag: &tokenServerdoor-flag_template "fake.bothify('PCCC{Fire_ENTRANCE_Door_##??##}')"
+  
+  variables:
+    tokenGradStudent-flag:
+      template: *tokenGradStudent-flag_template
+      default: &tokenGradStudent-flag_default "PCCC{Max_UNwell}"
+    tokenHMI-flag:
+      template: *tokenHMI-flag_template
+      default: &tokenHMI-flag_default "PCCC{HMI_hacked_maxwells_insecurepassword123}"
+    tokenLights-flag:
+      template: *tokenLights-flag_template
+      default: &tokenLights-flag_default "PCCC{Scared_of_the_dark}"
+    tokenInObject-flag:
+      template: *tokenInObject-flag_template
+      default: &tokenInObject-flag_default "PCCC{Weather_is_my_specialty}"
+    tokenLabdoor-flag:
+      template: *tokenLabdoor-flag_template
+      default: &tokenLabdoor-flag_default "PCCC{Open_sesame}"
+    tokenServerdoor-flag:
+      template: *tokenServerdoor-flag_template
+      default: &tokenServerdoor-flag_default "PCCC{Fire_ENTRANCE_Door}"
+
+  questions:
+    - name: "Question 1"
+      body: "Enter the token received from `challenge.pccc` after identifying the correct username."
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 226 # 5%
+      answer: *tokenGradStudent-flag_default
+      max_attempts: 3
+    - name: "Question 2"
+      body: "Enter the token found on the SCADA Dashboard."
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 453 # 10%
+      answer: *tokenHMI-flag_default
+      max_attempts: 3
+    - name: "Question 3"
+      body: "Enter the token received from `challenge.pccc` after disabling the lecture hall lights."
+      placeholder: "PCCC-Words-here"
+      points: 906 # 20%
+      answer: *tokenLights-flag_default
+      max_attempts: 3
+    - name: "Question 4"
+      body: "Enter the token found on one of the BACnet devices in the engineering building."
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 1132 # 25% + 2 for rounding
+      answer: *tokenInObject-flag_default
+      max_attempts: 3
+    - name: "Question 5"
+      body: "Enter the token received from `challenge.pccc` after unlocking the lab door."
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 679 # 15%
+      answer: *tokenLabdoor-flag_default
+      max_attempts: 3
+    - name: "Question 6"
+      body: "Enter the token received from `challenge.pccc` after gaining access to the server room."
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 1132 # 25% + 2 for rounding
+      answer: *tokenServerdoor-flag_default
+      max_attempts: 3
+
+services:
+  database:
+    hostname: database
+    build:
+      context: ./database
+    environment: 
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=scadalts
+    # command: --log_bin_trust_function_creators=1
+    # Resource constraints copied from complex challenge example
+    mem_limit: "512m"
+    memswap_limit: "1g"
+    # cpus: "0.1"
+    networks:
+      - platform_net
+  resolver:
+    hostname: resolver.pccc
+    build: 
+      context: ./resolver
+    networks:
+      - platform_net
+  scadalts:
+    build: 
+      context: ./scada-LTS
+    hostname: scadalts.pccc
+    environment:
+      CATALINA_OPTS: "-Xms512m -Xmx512m -XX:+UseContainerSupport -XX:ActiveProcessorCount=1 -XX:CICompilerCount=2 -XX:ParallelGCThreads=1"
+      # CATALINA_OPTS: "-Xms512m -Xmx512m"
+      tokenHMI: *tokenHMI-flag_default  # Start up should place it at assets/dFld0XeCe7pe3z.html
+    mem_limit: "1g"
+    memswap_limit: "1g"
+    cpus: "0.2"
+    # depends_on: 
+    #   - database
+    #   - lecturelights
+    #   - lecturehvac
+    #   - englights
+    #   - enghvac
+    #   - security
+    #   - firesafety
+    #   - powermonitoring
+    #   - weather
+    #   - serverroom
+    #   - evcharging
+    networks:
+      - lecture_net
+      - competitor_net
+      - platform_net
+  lecturelights:
+    build:
+      context: ./bacPypesDevice
+    hostname: lecturelights.pccc
+    environment:
+      tokenInstance: "3003" 
+      hostname: lecturelights.pccc
+      instance: "1001"
+    networks:
+      - lecture_net
+      - platform_net
+  lecturehvac:
+    build:
+      context: ./bacPypesDevice
+    hostname: lecturehvac.pccc
+    environment:
+      tokenInstance: "3003"
+      hostname: lecturehvac.pccc
+      instance: "1101"
+    networks:
+      - lecture_net
+      - platform_net
+  englights:
+    build:
+      context: ./bacPypesDevice
+    hostname: englights.pccc
+    environment:
+      tokenInstance: "3003"
+      hostname: englights.pccc
+      instance: "2001"
+    networks:
+      - competitor_net
+      - platform_net
+  enghvac:
+    build:
+      context: ./bacPypesDevice
+    hostname: enghvac.pccc
+    environment:
+      tokenInstance: "3003"
+      hostname: enghvac.pccc
+      instance: "2101"
+    networks:
+      - competitor_net
+      - platform_net
+  security:
+    build:
+      context: ./bacPypesDevice
+    hostname: security.pccc
+    environment:
+      tokenInstance: "3003"
+      hostname: security.pccc
+      instance: "2201"
+    networks:
+      - competitor_net
+      - platform_net
+  firesafety:
+    build:
+      context: ./bacPypesDevice
+    hostname: firesafety.pccc
+    environment:
+      tokenInstance: "3003"
+      hostname: firesafety.pccc
+      instance: "3001"
+    networks: 
+      - competitor_net
+      - platform_net
+  powermonitoring:
+    build:
+      context: ./bacPypesDevice
+    hostname: powermonitoring.pccc
+    environment:
+      tokenInstance: "3003"
+      hostname: powermonitoring.pccc
+      instance: "3002"
+    networks:
+      - competitor_net
+      - platform_net
+  weather:
+    build:
+      context: ./bacPypesDevice
+    hostname: weather.pccc
+    environment:
+      tokenInstance: "3003"
+      hostname: weather.pccc
+      instance: "3003"
+      tokenInObject: *tokenInObject-flag_default
+    networks:
+      - competitor_net
+      - platform_net
+  serverroom:
+    build:
+      context: ./bacPypesDevice
+    hostname: serverroom.pccc
+    environment:
+      tokenInstance: "3003"
+      hostname: serverroom.pccc
+      instance: "3005"
+    networks:
+      - competitor_net
+      - platform_net
+  evcharging:
+    build:
+      context: ./bacPypesDevice
+    hostname: evcharging.pccc
+    environment:
+      tokenInstance: "3003"
+      hostname: evcharging.pccc
+      instance: "3006"
+    networks:
+      - lecture_net
+      - platform_net
+  ssu_web:
+    build:
+      context: ssu_web
+    hostname: ssu.edu
+    networks:
+      - competitor_net
+  grader:
+    build: ./grading
+    hostname: challenge.pccc
+    networks:
+      - competitor_net
+      - lecture_net
+    environment:
+      tokenGradStudent: *tokenGradStudent-flag_default
+      tokenLights: *tokenLights-flag_default
+      tokenLabdoor: *tokenLabdoor-flag_default
+      tokenServerdoor: *tokenServerdoor-flag_default
+
+networks:
+  competitor_net:
+    # external: true  # Comment out for prod
+    internal: true
+  lecture_net:
+    internal: true
+  platform_net:
+    internal: true

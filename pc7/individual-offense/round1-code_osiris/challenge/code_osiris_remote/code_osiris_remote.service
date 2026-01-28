@@ -1,0 +1,14 @@
+[Unit]
+Description=Code Osiris Challenge Service
+Requires=code_osiris_remote.socket
+After=network.target
+
+[Service]
+Environment=LISTEN_PORT=9999
+ExecStart=/usr/bin/env python3 /app/code_osiris_remote.py
+WorkingDirectory=/app
+Restart=on-failure
+User=user
+
+[Install]
+WantedBy=multi-user.target

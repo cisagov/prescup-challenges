@@ -1,0 +1,13 @@
+[--- Nautical Rapid Response Team Training Day ---]
+
+Welcome, Recruit.
+
+Your task is to complete a series of forensic operations:
+1. Recover deleted files from a disk image (disk_image.dd).
+3. Analyze system logs for tampering and hidden messages (syslog.log).
+3. Examine live memory for hidden processes and secrets (memory_dump.raw).
+4. Examine a packet capture with suspicious voice based activity (suspicious_capture.pcap).
+
+Submit your findings by extracting the hidden tokens.
+
+Good luck, Recruit.

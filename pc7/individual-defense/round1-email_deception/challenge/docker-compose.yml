@@ -1,0 +1,128 @@
+x-challenge:
+  name: "Email Deception"
+  icon: "TbMail"
+  description: |
+    # Email Deception
+
+    Identify email artifacts and deduce information.
+
+    **NICE Work Roles**
+
+    - [Cyber Defense Analyst](https://niccs.cisa.gov/tools/nice-framework)
+    
+    **NICE Tasks**
+
+    - [T0160](https://niccs.cisa.gov/tools/nice-framework): Detect and analyze anomalous activity.
+    - [T0004](https://niccs.cisa.gov/tools/nice-framework): Analyze email headers, logs, and metadata to determine source authenticity.
+    - [T0357](https://niccs.cisa.gov/tools/nice-framework): Monitor system logs for signs of malicious activity.
+
+
+    ## Background
+
+    You are an administrator of the email system. Users have been reporting suspicious emails from what looks like real sources. Your job is to:
+
+    1. Identify the email server software versions.
+    1. Identify any emails that did not come from an authenticated source.
+    1. Set the DMARC record to reject unauthenticated emails.
+    1. Find any suspicious attachments or links in any emails and gather any information you can from them.
+
+    ## Getting Started
+
+    Using the provided Kali machine, you must access the environment to gather the information required for the tasks.
+
+    Emails are @mail-auth.example.com
+
+    To acquire the token for the DMARC record, you must navigate to `http://grader/` using a web browser.
+
+    ## System and Tool Credentials
+
+    |machine|username|password|
+    |-------|--------|--------|
+    |kali|user|password|
+    |dns|user|mailman|
+    |mail_auth|user|mailman|
+
+  summary: |
+    Investigate suspicious emails impersonating trusted sources, assess the security posture of the email system, and take steps to prevent further unauthorized or malicious messages.
+
+  templates:
+    dmarc_flag: &dmarc_template "fake.bothify('PCCC{dmarc_??_####}', letters='ABCDEF0123456789')"
+    attachment_flag: &attachment_template "fake.bothify('PCCC{attachment_??_####}', letters='ABCDEF0123456789')"
+
+  variables:
+    
+    #dmarc variable
+    dmarc_flag:
+      template: *dmarc_template
+      default: &dmarc_template_default "PCCC{Dmarc_Satisfied}"
+
+    #attachment variable
+    attachment_flag:
+      template: *attachment_template
+      default: &attachment_template_default "PCCC{attachment_Satisfied}"
+
+
+  questions:
+    - name: "Question 1"
+      body: "What is the version of Postfix running on the email server?"
+      placeholder: "x.x.x-xnamex.x"
+      points: 264 #10%
+      answer: "3.6.4-1ubuntu1.3"
+      max_attempts: 3
+
+    - name: "Question 2"
+      body: "Identify any emails that did not come from an authenticated source"
+      placeholder: "name.eml"
+      points: 528 #20%
+      answer: "email6.eml"
+      max_attempts: 3
+      
+    - name: "Question 3"
+      body: "Set the DMARC record to reject unauthenticated emails (grader)"
+      placeholder: "PCCC{some_words123_here}"
+      points: 792 # 30%
+      answer: *dmarc_template_default
+      max_attempts: 3
+
+    - name: "Question 4"
+      body: "Find any suspicious attachments or links in any emails and gather any information you can from them"
+      placeholder: "PCCC{some_words123_here}"
+      points: 1056 # 40%
+      answer: *attachment_template_default
+      max_attempts: 3
+      
+       
+services:
+  dns:
+    build: ./dns/
+    hostname: dns
+    networks:
+      - competitor_net
+
+    
+  mail_auth:
+    build: ./mailauth
+    hostname: mail_auth
+    networks:
+      - competitor_net
+
+  mail_rogue:
+    build: ./mailrogue
+    environment:
+      token4: *attachment_template_default
+    hostname: website
+    networks:
+      - competitor_net
+
+  grader:
+    build: ./grader
+    environment:
+      token3: *dmarc_template_default
+    hostname: grader
+    networks: 
+      - competitor_net
+
+networks:
+  competitor_net:
+    internal: true
+#    external: true  # Comment out for prod

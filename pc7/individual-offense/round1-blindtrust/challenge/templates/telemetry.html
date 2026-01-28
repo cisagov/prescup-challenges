@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nebula Dynamics | Telemetry Submissions</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+       body {
+            margin: 0;
+            background: url('/static/Nebula Dynamics Home.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #cce7ff;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        header {
+            background-color: #050a1f;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 1em 2em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: row;
+            align-items: left;
+        }
+        .logo-title {
+            display: flex;
+            align-items: center;
+        }
+        .logo-title img {
+            height: 40px;
+            margin-right: 1em;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            margin-top: 0.5em;
+        }
+        nav a {
+            color: #cce7ff;
+            margin-right: 1.5em;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+	    padding: 2em 2em 2em 2em;
+	    max-width: 1200px;
+	    margin: 0 auto;
+	}
+        h1, h2 {
+            color: #a5d7ff;
+        }
+        .event {
+            border-left: 4px solid #1a75ff;
+            margin-bottom: 1.5em;
+            padding-left: 1em;
+        }
+        .event-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #fff;
+        }
+        .event-desc {
+            color: #d0e8ff;
+            margin-top: 0.25em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="/static/Logo.png" alt="Nebula Dynamics Logo">
+        </div>
+        <nav>
+            {% include "nav.html" %}
+            <a href="/xml/upload_backup">Upload (Backup)</a>
+            <a href="/help">Developer Guide</a>
+        </nav>
+    </header>
+    
+<h2>Telemetry Data Submission</h2>
+<p>Please submit your XML-encoded telemetry logs for audit verification.</p>
+{% if error %}<p style="color:red;">{{ error }}</p>{% endif %}
+{% if success %}<p style="color:limegreen;">{{ success }}</p>{% endif %}
+<form method="POST">
+    <input name="node" placeholder="Device ID"><br>
+    <input name="telemetry" placeholder="Log Sample"><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

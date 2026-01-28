@@ -1,0 +1,146 @@
+# Complete Challenge Specification Example
+x-challenge:
+  # Required: Name of the challenge displayed to participants
+  name: "Bank On It"
+  
+  # Required: Detailed description shown to participants
+  description: |
+    # Bank On It
+
+    The Trustfall Bank is committing various crimes and financial fraud, and you've been tasked with taking them down. Your mission is to investigate and infiltrate their website in order to bring them to justice.
+
+    **NICE Work Roles**
+
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework)
+    - [Exploitation Analysis](https://niccs.cisa.gov/tools/nice-framework)
+
+    **NICE Tasks**
+
+    - [T1359](https://niccs.cisa.gov/tools/nice-framework): Perform penetration testing.
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework): Identify vulnerabilities.
+
+    ## Background
+
+    The Trustfall Bank, located overseas, has been committing insider trading and identity theft. As the Agency's most talented agent, you've been given the go-ahead to bring them down. The agency has given you a list of tasks to complete to verify that you have successfully infiltrated their systems. These include extracting the source code for potential future operations and manipulating existing accounts to cause mayhem.
+
+    ## Getting Started
+
+    Using the provided Kali machine, visit `http://trustfallbank.us` to begin investigating.
+
+    ## Tokens
+
+    The tokens are formatted as `PCCC{some_words123_here}`.
+
+    The tokens may be completed in any order, although extracting the source code first may make the other tasks easier.
+
+    Token 4 requires a grading check, which is performed by visiting `http://trustfallbank.us/grade/account-drain`. 
+
+    1. The source code has been exposed; find the token in the `config` file where this exposure occurs.
+    2. Find the token that used to be in the source code.  
+    3. The token is the account name for one of `bob`'s accounts.
+    4. Transfer all of `alice`'s funds to `carol`'s investment account. For correct grading, use a single complete transfer for each account. 
+        - That is, transfer `$7336.74` from Alice's Checking and `$6820.37` from Alice's savings to Carol's investment account.
+    5. Break into the admin's current session and find the token. 
+        - Note that the admin account is not in the database.
+    
+    ## System and Tool Credentials
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |kali-VNC|user|password|
+
+      
+  icon: "TbBuildingBank"
+  
+  summary: |
+    The Trustfall Bank is committing various crimes and financial fraud, and you've been tasked with taking them down. Your mission is to investigate and infiltrate their website in order to bring them to justice.
+  
+  templates:
+    gitConfig-flag: &gitConfig-flag_template "fake.bothify('PCCC{G1t_c0nf1g_??_####}')"
+    gitCode-flag: &gitCode-flag_template "fake.bothify('PCCC{C0d3_L3ak_??_####}')"
+    gitBobAccount-flag: &gitBobAccount-flag_template "fake.bothify('PCCC{Bob_b0b_606_??_####}')"
+    gitAliceAccount-flag: &gitAliceAccount-flag_template "fake.bothify('PCCC{Alice_is_broke_??_####}')"
+    gitAdminSession-flag: &gitAdminSession-flag_template "fake.bothify('PCCC{Welcome_Admin_??_####}')"
+
+  variables:
+    gitConfig_flag:
+      template: *gitConfig-flag_template
+      default: &gitConfig-flag_default "PCCC{G1t_c0nf1g}"
+    gitCode_flag:
+      template: *gitCode-flag_template
+      default: &gitCode-flag_default "PCCC{C0d3_L3ak}"
+    gitBobAccount_flag:
+      template: *gitBobAccount-flag_template
+      default: &gitBobAccount-flag_default "PCCC{Bob_b0b_606}"
+    gitAliceAccount_flag:
+      template: *gitAliceAccount-flag_template
+      default: &gitAliceAccount-flag_default "PCCC{Alice_is_broke}"
+    gitAdminSession_flag:
+      template: *gitAdminSession-flag_template
+      default: &gitAdminSession-flag_default "PCCC{Welcome_Admin}"
+
+  questions:
+    - name: "Question 1"
+      body: "The source code has been exposed; find the token in the config file where this exposure occurs."
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 396 # 10%
+      answer: *gitConfig-flag_default
+      max_attempts: 3
+    - name: "Question 2"
+      body: "Find the token that used to be in the source code."
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 792 # 20%
+      answer: *gitCode-flag_default
+      max_attempts: 3
+    - name: "Question 3"
+      body: "The token is the account name for one of bob's accounts."
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 594 # 15%
+      answer: *gitBobAccount-flag_default
+      max_attempts: 3
+    - name: "Question 4"
+      body: "Transfer all of alice's funds to carol's investment account."
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 990 # 25%
+      answer: *gitAliceAccount-flag_default
+      max_attempts: 3
+    - name: "Question 5"
+      body: "Break into the admin's current session and find the token."
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 1188 # 30%
+      answer: *gitAdminSession-flag_default
+      max_attempts: 3
+
+services:
+  web:
+    build: ./web
+    hostname: trustfallbank.us
+    environment:
+      tokenGitConfig: *gitConfig-flag_default
+      tokenGitCode: *gitCode-flag_default
+      tokenAdminSession: *gitAdminSession-flag_default
+      tokenBobAccount: *gitBobAccount-flag_default
+      tokenAccountDrain: *gitAliceAccount-flag_default
+    networks:
+      - "platform_net"
+      - "competitor_net"
+  db:
+    build: ./db
+    hostname: database
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: trustfall
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    networks:
+      - "platform_net"
+    mem_limit: "512m"
+    memswap_limit: "1g"
+    cpus: "0.1"
+
+networks:
+  competitor_net:
+    internal: true
+    # external: true  # Comment out for prod
+  platform_net:
+    internal: true

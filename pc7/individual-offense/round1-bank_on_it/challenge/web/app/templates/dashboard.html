@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-3">Welcome back, {{ user.username }}</h2>
+    <p class="mb-4">This is your TrustFall dashboard. Use the options below to manage your finances.</p>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">View Accounts</h5>
+                    <p class="card-text">See all your active checking, savings, and investment accounts.</p>
+                    <a href="/accounts" class="btn btn-primary">View Accounts</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Open New Account</h5>
+                    <p class="card-text">Start a new account with just a few clicks.</p>
+                    <a href="/accounts/new" class="btn btn-success">Open Account</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Make a Transfer</h5>
+                    <p class="card-text">Transfer funds between your accounts or send money to others.</p>
+                    <a href="/transfers/new" class="btn btn-warning">Start Transfer</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">View Transfers</h5>
+                    <p class="card-text">Review your transfer history and recent activity.</p>
+                    <a href="/transfers" class="btn btn-info">View Transfers</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

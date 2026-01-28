@@ -1,0 +1,47 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0c0f1a;
+  color: #cce7ff;
+  padding: 2em;
+}
+nav a {
+  color: #cce7ff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+button, input[type=submit] {
+  background-color: #1a75ff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  border-radius: 5px;
+}
+button:hover, input[type=submit]:hover {
+  background-color: #005ce6;
+}
+button:active, input[type=submit]:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px #666;
+}
+input {
+  margin: 8px 0;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #222;
+  color: #fff;
+}
+form {
+  margin-top: 20px;
+}
+
+@import url("/static/stars.css");

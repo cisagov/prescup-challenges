@@ -1,0 +1,11 @@
+ID,Name,Email,Status,Last Contact
+C001,Alice Smith,alice@example.com,Active,2024-05-01
+C002,Bob Johnson,bob@example.com,Inactive,2024-01-15
+C003,Charlie Davis,charlie@example.com,Pending,2023-12-10
+C004,Diana Evans,diana@example.com,Active,2024-06-10
+C005,Eddie Young,eddie@example.com,Suspended,2023-11-25
+C006,Faith Lee,faith@example.com,Active,2024-04-17
+C007,George Adams,george@example.com,Inactive,2023-09-12
+C008,Helen Brooks,helen@example.com,Active,2024-02-28
+C009,Ian Clark,ian@example.com,Pending,2023-08-05
+C010,Jackie Gomez,jackie@example.com,Active,2024-06-12

@@ -1,0 +1,8 @@
+[Unit]
+Description=Code Osiris Remote Test TCP Socket
+
+[Socket]
+ListenStream=9999
+
+[Install]
+WantedBy=sockets.target

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Tartan Solutions.</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Tartan Solutions</a>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="text-center mb-5">
+      <h1 class="display-4">Need a Quote?</h1>
+      <p class="lead">We provide rapid industrial quotes tailored to your operational needs.</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow">
+          <div class="card-body text-center">
+            <h5 class="card-title">Request a Quote</h5>
+            <p class="card-text">
+              Download our quote request form below, fill it out, and upload it for processing.
+            </p>
+            <a href="request_quote.pdf" class="btn btn-primary">Download Quote Form (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-8">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title text-center">Upload Your Completed Form</h5>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+              <div class="mb-3">
+                <input class="form-control" type="file" name="file" required>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-success" type="submit">Upload PDF</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
