@@ -1,0 +1,61 @@
+{% from "macros.html" import render_errors with context %}
+
+{% extends "base.html" %}
+
+{% block title %}Login – {{ super() }}{% endblock %}
+
+{% block styles %}
+<style>
+    .pop-light {
+        background-color: #dadada;
+        color: #303030;
+        border: #999 solid 2px;
+        border-radius: .25rem;
+    }
+</style>
+{% endblock %}
+
+{% block sections %}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card pop-light">
+            <div class="card-body p-4">
+                <h1 class="h4 mb-4">Sign in</h1>
+                <form method="post" novalidate>
+                    {{ form.hidden_tag() }}
+                    <div class="mb-3">
+                        <label class="form-label">{{ form.email.label }}</label>
+                        {{ form.email(class_="form-control", placeholder="you@example.com") }}
+                        {{ render_errors(form.email) }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">{{ form.password.label }}</label>
+                        {{ form.password(class_="form-control") }}
+                        {{ render_errors(form.password) }}
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-3">
+                            <a href="/register" type="button" class="btn btn-secondary">Register</a>
+                        </div>
+                        <div class="col-md-7">
+                            {{ form.submit(class_="btn btn-success w-100") }}
+                            {{ render_errors(form.submit) }}
+                        </div>
+                    </div>
+                </form>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                <div class="mt-3">
+                    {% for cat, msg in messages %}
+                    <div class="alert alert-{{ cat }}">{{ msg }}</div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

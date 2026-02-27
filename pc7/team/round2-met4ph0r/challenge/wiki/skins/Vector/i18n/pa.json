@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aalam",
+			"Babanwalia",
+			"Raj Singh",
+			"TariButtar",
+			"Tow",
+			"Bgo eiu"
+		]
+	},
+	"vector-skin-desc": "ਮੋਨੋਬੁੱਕ ਦੀ ਆਧੁਨਿਕ ਵਰਜਨ ਜਿਸ ਵਿਚ ਤਾਜ਼ਾ ਦਿੱਖ ਅਤੇ ਬਹੁਤ ਸਾਰੇ ਉਪਯੋਗਤਾ ਸੁਧਾਰ ਹਨ",
+	"prefs-vector-enable-vector-1-label": "ਪੁਰਾਣੀ ਦਿੱਖ ਵਰਤੋ",
+	"vector-opt-out": "ਪੁਰਾਣੀ ਦਿੱਖ ’ਤੇ ਉਲਟਾਓ",
+	"vector-languages": "ਬੋਲੀਆਂ",
+	"vector-language-button-label": "{{PLURAL:$1|$1 ਭਾਸ਼ਾ|$1 ਭਾਸ਼ਾਵਾਂ}}",
+	"vector-no-language-button-label": "ਹੋਰ ਬੋਲੀਆਂ ਜੋੜੋ",
+	"vector-action-addsection": "ਵਿਸ਼ਾ ਜੋੜੋ",
+	"vector-action-delete": "ਹਟਾਓ",
+	"vector-action-move": "ਭੇਜੋ",
+	"vector-action-protect": "ਸੁਰੱਖਿਆ",
+	"vector-action-undelete": "ਹਟਾਉਣਾ-ਵਾਪਸ",
+	"vector-action-unprotect": "ਸੁਰੱਖਿਆ ਬਦਲੋ",
+	"vector-view-create": "ਬਣਾਓ",
+	"vector-view-edit": "ਸੋਧੋ",
+	"vector-view-history": "ਅਤੀਤ ਵੇਖੋ",
+	"vector-view-view": "ਪੜ੍ਹੋ",
+	"vector-view-viewsource": "ਸਰੋਤ ਵੇਖੋ",
+	"vector-more-actions": "ਹੋਰ",
+	"vector-anon-user-menu-pages-learn": "ਹੋਰ ਜਾਣੋ",
+	"vector-main-menu-tooltip": "ਮੁੱਖ ਮੇਨੂ",
+	"vector-toc-menu-tooltip": "ਸਮੱਗਰੀ ਸਾਰਨੀ",
+	"vector-site-nav-label": "ਸਾਈਟ",
+	"tooltip-vector-anon-user-menu-title": "ਹੋਰ ਚੋਣਾਂ"
+}

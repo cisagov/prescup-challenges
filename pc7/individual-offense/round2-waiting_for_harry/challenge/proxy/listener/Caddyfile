@@ -1,0 +1,4 @@
+listener {
+    reverse_proxy listener-server:80
+    tls internal
+}

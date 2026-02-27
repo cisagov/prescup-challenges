@@ -1,0 +1,170 @@
+/* stylelint-disable selector-max-id */
+
+@import '../minerva.less/minerva.mixins.less';
+@import '../minerva.less/minerva.variables.less';
+@import 'mediawiki.ui/variables.less';
+@import 'mediawiki.ui/mixins.buttons.less';
+@import 'mediawiki.mixins.less';
+
+.action-history {
+	#mw-content-text > form {
+		margin: 0;
+	}
+
+	// the margin value used to create a "faux" column after the
+	// radio buttons.
+	@revision-selectors-width: 50px;
+
+	// form element wrapping history page content. Overrides #mw-content-text > form
+	// for tablet widths.
+	#mw-history-compare {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	// The large "Compare selected revisions" button container
+	.mw-history-compareselectedversions {
+		background: @background-color-base;
+		.position-sticky();
+		top: 0;
+		z-index: @z-indexAboveContent;
+
+		// "Compare selected revisions" button
+		.mw-history-compareselectedversions-button {
+			.mw-ui-button();
+			.mw-ui-button-colors-primary( @colorProgressive, @colorProgressiveHighlight, @colorProgressiveActive );
+			width: 100%;
+			max-width: 100%;
+			// stylelint-disable-next-line plugin/no-unsupported-browser-features
+			-webkit-appearance: unset;
+			font-weight: bold;
+			border-radius: @border-radius-base;
+			margin: 10px 0;
+		}
+
+		// Admin specific "change visibility of selected revisions" buttons.
+		.mw-history-revisionactions,
+		.mw-checkbox-toggle-controls {
+			display: none;
+		}
+
+		// Second large "Compare selected revisions" button container at bottom of page
+		& ~ .mw-history-compareselectedversions {
+			// hide second "Compare selected revisions" button near bottom
+			.mw-history-compareselectedversions-button {
+				display: none;
+			}
+
+			// show second "Change visibility of selected revisions" button near bottom
+			.mw-history-revisionactions,
+			.mw-checkbox-toggle-controls {
+				display: block;
+			}
+		}
+	}
+
+	// "Change visibility of selected revisions" button (for admins only)
+	.mw-history-revisiondelete-button {
+		.mw-ui-button();
+		.mw-ui-button-states();
+		background-color: @colorGray15;
+		margin-bottom: 1em;
+	}
+
+	#pagehistory {
+		margin-bottom: 24px;
+		padding: 0;
+
+		li {
+			.changeslist-row();
+			box-sizing: border-box;
+			position: relative;
+			min-height: inherit;
+			padding: 12px 0 10px 60px;
+		}
+
+		li:after {
+			.clearfix();
+		}
+
+		.mw-history-histlinks {
+			float: right;
+		}
+
+		// Diff radio buttons, admin revision-delete checkbox.
+		input[ type='radio' ],
+		input[ type='checkbox' ] {
+			// Align checkboxes with text.
+			top: 5px;
+		}
+
+		input[ type='radio' ] {
+			position: absolute;
+			top: 16px;
+		}
+
+		input[ name='oldid' ] {
+			left: 8px;
+		}
+
+		input[ name='diff' ] {
+			left: 32px;
+		}
+
+		// checkbox appears slightly smaller than radio buttons,
+		// moving down 6px to vertically center.
+		input[ type='checkbox' ] {
+			position: absolute;
+			top: 46px;
+			left: 32px;
+		}
+	}
+
+	.mw-diff-bytes,
+	.mw-changeslist-date {
+		display: block;
+	}
+
+	// removes space between the .mw-diff-bytes and comments.
+	.comment {
+		float: left;
+		width: 100%;
+		margin-bottom: 6px;
+	}
+
+	// hide page instructions, article size, double dot separator, thank link
+	.mw-history-legend,
+	.history-size.mw-diff-bytes,
+	.mw-changeslist-separator,
+	.mw-thanks-thank-link,
+	abbr {
+		display: none;
+	}
+
+	// Disable the parentheseses around the undo and rollback link.
+	.mw-changeslist-links:not( .mw-usertoollinks ):not( .mw-history-histlinks ) {
+		& > span:after,
+		& > span:before {
+			content: '';
+		}
+	}
+
+	.mw-tag-markers {
+		// Disable the core margins of tags.
+		margin: 0;
+		// places the tags on the same line as the float-right undo button.
+		display: inline;
+	}
+
+	.history-user {
+		// (hack) - the history page injects unstyleable whitespace. to keep user aligned with other elements
+		// it most be moved to the left.
+		margin-left: -5px;
+	}
+
+	.mw-history-undo {
+		float: right;
+		// Push the tags down to bottom so undo and tags do not overlay.
+		padding-bottom: 10px;
+	}
+}

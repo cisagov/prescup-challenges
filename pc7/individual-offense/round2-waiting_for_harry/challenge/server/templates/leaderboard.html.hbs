@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leaderboard</title>
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center">Leaderboard</h1>
+
+            <div class="sticky_anchor_begin"></div>
+            <table class="table table-striped table-hover table-borderless" data-sticky-header="true">
+                <thead>
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each leaderboard}}
+                    <tr>
+                        <td>{{{this.rank}}}</td>
+                        <td>{{{this.name}}}</td>
+                        <td>{{{this.score}}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <div class="sticky_anchor_end"></div>
+        </div>
+
+        <script src="/static/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

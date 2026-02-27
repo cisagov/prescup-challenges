@@ -1,0 +1,159 @@
+@import 'mediawiki.ui/variables';
+@import 'mediawiki.skin.variables.less';
+
+/**
+ * System font stack for sans-serif fonts
+ *
+ * `-apple-system` ('San Francisco') – Support: Safari 9+ macOS and iOS, Firefox macOS
+ * `BlinkMacSystemFont` ('San Francisco') – Chrome 48+ macOS and iOS
+ * `Segoe UI` – Windows Vista & newer
+ * `Roboto` – Android 4.0
+ * `Lato` – Wikimedia Design choice, OFL licensed
+ * `Helvetica, Arial, sans-serif` – (Generic) Web fallback
+ * Note that CSS Fonts Module Level 4's `system-ui` value has resulted in unresolved
+ * side-effects in certain OS/language combinations and is therefore not included as of now.
+ */
+@font-family-system-sans: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Lato', 'Helvetica', 'Arial', sans-serif;
+@font-family-base: @font-family-system-sans;
+
+@font-size-browser: 16; // Assumed browser default of `16px`.
+@font-size-root: 100%;
+@font-size-root--feature-phone: 0.8 * @font-size-root;
+// T282315: Use rem instead of em to avoid font-size compounding, resulting in smaller than intended text
+@font-size-minerva-small: unit( 14 / @font-size-browser, rem ); // Equals `14px` at `16px` browser default.
+@font-size-minerva-smallest: unit( 13 / @font-size-browser, rem ); // Equals `13px` at `16px` browser default.
+
+// colors
+@grayMediumLight: @colorGray10;
+@grayMediumDark: @colorGray5;
+@grayMedium: @colorGray7;
+@grayLight: @colorGray12;
+@grayLightest: @colorGray14;
+@background-color-primary: @wmui-color-accent90;
+@grayDrawerShadow: rgba( 0, 0, 0, 0.35 );
+
+/*
+* FIXME: Use these variables directly from wikimedia-ui-base when available.
+*/
+@wmui-color-accent90: #eaf3ff;
+@wmui-color-green30: #14866d;
+@wmui-color-red30: #b32424;
+@wmui-color-grey30: #a2a9b1;
+
+//
+// Icons
+//
+@icon-touch-area-sm: 34;
+@icon-touch-area-md: 44;
+@icon-color: @colorGray5;
+
+// Small icon
+@icon-glyph-size-sm: 16;
+@icon-size-sm: unit( @icon-glyph-size-sm / @font-size-browser, em );
+@icon-padding-sm: unit( ( @icon-touch-area-sm - @icon-glyph-size-sm ) / 2 / @font-size-browser, em );
+
+// Medium icon
+@icon-glyph-size-md: 20;
+@icon-size-md: unit( @icon-glyph-size-md / @font-size-browser, em );
+@icon-padding-md: unit( ( @icon-touch-area-md - @icon-glyph-size-md ) / 2 / @font-size-browser, em );
+@margin-icon-md-labelled: 8px;
+
+// Navigation Drawers
+@rightDrawerWidth: 60%;
+@primaryNavBackgroundColor: @colorGray14;
+@menuButtonIconSize: 3.5em;
+
+// Headings
+@fontSizeH1: 1.7em;
+@fontSizeH2: 1.5em;
+@fontSizeH3: 1.2em;
+
+// Content
+@contentPadding: 16px;
+@contentMargin: 16px;
+
+// Header
+@siteHeaderHeight: unit( 54 / @font-size-browser, em );
+@overlayHeaderHeight: unit( 48 / @font-size-browser, em );
+@headerVerticalPadding: 0.15em;
+@headerMarginTop: -1px; // used to hide the header border top when a banner is not present
+@searchBoxWidth: 375/16em;
+@deviceWidthTabletEms: unit( @width-breakpoint-tablet / @font-size-browser, em );
+@brandingBoxWidth: @deviceWidthTabletEms - (3 * @menuButtonIconSize + @iconGutterWidth) - @searchBoxWidth;
+
+@titleSectionSpacingTop: 20px;
+
+// Page actions
+@taglineFontSize: 0.85em;
+@pageActionBorder: 1px;
+
+// colors
+@chromeColor: @grayLightest;
+@semiTransparent: rgba( 0, 0, 0, 0.8 );
+
+@lastModifiedBarActiveBackgroundColor: #00af89;
+@toastNotificationColor: @colorGray2;
+
+// Typography
+@font-family-serif: 'Linux Libertine', 'Georgia', 'Times', serif;
+/**
+ * System font stack for monospace fonts, see T221043.
+ *
+ * `Menlo` – macOS 10.6+
+ * `Consolas` – Windows Vista & newer
+ * `Liberation Mono` – Fedora, Ubuntu, … OFL licensed
+ * `Courier New` – (Generic) web font fallback
+ */
+@font-family-monospace: 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+@line-height-content: 1.65;
+
+@headingMargin: 0.5em;
+
+// blockquote
+@padding-start-blockquote: 32px;
+// Make it a tad smaller on mobile to fit more contents.
+@padding-end-blockquote: 24px;
+@padding-vertical-blockquote: 8px;
+
+// custom tablet styling
+@contentPaddingTablet: 3.35em;
+
+// note since content does not use view border box we have to include padding.
+@contentMaxWidthTablet: @width-breakpoint-desktop - ( 2 * @contentPaddingTablet );
+
+// Wiki specific variables
+@infoboxWidth: 320px;
+
+@lastModifiedBarBgColor: @chromeColor;
+@lastModifiedBarTextColor: @colorTextLight;
+
+@footerBorderColor: @grayLight;
+
+@notificationBackgroundRead: @colorGray14;
+@notificationColorRead: @colorGray5;
+@notificationBackgroundUnread: @colorDestructive;
+@notificationColorUnread: #fff;
+
+// Opacity
+@opacity-icon-base: 0.87; // = `#222` on `background-color: #fff`, closest to `#202122`
+@opacity-icon-subtle: 0.66; // = `#565656 on `background-color: #fff`, closest to `#54595d`
+
+// z-index:
+@z-indexOccluded: -1;
+@z-indexBase: 0;
+@z-indexAboveContent: 1;
+@z-indexDrawer: 2;
+@z-indexOverlay: 3;
+@z-indexOverOverlay: 4;
+
+// Print specific
+@colorPrintSubtle: #999;
+@borderColorPrint: #999;
+
+// Animations & Transitions
+// Transitions
+@transition-base: @transition-duration-base; // `ease` is the initial value.
+// Transitions > Durations
+@transition-duration-base: 100ms;
+@transition-duration-medium: 250ms;
+@transition-timing-function-menu: ease-in-out;

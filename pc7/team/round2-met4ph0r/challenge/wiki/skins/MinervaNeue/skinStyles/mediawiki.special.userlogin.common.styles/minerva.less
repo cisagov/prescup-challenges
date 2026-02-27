@@ -1,0 +1,150 @@
+/* stylelint-disable selector-max-id */
+
+@import '../../minerva.less/minerva.variables.less';
+@import '../../minerva.less/minerva.mixins.less';
+
+// Hide the texts inside these selectors because they push the login form below the fold
+// `#user-button` serves no purpose on the login screen as you are not logged in so cannot use.
+#userloginprompt,
+#languagelinks,
+#user-button {
+	display: none;
+}
+
+.mw-ui-container {
+	.mw-ui-vform {
+		margin: auto;
+		width: auto;
+		max-width: @contentMaxWidthTablet;
+	}
+
+	.mw-form-related-link-container {
+		a {
+			padding-bottom: 12px;
+			display: block;
+		}
+	}
+
+	.fancycaptcha-image-container {
+		display: inherit;
+	}
+
+	// reason for account creation is not so important on mobile - it should be obvious through the workflows
+	.mw-createacct-benefits-container {
+		display: none;
+	}
+}
+
+#mw-mf-login,
+#mw-mf-accountcreate,
+#userloginForm {
+	.watermark {
+		text-align: center;
+		// FIXME: Should we set the height here?
+		height: 72px;
+		margin-bottom: @headingMargin;
+
+		img {
+			// Important to override default max-width and height auto combo
+			height: 72px !important;
+		}
+	}
+}
+
+// Hide keep me logged in checkbox on mobile. It will be marked as checked by default.
+#userloginForm {
+	.mw-userlogin-rememberme {
+		display: none;
+	}
+}
+
+.client-nojs {
+	// Show keep me logged in checkbox for grade C users on mobile so that they can
+	// check the checkbox (we use JS to check this and that won't run on grade C bmode)
+	#userloginForm {
+		.mw-userlogin-rememberme {
+			display: block;
+			margin: 10px 0 11px;
+		}
+	}
+}
+
+@media all and ( min-width: @width-breakpoint-tablet ) {
+	// If tablet mode, show the keep me logged in checkbox
+	#userloginForm {
+		.mw-userlogin-rememberme {
+			display: block;
+		}
+	}
+}
+
+// FIXME: Some of these rules should actually be mobile first, only hiding inputs needs to be wrapped in a media query
+@media all and ( max-width: @width-breakpoint-tablet ) {
+	@margin: 12px;
+
+	#userloginForm {
+		// tips are not useful, hide help link, benefits (#wpReason)
+		// are obvious through the workflows,
+		// real name in account creation is not so important on mobile
+		.prefsectiontip, .htmlform-tip,
+		#mw-userlogin-help, .mw-userlogin-help,
+		#wpReason,
+		#wpRealName {
+			display: none !important;
+		}
+	}
+
+	// do not show langage link list
+	// FIXME: After the language list is mobile friendly, it can be re-enabled - Bug T110403
+	#languagelinks {
+		display: none;
+	}
+
+	// account creation
+	#userlogin2 {
+		.mw-ui-checkbox {
+			margin: @margin 0;
+		}
+	}
+
+	.mw-ui-vform-field {
+		text-align: center;
+	}
+
+	// Make the inputs look connected in mobile mode
+	.mw-ui-input {
+		&#wpEmail,
+		&.loginPassword {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			margin-top: -1px;
+		}
+	}
+
+	.mw-ui-vform {
+		margin: auto;
+
+		.mw-ui-input {
+			padding: 0.8em 0.5em;
+		}
+
+		// hide on mobile only media queries (placeholder support)
+		.mw-ui-vform-field {
+			margin-bottom: 0;
+
+			.mw-ui-button {
+				margin: @margin 0;
+			}
+
+			// user can rely on placeholder attributes in fields media query support should mean placeholder support
+			// but don't hide any checkbox labels
+			> label {
+				display: none;
+			}
+		}
+	}
+
+	#mw-createaccount-another {
+		margin-top: @margin;
+	}
+}

@@ -1,0 +1,17 @@
+//
+// No grid support behaviour
+//
+
+// If there is no display grid support we remove the table of contents
+// On IE11 this leaves a clean single column grid.
+// To be revisited when table of contents is collapsible in which situation we should be able to
+// force it as sticky.
+.mw-table-of-contents-container {
+	display: none;
+}
+
+@supports ( display: grid ) {
+	.mw-table-of-contents-container {
+		display: block;
+	}
+}

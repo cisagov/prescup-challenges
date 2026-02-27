@@ -1,0 +1,33 @@
+# Picky PKI
+
+A bad certificate is on a webserver. Obtain and apply a signed one applied using a custom protocol. Additional tasks build on this.
+
+**NICE Work Roles**
+
+- [Cyber Defense Infrastructure Support Specialist](https://niccs.cisa.gov/workforce-development/nice-framework/)
+
+**NICE Tasks**
+
+
+- [T1553](https://niccs.cisa.gov/workforce-development/nice-framework/): Configure and maintain PKI and certificate services
+- [T1422](https://niccs.cisa.gov/workforce-development/nice-framework/): Implement and manage secure authentication mechanisms
+- [T1326](https://niccs.cisa.gov/workforce-development/nice-framework/): Apply cryptographic techniques to protect data
+
+
+## Getting Started
+You are tasked with fixing a web service that has been running with a bad TLS configuration. Currently, it has an expired and untrusted certificate. A private Certification Authority service is running in the environment. It does not issue certificates in a normal way. You must figure out its custom protocol to request a valid certificate. A grader service will test the live site to verify if it is serving a valid certificate.
+
+## Tokens:
+
+1. Use the `ca_service` machine to obtain a signed certificate for `webserver`. SNI matters. Run the grader at `http://grader:8080/` to get your token.
+
+1. Enforce mTLS and OCSP stapling (Must-Staple). Run the grader at `http://grader:8080` to get your token.
+
+1. Build an HPKE sealed message using the advertised suite for the oracle endpoint. The endpoint accepts your sealed box and returns your token.
+
+## Credentials:
+
+|Asset|username|password|
+|---|----|-------|
+|Kali | user | password|
+|webserver|user|password|

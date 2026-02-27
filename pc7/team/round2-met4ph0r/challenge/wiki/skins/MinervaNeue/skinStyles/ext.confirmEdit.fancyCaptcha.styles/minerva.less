@@ -1,0 +1,77 @@
+@import '../../minerva.less/minerva.variables.less';
+@import '../../minerva.less/minerva.mixins.less';
+
+// stylelint-disable selector-max-id
+/* fancycaptcha reload button */
+.confirmedit-captcha-reload,
+#mf-captcha-reload-container {
+	border-top: 1px dashed @colorGray12;
+	display: inline-block;
+	padding: 8px 20px;
+
+	.fancycaptcha-reload,
+	&.fancycaptcha-reload {
+		color: @colorProgressive;
+	}
+}
+// stylelint-enable selector-max-id
+
+.mw-createacct-captcha-assisted {
+	display: block;
+	border-top: solid 1px @colorGray12;
+	padding: 0.8em 0.5em;
+	color: @colorGray7;
+}
+
+.mw-ui-container {
+	// CAPTCHA style improvements
+	.captcha {
+		margin: 0.8em 0 0;
+		border: solid 1px @colorGray12;
+		border-radius: @border-radius-base;
+		overflow: hidden;
+		background: #fff;
+		text-align: center;
+
+		input:not( [ type='submit' ] ) {
+			-webkit-appearance: none;
+			border-radius: 0;
+			padding: 0.8em 0.5em;
+			margin: 0;
+		}
+
+		// stylelint-disable selector-max-id
+		input:not( [ type='submit' ] ),
+		img,
+		#wpCaptchaWord {
+			border: 0;
+			border-top: solid 1px @colorGray12;
+
+			&:first-child {
+				border-top: 0;
+			}
+		}
+		// stylelint-enable selector-max-id
+
+		// CAPTCHA's are well known by internet users, save the space of the explanation
+		> p,
+		label {
+			display: none;
+		}
+
+		// FancyCaptcha things
+		.fancycaptcha-image-container img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.mw-createacct-captcha-assisted {
+			font-size: @font-size-minerva-smallest;
+		}
+
+		.confirmedit-captcha-reload {
+			position: relative;
+		}
+	}
+}

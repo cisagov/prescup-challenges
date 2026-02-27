@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Akamycoco",
+			"Iyumu"
+		]
+	},
+	"minerva-last-modified-date": "vilivililjan a sirasudjan ta vincikan\n$1 $2",
+	"mobile-frontend-editor-edit": "remasudj ta vincikan",
+	"mobile-frontend-home-button": "sitjumaq na sapitj",
+	"mobile-frontend-language-article-heading": "kai",
+	"mobile-frontend-main-menu-login": "kipuvecik",
+	"mobile-frontend-main-menu-nearby": "i palingulingulj",
+	"mobile-frontend-main-menu-settings": "penenetj",
+	"mobile-frontend-main-menu-watchlist": "puqezelj ta lisadayan na vecik",
+	"mobile-frontend-placeholder": "qemulet/kemin {{SITENAME}}",
+	"mobile-frontend-random-button": "malaing tu anema a mapiliq",
+	"mobile-frontend-user-page-talk": "matatevela",
+	"minerva-page-actions-overflow": "patjaliyav",
+	"minerva-page-actions-info": "lisadayan na sapitj tu pakeljan tua pinuvecikan",
+	"minerva-page-actions-permalink": "naminseg a papadjaljunan",
+	"minerva-page-actions-backlinks": "sipadjadjaljudjaljun a pasamaza ta lisadayan na sapitj",
+	"minerva-page-actions-move": "patjaliyav",
+	"minerva-page-actions-wikibase": "{{WBREPONAME}} sinanrarivrivan",
+	"minerva-page-actions-history": "sinantjaucikel"
+}

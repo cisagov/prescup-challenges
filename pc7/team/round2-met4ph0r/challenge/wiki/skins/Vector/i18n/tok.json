@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gtbot2007",
+			"LesVisages",
+			"Robin van der Vliet",
+			"שוקו מוקה"
+		]
+	},
+	"vector-language-button-label": "toki $1",
+	"vector-action-delete": "o weka",
+	"vector-action-protect": "o awen",
+	"vector-view-create": "o pali",
+	"vector-view-edit": "o ante",
+	"vector-view-history": "o lukin e tenpo pini",
+	"vector-view-view": "lukin",
+	"vector-more-actions": "mute",
+	"vector-toc-beginning": "open"
+}

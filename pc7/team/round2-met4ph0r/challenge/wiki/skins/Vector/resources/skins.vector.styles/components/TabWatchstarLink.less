@@ -1,0 +1,61 @@
+@import '../../common/variables.less';
+@import 'mediawiki.mixins.less';
+@import 'mediawiki.mixins.rotation.less';
+
+/* Watch/Unwatch Icon Styling */
+/* Only use icon if the menu item is not collapsed into the "More" dropdown
+ * (in which case it is inside `.vector-menu-dropdown` instead of `.vector-menu-tabs`). */
+.vector-menu-tabs {
+	@size-watchlink-icon: unit( 16 / @font-size-tabs / @font-size-browser, em );
+
+	.mw-watchlink.icon a {
+		overflow: hidden;
+		text-indent: -99999px;
+		color: transparent;
+
+		&:before {
+			content: '';
+			display: block;
+			width: @size-watchlink-icon;
+			height: @size-watchlink-icon;
+		}
+	}
+
+	#ca-unwatch.icon a:before {
+		background-image: url( ../common/images/unwatch-icon.svg );
+	}
+
+	#ca-unwatch.mw-watchlink-temp.icon a:before {
+		background-image: url( ../common/images/unwatch-temp-icon.svg );
+	}
+
+	#ca-watch.icon a:before {
+		background-image: url( ../common/images/watch-icon.svg );
+	}
+
+	#ca-unwatch.icon a:hover:before,
+	#ca-unwatch.icon a:focus:before {
+		background-image: url( ../common/images/unwatch-icon-hl.svg );
+	}
+
+	#ca-unwatch.mw-watchlink-temp.icon a:hover:before,
+	#ca-unwatch.mw-watchlink-temp.icon a:focus:before {
+		background-image: url( ../common/images/unwatch-temp-icon-hl.svg );
+	}
+
+	#ca-watch.icon a:hover:before,
+	#ca-watch.icon a:focus:before {
+		background-image: url( ../common/images/watch-icon-hl.svg );
+	}
+
+	// Loading watchstar link class.
+	#ca-unwatch.icon .loading:before,
+	#ca-watch.icon .loading:before {
+		.rotation( 700ms );
+		/* Suppress the hilarious rotating focus outline on Firefox */
+		outline: 0;
+		cursor: default;
+		pointer-events: none;
+		transform-origin: 50% 50%;
+	}
+}

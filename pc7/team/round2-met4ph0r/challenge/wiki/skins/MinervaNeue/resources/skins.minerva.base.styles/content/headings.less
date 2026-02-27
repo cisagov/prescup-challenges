@@ -1,0 +1,75 @@
+// Headings in mobile
+//
+// All headings styled in the content div will be styled like so.
+//
+// Markup:
+// <div class="pre-content">
+//   <h1 id="mw-first-heading">Heading 1</h1>
+// </div>
+// <div class="content">
+//   <p>Paragraph of text</p>
+//   <h2>Heading 2</h2>
+//   <p>Paragraph of text</p>
+//   <h3>Heading 3</h3>
+//   <p>Paragraph of text</p>
+//   <h4>Heading 4</h4>
+//   <p>Paragraph of text</p>
+//   <h5>Heading 2</h5>
+//   <p>Paragraph of text</p>
+//   <h6>Heading 2</h6>
+//   <p>Paragraph of text</p>
+// </div>
+@import 'mediawiki.mixins.less';
+@import '../../../minerva.less/minerva.variables.less';
+@import '../../../minerva.less/minerva.mixins.less';
+
+@headingLineHeight: 1.3;
+
+h1 {
+	font-size: @fontSizeH1;
+}
+
+h2 {
+	font-size: @fontSizeH2;
+}
+
+h3 {
+	font-size: @fontSizeH3;
+	font-weight: bold;
+}
+
+h4 {
+	font-weight: bold;
+}
+
+.pre-content h1,
+.content h1,
+.content h2 {
+	font-family: @font-family-serif;
+}
+
+.pre-content h1,
+.content h1,
+.content h2,
+h3, h4, h5, h6 {
+	line-height: @headingLineHeight;
+	word-wrap: break-word;
+
+	// This value isn't valid per the specification [0] but fixes the behaviour in
+	// Google Chrome (45.0.2454.93), and, likely, other browsers too.
+	//
+	// [0] https://drafts.csswg.org/css-text-3/#propdef-word-break
+	word-break: break-word;
+}
+
+.content {
+	// Deliberately not applied to h1
+	h2, h3, h4, h5, h6 {
+		padding: @headingMargin 0;
+	}
+
+	// `h3`s need extra `margin-top` after paragraphs, see T219572.
+	p + h3 {
+		margin-top: @headingMargin * 3;
+	}
+}

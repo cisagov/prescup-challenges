@@ -1,0 +1,126 @@
+{% from "macros.html" import render_errors with context %}
+
+{% extends "base.html" %}
+
+{% block title %}{{ ticket.key }} – {{ super() }}{% endblock %}
+
+{% block styles %}
+<style>
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #222;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: .25rem;
+        color: #ffffff;
+    }
+
+    .card-header {
+        background-color: #222;
+        border: #222;
+    }
+
+    .card-body {
+        background-color: #111;
+        border-bottom-left-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+    }
+
+    .dark-textarea {
+        background-color: #111;
+        color: #ffffff;
+        border: none;
+    }
+
+    .dark-textarea::placeholder {
+        color: #999;
+        /* Example: a shade of blue */
+    }
+</style>
+{% endblock %}
+
+{% block header %}
+<div class="mb-4">
+    <h1 class="support-header mb-0" style="padding-left: 32px;">Support</h1>
+</div>
+<div class="container mb-4">
+    <markdown>
+        <h1>Welcome to <strong>President's Cup Cybersecurity Competition</strong> Support!</h1>
+        <h4>Please be sure to review the <a role="link" target="_blank" href="/"
+                rel="nofollow noopener noreferrer">landing page</a> for support hours of operation during active
+            competition windows.</h4>
+    </markdown>
+    <hr>
+</div>
+{% endblock %}
+
+{% block sections %}{% endblock %}
+
+{% set challenge_name = "—" %}
+{% if ticket.challenge %}
+{% set cid = ticket.challenge|int %}
+{% if cid == 1 %}
+{% set challenge_name = "Kessel Run" %}
+{% elif cid == 2 %}
+{% set challenge_name = "Mindhunter" %}
+{% elif cid == 3 %}
+{% set challenge_name = "The Crucible" %}
+{% elif cid == 4 %}
+{% set challenge_name = "va_list Adventure" %}
+{% else %}
+{% set challenge_name = "—" %}
+{% endif %}
+{% endif %}
+
+{% block content %}
+<a routerlink="../" class="btn ml-0 pl-0" style="color:#41ad57;" href="/support"><i
+        class="bi bi-arrow-left"></i><br /><span>Back</span></a>
+<div class="d-flex justify-content-between align-items-start mb-4">
+    <div>
+        <h1 class="h2 mb-1"><span style="color: #999">{{ ticket.key }}</span> {{ ticket.title }}</h1>
+        <div class="row g-3 align-items-baseline mb-2">
+            <div class="col-12 col-md-auto">{{ ticket.creator_name }}</div>
+            <div class="col-12 col-md-auto">Game: <a href="/game">PC6 Finals - Track B</a></div>
+            <div class="col-12 col-md-auto">Challenge: {{ challenge_name or "—" }}</div>
+        </div>
+    </div>
+</div>
+<div class="card bg-black mb-4">
+    <div class="card-header"><strong>{{ticket.creator_name}}</strong>&nbsp;&nbsp; {{
+        (ticket.createdAt.strftime("%m/%d/%y %I:%M %p") or "") }}</div>
+    <div class="card-body">
+        <div class="prose">{{ ticket.summary | safe }}</div>
+    </div>
+</div>
+
+<h4> Activity</h4>
+<div class="card bg-black my-3 mx-3" id="comments">
+    <div class="card-body">
+        <form id="comment-form" method="post" action="{{ url_for('add_comment', key=ticket.key) }}">
+            {{ form.hidden_tag() }}
+            <div class="mb-2">
+                {{ form.text(class_="form-control dark-textarea", rows="3", placeholder="Add a comment...") }}
+            </div>
+            <div class="text-end">
+                {{ form.submit(class_="btn btn-success") }}
+            </div>
+        </form>
+    </div>
+</div>
+
+{% if comments %}
+{% for c in comments %}
+<div class="card bg-black my-3 mx-3">
+    <div class="card-header"><strong>{{c.creator_name}}</strong> · {{ (c.createdAt.strftime("%m/%d/%y %I:%M %p") or
+        "") }}</div>
+    <div class="card-body">
+        <div class="prose">{{ c.text | safe }}</div>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}

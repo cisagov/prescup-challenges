@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chinneeb",
+			"MongolWiki",
+			"Sembuk",
+			"Wisdom"
+		]
+	},
+	"prefs-vector-enable-vector-1-label": "Хуучны Vector ашиглах",
+	"vector-opt-out": "Хуучин хувилбарт шилжих",
+	"vector-opt-out-tooltip": "Сайтын скинийг хуучин хувилбарт шилжүүлэх (legacy Vector)",
+	"vector-action-toggle-sidebar": "Хажуугийн цэсийг нээж хаах",
+	"vector-languages": "Хэлнүүд",
+	"vector-language-button-label": "{{PLURAL:$1|$1 хэлээр}}",
+	"vector-language-redirect-to-top": "Хэлний цэсийг хуудасны баруун дээд өнцгөөс харна уу. [[#p-lang-btn|Эхлэл рүү шилжих]].",
+	"vector-action-addsection": "Сэдэв нэмэх",
+	"vector-action-delete": "Устгах",
+	"vector-action-move": "Зөөх",
+	"vector-action-protect": "Хамгаалах",
+	"vector-action-undelete": "Үл устгах",
+	"vector-action-unprotect": "Хамгаалалтын түвшинг солих",
+	"vector-view-create": "Үүсгэх",
+	"vector-view-edit": "Засварлах",
+	"vector-view-history": "Түүх",
+	"vector-view-view": "Унших",
+	"vector-view-viewsource": "Кодыг харах",
+	"vector-more-actions": "Дэлгэрэнгүй",
+	"vector-searchsuggest-containing": "<strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong> бичвэрийг агуулсан хуудсыг хайх",
+	"vector-toc-heading": "Гарчиг",
+	"vector-toc-toggle-position-sidebar": "хажуугийн цэсэнд шилжүүлэх",
+	"vector-toc-toggle-position-title": "хумих",
+	"vector-toc-beginning": "Эхлэл",
+	"vector-toc-toggle-button-label": "$1 хэсгийг нээж хаах",
+	"vector-main-menu-tooltip": "Үндсэн цэс",
+	"vector-toc-menu-tooltip": "Гарчиг",
+	"vector-toc-collapsible-button-label": "Гарчигийг нээж хаах",
+	"vector-article-tools-nav-label": "Хэрэглүүр",
+	"vector-site-nav-label": "Сайт"
+}

@@ -1,0 +1,63 @@
+const fs = require('fs');
+const { latitudeKeys } = require('geolib');
+const _ = require('lodash');
+
+/**
++----------------------+-------------------------------------------+
+| Field               | Description                               |
++----------------------+-------------------------------------------+
+| Track Count (4 B)   | Number of tracks in the file (UInt32BE).  |
++----------------------+-------------------------------------------+
+| Track Data          | Repeated for each track:                  |
+|   Name Length (4 B) | Length of the track name (UInt32BE).      |
+|   Name (N B)        | Track name as UTF-8 string (N bytes).     |
+|   Point Count (4 B) | Number of points in the track (UInt32BE). |
+|   Point Data        | Repeated for each point:                  |
+|     Timestamp (8 B) | Timestamp in milliseconds (BigUInt64BE).  |
+|     Latitude (8 B)  | Latitude as a double (DoubleBE).          |
+|     Longitude (8 B) | Longitude as a double (DoubleBE).         |
++----------------------+-------------------------------------------+
+*/
+function dataToBinary(filePath, tracks) {
+  const trackCountBuffer = Buffer.alloc(4); // 4 bytes for track count
+  trackCountBuffer.writeUInt32BE(tracks.length);
+
+  const binaryTrackData = _.map(tracks, ({ name, points }) => {
+    const nameLengthBuffer = Buffer.alloc(4); // 4 bytes for name length
+    nameLengthBuffer.writeUInt32BE(name.length);
+
+    const nameBuffer = Buffer.from(name, 'utf-8');
+
+    const pointCountBuffer = Buffer.alloc(4); // 4 bytes for point count
+    pointCountBuffer.writeUInt32BE(points.length);
+
+    const pointBuffer = _.map(points, ({ timestamp, coord }) => {
+      const [lat, long] = coord;
+
+      const timestampBuffer = Buffer.alloc(8); // 8 bytes for timestamp
+      timestampBuffer.writeBigUInt64BE(BigInt(timestamp.getTime()));
+
+      const latBuffer = Buffer.alloc(8); // 8 bytes for latitude
+      latBuffer.writeDoubleBE(lat);
+
+      const longBuffer = Buffer.alloc(8); // 8 bytes for longitude
+      longBuffer.writeDoubleBE(long);
+
+      return Buffer.concat([
+        timestampBuffer,
+        latBuffer,
+        longBuffer,
+      ]);
+    });
+
+    return Buffer.concat([nameLengthBuffer, nameBuffer, pointCountBuffer, Buffer.concat(pointBuffer)]);
+  });
+
+  const fullBinaryData = Buffer.concat([trackCountBuffer, ...binaryTrackData]);
+  // console.log('Full binary data (hex):', fullBinaryData.toString('hex'));
+
+  fs.writeFileSync(filePath, fullBinaryData);
+  console.log(`Binary file has been saved to ${filePath}`);
+}
+
+module.exports.dataToBinary = dataToBinary;

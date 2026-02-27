@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Inception - President's Cup Cybersecurity Competition{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/bootstrap-icons.min.css">
+
+    <style>
+        :root {
+            --bg: #000000;
+            --bg-2: #111418;
+            --text: #e6edf3;
+            --muted: #a7b0ba;
+            --light: #999;
+            --accent: #00d1ff;
+            --bs-succes: #41ad57;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        a {
+            color: #41ad57;
+            text-decoration: none;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            border-bottom: 1px solid rgba(255, 255, 255, .06);
+        }
+
+        .navbar .nav-link {
+            color: rgb(65, 173, 87);
+        }
+
+        .navbar .nav-link.active,
+        .navbar .nav-link:hover {
+            color: #ffffff;
+            text-decoration-line: underline;
+        }
+
+        /* Hero */
+        .hero {
+            background: rgb(34, 34, 34);
+            ;
+            padding: 5rem 0 4rem;
+            font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        .hero h1 {
+            letter-spacing: .2px;
+            font-weight: 800;
+        }
+    </style>
+    {% block styles %}{% endblock %}
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container-fluid pe-0">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topnav"
+                aria-controls="topnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="topnav">
+                {% set path = request.path %}
+                {% macro active(href) -%}
+                    {%- if href == '/' -%}
+                        {{ 'active' if path == '/' else '' }}
+                    {%- else -%}
+                        {{ 'active' if (path == href or path.startswith(href ~ '/')) else '' }}
+                    {%- endif -%}
+                {%- endmacro %}
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link {{ active('/') }}" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link {{ active('/doc') }}" href="/doc">Getting Started</a></li>
+                    <li class="nav-item"><a class="nav-link {{ active('/support') }}" href="/support">Support</a></li>
+
+                    {% if current_user.is_authenticated and current_user.role and current_user.role in ('admin', 'support') %}
+                    <li class="nav-item"><a class="nav-link {{ active('/users') }}" href="/users">Users</a></li>
+                    {% endif %}
+
+                    {% if current_user.is_authenticated and current_user.role and current_user.role == 'admin' %}
+                    <li class="nav-item"><a class="nav-link {{ active('/admin') }}" href="/admin">Admin</a></li>
+                    {% endif %}
+
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link {{ active('/profile') }}" href="/profile">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link {{ active('/logout') }}" href="/logout">Log out</a></li>
+                    {% else %}
+                    <li class="nav-item"><a class="nav-link {{ active('/login') }}" href="/login">Log in</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block header %}
+    <header class="hero">
+        <div class="container-xxl">
+            <h1 class="display-5 display-md-3 mb-0">Inception - President's Cup Cybersecurity Competition</h1>
+        </div>
+    </header>
+    {% endblock %}
+
+    {% block sections %}
+    <section class="section-head">
+        <div class="container-xxl">
+            <div class="row g-3 align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="h2 fw-semibold mb-0">Featured Games</h2>
+                </div>
+                <div class="col-lg-6">
+                    <form class="search-box" role="search">
+                        <label for="gameSearch" class="visually-hidden">Search games</label>
+                        <input id="gameSearch" class="form-control" type="search" placeholder="Search games..."
+                            aria-label="Search games" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
+
+    <main class="pb-5">
+        <div class="container py-5">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="mb-3">
+                {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/jquery-3.7.1.min.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

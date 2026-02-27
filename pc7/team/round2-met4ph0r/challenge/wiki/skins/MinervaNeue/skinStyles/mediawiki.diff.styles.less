@@ -1,0 +1,44 @@
+// stylelint-disable selector-max-id
+@import '../minerva.less/minerva.variables.less';
+
+// Override MobileFrontend styles (can be weakened/removed when MobileDiff no longer exists)
+#mw-mf-diffview .mw-diff-empty-line {
+	del,
+	ins {
+		width: 100%;
+	}
+}
+
+// By default a pseudo element is used for skins like Vector. We don't want this on Minerva.
+.mw-diff-movedpara-right,
+.mw-diff-movedpara-left,
+.rtl .mw-diff-movedpara-left,
+.rtl .mw-diff-movedpara-right {
+	&:after {
+		content: none;
+	}
+}
+
+.mw-special-MobileDiff {
+	#mw-mf-diffarea {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media all and ( max-width: @width-breakpoint-tablet ) {
+	.mw-special-MobileDiff {
+		.content-unstyled {
+			margin: 0 @contentMargin;
+		}
+	}
+}
+
+@media all and ( max-width: @width-breakpoint-tablet ) {
+	// T233151: Remove post-content margin on mobile diff page drawer
+	// .post-content margin
+	#mw-mf-userinfo .post-content {
+		margin: 0;
+	}
+}
+// stylelint-enable selector-max-id

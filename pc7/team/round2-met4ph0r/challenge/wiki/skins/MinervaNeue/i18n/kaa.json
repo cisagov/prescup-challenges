@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Inabat Allanova",
+			"Nurlan"
+		]
+	},
+	"minerva-last-modified-date": "Aqırǵı ózgertirilgen: $1, $2",
+	"minerva-watchlist-cta": "Usı betti hám ondaǵı barlıq ózgerislerdi baqlap barıń.",
+	"minerva-talk-add-topic": "Tema qosıń",
+	"mobile-frontend-editor-edit": "Redaktorlaw",
+	"mobile-frontend-editor-redlink-create": "Bet jaratıw",
+	"mobile-frontend-history": "Bul bettiń ózgertiwler tariyxın kóriw.",
+	"mobile-frontend-home-button": "Bas bet",
+	"mobile-frontend-language-article-heading": "Til",
+	"mobile-frontend-main-menu-login": "Kiriw",
+	"mobile-frontend-main-menu-logout": "Shıǵıw",
+	"mobile-frontend-main-menu-nearby": "Jaqın-átirapda",
+	"mobile-frontend-main-menu-settings": "Sazlamalar",
+	"mobile-frontend-main-menu-watchlist": "Meniń baqlaw dizimim",
+	"mobile-frontend-meta-data-issues": "Bet máseleleri",
+	"mobile-frontend-placeholder": "{{SITENAME}}dan izlew",
+	"mobile-frontend-random-button": "Tosınnanlı maqala",
+	"mobile-frontend-user-page-contributions": "Meniń úlesim",
+	"mobile-frontend-user-page-talk": "Sáwbet",
+	"minerva-page-actions-overflow": "Jáne",
+	"minerva-page-actions-info": "Bet haqqında maǵlıwmat",
+	"minerva-page-actions-permalink": "Turaqlı silteme",
+	"minerva-page-actions-backlinks": "Siltelgen betler",
+	"minerva-page-actions-change-block": "bloklawdı ózgertiw",
+	"minerva-page-actions-move": "Kóshiriw",
+	"minerva-page-actions-delete": "Óshiriw",
+	"minerva-page-actions-protect": "Qorǵaw",
+	"minerva-page-actions-unblock": "Paydalanıwshınıń qulpın sheshiw",
+	"minerva-page-actions-unprotect": "Qorǵawdı ózgertiw",
+	"minerva-page-actions-user-groups": "Paydalanıwshı toparları",
+	"minerva-page-actions-block": "Paydalanıwshını qulıplaw",
+	"minerva-page-actions-logs": "Jurnallar",
+	"minerva-page-actions-language-switcher": "Tiller",
+	"minerva-page-actions-history": "Tariyx"
+}

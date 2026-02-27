@@ -1,0 +1,87 @@
+@import '../../common/variables.less';
+@import 'mediawiki.mixins.less';
+@import '../../common/mixins.less';
+
+// Flips the chevron so it points up when the dropdown is open.
+.vector-menu-checkbox:checked + .vector-menu-heading:after {
+	transform: scaleY( -1 );
+}
+
+/**
+ * Dropdown menus that only appear in the tab bar in legacy Vector.
+ */
+.vector-menu-dropdown {
+	direction: ltr;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	line-height: 1.125em;
+
+	// menu label with chevron icon.
+	.vector-menu-heading {
+		display: flex;
+		color: @color-base--subtle;
+		font-size: @font-size-tabs;
+		// Tab separator: Outer end (right in LTR) border of "Actions" menu.
+		background-position: right bottom;
+		margin: 0 -@border-width-base 0 0;
+		// `padding-top` needs to scale with font-size.
+		padding: 1.25em 8px 6px;
+		font-weight: normal;
+
+		&:after {
+			.mixin-vector-menu-heading-arrow();
+			// Modify the color of the image from the default #202122 to approx. #404244 to match the text.
+			opacity: 0.84;
+		}
+
+		&:hover,
+		&:focus {
+			color: @color-base;
+
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+
+	/**
+	 * Dropdown container.
+	 */
+	.vector-menu-content {
+		line-height: 1.125em;
+		background-color: @background-color-base;
+		border: @border-width-base @border-style-base @border-color-base;
+		border-top-width: 0;
+		box-shadow: 0 1px 1px 0 rgba( 0, 0, 0, 0.1 );
+		transition-property: opacity;
+		transition-duration: @transition-duration-base;
+	}
+
+	// Open the dropdown container via hover.
+	&:hover .vector-menu-content {
+		opacity: 1;
+		visibility: visible;
+		height: auto;
+	}
+
+	.mw-list-item {
+		text-align: left;
+		line-height: 1em;
+
+		a:not( .mw-ui-icon ) {
+			font-size: @font-size-tabs;
+		}
+
+		a {
+			padding: 0.625em;
+			color: @color-link;
+		}
+
+		&.selected a,
+		&.selected a:visited {
+			color: @color-link-selected;
+			text-decoration: none;
+		}
+	}
+}

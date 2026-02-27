@@ -1,0 +1,47 @@
+{
+	"opts": {
+		"destination": "docs/js",
+		"package": "package.json",
+		"pedantic": true,
+		"readme": "README.md",
+		"recurse": true,
+		"template": "node_modules/jsdoc-wmf-theme"
+	},
+	"source": {
+		"include": [ "resources" ]
+	},
+	"templates": {
+		"cleverLinks": true,
+		"default": {
+			"useLongnameInNav": true
+		},
+		"wmf": {
+			"linkMap": {
+				"\"addEventListener\"": "https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener",
+				"jQuery": "https://api.jquery.com",
+				"AbortSignal": "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal",
+				"Document": "https://developer.mozilla.org/docs/Web/API/Document",
+				"Element": "https://developer.mozilla.org/docs/Web/API/Element",
+				"Event": "https://developer.mozilla.org/docs/Web/API/Event",
+				"EventTarget": "https://developer.mozilla.org/docs/Web/API/EventTarget",
+				"HTMLElement": "https://developer.mozilla.org/docs/Web/API/HTMLElement",
+				"IntersectionObserver": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver",
+				"IntersectionObserverEntry": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry",
+				"Node": "https://developer.mozilla.org/docs/Web/API/Node",
+				"NodeList": "https://developer.mozilla.org/docs/Web/API/NodeList",
+				"HTMLInputElement": "https://developer.mozilla.org/docs/Web/API/HTMLInputElement",
+				"\"removeEventListener\"": "https://developer.mozilla.org/docs/Web/API/EventTarget/removeEventListener",
+				"Window": "https://developer.mozilla.org/docs/Web/API/Window",
+				"CheckboxHack": "https://doc.wikimedia.org/mediawiki-core/master/js",
+				"MediaWikiPageReadyModule": "https://doc.wikimedia.org/mediawiki-core/master/js/#!/api/mw.plugin.page.ready",
+				"MW": "https://doc.wikimedia.org/mediawiki-core/master/js/#!/api/mw",
+				"MwMap": "https://doc.wikimedia.org/mediawiki-core/master/js/#!/api/mw.Map",
+				"RequestInit": "https://developer.mozilla.org/en-US/docs/Web/API/Request/Request",
+				"JQueryStatic": "https://api.jquery.com",
+				"VectorResourceLoaderVirtualConfig": "#",
+				"void": "#",
+				"Vue.VNode": "https://vuejs.org/v2/api/#VNode-Interface"
+			}
+		}
+	}
+}

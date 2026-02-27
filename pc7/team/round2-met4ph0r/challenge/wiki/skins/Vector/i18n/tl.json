@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"AnakngAraw",
+			"GinawaSaHapon",
+			"Ianlopez1115",
+			"Sky Harbor",
+			"Jojit fb"
+		]
+	},
+	"skinname-vector": "Vector",
+	"skinname-vector-2022": "Vector (2022)",
+	"vector-specialversion-name": "Vector",
+	"prefs-vector-enable-vector-1-label": "Gamitin ang Legacy Vector",
+	"vector.css": "/* Ang lahat ng CSS dito ay ikakarga para sa mga tagagamit ng pabalat na Vector */",
+	"vector.js": "/* Ang lahat ng JavaScript dito ay ikakarga para sa mga tagagamit ng pabalat na Vector */",
+	"vector-languages": "Mga wika",
+	"vector-language-button-label": "{{PLURAL:$1|$1 wika|$1 (na) wika}}",
+	"vector-no-language-button-label": "Magdagdag ng wika",
+	"vector-action-addsection": "Magdagdag ng paksa",
+	"vector-action-delete": "Burahin",
+	"vector-action-move": "Ilipat",
+	"vector-action-protect": "Protektahan",
+	"vector-action-undelete": "Alisin ang pagbubura",
+	"vector-action-unprotect": "Baguhin ang pagsasanggalang",
+	"vector-view-create": "Gawin",
+	"vector-view-edit": "Baguhin",
+	"vector-view-history": "Tingnan ang nakaraan",
+	"vector-view-view": "Basahin",
+	"vector-view-viewsource": "Tingnan ang pinagmulan",
+	"vector-more-actions": "Higit pa",
+	"vector-searchsuggest-containing": "Maghanap ng mga pahinang may <strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong>"
+}

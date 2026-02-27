@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Angpradesh",
+			"Proabscorp!"
+		]
+	},
+	"mobile-frontend-editor-edit": "संपादन करऽ",
+	"mobile-frontend-history": "ई पन्ना केरो संपादन इतिहास क देखौ।",
+	"mobile-frontend-home-button": "मुखपृष्ठ",
+	"mobile-frontend-language-article-heading": "अन्य भाषा मँ",
+	"mobile-frontend-main-menu-button-tooltip": "मुख्य मेनू खोलऽ",
+	"mobile-frontend-main-menu-login": "लॉग-इन करौ",
+	"mobile-frontend-main-menu-nearby": "आसपास मं॑",
+	"mobile-frontend-main-menu-settings": "सेटिंग्स",
+	"mobile-frontend-main-menu-watchlist": "ध्यानसूची",
+	"mobile-frontend-pageaction-edit-tooltip": "इ पन्ना केरऽ भूमिका क॑ सम्पादित करऽ",
+	"mobile-frontend-placeholder": "{{SITENAME}} मँ खोजौ",
+	"mobile-frontend-random-button": "बेतरतीब"
+}

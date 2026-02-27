@@ -1,0 +1,69 @@
+default_args := '-C target-feature=-crt-static -Clink-args=-sSIDE_MODULE=2 -Zlink-native-libraries=no -Zdefault-visibility=hidden -Cllvm-args=-enable-emscripten-cxx-exceptions=0 -Zemscripten-wasm-eh -Zunstable-options -Cpanic=immediate-abort'
+
+debug_args := '-Clink-args=-v -Clink-args=-gsource-map=inline'
+
+thread_args := '-Clink-args=-pthread -Ctarget-feature=+atomics -Clink-args=-sSIDE_MODULE=2'
+
+debug_threads := f'"{{debug_args}} -Clink-args=--source-map-base=https://dodgethecreeps/debug/threads/ {{thread_args}} {{default_args}}"'
+
+release_threads := f'"{{thread_args}} {{default_args}}"'
+
+debug_no_threads := f'"{{debug_args}} -Clink-args=--source-map-base=https://dodgethecreeps/debug/nothreads/ {{default_args}}"'
+
+release_no_threads := f'"{{default_args}}"'
+
+GODOT_VERSION := "4.5.1"
+RELEASE_NAME := "stable"
+GODOT_PLATFORM := "linux.x86_64"
+
+GODOT_ZIP := f"Godot_v{{GODOT_VERSION}}-{{RELEASE_NAME}}_{{GODOT_PLATFORM}}.zip"
+
+deps:
+    rustup component add rust-src --toolchain nightly-x86_64-unknown-linux-gnu
+    rustup target add x86_64-pc-windows-gnu
+    apt install \
+        mingw-w64 \
+        unzip wget \
+        build-essential \
+        wget lsb-release \
+        software-properties-common gnupg \
+        gcc-multilib \
+    && bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+
+godot:
+    wget https://github.com/godotengine/godot-builds/releases/download/{{GODOT_VERSION}}-{{RELEASE_NAME}}/Godot_v{{GODOT_VERSION}}-{{RELEASE_NAME}}_{{GODOT_PLATFORM}}.zip \
+        && wget https://github.com/godotengine/godot-builds/releases/download/{{GODOT_VERSION}}-{{RELEASE_NAME}}/Godot_v{{GODOT_VERSION}}-{{RELEASE_NAME}}_export_templates.tpz \
+        && mkdir -p ~/.cache \
+        && mkdir -p ~/.config/godot \
+        && mkdir -p ~/.local/share/godot/export_templates/{{GODOT_VERSION}}.{{RELEASE_NAME}} \
+        && unzip Godot_v{{GODOT_VERSION}}-{{RELEASE_NAME}}_{{GODOT_PLATFORM}}.zip \
+        && mv Godot_v{{GODOT_VERSION}}-{{RELEASE_NAME}}_{{GODOT_PLATFORM}} /usr/local/bin/godot4 \
+        && unzip Godot_v{{GODOT_VERSION}}-{{RELEASE_NAME}}_export_templates.tpz \
+        && mv templates/* ~/.local/share/godot/export_templates/{{GODOT_VERSION}}.{{RELEASE_NAME}} \
+        && rm -f Godot_v{{GODOT_VERSION}}-{{RELEASE_NAME}}_export_templates.tpz Godot_v{{GODOT_VERSION}}-{{RELEASE_NAME}}_{{GODOT_PLATFORM}}.zip
+
+# Build Extension With Thread Support
+threads:
+    RUSTFLAGS={{debug_threads}} cargo +nightly build -Zbuild-std=std,panic_abort --target wasm32-unknown-emscripten
+    cp -vf target/wasm32-unknown-emscripten/debug/rust.wasm target/wasm32-unknown-emscripten/debug/rust.threads.wasm
+    cp -vf target/wasm32-unknown-emscripten/debug/deps/rust.wasm.map target/wasm32-unknown-emscripten/debug/rust.threads.wasm.map
+    RUSTFLAGS={{release_threads}} cargo +nightly build --release -Zbuild-std=std,panic_abort --target wasm32-unknown-emscripten
+    cp -vf target/wasm32-unknown-emscripten/release/rust.wasm target/wasm32-unknown-emscripten/release/rust.threads.wasm
+
+# Build Extension Without Thread Support
+nothreads:
+    RUSTFLAGS={{debug_no_threads}} cargo +nightly build --features nothreads -Zbuild-std=std,panic_abort --target wasm32-unknown-emscripten
+    cp -vf target/wasm32-unknown-emscripten/debug/rust.wasm target/wasm32-unknown-emscripten/debug/rust.nothreads.wasm
+    cp -vf target/wasm32-unknown-emscripten/debug/deps/rust.wasm.map target/wasm32-unknown-emscripten/debug/rust.nothreads.wasm.map
+    RUSTFLAGS={{release_no_threads}} cargo +nightly build --features nothreads --release -Zbuild-std=std,panic_abort --target wasm32-unknown-emscripten
+    cp -vf target/wasm32-unknown-emscripten/release/rust.wasm target/wasm32-unknown-emscripten/release/rust.nothreads.wasm
+
+linux:
+    cargo +nightly build -Zbuild-std=std,panic_abort --target x86_64-unknown-linux-gnu
+    cargo +nightly build -Zbuild-std=std,panic_abort --release --target x86_64-unknown-linux-gnu
+
+windows:
+    cargo +nightly build -Zbuild-std=std,panic_abort --target x86_64-pc-windows-gnu
+    cargo +nightly build -Zbuild-std=std,panic_abort --release --target x86_64-pc-windows-gnu
+
+build: threads nothreads linux windows

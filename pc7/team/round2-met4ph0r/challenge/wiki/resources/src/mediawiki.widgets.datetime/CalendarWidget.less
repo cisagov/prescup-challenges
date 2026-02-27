@@ -1,0 +1,100 @@
+/* stylelint-disable no-duplicate-selectors */
+@import 'mediawiki.widgets.datetime.definitions';
+
+.mw-widgets-datetime-calendarWidget {
+	background-color: @background-color-base;
+	display: inline-block;
+	position: relative;
+	border: @border-base;
+	border-radius: @border-radius-base;
+	padding: 0.5em;
+	box-shadow: @box-shadow-dialog;
+	vertical-align: middle;
+
+	&:focus {
+		border-color: @color-progressive;
+		outline: 0;
+		box-shadow: @box-shadow-base--focus, @box-shadow-dialog;
+	}
+
+	&.mw-widgets-datetime-calendarWidget-dependent {
+		display: block;
+		position: absolute;
+		z-index: 4;
+	}
+
+	&-grid {
+		table-layout: fixed;
+
+		.mw-widgets-datetime-calendarWidget-cell {
+			display: table-cell;
+			white-space: nowrap;
+		}
+	}
+
+	&.mw-widgets-datetime-calendarWidget-dependent {
+		margin-top: -1px;
+	}
+
+	&-heading {
+		font-weight: bold;
+		text-align: center;
+		vertical-align: middle;
+		white-space: nowrap;
+
+		.mw-widgets-datetime-calendarWidget-previous {
+			float: left;
+
+			// Overwrite OOUI's `.oo-ui-buttonElement-frameless.oo-ui-iconElement:first-child`
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		.mw-widgets-datetime-calendarWidget-next {
+			float: right;
+		}
+	}
+
+	&-grid {
+		margin: 0 auto;
+
+		.mw-widgets-datetime-calendarWidget-cell {
+			text-align: center;
+
+			.oo-ui-buttonElement-button {
+				width: 100%;
+				border: 1px solid rgba( 255, 255, 255, 0 );
+				transition: background-color @transition-base, color @transition-base, border-color @transition-base;
+			}
+
+			&.mw-widgets-datetime-calendarWidget-extra .oo-ui-buttonElement-button {
+				.oo-ui-labelElement-label {
+					color: @color-base--subtle;
+				}
+
+				&:hover .oo-ui-labelElement-label {
+					color: @color-base--inverted;
+				}
+			}
+
+			&.mw-widgets-datetime-calendarWidget-selected .oo-ui-buttonElement-button {
+				background-color: #2a4b8d;
+
+				.oo-ui-labelElement-label {
+					color: @color-base--inverted;
+				}
+			}
+
+			&.oo-ui-widget-enabled .oo-ui-buttonElement-button:hover {
+				background-color: @color-progressive;
+				color: @color-base--inverted;
+				border-color: @color-progressive;
+			}
+		}
+	}
+
+	&:focus &-grid &-cell&-focused .oo-ui-buttonElement-button {
+		border-color: rgba( 0, 0, 0, 0.3 );
+	}
+}

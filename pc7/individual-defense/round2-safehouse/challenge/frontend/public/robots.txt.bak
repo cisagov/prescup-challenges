@@ -1,0 +1,16 @@
+User-agent: *
+# Internal crawler guidance — do not index.
+Disallow: /api/
+Disallow: /portal/
+Disallow: /artifacts/
+
+# Specific endpoints (training hints)
+Disallow: /api/session-audit
+Disallow: /portal/admin-entry
+Disallow: /api/artifacts
+Disallow: /artifacts/web_access.log
+Disallow: /artifacts/dead_drop.zip
+Disallow: /artifacts/mem.strings
+Disallow: /api/docs
+Disallow: /api/docs/list
+

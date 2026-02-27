@@ -1,0 +1,166 @@
+<?php
+
+/*
+ * @stable to extend
+ */
+
+use MediaWiki\MediaWikiServices;
+
+class HTMLTextAreaField extends HTMLFormField {
+	protected const DEFAULT_COLS = 80;
+	protected const DEFAULT_ROWS = 25;
+
+	protected $mPlaceholder = '';
+	protected $mUseEditFont = false;
+
+	/**
+	 * @stable to call
+	 *
+	 * @param array $params
+	 *   - cols, rows: textarea size
+	 *   - placeholder/placeholder-message: set HTML placeholder attribute
+	 *   - spellcheck: set HTML spellcheck attribute
+	 *   - useeditfont: add CSS classes to use the same font as the wikitext editor
+	 */
+	public function __construct( $params ) {
+		parent::__construct( $params );
+
+		if ( isset( $params['placeholder-message'] ) ) {
+			$this->mPlaceholder = $this->getMessage( $params['placeholder-message'] )->text();
+		} elseif ( isset( $params['placeholder'] ) ) {
+			$this->mPlaceholder = $params['placeholder'];
+		}
+
+		if ( isset( $params['useeditfont'] ) ) {
+			$this->mUseEditFont = $params['useeditfont'];
+		}
+	}
+
+	public function getCols() {
+		return $this->mParams['cols'] ?? static::DEFAULT_COLS;
+	}
+
+	public function getRows() {
+		return $this->mParams['rows'] ?? static::DEFAULT_ROWS;
+	}
+
+	public function getSpellCheck() {
+		$val = $this->mParams['spellcheck'] ?? null;
+		if ( is_bool( $val ) ) {
+			// "spellcheck" attribute literally requires "true" or "false" to work.
+			return $val ? 'true' : 'false';
+		}
+		return null;
+	}
+
+	/**
+	 * @inheritDoc
+	 * @stable to override
+	 */
+	public function getInputHTML( $value ) {
+		$classes = [];
+
+		$attribs = [
+				'id' => $this->mID,
+				'cols' => $this->getCols(),
+				'rows' => $this->getRows(),
+				'spellcheck' => $this->getSpellCheck(),
+			] + $this->getTooltipAndAccessKey();
+
+		if ( $this->mClass !== '' ) {
+			array_push( $classes, $this->mClass );
+		}
+		if ( $this->mUseEditFont ) {
+			$userOptionsLookup = MediaWikiServices::getInstance()
+				->getUserOptionsLookup();
+			// The following classes can be used here:
+			// * mw-editfont-monospace
+			// * mw-editfont-sans-serif
+			// * mw-editfont-serif
+			array_push(
+				$classes,
+				'mw-editfont-' . $userOptionsLookup->getOption(
+					$this->mParent->getUser(),
+					'editfont'
+				)
+			);
+			$this->mParent->getOutput()->addModuleStyles( 'mediawiki.editfont.styles' );
+		}
+		if ( $this->mPlaceholder !== '' ) {
+			$attribs['placeholder'] = $this->mPlaceholder;
+		}
+		if ( $classes ) {
+			$attribs['class'] = $classes;
+		}
+
+		$allowedParams = [
+			'tabindex',
+			'disabled',
+			'readonly',
+			'required',
+			'autofocus'
+		];
+
+		$attribs += $this->getAttributes( $allowedParams );
+		return Html::textarea( $this->mName, $value, $attribs );
+	}
+
+	/**
+	 * @inheritDoc
+	 * @stable to override
+	 */
+	public function getInputOOUI( $value ) {
+		$classes = [];
+
+		if ( isset( $this->mParams['cols'] ) ) {
+			throw new Exception( "OOUIHTMLForm does not support the 'cols' parameter for textareas" );
+		}
+
+		$attribs = $this->getTooltipAndAccessKeyOOUI();
+
+		if ( $this->mClass !== '' ) {
+			array_push( $classes, $this->mClass );
+		}
+		if ( $this->mUseEditFont ) {
+			$userOptionsLookup = MediaWikiServices::getInstance()
+				->getUserOptionsLookup();
+			// The following classes can be used here:
+			// * mw-editfont-monospace
+			// * mw-editfont-sans-serif
+			// * mw-editfont-serif
+			array_push(
+				$classes,
+				'mw-editfont-' . $userOptionsLookup->getOption(
+					$this->mParent->getUser(),
+					'editfont'
+				)
+			);
+			$this->mParent->getOutput()->addModuleStyles( 'mediawiki.editfont.styles' );
+		}
+		if ( $this->mPlaceholder !== '' ) {
+			$attribs['placeholder'] = $this->mPlaceholder;
+		}
+		if ( count( $classes ) ) {
+			$attribs['classes'] = $classes;
+		}
+
+		$allowedParams = [
+			'tabindex',
+			'disabled',
+			'readonly',
+			'required',
+			'autofocus',
+		];
+
+		$attribs += OOUI\Element::configFromHtmlAttributes(
+			$this->getAttributes( $allowedParams )
+		);
+
+		return new OOUI\MultilineTextInputWidget( [
+			'id' => $this->mID,
+			'name' => $this->mName,
+			'value' => $value,
+			'rows' => $this->getRows(),
+		] + $attribs );
+	}
+}

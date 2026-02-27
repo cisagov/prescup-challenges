@@ -1,0 +1,35 @@
+@import '../../minerva.less/minerva.variables.less';
+
+.drawer {
+	background-color: @colorGray15;
+	// needed for Android 4.x
+	position: absolute;
+}
+
+// Basic toast notification
+//
+// Toast must have visible class to be shown
+//
+// Markup:
+// <div class="toast visible">
+//  Notification for user.
+// </div>
+.mw-notification,
+.toast,
+.drawer {
+	box-sizing: border-box;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0 -1px 8px 0 @grayDrawerShadow;
+	word-wrap: break-word;
+	// needs to be higher than for overlays to show on top of overlays
+	z-index: @z-indexOverOverlay;
+	// don't use visibility: hidden in old browsers that don't support animations
+	display: none;
+
+	&.visible, &.mw-notification-visible {
+		display: block;
+	}
+}

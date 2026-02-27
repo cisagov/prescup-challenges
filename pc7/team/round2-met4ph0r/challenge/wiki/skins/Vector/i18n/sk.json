@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Helix84",
+			"KuboF",
+			"Luky001",
+			"Mikulas1",
+			"Robert Važan",
+			"Rudko",
+			"Sudo77(new)",
+			"Yardom78",
+			"Teslaton",
+			"Vegetator"
+		]
+	},
+	"skinname-vector": "Vector",
+	"vector-skin-desc": "Moderná verzia MonoBooku so sviežim vzhľadom a vylepšenou použiteľnosťou",
+	"prefs-vector-enable-vector-1-label": "Použiť starý Vector",
+	"prefs-vector-enable-vector-1-help": "V nasledujúcich rokoch budeme postupne aktualizovať vzhľad Vector. Starý Vector vám umožní používať starú verziu Vectora z decembra 2019. Viac o aktualizáciách sa dozviete na našej [[mw:Reading/Web/Desktop_Improvements|projektovej stránke]].",
+	"vector-opt-out": "Prepnúť na starý vzhľad",
+	"vector-opt-out-tooltip": "Zmeniť nastavenie a vrátiť sa späť k starej podobe vzhľadu (starý Vector)",
+	"vector.css": "/* Tu umiestnené CSS bude ovplyvňovať používateľov štýlu Vector */",
+	"vector.js": "/* Tu sa nachádzajúci JavaScript sa načíta používateľom vzhľadu Vector */",
+	"vector-language-button-label": "{{PLURAL:$1|$1 jazyk|$1 jazyky|$1 jazykov}}",
+	"vector-language-redirect-to-top": "Tu na {{GRAMMAR:6sg|{{SITENAME}}}} sú jazykové odkazy vpravo hore vedľa názvu článku. [[#p-lang-btn|Ísť hore]].",
+	"vector-action-addsection": "Pridať tému",
+	"vector-action-delete": "Zmazať",
+	"vector-action-move": "Presunúť",
+	"vector-action-protect": "Zamknúť",
+	"vector-action-undelete": "Obnoviť",
+	"vector-action-unprotect": "Zmeniť stav ochrany",
+	"vector-view-create": "Vytvoriť",
+	"vector-view-edit": "Upraviť",
+	"vector-view-history": "Zobraziť históriu",
+	"vector-view-view": "Čítať",
+	"vector-view-viewsource": "Zobraziť kód",
+	"vector-more-actions": "Viac",
+	"vector-searchsuggest-containing": "Hľadať stránky obsahujúce <strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong>",
+	"vector-toc-beginning": "Začiatok",
+	"vector-main-menu-tooltip": "Hlavné menu"
+}

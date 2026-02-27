@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido",
+			"JSantos",
+			"Joao Xavier",
+			"Robin van der Vliet"
+		]
+	},
+	"minerva-talk-add-topic": "Adjuntar topiko",
+	"mobile-frontend-editor-edit": "Redaktar",
+	"minerva-download": "Deskargar PDF",
+	"mobile-frontend-editor-redlink-create": "Krear pagino",
+	"mobile-frontend-history": "Videz redakto-historio di ca pagino",
+	"mobile-frontend-home-button": "Frontispico",
+	"mobile-frontend-language-article-heading": "Linguo",
+	"mobile-frontend-main-menu-button-tooltip": "Apertar la precipua menuo",
+	"mobile-frontend-main-menu-contributions": "Kontributadi",
+	"mobile-frontend-main-menu-login": "Enirar",
+	"mobile-frontend-main-menu-logout": "Ekirar",
+	"mobile-frontend-main-menu-nearby": "Vicina",
+	"mobile-frontend-main-menu-settings": "Parametri",
+	"mobile-frontend-main-menu-watchlist": "Surveyo-listo",
+	"mobile-frontend-pageaction-edit-tooltip": "Redaktar la precipua segmento de ica pagino.",
+	"mobile-frontend-placeholder": "Serchez en {{SITENAME}}",
+	"mobile-frontend-random-button": "Hazarde",
+	"mobile-frontend-user-button-tooltip": "Montrez mea avizi",
+	"mobile-frontend-user-page-contributions": "Kontributadi",
+	"mobile-frontend-user-page-talk": "Diskuto",
+	"minerva-page-actions-info": "Informo pri pagino",
+	"minerva-page-actions-delete": "Efacez",
+	"minerva-page-actions-unprotect": "Desprotektar",
+	"minerva-page-actions-user-groups": "Uzero-grupi",
+	"skin-minerva-mobile-option-MinervaShowCategories": "Kategorii"
+}

@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pare Mo"
+		]
+	},
+	"vector-searchsuggest-containing": "Maghanap kang manga pahina nga may sëlëd nga <strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong>"
+}
