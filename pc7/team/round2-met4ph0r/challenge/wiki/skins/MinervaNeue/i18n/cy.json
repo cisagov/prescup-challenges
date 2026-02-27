@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ham II",
+			"Lloffiwr",
+			"Robin Owain",
+			"Troswr"
+		]
+	},
+	"mobile-frontend-editor-edit": "Golygu",
+	"mobile-frontend-history": "Gweld hanes golygu'r dudalen hon.",
+	"mobile-frontend-home-button": "Hafan",
+	"mobile-frontend-language-article-heading": "Iaith",
+	"mobile-frontend-main-menu-button-tooltip": "Agor y brif ddewislen",
+	"mobile-frontend-main-menu-login": "Mewngofnodi",
+	"mobile-frontend-main-menu-logout": "Allgofnodi",
+	"mobile-frontend-main-menu-nearby": "Gerllaw",
+	"mobile-frontend-main-menu-settings": "Gosodiadau",
+	"mobile-frontend-main-menu-watchlist": "Rhestr wylio",
+	"mobile-frontend-meta-data-issues": "Mae 'na broblem efo'r dudalen hon",
+	"mobile-frontend-meta-data-issues-header": "Problemau",
+	"mobile-frontend-pageaction-edit-tooltip": "Golygu adran agoriadol y dudalen hon.",
+	"mobile-frontend-placeholder": "Chwilio {{SITENAME}}",
+	"mobile-frontend-random-button": "Ar hap",
+	"mobile-frontend-talk-back-to-page": "Nôl i'r dudalen \"$1\".",
+	"mobile-frontend-user-button-tooltip": "Dangos fy hysbysiadau"
+}

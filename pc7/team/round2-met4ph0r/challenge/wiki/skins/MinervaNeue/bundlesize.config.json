@@ -1,0 +1,38 @@
+[
+	{
+		"resourceModule": "skins.minerva.base.styles",
+		"maxSize": "6.6KB"
+	},
+	{
+		"resourceModule": "skins.minerva.content.styles.images",
+		"maxSize": "0.5KB"
+	},
+	{
+		"resourceModule": "mediawiki.hlist",
+		"maxSize": "0.5KB"
+	},
+	{
+		"resourceModule": "mediawiki.ui.icon",
+		"maxSize": "1.3KB"
+	},
+	{
+		"resourceModule": "mediawiki.ui.button",
+		"maxSize": "1.6KB"
+	},
+	{
+		"resourceModule": "skins.minerva.icons.wikimedia",
+		"maxSize": "1.0KB"
+	},
+	{
+		"resourceModule": "skins.minerva.mainMenu.icons",
+		"maxSize": "0.4KB"
+	},
+	{
+		"resourceModule": "skins.minerva.mainMenu.styles",
+		"maxSize": "1.2KB"
+	},
+	{
+		"resourceModule": "skins.minerva.scripts",
+		"maxSize": "11.9KB"
+	}
+]

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Review Cancellation #{{ cancellation.id }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h3 class="mb-4">Review Cancellation Request</h3>
+
+    <div class="mb-3">
+        <strong>Auction:</strong> {{ auction.item["name"] }}<br>
+        <strong>Status:</strong>
+        {% if cancellation.approved is none %}
+            <span class="text-muted">Pending</span>
+        {% elif cancellation.approved %}
+            <span class="text-success">Approved</span>
+        {% else %}
+            <span class="text-danger">Denied</span>
+        {% endif %}
+    </div>
+
+    <div class="mb-4">
+        <strong>Reason Provided:</strong>
+        <div class="border rounded p-3 bg-light">
+            {{ reason_html }}
+        </div>
+    </div>
+
+    {% if cancellation.approved is none %}
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <div class="d-flex gap-2">
+            {{ form.approve(class="btn btn-success") }}
+            {{ form.deny(class="btn btn-danger") }}
+        </div>
+    </form>
+    {% endif %}
+</div>
+{% endblock %}

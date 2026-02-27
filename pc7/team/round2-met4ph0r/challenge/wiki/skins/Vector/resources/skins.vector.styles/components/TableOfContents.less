@@ -1,0 +1,185 @@
+@import '../../common/variables.less';
+
+@sidebar-toc-fade-height: 30px;
+@sidebar-toc-vertical-padding: 20px;
+@sidebar-toc-right-padding: 12px;
+// Sidebar TOC uses increased left padding and a negative left margin to achieve
+// a 15px spacing without clipping the chevron icon
+// https://phabricator.wikimedia.org/T312156#8095894
+@sidebar-toc-left-padding: ~'calc( 15px + @{margin-start-sidebar-content} )';
+@toc-subsection-toggle-icon-size: 1.834em;
+
+.mw-table-of-contents-container {
+	// Needed for Grid-based layout
+	align-self: start;
+	height: 100%;
+}
+
+// FIXME: Remove selector after Ia263c606dce5a6060b6b29fbaedc49cef3e17a5c has been in prod for 5 days
+.mw-table-of-contents-container.mw-sticky-header-element {
+	// stylelint-disable-next-line plugin/no-unsupported-browser-features
+	position: sticky;
+	top: 0;
+	// Needed for Grid-based layout
+	align-self: start;
+	height: unset;
+
+	// Needed to align TOC with bottom of title
+	// 1.5em from .mw-table-of-contents-container + 1.5em from .sidebar-toc = 3em
+	@media ( min-width: @min-width-desktop ) {
+		.vector-toc-not-collapsed @{selector-main-menu-closed} ~ & {
+			margin-top: 1.5em;
+		}
+	}
+}
+
+.vector-sticky-toc-container {
+	// stylelint-disable-next-line plugin/no-unsupported-browser-features
+	position: sticky;
+	top: 0;
+
+	@media ( min-width: @min-width-desktop ) {
+		.vector-toc-not-collapsed & {
+			// Default spacing separating the sidebar TOC from the main menu or viewport.
+			// Need to use padding in order for the spacing to apply when sticky
+			padding-top: 1.5em;
+		}
+
+		.vector-toc-not-collapsed @{selector-main-menu-closed} ~ .mw-table-of-contents-container & {
+			// Needed to align TOC with bottom of title, 1.5em padding + 1.5em margin = 3em
+			margin-top: 1.5em;
+		}
+	}
+}
+
+// FIXME: Remove selector after Ia263c606dce5a6060b6b29fbaedc49cef3e17a5c has been in prod for 5 days
+.mw-table-of-contents-container > .sidebar-toc {
+	margin-top: 1.5em;
+}
+
+.sidebar-toc {
+	max-height: 75vh;
+	padding: @sidebar-toc-vertical-padding @sidebar-toc-right-padding @sidebar-toc-vertical-padding @sidebar-toc-left-padding;
+	box-sizing: border-box;
+	overflow: auto;
+	background-color: @background-color-page-container;
+
+	.sidebar-toc-header {
+		padding-bottom: 12px;
+	}
+
+	.sidebar-toc-title {
+		color: @color-base--subtle;
+		font-size: @font-size-base;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+
+	.sidebar-toc-numb {
+		display: none;
+	}
+
+	.sidebar-toc-toggle {
+		// For no-js users, toggling is disabled and icon is hidden
+		display: none;
+		position: absolute;
+		top: 1px; // visually center icon
+		left: ~'calc( -1 * @{toc-subsection-toggle-icon-size} - 1px )'; // leaves 6px between icon + text
+		width: @toc-subsection-toggle-icon-size; // ~22px @ 12
+		height: @toc-subsection-toggle-icon-size;
+		font-size: 0.75em; // reduces size of toggle icon to 12px @ 16
+		transition: @transition-duration-base;
+		cursor: pointer;
+	}
+
+	.sidebar-toc-link {
+		word-break: break-word;
+		color: @color-link;
+		display: block;
+	}
+
+	.sidebar-toc-list-item-active > .sidebar-toc-link {
+		// Highlight active section
+		color: @color-base;
+		font-weight: bold;
+		// increase width to prevent line wrapping due to bold text
+		width: ~'calc( 100% + @{sidebar-toc-right-padding} )';
+	}
+
+	.sidebar-toc-text {
+		padding: 4px  0;
+	}
+
+	.sidebar-toc-contents,
+	.sidebar-toc-list {
+		margin: 0;
+		list-style: none;
+		line-height: 18px;
+	}
+
+	.sidebar-toc-list-item {
+		display: block;
+		position: relative;
+		list-style-type: none;
+		padding-left: 8px;
+
+		&.sidebar-toc-level-1 {
+			padding-left: 0;
+		}
+
+		a {
+			font-size: @font-size-base;
+		}
+	}
+}
+
+// T302076: Add fade scrollable indicator when TOC is in sidebar
+// Avoid showing indicator when the TOC is floating, or collapsed in the page title/sticky header
+@media ( min-width: @min-width-desktop ) {
+	.vector-toc-not-collapsed .sidebar-toc:after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: @sidebar-toc-fade-height;
+		background: linear-gradient( rgba( 255, 255, 255, 0 ), @background-color-page-container );
+		background-repeat: no-repeat;
+		background-position: -@sidebar-toc-right-padding; // T311436 Hacky way to prevent the fade from covering the scrollbar
+		pointer-events: none; // Make the link below the fade clickable
+	}
+}
+
+// Collapse ToC sections by default, excluding no-js
+.client-js .sidebar-toc {
+	.sidebar-toc-level-1 .sidebar-toc-list-item {
+		display: none;
+	}
+
+	.sidebar-toc-level-1.sidebar-toc-list-item-expanded .sidebar-toc-list-item {
+		display: block;
+	}
+
+	.sidebar-toc-toggle {
+		display: block;
+	}
+
+	.sidebar-toc-level-1.sidebar-toc-list-item-expanded .sidebar-toc-toggle {
+		transform: rotate( 0deg );
+	}
+}
+
+.client-js body.ltr .sidebar-toc .sidebar-toc-toggle {
+	transform: rotate( -90deg );
+}
+
+.client-js body.rtl .sidebar-toc .sidebar-toc-toggle {
+	transform: rotate( 90deg );
+}
+
+// FIXME: Can be removed when https://github.com/cssjanus/cssjanus/issues/82 is fixed and in production.
+body.rtl .sidebar-toc {
+	padding: @sidebar-toc-vertical-padding @sidebar-toc-left-padding @sidebar-toc-vertical-padding @sidebar-toc-right-padding;
+}

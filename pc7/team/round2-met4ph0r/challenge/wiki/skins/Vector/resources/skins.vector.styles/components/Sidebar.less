@@ -1,0 +1,100 @@
+@import '../../common/variables.less';
+@import 'mediawiki.mixins.less';
+@import '../layouts/screen.less';
+@import './checkboxHack.less';
+
+.mw-sidebar,
+.sidebar-toc,
+.sidebar-toc:after {
+	// Match styles between TOC and fade element to ensure the fade covers the correct area
+	// This is expressed in pixels to support different font sizes since our layout is currently
+	// expressed in pixels. See T313817.
+	width: @width-sidebar-px;
+	margin-left: 0;
+
+	@media ( min-width: @min-width-desktop-wide ) {
+		width: @width-sidebar-px-wide;
+		margin-left: @margin-start-sidebar-content;
+	}
+}
+
+.sidebar-toc,
+.sidebar-toc:after {
+	margin-left: -@margin-start-sidebar-content;
+
+	@media ( min-width: @min-width-desktop-wide ) {
+		margin-left: 0;
+	}
+}
+
+.mw-sidebar {
+	box-sizing: border-box;
+	// Temporary magic number, will be calculated after TOC specs are finalized
+	padding: 12px 19px 12px 9px;
+	background-image: none;
+	background-color: @background-color-secondary--modern;
+
+	@media ( max-width: @max-width-tablet ) {
+		// Makes the sidebar full screen at lower resolutions.
+		width: 100%;
+	}
+
+	// Hide sidebar entirely when the checkbox is disabled
+	@{selector-main-menu-closed} ~ .vector-sidebar-container & {
+		display: none;
+	}
+
+	// Hide #p-navigation label
+	#p-navigation .vector-menu-heading {
+		display: none;
+	}
+}
+
+.mw-sidebar-action {
+	// Styles for SidebarAction template.
+	.mw-sidebar-action-item {
+		// Align with the portal heading/links
+		// `.portal` + `.portal .body`
+		margin-top: 4px;
+		margin-bottom: 4px;
+
+		.mw-sidebar-action-heading {
+			margin-bottom: 0.75em;
+		}
+
+		.mw-sidebar-action-content {
+			> * {
+				font-size: @font-size-portal-list-item;
+			}
+
+			> a {
+				font-weight: bold;
+			}
+		}
+
+		// T295555 style overrides for temporary language switch alert (can be removed later ).
+		.vector-language-sidebar-alert {
+			padding: 0.75em;
+		}
+	}
+}
+
+#mw-sidebar-button {
+	&:before {
+		// Equals `#555`, closest to `#54595d` on background-color `#fff`.
+		opacity: 0.67;
+		/* @embed */
+		background-image: url( images/chevronHorizontal-ltr.svg );
+
+		@{selector-main-menu-closed} ~ .mw-header & {
+			/* @embed */
+			background-image: url( images/menu.svg );
+		}
+	}
+
+	&:hover {
+		&:before {
+			opacity: 1;
+		}
+	}
+}

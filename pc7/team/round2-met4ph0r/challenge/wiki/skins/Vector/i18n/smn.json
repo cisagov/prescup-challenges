@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Seipinne",
+			"Trondtr",
+			"Yupik"
+		]
+	},
+	"vector-languages": "Kielah",
+	"vector-language-button-label": "{{PLURAL:$1|$1 kielâ|$1 kielâ|$1 kielâ|$1 kiellâd}}",
+	"vector-action-addsection": "Lasseet fáádá",
+	"vector-action-delete": "Siho",
+	"vector-action-move": "Sirde",
+	"vector-action-protect": "Suoijii",
+	"vector-view-create": "Räähti",
+	"vector-view-edit": "Mute",
+	"vector-view-history": "Čääiti historjá",
+	"vector-view-view": "Luuvâ",
+	"vector-view-viewsource": "Čääiti käldeekoodi",
+	"vector-jumptonavigation": "Njuškii navigistmân",
+	"vector-jumptosearch": "Njuškii ucâmân",
+	"vector-jumptocontent": "Njuškii siskáldâsân",
+	"vector-more-actions": "Eenâb",
+	"vector-searchsuggest-containing": "Uusâ siijđoid, moh siskáldeh <strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong>",
+	"vector-main-menu-tooltip": "Uáivivaljiittâh",
+	"tooltip-vector-anon-user-menu-title": "Lase valjiimeh"
+}

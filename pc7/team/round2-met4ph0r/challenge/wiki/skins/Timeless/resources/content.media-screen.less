@@ -1,0 +1,100 @@
+@import 'variables-content.less';
+
+figure[ typeof~='mw:File/Thumb' ],
+figure[ typeof~='mw:File/Frame' ],
+/* TODO: Remove "Image|Video|Audio" when version 2.4.0 of the content is no
+ * longer supported
+ */
+figure[ typeof~='mw:Image/Thumb' ],
+figure[ typeof~='mw:Video/Thumb' ],
+figure[ typeof~='mw:Audio/Thumb' ],
+figure[ typeof~='mw:Image/Frame' ],
+figure[ typeof~='mw:Video/Frame' ],
+figure[ typeof~='mw:Audio/Frame' ] {
+	border: @border-thumbinner-screen;
+	border-bottom: 0;  // No border to figcaption
+	border-width: 1px 1px 0.2em;  // From .box
+	box-shadow: 0 1px 2px 1px rgba( 0, 0, 0, 0.02 );  // From .box
+	background-color: @background-color-thumbinner-screen;
+
+	> a:first-child,
+	> span:first-child {
+		> *:first-child:not( .mw-broken-media ) {
+			border: @border-thumbimage-screen;
+		}
+	}
+
+	> figcaption {
+		border: @border-thumbinner-screen;
+		border-top: 0;
+		border-width: 1px 1px 0.2em;  // From .box
+		box-shadow: 0 1px 2px 1px rgba( 0, 0, 0, 0.02 );  // From .box
+		background-color: @background-color-thumbinner-screen;
+		font-size: @font-size-thumbcaption-screen;
+	}
+}
+
+.mw-image-border {
+	> a:first-child,
+	> span:first-child {
+		> *:first-child:not( .mw-broken-media ) {
+			border: @border-thumbborder-screen;
+		}
+	}
+}
+
+/* Magnify clip, not present for broken media */
+figure[ typeof~='mw:File/Thumb' ]:not( [ typeof~='mw:Error' ] ),
+/* TODO: Remove "Image|Video|Audio" when version 2.4.0 of the content is no
+ * longer supported
+ */
+figure[ typeof~='mw:Image/Thumb' ]:not( [ typeof~='mw:Error' ] ),
+figure[ typeof~='mw:Video/Thumb' ]:not( [ typeof~='mw:Error' ] ),
+figure[ typeof~='mw:Audio/Thumb' ]:not( [ typeof~='mw:Error' ] ) {
+	> figcaption:before {
+		content: '';
+		width: 20px;
+		height: 20px;
+
+		.mw-content-ltr & {
+			/* @noflip */
+			margin-left: 0.5em;
+			/* @noflip */
+			float: right;
+		}
+
+		.mw-content-rtl & {
+			/* @noflip */
+			margin-right: 0.5em;
+			/* @noflip */
+			float: left;
+		}
+	}
+
+	> a {
+		display: inline-block;
+		position: relative;
+	}
+
+	> a:after {
+		content: '';
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		bottom: -20px;
+
+		.mw-content-ltr & {
+			/* @noflip */
+			right: 0.75em;
+			/* @noflip */
+			background-image: @background-image-magnify-ltr;
+		}
+
+		.mw-content-rtl & {
+			/* @noflip */
+			left: 0.75em;
+			/* @noflip */
+			background-image: @background-image-magnify-rtl;
+		}
+	}
+}

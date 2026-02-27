@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Girmitya",
+			"Karthi.dr",
+			"MinecraftAustralia"
+		]
+	},
+	"mobile-frontend-editor-edit": "Badlo",
+	"mobile-frontend-home-button": "Pahila Panna",
+	"mobile-frontend-language-article-heading": "Bhasa",
+	"mobile-frontend-main-menu-button-tooltip": "Main menu ke kholo",
+	"mobile-frontend-main-menu-login": "Log in",
+	"mobile-frontend-main-menu-nearby": "Nagiich",
+	"mobile-frontend-main-menu-settings": "Settings",
+	"mobile-frontend-main-menu-watchlist": "Dhyaan suchi",
+	"mobile-frontend-pageaction-edit-tooltip": "Ii panna ke lead hissa ke badlo",
+	"mobile-frontend-placeholder": "{{SITENAME}} khojo",
+	"mobile-frontend-random-button": "Koi bhi"
+}

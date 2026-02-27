@@ -1,0 +1,48 @@
+// FIXME: Ensure resources/skins.minerva.base.styles/print.less is removed when promoting
+.header-container,
+.header-container.header-chrome {
+	background: @background-color-base;
+	box-shadow: none !important;
+}
+
+.minerva-header {
+	border-top: 0;
+	display: block;
+	height: auto;
+	padding: 0 @contentPadding;
+
+	.branding-box {
+		padding-left: 0 !important;
+
+		// Beta indication is hidden in print mode
+		sup {
+			display: none !important;
+		}
+	}
+
+	> nav,
+	> div {
+		display: none !important;
+	}
+
+	> .branding-box {
+		height: auto;
+		display: block !important;
+		padding: 0 0 51px 50px;
+
+		h1 {
+			font-size: inherit;
+
+			> * {
+				float: none;
+			}
+
+			// assumes SVG...
+			img {
+				height: 41px;
+				width: auto;
+				vertical-align: inherit;
+			}
+		}
+	}
+}

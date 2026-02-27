@@ -1,0 +1,116 @@
+x-challenge:
+  name: "Skynet"
+  description: |
+    # Skynet
+
+    Parse a custom binary file format and perform geospatial analysis of drone flight paths.
+
+    **NICE Work Roles**
+
+    - [Digital Forensics](https://niccs.cisa.gov/tools/nice-framework/)
+
+    **NICE Tasks**
+
+    - [T1607](https://niccs.cisa.gov/tools/nice-framework/): Recover information from forensic data sources
+
+    ## Background
+
+    An enemy spy agency employs an advanced satellite surveillance system called `Skynet` that poses a serious threat to your operations.
+    In order to complete your missions successfully and covertly, you must avoid the watchful eyes of `Skynet`.
+    You have captured a binary file detailing drone flight paths, some of the drones belonging to your agency. 
+    Modify the binary and feed the tampered data to skynet in order to hide your drone operations.
+
+    ## Getting Started
+
+    Use the provided kali machine to browse to `http://skynet`. Download the flight data and analyze the binary.
+    After modifying the binary, use the `Upload to Submit` button for grading.
+
+    ## Questions
+
+    - Question 1 - Sort the drone names from A to Z and find the last drone in the list. Change this drone's name to `Jet Streamer`.
+    - Question 2 - Find the only drone that is not located within the US. Reduce the latitude and longitude of each coordinate on the flight path by `5`.
+    - Question 3 - Find the drone with the longest flight time. Add `3` seconds to the flight time between each coordinate in the drone's flight path.
+    - Question 4 - Find the drone with the longest flight path. Reverse the flight path so the last point on the flight path becomes the first point and vice versa. 
+
+    ## System and Tool Credentials
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |kali|user|password|
+    |`http://skynet`|N/A|N/A|
+
+  icon: "TbPlaneTilt"
+
+  tags:
+    - "binary-analysis"
+    - "cryptography"
+    - "forensics"
+    - "pc7"
+    - "round2"
+    - "team"
+
+
+  summary: >
+    Parse a custom binary file format and perform geospatial analysis of drone flight paths.
+  
+  variables:
+    token1:
+      template: "fake.bothify('PCCC{Jet_Streamer_Token_?####?}')"
+      default: &token1 "PCCC{Jet_Streamer_Token}"
+    token2:
+      template: "fake.bothify('PCCC{Lat_Long_5_Token_?####?}')"
+      default: &token2 "PCCC{Lat_Long_5_Token}"
+    token3:
+      template: "fake.bothify('PCCC{Add_3_Seconds_Token_?####?}')"
+      default: &token3 "PCCC{Add_3_Seconds_Token}"
+    token4:
+      template: "fake.bothify('PCCC{Reverse_Flight_Token_?####?}')"
+      default: &token4 "PCCC{Reverse_Flight_Token}"
+
+  # 3195 total points
+  questions:
+    - name: "Question 1"
+      body: |
+        Sort the drone names from A to Z and find the last drone in the list. Change this drone's name to `Jet Streamer`.
+      placeholder: "PCCC{Jet_Streamer_Token_??????}"
+      points: 599 # 18.75% of total points
+      answer: *token1
+      max_attempts: 3
+    - name: "Question 2"
+      body: |
+        Find the only drone that is not located within the US. Reduce the latitude and longitude of each coordinate on the flight path by `5`.
+      placeholder: "PCCC{Lat_Long_5_Token_??????}"
+      points: 798 # 25% of total points
+      answer: *token2
+      max_attempts: 3
+    - name: "Question 3"
+      body: |
+        Find the drone with the longest flight time. Add `3` seconds to the flight time between each coordinate in the drone's flight path.
+      placeholder: "PCCC{Add_3_Seconds_Token_??????}"
+      points: 899 # 28.125% of total points
+      answer: *token3
+      max_attempts: 3
+    - name: "Question 4"
+      body: |
+        Find the drone with the longest flight path. Reverse the flight path so the last point on the flight path becomes the first point and vice versa.
+      placeholder: "PCCC{Reverse_Flight_Token_??????}"
+      points: 899 # 28.125% of total points
+      answer: *token4
+      max_attempts: 3
+
+services:
+  skynet:
+    #build: .
+    hostname: skynet
+    environment:
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+    networks:
+      - competitor_net
+
+networks:
+  competitor_net:
+    internal: true # Production
+    #external: true # Local testing

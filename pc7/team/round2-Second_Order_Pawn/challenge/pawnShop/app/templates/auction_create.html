@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}New Auction{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Create Auction for "{{ item.name }}"</h2>
+    <form method="POST" id="auction-form">
+        {{ form.hidden_tag() }}
+
+        <div class="mb-3">
+            {{ form.starting_bid.label(class="form-label") }}
+            {{ form.starting_bid(class="form-control") }}
+            {% for error in form.starting_bid.errors %}
+                <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+        </div>
+
+        <div class="mb-3">
+            <label for="{{ form.end_date.id }}" class="form-label">
+                {{ form.end_date.label.text }}
+                <i class="bi bi-info-circle"
+                tabindex="0"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="The End Date informs users when you will close the auction. The site will not close the auction automatically. You must close it manually, or an admin will do so after 24 hours.">
+                </i>
+            </label>
+            {{ form.end_date(class="form-control") }}
+            {% for error in form.end_date.errors %}
+                <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">Select Cover Image</label>
+            {% for value, label in form.cover_image.choices %}
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ form.cover_image.name }}"
+                           id="doc{{ value }}" value="{{ value }}"
+                           {% if form.cover_image.data == value %}checked{% endif %}>
+                    <label class="form-check-label" for="doc{{ value }}">
+                        {{ label }}
+                    </label>
+                </div>
+            {% endfor %}
+            {% for error in form.cover_image.errors %}
+                <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+        </div>
+
+        <button type="submit" class="btn btn-primary">{{ form.submit.label.text }}</button>
+        <a href="{{ url_for('my_auctions') }}" class="btn btn-link">Cancel</a>
+    </form>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+document.getElementById("auction-form").addEventListener("submit", function (e) {
+    const input = document.getElementById("end_date");
+    const localDate = new Date(input.value);
+
+    // Convert to ISO string (includes timezone offset in UTC)
+   const utcString = localDate.toISOString().slice(0, 16); // format as "YYYY-MM-DDTHH:mm"
+    
+    // Overwrite input value before submission
+    input.value = utcString;
+});
+</script>
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltipTriggerList.forEach(t => new bootstrap.Tooltip(t));
+</script>
+{% endblock %}

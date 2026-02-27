@@ -1,0 +1,215 @@
+[
+	{
+		"path": "/v1/page/{title}/history",
+		"class": "MediaWiki\\Rest\\Handler\\PageHistoryHandler",
+		"services": [
+			"RevisionStore",
+			"NameTableStoreFactory",
+			"GroupPermissionsLookup",
+			"DBLoadBalancer",
+			"PageStore",
+			"TitleFormatter"
+		]
+	},
+	{
+		"path": "/v1/page/{title}/history/counts/{type}",
+		"class": "MediaWiki\\Rest\\Handler\\PageHistoryCountHandler",
+		"services": [
+			"RevisionStore",
+			"NameTableStoreFactory",
+			"GroupPermissionsLookup",
+			"DBLoadBalancer",
+			"MainWANObjectCache",
+			"PageStore",
+			"ActorMigration"
+		]
+	},
+	{
+		"path": "/v1/revision/{from}/compare/{to}",
+		"class": "MediaWiki\\Rest\\Handler\\CompareHandler",
+		"services": [
+			"RevisionLookup",
+			"Parser"
+		]
+	},
+	{
+		"path": "/v1/revision/{id}",
+		"class": "MediaWiki\\Rest\\Handler\\RevisionSourceHandler",
+		"services": [
+			"MainConfig",
+			"RevisionLookup",
+			"TitleFormatter",
+			"PageStore"
+		],
+		"format": "source"
+	},
+	{
+		"path": "/v1/revision/{id}/html",
+		"class": "MediaWiki\\Rest\\Handler\\RevisionHTMLHandler",
+		"services": [
+			"MainConfig",
+			"RevisionLookup",
+			"TitleFormatter",
+			"PageStore",
+			"ParsoidOutputStash",
+			"StatsdDataFactory",
+			"ParsoidOutputAccess"
+		],
+		"format": "html"
+	},
+	{
+		"path": "/v1/revision/{id}/with_html",
+		"class": "MediaWiki\\Rest\\Handler\\RevisionHTMLHandler",
+		"services": [
+			"MainConfig",
+			"RevisionLookup",
+			"TitleFormatter",
+			"PageStore",
+			"ParsoidOutputStash",
+			"StatsdDataFactory",
+			"ParsoidOutputAccess"
+		],
+		"format": "with_html"
+	},
+	{
+		"path": "/v1/revision/{id}/bare",
+		"class": "MediaWiki\\Rest\\Handler\\RevisionSourceHandler",
+		"services": [
+			"MainConfig",
+			"RevisionLookup",
+			"TitleFormatter",
+			"PageStore"
+		],
+		"format": "bare"
+	},
+	{
+		"path": "/v1/search/page",
+		"class": "MediaWiki\\Rest\\Handler\\SearchHandler",
+		"services": [
+			"MainConfig",
+			"SearchEngineFactory",
+			"SearchEngineConfig",
+			"PermissionManager",
+			"RedirectLookup",
+			"PageStore",
+			"TitleFormatter"
+		],
+		"mode": "fulltext"
+	},
+	{
+		"path": "/v1/search/title",
+		"class": "MediaWiki\\Rest\\Handler\\SearchHandler",
+		"services": [
+			"MainConfig",
+			"SearchEngineFactory",
+			"SearchEngineConfig",
+			"PermissionManager",
+			"RedirectLookup",
+			"PageStore",
+			"TitleFormatter"
+		],
+		"mode": "completion"
+	},
+	{
+		"path": "/v1/page/{title}/links/language",
+		"class": "MediaWiki\\Rest\\Handler\\LanguageLinksHandler",
+		"services": [
+			"DBLoadBalancer",
+			"LanguageNameUtils",
+			"TitleFormatter",
+			"TitleParser",
+			"PageStore"
+		]
+	},
+	{
+		"path": "/v1/page/{title}",
+		"class": "MediaWiki\\Rest\\Handler\\PageSourceHandler",
+		"services": [
+			"MainConfig",
+			"RevisionLookup",
+			"TitleFormatter",
+			"PageStore"
+		],
+		"format": "source"
+	},
+	{
+		"path": "/v1/page/{title}/bare",
+		"class": "MediaWiki\\Rest\\Handler\\PageSourceHandler",
+		"services": [
+			"MainConfig",
+			"RevisionLookup",
+			"TitleFormatter",
+			"PageStore"
+		],
+		"format": "bare"
+	},
+	{
+		"path": "/v1/page/{title}/html",
+		"class": "MediaWiki\\Rest\\Handler\\PageHTMLHandler",
+		"services": [
+			"MainConfig",
+			"RevisionLookup",
+			"TitleFormatter",
+			"PageStore",
+			"ParsoidOutputStash",
+			"StatsdDataFactory",
+			"ParsoidOutputAccess"
+		],
+		"format": "html"
+	},
+	{
+		"path": "/v1/page/{title}/with_html",
+		"class": "MediaWiki\\Rest\\Handler\\PageHTMLHandler",
+		"services": [
+			"MainConfig",
+			"RevisionLookup",
+			"TitleFormatter",
+			"PageStore",
+			"ParsoidOutputStash",
+			"StatsdDataFactory",
+			"ParsoidOutputAccess"
+		],
+		"format": "with_html"
+	},
+	{
+		"path": "/v1/page/{title}/links/media",
+		"class": "MediaWiki\\Rest\\Handler\\MediaLinksHandler",
+		"services": [
+			"DBLoadBalancer",
+			"RepoGroup",
+			"PageStore"
+		]
+	},
+	{
+		"path": "/v1/file/{title}",
+		"class": "MediaWiki\\Rest\\Handler\\MediaFileHandler",
+		"services": [
+			"RepoGroup",
+			"PageStore"
+		]
+	},
+	{
+		"method": "PUT",
+		"path": "/v1/page/{title}",
+		"class": "MediaWiki\\Rest\\Handler\\UpdateHandler",
+		"services": [
+			"MainConfig",
+			"ContentHandlerFactory",
+			"TitleParser",
+			"TitleFormatter",
+			"RevisionStore"
+		]
+	},
+	{
+		"method": "POST",
+		"path": "/v1/page",
+		"class": "MediaWiki\\Rest\\Handler\\CreationHandler",
+		"services": [
+			"MainConfig",
+			"ContentHandlerFactory",
+			"TitleParser",
+			"TitleFormatter",
+			"RevisionStore"
+		]
+	}
+]

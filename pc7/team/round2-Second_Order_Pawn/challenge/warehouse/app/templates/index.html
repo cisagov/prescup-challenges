@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Second-Order Warehouse!</h1>
+<p class="lead">Where second-hand goods wait for their next destination.</p>
+
+<p>
+    The Second-Order Warehouse is your home for all of the goods moving in and out of the Second-Order Pawn and Auction network. Whether you're dropping off an item for listing, picking up a winning bid, or arranging secure shipment from our in-person pawn shop, the warehouse ensures every transfer is tracked, handled with care, and always on record.
+</p>
+<p>
+    If you're not familiar with Second Order yet, check out our <a href="http://pawn.secondorder.pccc">pawn and auction site</a> to see what's moving.
+</p>
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Sign Up!</h5>
+                <p class="card-text">New to Second Order?</p>
+                <a href="http://pawn.secondorder.pccc/register" class="btn btn-primary">Create your account!</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Already a member?</h5>
+                <p class="card-text">Welcome back!</p>
+                <a href="http://pawn.secondorder.pccc/login?next=http://warehouse.secondorder.pccc/dashboard" class="btn btn-secondary">Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

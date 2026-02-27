@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+
+{% block title %}Gameboard – {{ super() }}{% endblock %}
+
+{% block styles %}
+<style>
+    .mapbox-dot {
+        fill: #0f0;
+        stroke: #0f0;
+        fill-opacity: .6;
+        stroke-opacity: 1;
+        stroke-width: .25;
+    }
+
+    .cursor-pointer {
+        cursor: pointer;
+    }
+
+    a {
+        color: #41ad57;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    table {
+        display: table;
+        border-collapse: collapse;
+        box-sizing: border-box;
+        text-indent: initial;
+        unicode-bidi: isolate;
+        border-spacing: 2px;
+        border-color: gray;
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #ffffff;
+        background-color: #222222;
+    }
+
+    tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        unicode-bidi: isolate;
+        background-color: #222222;
+    }
+
+    .table th,
+    .table td {
+        padding: .75rem;
+        vertical-align: top;
+        border-top: 1px solid #444;
+        border-bottom: none;
+        color: #ffffff;
+    }
+
+    .table-striped>tbody>tr:nth-child(odd)>td, 
+    .table-striped>thead>tr:nth-child(even)>th {
+        background-color: #222222;
+    }
+
+    .table-striped>tbody>tr:nth-child(even)>td, 
+    .table-striped>thead>tr:nth-child(odd)>th {
+        background-color: #000000;
+    }
+
+    .status-table .table td {
+        background-color: #222222;
+    }
+
+    .callout {
+        position: absolute;
+        z-index: 10;
+        border-radius: .5rem;
+        max-width: 300px;
+        max-height: 300px;
+        background-color: #181866;
+        color:#ffffff;
+    }
+</style>
+{% endblock %}
+
+{% block header %}
+<header class="hero">
+    <div class="container-fluid px-4">
+        <div class="d-flex align-items-center justify-content-between gap-4">
+            <!-- left: game art + title -->
+            <div class="d-flex align-items-center gap-3">
+                <img src="{{ url_for('static', filename='themes/'+game['cover']) }}" alt="Track B" class="rounded"
+                    style="width:70px;height:auto;">
+                <h5 class="mb-0 fw-semibold text-success">{{ game['title'] }}</h5>
+            </div>
+
+            <!-- right: status table -->
+            <div class="small status-table">
+                <div class="mb-1">
+                    <span style="color:#999">Time Remaining:</span>
+                    <span class="text-success fw-semibold" id="time-remaining">7h 11m</span>
+                </div>
+                <table class="table mt-2 text-center">
+                    <tbody>
+                        <tr>
+                            <td>Score</td>
+                            <td>Session Time</td>
+                            <td>Completes</td>
+                            <td>Partials</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td id="session-time">00:48:52</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="d-flex justify-content-center align-items-center gap-2 text-success">
+                    <i class="bi bi-lightning-charge-fill" style="color: #41ad57"></i>
+                    connected
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+{% block sections %}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col m-4 p-4" style="max-width: 800px;">
+        <h3 class="text-center mb-2" style="font-weight: bold; color:#999;"> Select a circle on the gameboard below to start playing: </h3>
+        <div id="challenge-tip" role="tooltip" class="callout m-0 p-4" style="display:none;"><span class="title"></span><br><span
+                class="sub">Points: </span></div>
+        <svg viewBox="0 0 100 100">
+            <image width="100" height="100" href="{{ url_for('static', filename='themes/'+game['map']) }}"></image>
+            {% for c in game['challenges'] %}
+            <a href="/game/{{loop.index}}" data-ajax="challenge" class="mapbox-dot cursor-pointer" data-title="{{c['name']}}" data-points="{{ c['questions'] | sum(attribute='points') }}">
+                <circle fill="blue" r="{{c['point']['r']}}" cy="{{c['point']['y']}}" cx="{{c['point']['x']}}"></circle>
+            </a>
+            {% endfor %}
+        </svg>
+    </div>
+    <div class="challengebox col m-4 p-4" style="max-width: 800px;">
+
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $(function () {
+        $(document).on('click', 'a[data-ajax="challenge"]', function (e) {
+            e.preventDefault();
+
+            const $svg = $(this).closest('svg');
+            $svg.find('a[data-ajax="challenge"] > circle').attr('fill', 'blue');
+            $(this).find('circle').attr('fill', 'white');
+            $(this).attr('last-circle-color', 'white');
+
+            const url =
+                $(this).attr('href') ||
+                (this.href && this.href.baseVal) ||
+                this.getAttribute('xlink:href');
+
+            if (!url) return;
+
+            const $box = $('.challengebox').attr('aria-busy', 'true');
+            $box.html('<div class="text-center py-4"><div class="spinner-border" role="status"></div></div>');
+
+            $.get(url)
+                .done(function (html) { $box.html(html); })
+                .fail(function () { $box.html('<div class="alert alert-danger m-0">Failed to load content.</div>'); })
+                .always(function () { $box.attr('aria-busy', 'false'); });
+        });
+    });
+
+    $(document).on('mouseenter', 'svg a[data-ajax="challenge"]', function () {
+        const $a = $(this);
+        const title = $a.data('title') || '';
+        const points = $a.data('points') || '';
+
+        $a.attr("last-circle-color", $a.find('circle').attr('fill'))
+        $a.find('circle').attr('fill', "purple")
+
+        $('#challenge-tip .title').text(title);
+        $('#challenge-tip .sub').text(points ? `Points: ${points}` : '');
+        $('#challenge-tip').show();
+    });
+
+    $(document).on('mouseleave', 'svg a[data-ajax="challenge"]', function () {
+        $(this).find('circle').attr('fill', $(this).attr("last-circle-color"))
+        $('#challenge-tip').hide();
+    });
+
+    (() => {
+        'use strict';
+        const TARGET = document.getElementById('session-time');
+        const STEP = 12;
+        const LIMIT = 8 * 60 * 60;
+        const TICK_MS = 250;
+        var m;
+
+        const toSecs = s => ((m = /^(\d{1,2}):(\d{2}):(\d{2})$/.exec((s || '').trim())) ? (+m[1] * 3600 + +m[2] * 60 + +m[3]) : 0);
+        const fmt = n => `${String(Math.floor(n / 3600)).padStart(2, '0')}:${String(Math.floor(n / 60) % 60).padStart(2, '0')}:${String(n % 60).padStart(2, '0')}`;
+
+        let secs = toSecs(TARGET?.textContent) || 0;
+        if (!TARGET) return;
+
+        setInterval(() => {
+            secs = (secs + STEP) % LIMIT;
+            TARGET.textContent = fmt(secs);
+        }, TICK_MS);
+    })();
+</script>
+
+<script>
+    (() => {
+        'use strict';
+        const TARGET = document.getElementById('time-remaining');
+        const STEP = 12;
+        const LIMIT = 8 * 60 * 60;
+        const TICK_MS = 250;
+        var m;
+
+        const toSecs = s => ((m = /^(\d{1,2}):(\d{2}):(\d{2})$/.exec((s || '').trim())) ? (+m[1] * 3600 + +m[2] * 60 + +m[3]) : LIMIT);
+        const fmt = n => `${String(Math.floor(n / 3600)).padStart(2, '0')}:${String(Math.floor(n / 60) % 60).padStart(2, '0')}:${String(n % 60).padStart(2, '0')}`;
+
+        let secs = toSecs(TARGET?.textContent) || LIMIT;
+        if (!TARGET) return;
+
+        setInterval(() => {
+            secs -= STEP;
+            if (secs <= 0) secs = LIMIT;
+            TARGET.textContent = fmt(secs);
+        }, TICK_MS);
+    })();
+</script>
+{% endblock %}

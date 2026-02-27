@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Cancel Auction: {{ auction.item['name'] }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+
+            <!-- Auction Summary -->
+            <div class="mb-4">
+                <h5 class="mb-1">Auction Item</h5>
+                <div class="border rounded p-3 bg-light">
+                    <strong>{{ auction.item['name'] }}</strong><br>
+                    <span class="text-muted small">{{ auction.item['description'] }}</span><br>
+                    {% set top_bid = auction.bids | sort(attribute='bid', reverse=True) | first %}
+                    <span class="text-muted small">
+                        Current top bid: ${{ '%.2f'|format(top_bid.bid if top_bid else auction.starting_bid) }}
+                    </span>
+                </div>
+            </div>
+
+            <!-- Cancellation Request Form -->
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h4 class="card-title mb-3">Request Auction Cancellation</h4>
+                    <p class="text-muted">
+                        Cold feet? We get it! However, to ensure fairness to all participants, cancellation requests are subject to admin review. Provide a short explanation below.
+                    </p>
+                    <form method="post">
+                        {{ form.hidden_tag() }}
+
+                        <div class="mb-3">
+                            {{ form.reason.label(class="form-label") }}
+                            {{ form.reason(class="form-control", placeholder="Brief explanation", rows=5) }}
+                            {% for error in form.reason.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="text-end">
+                            {{ form.submit(class="btn btn-warning") }}
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

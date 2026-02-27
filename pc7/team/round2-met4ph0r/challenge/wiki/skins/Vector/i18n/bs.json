@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"CERminator",
+			"DzWiki",
+			"Edinwiki",
+			"KWiki",
+			"Srdjan m",
+			"Srđan"
+		]
+	},
+	"vector-skin-desc": "Moderna verzija MonoKnjige s novijim izgledom i mnogim poboljšanjima u pogledu upotrebljivosti",
+	"prefs-vector-enable-vector-1-label": "Koristi stari Vector",
+	"prefs-vector-enable-vector-1-help": "Kroz narednih nekoliko godina postepeno ćemo ažurirati temu Vector. Stari Vector pružit će Vam mogućnost da koristite raniju verziju Vectora (zamrznutu u decembru 2019). Za detalje o ažuriranjima, posjetite našu [[mw:Reading/Web/Desktop_Improvements|projektnu stranicu]].",
+	"vector-opt-out": "Prebaci na stari izgled",
+	"vector-opt-out-tooltip": "Promijenite postavke da biste vratili stari izgled teme (stari Vector)",
+	"vector-languages": "Jezici",
+	"vector-language-button-label": "{{PLURAL:$1|$1 jezik|$1 jezika}}",
+	"vector-language-redirect-to-top": "Linkovi na druge jezike nalaze se u gornjem desnom uglu stranice pored naslova članka. [[#p-lang-btn|Idi na vrh]].",
+	"vector-action-addsection": "Dodaj temu",
+	"vector-action-delete": "Izbriši",
+	"vector-action-move": "Premjesti",
+	"vector-action-protect": "Zaštiti",
+	"vector-action-undelete": "Vrati izbrisano",
+	"vector-action-unprotect": "Promijeni zaštitu",
+	"vector-view-create": "Napravi",
+	"vector-view-edit": "Uredi",
+	"vector-view-history": "Historija",
+	"vector-view-view": "Čitaj",
+	"vector-view-viewsource": "Pogledaj izvor",
+	"vector-jumptonavigation": "Idi na navigaciju",
+	"vector-jumptosearch": "Idi na pretragu",
+	"vector-more-actions": "Više",
+	"vector-search-loader": "Učitavam prijedloge pretrage",
+	"vector-searchsuggest-containing": "Pretraži stranice koje sadrže <strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong>",
+	"vector-toc-heading": "Sadržaj",
+	"vector-toc-beginning": "Početak",
+	"vector-anon-user-menu-pages-learn": "detaljnije",
+	"vector-main-menu-tooltip": "Glavni meni",
+	"tooltip-vector-anon-user-menu-title": "Više opcija"
+}

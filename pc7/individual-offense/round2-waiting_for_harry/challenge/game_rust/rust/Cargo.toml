@@ -1,0 +1,19 @@
+[package]
+name = "rust"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+rand = "0.9.2"
+
+[dependencies.godot]
+git = "https://github.com/godot-rust/gdext"
+branch = "master"
+features = ["api-custom", "experimental-wasm", "lazy-function-tables"]
+
+
+[features]
+nothreads = ["godot/experimental-wasm-nothreads"]

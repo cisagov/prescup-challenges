@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Ocean’s 0x0D — Cage Terminal</title>
+  <link rel="stylesheet" href="/static/styles.css"/>
+  <style>
+    .terminal-wrap { max-width: 1100px; margin: 24px auto; padding: 16px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .card { border: 1px solid rgba(255,255,255,.15); border-radius: 14px; padding: 14px; background: rgba(0,0,0,.35); }
+    .card h2 { margin: 0 0 10px; letter-spacing: .12em; font-size: 14px; opacity: .9; }
+    .row { display:flex; gap:10px; align-items:center; }
+    input, button { font: inherit; padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,.2); background: rgba(0,0,0,.35); color: #e8f6ff; }
+    button { cursor: pointer; }
+    pre { white-space: pre-wrap; word-break: break-word; padding: 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,.12); background: rgba(0,0,0,.5); }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  </style>
+</head>
+<body>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">CAGE TERMINAL</div>
+      <div class="subtitle">PIT BOSS CONSOLE • VAULT OPERATIONS</div>
+    </div>
+    <div class="status">
+      <a href="/static/Operators_Manual.md" class="manual-link" style="color: inherit; text-decoration: none; opacity:.85">🔽 Download OPERATORS MANUAL</a>
+      <a href="/dashboard" class="manual-link" style="color: inherit; text-decoration: none; opacity:.85;"> 🧱 SOC Wall</a>
+    </div>
+  </header>
+
+  <main class="terminal-wrap">
+    <div class="grid">
+      <section class="card">
+        <h2>SHIFT SYNC</h2>
+
+        <div class="row">
+          <input
+            id="syncBucket"
+            class="mono"
+            placeholder="bucket"
+            style="width: 140px;"
+          />
+
+          <input
+            id="syncCode"
+            class="mono"
+            placeholder="16-hex shift sync"
+            style="flex:1"
+          />
+        </div>
+
+        <div class="row">
+          <button id="syncBtn">SUBMIT</button>
+
+          <div id="bucketCountdown" class="bucket-pill">
+            Next bucket in <span id="bucketTimer">--</span>s
+          </div>
+        </div>
+
+        <p style="opacity:.75; margin-top:8px;">
+          Align terminal rhythm with the vault controller.
+        </p>
+      </section>
+    </div>
+
+
+      <section class="card">
+        <h2>RECEIPT PRINTER</h2>
+        <div class="row">
+          <button id="receiptBtn">PULL LATEST SLIP</button>
+        </div>
+        <pre id="receiptOut" class="mono">No slips loaded.</pre>
+      </section>
+
+      <section class="card">
+        <h2>FIRMWARE DROP (MAINTENANCE)</h2>
+        <div class="row">
+          <button id="fwCatalogBtn">LIST RELEASES</button>
+        </div>
+        <pre id="fwCatalogOut" class="mono">No catalog loaded.</pre>
+        <div style="height:10px"></div>
+        <div class="row">
+          <input id="fwFile" type="file" />
+          <button id="fwUploadBtn">UPLOAD</button>
+        </div>
+        <pre id="fwUploadOut" class="mono">No upload attempted.</pre>
+      </section>
+
+      <section class="card">
+        <h2>LIVE STATE</h2>
+        <div class="row">
+          <button id="stateBtn">REFRESH</button>
+        </div>
+        <pre id="stateOut" class="mono">No state loaded.</pre>
+      </section>
+    </div>
+
+    <div style="margin-top:14px; opacity:.7;">
+      <span class="mono">DISCLAIMER:</span> For use by Authorized Personnel only. 
+    </div>
+  </main>
+
+  <script src="/static/ops.js"></script>
+</body>
+</html>
+

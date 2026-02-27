@@ -1,0 +1,49 @@
+@import 'mediawiki.mixins.less';
+@import '../../../minerva.less/minerva.variables.less';
+@import '../../../minerva.less/minerva.mixins.less';
+
+// Thumbnails
+//
+// Thumbnail images should be rendered within a thumb class
+//
+// Markup:
+// <div class="content">
+//   <div class="thumb"><img src="images/arrow-left.png"></div>
+// </div>
+.content {
+	figure,
+	.thumb {
+		margin: 0.6em 0;
+
+		// Linker.php
+		.thumbinner {
+			margin: 0 auto;
+			// !important is needed because of Bug T87198 for example
+			max-width: 100% !important;
+		}
+	}
+
+	figcaption,
+	.thumbcaption {
+		margin: 0.5em 0 0;
+		font-size: @font-size-minerva-smallest;
+		line-height: 1.5;
+		padding: 0 !important;
+		color: @grayMediumDark;
+	}
+
+	.thumbcaption {
+		width: auto !important;
+	}
+
+	// Parsoid class name is mw-image-border (T198534) and parser (PHP) class name is thumbborder
+	.mw-image-border,
+	.thumbborder {
+		border: 1px solid @colorGray12;
+	}
+
+	// Hide the image magnification icon normally displayed in image captions
+	.magnify {
+		display: none;
+	}
+}

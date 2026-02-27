@@ -1,0 +1,190 @@
+/*
+A file for css that corrects known rendering issues on known Wikimedia wikis.
+
+the following definitions exist to deal with certain inline styles
+present in wikitext.
+This file should not need to exist
+It will become redundant when the following RFC is resolved:
+https://www.mediawiki.org/wiki/Requests_for_comment/Allow_styling_in_templates
+
+FIXME: Review all of these hacks to see if they still apply.
+*/
+@import '../../../minerva.less/minerva.variables.less';
+@import '../../../minerva.less/minerva.mixins.less';
+@import 'templates/ambox.less';
+@import 'templates/reflist.less';
+
+.collapsible td {
+	width: auto !important;
+}
+
+.content {
+	.vertical-navbox,
+	.navbox {
+		display: none;
+	}
+
+	// stylelint-disable selector-max-id
+	/* Hide cleanup templates by default to non-javascript users as these stop them from reading the article itself
+	 * Edit page notices */
+	.action-edit .fmbox,
+	/* Talk page informational boxes */
+	.tmbox,
+	#coordinates,
+	/* Hide article badges, clean-up notices, stub notices, and navigation boxes */
+	.topicon {
+		// It's important as some of these are tables which become display: table on larger screens
+		display: none !important;
+	}
+	// stylelint-enable selector-max-id
+
+	table,
+	.infobox {
+		// Unfloat tables and infoboxes:;
+		// A lot of templates introduce floating and horizontal margins inline styles
+		float: none !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	.infobox {
+		font-size: 90%;
+		position: relative;
+		border: 1px solid @colorGray14;
+		margin-bottom: 2em;
+		background-color: @colorGray15;
+		display: flex;
+		flex: 1 1 100%;
+		flex-flow: column nowrap;
+		width: 100% !important;
+		max-width: 100% !important;
+
+		caption {
+			padding: 10px 10px 0;
+			text-align: center;
+		}
+
+		th, td {
+			vertical-align: top;
+			border: 0;
+			border-bottom: 1px solid @colorGray14;
+			padding: 7px 10px;
+		}
+
+		tbody > tr > td,
+		tbody > tr > th {
+			flex: 1 0;
+		}
+
+		td:only-child,
+		th:only-child {
+			width: 100%;
+		}
+
+		tr:last-child th,
+		tr:last-child td {
+			border: 0;
+		}
+
+		& > tbody,
+		& > caption {
+			display: flex;
+			flex-flow: column nowrap;
+		}
+
+		& > tbody > tr {
+			min-width: 100%;
+			display: flex;
+			flex-flow: row nowrap;
+		}
+	}
+
+	// Hack to assign info boxes properly when using RTL languages on LTR wiki
+	.mw-content-ltr .infobox {
+		/* @noflip */
+		text-align: left;
+	}
+
+	// Hack to assign info boxes properly when using LTR languages on RTL wiki
+	.mw-content-rtl .infobox {
+		/* @noflip */
+		text-align: right;
+	}
+}
+
+// FIXME: Remove when filetoc is stripped from file pages a la table of contents (toc)
+#filetoc { // stylelint-disable-line selector-max-id
+	display: none;
+}
+
+/* T36878: Set an optimal width for a column.
+ * Makes sure that on small screens column-count is only honored if column-width hint is not violated.
+ * https://developer.mozilla.org/en-US/docs/CSS/column-width
+ */
+.references-column-count,
+.column-count {
+	-moz-column-width: 35em;
+	-webkit-column-width: 35em;
+	column-width: 35em;
+}
+
+// When JavaScript is disabled clarify to the user which reference they clicked on
+.references li:target {
+	background-color: @background-color-primary;
+}
+
+.hatnote,
+.dablink,
+.rellink {
+	padding: 5px 7px;
+	color: @colorGray5;
+	font-size: @font-size-minerva-smallest;
+	background-color: @colorGray15;
+	margin-bottom: 1px;
+	overflow: hidden;
+
+	a {
+		color: @colorProgressive;
+	}
+}
+
+@media all and ( min-width: @width-breakpoint-tablet ) {
+	// When in the HTML these should be revealed at tablet resolution (T172078)
+	.content {
+		.vertical-navbox,
+		.navbox {
+			display: inherit;
+		}
+	}
+}
+
+// Hacks to render galleries and multicol tables better on mobile
+@media all and ( max-width: @width-breakpoint-tablet ) {
+	.content {
+		table {
+			// Make {{col-beg}}, {{col-break}}, and {{col-end}} templates display single column tables
+			&.multicol {
+				> tr > td,
+				> tbody > tr > td {
+					display: block !important;
+					width: auto !important;
+				}
+			}
+		}
+		// Deal with Template:Multiple_image.  T38030 and T148505
+		.thumb .thumbinner {
+			.flex-display( flex );
+			justify-content: center;
+			flex-wrap: wrap;
+			align-content: flex-start;
+			// avoid image child overflowing the container (T200518)
+			// stylelint-disable-next-line declaration-block-no-redundant-longhand-properties
+			flex-direction: column;
+
+			> .thumbcaption {
+				.flex( 1, 0, 100% );
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Awangba Mangang",
+			"꯴꯰꯴"
+		]
+	},
+	"vector-language-button-label": "{{PLURAL:$1|$1 ꯂꯣꯟ|$1 ꯂꯣꯟꯁꯤꯡ}}",
+	"vector-action-addsection": "ꯅꯩꯅꯕ ꯍꯤꯔꯝ ꯍꯥꯞꯆꯤꯟꯂꯨ",
+	"vector-action-delete": "ꯀꯛꯊꯠꯄꯥ",
+	"vector-action-move": "ꯂꯦꯡꯍꯟꯕꯥ",
+	"vector-action-protect": "ꯉꯥꯛꯊꯣꯛꯂꯕꯥ",
+	"vector-view-create": "ꯁꯥꯕꯥ",
+	"vector-view-edit": "ꯁꯦꯝꯒꯠꯄꯥ",
+	"vector-view-history": "ꯄꯨꯋꯥꯔꯤ ꯎꯠꯂꯨ",
+	"vector-view-view": "ꯄꯥꯑꯣ",
+	"vector-more-actions": "ꯋꯥꯠꯂꯤ",
+	"vector-searchsuggest-containing": "ꯂꯃꯥꯏꯁꯤꯡ ꯑꯁꯤ ꯌꯥꯎꯕ ꯊꯤꯕꯥ <strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong>"
+}

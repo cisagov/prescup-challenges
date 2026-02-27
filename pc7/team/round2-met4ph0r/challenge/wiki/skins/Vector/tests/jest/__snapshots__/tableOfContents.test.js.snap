@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table of contents renders when \`vector-is-collapse-sections-enabled\` is false 1`] = `
+"<nav id=\\"mw-panel-toc\\" class=\\"sidebar-toc\\" role=\\"navigation\\" aria-labelledby=\\"sidebar-toc-label\\" data-event-name=\\"ui.sidebar-toc\\">
+	<div id=\\"sidebar-toc-label\\" class=\\"sidebar-toc-header\\">
+		<p class=\\"sidebar-toc-title\\">
+		Contents
+		<button class=\\"vector-toc-uncollapse-button\\"></button>
+		<button class=\\"vector-toc-collapse-button\\"></button>
+		</p>
+	</div>
+	<ul class=\\"sidebar-toc-contents\\" id=\\"mw-panel-toc-list\\">
+		<li id=\\"toc-mw-content-text\\" class=\\"sidebar-toc-list-item sidebar-toc-level-1\\">
+			<a href=\\"#top-page\\" class=\\"sidebar-toc-link\\">
+				<div class=\\"sidebar-toc-text\\">Beginning</div>
+			</a>
+		</li>
+<li id=\\"toc-foo\\" class=\\"sidebar-toc-list-item sidebar-toc-level-1 sidebar-toc-list-item-expanded\\">
+	<a class=\\"sidebar-toc-link\\" href=\\"#foo\\">
+		<div class=\\"sidebar-toc-text\\">
+		<span class=\\"sidebar-toc-numb\\">1</span>foo</div>
+	</a>
+	<ul id=\\"toc-foo-sublist\\" class=\\"sidebar-toc-list\\">
+	</ul>
+</li>
+<li id=\\"toc-bar\\" class=\\"sidebar-toc-list-item sidebar-toc-level-1 sidebar-toc-list-item-expanded\\">
+	<a class=\\"sidebar-toc-link\\" href=\\"#bar\\">
+		<div class=\\"sidebar-toc-text\\">
+		<span class=\\"sidebar-toc-numb\\">2</span>bar</div>
+	</a>
+		<button aria-controls=\\"toc-bar-sublist\\" class=\\"mw-ui-icon mw-ui-icon-wikimedia-expand mw-ui-icon-small sidebar-toc-toggle\\" aria-expanded=\\"true\\">
+			Toggle bar subsection
+		</button>
+	<ul id=\\"toc-bar-sublist\\" class=\\"sidebar-toc-list\\">
+<li id=\\"toc-baz\\" class=\\"sidebar-toc-list-item sidebar-toc-level-2\\">
+	<a class=\\"sidebar-toc-link\\" href=\\"#baz\\">
+		<div class=\\"sidebar-toc-text\\">
+		<span class=\\"sidebar-toc-numb\\">2.1</span>baz</div>
+	</a>
+	<ul id=\\"toc-baz-sublist\\" class=\\"sidebar-toc-list\\">
+<li id=\\"toc-qux\\" class=\\"sidebar-toc-list-item sidebar-toc-level-3\\">
+	<a class=\\"sidebar-toc-link\\" href=\\"#qux\\">
+		<div class=\\"sidebar-toc-text\\">
+		<span class=\\"sidebar-toc-numb\\">2.1.1</span>qux</div>
+	</a>
+	<ul id=\\"toc-qux-sublist\\" class=\\"sidebar-toc-list\\">
+	</ul>
+</li>
+	</ul>
+</li>
+	</ul>
+</li>
+<li id=\\"toc-quux\\" class=\\"sidebar-toc-list-item sidebar-toc-level-1 sidebar-toc-list-item-expanded\\">
+	<a class=\\"sidebar-toc-link\\" href=\\"#quux\\">
+		<div class=\\"sidebar-toc-text\\">
+		<span class=\\"sidebar-toc-numb\\">3</span>quux</div>
+	</a>
+	<ul id=\\"toc-quux-sublist\\" class=\\"sidebar-toc-list\\">
+	</ul>
+</li>
+	</ul>
+</nav>
+"
+`;
+
+exports[`Table of contents renders when \`vector-is-collapse-sections-enabled\` is true 1`] = `
+"<nav id=\\"mw-panel-toc\\" class=\\"sidebar-toc\\" role=\\"navigation\\" aria-labelledby=\\"sidebar-toc-label\\" data-event-name=\\"ui.sidebar-toc\\">
+	<div id=\\"sidebar-toc-label\\" class=\\"sidebar-toc-header\\">
+		<p class=\\"sidebar-toc-title\\">
+		Contents
+		<button class=\\"vector-toc-uncollapse-button\\"></button>
+		<button class=\\"vector-toc-collapse-button\\"></button>
+		</p>
+	</div>
+	<ul class=\\"sidebar-toc-contents\\" id=\\"mw-panel-toc-list\\">
+		<li id=\\"toc-mw-content-text\\" class=\\"sidebar-toc-list-item sidebar-toc-level-1\\">
+			<a href=\\"#top-page\\" class=\\"sidebar-toc-link\\">
+				<div class=\\"sidebar-toc-text\\">Beginning</div>
+			</a>
+		</li>
+<li id=\\"toc-foo\\" class=\\"sidebar-toc-list-item sidebar-toc-level-1\\">
+	<a class=\\"sidebar-toc-link\\" href=\\"#foo\\">
+		<div class=\\"sidebar-toc-text\\">
+		<span class=\\"sidebar-toc-numb\\">1</span>foo</div>
+	</a>
+	<ul id=\\"toc-foo-sublist\\" class=\\"sidebar-toc-list\\">
+	</ul>
+</li>
+<li id=\\"toc-bar\\" class=\\"sidebar-toc-list-item sidebar-toc-level-1\\">
+	<a class=\\"sidebar-toc-link\\" href=\\"#bar\\">
+		<div class=\\"sidebar-toc-text\\">
+		<span class=\\"sidebar-toc-numb\\">2</span>bar</div>
+	</a>
+		<button aria-controls=\\"toc-bar-sublist\\" class=\\"mw-ui-icon mw-ui-icon-wikimedia-expand mw-ui-icon-small sidebar-toc-toggle\\" aria-expanded=\\"false\\">
+			Toggle bar subsection
+		</button>
+	<ul id=\\"toc-bar-sublist\\" class=\\"sidebar-toc-list\\">
+<li id=\\"toc-baz\\" class=\\"sidebar-toc-list-item sidebar-toc-level-2\\">
+	<a class=\\"sidebar-toc-link\\" href=\\"#baz\\">
+		<div class=\\"sidebar-toc-text\\">
+		<span class=\\"sidebar-toc-numb\\">2.1</span>baz</div>
+	</a>
+	<ul id=\\"toc-baz-sublist\\" class=\\"sidebar-toc-list\\">
+<li id=\\"toc-qux\\" class=\\"sidebar-toc-list-item sidebar-toc-level-3\\">
+	<a class=\\"sidebar-toc-link\\" href=\\"#qux\\">
+		<div class=\\"sidebar-toc-text\\">
+		<span class=\\"sidebar-toc-numb\\">2.1.1</span>qux</div>
+	</a>
+	<ul id=\\"toc-qux-sublist\\" class=\\"sidebar-toc-list\\">
+	</ul>
+</li>
+	</ul>
+</li>
+	</ul>
+</li>
+<li id=\\"toc-quux\\" class=\\"sidebar-toc-list-item sidebar-toc-level-1\\">
+	<a class=\\"sidebar-toc-link\\" href=\\"#quux\\">
+		<div class=\\"sidebar-toc-text\\">
+		<span class=\\"sidebar-toc-numb\\">3</span>quux</div>
+	</a>
+	<ul id=\\"toc-quux-sublist\\" class=\\"sidebar-toc-list\\">
+	</ul>
+</li>
+	</ul>
+</nav>
+"
+`;

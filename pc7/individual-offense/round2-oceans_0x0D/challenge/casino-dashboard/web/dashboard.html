@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Security Operations Center (SOC) WALL (Watch, Analyze, Log, Learn)</title>
+  <link rel="stylesheet" href="/static/styles.css"/>
+</head>
+<body>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">OCEAN’S 0x0D</div>
+      <div class="subtitle">CASINO SURVEILLANCE • VAULT OPERATIONS</div>
+    </div>
+    <div class="status">
+      <div id="degraded" class="badge badge-warn hidden">DEGRADED: CONTROL LINK DOWN</div>
+      <div id="lockdown" class="badge badge-danger hidden">LOCKDOWN ACTIVE</div>
+      <a href="/terminal" class="manual-link">💻 CAGE TERMINAL</a>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="panel alert-panel">
+      <h2>ALERT LEVEL</h2>
+      <div class="alert-meter">
+        <div class="alert-ring"></div>
+        <div class="alert-value">
+          <div id="alertLevel" class="big">0</div>
+          <div id="alertState" class="small">NORMAL</div>
+          <div id="alertScore" class="tiny">score: 0.00</div>
+        </div>
+      </div>
+      <div class="hint"><span class="dot"></span><span>Quiet hands survive the cameras.</span></div>
+    </section>
+
+    <section class="panel tokens-panel">
+      <h2>HEIST PROGRESS</h2>
+      <div class="tokens">
+        <div class="token-row">
+          <div class="token-label">TOKEN 1 • HOUSE RHYTHM</div>
+          <div class="toggle" id="t1Toggle"><div class="toggle-track"></div><div class="toggle-knob"></div></div>
+        </div>
+        <div class="token-row">
+          <div class="token-label">TOKEN 2 • BURNED BLUEPRINT</div>
+          <div class="toggle" id="t2Toggle"><div class="toggle-track"></div><div class="toggle-knob"></div></div>
+        </div>
+        <div class="token-row">
+          <div class="token-label">TOKEN 3 • GHOST IN THE STACK</div>
+          <div class="toggle" id="t3Toggle"><div class="toggle-track"></div><div class="toggle-knob"></div></div>
+        </div>
+        <div class="token-row">
+          <div class="token-label">TOKEN 4 • FALSE FLOOR</div>
+          <div class="toggle" id="t4Toggle"><div class="toggle-track"></div><div class="toggle-knob"></div></div>
+        </div>
+        <div class="token-row dim">
+          <div class="token-label">CASINO COMPROMISED • STATUS</div>
+          <div class="toggle locked" id="casinoToggle"><div class="toggle-track"></div><div class="toggle-knob"></div></div>
+        </div>
+      </div>
+
+      <div class="token-reveal">
+        <div class="reveal-title">AUDIT SLIP WINDOW</div>
+        <div class="reveal-token" id="revealTokenValue">PCCC{0D-██...}</div>
+        <div class="reveal-foot">Slips burn fast. Don’t blink.</div>
+      </div>
+    </section>
+
+    <section class="panel feed-panel">
+      <h2>INCIDENT FEED</h2>
+      <div id="feed" class="feed"></div>
+    </section>
+  </main>
+
+  <div id="token1Overlay" class="overlay ghost hidden">
+    <div class="frame">
+      <div class="title">HOUSE RHYTHM</div>
+      <div class="sub">Cage synchronization confirmed</div>
+      <div class="token" id="t1TokenValue">PCCC{0D-01██████████}</div>
+      <div class="foot">The house always keeps time.</div>
+    </div>
+  </div>
+
+  <div id="token2Overlay" class="overlay floor hidden">
+   <div class="frame">
+     <div class="title">BURNED BLUEPRINT</div>
+     <div class="sub">Installer trust boundary collapsed</div>
+     <div class="token" id="t2TokenValue">PCCC{0D-02██████████}</div>
+     <div class="foot">Some plans are meant to fail.</div>
+    </div>
+  </div>
+
+  <div id="ghostOverlay" class="overlay ghost hidden">
+    <div class="frame">
+      <div class="title">GHOST MODE</div>
+      <div class="sub">Stack integrity compromised • Memory exfil confirmed</div>
+      <div class="token" id="t3TokenValue">PCCC{0D-03██████████}</div>
+      <div class="foot">If you can read this, so can the cameras.</div>
+    </div>
+  </div>
+
+  <div id="floorOverlay" class="overlay floor hidden">
+    <div class="frame">
+      <div class="title">FALSE FLOOR</div>
+      <div class="sub">Subfloor latch release • Cage route exposed</div>
+      <div class="token" id="t4TokenValue">PCCC{0D-04██████████}</div>
+      <div class="foot">The house never built a door it didn’t alarm.</div>
+    </div>
+  </div>
+
+  <!-- FINAL FBI-STYLE SEIZURE OVERLAY -->
+<div id="seizureOverlay" class="overlay seizure hidden">
+  <div class="frame seizure-frame">
+    <div class="seizure-header">
+      <div class="seal">FEDERAL BUREAU<br/>OF INVESTIGATION</div>
+      <div class="seizure-title">ASSET SEIZED</div>
+    </div>
+
+    <div class="seizure-body">
+      <p>
+        This system has been identified as part of an
+        <strong>unauthorized intrusion simulation</strong>.
+      </p>
+      <p>
+        Network activity has been logged.<br/>
+        Source IP correlation: <strong>ACTIVE</strong>
+      </p>
+      <p class="seizure-warn">
+        Do not attempt to disconnect. We've been watching you from the start.
+      </p>
+    </div>
+
+    <div class="seizure-foot">
+      Thanks for playing. This concludes OCEANS 13!— akuma
+    </div>
+  </div>
+</div>
+
+
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>

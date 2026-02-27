@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Mahuton"
+		]
+	},
+	"vector-language-button-label": "{{PLURAL:$1|$1 gbé|$1 gbé lɛ}}",
+	"vector-action-addsection": "Gɔ́ xóta yɔ́yɔ́ ɖévo ná",
+	"vector-action-move": "Ɖyɔ nyikɔ tɔn",
+	"vector-view-create": "Blɔ",
+	"vector-view-edit": "Wlǎn nú",
+	"vector-view-history": "Yín nukún ɖo ɖiɖyɔ tɛnmɛ tɛnmɛ wémá ɔ tɔn lɛ jí",
+	"vector-view-view": "Xá",
+	"vector-more-actions": "Susu"
+}

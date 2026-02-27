@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ernác"
+		]
+	},
+	"mobile-frontend-editor-edit": "Тюрлендир",
+	"mobile-frontend-history": "Бу бетни тюрлениу тарихин кёр",
+	"mobile-frontend-home-button": "Баш бет",
+	"mobile-frontend-language-article-heading": "Тил",
+	"mobile-frontend-main-menu-button-tooltip": "Баш менюну ач",
+	"mobile-frontend-main-menu-login": "Кириу",
+	"mobile-frontend-main-menu-logout": "Чыгъыу",
+	"mobile-frontend-main-menu-nearby": "Джуўукъда",
+	"mobile-frontend-main-menu-settings": "Джарашдырыўла",
+	"mobile-frontend-main-menu-watchlist": "Кёздеги тизме",
+	"mobile-frontend-meta-data-issues": "Бу статьяны джетмегенликлери барды",
+	"mobile-frontend-meta-data-issues-header": "Бу статьяны игилендир",
+	"mobile-frontend-pageaction-edit-tooltip": "Бетни алчы бёлюмюн тюрлендир.",
+	"mobile-frontend-placeholder": "{{SITENAME}} изле",
+	"mobile-frontend-random-button": "Рандомлу"
+}

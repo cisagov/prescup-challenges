@@ -1,0 +1,35 @@
+.minerva__tab-container {
+	white-space: nowrap;
+	overflow-x: auto;
+
+	.minerva__tab {
+		font-size: @taglineFontSize;
+		margin: 0 10px 0 0;
+		color: @colorGray5;
+		font-weight: bold;
+		padding-bottom: 6px;
+		display: inline-block;
+
+		&:visited,
+		&:hover,
+		&:active {
+			text-decoration: none;
+		}
+
+		&.new,
+		&.new:visited,
+		&.new:hover,
+		&.new:active {
+			color: @color-link-new;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		// note core doesn't use BEM.
+		&.selected {
+			border-bottom: (@pageActionBorder * 2) solid @colorGray5;
+		}
+	}
+}

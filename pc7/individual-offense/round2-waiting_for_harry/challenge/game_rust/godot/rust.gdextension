@@ -1,0 +1,14 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = 4.1
+reloadable = true
+
+[libraries]
+linux.debug.x86_64 =     "res://../rust/target/x86_64-unknown-linux-gnu/debug/librust.so"
+linux.release.x86_64 =   "res://../rust/target/x86_64-unknown-linux-gnu/release/librust.so"
+windows.debug.x86_64 =   "res://../rust/target/x86_64-pc-windows-gnu/debug/rust.dll"
+windows.release.x86_64 = "res://../rust/target/x86_64-pc-windows-gnu/release/rust.dll"
+web.debug.threads.wasm32 = "res://../rust/target/wasm32-unknown-emscripten/debug/rust.threads.wasm"
+web.release.threads.wasm32 = "res://../rust/target/wasm32-unknown-emscripten/release/rust.threads.wasm"
+web.debug.wasm32 = "res://../rust/target/wasm32-unknown-emscripten/debug/rust.nothreads.wasm"
+web.release.wasm32 = "res://../rust/target/wasm32-unknown-emscripten/release/rust.nothreads.wasm"

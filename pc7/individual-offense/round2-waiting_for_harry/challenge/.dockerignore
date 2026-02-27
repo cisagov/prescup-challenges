@@ -1,0 +1,12 @@
+venv
+solution
+harry
+keys
+listener
+server/target
+server/.cargo
+**/*.sh
+!server.sh
+**/*.tar.gz
+game_rust/godot/.godot
+game_rust/rust/target

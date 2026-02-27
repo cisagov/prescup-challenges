@@ -1,0 +1,12 @@
+{{!-
+    Content Subheader - Placed below the content header on all pages.
+    Contains the indicators (if the language button is beside the title)
+    qnd tagline, which is only rendered on article page.
+}}
+<div class="mw-body-subheader">
+    {{#is-language-in-content-top}}
+        {{>Indicators}}
+    {{/is-language-in-content-top}}
+
+    {{#is-article}}<div id="siteSub" class="noprint">{{msg-tagline}}</div>{{/is-article}}
+</div>

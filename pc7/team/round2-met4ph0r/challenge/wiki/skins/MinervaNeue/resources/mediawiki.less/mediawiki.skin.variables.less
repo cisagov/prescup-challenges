@@ -1,0 +1,36 @@
+/**
+ * ###IMPORTANT:##
+ * If editing this file, please also edit the respective file in the Vector skin.
+ * ####
+ *
+ * This file is a LESS @import match for 'mediawiki.skin.variables.less'
+ * when MinervaNeue is the active skin.
+ *
+ * Please also note, that both current Wikimedia Design Style Guide based skins,
+ * MinervaNeue and Vector 2022 are using the same variable values respectively in their
+ * repositories.
+ */
+@import 'mediawiki.skin.defaults.less';
+
+// == Colors ==
+@color-link: #36c;
+@color-link--visited: #795cb2;
+@color-link--active: #faa700;
+// Link colors for new or missing articles, also known as “Red links”.
+// https://www.wikidata.org/wiki/Q13417974#sitelinks-wikipedia
+@color-link-new: #d33;
+@color-link-new--visited: #a55858;
+// Link colors for a power user feature to highlight links to other projects.
+// In Vector 2022 we unify these colors by default for simpler orientation by average users.
+// It's still possible to overwrite the styles per user.
+@color-link-external: #36c;
+@color-link-external--visited: #795cb2;
+@color-link-external--active: #faa700;
+
+// Body content uses the user setting in browser / the system default sans-serif font:
+// Arial on Windows, Roboto on Android.
+// FIXME: Use WikimediaUI Base's OS specific default sans-serif fonts.
+@font-family-sans: sans-serif;
+
+// Matches WikimediaUI Base and OOUI/WikimediaUI theme.
+@border-radius-base: 2px;

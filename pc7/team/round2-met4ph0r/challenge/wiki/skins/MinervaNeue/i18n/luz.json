@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bluehamed",
+			"علی ساکی لرستانی"
+		]
+	},
+	"mobile-frontend-editor-edit": "ئیصلاح",
+	"mobile-frontend-home-button": "مال",
+	"mobile-frontend-language-article-heading": "ھنن د زوٙوٙنل دیە",
+	"mobile-frontend-main-menu-button-tooltip": "ڤا کردن منۉ أصلی",
+	"mobile-frontend-main-menu-login": "ئۉیدأن ڤە سیستم",
+	"mobile-frontend-main-menu-nearby": "نأزیک",
+	"mobile-frontend-main-menu-settings": "تأنظیمل",
+	"mobile-frontend-main-menu-watchlist": "فهرست پیگیری یل",
+	"mobile-frontend-pageaction-edit-tooltip": "ئیصلاح بأخش سرب د ئی بألگە",
+	"mobile-frontend-placeholder": "جۉستأن {{SITENAME}}",
+	"mobile-frontend-random-button": "شانسٱکی"
+}

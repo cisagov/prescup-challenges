@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8"/>
+	<title>Accessibility Report For "{{pageUrl}}" ({{date}})</title>
+
+	<style>
+
+		html, body {
+			margin: 0;
+			padding: 0;
+			background-color: #fff;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 16px;
+			line-height: 22px;
+			color: #333;
+		}
+		li {
+			margin-bottom: 15px;
+		}
+		pre {
+			white-space: pre-wrap;
+			overflow: auto;
+		}
+
+		.page {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 25px;
+		}
+
+		.counts {
+			margin-top: 30px;
+			font-size: 20px;
+		}
+		.count {
+			display: inline-block;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #eee;
+		}
+
+		.container {
+			margin-top: 30px;
+		}
+
+		.message {
+			margin-top: 20px;
+			padding: 0 15px 0 15px;
+			border-radius: 5px;
+			border: 1px solid #eee;
+		}
+
+		details {
+			margin: 16px 0 16px 0;
+		}
+
+		summary {
+			font-weight: bold;
+		}
+
+		.issues-list {
+			margin-left: 0;
+			padding-left: 0;
+			list-style: none;
+		}
+
+		.issue {
+			border-radius: 5px;
+			padding: 10px;
+			border: 1px solid #eee;
+			background-color: white;
+		}
+
+		pre {
+			margin: 0;
+		}
+
+		.error {
+			background-color: #fdd;
+			border-color: #ff9696;
+		}
+		.warning {
+			background-color: #ffd;
+			border-color: #e7c12b;
+		}
+		.notice {
+			background-color: #eef4ff;
+			border-color: #b6d0ff;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div class="page">
+
+		<h1>Accessibility Report for "{{{name}}}"</h1>
+		<p><b>Run on:</b> {{{pageUrl}}}</p>
+		<p><b>Generated at:</b> {{date}}</p>
+		<p><b>Page screenshot:</b> <a href="./{{{name}}}.png">{{{name}}}.png</a></p>
+
+		<nav class="counts">
+			<a href="#error" class="count error">{{errorCount}} total errors</a>
+			<a href="#warning" class="count warning">{{warningCount}} total warnings</a>
+			<a href="#notice" class="count notice">{{noticeCount}} total notices</a>
+		</nav>
+
+		{{#issueData}}
+		<div id="{{type}}" class="container">
+			<h2>{{typeLabel}}, {{typeCount}} rule(s)</h2>
+			{{#messages}}
+			<div class="message {{type}}">
+				<h3>{{message}}</h3>
+				<p><b>Rule:</b> {{runner}}, {{code}}</p>
+				{{#runnerExtras}}<p><b>Impact:</b> {{impact}}</p>{{/runnerExtras}}
+				<hr>
+				<details>
+					<summary>
+						{{issueCount}} instance(s):
+					</summary>
+					<ul class="issues-list">
+						{{#issues}}
+						<li class="issue">
+							<pre>{{selector}}</pre>
+							<hr>
+							<pre>{{context}}</pre>
+						</li>
+						{{/issues}}
+					</ul>
+				</details>
+			</div>
+			{{/messages}}
+		</div>
+		{{/issueData}}
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Pickup Info for {{ auction.item['name'] }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <!-- Item Summary -->
+            <div class="mb-4">
+                <h5 class="mb-1">Auction Item</h5>
+                <div class="border rounded p-3 bg-light">
+                    <strong>{{ auction.item['name'] }}</strong><br>
+                    <span class="text-muted small">{{ auction.item['description'] }}</span><br>
+                    {% set top_bid = auction.bids | sort(attribute='bid', reverse=True) | first %}
+                    <span class="text-muted small">
+                        Final price: ${{ '%.2f'|format(top_bid.bid if top_bid else 0) }}
+                    </span>
+                </div>
+            </div>
+
+            <!-- Pickup Form -->
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h4 class="card-title mb-3">Provide Pickup Information</h4>
+                    <p class="text-muted">
+                        Please enter your contact details so we can arrange item pickup.
+                    </p>
+                    <form method="post">
+                        {{ form.hidden_tag() }}
+
+                        <div class="mb-3">
+                            {{ form.name.label(class="form-label") }}
+                            {{ form.name(class="form-control", placeholder="Full Name") }}
+                            {% for error in form.name.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="mb-3">
+                            {{ form.email.label(class="form-label") }}
+                            {{ form.email(class="form-control", placeholder="you@example.com") }}
+                            {% for error in form.email.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="text-end">
+                            {{ form.submit(class="btn btn-primary") }}
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

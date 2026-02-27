@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{{ item.name }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <img src="{{ url_for('static', filename='img/pawn/' + item.image) }}"
+                 alt="{{ item.name }}"
+                 class="img-fluid rounded shadow-sm"
+                 style="max-height: 400px; object-fit: contain;">
+        </div>
+        <div class="col-md-6">
+            <h2 class="mb-3">{{ item.name }}</h2>
+            <p class="text-muted">{{ item.description }}</p>
+            <h4 class="fw-bold text-success mb-4">${{ item.price }}</h4>
+
+            <div class="d-grid gap-2 d-md-block">
+                <p>Pawn shop items are exclusively for sale at our Second-Order Pawn Shop location!</p>
+                <p>Interested in shopping online? Make a bid on our <a href="/auctions">auction site</a> now!</p>
+                <a href="/" class="btn btn-link">Back to Listings</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col">
+            <h5>Item Details</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Condition: {{ item.item_condition or "Unknown" }}</li>
+                <li class="list-group-item">Category: {{ item.category or "Miscellaneous" }}</li>
+                <li class="list-group-item">Listed on: {{ item.listed_on.strftime('%Y-%m-%d') if item.listed_on else "N/A" }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

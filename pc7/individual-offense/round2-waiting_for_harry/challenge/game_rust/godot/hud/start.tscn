@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://ncab4rymkdwq"]
+
+[ext_resource type="Theme" uid="uid://com3kmvp0a2tj" path="res://base_theme.tres" id="2_3hj3i"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_odal7"]
+action = &"start_game"
+
+[sub_resource type="Shortcut" id="Shortcut_3hj3i"]
+events = [SubResource("InputEventAction_odal7")]
+
+[node name="Start" type="HudStart"]
+
+[node name="Title" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -0.5
+offset_top = 150.0
+offset_right = 0.5
+offset_bottom = 390.0
+grow_horizontal = 2
+size_flags_vertical = 1
+theme = ExtResource("2_3hj3i")
+text = "Dodge the Creeps!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="StartButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -184.0
+offset_top = -264.0
+offset_right = 184.0
+offset_bottom = -178.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_3hj3i")
+shortcut = SubResource("Shortcut_3hj3i")
+text = "Start"
+
+[node name="SettingsButton" type="Button" parent="."]
+offset_left = 56.0
+offset_top = 568.0
+offset_right = 424.0
+offset_bottom = 654.0
+theme = ExtResource("2_3hj3i")
+text = "Settings"
+
+[connection signal="pressed" from="StartButton" to="." method="on_start_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="on_settings_button_pressed"]

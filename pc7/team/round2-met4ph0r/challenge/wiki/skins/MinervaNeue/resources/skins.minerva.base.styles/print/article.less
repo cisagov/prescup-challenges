@@ -1,0 +1,125 @@
+@import '../../../minerva.less/minerva.variables.less';
+@import '../../../minerva.less/minerva.mixins.less';
+
+@dividerHeight: 2px;
+@dividerSpacing: 28px;
+
+// stylelint-disable-next-line selector-max-id
+.hatnote,
+.pre-content #page-actions {
+	display: none;
+}
+
+.pre-content {
+	display: block;
+	padding: 51px 0 35px;
+
+	h1 {
+		font-size: 70px;
+		font-weight: normal;
+		font-style: italic;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: left;
+		color: @colorGray1;
+	}
+
+	.tagline {
+		font-size: 36px;
+	}
+}
+
+// Prefer class & direct child selector `.mw-body > .content` over `#bodyContent`.
+.mw-body > .content {
+	padding-top: 55px;
+	position: relative;
+
+	&:before {
+		top: 0;
+	}
+}
+
+.thumbinner {
+	width: auto !important;
+	// Force image link to take up maximum available space so that
+	// the thumbnail inside can be aligned left rather than centered
+	> a {
+		width: 100%;
+	}
+}
+
+.thumb {
+	position: relative;
+	padding: (@dividerSpacing*2) + @dividerHeight 0 !important;
+	text-align: left;
+	margin: 0 !important;
+
+	&:after {
+		bottom: @dividerHeight + @dividerSpacing;
+	}
+}
+
+// Prefer class & direct child selector `.mw-body > .content` over `#bodyContent`.
+.thumb:after,
+.mw-body > .content:before {
+	position: absolute;
+	left: 0;
+	content: '';
+	display: block;
+	width: 55px;
+	height: @dividerHeight;
+	background: @borderColorPrint;
+}
+
+.thumbcaption {
+	margin-top: 23px !important;
+	width: 100%;
+	font-style: italic;
+	font-size: 28px;
+}
+
+// `#mw-content-text` doesn't feature universal class selector.
+// `class|='mw-content'` catches `.mw-content`, but also `.mw-content-rtl`.
+[ class|='mw-content' ] {
+	font-size: 36px;
+
+	a {
+		text-decoration: underline;
+		color: @colorGray2;
+	}
+
+	blockquote {
+		color: @colorGray5;
+		padding: 5px 39px;
+		font-style: italic;
+	}
+
+	.section-heading {
+		border-bottom: 0;
+		padding-bottom: 0;
+		margin-bottom: 16px;
+	}
+
+	h2 {
+		font-size: 48px;
+	}
+
+	h3 {
+		font-size: 40px;
+		margin-bottom: 13px;
+	}
+
+	h4, h5, h6 {
+		font-size: 36px;
+		margin-bottom: 12px;
+	}
+
+	.wikitable {
+		font-size: 16px;
+	}
+
+	.infobox {
+		font-size: 30px;
+	}
+}
