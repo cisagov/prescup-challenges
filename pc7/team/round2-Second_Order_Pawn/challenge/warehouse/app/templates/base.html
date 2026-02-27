@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Dashboard{% endblock %} - Second-Order Warehouse</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-icons.css') }}">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 240px;
+            background-color: #3b4d3b; /* Dark slate */
+            flex-shrink: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar .nav-link {
+            color: #bdc3c7;
+        }
+
+        .sidebar .nav-link.active,
+        .sidebar .nav-link:hover {
+            background-color: #34495e;
+            color: white;
+        }
+
+        .sidebar .logo-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #ecf0f1;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 2rem;
+            overflow-y: auto;
+            height: 100vh;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+    <link rel="manifest" href="/static/site.webmanifest" />
+</head>
+<body>
+    <div class="sidebar d-flex flex-column p-3">
+        <a href="/" class="d-block mb-2 text-decoration-none text-white text-center">
+            <img src="{{ url_for('static', filename='img/logo.png') }}"
+                alt="Second Order Logo"
+                class="img-fluid" style="max-height: 60px;">
+            <div class="logo-label mt-1">WAREHOUSE</div>
+        </a>
+
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="{{ url_for('index') }}" class="nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+            </li>
+            {% if current_user.is_authenticated %}
+                <li class="nav-item">
+                <a href="{{ url_for('dashboard') }}" class="nav-link {% if request.path.startswith('/dashboard') %}active{% endif %}">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                <a href="{{ url_for('item_list') }}" class="nav-link {% if request.path.startswith('/items') and not request.path.startswith('/items/new') %}active{% endif %}">My Items</a>
+                </li>
+                <li class="nav-item">
+                <a href="{{ url_for('create_item') }}" class="nav-link {% if request.path.startswith('/items/new') %}active{% endif %}">Item Drop-Off</a>
+                </li>
+                <li class="nav-item">
+                <a href="{{ url_for('pickups') }}" class="nav-link {% if request.path.startswith('/pickups') %}active{% endif %}">Pickups</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                <a href="http://pawn.secondorder.pccc/login" class="nav-link">Login</a>
+                </li>
+            {% endif %}
+        </ul>
+
+
+        <div class="mt-auto">
+            <hr class="text-secondary">
+            <ul class="nav flex-column">
+                <li class="nav-item text-center">
+                    <a href="http://pawn.secondorder.pccc/" class="nav-link text-light" target="_blank">
+                        <i class="bi bi-tag"></i> Second-Order Pawn and Auction
+                    </a>
+                </li>
+                {% if current_user.is_authenticated %}
+                <li class="nav-item text-center">
+                    <a href="http://warehouse.secondorder.pccc/logout" class="nav-link text-light" target="_blank">
+                        <i class="bi bi-door-open"></i> Logout
+                    </a>
+                </li>
+                {% endif %}
+                <li class="nav-item text-center mt-2">
+                    <a href="https://x.com/#secondorderpawn" class="text-light me-3" target="_blank" title="X">
+                        <i class="bi bi-twitter-x fs-5"></i>
+                    </a>
+                    <a href="https://instagram.com/#secondorderpawn" class="text-light me-3" target="_blank" title="Instagram">
+                        <i class="bi bi-instagram fs-5"></i>
+                    </a>
+                    <a href="http://pawn.secondorder.pccc/rss" class="text-light" target="_blank" title="RSS">
+                        <i class="bi bi-rss fs-5"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="mb-3">
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    {% block script %}{% endblock %}
+</body>
+</html>

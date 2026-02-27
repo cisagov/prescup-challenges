@@ -1,0 +1,154 @@
+@import '../../common/variables.less';
+
+@height-collapsed-toc-button: 36px;
+@padding-top-content-px: unit( @padding-top-content * @font-size-browser, px );
+@selector-collapsed-toc-open: ~'#vector-toc-collapsed-checkbox:checked';
+
+#vector-toc-collapsed-button {
+	display: none;
+	float: left;
+	margin-right: 4px;
+	margin-left: -@icon-padding-md;
+	// Reduce padding to fit with page title
+	padding: 7px 10px 7px 10px;
+	// Override background color for when the TOC is overlaps content
+	// as a sticky element when the page is scrolled down.
+	background-color: @background-color-base;
+
+	&:hover,
+	&:active {
+		background-color: @colorGray15;
+	}
+}
+
+#vector-toc-collapsed-button,
+.sidebar-toc {
+	z-index: @z-index-menu;
+}
+
+.ve-active {
+	#vector-toc-collapsed-button {
+		display: none !important; /* stylelint-disable-line declaration-no-important */
+	}
+}
+
+// Override button styles for the "move to sidebar/hide" links. Default hide.
+.vector-toc-collapse-button,
+.vector-toc-uncollapse-button {
+	display: none;
+	border: 0;
+	padding: 0;
+	background-color: transparent;
+	color: @color-primary;
+	cursor: pointer;
+
+	&:hover {
+		color: @color-primary--hover;
+	}
+
+	&:before {
+		content: '@{msg-brackets-start}';
+		color: @color-base--subtle;
+	}
+
+	&:after {
+		content: '@{msg-brackets-end}';
+		color: @color-base--subtle;
+	}
+}
+
+// Applies when TOC is collapsed in it's original DOM location
+// Doesn't apply to the collapsed TOC in the sticky header
+.mixin-toc-collapsed-unmoved() {
+	#vector-toc-collapsed-button {
+		display: block;
+	}
+
+	// FIXME: Remove this selector after Ia263c606dce5a6060b6b29fbaedc49cef3e17a5c has been in prod for 5 days
+	.mw-table-of-contents-container.mw-sticky-header-element,
+	.vector-sticky-toc-container {
+		position: relative;
+	}
+
+	@{sidebar-toc-selector} {
+		display: none;
+		position: absolute;
+		margin: 0;
+		// FIXME: Collapsed TOC styles are not consistent with other vector dropdowns
+		border: @border-width-base @border-style-base @border-color-base;
+	}
+
+	@{selector-collapsed-toc-open} ~ @{sidebar-toc-selector} {
+		// Hide the TOC when the button is not checked
+		display: block;
+	}
+}
+
+.mixin-toc-collapsed-floating() {
+	#vector-toc-collapsed-button,
+	.sidebar-toc {
+		position: fixed;
+	}
+
+	#vector-toc-collapsed-button {
+		top: 0;
+		left: 0;
+		margin: 0;
+	}
+
+	.sidebar-toc {
+		top: @height-collapsed-toc-button; // TOC button height
+		left: 6px;
+	}
+}
+
+@media ( max-width: @max-width-tablet ) {
+	// Collapsed to page title on narrow screens
+	.mixin-toc-collapsed-unmoved();
+
+	@{sidebar-toc-selector} {
+		top: ~'calc(@{height-collapsed-toc-button} + @{padding-top-content-px})'; // 44px
+		left: -4px;
+	}
+
+	// Collapsed to floating icon on narrow screens when below page
+	.vector-below-page-title {
+		.mixin-toc-collapsed-floating();
+	}
+}
+
+@media ( min-width: @min-width-desktop ) {
+	@supports ( display: grid ) {
+		.client-js {
+			// Collapsed to page title
+			.vector-toc-collapsed {
+				.mixin-toc-collapsed-unmoved();
+
+				.mw-table-of-contents-container {
+					grid-area: content;
+				}
+
+				@{sidebar-toc-selector} {
+					top: ~'calc(@{height-collapsed-toc-button} + @{padding-top-content-px})'; // 44px
+					left: -@icon-padding-md;
+				}
+
+				// Collapsed to floating icon
+				// when sticky header not visible and below page title
+				body:not( .vector-sticky-header-visible ).vector-below-page-title& {
+					.mixin-toc-collapsed-floating();
+				}
+
+				.vector-toc-uncollapse-button {
+					display: inline-block;
+				}
+			}
+
+			.vector-toc-not-collapsed {
+				.vector-toc-collapse-button {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}

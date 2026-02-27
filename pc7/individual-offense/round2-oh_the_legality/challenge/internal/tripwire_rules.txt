@@ -1,0 +1,7 @@
+(
+    rulename = "etc passwd",
+    severity = 100
+)
+{
+    /etc/passwd -> $(SEC_CRIT)
+}

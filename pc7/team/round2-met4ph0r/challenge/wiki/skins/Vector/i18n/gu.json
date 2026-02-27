@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Aritra",
+			"Ashok modhvadia",
+			"CptViraj",
+			"Dsvyas",
+			"KartikMistry"
+		]
+	},
+	"vector-skin-desc": "તાજા દેખાવ અને વધુ ઉપયોગી સુધારાઓ સાથે મોનોબુકની આધુનિક આવૃત્તિ",
+	"prefs-vector-enable-vector-1-label": "જૂનું વેક્ટર વાપરો",
+	"vector-opt-out": "જૂના દેખાવ પર જાઓ",
+	"vector-opt-out-tooltip": "તમારી ગોઠવણીને જૂના દેખાવ પર લઇ જાઓ (જૂનું વેક્ટર)",
+	"vector-action-toggle-sidebar": "સાઇડબાર છુપાવો-બતાવો",
+	"vector-languages": "ભાષાઓ",
+	"vector-language-button-label": "{{PLURAL:$1|$1 ભાષા|$1 ભાષાઓ}}",
+	"vector-action-addsection": "નવો વિષય",
+	"vector-action-delete": "રદ કરો",
+	"vector-action-move": "ખસેડો",
+	"vector-action-protect": "સુરક્ષિત કરો",
+	"vector-action-undelete": "રદ કરેલું પાછું વાળો",
+	"vector-action-unprotect": "સુરક્ષા બદલો",
+	"vector-view-create": "બનાવો",
+	"vector-view-edit": "ફેરફાર કરો",
+	"vector-view-history": "ઇતિહાસ જુઓ",
+	"vector-view-view": "વાંચો",
+	"vector-view-viewsource": "સ્રોત જુઓ",
+	"vector-jumptonavigation": "દિશાશોધન પર જાઓ",
+	"vector-jumptosearch": "શોધ પર જાઓ",
+	"vector-jumptocontent": "લખાણ પર જાઓ",
+	"vector-more-actions": "વધુ",
+	"vector-search-loader": "શોધ સૂચનો લાવો",
+	"vector-searchsuggest-containing": "<strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong> ધરાવતા પાનાઓ શોધો"
+}

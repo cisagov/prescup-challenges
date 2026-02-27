@@ -1,0 +1,168 @@
+# Build godot export templates
+FROM debian:bullseye AS template_builder
+ENV DEBIAN_FRONTEND=noninteractive
+ENV SCRIPT_AES256_ENCRYPTION_KEY="6cdb9e6b35342bf1bff48b91ed6f322ba2261caa0db27b91e3a8bdf35cf480d6"
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends scons cmake ca-certificates xz-utils pkg-config libatomic1 && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install emsdk and emscripten
+ADD https://github.com/emscripten-core/emsdk.git /emsdk
+WORKDIR /emsdk
+RUN ./emsdk install latest && \
+    ./emsdk activate latest
+
+# Add godot engine code
+ADD https://github.com/godotengine/godot.git#master /godot
+WORKDIR /godot
+# Avoid building editor code when only compiling templates
+RUN rm -rf editor
+
+ARG DEV_BUILD=yes
+RUN cd /emsdk && . /emsdk/emsdk_env.sh && cd /godot && scons dev_build=${DEV_BUILD} platform=web target=template_release
+RUN cd /emsdk && . /emsdk/emsdk_env.sh && cd /godot && scons dev_build=${DEV_BUILD} platform=web target=template_debug
+
+
+# Build gdsdecomp for patching the pck file
+FROM rust:1.88-bullseye AS gdsdecomp_builder
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Add dotnet 9 sdk
+RUN wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O packages-microsoft-prod.deb && \
+    dpkg -i packages-microsoft-prod.deb && \
+    rm packages-microsoft-prod.deb
+
+# Add python
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        powershell \
+        python3 \
+        cmake \
+        ca-certificates \
+        xz-utils \
+        pkg-config \
+        libatomic1 \
+        dotnet-sdk-9.0 \
+        build-essential \
+        scons \
+        libx11-dev \
+        libxcursor-dev \
+        libxinerama-dev \
+        libgl1-mesa-dev \
+        libglu1-mesa-dev \
+        libasound2-dev \
+        libpulse-dev \
+        libudev-dev \
+        libxi-dev \
+        libxrandr-dev \
+        libwayland-dev && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install emsdk and emscripten
+ADD https://github.com/emscripten-core/emsdk.git /emsdk
+WORKDIR /emsdk
+RUN ./emsdk install latest && \
+    ./emsdk activate latest
+
+# Compile gdsdecomp for patching the game with the token at runtime
+ADD https://github.com/godotengine/godot.git#master /godot
+ADD https://github.com/GDRETools/gdsdecomp.git#master /godot/modules/gdsdecomp
+WORKDIR /godot
+RUN cd /emsdk && . /emsdk/emsdk_env.sh && cd /godot && scons platform=linuxbsd target=editor && rm -rf editor
+RUN cd /emsdk && . /emsdk/emsdk_env.sh && cd /godot && scons platform=linuxbsd target=template_debug
+RUN cd /emsdk && . /emsdk/emsdk_env.sh && cd /godot && scons platform=linuxbsd target=template_release
+RUN chmod a+x /godot/bin/godot*
+WORKDIR /godot/modules/gdsdecomp/standalone
+RUN pwsh -File /godot/modules/gdsdecomp/.scripts/export.ps1 "Linux/X11" -path ".export/gdre_tools.x86_64" -cmd /godot/bin/godot.linuxbsd.editor.x86_64
+
+
+FROM debian:bullseye AS game_builder
+ENV DEBIAN_FRONTEND=noninteractive
+ENV GODOT_SCRIPT_ENCRYPTION_KEY="6cdb9e6b35342bf1bff48b91ed6f322ba2261caa0db27b91e3a8bdf35cf480d6"
+RUN apt-get update && apt-get install -y --no-install-recommends unzip wget ca-certificates && rm -rf /var/lib/apt/lists/*
+
+ARG GODOT_VERSION="4.4.1"
+ARG RELEASE_NAME="stable"
+ARG GODOT_PLATFORM="linux.x86_64"
+
+ENV GODOT_ZIP="Godot_v${GODOT_VERSION}-${RELEASE_NAME}_${GODOT_PLATFORM}.zip"
+
+COPY --from=template_builder /godot/bin/godot.web.template_release.dev.wasm32.zip /root/.local/share/godot/export_templates/${GODOT_VERSION}.${RELEASE_NAME}/web_release.zip
+COPY --from=template_builder /godot/bin/godot.web.template_debug.dev.wasm32.zip /root/.local/share/godot/export_templates/${GODOT_VERSION}.${RELEASE_NAME}/web_debug.zip
+
+RUN wget https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-${RELEASE_NAME}/Godot_v${GODOT_VERSION}-${RELEASE_NAME}_${GODOT_PLATFORM}.zip \
+    && mkdir -p ~/.cache \
+    && mkdir -p ~/.config/godot \
+    && unzip Godot_v${GODOT_VERSION}-${RELEASE_NAME}_${GODOT_PLATFORM}.zip \
+    && mv Godot_v${GODOT_VERSION}-${RELEASE_NAME}_${GODOT_PLATFORM} /usr/local/bin/godot \
+    && rm -f Godot_v${GODOT_VERSION}-${RELEASE_NAME}_${GODOT_PLATFORM}.zip
+
+COPY ./game /game
+WORKDIR /game
+
+RUN mkdir ./build && godot --headless --verbose --export-release Web
+
+FROM rust:1.88-bullseye AS server_builder
+
+# RUN apt-get update && apt-get install -y --no-install-recommends binutils && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /usr/src/server
+COPY server/ .
+
+RUN --mount=type=cache,target=/usr/local/cargo/registry \
+    --mount=type=cache,target=/usr/local/cargo/git \
+    --mount=type=cache,target=/usr/src/server/target \
+    set -eux; \
+    cargo build --release; \
+    objcopy --compress-debug-sections target/release/server ./server
+
+FROM debian:bullseye AS server
+
+RUN apt-get update && apt-get install -y --no-install-recommends wget ca-certificates && rm -rf /var/lib/apt/lists/*
+
+# Add dotnet 9 sdk
+RUN wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O packages-microsoft-prod.deb && \
+    dpkg -i packages-microsoft-prod.deb && \
+    rm packages-microsoft-prod.deb
+
+# Add python
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        xz-utils \
+        libatomic1 \
+        dotnet-sdk-9.0 \
+        libfontconfig1-dev \
+        libx11-dev \
+        libxcursor-dev \
+        libxinerama-dev \
+        libgl1-mesa-dev \
+        libglu1-mesa-dev \
+        libasound2-dev \
+        libpulse-dev \
+        libudev-dev \
+        libxi-dev \
+        libxrandr-dev \
+        libwayland-dev && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY --from=server_builder /usr/src/server/server server
+
+COPY --from=game_builder /game/build/ /app/game/
+COPY server/templates/ /app/templates/
+COPY server/Rocket.toml /app/Rocket.toml
+
+COPY --from=gdsdecomp_builder /godot/modules/gdsdecomp/standalone/.export/* /gdsdecomp/
+COPY ./game/main.gd /app/resources/
+
+# Setup entrypoint
+COPY server.sh /app/server.sh
+RUN chmod +x /app/server.sh
+
+ENV ROCKET_ADDRESS=0.0.0.0
+ENV ROCKET_PORT=80
+ENV SCRIPT_AES256_ENCRYPTION_KEY="6cdb9e6b35342bf1bff48b91ed6f322ba2261caa0db27b91e3a8bdf35cf480d6"
+
+ENTRYPOINT [ "/app/server.sh" ]

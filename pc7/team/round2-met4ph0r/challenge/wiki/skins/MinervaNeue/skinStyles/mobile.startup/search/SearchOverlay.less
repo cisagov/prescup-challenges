@@ -1,0 +1,80 @@
+@import '../../../minerva.less/minerva.variables.less';
+
+// These styles transform the SearchOverlay appearance in the Minerva skin.
+// Since SearchOverlay can be used by other skins, these styles are kept separate from
+// the others.
+
+.overlay.search-overlay {
+	.spinner-container {
+		top: @siteHeaderHeight;
+	}
+
+	.clear {
+		background: none;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY( -50% );
+	}
+
+	.search-box {
+		position: relative;
+	}
+}
+
+@media all and ( min-width: @width-breakpoint-tablet ) {
+	.overlay.search-overlay {
+		// TODO: update @iconSize and @iconGutterWidth to reflect new icon button specs
+		@updatedIconSize: 1.25em; // 20px icon width
+		@updatedIconGutterWidth: 0.75em; // 12px padding width
+		@iconBorder: 0.125em; // 1px border width * 2
+		// Calculate padding based off icon and branding box widths, accounting for `box-sizing: border-box` on the icon
+		@searchPadding: (@updatedIconSize + @updatedIconGutterWidth + @iconBorder) + @brandingBoxWidth;
+
+		.search-box,
+		.search-content,
+		.spinner-container,
+		.results {
+			width: @searchBoxWidth;
+			margin-left: @searchPadding;
+		}
+
+		// Ensure search overlay content is aligned with .heading-container
+		.overlay-header-container,
+		.overlay-content {
+			padding-left: @contentPadding;
+			padding-right: @contentPadding;
+			box-sizing: border-box;
+		}
+
+		.overlay-title {
+			width: auto;
+			padding-left: 0;
+		}
+
+		.overlay-content {
+			// Override default width styles
+			width: 100%;
+			max-width: none;
+		}
+
+		.spinner-container {
+			left: auto;
+			right: auto;
+		}
+	}
+}
+
+@media screen and ( min-width: @width-breakpoint-desktop ) {
+	.overlay.search-overlay {
+		// Normally .overlay-content would have these styles by default
+		// But since we need to account for .heading-container padding in .overlay-content,
+		// we apply these styles directly to the search results instead.
+		.search-results-view {
+			margin-left: auto;
+			margin-right: auto;
+			width: 90%;
+			max-width: @contentMaxWidthTablet;
+		}
+	}
+}

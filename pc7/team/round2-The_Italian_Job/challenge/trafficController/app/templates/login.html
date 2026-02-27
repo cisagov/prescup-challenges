@@ -1,0 +1,20 @@
+{% extends "pane.html" %}
+{% set ns = namespace(out="") %}
+{% for i in range(4) -%}
+  {% set ns.out = ns.out + ("*" if i < entered else "_") %}
+  {% if not loop.last %}{% set ns.out = ns.out + " " %}{% endif %}
+{%- endfor %}
+{% block content %}
+  1. STATUS
+  2. CONFIGURATION
+
+
+
+
+      +----------------------------------------------------------+
+      |                  AUTHENTICATION REQUIRED                 |
+      |                         {{login | center(9)}}                        |
+      |                       PIN: {{ ns.out }}                       |
+      +----------------------------------------------------------+
+
+{% endblock %}

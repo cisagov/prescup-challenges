@@ -1,0 +1,46 @@
+{{!
+	Sticky header is hidden from screen readers because it contains duplicated content
+	that is already accessible to assistive tech via landmark roles, element type, and other navigation methods.
+	The interactive elements in the sticky header should have the `tabindex="-1"` attribute set to ensure
+	the header is also not tab accessible.
+
+	See https://dequeuniversity.com/rules/axe/4.1/aria-hidden-focus and https://phabricator.wikimedia.org/T290201
+	for more context.
+}}
+<header id="vector-sticky-header" aria-hidden="true"
+	class="vector-sticky-header">
+	<div class="vector-sticky-header-start">
+		<div class="vector-sticky-header-icon-start">
+			{{#data-button-start}}
+			{{>Button}}
+			{{/data-button-start}}
+		</div>
+		{{#data-search}}
+		{{>SearchBox}}
+		{{/data-search}}
+		<div class="vector-sticky-header-context-bar">
+			<div class="vector-sticky-header-toc-container">
+				{{! TOC is cloned into this menu from the sidebar in stickyHeader.js. }}
+				{{#data-sticky-header-toc}}
+				{{>Menu}}
+				{{/data-sticky-header-toc}}
+			</div>
+			<div class="vector-sticky-header-context-bar-primary" {{{html-user-language-attributes}}}>{{{html-title}}}</div>
+		</div>
+	</div>
+	<div class="vector-sticky-header-end">
+		<div class="vector-sticky-header-icons">
+			{{#data-buttons}}
+			{{>Button}}
+			{{/data-buttons}}
+		</div>
+		{{#data-primary-action}}
+		{{>Button}}
+		{{/data-primary-action}}
+		<div class="vector-sticky-header-icon-end">
+			<div class="vector-user-links">
+				{{! User menu items with unique ids are cloned here from the fixed header in stickyHeader.js. }}
+			</div>
+		</div>
+	</div>
+</header>

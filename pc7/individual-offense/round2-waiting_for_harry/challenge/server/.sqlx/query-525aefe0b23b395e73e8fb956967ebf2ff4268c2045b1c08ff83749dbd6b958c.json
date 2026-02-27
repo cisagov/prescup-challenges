@@ -1,0 +1,44 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT row_number() OVER (ORDER BY score DESC) AS rank, id, name, score, created_at FROM leaderboard ORDER BY score DESC LIMIT 100",
+  "describe": {
+    "columns": [
+      {
+        "name": "rank",
+        "ordinal": 0,
+        "type_info": "Int"
+      },
+      {
+        "name": "id",
+        "ordinal": 1,
+        "type_info": "Int64"
+      },
+      {
+        "name": "name",
+        "ordinal": 2,
+        "type_info": "Text"
+      },
+      {
+        "name": "score",
+        "ordinal": 3,
+        "type_info": "Int64"
+      },
+      {
+        "name": "created_at",
+        "ordinal": 4,
+        "type_info": "Datetime"
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "525aefe0b23b395e73e8fb956967ebf2ff4268c2045b1c08ff83749dbd6b958c"
+}

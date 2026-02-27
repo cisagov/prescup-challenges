@@ -1,0 +1,55 @@
+@import '../../../minerva.less/minerva.variables.less';
+@import '../../../minerva.less/minerva.mixins.less';
+
+.printfooter {
+	display: block;
+	padding-top: 108px;
+	font-size: 30px;
+}
+
+// stylelint-disable selector-max-id
+#mw-mf-page-center > footer {
+	border-top: solid 4px #000;
+	padding-top: 23px;
+	background: #fff !important;
+
+	.mw-ui-icon:before {
+		display: none !important;
+	}
+
+	.last-modified-bar {
+		background: none !important;
+		border: 0 !important;
+	}
+
+	.last-modifier-tagline {
+		font-size: 36px;
+		padding-top: 0 !important;
+		padding-bottom: 16px !important;
+	}
+
+	.last-modified-bar,
+	.last-modified-bar a {
+		font-weight: bold !important;
+		color: #000 !important;
+	}
+
+	.post-content {
+		margin-top: 15px !important;
+		display: block;
+
+		// ... and add these instead.
+		.hlist,
+		h2 {
+			display: none;
+		}
+
+		.license a,
+		.license {
+			font-size: 30px;
+			color: @colorPrintSubtle;
+			font-weight: normal;
+		}
+	}
+}
+// stylelint-enable selector-max-id

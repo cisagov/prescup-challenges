@@ -1,0 +1,35 @@
+
+<header class="header-container header-chrome">
+	<div class="minerva-header">
+		<nav class="navigation-drawer toggle-list view-border-box">
+			<input type="checkbox" id="main-menu-input" class="toggle-list__checkbox" role="button" aria-haspopup="true" aria-expanded="false" aria-labelledby="mw-mf-main-menu-button">
+			<label for="main-menu-input" id="mw-mf-main-menu-button" aria-hidden="true"
+				class=" mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-menu-base20 mw-ui-icon-flush-left toggle-list__toggle"
+				title="{{msg-mobile-frontend-main-menu-button-tooltip}}" data-event-name="ui.mainmenu">{{msg-mobile-frontend-main-menu-button-tooltip}}</label>
+			{{#data-minerva-main-menu}}{{>menu}}{{/data-minerva-main-menu}}
+			<label class="main-menu-mask" for="main-menu-input"></label>
+		</nav>
+		<div class="branding-box">
+			<a href="{{link-mainpage}}">
+			{{#data-logos}}
+				<span>{{>Logo}}</span>
+			{{/data-logos}}
+				{{#is-minerva-beta}}<sup>&beta;</sup>{{/is-minerva-beta}}
+			</a>
+		</div>
+		{{#data-search-box}}
+			{{>SearchBox}}
+		{{/data-search-box}}
+		<nav class="minerva-user-navigation" aria-label="{{msg-minerva-user-navigation}}">
+			{{^is-anon}}
+					<div class="minerva-user-notifications"
+						id="pt-notifications-alert">
+						{{#data-portlets.data-notifications}}
+						<ul>{{{html-items}}}</ul>
+						{{/data-portlets.data-notifications}}
+					</div>
+			{{/is-anon}}
+			{{#html-minerva-user-menu}}{{{html-minerva-user-menu}}}{{/html-minerva-user-menu}}
+		</nav>
+	</div>
+</header>

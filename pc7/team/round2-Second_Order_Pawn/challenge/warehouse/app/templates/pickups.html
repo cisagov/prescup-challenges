@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Pickups{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Pickups</h2>
+
+    <h4 class="mb-3">Ready for Pickup</h4>
+    {% if unclaimed %}
+        <ul class="list-group mb-5">
+        {% for entry in unclaimed %}
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                    <strong>{{ entry.item.name }}</strong>
+                    <a href="{{ url_for('pickup_qr', item_id=entry.item.id) }}" class="btn btn-sm btn-outline-primary">
+                        Show Pickup QR
+                    </a>
+                </div>
+                {% if entry.item.description %}
+                    <div class="text-muted small">{{ entry.item.description }}</div>
+                {% endif %}
+                <div class="small text-muted mt-1">
+                    For: {{ entry.pickup.name }} ({{ entry.pickup.email }})
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p class="text-muted">No items currently ready for pickup.</p>
+    {% endif %}
+
+    <h4 class="mb-3">Already Claimed</h4>
+    {% if claimed %}
+        <ul class="list-group">
+        {% for entry in claimed %}
+            <li class="list-group-item">
+                <strong>{{ entry.item.name }}</strong>
+                {% if entry.item.description %}
+                    <div class="text-muted small">{{ entry.item.description }}</div>
+                {% endif %}
+                <div class="small text-muted mt-1">
+                    Claimed by: {{ entry.pickup.name }} ({{ entry.pickup.email }})
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p class="text-muted">No claimed items.</p>
+    {% endif %}
+</div>
+{% endblock %}

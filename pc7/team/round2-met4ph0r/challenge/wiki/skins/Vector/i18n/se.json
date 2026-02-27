@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gálaniitoluodda",
+			"Jeblad",
+			"Trondtr"
+		]
+	},
+	"vector-language-button-label": "{{PLURAL:$1|$1 gillii|$1 gielaide}}",
+	"vector-action-addsection": "Lasit fáttá",
+	"vector-action-delete": "Sihko",
+	"vector-action-move": "Sirdde",
+	"vector-action-protect": "Suodjal",
+	"vector-action-undelete": "Máhcat",
+	"vector-action-unprotect": "Rievdat suodjaleami",
+	"vector-view-create": "Álggat",
+	"vector-view-edit": "Rievdat",
+	"vector-view-history": "Geahča historjjá",
+	"vector-view-view": "Loga",
+	"vector-view-viewsource": "Geahča gáldokoda",
+	"vector-more-actions": "Eanet",
+	"vector-searchsuggest-containing": "Oza siidduid main lea <strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong>"
+}

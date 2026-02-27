@@ -1,0 +1,22 @@
+@import 'mediawiki.ui/variables';
+
+.minerva--history-page-action-enabled {
+	.page-actions-menu__list-item {
+		flex-basis: auto;
+		// When AMC is enabled, space all items equally.
+		&:first-child {
+			flex-grow: 0;
+		}
+	}
+}
+
+.page-actions-overflow-list {
+	// The top of the menu is flush with the bottom of the page actions toolbar.
+	top: 100%;
+	right: -@icon-padding-md;
+	border-radius: @border-radius-base;
+}
+
+.mw-ui-icon-minerva-ellipsis:before {
+	transform: rotate( 90deg );
+}

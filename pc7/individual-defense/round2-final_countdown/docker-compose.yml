@@ -1,0 +1,180 @@
+x-challenge:
+  name: "Final Countdown"
+  description: |
+    # The Final Countdown
+
+    There is an active attack being carried out at a health center. Stop the attack without turning off critical services.
+
+    **NICE Work Roles**
+
+    - [Cyber Defense Incident Responder](https://niccs.cisa.gov/workforce-development/nice-framework/)
+
+    **NICE Tasks**
+
+
+    - [T0041](https://niccs.cisa.gov/workforce-development/nice-framework/): Mediate identified vulnerabilities
+    - [T0168](https://niccs.cisa.gov/workforce-development/nice-framework/): Contain and eradicate malicious activity
+    - [T0183](https://niccs.cisa.gov/workforce-development/nice-framework/): Analyze network and host-based logs to determine attack details
+
+    ## Background
+
+    You are a cybersecurity professional working for a hospital. The hospital is actively getting attacked. You need to stop the attack and remediate the vulnerability that is allowing the attack to come through. You must not shut down any critical services used by the hospital. 
+
+    ## Getting Started
+
+    Here are your tasks:
+
+    1. Remove the vulnerability that allows the attack to happen.
+    1. Remove all remnants of the attack.
+        If you fail to fix the vulnerability in time, this task is harder.
+    1. Answer the following log analysis questions from the grader at `http://grader`:
+        - What IP did the attacker reside?
+        - What URL did the attacker use to exploit the vulnerability?
+
+
+    ## System and Tool Credentials
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |hospital_server|user|password|
+    |log_server|user|password|
+    |http://grader|||
+
+
+  summary: |
+    An active attack is commencing. Protect your environment and remediate the attack.
+
+  templates:
+    vuln_flag: &vuln_template "fake.bothify('PCCC{vuln_??_####}', letters='ABCDEF0123456789')"
+    file_flag: &file_template "fake.bothify('PCCC{files_??_####}', letters='ABCDEF0123456789')"
+    ip_flag: &ip_template "fake.bothify('PCCC{ip_??_####}', letters='ABCDEF0123456789')"
+    url_flag: &url_template "fake.bothify('PCCC{url_??_####}', letters='ABCDEF0123456789')"
+
+  tags:
+    - "forensics"
+    - "log-analysis"
+    - "vulnerability-management"
+    - "individual-defense"
+    - "round2"
+    - "pc7"
+
+  variables:
+    
+    #vuln variable
+    vuln_flag:
+      template: *vuln_template
+      default: &vuln_template_default "PCCC{Vuln_Satisfied}"
+
+    #file variable
+    file_flag:
+      template: *file_template
+      default: &file_template_default "PCCC{Files_Satisfied}"
+
+    #IP question variable
+    ip_flag:
+      template: *ip_template
+      default: &ip_template_default "PCCC{IP_correct}"
+
+    #Url question variable
+    url_flag:
+      template: *url_template
+      default: &url_template_default "PCCC{URL_correct}"
+
+    #Points: 2910
+  questions:
+    - name: "Question 1 (Grader)"
+      body: "What is the value of the token in the grader after remediating the vulnerability?"
+      placeholder: "PCCC{some_words123_here}"
+      points: 873 #30% out of 2910
+      answer: *vuln_template_default
+      max_attempts: 3
+
+    - name: "Question 2 (Grader)"
+      body: "What is the value of the token in the grader after removing all necessary files?"
+      placeholder: "PCCC{some_words123_here}"
+      points: 873 #30% out of 2910
+      answer: *file_template_default
+      max_attempts: 3
+      
+    - name: "Question 3.1 (Grader)"
+      body: "What is the value of the token in the grader after answering question 3.1?"
+      placeholder: "PCCC{some_words123_here}"
+      points: 582 # 20% out of 2910
+      answer: *ip_template_default
+      max_attempts: 3
+
+    - name: "Question 3.2 (Grader)"
+      body: "What is the value of the token in the grader after answering 3.2?"
+      placeholder: "PCCC{some_words123_here}"
+      points: 582 # 20% out of 2910
+      answer: *url_template_default
+      max_attempts: 3
+      
+services:
+  hospital_server:
+    build: ./challenge/hospital_server
+    hostname: hospital_server
+    networks:
+      - competitor_net
+      - wan
+
+  attacker:
+    build: ./challenge/attacker
+    hostname: attacker
+    networks:
+      - wan
+
+  grader:
+    build: ./challenge/grader
+    hostname: grader
+    networks:
+      - competitor_net
+      - wan
+    environment:
+      token1: *vuln_template_default
+      token2: *file_template_default
+      token3_1: *ip_template_default
+      token3_2: *url_template_default
+
+  xray_station:
+    build: ./challenge/xray_station
+    hostname: xray_station
+    networks:
+      - competitor_net
+
+  lab_results:
+    build: ./challenge/lab
+    hostname: lab_results
+    networks:
+      - competitor_net
+
+  log_server:
+    build: ./challenge/logserver
+    hostname: log_server
+    networks:
+      - competitor_net
+
+  icu_monitor:
+    build: ./challenge/icu_monitor
+    hostname: icu_monitor
+    networks:
+      - competitor_net
+
+  triage_dashboard:
+    build: ./challenge/triage_dashboard
+    hostname: triage_dashboard
+    networks:
+      - competitor_net
+
+  infusion_controller:
+    build: ./challenge/infusion_controller
+    hostname: infusion_controller
+    networks:
+      - competitor_net
+
+
+networks:
+  competitor_net:
+    internal: true
+  wan:
+    internal: true

@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arman musikyan",
+			"Kareyac",
+			"Teak",
+			"Vadgt",
+			"Xelgen",
+			"Սերգեյ Սաֆարյան",
+			"Armenoid"
+		]
+	},
+	"skinname-vector": "Սովորական",
+	"vector-opt-out": "Անցնել հին տեսքին",
+	"vector-languages": "Լեզուներ",
+	"vector-language-button-label": "{{PLURAL:$1|$1 լեզու}}",
+	"vector-no-language-button-label": "Ավելացնել լեզուներ",
+	"vector-language-redirect-to-top": "Այս կայքում լեզվական հղումները գտնվում են էջի վերևում՝ հոդվածի վերնագրի դիմաց։ [[#p-lang-btn|Անցնել վերև]]։",
+	"vector-action-addsection": "Ավելացնել քննարկում",
+	"vector-action-delete": "Ջնջել",
+	"vector-action-move": "Վերանվանել",
+	"vector-action-protect": "Պաշտպանել",
+	"vector-action-undelete": "Վերականգնել",
+	"vector-action-unprotect": "Փոխել պաշտպանումը",
+	"vector-view-create": "Ստեղծել",
+	"vector-view-edit": "Խմբագրել",
+	"vector-view-history": "Պատմություն",
+	"vector-view-view": "Կարդալ",
+	"vector-view-viewsource": "Դիտել ելատեքստը",
+	"vector-more-actions": "Ավելին",
+	"vector-toc-heading": "Բովանդակություն",
+	"vector-toc-toggle-position-title": "թաքցնել",
+	"vector-toc-beginning": "Ներածություն",
+	"vector-anon-user-menu-pages-learn": "իմանալ ավելին",
+	"vector-toc-menu-tooltip": "Բովանդակություն",
+	"tooltip-vector-anon-user-menu-title": "Այլ ընտրանքներ"
+}

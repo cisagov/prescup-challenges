@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Spy Organization Crest Logo (SVG) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Spy crest logo">
+  <title>Spy Crest Logo</title>
+  <defs>
+    <!-- Palette -->
+    <!-- Deep Navy: #0b1d2a | Night: #06131c | Silver: #bfc7d5 | Steel: #9aa3b2 | Crimson: #c4342e -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e2a3a"/>
+      <stop offset="100%" stop-color="#06131c"/>
+    </linearGradient>
+
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9dee7"/>
+      <stop offset="100%" stop-color="#9aa3b2"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="3"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle gloss for the eye ring -->
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <!-- Dash pattern for tech accents -->
+    <mask id="dashMask">
+      <rect x="0" y="0" width="1024" height="1024" fill="black"/>
+      <ellipse cx="512" cy="512" rx="384" ry="256" fill="white"/>
+      <ellipse cx="512" cy="512" rx="350" ry="230" fill="black"/>
+    </mask>
+  </defs>
+
+  <!-- Background crest -->
+  <circle cx="512" cy="512" r="440" fill="url(#bgGrad)" stroke="#c4342e" stroke-width="10"/>
+
+  <!-- Tech dash accents on ring -->
+  <g mask="url(#dashMask)" opacity="0.25">
+    <g stroke="#bfc7d5" stroke-width="6" fill="none">
+      <ellipse cx="512" cy="512" rx="368" ry="246" stroke-dasharray="22 18"/>
+      <ellipse cx="512" cy="512" rx="360" ry="240" stroke-dasharray="10 12"/>
+    </g>
+  </g>
+
+  <!-- Eye ring -->
+  <ellipse cx="512" cy="512" rx="370" ry="250" fill="none" stroke="url(#ringGrad)" stroke-width="18"/>
+
+  <!-- Upper eyelid arc -->
+  <path d="M170 520 C 310 385, 714 385, 854 520" fill="none" stroke="#bfc7d5" stroke-width="6" opacity="0.65"/>
+
+  <!-- Lower eyelid arc -->
+  <path d="M170 504 C 318 642, 706 642, 854 504" fill="none" stroke="#9aa3b2" stroke-width="6" opacity="0.45"/>
+
+  <!-- Gloss highlight -->
+  <ellipse cx="482" cy="468" rx="210" ry="120" fill="url(#gloss)" transform="rotate(-12 482 468)" opacity="0.55"/>
+
+  <!-- Pupil -->
+  <circle cx="512" cy="512" r="54" fill="#c4342e" filter="url(#softShadow)"/>
+
+  <!-- Agent silhouette (hat + collar) -->
+  <g filter="url(#softShadow)">
+    <!-- Hat brim -->
+    <path d="M 300 494
+             Q 512 430 724 494
+             Q 610 512 512 518
+             Q 414 512 300 494 Z"
+          fill="#0f2230" stroke="#bfc7d5" stroke-width="2" opacity="0.98"/>
+    <!-- Hat crown -->
+    <path d="M 406 448 L 470 360 L 554 360 L 618 448
+             Q 617 468 617 476 L 406 476 Q 406 468 406 448 Z"
+          fill="#0b1d2a" stroke="#9aa3b2" stroke-width="2"/>
+    <!-- Shadow under brim -->
+    <path d="M 380 494 Q 512 520 644 494 L 640 504
+             Q 512 532 384 504 Z" fill="#06131c" opacity="0.8"/>
+    <!-- Collars -->
+    <path d="M 420 560 L 486 618 L 454 684 L 356 676 L 372 652 Z"
+          fill="#0b1d2a" stroke="#9aa3b2" stroke-width="1.5"/>
+    <path d="M 604 560 L 538 618 L 570 684 L 668 676 L 652 652 Z"
+          fill="#0b1d2a" stroke="#9aa3b2" stroke-width="1.5"/>
+    <!-- Tie -->
+    <path d="M 498 612 L 526 612 L 540 680 L 484 680 Z"
+          fill="#c4342e" stroke="#bfc7d5" stroke-width="1.2"/>
+    <!-- Shoulders -->
+    <path d="M 340 690 L 512 560 L 684 690 L 512 728 Z"
+          fill="#0b1d2a" opacity="0.95"/>
+  </g>
+
+  <!-- Outer micro-ticks to suggest precision -->
+  <g stroke="#bfc7d5" stroke-width="3" opacity="0.35">
+    <!-- 24 ticks around the crest -->
+    <g transform="translate(512 512)">
+      <!-- Generate ticks via repeat rotations -->
+      <rect x="-2" y="-470" width="4" height="24" rx="1"/>
+      <g transform="rotate(15)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(30)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(45)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(60)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(75)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(90)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(105)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(120)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(135)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(150)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(165)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(180)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(195)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(210)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(225)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(240)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(255)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(270)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(285)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(300)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(315)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(330)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+      <g transform="rotate(345)"><rect x="-2" y="-470" width="4" height="24" rx="1"/></g>
+    </g>
+  </g>
+
+  <!-- Safe export boundary -->
+  <rect x="6" y="6" width="1012" height="1012" fill="none" stroke="#0b1d2a" stroke-opacity="0.15"/>
+
+  <!-- Accessibility meta -->
+  <metadata>
+    Palette: Deep Navy (#0b1d2a), Night (#06131c), Silver (#bfc7d5), Steel (#9aa3b2), Crimson (#c4342e).
+    This vector is fully scalable and suitable for print and web. Edit colors by changing hex values in &lt;defs&gt;.
+  </metadata>
+
+</svg>

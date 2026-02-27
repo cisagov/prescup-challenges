@@ -1,0 +1,159 @@
+# Complete Challenge Specification Example
+x-challenge:
+  # Required: Name of the challenge displayed to participants
+  name: "Inception"
+
+  # Required: Detailed description shown to participants
+  description: |
+    # Inception
+
+    "Dreams feel real while we're in them. It's only when we wake up that we realize something was actually strange." Enter into the dream space of the President's Cup challenge developers and hack into last year's competition site!
+
+    **NICE Work Roles**
+
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework)
+    - [Exploitation Analysis](https://niccs.cisa.gov/tools/nice-framework)
+
+    **NICE Tasks**
+
+    - [T1359](https://niccs.cisa.gov/tools/nice-framework): Perform penetration testing
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework): Identify vulnerabilities
+
+    ## Background
+
+    You've been contracted by a shadowy organization to implant ideas into the subconscious of a wealthy business owner. However, the operation was a bust, and you've somehow found yourself trapped in the dream space of the challenge developers on the President's Cup team! Of course, like the singularly focused fellows that they are, they are dreaming of Finals from last year's President's Cup. To escape their dream space, you'll need to break into a recreation of the challenge site hosted at `http://pccc.pccc` and steal each of their totems (which, given their obsession with producing great challenges, take the form of challenge tokens).
+
+    ## Getting Started
+
+    Use the provided Kali device to access the vulnerable President's Cup site at `http://pccc.pccc`.
+
+    ## Tokens
+
+    There are four tokens to retrieve. The tokens are formatted as `PCCC{some_words_here}`.
+
+    No grading is required; all tokens are found in the environment.
+
+    - Token 1: The first developer is dreaming of providing support. Gain access to a support account to find the token.
+    - Token 2: The second developer is dreaming of becoming an admin. Gain access to an admin account to find the token.
+        - You may need to log out and back in to display the token.
+    - Token 3: The third developer is dreaming about the infrastructure. Find this token in `/app/token.txt`.
+    - Token 4: The fourth developer is dreaming about the logs. Send the message `GIVEMETHETOKEN` to `/app/log.txt`, and the developer will add the token to the home page.
+
+    ## System and Tool Credentials
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |kali-vnc|user|password|
+  # Optional: Tabler icon name with Tb prefix
+  icon: "TbZzz"
+
+  # Optional: Challenge summary/overview
+  summary: |
+    "Dreams feel real while we're in them. It's only when we wake up that we realize something was actually strange." Enter into the dream space of the President's Cup challenge developers and hack into last year's competition site!
+
+  # Optional: Template definitions for reusable values
+  templates:
+    # Define reusable templates with anchors
+    tokenSupport-flag: &tokenSupport-flag_template "fake.bothify('PCCC{Welcome2Support_SLAis5minutes_####}')"
+    tokenAdmin-flag: &tokenAdmin-flag_template "fake.bothify('PCCC{AnIdea_IsLike_AVirus_SoAreYou_####}')"
+    tokenConfig-flag: &tokenConfig-flag_template "fake.bothify('PCCC{PerfectlyPossible_JustBloodyDifficult_####}')"
+    tokenIndex-flag: &tokenIndex-flag_template "fake.bothify('PCCC{Hello_From_The_Devs_####}')"
+
+  tags:
+    - individual-offense
+    - round2
+    - forensics
+    - exploitation
+    - web
+    - pc7
+  
+  # # Optional: Variable definitions with templates and defaults
+  variables:
+    # Database flag variable
+    tokenSupport_flag:
+      template: *tokenSupport-flag_template
+      default: &tokenSupport-flag_default "PCCC{Welcome2Support_SLAis5minutes}"
+    tokenAdmin_flag:
+      template: *tokenAdmin-flag_template
+      default: &tokenAdmin-flag_default "PCCC{AnIdea_IsLike_AVirus_SoAreYou}"
+    tokenConfig_flag:
+      template: *tokenConfig-flag_template
+      default: &tokenConfig-flag_default "PCCC{PerfectlyPossible_JustBloodyDifficult}"
+    tokenIndex_flag:
+      template: *tokenIndex-flag_template
+      default: &tokenIndex-flag_default "PCCC{Hello_From_The_Devs}"
+
+  # Required: List of questions/objectives for the challenge
+  questions:
+  - name: "Question 1"
+    body: "Enter the token displayed when you log in with a Support account."
+    placeholder: "PCCC{???????#???????_?????#???????_####}"
+    points: 1350   # 30% 4500 total
+    answer: *tokenSupport-flag_default
+    max_attempts: 3
+  - name: "Question 2"
+    body: "Enter the token displayed when you log in with an Admin account."
+    placeholder: "PCCC{??????_??????_??????_????????_####}"
+    points: 900   # 20%
+    answer: *tokenAdmin-flag_default
+    max_attempts: 3
+  - name: "Question 3"
+    body: "Enter the token found in `/app/token.txt`."
+    placeholder: "PCCC{?????????????????_???????????????????_####}"
+    points: 1125   # 25%
+    answer: *tokenConfig-flag_default
+    max_attempts: 3
+  - name: "Question 4"
+    body: "Enter the token found on the homepage after sending a message in the logs."
+    placeholder: "PCCC{?????_????_???_????_####}"
+    points: 1125   # 25%
+    answer: *tokenIndex-flag_default
+    max_attempts: 3
+
+services:
+  pccc:
+    build: ./pccc
+    hostname: pccc.pccc
+    environment:
+      MONGO_URI: 
+        mongodb://appuser:d!qYd8cLN1qZv3@mongo:27017/pccc?authSource=pccc
+      SECRET_KEY: S3McMNDv^gYVJ6h
+      tokenSupport: *tokenSupport-flag_default
+      tokenAdmin: *tokenAdmin-flag_default
+      tokenConfig: *tokenConfig-flag_default
+      tokenIndex: *tokenIndex-flag_default
+    networks:
+    - competitor_net
+    - backend
+  mongo:
+    build: ./mongo
+    hostname: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: sPnyJZQ9DAp2OUt
+      MONGO_INITDB_DATABASE: pccc
+      APP_DB: pccc
+      APP_USER: appuser
+      APP_PASS: d!qYd8cLN1qZv3
+    mem_limit: 1g
+    networks:
+    - backend
+  seleniumbot:
+    build:
+      context: ./selenium
+    hostname: selenium.pccc
+    environment:
+      MONGO_URI: 
+        mongodb://appuser:d!qYd8cLN1qZv3@mongo:27017/pccc?authSource=pccc
+    mem_limit: 1g
+    cpus: "0.2"
+    networks:
+    - backend
+
+
+networks:
+  competitor_net:
+    # external: true # Uncomment for local dev
+    internal: true
+  backend:
+    internal: true

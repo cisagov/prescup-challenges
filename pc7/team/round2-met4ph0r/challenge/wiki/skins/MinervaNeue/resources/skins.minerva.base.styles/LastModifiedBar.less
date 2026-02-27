@@ -1,0 +1,43 @@
+@import '../../minerva.less/minerva.variables.less';
+@import '../../minerva.less/minerva.mixins.less';
+@import 'mediawiki.mixins.less';
+
+.last-modified-bar {
+	display: block;
+	border-bottom: solid 1px @footerBorderColor;
+	background-color: @lastModifiedBarBgColor;
+	color: @lastModifiedBarTextColor;
+	padding-top: @icon-padding-md;
+	padding-bottom: @icon-padding-md;
+	font-size: @font-size-minerva-small;
+	transition: background-color @transition-duration-medium, color @transition-duration-medium;
+
+	a,
+	a:visited,
+	.last-modified-text-accent {
+		color: @colorGray5;
+	}
+
+	// Note: This can be progressively enhanced in skins.minerva.scripts to provide 'recently edited' state.
+}
+
+.last-modified-bar__content {
+	align-items: center;
+	.flex-display();
+}
+
+.last-modified-bar__text {
+	@end-padding: @iconGutterWidth + @iconGutterWidth + @iconSize;
+	padding-right: @end-padding;
+	padding-left: @icon-padding-md;
+	line-height: @line-height-content;
+	vertical-align: middle;
+	flex-grow: 1;
+	.text-overflow( @visible: false );
+}
+
+@media ( max-width: @width-breakpoint-tablet ) {
+	.last-modified-bar__text {
+		padding-right: 1em;
+	}
+}

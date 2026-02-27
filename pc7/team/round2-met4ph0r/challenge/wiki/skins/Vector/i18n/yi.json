@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Castillerian",
+			"Har-wradim",
+			"Joystick",
+			"פוילישער"
+		]
+	},
+	"skinname-vector": "וועקטאר אלט (2010)",
+	"vector-skin-desc": "פֿארזארגט צוויי וועקטאר וואריאנטן:\n* 2011 - די מאדערנע ווערסיע פון מאנאבוק מיט פרישן אויסזען און א סך באניצער־פריינדלעכקייט פארבעסערונגען\n* 2022 - די נייעסטע ווערסיע, אנטוויקלט אלס טייל פונעם WMF [[mw:Desktop Improvements|דעסקטאפ פֿארבעסערונגען]] פראיעקט",
+	"vector.css": "/* אלע CSS דא וועל ווערן געלאדן פֿאר באניצער פונעם וועקטאר סקין */",
+	"vector-language-button-label": "{{PLURAL:$1|$1 שפּראַך|$1 שפּראַכן}}",
+	"vector-no-language-button-label": "צולייגן שפראַכן",
+	"vector-language-redirect-to-top": "אין דער אויסגאבע פֿון {{SITENAME}} געפֿינען זיך די שפּראַך פֿאַרבינדונגען אין שפּיץ פֿונעם בלאַט, קעגנאיבער דעם אַרטיקל טיטל. [[#p-lang-btn|גיין ארויף אויבן]].",
+	"vector-action-addsection": "צושטעלן טעמע",
+	"vector-action-delete": "אויסמעקן",
+	"vector-action-move": "באַוועגן",
+	"vector-action-protect": "שיצן",
+	"vector-action-undelete": "מבטל זיין אויסמעקן",
+	"vector-action-unprotect": "ענדערונג באַשיצונג",
+	"vector-view-create": "שאַפֿן",
+	"vector-view-edit": "רעדאַקטירן",
+	"vector-view-history": "ווייזן היסטאָריע",
+	"vector-view-view": "לייענען",
+	"vector-view-viewsource": "ווײַזן מקור",
+	"vector-more-actions": "נאך",
+	"vector-toc-heading": "אינהאַלט",
+	"vector-toc-menu-tooltip": "אינהאַלט טאַבעלע"
+}

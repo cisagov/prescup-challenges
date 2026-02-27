@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsk1jadna1ri5"]
+
+[ext_resource type="AudioStream" uid="uid://b6ehfhi4vndo" path="res://art/gameover.wav" id="2_ir4js"]
+[ext_resource type="Theme" uid="uid://com3kmvp0a2tj" path="res://base_theme.tres" id="2_rbbsq"]
+
+[node name="End" type="HudEnd"]
+
+[node name="Output" type="RichTextLabel" parent="."]
+clip_contents = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_rbbsq")
+bbcode_enabled = true
+text = "[u]Final Score[/u]
+0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="LineEdit" parent="."]
+offset_left = 19.0
+offset_top = 424.0
+offset_right = 461.0
+offset_bottom = 510.0
+theme = ExtResource("2_rbbsq")
+placeholder_text = "AAA"
+alignment = 1
+max_length = 3
+clear_button_enabled = true
+
+[node name="CongratulationMessage" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="SubmitToLeaderboard" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = 0.751
+anchor_right = 0.96
+anchor_bottom = 0.96
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_rbbsq")
+text = "Submit to Leaderboard"
+autowrap_mode = 2
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ir4js")
+
+[connection signal="pressed" from="SubmitToLeaderboard" to="." method="submit_to_leaderboard"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="submit_to_leaderboard_complete"]

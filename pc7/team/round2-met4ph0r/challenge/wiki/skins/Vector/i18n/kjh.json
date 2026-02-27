@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Андрей Саг.",
+			"AlexandrL714"
+		]
+	},
+	"vector-action-addsection": "Тема хозыбзарға",
+	"vector-action-delete": "Тастабызарға",
+	"vector-action-move": "Адын алыстырыбызарға",
+	"vector-view-create": "Идебзерге",
+	"vector-view-edit": "Тӱзедерге",
+	"vector-view-history": "Кӧрігтердің тархыны",
+	"vector-view-view": "Хығырарға",
+	"vector-more-actions": "Хоза",
+	"vector-searchsuggest-containing": "<strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong> страницаларны тілег"
+}

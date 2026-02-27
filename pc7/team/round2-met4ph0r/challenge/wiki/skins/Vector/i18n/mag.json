@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"ऐक्टिवेटेड्"
+		]
+	},
+	"vector-language-button-label": "{{PLURAL:$1|$1 भासा|$1 भासासभ}}",
+	"vector-action-addsection": "बिसय जोड़",
+	"vector-action-delete": "हटाव",
+	"vector-action-move": "स्थानान्तरन",
+	"vector-action-protect": "सुरक्षित कर",
+	"vector-view-create": "बनाव",
+	"vector-view-edit": "सम्पादन",
+	"vector-view-history": "इतिहास देख",
+	"vector-view-view": "पढ़",
+	"vector-more-actions": "आउ",
+	"vector-searchsuggest-containing": "<strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong> बाला पन्ना खोज"
+}

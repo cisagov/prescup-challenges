@@ -1,0 +1,56 @@
+{% from "macros.html" import render_errors with context %}
+
+{% extends "base.html" %}
+
+{% block title %}Support – {{ super() }}{% endblock %}
+
+{% block header %}
+<div class="mb-4">
+    <h1 class="support-header mb-0" style="padding-left: 32px;">Support</h1>
+</div>
+<div class="container mb-4">
+    <markdown>
+        <h1>Welcome to <strong>President's Cup Cybersecurity Competition</strong> Support!</h1>
+        <h4>Please be sure to review the <a role="link" target="_blank" href="/"
+                rel="nofollow noopener noreferrer">landing page</a> for support hours of operation during active
+            competition windows.</h4>
+    </markdown>
+    <hr>
+</div>
+{% endblock %}
+
+{% block sections %}{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="h4 mb-0">Tickets</h1>
+    <a href="{{ url_for('new_ticket') }}" class="btn btn-success" style="background-color:#41ad57">Create Ticket</a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-dark align-middle">
+        <thead>
+            <tr>
+                <th style="width:120px; background-color: #000000;">Key</th>
+                <th style="background-color: #000000;">Summary</th>
+                <th style="width:200px; background-color: #000000;">Created</th>
+                <th style="width:200px; background-color: #000000;">Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for t in tickets %}
+            <tr>
+                <td style="background-color: #000000;"><a href="{{ url_for('view_ticket', key=t.key) }}">{{ t.key }}</a></td>
+                <td style="background-color: #000000;"><a href="{{ url_for('view_ticket', key=t.key) }}">{{ t.title }}</a><br /><span style="color: #999">{{t.creator_name}}</span></td>
+                <td style="background-color: #000000;">{{ (t.createdAt.strftime("%m/%d/%y %I:%M %p") or "") }}</td>
+                <td style="background-color: #000000;">{{ (t.updatedAt.strftime("%m/%d/%y %I:%M %p") or "") }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="4" class="text-center text-secondary py-4" style="background-color: #000000;">No tickets yet.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

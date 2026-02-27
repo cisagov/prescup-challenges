@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Welcome to Second-Order Pawn and Auction!</h1>
+<p class="lead">More than just second-hand — this is Second Order.</p>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Sign Up!</h5>
+                <p class="card-text">New to Second Order?</p>
+                <a href="/register" class="btn btn-primary">Create your account!</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Already a member?</h5>
+                <p class="card-text">Welcome back!</p>
+                <a href="/login" class="btn btn-secondary">Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="lead" style="padding-top: 5em;">Explore featured pawn items only available in person at our stores!</p>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for item in items %}
+    <div class="col">
+        <div class="card shadow-sm h-100">
+            <a href="/pawn/{{ item.id }}"><img src="{{ url_for('static', filename='img/pawn/' + item.image) }}"
+                class="card-img-top"
+                alt="{{ item.name }}"
+                style="height: 180px; object-fit: cover;"></a>
+            <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text text-muted">{{ item.description }}</p>
+                <p class="fw-bold">${{ item.price }}</p>
+                <a href="/pawn/{{ item.id }}" class="btn btn-outline-primary btn-sm">View Details</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

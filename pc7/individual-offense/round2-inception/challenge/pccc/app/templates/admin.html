@@ -1,0 +1,58 @@
+{% from "macros.html" import render_errors with context %}
+
+{% extends "base.html" %}
+
+{% block title %}Admin – {{ super() }}{% endblock %}
+
+{% block styles %}
+<style>
+    .pop-light {
+        background-color: #dadada;
+        color: #303030;
+        border: #999 solid 2px;
+        border-radius: .25rem;
+    }
+</style>
+{% endblock %}
+
+{% block sections %}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-left">
+    <h2>Admin - Game Configuration</h2>
+    <p>Upload the challenge configuration file and game theme file below.</p>
+    <div><a href="/static/game_original.yml">Original Challenge Configuration</a></div>
+    <div><a href="/static/game_theme_original.zip">Original Themes folder</a></div>
+</div>
+
+<div class="row justify-content-left p-3">
+    <div class="col-md-6 col-lg-5">
+        <div class="card pop-light">
+            <div class="card-header"><h2>Upload Game Configuration</h2></div>
+            <div class="card-body p-4">
+                <form method="post" action="{{ url_for('upload_game') }}" enctype="multipart/form-data" class="mb-4">
+                <input type="hidden" name="csrf_token" value="{{ csrf }}">
+                <div class="input-group">
+                    <input class="form-control" type="file" name="game_yaml" accept=".yml,.yaml,text/yaml,application/x-yaml">
+                    <button class="btn btn-success" type="submit">Upload</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-5">
+        <div class="card pop-light">
+            <div class="card-header"><h2>Upload Game Theme Zip</h2></div>
+            <div class="card-body p-4">
+                <form method="post" action="{{ url_for('upload_theme') }}" enctype="multipart/form-data" class="mb-4">
+                <input type="hidden" name="csrf_token" value="{{ csrf }}">
+                <div class="input-group">
+                    <input class="form-control" type="file" name="game_zip" accept=".zip,application/zip,application/x-zip-compressed">
+                    <button class="btn btn-success" type="submit">Upload</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

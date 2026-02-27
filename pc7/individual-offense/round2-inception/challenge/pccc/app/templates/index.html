@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+
+{% block title %}Home – {{ super() }}{% endblock %}
+
+{% block styles %}
+  <style>
+    /* Featured + Search row */
+    .section-head {
+      padding: 1rem 0 1.25rem;
+    }
+
+    .search-box .form-control {
+      background: #ffffff;
+      border: 1px solid rgba(255, 255, 255, .08);
+      color: var(--text);
+    }
+
+    .search-box .form-control::placeholder {
+      color: #7f8892;
+    }
+
+    .search-box .form-control:focus {
+      border-color: rgba(0, 209, 255, .6);
+      box-shadow: 0 0 0 .2rem rgba(0, 209, 255, .15);
+    }
+
+
+    /* Game card images */
+    .game-card {
+      background: #0f1216;
+      border: 1px solid rgba(255, 255, 255, .06);
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .game-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 255, 255, .14);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    }
+
+    /* Maintain a poster-like aspect ratio for the card images */
+    .ratio-3x4 {
+      --bs-aspect-ratio: calc(4 / 3 * 100%);
+    }
+
+    .object-fit-cover {
+      object-fit: cover;
+    }
+
+    /* Hover overlay for game cards */
+    .game-card {
+      position: relative;
+    }
+
+    .game-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.25rem;
+      color: #fff;
+      background: linear-gradient(180deg, rgba(0, 0, 0, .15) 0%, rgba(0, 0, 0, .55) 45%, rgba(0, 0, 0, .85) 100%);
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity .25s ease, transform .25s ease;
+    }
+
+    .game-card:hover .game-overlay,
+    .game-card:focus-within .game-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .overlay-title {
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+
+    .overlay-muted {
+      color: #cdd6df;
+      opacity: .9;
+    }
+
+    .cta-panel {
+      border: 1px solid rgb(65, 173, 87);
+      color: rgb(65, 173, 87);
+      border-radius: .9rem;
+      padding: 1.5rem 1.25rem;
+      background: rgba(0, 0, 0, 0);
+      backdrop-filter: blur(2px) saturate(120%);
+    }
+
+    .cta-panel .cta-text {
+      font-weight: 800;
+      line-height: 1.05;
+    }
+
+    .cta-panel:hover {
+      color: #ffffff;
+      background-color: rgb(65, 173, 87);
+    }
+
+    .badge-corner {
+      position: absolute;
+      right: 1rem;
+      bottom: .75rem;
+      background: rgba(0, 0, 0, .55);
+      border: 1px solid rgba(255, 255, 255, .2);
+      color: #d8f7ff;
+      border-radius: .5rem;
+      padding: .25rem .5rem;
+      font-weight: 700;
+      letter-spacing: .5px;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+<div class="container-xxl">
+    <div class="row g-4">
+    <!-- Card 1 -->
+    <div class="col-lg-3 col-md-4 col-6 mb-4">
+        <div class="game-card card bg-dark comp-card h-100 w-100 mx-auto ratio ratio-3x4"
+        style="background-size: contain; background-image: url(&quot;{{ url_for('static', filename='imgs/teams.webp')}}&quot;);">
+        <div class="game-front position-absolute" style="top: 15px; left: 2px;">
+            <h2><span
+                class="badge badge-indigo cool-badge m-1 lb-font text-upper"><span
+                ></span></span></h2>
+        </div>
+        <div class="d-flex flex-column p-0 h-100">
+            <div class="game-tag-bg px-1 my-auto">
+            <h1 class="text-white text-center"> </h1>
+            </div>
+            <h2><span class="badge d-flex justify-content-end m-1 lb-font text-upper">Finals</span></h2>
+        </div>
+        <div class="game-overlay">
+            <div class="d-flex flex-column gap-3 pt-2">
+                <div>
+                <div class="overlay-title h4 mb-0 d-flex align-items-center gap-2">Registration <i
+                    class="bi bi-people ms-1"></i></div>
+                <div class="fst-italic overlay-muted">Closed</div>
+                </div>
+                <div>
+                <div class="overlay-title h4 mb-0 d-flex align-items-center gap-2">Competition <i
+                    class="bi bi-controller ms-1"></i></div>
+                <div class="overlay-muted">Ended 7d ago</div>
+                </div>
+            </div>
+            <div class="pb-2">
+                <a href="#" class="text-decoration-none" onclick="for(;true;){alert('Subconscious block...')}">
+                <div class="cta-panel text-center">
+                    <div class="cta-text display-6 mb-0">Open<br />Game</div>
+                </div>
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-lg-3 col-md-4 col-6 mb-4">
+        <div class="game-card card bg-dark comp-card h-100 w-100 mx-auto ratio ratio-3x4"
+        style="background-size: contain; background-image: url(&quot;{{ url_for('static', filename='themes/'+game['cover'])}}&quot;);">
+        <div class="game-front position-absolute" style="top: 15px; left: 2px;">
+            <h2><span
+                class="badge badge-indigo cool-badge m-1 lb-font text-upper"><span
+                ></span></span></h2>
+        </div>
+        <div class="d-flex flex-column p-0 h-100">
+            <div class="game-tag-bg px-1 my-auto">
+            <h1 class="text-white text-center"> </h1>
+            </div>
+            <h2><span class="badge d-flex justify-content-end m-1 lb-font text-upper">Finals</span></h2>
+        </div>
+        <div class="game-overlay">
+            <div class="d-flex flex-column gap-3 pt-2">
+                <div>
+                <div class="overlay-title h4 mb-0 d-flex align-items-center gap-2">Registration <i
+                    class="bi bi-people ms-1"></i></div>
+                <div class="fst-italic overlay-muted">Closed</div>
+                </div>
+                <div>
+                <div class="overlay-title h4 mb-0 d-flex align-items-center gap-2">Competition <i
+                    class="bi bi-controller ms-1"></i></div>
+                <div class="overlay-muted">Running now</div>
+                </div>
+            </div>
+            <div class="pb-2">
+                <a href="/game" class="text-decoration-none">
+                <div class="cta-panel text-center">
+                    <div class="cta-text display-6 mb-0">Open<br />Game</div>
+                </div>
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-lg-3 col-md-4 col-6 mb-4">
+        <div class="game-card card bg-dark comp-card h-100 w-100 mx-auto ratio ratio-3x4"
+        style="background-size: contain; background-image: url(&quot;{{ url_for('static', filename='imgs/trackA.webp')}}&quot;);">
+        <div class="game-front position-absolute" style="top: 15px; left: 2px;">
+            <h2><span
+                class="badge badge-indigo cool-badge m-1 lb-font text-upper"><span
+                ></span></span></h2>
+        </div>
+        <div class="d-flex flex-column p-0 h-100">
+            <div class="game-tag-bg px-1 my-auto">
+            <h1 class="text-white text-center"> </h1>
+            </div>
+            <h2><span class="badge d-flex justify-content-end m-1 lb-font text-upper">Finals</span></h2>
+        </div>
+        <div class="game-overlay">
+            <div class="d-flex flex-column gap-3 pt-2">
+                <div>
+                <div class="overlay-title h4 mb-0 d-flex align-items-center gap-2">Registration <i
+                    class="bi bi-people ms-1"></i></div>
+                <div class="fst-italic overlay-muted">Closed</div>
+                </div>
+                <div>
+                <div class="overlay-title h4 mb-0 d-flex align-items-center gap-2">Competition <i
+                    class="bi bi-controller ms-1"></i></div>
+                <div class="overlay-muted">Running now</div>
+                </div>
+            </div>
+            <div class="pb-2">
+                <a href="#" class="text-decoration-none" onclick="for(;true;){alert('Subconscious block...')}">
+                <div class="cta-panel text-center">
+                    <div class="cta-text display-6 mb-0">Open<br />Game</div>
+                </div>
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock %}

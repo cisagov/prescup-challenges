@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Traffic Controller — Front Panel (Bootstrap)</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  <style>
+    :root{
+      --panel: #f6f8fb;        /* outer chassis */
+      --panel-edge:#d7dbe4;
+      --panel-hi: #ffffff;
+      --panel-shadow: rgba(37,44,63,.25);
+      --bezel:#f0f3f8;         /* inner bezel */
+      --bezel-line:#cfd5df;
+      --screen-bg:#0e1116;     /* text LCD */
+      --screen-line:#2a2f39;
+      --screen-text:#e7f1ff;
+      --key-face:#f9fbff;      /* keypad */
+      --key-face2:#eef2f8;
+      --key-border:#cfd6e3;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; background:linear-gradient(180deg,#f7f9fc 0%,#edf1f7 100%); font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif; color:#263042}
+
+    /* Fill available viewport but stay inside padding */
+    .device-wrap{ height: calc(100vh - 2rem); width: calc(100vw - 2rem); }
+
+    .device{ position:relative; height:100%; width:100%; border-radius:34px; background:var(--panel); border:1px solid var(--panel-edge);
+      box-shadow:-18px -18px 30px var(--panel-hi) inset, 18px 18px 35px rgba(30,36,52,.18) inset, 0 28px 44px -14px var(--panel-shadow);
+    }
+
+    .bezel{ position:absolute; inset:22px; border-radius:30px 30px 40px 40px / 30px 30px 40px 40px; background:linear-gradient(180deg,var(--bezel) 0%, #e7ebf4 100%); border:1px solid var(--bezel-line);
+      box-shadow: 0 1px 0 var(--panel-hi) inset, 0 16px 20px -10px rgba(20,30,50,.25) inset; padding:22px;
+      display:flex; flex-direction:column; gap:16px; }
+
+    /* grid area fills space responsively */
+    .panel-grid{ flex:1 1 auto; }
+
+    .screen{ height:100%; border-radius:14px; border:2px solid var(--screen-line); background:linear-gradient(180deg,#0b0f14 0%, var(--screen-bg) 100%);
+      box-shadow:0 6px 14px rgba(0,0,0,.55) inset, 0 1px 0 rgba(255,255,255,.05); padding:16px; }
+    .screen pre{ margin:0; width:100%; height:100%; color:var(--screen-text); font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size: clamp(12px, 1.3vh, 15px); line-height:1.28; white-space:pre; overflow:auto; }
+
+    .keypad{ background:#f7f9fd; border:1px solid var(--bezel-line); border-radius:10px; padding:14px; height:100%;
+      box-shadow:0 6px 14px rgba(0,0,0,.08), 0 1px 0 var(--panel-hi) inset; }
+    .key{ height:48px; border-radius:10px; border:1px solid var(--key-border); background:linear-gradient(180deg,var(--key-face) 0%, var(--key-face2) 100%); font-weight:600; box-shadow:0 1px 0 var(--panel-hi) inset, 0 8px 14px rgba(30,36,52,.12); }
+    .key:active{ transform:translateY(1px); box-shadow:0 0 0 1px var(--key-border) inset, 0 3px 8px rgba(0,0,0,.18) inset; }
+    .btn-enter{ color:#fff; background:linear-gradient(180deg,#2a77ff 0%, #1751e5 100%); border-color:#1b4fd7; box-shadow:0 1px 0 rgba(255,255,255,.25) inset, 0 10px 16px rgba(36,82,226,.28); }
+
+  </style>
+</head>
+<body class="p-3">
+  <!-- Pssst! It's possible to completely mess things up for yourself here! If you do, visit /reset to restore original (locked) state/timings. Under 5k ;) -->
+  <div class="device-wrap">
+    <div class="device">
+      <div class="bezel">
+        <div class="panel-grid container-fluid h-100">
+          <div class="row h-100 g-3">
+            <!-- Screen (fills remaining height) -->
+            <div class="col-12 col-lg-8 d-flex">
+              <div class="screen flex-fill">
+                <pre id="panel">TEXT</pre>
+              </div>
+            </div>
+            <!-- Keypad -->
+            <div class="col-12 col-lg-4 d-flex h-25">
+              <aside class="keypad flex-fill d-flex flex-column">
+                <div class="row row-cols-3 g-2">
+                  <div class="col"><button class="btn key w-100" data-key="1">1</button></div>
+                  <div class="col"><button class="btn key w-100" data-key="2">2</button></div>
+                  <div class="col"><button class="btn key w-100" data-key="3">3</button></div>
+                  <div class="col"><button class="btn key w-100" data-key="4">4</button></div>
+                  <div class="col"><button class="btn key w-100" data-key="5">5</button></div>
+                  <div class="col"><button class="btn key w-100" data-key="6">6</button></div>
+                  <div class="col"><button class="btn key w-100" data-key="7">7</button></div>
+                  <div class="col"><button class="btn key w-100" data-key="8">8</button></div>
+                  <div class="col"><button class="btn key w-100" data-key="9">9</button></div>
+                  <div class="col"><button class="btn key btn-enter w-100" data-key="MENU">MENU</button></div>
+                  <div class="col"><button class="btn key w-100" data-key="0">0</button></div>
+                  <div class="col"><button class="btn key btn-enter w-100" data-key="ENTER">ENTER</button></div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+  <script>
+  (() => {
+    const $panel = document.getElementById('panel');
+    const $keys = document.querySelectorAll('.keypad .key');
+    let ws;
+
+    function connect(){
+      const proto = location.protocol === 'https:' ? 'wss' : 'ws';
+      ws = new WebSocket(`${proto}://${location.host}/ws`);
+
+      ws.onopen = () => console.log('[ws] connected');
+      ws.onmessage = (e) => {
+        const msg = e.data;
+        // If it's JSON (ack/key events), handle; otherwise treat as panel text
+        if (msg && msg[0] === '{'){
+          try {
+            const data = JSON.parse(msg);
+            if (data.type === 'ack'){
+              const btn = document.querySelector(`.key[data-key="${CSS.escape(data.key)}"]`);
+              if (btn){ btn.classList.remove('pressed'); btn.classList.add('flash'); setTimeout(()=>btn.classList.remove('flash'), 180); }
+              return;
+            }
+            if (data.type === 'key'){
+              // broadcast from other clients; optional visual pulse
+              const btn = document.querySelector(`.key[data-key="${CSS.escape(data.key)}"]`);
+              if (btn){ btn.classList.add('flash'); setTimeout(()=>btn.classList.remove('flash'), 120); }
+              return;
+            }
+          } catch(_e) {}
+        }
+        $panel.textContent = msg;
+      };
+      ws.onclose = () => setTimeout(connect, 1200);
+      ws.onerror = () => { try{ ws.close(); }catch(_e){} };
+    }
+
+    function sendKey(key){
+      if (ws && ws.readyState === 1){
+        try { ws.send(JSON.stringify({type:'key', key})); } catch(_e){}
+      }
+    }
+
+    $keys.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.key || btn.textContent.trim();
+        btn.classList.add('pressed');
+        sendKey(key);
+      });
+    });
+
+    connect();
+  })();
+  </script>
+</html>

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO leaderboard (name, score) VALUES (?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "30ae7451d0a49cfbf774ac3bac26f446a8a9dbe40937fa3f4efc3da31c79d388"
+}

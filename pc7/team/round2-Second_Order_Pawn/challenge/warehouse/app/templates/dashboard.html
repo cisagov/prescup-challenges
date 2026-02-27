@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Welcome, {{ current_user.username }}!</h2>
+<p class="text-muted">Choose what you'd like to do:</p>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+
+  <div class="col">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Your Items</h5>
+        <p class="card-text">Review the items you've dropped off for auction.</p>
+        <a href="{{ url_for('item_list') }}" class="btn btn-primary">View Your Items</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Drop Off a New Item</h5>
+        <p class="card-text">Ready to say goodbye? Drop off your items now!</p>
+        <a href="{{ url_for('create_item') }}" class="btn btn-outline-primary">Start a New Item Drop-Off</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Pickups</h5>
+        <p class="card-text">View and claim items that are ready for pickup.</p>
+        <a href="{{ url_for('pickups') }}" class="btn btn-outline-info">View Pickups</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Return to Auction Site</h5>
+        <p class="card-text">Head back to the pawnshop and see what’s up for grabs.</p>
+        <a href="http://pawn.secondorder.pccc" target="_blank" class="btn btn-outline-secondary">Go to Auction Site</a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+{% endblock %}

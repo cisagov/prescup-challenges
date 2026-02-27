@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"ಮಲ್ನಾಡಾಚ್ ಕೊಂಕ್ಣೊ"
+		]
+	},
+	"monobook-more-actions": "ಇನ್ನಷ್ಟು",
+	"monobook-view-history": "ಇತಿಹಾಸ",
+	"monobook-action-undelete": "{{PLURAL:$1|ಒಂದು ಸಂಪಾದನೆಯ|$1 ಸಂಪಾದನೆಗಳ}} ಅಳಿಸುವಿಕೆಯನ್ನು ತೊಡೆದುಹಾಕು"
+}

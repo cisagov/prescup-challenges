@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}{{ item.name if item else "Item" }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="mb-3">{{ item.name if item else "Unnamed Item" }}</h2>
+            <p class="text-muted">{{ item.description if item else "No description provided." }}</p>
+
+            <div class="d-grid gap-2 d-md-block">
+                <a href="/items" class="btn btn-link">Back to Items</a>
+            </div>
+        </div>
+    </div>
+
+    {% if item.documents %}
+    <div class="row mt-5">
+        <div class="col">
+            <h5>Attached Documents</h5>
+            <ul class="list-group list-group-flush">
+                {% for doc in item.documents %}
+                    <li class="list-group-item">
+                        <a href="{{ url_for('static', filename='uploads/' ~ doc.filename) }}" target="_blank">
+                            {{ doc.description or doc.filename }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

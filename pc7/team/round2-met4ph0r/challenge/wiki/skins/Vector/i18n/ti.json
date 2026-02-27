@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joanmp17"
+		]
+	},
+	"skinname-vector": "ቨክተር",
+	"vector-opt-out": "ናብ ናይ ቀደም ትርኢት ለውጥ",
+	"vector-languages": "ቋንቋታት",
+	"vector-language-button-label": "{{PLURAL:$1|$1 ቋንቋ|$1 ቋንቋታት}}",
+	"vector-no-language-button-label": "ቋንቋታት ወስኽ",
+	"vector-action-addsection": "ክፋል ወስኽ",
+	"vector-action-delete": "ሰርዝ",
+	"vector-action-move": "ኣንቀሳቕስ",
+	"vector-action-protect": "ሓልው",
+	"vector-action-unprotect": "ሓለዋ ለውጥ",
+	"vector-view-create": "ፍጠር",
+	"vector-view-edit": "ኣመዓራርይ",
+	"vector-view-history": "ታሪኽ ርኣይ",
+	"vector-view-view": "ኣንብብ",
+	"vector-view-viewsource": "ኮድ ርኣይ",
+	"vector-jumptonavigation": "ናብ ዳህሳስ ኪድ",
+	"vector-jumptosearch": "ናብ ምድላይ ኪድ",
+	"vector-jumptocontent": "ናብ ትሕዝቶ ኪድ",
+	"vector-more-actions": "ተወሳኺ",
+	"vector-toc-heading": "ትሕዝቶታት",
+	"vector-toc-toggle-position-title": "ሕባእ",
+	"vector-toc-beginning": "መጀመርታ",
+	"vector-toc-menu-tooltip": "ሰሌዳ ትሕዝቶታት",
+	"vector-2022-prefs-talkpage": "[[mw:Talk:Reading/Web/Desktop_Improvements|ምይይጥ]]"
+}

@@ -1,0 +1,55 @@
+@import '../../minerva.less/minerva.variables.less';
+@import 'mediawiki.mixins.less';
+
+// stylelint-disable no-descending-specificity, selector-max-id
+
+@menuLinkLineHeight: 24px;
+
+// .menu
+#mw-mf-page-left {
+	ul {
+		&:first-child {
+			li:first-child {
+				border-top: 0;
+			}
+		}
+
+		li {
+			background-color: @background-color-base;
+			position: relative; // ensure the logout link in beta can be position absolute
+			border-top: 1px solid @colorGray14;
+			// offset the border for the icon by 1px
+			margin-top: -1px;
+
+			&:first-child {
+				border-top: 0;
+			}
+
+			a {
+				color: @colorGray5;
+				// Overrides .mw-ui-icon `display: inline-block` so that the text is
+				// vertically centered. It also avoids whitespace issues.
+				display: flex;
+				align-items: center;
+				// Overrides .mw-ui-icon `line-height: 0` property so that the text is
+				// visible.
+				line-height: inherit;
+				max-width: 100%;
+				padding: @menuLinkLineHeight / 2 10px @menuLinkLineHeight / 2 15px;
+
+				&:hover {
+					box-shadow: inset 4px 0 0 0 @colorProgressive;
+					text-decoration: none;
+				}
+
+				span {
+					// Overflow text is ellipsized in one line.
+					.text-overflow( @visible: false );
+					font-size: @font-size-minerva-small;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+// stylelint-enable no-descending-specificity, selector-max-id

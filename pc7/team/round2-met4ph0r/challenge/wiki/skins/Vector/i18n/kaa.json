@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Atabek",
+			"Nurlan"
+		]
+	},
+	"vector-language-button-label": "{{PLURAL:$1|$1 til}}",
+	"vector-action-addsection": "Tema qosıw",
+	"vector-action-delete": "Óshiriw",
+	"vector-action-move": "Kóshiriw",
+	"vector-action-protect": "Qorǵaw",
+	"vector-action-undelete": "Qayta tiklew",
+	"vector-action-unprotect": "Qorǵawdı ózgertiw",
+	"vector-view-create": "Jaratıw",
+	"vector-view-edit": "Redaktorlaw",
+	"vector-view-history": "Tariyxın kóriw",
+	"vector-view-view": "Oqıw",
+	"vector-view-viewsource": "Kodın kóriw",
+	"vector-more-actions": "Jáne",
+	"vector-searchsuggest-containing": "<strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong> nı óz ishine alǵan betler ushın izlew"
+}

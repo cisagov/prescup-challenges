@@ -1,0 +1,13 @@
+@import '../../minerva.less/minerva.variables.less';
+@import '../../minerva.less/minerva.mixins.less';
+
+.mw-search-createlink,
+.mw-search-profile-tabs {
+	display: none;
+}
+
+@media all and ( min-width: @width-breakpoint-tablet ) {
+	#search { // stylelint-disable-line selector-max-id
+		display: none;
+	}
+}
