@@ -1,0 +1,66 @@
+@import '../../minerva.less/minerva.variables.less';
+@import '../../minerva.less/minerva.mixins.less';
+
+.overlay {
+	textarea {
+		.editor-textarea();
+	}
+
+	.header-cancel {
+		padding-left: 4px;
+	}
+
+	.license {
+		.secondary-text();
+	}
+}
+
+.overlay-header-container {
+	// Overrides padding added by .header-container
+	padding: 0;
+}
+
+.overlay-header {
+	height: @overlayHeaderHeight;
+
+	.header-chrome & {
+		height: @siteHeaderHeight;
+	}
+
+	.mw-ui-anchor,
+	.mw-ui-button:not( .mw-ui-icon ) {
+		height: @overlayHeaderHeight;
+
+		.header-chrome & {
+			height: @siteHeaderHeight;
+		}
+	}
+
+	.overlay-title {
+		padding: @headerVerticalPadding 0;
+
+		&:last-child {
+			// Reserve space to the right in case the search form in the header or
+			// overlay title in the overlay header is the last element. Use @iconGutterWidth
+			// because there is a hamburger or close/back icon next to this element and
+			// the space between them is exactly that.
+			padding-right: @iconGutterWidth;
+		}
+	}
+}
+
+.overlay-header-container + .overlay-content {
+	padding-top: @overlayHeaderHeight;
+
+	.header-chrome& {
+		padding-top: @siteHeaderHeight;
+	}
+}
+
+@media all and ( min-width: @width-breakpoint-desktop ) {
+	.overlay-header {
+		// Make sure the close button and secondary button icon images are aligned
+		// with the content.
+		max-width: @contentMaxWidthTablet + ( 2 * @iconGutterWidth );
+	}
+}

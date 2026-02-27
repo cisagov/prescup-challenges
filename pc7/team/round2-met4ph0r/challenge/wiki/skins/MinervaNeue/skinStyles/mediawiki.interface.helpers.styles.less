@@ -1,0 +1,17 @@
+/**
+ * Helper classes for special pages with changeslist elements.
+ */
+
+.mw-changeslist-links {
+	& > span:before {
+		content: '@{msg-parentheses-start}';
+	}
+
+	& > span:not( :first-child ):before {
+		content: '@{msg-pipe-separator}';
+	}
+
+	& > span:last-child:after {
+		content: '@{msg-parentheses-end}';
+	}
+}

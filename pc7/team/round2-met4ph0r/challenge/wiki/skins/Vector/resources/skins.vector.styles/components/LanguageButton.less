@@ -1,0 +1,99 @@
+// The use of mixins.buttons requires @font-size-base to be defined for this to work in Storybook
+@import '../../common/variables.less';
+@import 'mediawiki.mixins.less';
+
+// Note vector-feature-language-in-header-enabled class is not used here as that class
+// only applies to main page.
+// This must be limited to mw-body-header as the mw-portlet-lang class is shared with
+// the language portlet that can display in the sidebar.
+.mw-body-header .mw-portlet-lang {
+	// FIXME [review whether margin-top is needed] center vertically in heading.
+	margin-top: 2px;
+	box-sizing: border-box;
+	height: @height-button-lang;
+
+	.mw-ui-icon:before {
+		// Put icon on correct standard normal state color.
+		opacity: 0.87;
+	}
+
+	// If there are no languages and JavaScript is not enabled there is no fallback so we hide
+	// the button altogether.
+	.mw-portlet-lang-heading-0 {
+		.client-nojs & {
+			display: none;
+		}
+	}
+
+	.vector-menu-heading {
+		// Prevent select of span text "X languages"
+		user-select: none;
+		// Remove opacity on language button (it applies to more menu because of label color).
+		opacity: 1;
+
+		.vector-menu-heading-label {
+			// Special treatment for language button, based on Vector font-size
+			font-size: @font-size-base;
+		}
+
+		// T291286: Temporarily use progressive ULS style
+		&.mw-ui-progressive.mw-ui-quiet {
+			.mw-ui-icon:before {
+				// Ensure inverted language icon is white
+				opacity: 1;
+			}
+
+			&:after {
+				// Invert arrow color
+				background-image: url( ../common/images/arrow-down-progressive.svg );
+				opacity: 1;
+			}
+		}
+	}
+
+	input:active + .vector-menu-heading {
+		&.mw-ui-progressive.mw-ui-quiet {
+			.mw-ui-icon {
+				// stylelint-disable-next-line plugin/no-unsupported-browser-features
+				filter: brightness( 0 ) invert( 1 );
+			}
+
+			&:after {
+				background-image: url( ../common/images/arrow-down-invert.svg );
+			}
+		}
+	}
+
+	.vector-menu-content {
+		top: auto;
+		left: -@border-width-base;
+		right: -@border-width-base;
+		// align borders of open menu align with button
+		box-sizing: border-box;
+		max-height: 65vh;
+		overflow: auto;
+
+		// Adds to the show/hide technique in MenuDropdown.less with
+		// display to prevent rendering and long scrolling on Main page
+		display: none;
+
+		li a {
+			font-size: inherit;
+		}
+	}
+
+	.vector-menu-checkbox:checked ~ .vector-menu-content {
+		display: block;
+	}
+
+	.after-portlet {
+		// ensure there is a visual separation between the language links and additional links.
+		margin-top: 10px;
+	}
+}
+
+// Hides language button with CSS, ensures language button is in DOM for temporary JS hack for interwiki links
+// Temporary solution to T287206, can be removed when ULS dialog includes interwiki links
+#p-lang-btn.mw-portlet-empty {
+	display: none;
+}

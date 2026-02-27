@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Angpradesh",
+			"Proabscorp!"
+		]
+	},
+	"vector-language-button-label": "{{PLURAL:$1|$1 भाषा|$1 भाषा सिनी}}",
+	"vector-action-addsection": "विषय जोड़ौ",
+	"vector-action-delete": "मेटाबौ",
+	"vector-action-move": "स्थानांतरित करौ",
+	"vector-action-protect": "सुरक्षित करौ",
+	"vector-view-create": "बनाबौ",
+	"vector-view-edit": "संपादन करौ",
+	"vector-view-history": "इतिहास देखौ",
+	"vector-view-view": "पढ़ौ",
+	"vector-more-actions": "आरू जादा",
+	"vector-searchsuggest-containing": "<strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong> सँ जुड़लो पन्ना खोजौ"
+}

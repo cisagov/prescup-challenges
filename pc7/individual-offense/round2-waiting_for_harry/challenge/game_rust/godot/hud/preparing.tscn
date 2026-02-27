@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://78bby0j6o21k"]
+
+[ext_resource type="Theme" uid="uid://com3kmvp0a2tj" path="res://base_theme.tres" id="2_xdf1s"]
+
+[node name="Preparing" type="HudPreparing"]
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5
+offset_top = -39.0
+offset_right = 32.5
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_xdf1s")
+text = "3!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CountdownTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="CountdownTimer" to="." method="on_countdown_timeout"]

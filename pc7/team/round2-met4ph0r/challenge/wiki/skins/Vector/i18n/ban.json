@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Adi Mayndra",
+			"Amire80",
+			"BASAbali",
+			"Carma citrawati",
+			"Chinamoonroll",
+			"Joseagush",
+			"NoiX180"
+		]
+	},
+	"vector-opt-out": "Alih nuju cingakan sadurungné",
+	"vector-opt-out-tooltip": "Uahin setélan Ida antuk mawali nuju cingakan sadurungné saking kules puniki (Vektor warisan)",
+	"vector-action-toggle-sidebar": "Tugel wilah sisi",
+	"vector-language-button-label": "{{PLURAL:$1|$1 basa}}",
+	"vector-action-addsection": "Weweh topik",
+	"vector-action-delete": "Usap",
+	"vector-action-move": "Gingsirang",
+	"vector-action-protect": "Saib",
+	"vector-action-undelete": "Tan kausap",
+	"vector-action-unprotect": "Uah saiban",
+	"vector-view-create": "Kardi",
+	"vector-view-edit": "Uah",
+	"vector-view-history": "Cingak babad",
+	"vector-view-view": "Wacén",
+	"vector-view-viewsource": "Cingak wit",
+	"vector-jumptonavigation": "Cebur nuju navigasi",
+	"vector-jumptosearch": "Cebur nuju parerehan",
+	"vector-jumptocontent": "Cebur nuju daging",
+	"vector-more-actions": "Lianan",
+	"vector-search-loader": "Ngamuat saran parerehan",
+	"vector-searchsuggest-containing": "Selehin kaca sané madaging <strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong>",
+	"vector-anon-user-menu-pages-learn": "pelajahin malih"
+}

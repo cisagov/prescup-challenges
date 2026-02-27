@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqaix3ldiugmj"]
+
+[ext_resource type="PackedScene" uid="uid://bsk1jadna1ri5" path="res://hud/end.tscn" id="2_svhta"]
+[ext_resource type="PackedScene" uid="uid://ncab4rymkdwq" path="res://hud/start.tscn" id="3_fjv1a"]
+[ext_resource type="PackedScene" uid="uid://hx2ks26iemy6" path="res://hud/play.tscn" id="4_0ivg5"]
+[ext_resource type="PackedScene" uid="uid://b0o6dhaq0k26b" path="res://hud/settings.tscn" id="5_svhta"]
+[ext_resource type="PackedScene" uid="uid://78bby0j6o21k" path="res://hud/preparing.tscn" id="6_fjv1a"]
+
+[node name="HUD" type="Hud"]
+
+[node name="End" parent="." instance=ExtResource("2_svhta")]
+visible = false
+
+[node name="Start" parent="." instance=ExtResource("3_fjv1a")]
+
+[node name="Play" parent="." instance=ExtResource("4_0ivg5")]
+visible = false
+
+[node name="Preparing" parent="." instance=ExtResource("6_fjv1a")]
+visible = false
+
+[node name="Settings" parent="." instance=ExtResource("5_svhta")]
+visible = false
+
+[connection signal="finish" from="End" to="." method="on_game_over_finish"]
+[connection signal="settings_return" from="Start" to="." method="on_settings"]
+[connection signal="start_game" from="Start" to="." method="on_start_game"]
+[connection signal="finish" from="Preparing" to="." method="on_preparing_finish"]
+[connection signal="settings_finished" from="Settings" to="." method="on_settings_return"]

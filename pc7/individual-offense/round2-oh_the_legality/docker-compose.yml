@@ -1,0 +1,141 @@
+x-challenge:
+  name: "Oh The Legality"
+  description: |
+    # Oh The Legality
+
+    You are hired to infiltrate a law office network and exfiltrate data from it.
+
+    **NICE Work Roles**
+
+    - [Exploitation Analyst](https://niccs.cisa.gov/tools/nice-framework)
+
+    **NICE Tasks**
+
+    - [T0556](https://niccs.cisa.gov/tools/nice-framework): Perform network reconnaissance and vulnerability analysis.
+    - [T0558](https://niccs.cisa.gov/tools/nice-framework): Conduct exploitation of target systems to gain unauthorized access.
+    - [T0563](https://niccs.cisa.gov/tools/nice-framework): Exfiltrate data from compromised systems.
+
+    ## Background
+
+    A company has been sued by another company. The plaintiff has hired you to break into the defendant's network and steal any information you can about the legal case and exfiltrate the case PDF file. Luckily for you, they host a website for you to target to start your infiltration.
+
+    ## Getting Started
+
+    Here are your tasks:
+
+    1. Exploit the vulnerability on the web server at `http://site` and gain root access to it.
+    1. Exploit and gain access to the machine that has your PDF on it.
+    1. Exfiltrate the PDF to your machine and upload it using the `http://grader` site.
+
+
+    ## System and Tool Credentials
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |kali|user|password|
+    |`http://site`|||
+    |`http://grader`|||
+
+
+  summary: |
+    Infiltrate a law office and exfiltrate their data.
+
+  templates:
+    site_flag: &site_template "fake.bothify('PCCC{site_??_####}', letters='ABCDEF0123456789')"
+    fileserver_flag: &fileserver_template "fake.bothify('PCCC{fileserver_??_####}', letters='ABCDEF0123456789')"
+    pdf_flag: &pdf_template "fake.bothify('PCCC{pdf_??_####}', letters='ABCDEF0123456789')"
+
+  variables:
+    
+    #site variable
+    site_flag:
+      template: *site_template
+      default: &site_template_default "PCCC{Site_Got}"
+
+    #fileserver variable
+    fileserver_flag:
+      template: *fileserver_template
+      default: &fileserver_template_default "PCCC{attachment_Satisfied}"
+    
+    #pdf variable
+    pdf_flag:
+      template: *pdf_template
+      default: &pdf_template_default "PCCC{attachment_Satisfied}"
+
+  #total points 3585
+  questions:
+    - name: "Question 1"
+      body: "What is the token value on the site machine?"
+      placeholder: "PCCC{token_value}"
+      points: 1075 #30%
+      answer: *site_template_default
+      max_attempts: 3
+
+    - name: "Question 2"
+      body: "What is the token value on the internal server?"
+      placeholder: "PCCC{token_value}"
+      points: 1076 #30%
+      answer: *fileserver_template_default
+      max_attempts: 3
+      
+    - name: "Question 3"
+      body: "What is the token value from the grader after submitting the pdf file?"
+      placeholder: "PCCC{token_value}"
+      points: 1434 # 40%
+      answer: *pdf_template_default
+      max_attempts: 3
+
+
+services:
+  grader:
+    build: ./challenge/grader
+    hostname: grader
+    networks:
+      - competitor_net
+    environment:
+      token3: *pdf_template_default
+      #token3: "ComposeToken3"
+
+  site:
+    build: ./challenge/site
+    networks:
+      - competitor_net
+      - legal_net
+    hostname: site
+    environment:
+      token1: *site_template_default
+      #token1: "ComposeToken1"
+
+  legal_internal_1:
+    build: ./challenge/internal
+    networks:
+      - legal_net
+    hostname: internal1
+
+  legal_internal_2:
+    build: ./challenge/internal
+    networks:
+      - legal_net
+    hostname: internal2
+
+  legal_internal_3:
+    build: ./challenge/internal
+    networks:
+      - legal_net
+    hostname: internal3
+
+  fileserver:
+    build: ./challenge/fileserver
+    networks:
+      - legal_net
+    hostname: fileserver
+    environment:
+      token2: *fileserver_template_default
+
+
+networks:
+  competitor_net:
+    # internal: true
+    external: true
+  legal_net:
+    internal: true

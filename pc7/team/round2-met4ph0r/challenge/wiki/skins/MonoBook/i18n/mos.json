@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"monobook-view-history": "Kibare",
+	"monobook-action-undelete": "Ka yēese {{PLURAL:$1|a ye toeeme|$1 toeeme}}"
+}

@@ -1,0 +1,108 @@
+x-challenge:
+  name : "The Conversation"
+  description: |
+    # The Conversation
+
+    **Please note that it will take about 15 seconds for the server to become accessible after starting**
+
+    Analyze emails to identify an email with a malicious attachment and reverse-engineer the malware.
+
+    **NICE Work Roles**
+    - [Digital Forensics](https://niccs.cisa.gov/tools/nice-framework)
+
+    **NICE Tasks**
+    - [T0179](https://niccs.cisa.gov/tools/nice-framework): Perform static media analysis
+    - [T1191](https://niccs.cisa.gov/tools/nice-framework): Determine relevance of recovered data
+    - [T1972](https://niccs.cisa.gov/tools/nice-framework): Identify anomalous activity
+
+    ## Background
+
+    An employee, Grant Collier, has reported that their computer is behaving strangely and they believe they may have accidentally clicked on a phishing email. 
+
+    You are being provided with a copy of their email inbox. Analyze it and see if you can find evidence of malware. 
+
+    ## Getting Started
+
+    You have been provided with Grand Collier's, email archive. Use the emails to discover any suspicious communications and files that the employee may have been sent.
+
+    Connect to `http://emails.pccc` to download a copy of the email archive. It will take about 15 seconds for the server to become accessible after starting the challenge. 
+
+    You may assume that the text contents of any email messages are unimportant to your task. 
+
+    ## System and Tool Credentials
+
+    | system/tool | username | password |
+    | --- | --- | --- |
+    | kali | user | password |
+    | `emails.pccc` | --- | --- |
+
+  icon: "TbMessage"
+  summary: "Analyze emails to identify an email with a malicious attachment and reverse-engineer the malware."
+
+  tags:
+    - "forensics"
+    - "malware-analysis"
+    - "email-analysis"
+    - "reverse-engineering"
+    - "pc7"
+    - "round2"
+    - "individual-defense"
+
+  variables:
+    messageId:
+      template: "fake.uuid4()"
+      default: &messageId "00000000-ecdb-4b7b-ba6a-ff1c19b8801e"
+    seed:
+      template: "fake.random.randint(1111, 9999)"
+      default: &seed "1337"
+
+  questions:
+    - name : "Question 1"
+      body : "What is the Message-ID of the email that contains an attachment that compromised the employee?"
+      placeholder : "62647a10-ecdb-4b7b-ba6a-ff1c19b8801e"
+      points : 885 #25% of 3540 total
+      answer: *messageId
+      max_attempts: 3
+    - name : "Question 2"
+      body : "What is the URL that the malicious attachment uses to download the next stage payload?"
+      placeholder : "http://example.com"
+      points : 885 #25% of 3540 total
+      answer : "imforce.me"
+      max_attempts : 3
+    - name : "Question 3"
+      body : "What is the domain of the C2 server for the downloaded malware?"
+      placeholder : "example.com"
+      points : 1770 #50% of 3540 total
+      answer : "imf.xyz"
+      max_attempts : 3
+
+services:
+  emails:
+    hostname : emails.pccc
+    build:
+      context: ./
+      dockerfile : ./mail/Dockerfile
+    tty : true
+    # mem_limit : "512mb"
+    cpus : "0.45"
+    environment:
+      SEED : *seed
+      MESSAGE_ID : *messageId
+    volumes:
+      - ./mail/app/:/app:ro
+      - ./mail/uploads:/uploads
+    networks:
+      - competitor_net
+
+  web:
+    build:
+      context: ./
+      dockerfile : ./web/Dockerfile
+    tty: true
+    hostname: imforce.me
+    networks:
+      - competitor_net
+
+networks:
+  competitor_net:
+    internal: true

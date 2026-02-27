@@ -1,0 +1,21 @@
+{{!
+	@typedef object emphasized-sidebar-action
+	@prop string href
+	@prop string text
+
+	string html-logo-attributes for site logo. Must be used inside tag e.g. `class="logo" lang="en-gb"`
+	MenuDefinition data-portlets-first
+	MenuDefinition[] array-portlets-rest
+	emphasized-sidebar-action data-emphasized-sidebar-action For displaying an emphasized action in the sidebar.
+}}
+
+<nav id="mw-panel" class="mw-sidebar" aria-label="{{msg-vector-site-nav-label}}" role="navigation">
+	{{#data-portlets-first}}{{>Menu}}{{/data-portlets-first}}
+	{{#data-emphasized-sidebar-action}}{{>SidebarAction}}{{/data-emphasized-sidebar-action}}
+	{{#array-portlets-rest}}{{>Menu}}{{/array-portlets-rest}}
+	{{^is-language-in-content}}
+	{{#data-portlets.data-languages}}{{>Menu}}{{/data-portlets.data-languages}}
+	{{/is-language-in-content}}
+	{{! T295555 Add language switch alert message temporarily (to be removed). }}
+	{{#data-vector-language-switch-alert}}{{>SidebarAction}}{{/data-vector-language-switch-alert}}
+</nav>

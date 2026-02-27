@@ -1,0 +1,167 @@
+x-challenge:
+  name: "Waiting for Harry"
+  description: |
+    # Waiting for Harry
+
+    Sometimes, the easiest path to someone's secrets is through their heart. 
+
+    **NICE Work Roles**
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework)
+    - [Exploitation Analysis](https://niccs.cisa.gov/tools/nice-framework)
+    
+    **NICE Tasks**
+    - [T0280](https://niccs.cisa.gov/tools/nice-framework): Identify and validate vulnerabilities in the system	
+    - [T0653](https://niccs.cisa.gov/tools/nice-framework): Identify and recommend methods for exploiting target systems	
+    - [T0269](https://niccs.cisa.gov/tools/nice-framework): Conduct exploitation of targets using identified vulnerabilities	
+    - [T0650](https://niccs.cisa.gov/tools/nice-framework): Conduct target and technical analysis of systems and vulnerabilities
+
+    ## Background
+
+    Harry is a very boring, predictable company man. He gets up everyday, brushes his teeth, eats his meals, 
+    checks the leaderboard for his favorite game, goes to work, comes home, eats dinner, and goes to bed. 
+
+    He has also unwittingly collected sensitive information that you must retrieve from the cookie jar in his browser. 
+
+    Here's what we know, Harry checks the leaderboard for his favorite game Dodge the Creeps extremely regularly. 
+    So, if we can take advantage of this game, we might have a way to extract the information.
+
+    ## Token Formatting
+
+    The only format for **valid** tokens to be used for submissions is as follows:
+
+    `PCCC-????#####-`
+    
+    ## Getting Started
+
+    | Site | Link |
+    | --- | --- |
+    | Game | `https://dodgethecreeps` |
+    | Leaderboard | `https://dodgethecreeps/leaderboard` |
+    | `gdsdecomp` | `https://dodgethecreeps/tools/gdre_tools_linux_x86_64.zip` |
+    | Listener | `https://listener` |
+
+    We've set up a proxy to the leaderboard, game, gdsdecomp (a godot PCK decompiler), and a listener service, which you may find helpful. 
+    The Leaderboard and Game are where Harry spends most of his time apart from working. 
+    Once you figure out how to take advantage of the sites where Harry spends the most time, use the listener 
+    service to exfiltrate the data. 
+    
+    This listener has three different routes that you can take advantage of, `/<status code>/<message>` will respond with that status code and log that request, 
+    `/logs` will return the most recent 100 requests made to the listener, and `/<any other request>` will respond with a 200 and 
+    save the 100 most recent requests to an internal data store which you can access using `http://listener/logs`. 
+
+
+
+  icon: "TbUser"
+  summary: "We're just sitting here, waiting for Harry"
+
+  tags:
+    - individual-offense
+    - round2
+    - web
+    - reverse-engineering
+    - forensics
+    - exploitation
+    - pc7
+    
+  variables:
+    game:
+      template: "fake.bothify('PCCC-????#####-')"
+      default: &game "PCCC{TEST-GAME}"
+    debug:
+      template: "fake.bothify('PCCC-????#####-')"
+      default: &debug "PCCC{TEST-DEBUG}"
+    flag:
+      template: "fake.bothify('PCCC-????#####-')"
+      default: &flag "PCCC{TEST-FLAG}"
+    submit:
+      template: "fake.bothify('PCCC-????#####-')" # ????????-#####
+      default: &submit "PCCC{TEST-SUBMIT}" # SUBMITAA-12345
+
+  questions:
+    - name: Game Source Code
+      body: We're going to need to look at the game to access the leaderboard. What's the token in the game source code?
+      answer: *game
+      placeholder: PCCC-????#####-
+      points: 1170 # 25% of 4680
+      max_attempts: 3
+      
+    - name: Debug Mode
+      body:  To make it easier to analyze the game, we need to enable debug mode. Find a way to enable it and discover the token that is now revealed in `index.html`.     
+      answer: *debug
+      placeholder: PCCC-????#####-
+      points: 1170 # 25% of 4680
+      max_attempts: 3
+      
+    - name: Leaderboard Submission
+      body: Reverse engineer the game's logic and determine what token is found when submitting a request to the leaderboard?
+      answer: *submit
+      placeholder: PCCC-????#####-
+      points: 1170 # 25% of 4680
+      max_attempts: 3
+      
+    - name: Harry's Cookie Jar
+      body: We need to know what was put in Harry's cookie jar to get the sensitive information. What is the value of the cookie named "flag"?
+      answer: *flag
+      placeholder: PCCC-????#####-
+      points: 1170 # 25% of 4680
+      max_attempts: 3
+
+services:
+  proxy:
+    hostname: dodgethecreeps
+    build:
+      context: ./proxy/server
+      dockerfile: Dockerfile
+    mem_limit: "128m"
+    ports:
+      - "8080:80"
+      - "8443:443"
+    networks:
+      - competitor_net
+      - platform_net
+  server:
+    hostname: backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      GAME_TOKEN: *game
+      SUBMIT_TOKEN: *submit
+      DEBUG_TOKEN: *debug
+      RUST_BACKTRACE: '1'
+    mem_limit: "1g"
+    networks:
+      - platform_net
+  harry:
+    hostname: harry-sim
+    build:
+      context: ./harry
+      dockerfile: Dockerfile
+    environment:
+      FLAG: *flag
+    mem_limit: "128m"
+    networks:
+      - platform_net
+  listener_proxy:
+    hostname: listener
+    build:
+      context: ./proxy/listener
+      dockerfile: Dockerfile
+    mem_limit: "128m"
+    networks:
+      - competitor_net
+      - platform_net
+  listener_server:
+    hostname: listener-server
+    build:
+      context: ./listener
+      dockerfile: Dockerfile
+    mem_limit: "128m"
+    networks:
+      - platform_net
+      
+networks:
+  competitor_net:
+    internal: true
+  platform_net:
+    internal: true

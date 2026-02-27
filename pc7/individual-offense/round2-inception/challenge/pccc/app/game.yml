@@ -1,0 +1,60 @@
+game:
+  title: PC6 Finals – Track B
+  cover: pccc/imgs/trackB.webp
+  map: pccc/imgs/map.png
+  challenges:
+    - name: Kessel Run
+      markdown: pccc/challenges/1.md
+      point: 
+        x: 70.6
+        y: 53
+        r: 5.15
+      questions:
+        - text: Enter the token found after accessing /token in the Maelstrom.
+          points: 700
+        - text: Enter the token found after accessing /token in the Maw.
+          points: 1050
+        - text: Enter the token found after accessing /token on Kessel.
+          points: 1750
+    - name: Mindhunter
+      markdown: pccc/challenges/2.md
+      point: 
+        x: 37.5
+        y: 61
+        r: 5.2
+      questions:
+        - text: 🧠 Obtained by changing views - exploit the first vulnerability (mind)
+          points: 290
+        - text: 🥷 Obtained by drowning out the noise - a second view on things (body)
+          points: 725
+        - text: ⛅ Obtained through self reflection - a third perspective (soul)
+          points: 870
+        - text: ✌️ Obtained through patience - a fourth perspective (peace)
+          points: 1015
+    - name: The Crucible
+      markdown: pccc/challenges/3.md
+      point:
+        x: 37
+        y: 13.8
+        r: 5.2
+      questions:
+        - text: Enter the token locked away for only those with Honor to access.
+          points: 1050
+        - text: Enter the token that echoed out of Oblivion.
+          points: 1225
+        - text: Prove your dominance and enter the token provided only to a Champion.
+          points: 1225
+    - name: va_list Adventure
+      markdown: pccc/challenges/4.md
+      point:
+        x: 65.7
+        y: 76.2
+        r: 5.1
+      questions:
+        - text: Enter token received from challenge.us after successfully inputting the address of the playerName char array.
+          points: 660
+        - text: Enter token received from challenge.us after successfully inputting the address of the player struct.
+          points: 1320
+        - text: Enter the token found in the globalStr array on exploit.us.
+          points: 1320
+

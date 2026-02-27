@@ -1,0 +1,20 @@
+<header class="mw-header">
+	<div class="mw-header-aside">
+	<label
+		id="mw-sidebar-button"
+		class="mw-checkbox-hack-button mw-ui-icon mw-ui-button mw-ui-quiet mw-ui-icon-element"
+		for="mw-sidebar-checkbox"
+		role="button"
+		aria-controls="mw-panel"
+		data-event-name="ui.sidebar"
+		tabindex="0"
+		title="{{msg-vector-main-menu-tooltip}}">
+		<span>{{msg-vector-action-toggle-sidebar}}</span>
+	</label>
+	{{#data-logos}}{{>Logo}}{{/data-logos}}
+	</div>
+	<div class="mw-header-content">
+	{{#data-search-box}}{{>SearchBox}}{{/data-search-box}}
+	{{#data-vector-user-links}}{{>UserLinks}}{{/data-vector-user-links}}
+	</div>
+</header>

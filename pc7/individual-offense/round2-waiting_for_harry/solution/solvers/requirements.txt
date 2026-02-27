@@ -1,0 +1,4 @@
+requests
+sh
+cryptography
+pyparseit

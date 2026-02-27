@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}All Items{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mb-4">Warehouse Inventory</h2>
+    {% if items %}
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for item in items %}
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text text-muted">{{ item.description[:120] }}{% if item.description|length > 120 %}...{% endif %}</p>
+                    <a href="/items/{{ item.id }}" class="btn btn-outline-primary mt-3">View Item</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+        <p class="text-muted">You have not dropped off any items yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

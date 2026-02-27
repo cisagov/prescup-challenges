@@ -1,0 +1,37 @@
+{% extends "pane.html" %}
+
+{% block content %}
+  RINGS & PHASES (NEMA)
+    Legend: State=[G/Y/R/F]  Timer=mm:ss   Calls=[V,P]  Detectors list = active ids
+
+  Ring 1 (Phases 1-2-3-4):
+    Ph  State  Timer   Min/Max    Calls    VehDet.     Ped   Notes
+    1     {{p1_state}}    {{p1_t}}   {{(p1_min.__str__() + "/" + p1_max.__str__()) | center(7)}}     {{p1_calls | center(3)}}      {{p1_det | center(5)}}       {{p1_ped}}   {{p1_notes}}
+    2     {{p2_state}}    {{p2_t}}   {{(p2_min.__str__() + "/" + p2_max.__str__()) | center(7)}}     {{p2_calls | center(3)}}      {{p2_det | center(5)}}       {{p2_ped}}   {{p2_notes}}
+    3     {{p3_state}}    {{p3_t}}   {{(p3_min.__str__() + "/" + p3_max.__str__()) | center(7)}}     {{p3_calls | center(3)}}      {{p3_det | center(5)}}       {{p3_ped}}   {{p3_notes}}
+    4     {{p4_state}}    {{p4_t}}   {{(p4_min.__str__() + "/" + p4_max.__str__()) | center(7)}}     {{p4_calls | center(3)}}      {{p4_det | center(5)}}       {{p4_ped}}   {{p4_notes}}
+    
+  Ring 2 (Phases 5-6-7-8):
+    Ph  State  Timer   Min/Max    Calls    VehDet.     Ped   Notes
+    5     {{p5_state}}    {{p5_t}}   {{(p5_min.__str__() + "/" + p5_max.__str__()) | center(7)}}     {{p5_calls | center(3)}}      {{p5_det | center(5)}}       {{p5_ped}}   {{p5_notes}}
+    6     {{p6_state}}    {{p6_t}}   {{(p6_min.__str__() + "/" + p6_max.__str__()) | center(7)}}     {{p6_calls | center(3)}}      {{p6_det | center(5)}}       {{p6_ped}}   {{p6_notes}}
+    7     {{p7_state}}    {{p7_t}}   {{(p7_min.__str__() + "/" + p7_max.__str__()) | center(7)}}     {{p7_calls | center(3)}}      {{p7_det | center(5)}}       {{p7_ped}}   {{p7_notes}}
+    8     {{p8_state}}    {{p8_t}}   {{(p8_min.__str__() + "/" + p8_max.__str__()) | center(7)}}     {{p8_calls | center(3)}}      {{p8_det | center(5)}}       {{p8_ped}}   {{p8_notes}}
+
+  PEDESTRIAN INTERVALS
+    P2: {{pd2_state}} (Walk:{{pd2_walk}}s  FlashDontWalk:{{pd2_fdw}}s  Countdown:{{pd2_cd}})  Calls:{{pd2_calls}}
+    P6: {{pd6_state}} (Walk:{{pd6_walk}}s  FlashDontWalk:{{pd6_fdw}}s  Countdown:{{pd6_cd}})  Calls:{{pd6_calls}}
+
+  OVERLAPS
+    A: {{ovl_a_state}} (Phases {{ovl_a_ph}})   B: {{ovl_b_state}} (Phases {{ovl_b_ph}})   C: {{ovl_c_state}} (Phases {{ovl_c_ph}})
+
+  DETECTIONS (active ids in each approach)
+    N: {{det_n}}  S: {{det_s}}  E: {{det_e}}  W: {{det_w}}
+
+  PRIORITY / PREEMPTION
+    Transit Priority: {{tp_status}}   Emergency Preempt: {{preempt_status}}   Current: {{preempt_active}}
+
+  HEALTH
+    Faults: {{fault_count}} ({{fault_list}})   Temp: {{temp_c}}°C      Supply: {{vdc}}V
+    Last Reset: {{last_reset}}   Uptime: {{uptime}}
+{% endblock %}

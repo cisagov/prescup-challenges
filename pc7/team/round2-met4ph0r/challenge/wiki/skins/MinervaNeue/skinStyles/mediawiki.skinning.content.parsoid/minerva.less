@@ -1,0 +1,84 @@
+/**
+ * Style Parsoid HTML+RDFa output consistent with wikitext from PHP parser.
+ */
+
+@import '../../minerva.less/minerva.variables.less';
+
+/*
+ * Auto-numbered external links
+ * (copied from MediaWiki's content.parsoid.less)
+ */
+.mw-parser-output {
+	counter-reset: mw-numbered-ext-link;
+
+	a[ rel~='mw:ExtLink' ]:empty:after {
+		content: '[' counter( mw-numbered-ext-link ) ']';
+		counter-increment: mw-numbered-ext-link;
+	}
+}
+
+/**
+ * Block media items
+ * (mostly derived from MediaWiki's content.media-common.less)
+ */
+figure[ typeof~='mw:File/Thumb' ],
+figure[ typeof~='mw:File/Frame' ],
+/* TODO: Remove "Image|Video|Audio" when version 2.4.0 of the content is no
+ * longer supported
+ */
+figure[ typeof~='mw:Image/Thumb' ],
+figure[ typeof~='mw:Video/Thumb' ],
+figure[ typeof~='mw:Audio/Thumb' ],
+figure[ typeof~='mw:Image/Frame' ],
+figure[ typeof~='mw:Video/Frame' ],
+figure[ typeof~='mw:Audio/Frame' ] {
+	max-width: 100%;
+	// Centered on non-tablet
+	margin: 0 auto;
+}
+
+/* T198534 */
+.mw-image-border {
+	display: inline-block;
+}
+
+@media screen and ( min-width: @width-breakpoint-tablet ) {
+	figure[ typeof~='mw:File/Thumb' ],
+	figure[ typeof~='mw:File/Frame' ],
+	/* TODO: Remove "Image|Video|Audio" when version 2.4.0 of the content is no
+	 * longer supported
+	 */
+	figure[ typeof~='mw:Image/Thumb' ],
+	figure[ typeof~='mw:Video/Thumb' ],
+	figure[ typeof~='mw:Audio/Thumb' ],
+	figure[ typeof~='mw:Image/Frame' ],
+	figure[ typeof~='mw:Video/Frame' ],
+	figure[ typeof~='mw:Audio/Frame' ] {
+		// Defaults to right alignment when not explicitly set. Should be flippable.
+		margin: 0.6em 0 0.6em 1.4em;
+
+		&.mw-halign-left {
+			/* @noflip */
+			margin: 0.6em 1.4em 0.6em 0;
+			/* @noflip */
+			clear: left;
+			/* @noflip */
+			float: left;
+		}
+
+		&.mw-halign-right {
+			/* @noflip */
+			margin: 0.6em 0 0.6em 1.4em;
+			/* @noflip */
+			clear: right;
+			/* @noflip */
+			float: right;
+		}
+
+		&.mw-halign-center {
+			margin: 0.6em auto 0.6em auto;
+			clear: none;
+			float: none;
+		}
+	}
+}

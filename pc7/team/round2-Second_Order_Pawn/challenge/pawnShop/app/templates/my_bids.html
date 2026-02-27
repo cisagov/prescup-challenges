@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}My Bids{% endblock %}
+
+{% block content %}
+
+{% for label, group in [
+    ('<i class="bi bi-trophy-fill text-warning me-1"></i>Won Auctions', won)
+] %}
+    <div class="mt-4">
+        <h4>{% autoescape false %}{{ label }}{% endautoescape %}</h4>
+        {% if group %}
+            <ul class="list-group">
+                {% for auction, top_bid, user_bid in group %}
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-between">
+                            <a href="{{ url_for('auction_detail', id=auction.id) }}">
+                                {{ auction.item['name'] if auction.item else 'Unnamed Auction' }}
+                            </a>
+                            <small class="text-muted">
+                                Highest: ${{ '%.2f'|format(top_bid) }}
+                            </small>
+                        </div>
+                        <div class="small text-muted">
+                            You bid ${{ '%.2f'|format(user_bid.bid) }} on {{ user_bid.timestamp.strftime('%Y-%m-%d %H:%M') }}  
+                            (Starting bid: ${{ '%.2f'|format(auction.starting_bid) }})
+                        </div>
+                        <div class="mt-2 text-end">
+                            <a href="{{ url_for('pickup', auction_id=auction.id) }}" class="btn btn-sm btn-primary">
+                                Provide Pickup Info
+                            </a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="text-muted">None in this category.</p>
+        {% endif %}
+    </div>
+{% endfor %}
+
+{% for label, group in [
+    ('<i class="bi bi-arrow-up-circle-fill text-success me-1"></i>Currently Winning', winning),
+    ('<i class="bi bi-arrow-down-circle-fill text-danger me-1"></i>Currently Losing', losing),
+    ('<i class="bi bi-x-circle-fill text-secondary me-1"></i>Lost Auctions', lost)
+] %}
+    <div class="mt-4">
+        <h4>{% autoescape false %}{{ label }}{% endautoescape %}</h4>
+        {% if group %}
+            <ul class="list-group">
+                {% for auction, top_bid, user_bid in group %}
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-between">
+                            <a href="{{ url_for('auction_detail', id=auction.id) }}">
+                                {{ auction.item['name'] if auction.item else 'Unnamed Auction' }}
+                            </a>
+                            <small class="text-muted">
+                                Highest: ${{ '%.2f'|format(top_bid) }}
+                            </small>
+                        </div>
+                        <div class="small text-muted">
+                            You bid ${{ '%.2f'|format(user_bid.bid) }} on {{ user_bid.timestamp.strftime('%Y-%m-%d %H:%M') }}  
+                            (Starting bid: ${{ '%.2f'|format(auction.starting_bid) }})
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="text-muted">None in this category.</p>
+        {% endif %}
+    </div>
+{% endfor %}
+
+{% endblock %}

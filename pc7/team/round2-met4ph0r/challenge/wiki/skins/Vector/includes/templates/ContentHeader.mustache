@@ -1,0 +1,30 @@
+{{!-
+    Content Header - Main <H1> title for all pages, with either the indicators or language selector.
+    When language button is visible, indicators are placed in the ContentSubheader.mustache template instead.
+}}
+<header class="mw-body-header">
+    {{#is-language-in-content-top}}
+        {{#data-portlets.data-languages}}
+            {{>Menu}}
+        {{/data-portlets.data-languages}}
+    {{/is-language-in-content-top}}
+
+    {{^is-language-in-content-top}}
+        {{>Indicators}}
+    {{/is-language-in-content-top}}
+
+	{{#data-toc}}
+	<label
+		id="vector-toc-collapsed-button"
+		class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-listBullet mw-checkbox-hack-button"
+		for="vector-toc-collapsed-checkbox"
+		role="button"
+		aria-controls="toc-toggle-list"
+		data-event-name="vector.toc-toggle-list"
+		tabindex="0"
+		title="{{msg-vector-toc-menu-tooltip}}">
+		{{msg-vector-toc-collapsible-button-label}}
+	</label>
+	{{/data-toc}}
+    {{{html-title-heading}}}
+</header>

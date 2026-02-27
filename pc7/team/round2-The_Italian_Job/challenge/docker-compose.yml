@@ -1,0 +1,190 @@
+x-challenge:
+  # Required: Name of the challenge displayed to participants
+  name: "The Italian Job"
+  summary: |
+    "It is a work of genius. Just think of it. A city in chaos, a smash-and-grab raid, and four million dollars through a traffic jam." Hack into a traffic management center to set up a green-light getaway in this mix up of the 1969 and 2003 movies. 
+
+  icon: "TbTrafficLights"
+
+  description: |
+    # The Italian Job
+
+    "It is a work of genius. Just think of it. A city in chaos, a smash-and-grab raid, and four million dollars through a traffic jam." Hack into a traffic management center to set up a green-light getaway in this mix up of the 1969 and 2003 movies.
+
+    **NICE Work Roles**
+
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework)
+    - [Exploitation Analysis](https://niccs.cisa.gov/tools/nice-framework)
+
+    **NICE Tasks**
+
+    - [T1359](https://niccs.cisa.gov/tools/nice-framework): Perform penetration testing
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework): Identify vulnerabilities
+
+    ## Background
+
+    "You want all greens? 'Cause, ah, 'cause you got 'em."
+
+    Brought on to the team for your notorious hacking skills, you've been tasked with ensuring a clean getaway for the main heist team. Of course, a green-on-green scenario is just movie magic thanks to the hardwired MMU installed in the cabinets, but you've devised a clever new plan. Instead, you'll be paving the way for an escape vehicle by making their route out of town hit all green lights.
+
+    Your team will start by breaking into the Traffic Management Center (TMC) with a bad USB drive. During recon, you recovered a trashed workstation that they had previously been using for logging traffic data picked up in the field; we've repaired it so you can investigate. A team member will drop the USB outside the TMC once you've figured out the payload.
+
+    Once in the TMC, you'll need to move laterally to the workstation they do their traffic updates on. Given that's on their internal network, we have no recon there.
+
+    With access to the update station, you'll be tampering with an update file. They've got scheduled updates for the controllers coming up, and those have to be done manually.
+
+    Finally, with access to the traffic controller, you'll need to hack into the web panel to change the signal timings. We need the drive straight down `5th street` to be all greens. It's a 10-minute drive, so make sure the greens last at least that long. We didn't synchronize our watches, so timing will be tight; make sure to minimize the time that the minor cross-streets and other lights stay green as well.
+
+    ## Getting Started
+
+    Use the provided Kali machine to access the host `local-media.pccc`, which runs the same logging software as the real system. You can visit `http://challenge.pccc` to upload your bad USB files, trigger the TMC to start their updates, and to start the getaway.
+
+    ## Tokens
+
+    There are four tokens to retrieve, formatted as `PCCC{string}`.
+
+    Grading is required. Visit `http://challenge.pccc` for Tokens 1, 3, and 4.
+
+    - Token 1: Break into the TMC's media workstation and find this token in `user`'s home directory.
+        - You can upload your malicious USB files as a ZIP file at `http://challenge.pccc`
+    - Token 2: Find this token in `user`'s home directory after moving laterally from the media workstation to the update workstation.
+    - Token 3: Find this token in `/root` after gaining access to the network switch in the traffic cabinet.
+        - You can trigger the TMC employees to load the update onto a USB and install it in the cabinet by visiting `http://challenge.pccc`.
+    - Token 4: Break into the traffic controller's web panel and change the signal timings so that `5th street` has at least 10 minutes of green, and the other lights have the shortest green time allowed.
+        - You can trigger the getaway from `http://challenge.pccc`; if successful, the token will be provided on that site
+
+    ## System and Tool Credentials
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |kali-vnc|user|password|
+    |local-media.pccc|user|password|
+
+  templates:
+    # Define reusable templates with anchors
+    mediaWorkstation-flag: &mediaWorkstation-flag_template "fake.bothify('PCCC{Sore_thumb_##??##}')"
+    updateWorkstation-flag: &updateWorkstation-flag_template "fake.bothify('PCCC{Fly_on_the_wall_##??##}')"
+    trafficCabinet-flag: &trafficCabinet-flag_template "fake.bothify('PCCC{Popping_shells_in_my_sleep_##??##}')"
+    greenLights-flag: &greenLights-flag_template "fake.bothify('PCCC{Want_all_greens_##??##}')"
+  variables:
+    mediaWorkstation-flag:
+      template: *mediaWorkstation-flag_template
+      default: &mediaWorkstation-flag_default "PCCC{Sore_thumb}"
+    updateWorkstation-flag:
+      template: *updateWorkstation-flag_template
+      default: &updateWorkstation-flag_default "PCCC{Fly_on_the_wall}"
+    trafficCabinet-flag:
+      template: *trafficCabinet-flag_template
+      default: &trafficCabinet-flag_default "PCCC{Popping_shells_in_my_sleep}"
+    greenLights-flag:
+      template: *greenLights-flag_template
+      default: &greenLights-flag_default "PCCC{Want_all_greens}"
+
+  questions:
+  - name: "Question 1"
+    body: "Enter the token found in the home directory of the media workstation."
+    placeholder: "PCCC{????_?????_##??##}"
+    points: 1350   # 30% 4500 total
+    answer: *mediaWorkstation-flag_default
+    max_attempts: 3
+  - name: "Question 2"
+    body: "Enter the token found after gaining access to the upload workstation."
+    placeholder: "PCCC{???_??_???_????_##??##}"
+    points: 1350   # 30%
+    answer: *updateWorkstation-flag_default
+    max_attempts: 3
+  - name: "Question 3"
+    body: "Enter the token found in `/root` after gaining access to the traffic cabinet
+      switch."
+    placeholder: "PCCC{???????_??????_??_??_?????_##??##}"
+    points: 675   # 15%
+    answer: *trafficCabinet-flag_default
+    max_attempts: 3
+  - name: "Question 4"
+    body: "Enter the token received from `http://challenge.pccc` after manipulating
+      the traffic lights."
+    placeholder: "PCCC{????_???_??????_##??##}"
+    points: 1125   # 25%
+    answer: *greenLights-flag_default
+    max_attempts: 3
+
+
+services:
+  # LOCAL DEVICES
+  image_workstation_competitor:
+    build: ./logReaderCompetitor
+    hostname: local-media.pccc
+    networks:
+    - competitor_net
+
+  # TRAFFIC MANAGEMENT CENTER
+  image_workstation_real:
+    build: ./logReader
+    hostname: media-workstation.pccc
+    environment:
+      tmcAccessToken: *mediaWorkstation-flag_default
+    networks:
+    - trafficManagement
+    - competitor_net
+    cap_add:
+    - NET_ADMIN
+
+  update_workstation:
+    build: ./updateStation
+    hostname: update-workstation.pccc
+    environment:
+      updateAccessToken: *updateWorkstation-flag_default
+    networks:
+    - trafficManagement
+    cap_add:
+    - NET_ADMIN
+
+  cam:
+    build: ./camera
+    hostname: cams.pccc
+    networks:
+    - trafficManagement
+    environment:
+      CAM_ADMIN_USER: admin
+      CAM_ADMIN_PASS: secretTMCCamAdmin!2025
+      CAM_MODEL: BlueFlex-Cam PTZ100
+      CAM_FIRMWARE: 1.7.3
+    cap_add:
+    - NET_ADMIN
+
+  # TRAFFIC CABINET DEVICES
+  trafficswitch:
+    build: ./trafficSwitch
+    hostname: traffic-switch.pccc
+    environment:
+      cabinetAccessToken: *trafficCabinet-flag_default
+    networks:
+    - trafficCabinet
+    - competitor_net
+    cap_add:
+    - NET_ADMIN
+
+  trafficcontroller:
+    build: ./trafficController
+    hostname: traffic-controller.pccc
+    networks:
+    - trafficCabinet
+
+  grader:
+    build: ./tempGrader
+    hostname: challenge.pccc
+    environment:
+      heistToken: *greenLights-flag_default
+    networks:
+    - competitor_net
+    - trafficManagement
+    - trafficCabinet
+
+networks:
+  competitor_net:
+    # external: true
+    internal: true
+  trafficManagement:
+    internal: true
+  trafficCabinet:
+    internal: true

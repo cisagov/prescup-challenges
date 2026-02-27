@@ -1,0 +1,69 @@
+{% from "macros.html" import render_errors with context %}
+
+{% extends "base.html" %}
+
+{% block title %}Getting Started – {{ super() }}{% endblock %}
+
+{% block sections %}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <markdown>
+        <h1>Getting Started</h1>
+        <p>Welcome to the <em>President's Cup</em>! Please review the <a role="link" target="_blank"
+                href="https://screenrant.com/inception-dream-rules-explained/" rel="nofollow noopener noreferrer">Rules</a> before starting. Below is a guide on how to get started and
+            how to get support during the competition.</p>
+        <h2>Register and Enroll</h2>
+        <h3>Log In</h3>
+        <ul>
+            <li>Click Login. </li>
+            <li> Enter your email and password, then click <strong>Continue</strong>.</li>
+        </ul>
+        <h3>First-Time Participants</h3>
+        <ul>
+            <li> If you have not participated in previous competitions, click <strong>Register for an Account</strong>
+                on the Login screen.</li>
+        </ul>
+        <h3>Update Profile</h3>
+        <ul>
+            <li> Optionally, update your <strong>Display Name</strong> and select or update your <strong>Sponsoring
+                    Organization</strong> in your <a role="link" target="_blank"
+                    href="/profile" rel="nofollow noopener noreferrer">Gameboard
+                    Profile</a>.</li>
+        </ul>
+        <h3>Enroll in a Game</h3>
+        <ul>
+            <li> Strange, you're already enrolled...</li>
+        </ul>
+        <h2>Game play</h2>
+        <h3>Completing Challenges</h3>
+        <ul>
+            <li> Click <strong>Continue to Gameboard</strong> and select a challenge circle on the map to view the
+                challenge details.</li>
+        </ul>
+        <h3>Score Display</h3>
+        <ul>
+            <li> Your current submission number, remaining time, and earned challenge score will be shown.</li>
+        </ul>
+        <h2>Get Support</h2>
+        <h3>Creating a Support Ticket</h3>
+        <ul>
+            <li> <strong>From the navigation bar</strong>: Click Support, then <a role="link" target="_blank"
+                    href="/support" rel="nofollow noopener noreferrer">Create
+                    Ticket</a>. You can select the challenge and enter additional details.</li>
+            <li> If you need assistance and cannot reach the support desk (e.g., trouble with log in), please email <strong>OTA-help@pccc.pccc</strong>.</li>
+        </ul>
+        <h3>Track Ticket Status</h3>
+        <ul>
+            <li> Use the <strong>Support</strong> link to view, update, and track the status of your submitted tickets.
+            </li>
+        </ul>
+        <h2>Log Out</h2>
+        <ul>
+            <li> To log out, click <strong>Logout</strong> in the top right corner of the Gameboard.</li>
+        </ul>
+        <hr>
+        <p>Good luck and enjoy the competition!</p>
+    </markdown>
+</div>
+{% endblock %}

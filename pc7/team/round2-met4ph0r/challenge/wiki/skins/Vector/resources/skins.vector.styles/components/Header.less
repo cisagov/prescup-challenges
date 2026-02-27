@@ -1,0 +1,100 @@
+@import '../../common/variables.less';
+@import 'mediawiki.mixins.less';
+
+// Header sizes defined in the description of T246170 and comment T246170#5957100
+@padding-vertical-header: 0.125em;
+@margin-top-header: 0.5em;
+@margin-bottom-header: 2em;
+
+// Logo sizes per specification in T245190.
+@height-logo-icon: 3.125em;
+
+.mw-header {
+	// A min-height is set to account for projects where no icon is set.
+	min-height: @height-logo-icon;
+	padding: 8px 0;
+	// Vertical centering of header elements (IE>=11), requires Flexbox.
+	.flex-display();
+	flex-wrap: nowrap;
+	// https://caniuse.com/#search=align-items
+	align-items: center;
+
+	.vector-layout-legacy & {
+		margin: @margin-top-header 0 @margin-bottom-header 0;
+		padding: 0;
+	}
+
+	#mw-sidebar-button {
+		margin-right: @margin-horizontal-sidebar-button-icon; // Accidentally the same.
+	}
+
+	&-content,
+	&-aside {
+		display: flex;
+		align-items: center;
+	}
+
+	&-aside {
+		float: left;
+	}
+
+	&-content {
+		flex-grow: 1;
+	}
+
+	@media ( min-width: @min-width-desktop-wide ) {
+		// Ensure search box is aligned with content when search thumbnails or JS is off
+		.vector-search-box:not( .vector-search-box-auto-expand-width ),
+		html:not( .client-js ) & .vector-search-box {
+			padding-left: @size-search-expand;
+		}
+	}
+
+	@media ( min-width: @min-width-desktop ) {
+		.vector-search-box {
+			margin-right: @margin-end-search;
+		}
+	}
+
+	/**
+	 * Toggles the visibility of the search box at lower resolutions.
+	 */
+	@media ( max-width: @max-width-tablet ) {
+		&.vector-header-search-toggled {
+			#mw-sidebar-button,
+			.mw-logo,
+			.search-toggle {
+				display: none;
+			}
+
+			.vector-search-box-collapses > div {
+				display: block;
+			}
+
+			.vector-search-box {
+				// T284242#7206507: Widen the suggestion results to the edge of the search
+				// button at small resolutions.
+				position: relative;
+				margin-left: @padding-horizontal-tabs;
+				margin-right: @margin-end-search;
+
+				// Override default max width at lower resolutions
+				> div {
+					max-width: none;
+				}
+			}
+
+			// Make the menu below the search input wider, to match the width of the input+button
+			// rather than just the width of the input
+			.cdx-search-input__input-wrapper {
+				position: static;
+			}
+
+			// Since the end button's corner is now right above the menu's corner, don't use a
+			// rounded corner here (T310525)
+			.cdx-typeahead-search--expanded .cdx-search-input__end-button {
+				border-bottom-right-radius: 0;
+			}
+		}
+	}
+}

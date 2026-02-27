@@ -1,0 +1,93 @@
+// This file is the central place where we declare
+// which variables are part of the "mediawiki.skin.variables.less"
+// API that core and extensions can use in their style modules.
+//
+// The initial values are intended merely as fallback to allow
+// forward and backward compatibility to allow new variables
+// to be defined without breaking existing implementations by
+// skins.
+//
+// @since 1.36
+// Add `@since` line above every added variable (block) per MediaWiki version.
+//
+// == Instructions for skins ==
+//
+// In skin.json, add:
+//    "SkinLessImportPaths": {
+//        "skinname": "resources/mediawiki.less"
+//    }
+//
+// Create a file called resources/mediawiki.less/mediawiki.skin.variables.less, which starts with:
+//    @import 'mediawiki.skin.default.less';
+// followed by any overrides for these variables, e.g.:
+//    @width-breakpoint-desktop: 1234px;
+
+// == Breakpoints ==
+// Minimum available screen width at which a device can be considered a mobile device.
+//
+// Many older feature phones have screens smaller than this value.
+@width-breakpoint-mobile: 320px;
+
+// Minimum available screen width at which a device can be considered a tablet.
+//
+// The number is currently based on the device width of a Samsung Galaxy S5 mini and
+// is low enough to cover iPad (768px).
+@width-breakpoint-tablet: 720px;
+
+// Minimum available screen width at which a device can be considered a desktop.
+@width-breakpoint-desktop: 1000px;
+
+// Wider desktop breakpoint
+// @since 1.37
+@width-breakpoint-desktop-wide: 1200px;
+
+// == Size properties beyond Box Model ==
+// These are the center point for skin sizing.
+// Note that these are recommended to be set in relative units like `em` in order to let users
+// override with own browser font size preference.
+// Font size
+@font-size-base: 1em;
+
+// Line Heights
+@line-height-base: 1.6;
+@line-height-heading: 1.3;
+// Form input labels for buttons, dropdowns, but also text input values.
+// Note that there are binary inputs in skins like Vector, that receive a different treatment
+// with name `*-input-binary`.
+@line-height-label: 1.5;
+
+// == Colors ==
+// Background Colors
+@background-color-base: #fff;
+
+// Colors
+@color-link: #0645ad;
+@color-link--visited: #0b0080;
+@color-link--active: #faa700;
+// Link colors for new or missing articles, also known as “Red links”.
+// https://www.wikidata.org/wiki/Q13417974#sitelinks-wikipedia
+@color-link-new: #d33;
+@color-link-new--visited: #a55858;
+@color-link-external: #36b;
+@color-link-external--visited: #636; // See T5112.
+@color-link-external--active: #b63;
+
+// == Box Model properties ==
+// Border Styles
+@border-style-base: solid;
+// Border Widths
+@border-width-base: 1px;
+// Border Radius
+@border-radius-base: 0;
+@border-radius-circle: 50%;
+
+// == Typography ==
+@font-family-sans: sans-serif;
+
+// == Animation & Transition ==
+// Transitions
+@transition-base: @transition-duration-base; // `ease` is the initial value
+@transition-ease-medium: @transition-duration-medium;
+// Transitions > Durations
+@transition-duration-base: 100ms;
+@transition-duration-medium: 250ms;

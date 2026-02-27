@@ -1,0 +1,69 @@
+@import '../../common/variables.less';
+@import 'mediawiki.mixins.less';
+
+/**
+ * Styling for namespace tabs (page, discussion) and views (read, edit, view history, watch and other actions)
+ */
+
+/* Tab list items */
+.vector-menu-tabs {
+	float: left;
+
+	// T316574 Override visited link styles
+	.mw-list-item a {
+		color: @color-link;
+	}
+
+	/* focus and hover have outlines. Text underline interferes with bottom border */
+	.mw-list-item a:focus,
+	.mw-list-item a:hover {
+		text-decoration: none;
+		border-bottom: @border-width-base @border-style-base;
+	}
+
+	.mw-list-item.new a,
+	.mw-list-item.new a:visited {
+		color: @color-link-new;
+	}
+
+	.mw-list-item.selected a,
+	.mw-list-item.selected a:visited {
+		color: @color-link-selected;
+		border-bottom: @border-width-base @border-style-base;
+	}
+}
+
+/**
+ * Tab list item appearance. Applies to both <li>'s inside .vector-menu-tabs
+ * and dropdown menus inside the article toolbar
+ */
+.vector-menu-tabs .mw-list-item,
+.mw-article-toolbar-container .vector-menu-dropdown {
+	float: left;
+	white-space: nowrap;
+	margin: 0 @padding-horizontal-tabs;
+
+	// target links inside of .vector-tab-menu
+	// and dropdown menu headings inside the article toolbar.
+	// NOTE: Consider adding a single selector to define both items,
+	// since they both appear beside each other in the article toolbar.
+	& > a,
+	.vector-menu-heading {
+		display: inline-flex;
+		position: relative;
+		// Top & bottom padding to increase clickable area.
+		padding: 18px 0 7px 0;
+		// bottom margin to overlap border with toolbar border.
+		margin-bottom: -1px;
+		cursor: pointer;
+		border-bottom: @border-width-base @border-style-base transparent;
+		// max-height & box-sizing to make link, watchstar & dropdown height consistent.
+		// NOTE: Was 40px instead of 41, but changed to avoid visual regressions.
+		max-height: unit( 41 / @font-size-tabs / @font-size-browser, em );
+		box-sizing: border-box;
+		// For better compatibility with gadgets (like Twinkle) that append
+		// <H3> elements as dropdown headings (which was the convention in legacy Vector).
+		font-size: inherit;
+		font-weight: normal;
+	}
+}

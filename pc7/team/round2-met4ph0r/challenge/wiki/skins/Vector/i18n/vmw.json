@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Gildo Máquina",
+			"Jacinto Jeque",
+			"Tomas Armando Moz"
+		]
+	},
+	"vector-language-button-label": "{{PLURAL:$1|$1 nttaava|$1 Mattaava}}",
+	"vector-action-addsection": "Ophitaanya yoolempwa",
+	"vector-action-delete": "Ocipiha",
+	"vector-action-move": "Okumiha",
+	"vector-action-protect": "Okhapelela",
+	"vector-view-create": "Opaka",
+	"vector-view-edit": "Owehiha",
+	"vector-view-history": "Moonelo wa ethale",
+	"vector-view-view": "Osoma",
+	"vector-more-actions": "Vanceene",
+	"vector-searchsuggest-containing": "Waavya makukhu arimomo <strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong>"
+}

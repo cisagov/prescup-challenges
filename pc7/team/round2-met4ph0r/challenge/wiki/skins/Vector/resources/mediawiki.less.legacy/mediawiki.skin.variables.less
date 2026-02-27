@@ -1,0 +1,26 @@
+/**
+ * This file is a LESS import match for "mediawiki.skin.variables.less"
+ * when legacy Vector is the active skin.
+ */
+
+@import 'mediawiki.skin.defaults.less';
+
+// Set pre July 2022 colors for links (T213778).
+@color-link: #0645ad;
+@color-link--visited: #0b0080;
+@color-link--active: #faa700;
+@color-link-new: #ba0000;
+@color-link-new--visited: #a55858;
+
+// Note these colors are different from Vector 2022 for historic reasons:
+@color-link-external: #36b;
+@color-link-external--visited: #636;
+@color-link-external--active: #b63;
+
+// Body content uses the user setting in browser / the system default sans-serif font:
+// Arial on Windows, Roboto on Android.
+// FIXME: Use WikimediaUI Base's OS specific default sans-serif fonts.
+@font-family-sans: sans-serif;
+
+// Matches WikimediaUI Base and Codex, OOUI/wikimedia
+@border-radius-base: 2px;

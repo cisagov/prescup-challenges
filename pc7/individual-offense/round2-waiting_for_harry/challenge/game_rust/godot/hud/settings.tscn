@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0o6dhaq0k26b"]
+
+[ext_resource type="Script" uid="uid://da1i6lqwxttqv" path="res://hud/settings.gd" id="1_cqkuv"]
+[ext_resource type="Theme" uid="uid://com3kmvp0a2tj" path="res://base_theme.tres" id="1_yuk64"]
+
+[node name="Settings" type="HudSettings"]
+script = ExtResource("1_cqkuv")
+
+[node name="Volume" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 112.0
+offset_right = 378.0
+offset_bottom = 200.0
+theme = ExtResource("1_yuk64")
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="."]
+offset_left = 80.0
+offset_top = 200.0
+offset_right = 416.0
+offset_bottom = 272.0
+value = 100.0
+ticks_position = 2
+
+[node name="Button" type="Button" parent="."]
+offset_left = 96.0
+offset_top = 544.0
+offset_right = 400.0
+offset_bottom = 630.0
+theme = ExtResource("1_yuk64")
+text = "Return"
+
+[connection signal="drag_ended" from="VolumeSlider" to="." method="_on_drag_ended"]
+[connection signal="pressed" from="Button" to="." method="on_settings_return"]

@@ -1,0 +1,45 @@
+// A MenuListItem is a ToggleList item for menus.
+
+@import '../../../minerva.less/minerva.variables.less';
+@import '../../../minerva.less/minerva.mixins.less';
+@import 'mediawiki.mixins.less';
+
+.toggle-list-item {
+	display: block;
+
+	//
+	// Make the app feel like an app, not a JPEG. When hovering over a menu item, add a little
+	// interactivity.
+	&:hover {
+		background: @grayLightest;
+	}
+
+	a {
+		padding: 0.75em 0.875em;
+	}
+}
+
+.toggle-list-item__anchor {
+	// Override .mw-ui-icon `display: inline-block` so that the text is
+	// vertically centered. It also avoids whitespace issues.
+	display: flex;
+	align-items: center;
+	// Override .mw-ui-icon `line-height: 0` so that the text is visible.
+	line-height: inherit;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:visited, &:active {
+		color: @grayMediumDark;
+	}
+}
+
+.toggle-list-item__label {
+	color: @grayMediumDark;
+	font-weight: bold;
+	font-size: @font-size-minerva-small;
+	// Overflow text is ellipsized in one line.
+	.text-overflow( @visible: false );
+}

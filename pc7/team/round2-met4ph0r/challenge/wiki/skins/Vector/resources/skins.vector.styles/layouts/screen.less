@@ -1,0 +1,170 @@
+/**
+ * Vector modern layout styles for screen
+ *
+ * Layout rules divide the page into sections and how VectorComponents should be arranged in the skin.
+ * The rules here should only define the layout, not color or typography.
+ */
+
+@import '../../common/variables.less';
+@import 'mediawiki.mixins.less';
+
+@selector-sidebar-no-toc-sidebar-closed: ~'@{selector-main-menu-closed} ~ .vector-sidebar-container-no-toc';
+
+// Content container
+
+// Note this uses variables defined in mediawiki.skin.variables so that VisualEditor can read them
+// see T259331.
+@padding-content: @padding-top-content @padding-horizontal-content 1.5em;
+
+// Breakpoints
+
+// Defines the minimum viewport width, at which point the layout will not get any
+// smaller and will start horizontal scrolling instead.
+@min-width-supported:
+	unit( 500px / @font-size-browser, em ) -
+	( 2 * @padding-horizontal-page-container-wide );
+// 31.25em - 3.75em = 27.5em @ 16
+
+body {
+	background-color: @background-color-secondary--modern;
+	color: @color-base;
+	// Vertical scrollbar always visible.
+	overflow-y: scroll;
+}
+
+.mw-body,
+.parsoid-body {
+	direction: ltr;
+}
+
+.mw-body {
+	border-top: @border-width-base @border-style-base transparent;
+	/* Merge the border with tabs' one (in their background image) */
+	margin-top: -@border-width-base;
+	padding: @padding-content;
+
+	.firstHeading {
+		/* Change the default from mediawiki.skinning CSS to let indicators float into heading area */
+		overflow: visible;
+		margin-bottom: 0;
+	}
+}
+
+.mw-header {
+	// allow z-index to apply so search results overlay article
+	position: relative;
+	z-index: @z-index-header;
+}
+
+.mw-body-content {
+	margin-top: 16px;
+}
+
+/* Main column */
+.mw-body,
+#mw-data-after-content,
+.mw-footer {
+	margin-left: 0;
+}
+
+/* Content */
+.mw-indicators {
+	z-index: @z-index-indicators;
+}
+
+.mw-body-header,
+.mw-body-subheader {
+	.mixin-clearfix();
+}
+
+.mw-body .mw-portlet-lang {
+	float: right;
+}
+
+#siteSub {
+	// By default its hidden as it was hidden in Vector legacy but site styles can reveal.
+	display: none;
+}
+
+.vector-body {
+	position: relative;
+	z-index: @z-index-base;
+
+	#siteSub {
+		margin-top: 8px; // T311564
+	}
+
+	#contentSub,
+	#contentSub2 {
+		font-size: 84%;
+		line-height: 1.2em;
+		// T311564
+		margin: 8px 0 0;
+		color: #54595d;
+		width: auto;
+	}
+}
+
+#left-navigation {
+	float: left;
+	margin-left: -@padding-horizontal-tabs;
+}
+
+#right-navigation {
+	float: right;
+	margin-right: -@padding-horizontal-tabs;
+	// Any dropdowns inside the right navigation in modern Vector (e.g. "more" menu).
+	// should be right-aligned to prevent horizontal scrolling.
+	.vector-menu-content {
+		left: auto;
+		right: -@border-width-base;
+	}
+}
+
+.parsoid-body {
+	padding: @padding-content;
+}
+
+.mw-footer {
+	border-top: @border-base;
+	padding: 0.75em;
+}
+
+// Container logic.
+.mw-page-container {
+	// Setting position and z-index is important as it allows overlays appended to the body tag
+	// to position themselves over the Vector interface. This forms another stacking context for
+	// elements placed inside this element
+	position: relative;
+	z-index: 0;
+	max-width: @max-width-page-container;
+	// Fill the viewport even if the content height is small. This also helps
+	// mitigate a long sidebar overflowing the page container (T257518).
+	min-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	// Use non-zero padding to disable margin collapse.
+	// Be careful not to use overflow-y: scroll here (see T270146 and T271868)
+	padding: 0.05px ( @padding-horizontal-page-container / 2 );
+	background-color: @background-color-page-container;
+	// Set a min-width to make explicit we do not support anything below this threshold.
+	// For devices too small, they should be more useable with horizontal scrolling.
+	// e.g. Portrait on an iPad
+	min-width: @min-width-supported;
+
+	@media ( min-width: @min-width-desktop ) {
+		padding-left: @padding-horizontal-page-container;
+		padding-right: @padding-horizontal-page-container;
+	}
+
+	@media ( min-width: @min-width-desktop-wide ) {
+		padding-left: @padding-horizontal-page-container-wide;
+		padding-right: @padding-horizontal-page-container-wide;
+	}
+}
+
+.skin--responsive .mw-page-container {
+	min-width: auto;
+}
+
+@import 'grid.less';

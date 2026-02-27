@@ -1,0 +1,11 @@
+{{#href}}<a href="{{.}}"{{/href}}
+{{^href}}<button{{/href}}
+	{{#id}}id="{{.}}"{{/id}}
+	{{#tabindex}}tabindex="{{.}}"{{/tabindex}}
+	{{#event}}data-event-name="{{.}}"{{/event}}
+	{{#title}}title="{{.}}"{{/title}}
+	{{#accesskey}}accesskey="{{.}}"{{/accesskey}}
+	class="mw-ui-button{{#is-quiet}} mw-ui-quiet{{/is-quiet}}{{#icon}} mw-ui-icon mw-ui-icon-element mw-ui-icon-{{.}}{{/icon}} {{class}}">
+	{{{html-vector-button-icon}}}<span>{{label}}</span>
+{{#href}}</a>{{/href}}
+{{^href}}</button>{{/href}}

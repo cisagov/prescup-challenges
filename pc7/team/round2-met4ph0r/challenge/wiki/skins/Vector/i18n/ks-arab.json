@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Iflaq",
+			"Rishabhbhat",
+			"Tajamul9",
+			"Teashae"
+		]
+	},
+	"vector-language-button-label": "{{PLURAL:$1|$1زَبان|$1 زَبانہٕ}}",
+	"vector-no-language-button-label": "زبانہٕ کٕریٚو جمع/ایٚڈ",
+	"vector-action-addsection": "نٔو موضوٗع",
+	"vector-action-delete": "مِٹٲیو",
+	"vector-action-move": "پکناوُن",
+	"vector-action-protect": "رٲچھؠ",
+	"vector-view-create": "تَخلیٖق",
+	"vector-view-edit": "اؠڈِٹ",
+	"vector-view-history": "تَوأریٖخ وُچھِو",
+	"vector-view-view": "پَرُن",
+	"vector-more-actions": "بێیہِ",
+	"vector-searchsuggest-containing": "صَفَن کٔرِو تَلاش یِمَن مَنٛز <strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong> چھُ"
+}

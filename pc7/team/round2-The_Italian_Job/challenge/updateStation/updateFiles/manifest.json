@@ -1,0 +1,12 @@
+{
+  "device_model": "BlueFlex-Switch-331",
+  "fw_version": "3.6.5",
+  "min_os": "linux-5.4",
+  "hash_alg": "sha1",
+  "files": [
+    {"path": "files/traffic.conf"},
+    {"path": "files/update.sh"}
+  ],
+  "exec_order": ["files/update.sh"],
+  "created_at": "2025-07-15T11:42:00Z"
+}

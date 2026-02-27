@@ -1,0 +1,198 @@
+/**
+ * The "changeslist" module appears on Special pages such
+ * as recent changes, watchlist, and parts of the action history page.
+ */
+
+@import '../minerva.less/minerva.mixins.less';
+@import '../minerva.less/minerva.variables.less';
+@import 'mediawiki.ui/mixins.buttons.less';
+@import 'mediawiki.ui/variables.less';
+@import 'mediawiki.mixins.less';
+
+// Decrease the font-size of the advanced filters module (see T229360).
+.mw-rcfilters-container,
+.mw-rcfilters-ui-overlay,
+.watchlistDetails {
+	font-size: @taglineFontSize;
+}
+
+.mw-changeslist h4 {
+	font-size: @fontSizeH3;
+	padding: 1em 0 0 0 !important; // overriding .content h4
+}
+
+ul.mw-contributions-list,
+ul.special {
+	padding-left: 0 !important; // overriding `.content ul`
+	margin-left: 0 !important; // overriding `.client-js .mw-changeslist ul`
+
+	li {
+		list-style-type: none;
+		.changeslist-row();
+	}
+
+	// the following selector are nested due to their
+	// generic names.
+	.mw-contributions-title,
+	.mw-title {
+		font-weight: bold;
+		// Word-break overlong user names, see T237230.
+		.hyphens( auto );
+	}
+
+	.comment {
+		float: left;
+		clear: both;
+		font-style: italic;
+		line-height: 1.4em;
+		padding: 0.5em 0;
+		// avoid overflows on very long words in edit summaries (T297045)
+		max-width: 100%;
+	}
+}
+
+a.mw-contributions-title,
+.mw-title a {
+	word-break: break-word;
+}
+
+// T232955: Properly align deletion comments
+span.mw-changeslist-log-entry {
+	.comment {
+		float: none;
+		padding: 0;
+	}
+}
+
+.mw-changeslist-line {
+	.changeslist-row();
+}
+
+.mw-changeslist-line-inner {
+	display: block;
+}
+
+.mw-changeslist-line-inner > *,
+ul.mw-contributions-list li > * {
+	float: left;
+	margin-right: 0.5em;
+}
+
+.mw-changeslist-line-inner:before,
+.mw-changeslist-line-inner:after {
+	.clearfix();
+}
+
+.mw-changeslist-date,
+.mw-tag-markers {
+	clear: left;
+}
+
+/**
+ * Colored watchlist and recent changes numbers.
+ */
+.mw-plusminus-pos {
+	color: @wmui-color-green30;
+}
+
+.mw-plusminus-neg {
+	color: @wmui-color-red30;
+}
+
+.mw-plusminus-null {
+	color: @wmui-color-grey30;
+}
+
+/*
+ * Bidi-isolate these numbers.
+ * See https://phabricator.wikimedia.org/T93484
+ */
+.mw-plusminus-pos,
+.mw-plusminus-neg,
+.mw-plusminus-null {
+	unicode-bidi: -moz-isolate;
+	unicode-bidi: isolate;
+}
+
+/**
+ * "pill" style tags meant to emulate the OOUI ".oo-ui-tagItemWidget" style.
+ */
+
+.mw-tag-markers {
+	margin: 0 0 0.5em 0;
+}
+
+.mw-tag-marker {
+	// due to the extra space afforded by padding,
+	// we can make the font-size a bit smaller to save space.
+	font-size: @taglineFontSize;
+	display: inline-block;
+	box-sizing: border-box;
+	height: 1.6em;
+	border: 1px solid #a2a9b1;
+	border-radius: 1.6em;
+	line-height: 1.6em;
+	padding: 0 0.6em;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+// undo link, styled as button
+.mw-history-undo, .mw-rollback-link {
+	font-size: initial;
+
+	a {
+		float: right;
+		background-color: @colorGray15;
+		color: @colorText;
+		text-decoration: none;
+		.mw-ui-button();
+		.mw-ui-button-states();
+		font-size: @font-size-minerva-smallest;
+
+		&:after {
+			.clearfix();
+		}
+	}
+}
+
+ul.mw-contributions-list li .mw-rollback-link {
+	float: right;
+	font-size: initial;
+}
+
+// rollback edit link
+.mw-rollback-link a {
+	// separating rollback link from undo link.
+	margin-left: 1em;
+}
+
+.mw-revdelundel-link,
+.mw-tag-markers {
+	display: block;
+}
+
+// On Watchlist and RecentChanges the user is on a separate line per T236328.
+// This does not apply to the history page.
+// It is unnecessary on Special:Contributions since all contributions are by the same user.
+.mw-special-Watchlist,
+.mw-special-Recentchanges {
+	.mw-userlink,
+	.mw-usertoollinks {
+		float: none;
+	}
+
+	.mw-userlink:before,
+	.mw-usertoollinks:after {
+		content: '';
+		display: table;
+		width: 100%;
+	}
+}
+
+// `.content` must be specified to override padding of
+// `.content h2` rule provided by ResourceLoaderSkinModule.
+.content .mw-index-pager-list-header {
+	.changeslist-header();
+	box-sizing: border-box;
+}

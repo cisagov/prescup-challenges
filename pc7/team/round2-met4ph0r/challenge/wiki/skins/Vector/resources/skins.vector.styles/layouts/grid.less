@@ -1,0 +1,112 @@
+//
+// Grid layout
+//
+
+@width-gutter: 20px;
+
+// Makes a column span entire page
+.mixin-column-full-width() {
+	grid-column: sidebar / content;
+	margin-left: auto;
+	margin-right: auto;
+	// Needed for minimal content e.g. one word articles.
+	width: 100%;
+	box-sizing: border-box;
+	max-width: @max-width-content-container;
+}
+
+// aligns left side of column with hamburger icon.
+.mixin-column-align-width-hamburger-icon() {
+	// Align the content with the hamburger icon
+	padding-left: 8px;
+}
+
+.mw-content-container {
+	max-width: @max-width-content-container;
+
+	// For container logic specific to special pages and history pages.
+	.skin-vector-disable-max-width & {
+		// Allow the max-width of content on history/special pages to be wider than
+		// the max-width of content on article pages.
+		// Note, we don't disable the max-width on .mw-article-toolbar-container intentionally
+		// to support easier navigation between tabs.
+		// See T293441 for further information on that.
+		// Both rules are !important as they are final. Max-width on a page should be restored by removing the `skin-vector-disable-max-width`,
+		// preferably by modification to the feature flag VectorMaxWidthOptions. Code should never attempt to override this rule.
+		/* stylelint-disable-next-line declaration-no-important */
+		max-width: none !important;
+		/* stylelint-disable-next-line declaration-no-important */
+		width: 100% !important;
+	}
+}
+
+@media ( min-width: @min-width-desktop ) {
+	.mw-page-container-inner {
+		display: grid;
+		width: 100%;
+		grid-template: ~'min-content min-content min-content 1fr min-content / 232px @{width-gutter} minmax(0, 1fr)';
+		grid-template-areas: 'header header header'
+			'sitenotice sitenotice sitenotice'
+			'sidebar gutter content'
+			'toc gutter content'
+			'footer footer footer';
+	}
+
+	.mw-body {
+		padding-left: 0;
+	}
+
+	// FIXME: Remove selector after I39959f43f20880e83bef945a7535d58cfe0b6412 has been in prod for a week
+	.mw-page-container-inner > #siteNotice,
+	.vector-sitenotice-container {
+		grid-area: sitenotice;
+	}
+
+	.mw-table-of-contents-container {
+		grid-area: toc;
+	}
+
+	.mw-header {
+		grid-area: header;
+	}
+
+	.vector-sidebar-container {
+		grid-area: sidebar;
+	}
+
+	.mw-content-container {
+		grid-area: content;
+	}
+
+	// FIXME: Remove padding in favor of updating the header icons itself and making mw-body spacing consistent
+	// This padding complicates the collapsed TOC menu styles and contributes to inconsistent spacing
+	// with sidebar closed, when no table of contents, align with hamburger menu
+	@{selector-sidebar-no-toc-sidebar-closed} ~ .mw-content-container {
+		.mixin-column-align-width-hamburger-icon();
+	}
+
+	.mw-footer-container {
+		grid-area: footer;
+	}
+}
+
+@media ( min-width: @min-width-desktop-wide ) {
+	.mw-page-container-inner {
+		/* Use of minmax is important to restrict the maximum grid column width
+		more information: T314756 */
+		grid-template-columns: ~'284px @{width-gutter} minmax(0, 1fr)';
+	}
+}
+
+@{selector-sidebar-no-toc-sidebar-closed} {
+	& ~ .mw-content-container {
+		.mixin-column-full-width();
+	}
+}
+
+.vector-toc-collapsed @{selector-main-menu-closed} {
+	& ~ .mw-content-container,
+	& ~ .mw-table-of-contents-container {
+		.mixin-column-full-width();
+	}
+}

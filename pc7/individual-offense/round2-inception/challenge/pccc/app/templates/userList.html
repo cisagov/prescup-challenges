@@ -1,0 +1,65 @@
+{% from "macros.html" import render_errors with context %}
+
+{% extends "base.html" %}
+
+{% block title %}Users – {{ super() }}{% endblock %}
+
+{% block header %}
+<div class="mb-4">
+    <h1 class="support-header mb-0" style="padding-left: 32px;">Support</h1>
+</div>
+<div class="container mb-4">
+    <markdown>
+        <h1>Welcome to <strong>President's Cup Cybersecurity Competition</strong> Support!</h1>
+        <h4>Please be sure to review the <a role="link" target="_blank" href="/"
+                rel="nofollow noopener noreferrer">landing page</a> for support hours of operation during active
+            competition windows.</h4>
+    </markdown>
+    <hr>
+</div>
+{% endblock %}
+
+{% block sections %}{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="h4 mb-0">Users</h1>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-dark align-middle">
+        <thead>
+            <tr>
+                <th style="background-color: #000000;">ID</th>
+                <th style="background-color: #000000;">Username</th>
+                <th style="background-color: #000000;">Email</th>
+                <th style="background-color: #000000;">Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for u in users %}
+            <tr>
+                <td style="background-color: #000000;">{{ u._id }}</td>
+                <td style="background-color: #000000;">{{u.username}}<br />
+                    <form method="post" action="{{ url_for('change_username') }}"
+                        class="d-flex gap-2 ms-auto">
+                        <input type="hidden" name="csrf_token" value="{{ csrf }}">
+                        <input type="hidden" name="username" value="{{ u.username }}">
+                        <input class="form-control form-control-sm" name="new" placeholder="new username"
+                            style="width: 12rem;">
+                        <button class="btn btn-sm btn-outline-success" type="submit">Change</button>
+                    </form>
+                </td>
+                <td style="background-color: #000000;">{{ u.email }}</td>
+                <td style="background-color: #000000;">{{ u.role }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="4" class="text-center text-secondary py-4" style="background-color: #000000;">No users
+                    yet.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
