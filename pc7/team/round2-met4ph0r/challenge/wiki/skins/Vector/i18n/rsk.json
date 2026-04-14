@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Keresturec",
+			"Vlad5250"
+		]
+	},
+	"vector-languages": "Язики",
+	"vector-language-button-label": "{{PLURAL:$1|$1 язик|$1 язики}}",
+	"vector-no-language-button-label": "Додай язики",
+	"vector-action-addsection": "Додай тему",
+	"vector-action-delete": "Посцерай",
+	"vector-action-move": "Пременовац",
+	"vector-action-protect": "Защициц",
+	"vector-action-unprotect": "Премень защиту",
+	"vector-view-create": "Витвориц",
+	"vector-view-edit": "Ушориц",
+	"vector-view-history": "Опать историю",
+	"vector-view-view": "Читай",
+	"vector-view-viewsource": "Опатриц жридлови код",
+	"vector-more-actions": "Вецей",
+	"vector-searchsuggest-containing": "Найдз боки хтори содержа <strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong>",
+	"vector-toc-heading": "Змист",
+	"vector-toc-toggle-position-title": "скриц",
+	"vector-anon-user-menu-pages-learn": "дознайце вецей",
+	"vector-article-tools-nav-label": "Алатки"
+}

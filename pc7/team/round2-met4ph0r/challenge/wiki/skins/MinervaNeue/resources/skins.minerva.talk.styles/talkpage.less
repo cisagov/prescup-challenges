@@ -1,0 +1,77 @@
+@import '../../minerva.less/minerva.variables.less';
+@import 'mediawiki.mixins.less';
+
+@border-color-divider: @colorGray14;
+
+.minerva-talk-add-button {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.minerva-talk-content-explained {
+	// When .skin-minerva--talk-simplified class is not applied to body, we don't
+	// want this to show (e.g. on pages without any topics, redundant no content
+	// messages could show)
+	display: none;
+	margin-top: 15px; // setting margin-top in case .minerva-talk-add-button is not present to provide a margin (i.e. when anon user)
+	padding-bottom: 15px;
+	border-bottom: 1px solid @border-color-divider;
+	font-size: @font-size-minerva-small;
+	font-weight: bold;
+	color: @colorGray5;
+}
+
+.minerva-talk-full-page-button {
+	display: block;
+	.position-sticky();
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 1em;
+	color: @colorProgressive;
+	background: @colorGray15;
+	border-top: 1px solid @border-color-divider;
+	text-align: center;
+}
+
+// Only run on talk pages
+.client-js .skin-minerva--talk-simplified {
+	// stylelint-disable-next-line selector-max-id
+	.toc,
+	#mf-section-0,
+	.section-heading + .collapsible-block {
+		display: none;
+	}
+
+	.minerva-talk-content-explained {
+		display: block;
+	}
+
+	.section-heading {
+		position: relative;
+		border-bottom: 1px solid @border-color-divider;
+		font-size: 1em;
+		font-family: @font-family-base;
+		line-height: 1;
+		cursor: pointer;
+		display: block;
+		margin: 0;
+		padding: 0.8em 0;
+
+		.mw-ui-icon {
+			display: none;
+		}
+	}
+
+	.return-link {
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and ( min-width: @width-breakpoint-tablet ) {
+	.minerva-talk-full-page-button {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: @contentMaxWidthTablet;
+	}
+}

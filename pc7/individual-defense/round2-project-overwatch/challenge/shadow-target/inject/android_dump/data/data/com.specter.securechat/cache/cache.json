@@ -1,0 +1,6 @@
+{
+  "cache_key": "a8f3b9c7d1e4f5a6b2c9d8e7f4a3b1c6",
+  "encryption_algorithm": "aes-256-cbc",
+  "kdf": "pbkdf2",
+  "kdf_iterations": 10000
+}

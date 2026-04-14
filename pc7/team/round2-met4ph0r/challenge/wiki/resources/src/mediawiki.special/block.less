@@ -1,0 +1,27 @@
+/*!
+ * Styles for Special:Block
+ */
+
+// Affects sitewide/partial radio, partial action checkboxes, and block detail checkboxes
+.mw-block-editing-restriction.oo-ui-fieldLayout,
+.mw-block-action-restriction .oo-ui-checkboxMultioptionWidget,
+.mw-block-restriction.oo-ui-labelElement {
+	margin-top: 12px;
+}
+
+.mw-block-partial-restriction.oo-ui-fieldLayout {
+	// Match spacing of partial action checkboxes to block detail checkboxes
+	.oo-ui-checkboxMultioptionWidget {
+		padding: 0;
+	}
+}
+
+.mw-special-Block .mw-htmlform {
+	> .oo-ui-panelLayout-framed {
+		border: 0;
+	}
+
+	> .oo-ui-panelLayout-padded {
+		padding: 0;
+	}
+}

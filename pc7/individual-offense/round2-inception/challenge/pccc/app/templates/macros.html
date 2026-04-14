@@ -1,0 +1,7 @@
+{% macro render_errors(field) -%}
+  {% if field.errors %}
+    <div class="invalid-feedback d-block">
+      {{ field.errors[0] }}
+    </div>
+  {% endif %}
+{%- endmacro %}

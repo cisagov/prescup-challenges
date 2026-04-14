@@ -1,0 +1,19 @@
+{% extends "pane.html" %}
+
+{% set ns = namespace(min="", max="") %}
+{% for i in range(1,9) -%}
+  {% set ns.min = ns.min ~ (("|" ~ i ~ "|") if cursor == "min_" ~i else (" " ~ i ~ " ")) %}
+  {% if not loop.last %}{% set ns.min = ns.min + "   " %}{% endif %}
+  {% set ns.max = ns.max ~ (("|" ~ i ~ "|") if cursor == "max_" ~i else (" " ~ i ~ " ")) %}
+  {% if not loop.last %}{% set ns.max = ns.max + "   " %}{% endif %}
+{%- endfor %}
+
+{% block content %}
+  MIN GREEN:
+    Ph  {{ns.min}}
+        {{p1_min | center(3)}}   {{p2_min | center(3)}}   {{p3_min | center(3)}}   {{p4_min | center(3)}}   {{p5_min | center(3)}}   {{p6_min | center(3)}}   {{p7_min | center(3)}}   {{p8_min | center(3)}}
+
+  MAX GREEN:
+    Ph  {{ns.max}}
+        {{p1_max | center(3)}}   {{p2_max | center(3)}}   {{p3_max | center(3)}}   {{p4_max | center(3)}}   {{p5_max | center(3)}}   {{p6_max | center(3)}}   {{p7_max | center(3)}}   {{p8_max | center(3)}}
+{% endblock %}

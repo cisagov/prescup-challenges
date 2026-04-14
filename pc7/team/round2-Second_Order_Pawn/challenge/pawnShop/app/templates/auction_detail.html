@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}{{ auction.item['name'] if auction.item else "Auction" }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            {% if auction.cover_doc %}
+                <img src="{{ url_for('static', filename='uploads/' ~ auction.cover_doc['filename']) }}"
+                     alt="{{ auction.item['name'] if auction.item else 'Auction Item' }}"
+                     class="img-fluid rounded shadow-sm"
+                     style="max-height: 400px; object-fit: contain;">
+            {% else %}
+                <div class="border rounded p-5 text-center text-muted">
+                    No cover image available
+                </div>
+            {% endif %}
+        </div>
+        <div class="col-md-6">
+            <h2 class="mb-3">{{ auction.item['name'] if auction.item else "Unnamed Auction Item" }}</h2>
+            <p class="text-muted">{{ auction.item['description'] if auction.item else "No description provided." }}</p>
+
+            {% if auction.open %}
+                {% set top_bid = auction.bids | sort(attribute='bid', reverse=True) | first %}
+                <h4 class="fw-bold text-primary mb-4">
+                    Current Bid: ${{ '%.2f' | format(top_bid.bid if top_bid else auction.starting_bid) }}
+                </h4>
+            {% else %}
+                {% if auction.winning_user %}
+                    <h4 class="fw-bold text-success mb-1">Winning Bidder: {{ auction.winning_user.username }}</h4>
+                {% endif %}
+                {% if auction.highest_bid %}
+                    <h5 class="text-muted mb-4">Final Price: ${{ '%.2f' | format(auction.highest_bid) }}</h5>
+                {% endif %}
+            {% endif %}
+
+            <div class="d-grid gap-2 d-md-block">
+                <a href="/auctions" class="btn btn-link">Back to Auctions</a>
+            </div>
+        </div>
+    </div>
+
+    {% if auction.open and auction.user_id == current_user.id %}
+    <div class="row mt-4">
+        <div class="col-md-2">
+            <form method="post" action="{{ url_for('close_auction', auction_id=auction.id) }}">
+                {{ close_form.hidden_tag() }}
+                {{ close_form.submit(class="btn btn-success") }}
+            </form>
+        </div>
+        <div class="col-md-2">
+            <form method="get" action="{{ url_for('request_cancellation', auction_id=auction.id) }}">
+                {{ cancel_form.submit(class="btn btn-danger") }}
+            </form>
+        </div>
+    </div>
+    {% endif %}
+    {% if auction.open and auction.user_id != current_user.id %}
+        {% if current_user.is_authenticated %}
+            <!-- Show bid form -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <form method="post" action="{{ url_for('place_bid', auction_id=auction.id) }}">
+                        {{ bid_form.hidden_tag() }}
+                        <div class="mb-3">
+                            {{ bid_form.amount.label(class="form-label") }}
+                            {{ bid_form.amount(class="form-control", placeholder="Enter your bid") }}
+                            {% for error in bid_form.amount.errors %}
+                                <div class="text-danger">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        {{ bid_form.submit(class="btn btn-success") }}
+                    </form>
+                </div>
+            </div>
+        {% else %}
+            <!-- Prompt login -->
+            <div class="alert alert-info mt-4" role="alert">
+                Please <a href="{{ url_for('login') }}">log in</a> to place a bid.
+            </div>
+        {% endif %}
+    {% endif %}
+
+    <div class="row mt-4">
+        <div class="col">
+            <h5>Auction Details</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Auction ID: {{ auction.id }}</li>
+                <li class="list-group-item">Starting Bid: ${{ '%.2f' | format(auction.starting_bid) }}</li>
+                <li class="list-group-item">Ends On: {{ auction.end_date.strftime('%Y-%m-%d %H:%M') }}</li>
+                <li class="list-group-item">Public: {{ "Yes" if auction.public else "No" }}</li>
+                <li class="list-group-item">Status: {{ "Open" if auction.open else "Closed" }}</li>
+            </ul>
+        </div>
+    </div>
+
+    {% if auction.documents %}
+    <div class="row mt-5">
+        <div class="col">
+            <h5>Attached Documents</h5>
+            <ul class="list-group list-group-flush">
+                {% for doc in auction.documents %}
+                    <li class="list-group-item">
+                        <a href="{{ url_for('static', filename='uploads/' ~ doc['filename']) }}" target="_blank">
+                            {{ doc['description'] or doc['filename'] }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <a href="{{ url_for('download_auction_docs', auction_id=auction.id) }}" class="btn btn-outline-primary btn-sm mt-3">
+                Download All Documents (.zip)
+            </a>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if auction.bids %}
+    <div class="row mt-5">
+        <div class="col">
+            <h5>Bid History</h5>
+            <ul class="list-group list-group-flush">
+                {% for bid in auction.bids | sort(attribute='bid', reverse=True) %}
+                    <li class="list-group-item">
+                        ${{ '%.2f' | format(bid.bid) }} by {{ bid.user.username }} at {{ bid.timestamp.strftime('%Y-%m-%d %H:%M') }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

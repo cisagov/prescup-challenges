@@ -1,0 +1,53 @@
+{% from "macros.html" import render_errors with context %}
+
+{% extends "base.html" %}
+
+{% block title %}Register – {{ super() }}{% endblock %}
+
+{% block styles %}
+<style>
+    .pop-light {
+        background-color: #dadada;
+        color: #303030;
+        border: #999 solid 2px;
+        border-radius: .25rem;
+    }
+</style>
+{% endblock %}
+
+{% block sections %}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <div class="card pop-light">
+            <div class="card-body p-4">
+                <h1 class="h4 mb-4">Create your account</h1>
+                <form method="post" novalidate>
+                    {{ form.hidden_tag() }}
+
+                    <div class="mb-3">
+                        <label class="form-label">{{ form.email.label }}</label>
+                        {{ form.email(class_="form-control", placeholder="you@example.com") }}
+                        {{ render_errors(form.email) }}
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">{{ form.password.label }}</label>
+                        {{ form.password(class_="form-control") }}
+                        {{ render_errors(form.password) }}
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">{{ form.confirm.label }}</label>
+                        {{ form.confirm(class_="form-control") }}
+                        {{ render_errors(form.confirm) }}
+                    </div>
+
+                    {{ form.submit(class_="btn btn-success w-100") }}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

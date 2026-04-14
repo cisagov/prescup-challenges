@@ -1,0 +1,14 @@
+{
+  "name": "harry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "dependencies": {
+    "mocha": "^11.7.1",
+    "playwright": "^1.54.2"
+  }
+}

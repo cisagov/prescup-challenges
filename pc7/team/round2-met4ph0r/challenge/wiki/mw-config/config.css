@@ -1,0 +1,352 @@
+/* stylelint-disable selector-class-pattern */
+body {
+	background-color: #f7f7f7;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+#mw-page-base {
+	height: 3.5em;
+}
+
+#mw-head-base {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+}
+
+#mw-panel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10em;
+}
+
+#content {
+	background: #fff;
+	margin-left: 11em;
+	border: 1px solid #aaa;
+	padding: 1.25em 1.5em 1.5em 1.5em;
+}
+
+.portal {
+	margin: 0 0.6em 0 0.7em;
+	padding: 0.25em 0;
+}
+
+.portal ul {
+	list-style: none;
+	margin: 0 0.5em;
+	font-size: 0.813em;
+	line-height: 1.4;
+}
+
+.env-check {
+	font-size: 90%;
+	margin: 1em 0 1em 2.5em;
+}
+
+.config-section {
+	margin-top: 2em;
+}
+
+.config-block {
+	margin-top: 2em;
+	display: block;
+}
+
+.config-block-label {
+	display: block;
+	margin-bottom: 0.2em;
+}
+
+.config-block-label label,
+.config-label {
+	font-weight: bold;
+	padding-right: 0.5em;
+	padding-top: 0.2em;
+}
+
+.config-block-elements {
+	display: flex;
+	margin-left: 2em;
+}
+
+.config-block-elements li {
+	list-style: none;
+}
+
+.config-input {
+	clear: left;
+}
+
+.config-page-wrapper {
+	padding: 0.5em;
+}
+
+.config-page-list {
+	float: right;
+	width: 12em;
+	border: 1px solid #aaa;
+	background: #fff;
+	padding: 0.5em;
+	/* 3em left margin to leave space between the list and the page-content */
+	margin: 0.5em 0.5em 0.5em 3.5em;
+}
+
+.config-page {
+	padding: 0.5em 0.5em 0.5em 2em;
+	margin: 0.5em 0.5em 0.5em 0.5em;
+	background: #eee;
+}
+
+.config-submit {
+	clear: left;
+	text-align: center;
+	padding: 1em;
+}
+
+.config-submit input {
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+.config-page-disabled {
+	color: #aaa;
+}
+
+.config-error-box {
+	border: 2px solid #f00;
+}
+
+.config-page-current {
+	font-weight: bold;
+}
+
+.config-message {
+	display: list-item;
+	line-height: 1.5em;
+	/* @embed */
+	list-style-image: url( images/bullet.gif );
+	list-style-type: square;
+}
+
+.config-input-text {
+	width: 20em;
+	margin-right: 1em;
+	height: 30px;
+}
+
+.config-input-check {
+	margin-left: 10em;
+}
+
+.config-skins-item {
+	/* Clearfix */
+	clear: left;
+	overflow: hidden;
+}
+
+.config-skins-item .config-input-check {
+	margin-left: 10em;
+	width: 20em;
+	float: left;
+}
+
+.config-skins-item .config-skins-use-as-default {
+	float: left;
+}
+
+.error {
+	color: #f00;
+	background-color: #fff;
+	font-weight: bold;
+	left: 1em;
+	font-size: 100%;
+}
+
+.config-settings-block {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.btn-install {
+	font-weight: bold;
+	font-size: 110%;
+	padding: 0.2em 0.3em;
+}
+
+.success-message {
+	font-weight: bold;
+	font-size: 110%;
+	color: #008000;
+}
+
+.config-cc-wrapper {
+	clear: left;
+	/* If you change this height, also change it in WebInstallerOptions::submitCC() */
+	height: 54em;
+}
+
+.config-plainlink a {
+	background: none !important; /* stylelint-disable-line declaration-no-important */
+	padding: 0 !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.config-download-link {
+	font-size: 1.8em;
+	margin-left: 2em;
+}
+
+.config-download-link a {
+	background: url( images/download-32.png ) no-repeat center left;
+	padding-left: 40px; /* 32 px for the image (above), plus some breathing room */
+	height: 32px; /* provide enough vertical room for the image */
+	display: inline-block; /* allow the height property (above) to work */
+	/* TODO: re-evaluate this */
+	/* stylelint-disable-next-line declaration-property-unit-disallowed-list */
+	line-height: 32px; /* center the text vertically */
+}
+
+#config-live-log {
+	overflow: hidden;
+	min-width: 20em;
+}
+
+/* Hide empty live-log textarea */
+#config-live-log textarea:empty {
+	display: none;
+}
+
+.config-help-field-checkbox {
+	display: none;
+}
+
+/* tooltip styles */
+.config-help-field-hint {
+	margin-left: 2px;
+	padding: 0 0 0 15px;
+	/* @embed */
+	background-image: url( images/help-question.gif );
+	background-position: left center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	font-size: 0.8em;
+	text-decoration: underline;
+	color: #0645ad;
+}
+
+.config-help-field-hint:hover {
+	/* @embed */
+	background-image: url( images/help-question-hover.gif );
+}
+
+.config-help-field-data {
+	display: block;
+	overflow: hidden;
+	/* stylelint-disable-next-line plugin/no-unsupported-browser-features */
+	min-width: min-content;
+	background-color: #d6f3ff;
+	padding: 5px 8px 4px 8px;
+	border: 1px solid #5dc9f4;
+	margin-left: 20px;
+}
+
+.config-help-field-checkbox:not( :checked ) ~ .config-help-field-data {
+	display: none;
+}
+
+#p-logo {
+	width: 10em;
+	height: 160px;
+	margin: 0 0 0 0.6em;
+}
+
+#p-logo a {
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: block;
+	width: 10em;
+	height: 160px;
+	text-decoration: none;
+	background-image: url( images/installer-logo.png );
+}
+
+.visualClear {
+	clear: both;
+}
+
+/** WARNING BOX STYLES */
+.mw-installer-box-left {
+	margin: 7px;
+	float: left;
+	width: 35px;
+}
+
+.mw-installer-box-right {
+	margin: 0.5em 0.5em 0.5em 49px;
+}
+/** END WARNING BOX STYLES */
+
+/* Logo preview  */
+.logo-preview-area {
+	display: flex;
+	background: #f6f6f6;
+	padding: 20px;
+	margin: 20px 20px 0;
+}
+
+/* Logo preview (main) */
+.logo-main {
+	display: flex;
+	align-items: center;
+	margin-left: 20px;
+}
+
+.logo-icon {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+}
+
+.logo-tagline,
+.logo-wordmark {
+	display: block;
+	max-width: 130px;
+	max-height: 50px;
+}
+
+.logo-tagline {
+	font-size: 0.75em;
+	text-align: center;
+}
+
+/* Logo preview (sidebar) */
+.logo-sidebar {
+	width: auto;
+	height: 160px;
+	margin-bottom: 1em;
+	max-width: 160px;
+}
+
+.logo-preview-area .sidebar {
+	width: 10em;
+	border-right: solid 1px #fe421e;
+	text-align: center;
+	padding: 0 0.5em;
+}
+
+.logo-preview-area nav {
+	text-align: left;
+}
+
+.logo-preview-area nav ul {
+	margin: 0;
+	list-style: none;
+}
+
+.logo-dropper {
+	display: none;
+}

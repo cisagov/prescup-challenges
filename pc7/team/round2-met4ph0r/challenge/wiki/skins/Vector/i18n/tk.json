@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Hanberke",
+			"TayfunEt."
+		]
+	},
+	"vector-languages": "Diller",
+	"vector-language-button-label": "{{PLURAL:$1|$1 Dil}}",
+	"vector-no-language-button-label": "Dil goşuň",
+	"vector-no-language-button-aria-label": "Bu makala diňe şu dilde bar. Makalany başga diller üçin goşuň",
+	"vector-action-addsection": "Mowzuk goş",
+	"vector-action-delete": "Öçür",
+	"vector-action-move": "Adyny üýtget",
+	"vector-action-protect": "Goraga al",
+	"vector-action-undelete": "Öçürmäni yzyna al",
+	"vector-action-unprotect": "Goragy üýtget",
+	"vector-view-create": "Döret",
+	"vector-view-edit": "Düzet",
+	"vector-view-history": "Taryhy gör",
+	"vector-view-view": "Oka",
+	"vector-view-viewsource": "Çeşmäni gör",
+	"vector-more-actions": "Has köp",
+	"vector-searchsuggest-containing": "Içindäki sahypalary gözläň <strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong>"
+}

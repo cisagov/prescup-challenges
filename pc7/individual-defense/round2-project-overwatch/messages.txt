@@ -1,0 +1,34 @@
+
+Agent, confirm comms channel is operational.
+U2FsdGVkX1+nua0eX98umf8lWtE66/ho33vHu/9Eq/etcEJhk1tdbberifWskVXIi8CzYnj9oRByOY8uRZAjig==
+echo "U2FsdGVkX1+nua0eX98umf8lWtE66/ho33vHu/9Eq/etcEJhk1tdbberifWskVXIi8CzYnj9oRByOY8uRZAjig==" | base64 -d | openssl enc -aes-256-cbc -pbkdf2 -d -k TrId3nt9
+
+Stand by for tasking. Next window 03:00Z.
+U2FsdGVkX19Mx5oe0lQdpuchKKLIyme9tm9oSoY14j+txvQz7SDiQkDRnDBjHs+cQxgWF365r64MCb0p8+Q7uw==
+echo "U2FsdGVkX19Mx5oe0lQdpuchKKLIyme9tm9oSoY14j+txvQz7SDiQkDRnDBjHs+cQxgWF365r64MCb0p8+Q7uw==" | base64 -d | openssl enc -aes-256-cbc -pbkdf2 -d -k Ov3rl00k
+
+Agent, use discipline and communication security in your traffic. Send as photo.
+U2FsdGVkX18+RUzk8Wx/hDLnRP8+er4sh2+02qsnl+wl6v/hNrse7dpp3pkauSkdLlUIUz61LwdDdI5/vjkbvsUdePQJUP5C1usZVb/hA0031CwmUurzRPRzuM9jO8I0gkwxYXYhvM/ipeLeWwxgdw==
+echo "U2FsdGVkX18+RUzk8Wx/hDLnRP8+er4sh2+02qsnl+wl6v/hNrse7dpp3pkauSkdLlUIUz61LwdDdI5/vjkbvsUdePQJUP5C1usZVb/hA0031CwmUurzRPRzuM9jO8I0gkwxYXYhvM/ipeLeWwxgdw==" | base64 -d | openssl enc -aes-256-cbc -pbkdf2 -d -k 7r1d3n7
+
+Wraith, stay vigilant in your duties. Your mission must succeed.
+U2FsdGVkX18zphX9UA7fsABDeedJsFVR3wuTn9QGM4O93yVwgarRx0y6XedQk5vdlc0p8h6o0SUfquEF5H88gf32f06N5TPs1YBpFr5O0BP1C2ctOU05VgJHfT6pcYk5
+echo "U2FsdGVkX18zphX9UA7fsABDeedJsFVR3wuTn9QGM4O93yVwgarRx0y6XedQk5vdlc0p8h6o0SUfquEF5H88gf32f06N5TPs1YBpFr5O0BP1C2ctOU05VgJHfT6pcYk5" | base64 -d | openssl enc -aes-256-cbc -pbkdf2 -d -k Tr1dent9
+
+Wraith, you have missed a comms window. Please check your mail immediately
+U2FsdGVkX19xjmImA5nnpIxW+mBqdiTkfMmRgWb7hkQvgKnUxcko0yMBTN227HUsKB9X/Rb7P2IhbE8j//PQ1PW04FyJgSKjQQ0oOKNkdYJOHcQcORCSFp9uNYKDjZee
+echo "U2FsdGVkX19xjmImA5nnpIxW+mBqdiTkfMmRgWb7hkQvgKnUxcko0yMBTN227HUsKB9X/Rb7P2IhbE8j//PQ1PW04FyJgSKjQQ0oOKNkdYJOHcQcORCSFp9uNYKDjZee" | base64 -d | openssl enc -aes-256-cbc -pbkdf2 -d -k Tr1dent9
+
+Encode: 
+echo "plaintext_String" | openssl enc -aes-256-cbc -salt -pbkdf2 -k Tr1dent9 | base64
+
+Decode: 
+echo "encyrptedstring" | base64 -d | openssl enc -aes-256-cbc -pbkdf2 -d -k Tr1dent9 
+
+Add this to inject file: 
+
+echo "U2FsdGVkX1+nua0eX98umf8lWtE66/ho33vHu/9Eq/etcEJhk1tdbberifWskVXIi8CzYnj9oRByOY8uRZAjig==" | base64 -d | openssl enc -aes-256-cbc -pbkdf2 -d -k TrId3nt9
+echo "U2FsdGVkX19Mx5oe0lQdpuchKKLIyme9tm9oSoY14j+txvQz7SDiQkDRnDBjHs+cQxgWF365r64MCb0p8+Q7uw==" | base64 -d | openssl enc -aes-256-cbc -pbkdf2 -d -k Ov3rl00k
+echo "U2FsdGVkX18+RUzk8Wx/hDLnRP8+er4sh2+02qsnl+wl6v/hNrse7dpp3pkauSkdLlUIUz61LwdDdI5/vjkbvsUdePQJUP5C1usZVb/hA0031CwmUurzRPRzuM9jO8I0gkwxYXYhvM/ipeLeWwxgdw==" | base64 -d | openssl enc -aes-256-cbc -pbkdf2 -d -k 7r1d3n7
+echo "U2FsdGVkX18zphX9UA7fsABDeedJsFVR3wuTn9QGM4O93yVwgarRx0y6XedQk5vdlc0p8h6o0SUfquEF5H88gf32f06N5TPs1YBpFr5O0BP1C2ctOU05VgJHfT6pcYk5" | base64 -d | openssl enc -aes-256-cbc -pbkdf2 -d -k Tr1dent9
+echo "U2FsdGVkX19xjmImA5nnpIxW+mBqdiTkfMmRgWb7hkQvgKnUxcko0yMBTN227HUsKB9X/Rb7P2IhbE8j//PQ1PW04FyJgSKjQQ0oOKNkdYJOHcQcORCSFp9uNYKDjZee" | base64 -d | openssl enc -aes-256-cbc -pbkdf2 -d -k Tr1dent9

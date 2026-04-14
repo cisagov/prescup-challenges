@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2 id="username-greeting" class="mb-4">Welcome, {{ current_user.username }}!</h2>
+<p class="text-muted">Choose what you'd like to do:</p>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Browse Auctions</h5>
+                <p class="card-text">View and bid on active auctions.</p>
+                <a href="/auctions" class="btn btn-primary">Go to Auctions</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Your bids</h5>
+                <p class="card-text">Check on your current or won bids.</p>
+                <a href="/bids" class="btn btn-outline-info">View bids</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Your Auctions</h5>
+                <p class="card-text">Create, review and manage your auctions.</p>
+                <a href="/auctions/manage" class="btn btn-outline-primary">Manage Auctions</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Warehouse Dropoff / Pickup</h5>
+                <p class="card-text">Visit our warehouse site to schedule a warehouse transaction or check status.</p>
+                <a href="http://warehouse.secondorder.pccc/dashboard" class="btn btn-outline-secondary">Manage Transfers</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}My Auctions{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>My Auctions</h2>
+    {% if auctions %}
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for auction in auctions %}
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    {% if auction.cover_doc %}
+                        <a href="/auctions/{{ auction.id }}"><img src="{{ url_for('static', filename='uploads/' ~ auction.cover_doc['filename']) }}"
+                        class="card-img-top"
+                        alt="{{ auction.name }}"
+                        style="height: 180px; object-fit: cover;"></a>
+                    {% else %}
+                        <em>No cover image available</em>
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ auction.item['name'] }}</h5>
+                        <a href="/auctions/{{ auction.id }}" class="btn btn-outline-primary btn-sm">View Auction</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-muted">You have no auctions yet.</p>
+    {% endif %}
+
+    <h3 style="margin-top: 2em;">Unlisted Warehouse Items</h3>
+    {% if unlisted_items %}
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for item in unlisted_items %}
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item['name'] }}</h5>
+                        <a id="create-auction" href="/auctions/new/{{ item['id'] }}" class="btn btn-outline-primary btn-sm">Create New Auction</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-muted">All your warehouse items are already listed or you haven't dropped anything off!</p>
+    {% endif %}
+</div>
+{% endblock %}

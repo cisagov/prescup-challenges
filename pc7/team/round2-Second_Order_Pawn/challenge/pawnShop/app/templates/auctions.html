@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Open auction items!</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for auction in open_auctions %}
+    <div class="col">
+        <div class="card shadow-sm h-100">
+            {% if auction.cover_doc %}
+                <a href="/auctions/{{ auction.id }}"><img src="{{ url_for('static', filename='uploads/' ~ auction.cover_doc['filename']) }}"
+                class="card-img-top"
+                alt="{{ auction.name }}"
+                style="height: 180px; object-fit: cover;"></a>
+            {% else %}
+                <em>No cover image available</em>
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ auction.item['name'] }}</h5>
+                <p class="card-text text-muted">{{ auction.item['description'] }}</p>
+                <p><strong>Starting:</strong> ${{ auction.starting_bid }}</p>
+                {% if auction.bids %}
+                    {% set top_bid = auction.bids | sort(attribute='bid', reverse=True) | first %}
+                    <p><strong>Winning Bid:</strong> ${{ '%.2f' | format(top_bid.bid) }}</p>
+                    {% endif %}
+                    {% if auction.winning_user %}
+                    <p><strong>Winner:</strong> {{ auction.winning_user.username }}</p>
+                {% endif %}
+                <a href="/auctions/{{ auction.id }}" class="btn btn-outline-primary btn-sm">View Details</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<h2 style="margin-top: 2em;">Recently closed auctions.</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for auction in closed_auctions %}
+    <div class="col">
+        <div class="card shadow-sm h-100">
+            {% if auction.cover_doc %}
+                <a href="/auctions/{{ auction.id }}"><img src="{{ url_for('static', filename='uploads/' ~ auction.cover_doc['filename']) }}"
+                class="card-img-top"
+                alt="{{ auction.name }}"
+                style="height: 180px; object-fit: cover;"></a>
+            {% else %}
+                <em>No cover image available</em>
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ auction.item['name'] }}</h5>
+                <p class="card-text text-muted">{{ auction.item['description'] }}</p>
+                <p><strong>Starting:</strong> ${{ auction.starting_bid }}</p>
+                {% if auction.bids %}
+                    {% set top_bid = auction.bids | sort(attribute='bid', reverse=True) | first %}
+                    <p><strong>Winning Bid:</strong> ${{ '%.2f' | format(top_bid.bid) }}</p>
+                    {% endif %}
+                    {% if auction.winning_user %}
+                    <p><strong>Winner:</strong> {{ auction.winning_user.username }}</p>
+                {% endif %}
+                <a href="/auctions/{{ auction.id }}" class="btn btn-outline-primary btn-sm">View Details</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

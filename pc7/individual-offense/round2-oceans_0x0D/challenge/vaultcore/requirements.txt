@@ -1,0 +1,8 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+aiosqlite==0.20.0
+aiomqtt==2.5.0
+paho-mqtt>=2.0.0
+python-json-logger==2.0.7
+python-multipart

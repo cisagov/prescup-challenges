@@ -1,0 +1,273 @@
+x-challenge:
+  name: "Ocean's 0x0D"
+  description: |
+    # Ocean's 0x0D
+
+    ♠️ Eavesdrop on an ex-warlord’s vault telemetry, learn its tells, and drive the lock through the correct sequence to spill the loot for all to see. Time your moves carefully — this system of corruption only confesses when pressured correctly.
+
+    This challenge emphasizes **observation, protocol awareness, state manipulation, and precision exploitation** rather than brute force or guesswork.
+
+    **NICE Work Roles**
+
+    * [Cyber Defense Analyst](https://niccs.cisa.gov/tools/nice-framework)
+    * [Exploitation Analyst](https://niccs.cisa.gov/tools/nice-framework)
+
+    **NICE Tasks**
+
+    * [T0028](https://niccs.cisa.gov/tools/nice-framework): Conduct and/or support authorized penetration testing on enterprise network assets.
+    * [T0566](https://niccs.cisa.gov/tools/nice-framework): Analyze internal operational architecture, tools, and procedures for ways to improve performance.
+
+    ## Background
+
+    ♠️ What appears to be an upscale casino operation is, in reality, a laundering front for extremist financing. The vault system at its core was custom-built by a former weapons dealer with deep political protection - hardened, monitored, and intolerant of mistakes.
+
+    As part of an elite collective of former intelligence analysts turned hacktivists, your mission is to **observe**, **model**, and **manipulate** the vault’s operational state machine. The system emits subtle telemetry and behavioral changes as it transitions between internal states. Only by learning these patterns, and exploiting their inconsistencies, can you force the vault into revealing **four unique access tokens**.
+
+    Each token represents a critical fracture point in the system’s design. Together, they expose the operation’s weakest link and will allow us to open a physical backdoor to the Vault through a (now known) under-casino passage way.
+
+    ## Getting Started
+
+    Your team has gained access to the casino’s **Vault Operations Stack**, which includes:
+
+    - A live **Vault Dashboard** used by internal security staff
+    - A read-only **telemetry bus** carrying vault state transitions and alerts
+
+    Begin by observing how the system behaves under normal conditions before attempting to influence it. Look for any available leaked documentation to help with our mission.
+
+    #### Available Interfaces
+
+    **Vault Dashboard**
+      Displays real-time KPIs, alert states, and operational posture of the vault.
+
+    **Telemetry Feed (Read-Only)**
+    Used for situational awareness and timing analysis.
+    * Protocol: MQTT
+    * Topic namespace: `casino/#`
+    * Publishing is **not required** and **not expected**
+
+    ## Grading
+
+    Tokens are issued dynamically as specific operational conditions are met.
+    As you progress:
+
+    - The dashboard will reflect state changes
+    - Telemetry events will confirm successful transitions
+    - Each recovered token serves as proof of objective completion
+
+    Tokens must be submitted exactly as issued.
+
+    ### Token Format
+
+    The token format for this challenge is:
+
+    `PCCC{0D-XX-YYYY-ZZZZ}`
+
+    ## System and Tool Credentials
+
+    | system / tool | location | access |
+    |---------------|----------|--------|
+    | Vault Dashboard | `http://socwall.pccc:8090/dashboard` | No authentication |
+    | Telemetry Broker | `roulette-telemetry.pccc:1883` | Read-only |
+    | Vault Operations | `http://vaultcore.pccc:8080` | Read-Write (API) |
+
+    ## Note
+
+    Attacking or attempting to gain unauthorized access to the **challenge platform infrastructure** is strictly forbidden. 
+    You may only interact with the services and interfaces intentionally exposed as part of this challenge.
+
+    Abuse of the underlying platform, denial-of-service attempts, or attempts to escape the challenge environment will result in disqualification.
+
+    ## Tip
+    💡 Stay organized. This challenge requires correlating information across **multiple services and protocols**.
+
+  icon: "TbNumber13Small"  
+  summary: "Eavesdrop on an ex-warlord’s vault telemetry, learn its tells, and drive the lock through the correct sequence to spill the loot for all to see."
+  
+  tags:
+    - individual-offense
+    - round2
+    - forensics
+    - exploitation
+    - pc7
+  
+  variables:
+    token1:
+      template: "fake.bothify('PCCC{0D-01-####-????}')"
+      default: &token1 "PCCC{0D-01-HOSE-XXXX}"
+    token2:
+      template: "fake.bothify('PCCC{0D-02-####-????}')"
+      default: &token2 "PCCC{0D-02-BURN-YYYY}"
+    token3:
+      template: "fake.bothify('PCCC{0D-03-####-????}')"
+      default: &token3 "PCCC{0D-03-GHST-DEMO}"
+    token4:
+      template: "fake.bothify('PCCC{0D-04-####-????}')"
+      default: &token4 "PCCC{0D-04-FLOR-YYYY}"
+    t2_release_id:
+      template: "fake.bothify('fw-runtime-2.4.7-######')"
+      default: &t2_release_id "fw-runtime-2.4.7-981124"
+
+  questions:
+    - name: "Token 1 - House Rhythm"
+      body: "Recover the casino's sync rhythm and print the latest ops receipt."
+      placeholder: "PCCC{0D-01-XXXX-YYYY}"
+      answer: *token1
+      points: 930
+      max_attempts: 3
+
+    - name: "Token 2 - Burned Blueprint"
+      body: "The vault controller accepts signed firmware bundles. Your objective is to upload a bundle that passes verification but causes the installer to execute a blueprint install plan. Start by pulling an official bundle from the firmware catalog (/api/fw/download/id), then craft a modified bundle that is still accepted by verification while changing the installer’s effective behavior."
+      placeholder: "PCCC{0D-02-XXXX-YYYY}"
+      answer: *token2
+      points: 930
+      max_attempts: 3
+
+    - name: "Token 3 - Ghost in the Stack"
+      body: "Consult the Operator's Manual and create an exploit to redeem the ghost proof after recovering the redacted replay secret. Start with this endpoint: http://vaultcore.pccc:8080/api/ghost/challenge."
+      placeholder: "PCCC{0D-03-XXXX-YYYY}"
+      points: 930
+      answer: *token3
+      max_attempts: 3
+
+    - name: "Token 4 - False Floor"
+      body: "Decrypt the surveillance export, extract the floor code, and enter the false floor."
+      placeholder: "PCCC{0D-04-XXXX-YYYY}"
+      answer: *token4
+      points: 930
+      max_attempts: 3
+      
+services:
+  mqtt-broker:
+    build: 
+      context: ./mqtt-broker
+      dockerfile: Dockerfile
+    hostname: roulette-telemetry.pccc
+    networks:
+      - competitor_net
+
+  vaultcore:
+    build: 
+      context: ./vaultcore
+      dockerfile: Dockerfile
+    hostname: vaultcore.pccc
+    networks:
+      - competitor_net
+    environment:
+      # Runtime token injection (do not bake tokens into images)
+      CTFD_TOKEN_1: *token1
+      CTFD_TOKEN_2: *token2
+      CTFD_TOKEN_3: *token3
+      CTFD_TOKEN_4: *token4
+
+      # Core wiring
+      MQTT_HOST: "roulette-telemetry.pccc"
+      MQTT_PORT: "1883"
+      MQTT_CLIENT_ID: "o13-vault-core"
+      MQTT_KEEPALIVE: "20"
+      MQTT_BASE_TOPIC: "casino/cage"
+
+      # Alerting + rate limits (finals-style: minimal feedback, real consequences)
+      ALERT_LEVEL_THRESHOLDS: "0,10,25,45,70,90"
+      ALERT_LEVEL5_MODE: "cooldown"
+      ALERT_PENALTY_RATE_LIMIT: "4.0"
+      ALERT_PENALTY_TOPIC_ENUM_SUSPECT: "2.5"
+      RL_SYNC_PER_MIN: "10"
+      RL_SYNC_BURST: "4"
+
+      # Token reveal behavior (slips)
+      TOKEN_REVEAL_MODE: "both"
+      TOKEN_REVEAL_ONCE: "false"
+      TOKEN_REVEAL_REQUIRES_ALERT_MAX: "7"
+      TOKEN_REVEAL_SECONDS: "8"
+
+      # Token 1 (MQTT timing channel)
+      T1_BUCKET_SECONDS: "30"
+      T1_BITRATE_BPM: "240"
+      T1_SYNC_GRACE_MS: "900"
+      T1_JITTER_MS: "110"
+      T1_NOISE_RATE_PER_SEC: "12"
+      T1_DECOY_STRENGTH: "2"
+      T1_ENCODING_MODE: "timing"
+      T1_RHYTHM_SIG_BYTES: "12"
+
+      # DEBUG TESTING ////////
+      ALERT_PENALTY_BAD_SYNC: "0.0"
+      ALERT_DECAY_PER_SEC: "5.0"
+      LOCKDOWN_SECONDS: "0"
+      T1_SYNC_MAX_ATTEMPTS_PER_BUCKET: "999"
+      T1_ACCEPT_BUCKET_SLOP: "999"
+
+
+      # Token 1 (Shift Rhythm - Roulette buckets)
+      RHYTHM_ENABLE: "true"
+
+      # IMPORTANT: UI expects 16 hex chars -> 8 bytes -> 64 bits, hex output
+      RHYTHM_OUTPUT_MODE: "hex"       # "base32" or "hex"
+
+      # Difficulty knobs:
+      RHYTHM_BITS_PER_BUCKET: "64"
+      RHYTHM_BUCKET_SECONDS: "45"        # 2 = harder, 4 = easier
+      RHYTHM_SPIN_INTERVAL_MS: "550"     # faster = more data (easier), slower = harder
+      RHYTHM_JITTER_MS: "90"             # 0 = easy, 120 = harder
+      RHYTHM_NOISE_PROB: "0.35"          # 0.1 = easy, 0.6 = harder
+
+      # Fairness / compatibility:
+      RHYTHM_RETAINED_BEACON: "true"     # keep rules beacon retained
+      RHYTHM_MARKER_POCKET: "00"         # marker pocket at slot 0
+      RHYTHM_CARRIER_RULE: "first_slots"
+
+      # Token 2 (firmware bundle)
+      T2_RELEASE_ID: *t2_release_id
+      T2_RELEASE_VERSION: "2.4.7"
+      T2_SIG_ALGO: "HMAC-SHA256"
+      T2_MAX_UPLOAD_BYTES: "400000"
+      T2_MAX_UPLOADS_PER_MIN: "4"
+      T2_REQUIRE_ALERT_MAX: "3"
+      T2_ALERT_PENALTY_BAD_FW: "8.0"
+      T2_ALERT_PENALTY_FW_SPAM: "5.0"
+
+      # Token 3 (replay daemon / ghost)
+      T3_REPLAY_PORT: "7013"
+      T3_PIE: "on"
+      T3_GHOST_SECRET_BYTES: "32"
+      T3_MAX_FRAME_BYTES: "4096"
+      T3_PROOF_TTL_SECONDS: "90"
+      T3_MAX_SUBMITS_PER_MIN: "30"
+      T3_REQUIRE_ALERT_MAX: "3"
+      T3_ALERT_PENALTY_BAD_FRAME: "7.0"
+      T3_ALERT_PENALTY_SPAM: "5.0"
+
+      # Token 4 (encrypted export + stego)
+      T4_REQUIRE_TOKEN3: "true"
+      T4_STEGO_LSB_BITS: "1"
+      T4_CIPHER_BLOCK: "32"
+      T4_MAX_EXPORT_BYTES: "800000"
+      T4_MAX_EXPORTS_PER_MIN: "6"
+      T4_REQUIRES_ALERT_MAX: "6" # Changed from 4
+      T4_ALERT_PENALTY_BAD_EXPORT: "2.0" # Changed from 6
+      T4_ALERT_PENALTY_EXPORT_SPAM: "4.0"
+
+      LOG_JSON: "true"
+      LOG_LEVEL: "INFO"
+
+  casino-dashboard:
+    build: 
+      context: ./casino-dashboard
+      dockerfile: Dockerfile
+    hostname: socwall.pccc
+    networks:
+      - competitor_net
+    environment:
+      VAULT_CORE_URL: "http://vaultcore.pccc:8080"
+      UI_EVENT_BUFFER: "250"
+      UI_POLL_FALLBACK_MS: "900"
+      UI_DEGRADED_BANNER: "true"
+      UI_BLUEPRINT_REVEAL_SECONDS: "8"
+      UI_GHOST_REVEAL_SECONDS: "8"
+      UI_FALSEFLOOR_REVEAL_SECONDS: "10"
+      LOG_JSON: "true"
+      LOG_LEVEL: "INFO"
+
+networks:
+  competitor_net:
+    internal: true

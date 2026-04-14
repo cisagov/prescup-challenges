@@ -1,0 +1,68 @@
+[
+	{
+		"path": "/coredev/v0/me/contributions",
+		"class": "MediaWiki\\Rest\\Handler\\UserContributionsHandler",
+		"services": [
+			"ContributionsLookup",
+			"UserNameUtils"
+		],
+		"mode": "me"
+	},
+	{
+		"path": "/coredev/v0/user/{user}/contributions",
+		"class": "MediaWiki\\Rest\\Handler\\UserContributionsHandler",
+		"services": [
+			"ContributionsLookup",
+			"UserNameUtils"
+		],
+		"mode": "user"
+	},
+	{
+		"path": "/coredev/v0/me/contributions/count",
+		"class": "MediaWiki\\Rest\\Handler\\ContributionsCountHandler",
+		"services": [
+			"ContributionsLookup",
+			"UserNameUtils"
+		],
+		"mode": "me"
+	},
+	{
+		"path": "/coredev/v0/user/{user}/contributions/count",
+		"class": "MediaWiki\\Rest\\Handler\\ContributionsCountHandler",
+		"services": [
+			"ContributionsLookup",
+			"UserNameUtils"
+		],
+		"mode": "user"
+	},
+	{
+		"method": "POST",
+		"path": "/coredev/v0/transform/{from}/to/{format}/{title}/{revision}",
+		"class": "MediaWiki\\Rest\\Handler\\TransformHandler",
+		"factory": "MediaWiki\\Rest\\Handler\\TransformHandler::factory",
+		"transformations": {
+			"wikitext": [ "html", "lint" ],
+			"html": [ "wikitext" ]
+		}
+	},
+	{
+		"method": "POST",
+		"path": "/coredev/v0/transform/{from}/to/{format}",
+		"class": "MediaWiki\\Rest\\Handler\\TransformHandler",
+		"factory": "MediaWiki\\Rest\\Handler\\TransformHandler::factory",
+		"transformations": {
+			"wikitext": [ "html", "lint" ],
+			"html": [ "wikitext" ]
+		}
+	},
+	{
+		"method": "POST",
+		"path": "/coredev/v0/transform/{from}/to/{format}/{title}",
+		"class": "MediaWiki\\Rest\\Handler\\TransformHandler",
+		"factory": "MediaWiki\\Rest\\Handler\\TransformHandler::factory",
+		"transformations": {
+			"wikitext": [ "html", "lint" ],
+			"html": [ "wikitext" ]
+		}
+	}
+]

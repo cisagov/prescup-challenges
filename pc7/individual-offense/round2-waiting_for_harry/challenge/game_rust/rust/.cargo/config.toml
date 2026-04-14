@@ -1,0 +1,11 @@
+[build]
+target = ["x86_64-unknown-linux-gnu", "x86_64-pc-windows-gnu"]
+
+[target.wasm32-unknown-emscripten]
+rustflags = [
+    "-C", "link-args=-pthread", # /!\ Read 'Thread support' below regarding this flag
+    "-C", "target-feature=+atomics", # /!\ Read 'Thread support' below regarding this flag
+    "-C", "link-args=-sSIDE_MODULE=2",
+    "-Zlink-native-libraries=no",
+    "-Cllvm-args=-enable-emscripten-cxx-exceptions=0",
+]

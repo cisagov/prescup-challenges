@@ -1,0 +1,397 @@
+# ## Format of this file
+#
+# The top-level keys in this file correspond with directories under resources/lib/.
+# These in turn are registered as module bundles in Resources.php.
+#
+# ## How to install an foreign resource
+#
+# 1. Add or update the url(s) for the upstream module to this YAML file.
+#
+#    Look at other modules for examples. To install a module from npm,
+#    we use the tarball distribution from npmjs.org. This is the same as what
+#    the npm CLI uses. For example, to install jquery-client@9.2.0, use:
+#    <https://registry.npmjs.org/jquery-client/-/jquery-client-9.2.0.tgz>.
+#
+# 2. If the upstream maintainers publish an integrity hash, set that as well.
+#    Otherwise, use manageForeignResources.php to compute the integrity hash.
+#
+#    Run `php manageForeignResources.php make-sri "my module name"`
+#
+#    This will download the specified file(s) and print their integrity hashes,
+#    already formatted in YAML, ready for copying to this file.
+#
+# 3. Last but not least, decide where files go.
+#
+#    If you specified a direct url to JavaScript or CSS file, this step is
+#    optional. See the corresponding documentation section below for more
+#    information and examples for "dest" keys. Once you've set any "dest" keys,
+#    run `php manageForeignResources.php update "my module name"`.
+#
+# ## Package formats
+#
+# Each top-level key must use one of these types:
+#
+# - `file`: For a plain file.
+# - `multi-file`: For multiple plain files.
+# - `tar`: For a tarball archive (may be compressed).
+#
+# ### The "file" type
+#
+# * `src`: Full URL to the remote resource.
+# * `integrity`: Cryptographic hash (integrity metadata format per <https://www.w3.org/TR/SRI/>).
+# * `dest`: [optional] The file name to use in the module directory. Default: Basename of URL.
+#
+# For example, the following would produce resources/lib/mymodule/x.js:
+#
+#     mymodule:
+#       type: file
+#       src: https://mymodule.example/1.2.3/x.js
+#       integrity: sha384-Je+NE+saisQuoi
+#
+# ### The "multi-file" type
+#
+# * `files`: An object mapping destination paths to `src` and `integrity` keys.
+#
+# For example:
+#
+#     mymodule:
+#       type: multi-file
+#       files:
+#         x.js:
+#           src: https://mymodule.example/1.2.3/x.js
+#           integrity: sha384-Je+NE+saisQuoi
+#         x.css:
+#           src: https://mymodule.example/1.2.3/x.css
+#           integrity: sha384-Je+NE+saisQuoi
+#
+# ### The "tar" type
+#
+# * `src`: Full URL to the remote resource.
+# * `integrity`: Cryptographic hash (integrity metadata format per <https://www.w3.org/TR/SRI/>).
+# * `dest`: [optional] The default is to extract all files from the package.
+#    To only extract some of the files or directories, use "dest" to specify
+#    files, directories, and/or glob patterns. You can use a site like https://unpkg.com/
+#    to easily inspect an npm package, like <https://unpkg.com/jquery-client@2.0.2/>.
+#
+# For example:
+#
+#     mymodule:
+#       type: tar
+#       src: https://registry.npmjs.org/jquery-client/-/jquery-client-9.2.0.tgz
+#       integrity: sha384-Je+NE+saisQuoi
+#       dest:
+#         package/dist/x.js:
+#         package/dist/i18n:
+#         package/dist/style/*.css:
+#
+# The would extract the "x.js" file, the "i18n" directory (recursive),
+# and any "*.css" files from the "style" directory.
+#
+
+CLDRPluralRuleParser:
+  type: file
+  src: https://raw.githubusercontent.com/santhoshtr/CLDRPluralRuleParser/0dda851/src/CLDRPluralRuleParser.js
+  integrity: sha384-M4taeYYG2+9Ob1/La16iO+zlRRmBV5lBR3xUKkQT6kfkJ0aLbCi6yc0RYI1BDzdh
+
+codex:
+  type: tar
+  src: https://registry.npmjs.org/@wikimedia/codex/-/codex-0.1.1.tgz
+  integrity: sha512-Ep/JNUm2mE5zzanTP8IBGP9sUHkNlY7gnJise9Bldbg7CSJEijRj343QHS6x4ZxDO6MGzknpDmjI3SnS7eDjnQ==
+  dest:
+    package/dist/codex.es.js:
+    package/dist/codex.umd.js:
+    package/dist/codex.style.css:
+    package/dist/codex.style-rtl.css:
+    package/LICENSE:
+    package/README.md:
+
+codex-icons:
+  type: tar
+  src: https://registry.npmjs.org/@wikimedia/codex-icons/-/codex-icons-0.1.1.tgz
+  integrity: sha512-J43hjnAzDxRVUBEB+MirWfc3MiK245vR4pXR4Y/9eC486PTAiH/Gf7W69bOEIJK8eoGvKUe+Xa5HBut4zg52QQ==
+  dest:
+    package/dist/codex-icons.json:
+    package/LICENSE:
+    package/README.md:
+
+codex-search:
+  type: tar
+  src: https://registry.npmjs.org/@wikimedia/codex-search/-/codex-search-0.1.1.tgz
+  integrity: sha512-But9MjJjFsCNfn+RZuq8mJWSzkDDSsy6/rj+xh8X5eNO3PGc6knkb1wYprSKaVNdkFBB3jc3cXQUB4OYa2fMgw==
+  dest:
+    package/dist/codex-search.es.js:
+    package/dist/codex-search.umd.js:
+    package/dist/codex-search.style.css:
+    package/dist/codex-search.style-rtl.css:
+    package/LICENSE:
+    package/README.md:
+
+url:
+  type: multi-file
+  files:
+    URL.js:
+      src: https://raw.githubusercontent.com/Financial-Times/polyfill-library/0ece79ce32/polyfills/URL/polyfill.js
+      integrity: sha384-ZAFKMtnv4166IfCOoSoxGM1b4JQx/njgDOWwnaSQPESHAqvjE0e5gXmYBYyjQEl8
+    URL-toJSON.js:
+      src: https://raw.githubusercontent.com/Financial-Times/polyfill-library/0ece79ce32/polyfills/URL/prototype/toJSON/polyfill.js
+      integrity: sha384-Fy884Llzghu/2ag7WG9GtW4BhSprpT9ZdbSKfetBSoD7V6VW1AE5hx1PA0LXVqlC
+    LICENSE.md:
+      src: https://raw.githubusercontent.com/Financial-Times/polyfill-library/0ece79ce32/LICENSE.md
+      integrity: sha384-kXXDJ+mVdRawUrEAkIAPr1Lz40TzWjVxllGDCxB9+fHcLXtNsSYrKIvzNgTBF+En
+
+fetch-polyfill:
+  type: tar
+  src: https://registry.npmjs.com/whatwg-fetch/-/whatwg-fetch-3.6.2.tgz
+  integrity: sha384-MKKGEwKprHZSo8G05laATm+iES1Lbsp/Dy7riDibahMr2TyJS7HClsxKjcGk+3FJ
+  dest:
+    package/dist/fetch.umd.js:
+    package/LICENSE:
+    package/README.md:
+
+intersection-observer:
+  type: tar
+  src: https://registry.npmjs.org/intersection-observer/-/intersection-observer-0.12.0.tgz
+  integrity: sha384-zCaiM7krKokKgwmrn87MtEtBUfsddhfofL0x+6KiGr+nHRa4b/ZdcfkBUSEtuEUw
+  dest:
+    package/intersection-observer.js:
+    package/README.md:
+
+jquery:
+  type: multi-file
+  files:
+    # Integrities from link modals https://code.jquery.com/jquery/
+    jquery.js:
+      src: https://code.jquery.com/jquery-3.6.1.js
+      integrity: sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=
+
+jquery.chosen:
+  type: multi-file
+  files:
+    LICENSE:
+      src: https://raw.githubusercontent.com/harvesthq/chosen/v1.8.2/LICENSE.md
+      integrity: sha384-hxUqOVbJZTd9clMlf9yV18PjyKQ2rUOCXLgFNYlV/blpyeCyiUCpmVjAmNP0yc8M
+    README.md:
+      src: https://raw.githubusercontent.com/harvesthq/chosen/v1.8.2/README.md
+      integrity: sha384-ps8fQiOF1anPibj6QMNii4OcAbZNcy+dkmdJUZzqBgmfjaPth9YDe0TRIk89lfID
+    # Following files taken from CDN because they're built, and don't exist in the repo
+    chosen-sprite.png:
+      src: https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen-sprite.png
+      integrity: sha384-QL0lDMjIhfcd5uzKEIPehkhx7l0gHWxFo1taNsY2hdDuYdGAadNhiwKueQ91R8KW
+    chosen-sprite@2x.png:
+      src: https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen-sprite%402x.png
+      integrity: sha384-MSDzP+ofFO+lRrCZQn3dztHS/GdR8Ai907bxrRZeuGSi87G8XffEKTxxM99GTvr1
+    chosen.css:
+      src: https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.css
+      integrity: sha384-VeNz/jFhcqEG5UB40sPZW8Bg8sdtbtXW1038aqBPAZy/z/6j1XsSQjRUJ7NEM3nE
+    chosen.jquery.js:
+      src: https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.jquery.js
+      integrity: sha384-EzfvMGW4mwDo/InJrmR/UvtxTUUYUA0cfybfS8aqPG1ItoAQYYYDImWl1gaBzMfQ
+
+jquery.client:
+  type: tar
+  src: https://registry.npmjs.org/jquery-client/-/jquery-client-3.0.0.tgz
+  integrity: sha256-BRPTsJn7fViZ2ip0YUBT9L90wJ8s0BFE17ccpmLfPUk=
+  dest:
+    package/AUTHORS.txt:
+    package/jquery.client.js:
+    package/LICENSE-MIT:
+    package/README.md:
+
+# # PATCHED:
+# # Changed to support SameSite and change decode logic. Seems permanent with upstream archived.
+# # Move to src instead?
+# jquery.cookie:
+#   type: multi-file
+#   files:
+#     jquery.cookie.js:
+#       src: https://raw.githubusercontent.com/carhartl/jquery-cookie/v1.3.1/jquery.cookie.js
+#       integrity: sha384-Xxq63E9KDgzUJ6WPNPqVeOtRIwZyx6y9DzEwY2u6LYKSnWrjSoGtWSKmTindYBf2
+#     MIT-LICENSE.txt:
+#       src: https://raw.githubusercontent.com/carhartl/jquery-cookie/v1.3.1/MIT-LICENSE.txt
+#       integrity: sha384-zYsGf3KJ7S0AhOICjcoh0kkn7aGZlzYUXXX5xz8dwR9KjLMM+/JPR2g/jVOGGeId
+#     CHANGELOG.md:
+#       src: https://raw.githubusercontent.com/carhartl/jquery-cookie/v1.3.1/CHANGELOG.md
+#       integrity: sha384-SQOHhLc7PHxHDQpGE/zv9XfXKL0A7OBu8kuyVDnHVp+zSoWyRw4xUJ+LSm5ql4kS
+
+jquery.form:
+  type: file
+  src: https://raw.githubusercontent.com/jquery-form/form/ff80d9ddf4/jquery.form.js
+  integrity: sha384-h4G2CrcSbixzMvrrK259cNBYaL/vS1D4+KdUN9NJDzQnTU1bQ6Avluget+Id13M7
+
+jquery.fullscreen:
+  type: file
+  src: https://raw.githubusercontent.com/theopolisme/jquery-fullscreen/v2.1.0/jquery.fullscreen.js
+  integrity: sha384-G4KPs2d99tgcsyUnJ3eeZ1r2hEKDwZfc4+/xowL/LIemq2VVwEE8HpVAWt4WYNLR
+
+jquery.hoverIntent:
+  type: file
+  src: https://raw.githubusercontent.com/briancherne/jquery-hoverIntent/823603fdac/jquery.hoverIntent.js
+  integrity: sha384-lca0haN0hqFGGh2aYUhtAgX9dhVHfQnTADH4svDeM6gcXnL7aFGeAi1NYwipDMyS
+
+jquery.i18n:
+  type: tar
+  src: https://codeload.github.com/wikimedia/jquery.i18n/tar.gz/70b5ee20a638cb8fe36baef8d51ac2eb577ce012
+  integrity: sha384-/Upo+6ih5h5v7/GW4zzuaMNZfAHmV7cYVhORdjwT9qFTHzmIStN9mPQ+VD0niknE
+  dest:
+    jquery.i18n-*/CODE_OF_CONDUCT.md:
+    jquery.i18n-*/CREDITS:
+    jquery.i18n-*/GPL-LICENSE:
+    jquery.i18n-*/MIT-LICENSE:
+    jquery.i18n-*/README.md:
+    jquery.i18n-*/src:
+
+jquery.throttle-debounce:
+  type: file
+  src: https://raw.githubusercontent.com/cowboy/jquery-throttle-debounce/v1.1/jquery.ba-throttle-debounce.js
+  integrity: sha384-ULOy4DbAghrCqRcrTJLXOY9e4gDpWh0BeEf6xMSL0VtNudXWggcb6AmrVrl4KDAP
+
+# TODO: jquery.ui (!)
+
+moment:
+  type: tar
+  src: https://codeload.github.com/moment/moment/tar.gz/2.25.2
+  integrity: sha384-Kdi8+psMUggMYwnp+uBCuy03sBfDbKFyjzdLWJks/4O8x4DwOFWzYbtm7RbJ4ISU
+  dest:
+    moment-2.25.2/moment.js:
+    moment-2.25.2/CHANGELOG.md:
+    moment-2.25.2/README.md:
+    moment-2.25.2/LICENSE:
+    moment-2.25.2/locale/*.js: locale
+
+mustache:
+  type: multi-file
+  files:
+    mustache.js:
+      src: https://raw.githubusercontent.com/janl/mustache.js/v3.0.1/mustache.js
+      integrity: sha384-YjAj6Nll7fkEWzxTlE9o3NWC9qdZt1Upat6Afjib9eLs8lTODpSKEBHeXq8o/VUH
+    LICENSE:
+      src: https://raw.githubusercontent.com/janl/mustache.js/v3.0.1/LICENSE
+      integrity: sha384-j2EDj6YtCRgFvYDtzo6pXzbskIj/K1Yg65BL0j3/L6UIHxbMtRMJwC/W+XoYx0FZ
+
+oojs:
+  type: tar
+  src: https://registry.npmjs.org/oojs/-/oojs-6.0.0.tgz
+  integrity: sha384-J4GtN11YFt6zOVI6/SjOZ7gXzdYweZJorgUCr5SSV9vBTcth9V5JaZ83tI2jTvI2
+  dest:
+    package/dist/oojs.js:
+    package/AUTHORS.txt:
+    package/LICENSE-MIT:
+    package/README.md:
+
+oojs-router:
+  type: tar
+  src: https://registry.npmjs.org/oojs-router/-/oojs-router-0.3.0.tgz
+  integrity: sha384-FeAuFD6G2sGGXCWvxncx9QOTEAoq5VQdNWkXEhvi4XAoOSqe8RGms5JgmL8Fl8FB
+  dest:
+    package/dist/oojs-router.js:
+    package/LICENSE:
+    package/AUTHORS.txt:
+    package/History.md:
+
+ooui:
+  type: tar
+  src: https://registry.npmjs.org/oojs-ui/-/oojs-ui-0.44.3.tgz
+  integrity: sha384-nP/IIJZJCEb18wfYd98CC91bW7Z10RDxHz0t0F/wBKISBmZ805GLmO9OhPHHazt0
+
+  dest:
+    # Main stuff
+    package/dist/oojs-ui-core.js{,.map.json}:
+    package/dist/oojs-ui-core-{wikimediaui,apex}.css:
+    package/dist/oojs-ui-widgets.js{,.map.json}:
+    package/dist/oojs-ui-widgets-{wikimediaui,apex}.css:
+    package/dist/oojs-ui-toolbars.js{,.map.json}:
+    package/dist/oojs-ui-toolbars-{wikimediaui,apex}.css:
+    package/dist/oojs-ui-windows.js{,.map.json}:
+    package/dist/oojs-ui-windows-{wikimediaui,apex}.css:
+    package/dist/oojs-ui-{wikimediaui,apex}.js{,.map.json}:
+    package/dist/i18n:
+    # For jsduck/eg-iframe
+    package/dist/oojs-ui-images-wikimediaui.css:
+    # WikimediaUI theme
+    package/dist/themes/wikimediaui/images/icons/*.{svg,png}: themes/wikimediaui/images/icons
+    package/dist/themes/wikimediaui/images/indicators/*.{svg,png}: themes/wikimediaui/images/indicators
+    package/dist/themes/wikimediaui/*.json: themes/wikimediaui
+    package/dist/wikimedia-ui-base.less:
+    # Apex theme (icons and indicators)
+    package/dist/themes/apex/*.json: themes/apex
+    # Misc stuff
+    package/dist/AUTHORS.txt:
+    package/dist/History.md:
+    package/dist/LICENSE-MIT:
+    package/dist/README.md:
+
+pako:
+  type: multi-file
+  files:
+    pako_deflate.es5.js:
+      src: https://raw.githubusercontent.com/nodeca/pako/2.0.4/dist/pako_deflate.es5.js
+      integrity: sha384-msHzmf3Olqx90vEgQHrbqpn7Kx6Tv0L5VXKPQoq+yDnkrvKwzlufduA/rLk1suNV
+    README.md:
+      src: https://raw.githubusercontent.com/nodeca/pako/2.0.4/README.md
+      integrity: sha384-mQ9cShSJ6yG8JTPL7LkbnfUnTmc7LA2hnBMSNfb5X7xk6pTFzVTurK9gcSMgJu3B
+    LICENSE:
+      src: https://raw.githubusercontent.com/nodeca/pako/2.0.4/LICENSE
+      integrity: sha384-9tg5LwdfxM6Fpdp6Sep9VI0qXS7Eg5gQRPvNrfV3DKIkVVL3EwSK2atu+zRoEwJg
+
+promise-polyfill:
+  type: multi-file
+  files:
+    promise-polyfill.js:
+      # unreleased between 8.1.3 and 2.2.0
+      src: https://raw.githubusercontent.com/taylorhakes/promise-polyfill/65ed35b2927e97b262538054e5951d63893db05f/dist/polyfill.js
+      integrity: sha384-nQUslfDX7uz5YSWudfV8dG5d8whQpNMrLcbJPLjvq+McUl2VK7v0UOVnbfs/FrMl
+    LICENSE:
+      src: https://raw.githubusercontent.com/taylorhakes/promise-polyfill/65ed35b2927e97b262538054e5951d63893db05f/LICENSE
+      integrity: sha384-IiroT08PAyKPUM4VsNJI7G1o3SM1y+YBBj1lwdJURXYnjtx1OzYKJTNEWs2pE684
+
+qunitjs:
+  type: multi-file
+  # Integrity from link modals at https://code.jquery.com/qunit/
+  files:
+    qunit.js:
+      src: https://code.jquery.com/qunit/qunit-2.18.2.js
+      integrity: sha256-ZHKhdrkmp5cjQJGuc4fGv024PWo9IqBQJTawS4erwz0=
+    qunit.css:
+      src: https://code.jquery.com/qunit/qunit-2.18.2.css
+      integrity: sha256-GmRML6cGwIPA5an2uTNHHKynhn8ooqM058EpN+fpmbM=
+
+sinonjs:
+  type: file
+  src: https://sinonjs.org/releases/sinon-1.17.7.js
+  integrity: sha384-wR63Jwy75KqwBfzCmXd6gYws6uj3qV/XMAybzXrkEYGYG3AQ58ZWwr1fVpkHa5e8
+  dest: sinon.js
+
+vue:
+  type: tar
+  # This is the migration build of Vue 3.2.37 which provides compatibility for Vue 2 code
+  src: https://registry.npmjs.org/@vue/compat/-/compat-3.2.37.tgz
+  integrity: sha512-MIYkFAz3Fur1mtZBqrNMYTymlohCQ0ol6vtNb58cqExLSCt63xZaXyiZZYPvS6WaMXfbNBDPXMvU9tO922eFCA==
+  dest:
+    package/README.md:
+    package/LICENSE:
+    package/dist/vue.global.js:
+    package/dist/vue.global.prod.js:
+
+vuex:
+  type: tar
+  src: https://registry.npmjs.org/vuex/-/vuex-4.0.2.tgz
+  integrity: sha512-M6r8uxELjZIK8kTKDGgZTYX/ahzblnzC4isU1tpmEuOIIKmV+TRdc+H4s8ds2NuZ7wpUTdGRzJRtoj+lI+pc0Q==
+
+  dest:
+    package/README.md:
+    package/LICENSE:
+    package/dist/vuex.global.js:
+    package/dist/vuex.global.prod.js:
+
+wvui:
+  type: tar
+  src: https://registry.npmjs.org/@wikimedia/wvui/-/wvui-0.4.0.tgz
+  integrity: sha512-xnUmFzQrMQxHqijtL6Vr8alVDCJ2XWfG9ywHRjBXupck5tGilIB5WwU59laGQKW2FfakLdM27Gp+rAFzLHCqDA==
+
+  dest:
+    package/README.md:
+    package/LICENSE:
+    package/dist/commonjs2/wvui.commonjs2.js:
+    package/dist/commonjs2/wvui.css:
+    package/dist/commonjs2/wvui-search.commonjs2.js:
+    package/dist/commonjs2/wvui-search.css:

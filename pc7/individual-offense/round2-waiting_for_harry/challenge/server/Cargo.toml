@@ -1,0 +1,30 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rocket = { version="0.5.1", features=["json", "tls"] }
+rsa = { version="0.10.0-rc.4", features=["sha2"] }
+chrono = { version="0.4.41", features=["serde"] }
+dotenvy = "0.15"
+hex = "0.4.3"
+futures-util = "0.3.31"
+tracing = "0.1.41"
+
+[dependencies.sqlx]
+version = "0.7.0"
+default-features = false
+features = ["macros", "migrate", "chrono", "sqlite"]
+
+
+[dependencies.rocket_dyn_templates]
+version = "0.2.0"
+features = ["handlebars"]
+
+[dependencies.rocket_db_pools]
+version = "0.2.0"
+features = ["sqlx_sqlite"]
+
+[dev-dependencies]
+sqlx-cli = { version = "0.7.0" }

@@ -1,0 +1,39 @@
+@import '../../common/variables.less';
+
+@border-base-ems: unit( @border-width-base / @font-size-browser / @font-size-base, em );
+
+.mw-article-toolbar-container {
+	// clearfix for #left-navigation and #right-navigation
+	display: flow-root;
+	border-bottom: @border-bottom-tabs;
+
+	/* Targets #left-navigation and #right-navigation */
+	& > div {
+		font-size: @font-size-tabs;
+	}
+
+	.mw-portlet-views {
+		display: none;
+
+		@media ( min-width: @min-width-tablet ) {
+			&:not( .emptyPortlet ) {
+				display: block;
+			}
+		}
+	}
+
+	.vector-more-collapsible-item {
+		display: block;
+
+		@media ( min-width: @min-width-tablet ) {
+			display: none;
+		}
+	}
+
+	// Make sure pcactions is displayed (even if .emptyPortlet present)
+	.vector-has-collapsible-items {
+		@media ( max-width: @max-width-mobile ) {
+			display: block;
+		}
+	}
+}

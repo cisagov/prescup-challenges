@@ -1,0 +1,137 @@
+x-challenge:
+  name: "Safehouse"
+  description: |
+    # Safehouse
+
+    The art of Deception in full view. Safehouse is compromised. Stay frosty. 
+    
+    **NICE Work Roles**
+
+    - [Digital Forensics](https://niccs.cisa.gov/tools/nice-framework)
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework)
+    - [Exploit Analysis](https://niccs.cisa.gov/tools/nice-framework)
+
+    For more information on these roles, please visit: https://niccs.cisa.gov/workforce-development/nice-framework.
+
+    **NICE Tasks**
+
+    - [T1091](https://niccs.cisa.gov/tools/nice-framework): Perform authorized penetration testing on enterprise network assets
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework): Identify vulnerabilities
+    - [T1383](https://niccs.cisa.gov/tools/nice-framework): Utilize deployable forensics toolkit
+
+    ## Background
+
+    🕴️ The agency’s internal agent listing database called “Safehouse” is rumored to contain sensitive operational blueprints and details about previous operations. You’ve gained access to the frontend of the application but need to acquire administrative credentials to start your investigation. Each token you retrieve signifies a step towards revealing the true intent of this secret agency supporting its existence. 
+
+    ## Tips
+
+    Enumeration is key. Look for misconfigurations in the web server as well as backup files that may have been left inadvertently (.bak). Everything you need to complete this challenge is within your view. 
+
+    ## Getting Started
+
+    To get started, simply navigate to your Operator's Dashboard located at `http://safehouse.local:3000` to begin the challenge.
+
+    ## Tokens 
+    
+    ### Token Formatting
+
+    ✅ *Valid tokens** for this challenge use the following format: `PCCC{SFH-XXXXXX}`. 
+    ❗ Other tokens discovered without this format should be deemed as adversarial artifacts to distract you from your operation's objectives.
+
+    ### EOCD Forensics (Token 3)
+
+    When discovered, the format of `cmt-k` will be two characters or digits. This is a `hex` value (0xYY) that can be used to XOR against the encrypted file found in each dead drop archive. Each archive is unique.
+    
+    ## System and Tool Credentials
+
+    |system name|location|
+    |-----------|--------|
+    |Safehouse Records Portal Frontend|`http://safehouse.local:3000`|
+
+    ## Note
+
+    Attacking or unauthorized access to the challenge platform is forbidden.
+
+  icon: "TbHomeBolt"
+  
+  summary: "Examine flaws, pivot privileges, and extract all four tokens before the digital trail goes cold. Expect protocol oddities and agency-grade misdirection. Good luck, agent." 
+
+  tags:
+    - individual-defense
+    - round2
+    - web
+    - forensics
+    - exploitation
+    - pc7
+    
+  variables:
+    token1:
+      template: "fake.bothify('PCCC{SFH-?##?##}')"
+      default: &token1 "PCCC{SFH-180451}"
+    token2:
+      template: "fake.bothify('PCCC{SFH-?##?##}')"
+      default: &token2 "PCCC{SFH-2AA451}"
+    token3:
+      template: "fake.bothify('PCCC{SFH-?##?##}')"
+      default: &token3 "PCCC{SFH-38A451}"
+    token4:
+      template: "fake.bothify('PCCC{SFH-?##?##}')"
+      default: &token4 "PCCC{SFH-4BZ451}"
+    dead_drop_pw:
+      template: "fake.bothify('DDPW-?#?#?#??')"
+      default: &dead_drop_pw "DDPW-7A3C9KQ2"
+
+  questions:
+    - name: Token 1 - Session Hunting
+      body: Enumerate the application and hijack an administrator's session token to gain further access into the application.
+      placeholder: PCCC{XXX-YYYYYY}
+      answer: *token1
+      points: 855 #25% of 3420
+      max_attempts: 3
+
+    - name: Token 2 - Reverse Uno Card
+      body: Investigate the `artifacts` endpoints, download an access log and reconstruct a suspicious entry containing a reversed payload.
+      placeholder: PCCC{XXX-YYYYYY}
+      answer: *token2
+      points: 855 #25% of 3420
+      max_attempts: 3
+
+    - name: Token 3 - Dead Drop
+      body: The dead-drop bundle contains multiple false payloads. The real token was hidden using operational tradecraft that survives encryption (EOCD Zip Forensics). Analyze the archive structure and metadata to retrieve a key that be used to decrypt the packaged `payload.bin` file in every archive.
+      placeholder: PCCC{XXX-YYYYYY}
+      answer: *token3
+      points: 855 #25% of 3420
+      max_attempts: 3  
+
+    - name: Token 4 - Stringing You Along
+      body: An operator posted a short “strings” capture that is only accessible to authorized sessions. Inside it, a line begins with 'ENCHEX:' followed by hex bytes. A single‑byte XOR was used to obfuscate the token; the key is hinted in system notices.
+      placeholder: PCCC{XXX-YYYYYY}
+      answer: *token4
+      points: 855 #25% of 3420
+      max_attempts: 3
+
+services:
+  backend:
+    build: ./backend
+    hostname: datawarehouse.safehouse.local
+    environment:
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3 
+      TOKEN4: *token4
+      DEAD_DROP_PW: *dead_drop_pw
+      SESSION_SECRET: 3dbbCMFm8nyVjjBYQpA9
+    networks:
+      - competitor_net
+
+  frontend:
+    build: ./frontend
+    hostname: safehouse.local
+    environment:
+      - VITE_API_URL=http://datawarehouse.safehouse.local:5000
+    networks:
+      - competitor_net
+        
+networks:
+  competitor_net:
+    internal: true 

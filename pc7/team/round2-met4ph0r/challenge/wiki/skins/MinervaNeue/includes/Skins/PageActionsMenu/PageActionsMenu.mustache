@@ -1,0 +1,18 @@
+<nav class="page-actions-menu">
+	<ul id="page-actions" class="page-actions-menu__list">
+		{{#toolbar}}
+		<li id="{{name}}" class="page-actions-menu__list-item">
+			{{#components}}
+				<a id="{{id}}" href="{{href}}" class="{{class}}"
+					data-mw="interface"
+					data-event-name="{{data-event-name}}" role="button" title="{{title}}">{{text}}</a>
+			{{/components}}
+		</li>
+		{{/toolbar}}
+		{{#overflowMenu}}
+			<li id="{{item-id}}" class="page-actions-menu__list-item">
+				{{> ToggleList/ToggleList}}
+			</li>
+		{{/overflowMenu}}
+	</ul>
+</nav>

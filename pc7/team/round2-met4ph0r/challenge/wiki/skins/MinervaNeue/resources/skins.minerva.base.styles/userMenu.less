@@ -1,0 +1,32 @@
+@import '../../minerva.less/minerva.variables.less';
+
+// The top level user account button in the upper right near the notifications button.
+.minerva-user-navigation {
+	display: flex;
+	// Keep space for at least two buttons.
+	min-width: 2 * @menuButtonIconSize;
+	// Support Firefox: Needs `min-height` to vertically align icons in menu. See T233517.
+	min-height: @siteHeaderHeight;
+	height: 100%;
+	// FIXME: for cached HTML. Merge with `.minerva-search-form + .minerva-user-navigation`.
+	width: 100%;
+	// Center vertically.
+	align-items: center;
+	// Layout from right / end.
+	justify-content: flex-end;
+	// Show the list relative the button.
+	position: relative;
+
+	// align the last icon (i.e. notification or use menu) with the container edge.
+	& > *:last-child {
+		margin-right: -@icon-padding-md;
+	}
+}
+
+// Different rule for cached HTML
+// Can be merged into `.minerva-user-navigation` rule one week after this
+// change was introduced and minerva-search-form class is present everywhere.
+.minerva-search-form + .minerva-user-navigation {
+	min-width: auto;
+	width: auto;
+}

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aefgh39622",
+			"Lookruk"
+		]
+	},
+	"mobile-frontend-editor-edit": "ແກ້ໄຂ",
+	"mobile-frontend-history": "ເບິ່ງປະຫວັດການດັດແກ້ຂອງໜ້ານີ້",
+	"mobile-frontend-home-button": "ໜ້າຫຼັກ",
+	"mobile-frontend-language-article-heading": "ພາສາ",
+	"mobile-frontend-main-menu-button-tooltip": "ເປີດລາຍການຫຼັກ",
+	"mobile-frontend-main-menu-login": "ເຂົ້າສູ່ລະບົບ",
+	"mobile-frontend-main-menu-nearby": "ຢູ່ໃກ້ຄຽງ",
+	"mobile-frontend-main-menu-settings": "ການຕັ້ງຄ່າ",
+	"mobile-frontend-main-menu-watchlist": "ລາຍການຕິດຕາມ",
+	"mobile-frontend-placeholder": "ຊອກຫາ {{SITENAME}}",
+	"mobile-frontend-random-button": "ສຸ່ມ"
+}

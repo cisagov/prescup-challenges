@@ -1,0 +1,46 @@
+@import '../variables.less';
+@import 'mediawiki.mixins.less';
+
+.vector-menu-portal {
+	margin: 0 @margin-end-portal  0 @margin-start-portal;
+	padding: 0.25em 0;
+	direction: ltr;
+
+	.vector-menu-heading {
+		display: block;
+		color: @color-base--subtle;
+		margin: 0.5em 0 0 ( @margin-start-nav-main-body / @font-size-nav-main-heading );
+		border: 0;
+		padding: 0.25em 0;
+		font-size: @font-size-nav-main-heading;
+		font-weight: normal;
+		cursor: default;
+	}
+
+	.vector-menu-content {
+		margin-left: @margin-start-portal-body;
+		padding-top: 0;
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding-top: 0.3em;
+		}
+
+		li {
+			margin: 0;
+			padding: 0.25em 0;
+			font-size: @font-size-portal-list-item;
+			line-height: @line-height-nav;
+			word-wrap: break-word;
+
+			a {
+				color: @color-link;
+
+				&:visited {
+					color: @color-link--visited;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Pickup Confirmation{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h3 class="mb-3">Pickup Info</h3>
+
+    <p><strong>Item:</strong> {{ item.name }}</p>
+    <p><strong>Description:</strong> {{ item.description or "No description." }}</p>
+    <p><strong>Name:</strong> {{ pickup.name }}</p>
+    <p><strong>Email:</strong> {{ pickup.email }}</p>
+
+    <hr>
+
+    <h5>Scan to Confirm Pickup</h5>
+    <img src="{{ url_for('pickup_qr_code', item_id=item.id) }}" alt="Pickup QR Code" class="img-fluid mt-3" style="max-width: 300px;">
+</div>
+{% endblock %}

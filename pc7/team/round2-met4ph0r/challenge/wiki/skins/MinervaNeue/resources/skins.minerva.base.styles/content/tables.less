@@ -1,0 +1,74 @@
+// Tables
+@import 'mediawiki.mixins.less';
+@import '../../../minerva.less/minerva.variables.less';
+@import '../../../minerva.less/minerva.mixins.less';
+
+// These are only intended for smaller screens.
+// This avoids having to undo them from another media query,
+// by putting the original in a media query instead.
+// This also avoids having a reset with too-high specificity, which
+// would break unrelated styles from core and extensions.
+@media all and ( max-width: @width-breakpoint-tablet ) {
+	.content {
+		table {
+			display: block;
+			width: 100% !important;
+			box-sizing: border-box;
+
+			&.wikitable {
+				// Remove the outer table border as the table container may be
+				// wider than all the cells (T206762). In most cases the table
+				// border is not visible anyway due to border-collapse.
+				border: 0;
+			}
+		}
+
+		caption {
+			display: block;
+		}
+	}
+}
+
+.content {
+	table {
+		margin: 1em 0;
+
+		/* following 4 rules are needed for scrolling */
+		overflow: auto; /* for browsers that don't support overflow-y */
+		overflow-y: hidden;
+		overflow-x: auto;
+
+		caption {
+			text-align: left;
+		}
+	}
+}
+
+// For skinning normal data tables
+// Compare with mediawiki.legacy/shared.css
+// Move out of .content selector to avoid increased
+// specificty conflicts e.g. with tablesorter (T205945)
+.wikitable {
+	border: 1px solid @colorGray5;
+	// Note older browsers will fall back to @grayLight
+	border-color: fade( @colorGray5, 30 );
+
+	// We only style cells that are direct children of the wikitable table since
+	// table tags may be used for non-table purposes within the cells.
+	> tr > th,
+	> tr > td,
+	> * > tr > th,
+	> * > tr > td {
+		border: 1px solid @colorGray5;
+		// Note older browsers will fall back to @grayLight
+		border-color: fade( @colorGray5, 30 );
+		padding: 0.2em;
+	}
+
+	// Make headings distinguishable
+	> tr > th,
+	> * > tr > th {
+		background-color: @grayLightest;
+		text-align: center;
+	}
+}

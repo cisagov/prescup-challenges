@@ -1,0 +1,55 @@
+.content {
+	ol {
+		padding-left: 2.25em;
+	}
+
+	ul {
+		list-style-type: disc;
+		padding-left: 1em;
+
+		& > li > ul {
+			list-style-type: circle;
+
+			& > li > ul {
+				list-style-type: square;
+			}
+		}
+	}
+
+	/* stylelint-disable no-descending-specificity */
+	ol,
+	ul {
+		ol,
+		ul {
+			margin-left: 1em;
+		}
+	}
+
+	li {
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: inherit;
+		}
+	}
+	/* stylelint-enable no-descending-specificity */
+}
+
+/* As in Vector, indenting of definition lists, and bolding of definition terms is generically useful */
+dl {
+	margin-left: 1em;
+
+	dt {
+		font-weight: bold;
+	}
+}
+
+.mw-parser-output {
+	dl dd {
+		display: block;
+		// Some dd's may contain images so these need to be scrollable
+		// Text will not become scrollable.
+		// (see T160946)
+		overflow: auto;
+	}
+}

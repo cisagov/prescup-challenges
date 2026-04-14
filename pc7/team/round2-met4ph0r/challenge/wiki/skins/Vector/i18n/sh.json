@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog",
+			"Conquistador",
+			"OC Ripper",
+			"Srdjan m",
+			"Srđan",
+			"Vlad5250"
+		]
+	},
+	"vector-language-button-label": "{{PLURAL:$1|$1 jezik|$1 jezika}}",
+	"vector-action-addsection": "Dodaj temu",
+	"vector-action-delete": "Brisanje",
+	"vector-action-move": "Premjesti",
+	"vector-action-protect": "Zaštiti",
+	"vector-action-undelete": "Vrati obrisano",
+	"vector-action-unprotect": "Promijeni zaštitu",
+	"vector-view-create": "Napravi",
+	"vector-view-edit": "Uredi",
+	"vector-view-history": "Historija",
+	"vector-view-view": "Prikaži",
+	"vector-view-viewsource": "Vidi izvor (source)",
+	"vector-more-actions": "Više",
+	"vector-searchsuggest-containing": "Pretraži stranice koje sadrže <strong class=\"cdx-typeahead-search__search-footer__query\">$1</strong>"
+}

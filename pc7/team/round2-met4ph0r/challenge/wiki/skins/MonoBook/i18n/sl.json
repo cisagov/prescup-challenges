@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dbc334",
+			"Eleassar"
+		]
+	},
+	"monobook-desc": "Klasična preobleka programja MediaWiki od leta 2004, poimenovana po črno-beli fotografiji knjige v ozadju strani",
+	"monobook-view-history": "Zgodovina",
+	"monobook-action-undelete": "Vrni $1 {{PLURAL:$1|urejanje|urejanji|urejanja|urejanj}}"
+}

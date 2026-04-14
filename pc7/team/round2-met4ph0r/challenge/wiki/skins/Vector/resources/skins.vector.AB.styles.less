@@ -1,0 +1,12 @@
+.skin-vector-toc-experiment-control .mw-table-of-contents-container,
+.skin-vector-toc-experiment-control #vector-toc-collapsed-button,
+body:not( .skin-vector-toc-experiment-control ) #toc {
+	// This trumps any layout rules e.g. vector-layout-grid
+	/* stylelint-disable-next-line declaration-no-important */
+	display: none !important;
+}
+
+// T313435 Show legacy toc for control group.
+.skin-vector-toc-experiment-control #toc {
+	display: table;
+}
