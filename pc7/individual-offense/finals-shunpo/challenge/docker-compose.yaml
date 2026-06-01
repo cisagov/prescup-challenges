@@ -1,0 +1,204 @@
+x-challenge:
+  name: "SHUNPO"
+  description: |
+    # SHUNPO
+
+    ⚡ Flash Step. One spy. Five operational recoveries. Reconstruct the tradecraft, breach the trust boundary, and force the final relay.
+
+    **NICE Work Roles**
+
+    - [Digital Forensics](https://niccs.cisa.gov/tools/nice-framework)
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework)
+    - [Exploitation Analysis](https://niccs.cisa.gov/tools/nice-framework)
+
+    For more information on these roles, please visit: https://niccs.cisa.gov/tools/nice-framework.
+
+    ## Background
+
+    Kitsune (former field agent and USAF S.E.R.E Trainer) disappeared during a covert support mission that chained together three categories of tradecraft: 
+
+    1. forensic fragments hidden in traffic,
+    2. trusted relay abuse through an operations workflow,
+    3. constrained bridge translation into an internal maintenance plane.
+
+    The first three recoveries are deterministic and can be solved from the evidence package plus the replay export produced by the dashboard. The fourth and fifth recoveries require live exploitation against the deployed services.
+
+    ## Token Notes
+
+    - Token 1 recovers the reused operations panel password.
+    - Token 2 recovers the route key used by both relays.
+    - Token 3 recovers the internal signing key.
+    - Token 4 is the bridge ticket recovered by exploiting the HTTP maintenance relay.
+    - Token 5 is the final relay token recovered by abusing the constrained CoAP bridge.
+
+    ### Formatting
+    
+    All tokens take the following format:
+
+    `PCCC{SHN-A#-xxxxxxxx}`
+
+    ### Token 4
+
+    The initial `nonce` value does not need to be guessed. Any sufficiently long value is acceptable, provided the same value is used in both the URL and the signature input.
+
+    ### Token 5
+
+    Some bridge-mediated admin sequences are `stateful`. Preserve values returned by earlier steps and use fresh timestamps when constructing follow-on requests.
+
+    ## System and Tool Credentials
+
+    | service | location |
+    |---|---|
+    | Evidence Dashboard | `http://sp-dashboard.ninja:3000` |
+    | Replay Controller | `http://sp-replay.ninja:7000` |
+    | Operations Panel | `http://sp-ops.ninja:8080` |
+    | Constrained CoAP Service | `sp-coap.ninja udp/5683` |
+
+    ## Notes
+
+    Attacking or unauthorized access to the Challenge Platform itself is forbidden.
+
+  icon: "TbBolt"
+  summary: "Hybrid finals offense challenge combining evidence reconstruction, signed SSRF, and a constrained CoAP bridge flaw."
+  tags:
+    - season:pc7
+    - track:offense
+    - round:finals
+    - role:forensics
+    - role:vulnerability-analysis
+    - role:exploitation-analyst
+    - topics:forensics
+    - topics:web
+    - topics:cryptography
+  variables:
+    token1:
+      template: "fake.bothify('PCCC{SHN-A1-#???#???}')"
+      default: &token1 "PCCC{SHN-A1-7f3a9c2b}"
+    token2:
+      template: "fake.bothify('PCCC{SHN-A2-?#??#???}')"
+      default: &token2 "PCCC{SHN-A2-f9277cad}"
+    token3:
+      template: "fake.bothify('PCCC{SHN-A3-??#?#???}')"
+      default: &token3 "PCCC{SHN-A3-9d30347e}"
+    token4:
+      template: "fake.bothify('PCCC{SHN-A4-???##???}')"
+      default: &token4 "PCCC{SHN-A4-a842ec49}"
+    token5:
+      template: "fake.bothify('PCCC{SHN-A5-????##??}')"
+      default: &token5 "PCCC{SHN-A5-4e1d9a7c}"
+    coap_shared_key:
+      template: "fake.bothify('PCCC{COAPKEY-?#??#???}')"
+      default: &coap_shared_key "PCCC{COAPKEY-AZ8845BD}"
+    app_secret_key:
+      template: "fake.bothify('??##??##??##??????')"
+      default: &app_secret_key "Z@JFKsdfi19Zl!gjaL"
+  
+
+  questions:
+    - name: Token 1 - Flash Beacon
+      body: Recover the reused operations credential hidden in the DNS-like beacon chain found in `static/pcap_stage1.pcap` and corroborated by `artifacts/resolver.log`.
+      answer: *token1
+      points: 1060
+      max_attempts: 3
+      placeholder: "PCCC{SHN-A#-XXXXXXXX}"
+
+    - name: Token 2 - Silent Step
+      body: Trigger replay from the dashboard, export the replay journal, isolate the `silent-step` frames, and reconstruct the `route key`.
+      answer: *token2
+      points: 1060
+      max_attempts: 3
+      placeholder: "PCCC{SHN-A#-XXXXXXXX}"
+
+    - name: Token 3 - Shadow Load
+      body: Use the static firmware delivery artifacts to reconstruct the XOR-LCG keystream, decrypt `files/update.bin.enc`, and recover the `internal signing key`.
+      answer: *token3
+      points: 1060
+      max_attempts: 3
+      placeholder: "PCCC{SHN-A#-XXXXXXXX}"
+
+    - name: Token 4 - Relay Restore
+      body: Use the recovered material to authenticate to the operations panel and exploit the maintenance relay trust boundary to recover the `bridge ticket`.
+      answer: *token4
+      points: 1060
+      max_attempts: 3
+      placeholder: "PCCC{SHN-A#-XXXXXXXX}"
+
+    - name: Token 5 - Night Crossing
+      body: Use the bridge ticket recovered in Token 4 and the constrained CoAP bridge in the operations panel to exploit the raw-path vs normalized-path namespace mismatch. Complete the hidden `bootstrap -> material -> finalize` admin workflow and recover the final token.      
+      answer: *token5
+      points: 1060
+      max_attempts: 3
+      placeholder: "PCCC{SHN-A#-XXXXXXXX}"
+
+services:
+  dashboard:
+    build: ./dashboard
+    hostname: sp-dashboard.ninja
+    environment:
+      REPLAY_API_BASE: http://sp-replay.ninja:7000
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+      TOKEN5: *token5
+    networks:
+      - competitor_net
+
+  replay:
+    build: ./replay
+    hostname: sp-replay.ninja
+    environment:
+      TOKEN2: *token2
+      TOKEN4: *token4
+    networks:
+      - competitor_net
+
+  ops-panel:
+    build: ./ops-panel
+    hostname: sp-ops.ninja
+    environment:
+      COAP_DIAL_HOST: coap-sim
+      APP_SECRET_KEY: *app_secret_key
+      OPS_ADMIN_USER: "opsadmin"
+      OPS_ADMIN_PASS: *token1
+      ROUTE_KEY: *token2
+      INTERNAL_SIGNING_KEY: *token3
+      BRIDGE_TICKET: *token4
+      FINAL_TOKEN: *token5
+      COAP_SHARED_KEY: *coap_shared_key
+      DEFAULT_DETAIL_MODE: "standard"
+      TRUSTED_DASHBOARD_HOSTS: "sp-dashboard.ninja,dashboard"
+      INTERNAL_HOST: "127.0.0.1"
+      INTERNAL_PORT: "8080"
+      COAP_BRIDGE_HOST: "sp-coap.ninja"
+      COAP_BRIDGE_PORT: "5683"
+    networks:
+      - competitor_net
+
+  coap-bridge:
+    build: ./coap-bridge
+    hostname: sp-coap.ninja
+    environment:
+      ROUTE_KEY: *token2
+      INTERNAL_SIGNING_KEY: *token3
+      BRIDGE_TICKET: *token4
+      FINAL_TOKEN: *token5
+      COAP_SHARED_KEY: *coap_shared_key
+    networks:
+      - competitor_net
+
+  challengeserver:
+    build: ../../../prescup-challenge-server/challenge-server
+    hostname: challenge.pccc
+    networks:
+      - competitor_net
+    cap_add:
+      - NET_ADMIN
+    environment:
+      pc_year: "7"
+      challenge_name: Shunpo
+
+networks:
+  competitor_net:
+    internal: true
+    # external: true # uncomment for local testing

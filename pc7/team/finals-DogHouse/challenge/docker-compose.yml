@@ -1,0 +1,232 @@
+x-challenge:
+  name: "DogHouse"
+  description: |
+    # DogHouse
+
+    You are tasked with compromising a PLC device deep within the target network. To do so you must move through multiple different systems, avoiding network defenses and taking advantage of Kerberos configurations.
+
+    **NICE Work Roles**
+
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework/)
+    - [Exploitation Analysis](https://niccs.cisa.gov/tools/nice-framework/)
+
+    **NICE Tasks**
+
+    - [T1359](https://niccs.cisa.gov/tools/nice-framework/): Perform penetration testing
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework/): Identify vulnerabilities
+
+    ## Background
+
+    Your spy agency has been keeping tabs on APT X for some time. You were able to gather intel on an expensive deal made between APT X and Cloud Tech Foundry (CTF), an offsite cloud hosting provider. APT X is using CTF's servers to host much of their critical infrastructure. You are tasked with breaking into CTF's network and damaging their servers, inflicting a significant blow on APT X's operations and finances.
+
+    ## Getting Started
+
+    Use the provided `kali` machine to access the CTF `web` device and hack your way into the network from there.
+
+    ## Tokens
+
+    - Token 1: Service requests on the CTF `web` page are downloaded and clicked on by `ubuntu1` behind the web proxy. The first token is in the `/tmp` directory on `ubuntu1`.
+        - The `squid` proxy allows outbound traffic only on port `443` and `8443` over TLS.
+        - `ubuntu1` scans uploads with an AV. Well-known payloads are deleted, proceed with caution.
+    - Token 2: Exploit the `web-internal` web server to elevate your access rights. Advance deeper into the network to reach this server.
+    - Token 3: Take advantage of the `ca` and Kerberos `pkinit` to escalate to `admin` privileges, and find the token on `client1`.
+    - Token 4: Send Modbus data to the `plc` that controls the water tank in order to flood the server room.
+        - Make sure you fill the water tank to maximum capacity before draining it.
+        - The `plc` is listening on port `5020`.
+
+    ## System and Tool Credentials
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |kali|user|password|
+
+  icon: "TbDog"
+  summary: |
+    You are tasked with compromising a PLC device deep within the target network. 
+    To do so you must move through multiple different systems, avoiding network defenses and taking advantage of Kerberos configurations.
+  tags:
+    - season:pc7
+    - track:teams
+    - round:finals
+    - role:vulnerability-analysis
+    - role:exploitation-analyst
+    - topics:ics-ot
+    - topics:web
+  variables:
+    token1:
+      template: "fake.bothify('PCCC{token_on_ubuntu1_??####}')"
+      default: &token1 "PCCC{token_on_ubuntu1}"
+    token2:
+      template: "fake.bothify('PCCC{ldap_injection_passwd_token_??####}')"
+      default: &token2 "PCCC{ldap_injection_passwd_token}"
+    token3:
+      template: "fake.bothify('PCCC{admin_client_token_??####}')"
+      default: &token3 "PCCC{admin_client_token}"
+    token4:
+      template: "fake.bothify('PCCC{Flood_Servers_Token_??####}')"
+      default: &token4 "PCCC{Flood_Servers_Token}"
+  questions:
+    - name: "Question 1"
+      body: |
+        Service requests on the CTF `web` page are downloaded and clicked on by `ubuntu1` behind the web proxy. The first token is in the `/tmp` directory on `ubuntu1`.
+            The `squid` proxy allows outbound traffic only on port `443` and `8443` over TLS.
+            `ubuntu1` scans uploads with an AV. Well-known payloads are deleted, proceed with caution.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 1701 #30%
+      answer: *token1
+      max_attempts: 3
+    - name: "Question 2"
+      body: |
+        Exploit the `web-internal` web server to elevate your access rights. Advance deeper into the network to reach this server.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 1134 #20%
+      answer: *token2
+      max_attempts: 3
+    - name: "Question 3"
+      body: |
+        Take advantage of the `ca` and Kerberos `pkinit` to escalate to `admin` privileges, and find the token on `client1`.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 1134 #20%
+      answer: *token3
+      max_attempts: 3
+    - name: "Question 4"
+      body: |
+        Send Modbus data to the `plc` that controls the water tank in order to flood the server room.
+            Make sure you fill the water tank to maximum capacity before draining it.
+            The `plc` is listening on port `5020`.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 1701 #30%
+      answer: *token4
+      max_attempts: 3
+
+
+services:
+  squid:
+    build: ./squid
+    hostname: squid
+    networks:
+      - competitor_net
+      - proxy_net
+
+  ubuntu1:
+    build: ./ubuntu1
+    hostname: ubuntu1
+    mem_limit: 1228m
+    environment:
+      TOKEN1: *token1
+      https_proxy: http://squiduser:squidpassword@squid:3128
+      http_proxy: http://squiduser:squidpassword@squid:3128
+      HTTPS_PROXY: http://squiduser:squidpassword@squid:3128
+      HTTP_PROXY: http://squiduser:squidpassword@squid:3128
+    networks:
+      - proxy_net
+
+  ubuntu2:
+    build: ./ubuntu2
+    hostname: ubuntu2
+    environment:
+      https_proxy: http://squiduser:squidpassword@squid:3128
+      http_proxy: http://squiduser:squidpassword@squid:3128
+      HTTPS_PROXY: http://squiduser:squidpassword@squid:3128
+      HTTP_PROXY: http://squiduser:squidpassword@squid:3128
+    networks:
+      - proxy_net
+      - krb_net
+
+  kdc.ctf.local:
+    build: ./kdc
+    hostname: kdc.ctf.local
+    environment:
+      TOKEN2: *token2
+    networks:
+      - krb_net
+
+  ldap.ctf.local:
+    build: ./ldap
+    hostname: ldap.ctf.local
+    environment:
+      TOKEN2: *token2
+      LDAP_ORGANISATION: "ctf"
+      LDAP_DOMAIN: "ctf.local"
+      LDAP_ADMIN_PASSWORD: "5d53c679de33e001f6744811d01a6273"
+      LDAP_CONFIG_PASSWORD: "691552cc1d5da4eb74eda1f691875753"
+    networks:
+      - krb_net
+
+  web:
+    build: ./web
+    hostname: web
+    networks:
+      - competitor_net
+      - proxy_net
+      
+  web-internal.ctf.local:
+    build: ./web-internal
+    hostname: web-internal.ctf.local
+    environment:
+      LDAP_URL: "ldap://ldap.ctf.local:389"
+      LDAP_BIND: "cn=admin,dc=ctf,dc=local"
+      LDAP_PW: "5d53c679de33e001f6744811d01a6273"
+      LDAP_BASE: "dc=ctf,dc=local"
+      USERS_GID: "1101"
+      ADMIN_GID: "1100"
+      ADMIN_UID: "admin"
+    networks:
+      - krb_net
+
+  ca.ctf.local:
+    build: ./ca
+    hostname: ca.ctf.local
+    environment:
+      LDAP_URL: "ldap://ldap.ctf.local:389"
+      LDAP_BIND: "cn=admin,dc=ctf,dc=local"
+      LDAP_PW: "5d53c679de33e001f6744811d01a6273"
+      LDAP_BASE: "dc=ctf,dc=local"
+      UI_SECRET: d4f4f56447119f27c245a453d5162adf
+      CA_CONF: /etc/ssl/openssl.cnf
+      CA_DIR: /ca
+    networks:
+      - krb_net
+
+  client1.ctf.local:
+    build: ./client1
+    hostname: client1.ctf.local
+    environment:
+      TOKEN3: *token3
+    networks:
+      - krb_net
+
+  plc:
+    build: ./plc
+    hostname: plc
+    networks:
+      - ot_net
+
+  hmi:
+    build: ./hmi
+    hostname: hmi
+    environment:
+      TOKEN4: *token4
+      PLC_HOST: plc
+      PLC_PORT: "5020"
+    networks:
+      - krb_net
+      - ot_net
+
+  fileserver: 
+    build: ./fileserver
+    hostname: fileserver
+    networks:
+     - krb_net
+     - ot_net
+
+networks:
+  competitor_net:
+    internal: true
+    #external: true
+  proxy_net:
+    internal: true
+  krb_net:
+    internal: true
+  ot_net:
+    internal: true

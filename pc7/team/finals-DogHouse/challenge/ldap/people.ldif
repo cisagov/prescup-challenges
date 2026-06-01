@@ -1,0 +1,108 @@
+# people.ldif
+dn: ou=people,dc=ctf,dc=local
+objectClass: organizationalUnit
+ou: people
+
+# Domain admin user (this account will map to domain-admin)
+dn: uid=admin,ou=people,dc=ctf,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Administrator
+sn: Admin
+uid: admin
+uidNumber: 1100
+gidNumber: 1100
+homeDirectory: /home/admin
+loginShell: /bin/bash
+mail: admin@ctf.local
+userPassword: {SSHA}m0hIOuT6mteBB5PiAm/hQo4/nAu+z4uP
+#6d0a448e357def2c22d793df26a2eb54
+
+# Regular users
+dn: uid=btaylor,ou=people,dc=ctf,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Bob Taylor
+sn: Taylor
+uid: btaylor
+uidNumber: 1101
+gidNumber: 1101
+homeDirectory: /home/btaylor
+loginShell: /bin/bash
+mail: btaylor@ctf.local
+userPassword: {SSHA}m175OyW/Pb+qWwSvaxJ2kAAUSDVKAwJ0
+
+dn: uid=ajennings,ou=people,dc=ctf,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Alice Jennings
+sn: Jennings
+uid: ajennings
+uidNumber: 1102
+gidNumber: 1101
+homeDirectory: /home/ajennings
+loginShell: /bin/bash
+mail: ajennings@ctf.local
+userPassword: {SSHA}OTfNKW5IpI+WHsM95ZEnxql6ebikT2w7
+
+dn: uid=jwilliams,ou=people,dc=ctf,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Joe Williams
+sn: Williams
+uid: jwilliams
+uidNumber: 1103
+gidNumber: 1101
+homeDirectory: /home/jwilliams
+loginShell: /bin/bash
+mail: jwilliams@ctf.local
+userPassword: {SSHA}j56c72/EbwrRnZjSnm6hY8ahIp9viJNU
+
+dn: uid=esmith,ou=people,dc=ctf,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Eve Smith
+sn: Smith
+uid: esmith
+uidNumber: 1104
+gidNumber: 1101
+homeDirectory: /home/esmith
+loginShell: /bin/bash
+mail: esmith@ctf.local
+userPassword: {SSHA}LQMA1VwIgUSxQfnUi8sioqynp3UH+W8v
+
+dn: uid=rjones,ou=people,dc=ctf,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Ryan Jones
+sn: Jones
+uid: rjones
+uidNumber: 1105
+gidNumber: 1101
+homeDirectory: /home/rjones
+loginShell: /bin/bash
+mail: rjones@ctf.local
+userPassword: {SSHA}JQGblZMXwqPN0AOwtixI+VLDvUydG9m5
+
+# causer
+dn: uid=causer,ou=people,dc=ctf,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: causer
+cn: CA User
+sn: causer
+uidNumber: 1106
+gidNumber: 1106
+homeDirectory: /home/causer
+loginShell: /bin/bash
+mail: causer@ctf.local
+userPassword: PCCC_ldap_injection_passwd_token
+#userPassword: {SSHA}bv8qLveTfXhk53THHqwDcyxMLvwe4Dl/
+#maddog

@@ -1,0 +1,23 @@
+Windows Registry Editor Version 5.00
+
+; Excerpt from the SOFTWARE hive recovered from eng-bell-04.
+; Extracted via `reg export HKLM\SOFTWARE\Microsoft\Windows Defender\Exclusions`
+; and adjacent keys touched during the intrusion. Captured 2026-05-12 03:08:18Z.
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths]
+"C:\\Users\\jhowell\\AppData\\Local\\SystemServices"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Processes]
+"python.exe"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection]
+"DisableRealtimeMonitoring"=dword:00000001
+"DisableBehaviorMonitoring"=dword:00000001
+"DisableIOAVProtection"=dword:00000001
+"DisableScriptScanning"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging]
+"EnableScriptBlockLogging"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription]
+"EnableTranscripting"=dword:00000000

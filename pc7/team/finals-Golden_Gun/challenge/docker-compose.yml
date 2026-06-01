@@ -1,0 +1,154 @@
+x-challenge:
+  # Required: Name of the challenge displayed to participants
+  name: "Golden Gun"
+
+  # Required: Detailed description shown to participants
+  description: |
+    # Golden Gun
+
+    "Mr. Bond, POP chains do not kill. It is the unserialize that pulls the trigger." 
+    Trapped in ScaraMalware's maze, can you build the POP chain needed to break out? 
+
+    **NICE Work Roles**
+
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework)
+    - [Exploitation Analysis](https://niccs.cisa.gov/tools/nice-framework)
+
+    **NICE Tasks**
+
+    - [T1359](https://niccs.cisa.gov/tools/nice-framework): Perform penetration testing
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework): Identify vulnerabilities
+
+    ## Background
+
+    The diabolical ScaraMalware has trapped you, Agent `0b00000111`, in a maze of mirrors and deception. Fortunately, unlike that of his more ruthless cousin, the maze
+    is just a PHP website... Nonetheless, you must craft a POP chain that can navigate the labyrinth and rescue the lovely Mary GoodByte.   
+
+    ## Getting Started
+
+    Use the provided Kali machine to access the Maze Solving site: `http://mazesolver.pccc`. 
+
+    A mirror of the site has been provided as well at `mazesolver.local.pccc`, which you can SSH into with the credentials `user:password`. Unfortunately, the mirror's web server is not running correctly outside the production environment; you'll need to do some tinkering to get it running.
+
+    ## Tokens
+
+    There are three tokens to retrieve. The tokens are formatted as `PCCC{some_words_here}`; check the question placeholder for more guidance.
+
+    The tokens can be collected in any order, although they are intended to naturally build upon each other.
+
+    No grading is required.
+
+    - Token 1: Find and review the `firstToken` class in the source code of the site.
+    - Token 2: Find and review the `secondToken` class in the source code of the site.
+    - Token 3: Find and review the `thirdToken` class in the source code of the site.
+
+
+    ## System and Tool Credentials
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |kali-vnc|user|password|
+    |mazesolver.local.pccc|user|password|
+
+  # Optional: Tabler icon name with Tb prefix
+  icon: "TbBrandPhp"
+
+  # Optional: Challenge summary/overview
+  summary: |
+    "Mr. Bond, POP chains do not kill. It is the unserialize that pulls the trigger." 
+    Trapped in ScaraMalware's maze, can you build the POP chain needed to break out? 
+
+  # Optional: Template definitions for reusable values
+  templates:
+    # Define reusable templates with anchors
+    readToken-flag: &readToken-flag_template "fake.bothify('PCCC{Learning_2_read_??_####}')"
+    callToken-flag: &callToken-flag_template "fake.bothify('PCCC{Complex_calls_n_stack_intro_??_####}')"
+    loopingToken-flag: &loopingToken-flag_template "fake.bothify('PCCC{Branching_n_looping_??_####}')"
+
+  tags:
+    - season:pc7
+    - track:teams
+    - round:finals
+    - role:vulnerability-analysis
+    - role:exploitation-analyst
+    - topics:web
+  variables:
+    auto_readToken-flag:
+      template: *readToken-flag_template
+      default: &auto_readToken-flag_default "PCCC{Learning_2_read}"
+    auto_callToken-flag:
+      template: *callToken-flag_template
+      default: &auto_callToken-flag_default "PCCC{Complex_calls_n_stack_intro}"
+    auto_loopingToken-flag:
+      template: *loopingToken-flag_template
+      default: &auto_loopingToken-flag_default "PCCC{Branching_n_looping}"
+
+  questions:
+  - name: Question 1
+    body: Enter the value found in the `firstToken` class.
+    placeholder: "PCCC{????????_#_????_??_####}"
+    points: 1418 # 25% + 1 (rounded up)  Total 5670
+    answer: *auto_readToken-flag_default
+    max_attempts: '3'
+  - name: Question 2
+    body: Enter the value found in the `secondToken` class.
+    placeholder: "PCCC{???????_?????_?_?????_?????_??_####}"
+    points: 1984 # 35% (rounded down)
+    answer: *auto_callToken-flag_default
+    max_attempts: '3'
+  - name: Question 3
+    body: Enter the value found in the `thirdToken` class.
+    placeholder: "PCCC{?????????_?_???????_??_####}"
+    points: 2268 # 40%
+    answer: *auto_loopingToken-flag_default
+    max_attempts: '3'
+
+services:
+  mazesolverprod:
+    build: ./mazeSolverProd
+    hostname: mazesolver.pccc
+    networks:
+    - competitor_net
+    - platform_net
+    environment:
+      firstToken: *auto_readToken-flag_default
+      secondToken: *auto_callToken-flag_default
+      thirdToken: *auto_loopingToken-flag_default
+      DB_PASS: "cpH0qD2@8C45g&fx"
+  mazesolverlocal:
+    build: ./mazeSolverLocal
+    hostname: mazesolver.local.pccc
+    networks:
+    - competitor_net
+  db:
+    build: ./mysql
+    hostname: database
+    environment:
+      MYSQL_DATABASE: pop
+      MYSQL_USER: user
+      MYSQL_PASSWORD: cpH0qD2@8C45g&fx
+      MYSQL_ROOT_PASSWORD: cpH0qD2@8C45g&fx
+    networks:
+    - platform_net
+    mem_limit: "512m"
+    memswap_limit: "1g"
+    cpus: "0.1"
+    
+  challengeserver: 
+    build: ../../../prescup-challenge-server/challenge-server
+    hostname: challenge.pccc
+    networks:
+        - competitor_net
+    cap_add:
+        - NET_ADMIN
+    environment:
+        pc_year: "7"
+        challenge_name: Golden Gun
+
+networks:
+  competitor_net:
+    # external: true
+    internal: true
+  platform_net:
+    internal: true
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>S H U N P O</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="/mission">MISSION</a>
+      <a href="/evidence">EVIDENCE</a>
+    </div>
+
+    <div class="hero-copy">
+      <h1>S H U N P O</h1>
+      <p>
+        Flash-step reconstruction for a failed covert support mission.
+        Recover the first three tokens from evidence and replay exports, then force the last two from trusted relay abuse and constrained bridge translation.
+      </p>
+    </div>
+
+    <img src="/static/katsuni.png" class="mask" alt="katsuni-mask">
+
+    <div class="telemetry">
+      <div class="dim">service.index</div>
+      <div>dashboard       http://sp-dashboard.ninja:3000</div>
+      <div>ops panel       http://sp-ops.ninja:8080</div>
+      <div>coap bridge     coap://sp-coap.ninja</div>
+      <div class="dim" style="margin-top: 14px;">replay.output</div>
+      <div>journal         replay_journal.ndjson</div>
+      <div>source          deterministic export</div>
+      <div>detail          use operations panel toggle for richer diagnostics</div>
+    </div>
+
+    <div class="replay-panel" id="replayPanel">
+      <div class="replay-header">
+        <div>
+          <div class="label">REPLAY CONTROL</div>
+          <div style="margin-top: 6px; font-size: 13px;">Emit a deterministic journal, then download it here.</div>
+        </div>
+      </div>
+
+      <div class="replay-controls">
+        <button id="startBtn">START</button>
+        <button id="stopBtn" disabled>STOP</button>
+      </div>
+
+      <div class="duration-controls">
+        <button type="button" data-duration="15">15s</button>
+        <button type="button" data-duration="30" class="active">30s</button>
+        <button type="button" data-duration="60">60s</button>
+        <button type="button" data-duration="120">120s</button>
+      </div>
+
+      <div class="replay-status" id="replayStatus">idle</div>
+      <div class="replay-log" id="replayLog"></div>
+      <a class="download-link hidden" id="downloadLink" href="/replay/export">DOWNLOAD REPLAY JOURNAL</a>
+    </div>
+  </div>
+
+<script>
+(() => {
+  const panel = document.getElementById("replayPanel");
+  const startBtn = document.getElementById("startBtn");
+  const stopBtn = document.getElementById("stopBtn");
+  const statusEl = document.getElementById("replayStatus");
+  const logEl = document.getElementById("replayLog");
+  const downloadLink = document.getElementById("downloadLink");
+
+  let selectedDuration = 30;
+
+  document.querySelectorAll(".duration-controls button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      selectedDuration = parseInt(btn.dataset.duration, 10);
+      document.querySelectorAll(".duration-controls button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+    });
+  });
+
+  startBtn.addEventListener("click", async () => {
+    const res = await fetch("/replay/start", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ duration: selectedDuration })
+    });
+    const data = await res.json();
+    if (res.ok || data.state === "started") {
+      panel.classList.add("locked");
+      startBtn.disabled = true;
+      stopBtn.disabled = false;
+      downloadLink.classList.add("hidden");
+    }
+  });
+
+  stopBtn.addEventListener("click", async () => {
+    await fetch("/replay/stop", { method: "POST" });
+    unlock();
+  });
+
+  function unlock() {
+    panel.classList.remove("locked");
+    startBtn.disabled = false;
+    stopBtn.disabled = true;
+  }
+
+  async function poll() {
+    try {
+      const res = await fetch("/replay/status");
+      const data = await res.json();
+      statusEl.textContent = data.state + (data.export_ready ? " • export ready" : "");
+      logEl.textContent = (data.log || []).join("\n");
+      if (data.export_ready) {
+        downloadLink.classList.remove("hidden");
+      }
+      if (data.state !== "running") {
+        unlock();
+      }
+    } catch (err) {
+      statusEl.textContent = "controller unavailable";
+    }
+  }
+
+  poll();
+  setInterval(poll, 3000);
+})();
+</script>
+</body>
+</html>

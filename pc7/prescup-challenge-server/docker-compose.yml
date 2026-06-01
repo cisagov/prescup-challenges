@@ -1,0 +1,43 @@
+# Note that this compose is only for building and testing purposes.
+# If you are trying to run a challenge, use `docker compose build` only, then refer to the challenge instructions under Kali.
+# The specific challenge will then use this container to build a challenge-specific version
+
+# The below is configured for testing the DNS
+services:
+    challengeserver: 
+        build: ./challenge-server
+        hostname: challenge.pccc
+        networks:
+            - competitor_net
+            - platform_net
+        cap_add:
+            - NET_RAW
+            - NET_ADMIN
+        environment:
+            pc_year: 7
+            challenge_name: It's Getting Hot in Here
+    #         HOSTS_JSON: >-
+    #             {
+    #                 "pccc": [
+    #                     { "container": "grader", "hostname": "grader", "aliases": ["www", "frontend"] }
+    #                 ],
+    #                 "merch.codes": [
+    #                     { "container": "api", "hostname": "api", "aliases": ["backend", "v1"] }
+    #                 ]
+    #             }
+        
+    # grader:
+    #     image: nginx:alpine
+    #     hostname: grader.pccc
+    #     networks:
+    #     - platform_net
+    # api:
+    #     image: nginx:alpine
+    #     hostname: api.merch.codes
+    #     networks:
+    #     - platform_net
+
+networks:
+  competitor_net:
+    internal: true
+  platform_net:

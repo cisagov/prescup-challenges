@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="grid">
+    <div class="card" style="grid-column: span 8">
+      <h2>Handshake Beacon</h2>
+      <p class="small">
+        This relay cached a single “handshake” beacon used for provisioning an ELD maintenance session.
+        The uplink is audio-only.
+      </p>
+
+      <audio controls src="/recordings/handshake.wav" style="width:100%"></audio>
+
+      <div style="margin-top:14px">
+        <a class="btn" href="/recordings/handshake.wav">Download recording</a>
+        {% if hint_level|int >= 3 %}
+          <a class="btn secondary" href="/docs/protocol" style="margin-left:10px">Protocol notes</a>
+        {% endif %}
+      </div>
+
+      <p class="small" style="margin-top:14px">
+        Expected result: a <span class="pill mono">12-character</span> unlock code using <span class="pill mono">0-9A-Z</span>.
+      </p>
+
+      {% if hint_level|int >= 2 %}
+      <p class="small">
+        Hint: the beacon encodes symbols using a small, fixed set of tones (FFT / spectrogram tools help).
+      </p>
+      {% endif %}
+    </div>
+
+    <div class="card" style="grid-column: span 4">
+      <h2>Relay</h2>
+      <p class="small">
+        Cached recording: <span class="pill mono">handshake.wav</span>
+      </p>
+      <p class="small">
+        Excessive request rates will be throttled.
+      </p>
+    </div>
+  </div>
+{% endblock %}

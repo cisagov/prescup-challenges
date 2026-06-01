@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title or "ELD" }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="brand">
+        <span class="badge">ELD</span>
+        <div>
+          <div style="font-weight:800;letter-spacing:.02em">Electronic Logging Device</div>
+          <div class="small mono">http/8080 · serial tcp/2323</div>
+        </div>
+      </div>
+      <div class="nav">
+        <a href="http://cbhub.local:8080/">📻 CB Hub</a>
+        <a href="http://logistics.local:8443">💻 Logistics Console</a>
+        <a href="http://dispatch.local:8080/">🔙 Dispatch Console</a>
+      </div>
+    </div>
+    <div class="container">
+      {% block content %}{% endblock %}
+      <footer class="small">ELD Maintenance Interface</footer>
+    </div>
+  </body>
+</html>

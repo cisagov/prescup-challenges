@@ -1,0 +1,7 @@
+- name: System Check on Ops Stations
+  hosts: all
+  vars:
+    ansible_ssh_common_args: "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+  tasks:
+    - name: Gather Facts
+      ansible.builtin.gather_facts:

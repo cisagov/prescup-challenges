@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% set title='challenge.pccc - Challenge Successfully Graded' %}
+{% block content %}
+    <div class='center'>
+        <h1>Your challenge was graded</h1>
+        <p>You submitted the last grade request at {{ submit_time }}</p>
+        {% if try_again is defined and try_again %} 
+            <p>You can attempt grading again in {{ try_again }} seconds</p>
+        {% endif %} 
+        <!--
+            Things inside { }  will be filled in by the Jinja template rendering in Flask
+
+            Calls the do_grade method
+            Then will iterate over each of the key/value pairs in the returned results dictionary
+            Each key and value is displayed along withe the corresponding token value for that key
+        -->
+        {% if fatal_error %}  
+            <h2>There was an error grading your challenge</h2>
+            <p>The error grading your challenge has been logged. You can attempt grading again. If the error does not resolve, please contact support. </p>
+        {% else %}
+            {% for key, value in results.items() %}
+                <h2>{{ parts[key]['text'] }}</h2>
+                <p>{{ value }}</p>
+                <p>Token: {{ tokens[key] }}</p>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <!-- This is the Regrade button -->
+    <form action="{{ url_for('home') }}" method="GET">
+        <a id=regrade><button class='btn btn-default' >Re-Grade Challenge</button></a>
+    </form>
+{% endblock %}

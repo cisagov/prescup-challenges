@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+set -eu
+
+: "${APP_SECRET_KEY:? APPSEC_KEY must be set}"
+: "${OPS_ADMIN_PASS:? ADMIN_PASS must be set}"
+: "${ROUTE_KEY:? ROUTE_KEY must be set}"
+: "${INTERNAL_SIGNING_KEY:? INTERNAL_SIGNING_KEY must be set}"
+: "${BRIDGE_TICKET:? BRIDGE_TICKET must be set}"
+: "${FINAL_TOKEN:? FINAL_TOKEN must be set}"
+: "${COAP_SHARED_KEY:? COAP_SHARED_KEY must be set}"
+
+export APP_SECRET_KEY OPS_ADMIN_PASS ROUTE_KEY INTERNAL_SIGNING_KEY BRIDGE_TICKET FINAL_TOKEN COAP_SHARED_KEY
+
+exec "$@"

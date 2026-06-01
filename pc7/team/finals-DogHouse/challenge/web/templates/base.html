@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title or "CTF" }}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; }
+      header { background:#0b61a4; color: white; padding: 1rem; }
+      nav a { color: white; margin-right: 1rem; text-decoration: none; }
+      .container { padding: 1.5rem; }
+      .team-list { list-style: none; padding: 0; }
+      .team-list li { margin-bottom: 0.6rem; }
+      .box { border: 1px solid #ddd; padding: 1rem; border-radius: 6px; background: #fafafa; }
+      .flash { padding: .6rem; background: #ffefc2; margin-bottom: 1rem; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('team') }}">Meet the Team</a>
+        <a href="{{ url_for('upload') }}">Service Request</a>
+      </nav>
+    </header>
+    <div class="container">
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for m in messages %}
+            <div class="flash">{{ m }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>

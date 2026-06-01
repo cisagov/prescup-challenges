@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Phreaky Friday</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <img src="assets/logo.svg" alt="Phreaky Friday Logo" class="logo">
+      <h1>Phreaky Friday</h1>
+      <p class="subtitle">Five voice puzzles. Five tokens. One secret society.</p>
+      <div class="cta">
+        <a class="btn" href="mission_briefing.txt" download>Download Mission Briefing</a>
+        <a class="btn" href="evidence/evidence_collection.tar.gz">Download Evidence Package</a>
+        <a class="btn btn-alt" href="PF-Specs.md">Download Protocol Specs</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <section class="card">
+      <h2>Overview</h2>
+      <p>All artifacts are audio and voice-protocol traces. Token 2 leads into Token 3, however, the remaining tokens can be retrieved in any order. Use permitted tools (Wireshark, Audacity, sox, ffmpeg, Python).</p>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h3>Token 1 — The Whisper Trace</h3>
+        <p>Artifacts: <code>t1_whisper_trace.pcap</code> + <code>t1_calldata.wav</code></p>
+        <ol>
+          <li>Reverse the WHISPER protocol framing in the PCAP</li>
+          <li>Extract payload fragments in order</li>
+          <li>Decode the payload to retrieve an LSB audio fragment with ASCII token</li>
+        </ol>
+      </article>
+
+      <article class="card">
+        <h3>Token 2 — CLAMSTREAM</h3>
+        <p>Artifacts: <code>t2_clamstream.bin</code></p>
+        <ol>
+          <li>Find CLAMSTREAM frame boundaries</li>
+        </ol>
+      </article>
+      
+      <article class="card">
+        <h3>Token 3 — BFSK Online</h3>
+        <p>Artifacts: <code>t3_snippet.wav</code>
+        <ol>
+          <li>Learn about the BFSK protocol</li>
+          <li>Module power signatures to extract this token</li>
+        </ol>
+      </article>
+
+      <article class="card">
+        <h3>Token 4 — HUSHRTP</h3>
+        <p>Artifacts: <code>t4_hushr.pcap</code> + <code>t4_hushr_clip.wav</code></p>
+        <ol>
+          <li>Extract handshake nonces</li>
+          <li>Derive toy session key (KDF)</li>
+          <li>Decrypt audio payload and demodulate base32</li>
+        </ol>
+      </article>
+
+      <article class="card">
+        <h3>Token 5 — QUARTZ Bundle</h3>
+        <p>Artifact: <code>t5_quartz_bundle.zip</code></p>
+        <ol>
+          <li>Expose metadata secrets across formats</li>
+          <li>Extract LSB plane in WAV</li>
+          <li>Extract spectrogram glyphs and combine to final token</li>
+        </ol>
+      </article>
+    </section>
+
+    <footer class="foot">
+      <p>Phreaky Friday — A journey in audio excellence.</p>
+    </footer>
+  </main>
+</body>
+</html>

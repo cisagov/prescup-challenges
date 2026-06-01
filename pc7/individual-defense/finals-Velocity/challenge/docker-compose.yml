@@ -1,0 +1,445 @@
+x-challenge:
+  name: "Velocity"
+  description: |
+    # Velocity
+
+    You've recieved reports that your agency's network has been breached. 
+    Utilize Velociraptor to perform incident response and digital forensics across a number of compromised hosts.
+
+    **NICE Work Roles**
+
+    - [Incident Response](https://niccs.cisa.gov/tools/nice-framework/)
+    - [Digital Forensics](https://niccs.cisa.gov/tools/nice-framework/)
+    - [Cyber Defense Analyst](https://niccs.cisa.gov/tools/nice-framework/)
+
+    **NICE Tasks**
+
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework/): Identify vulnerabilities
+    - [T1119](https://niccs.cisa.gov/tools/nice-framework/): Recommend vulnerability remediation strategies
+    - [T1389](https://niccs.cisa.gov/tools/nice-framework/): Remove malware
+
+
+    ## Background
+
+    You work as a network defender for your agency. Unfortunately, your network has been breached and is now littered with malware.
+    Use Velociratpor to collect and analyze information across your network of ten ubuntu hosts.
+    You must analyze every piece of malware you find in order to reveal the tokens hidden within.
+    Discovering a valid token within an artifact confirms that the artifact is malicious and requires remediation.
+    After analysis, you are to remove any malicious software and restore your hosts to pre-breach condition.
+
+    ## Getting Started
+
+    Use the provided kali machine to access `https://velociraptor:8889` with creds `admin:admin`.
+
+    Please be aware, the velociraptor service may take 5-10 minutes to start up.
+
+    Use `ssh` with creds `user:password` to access individual hosts.\
+    Hosts are numbered as such: `ubuntu01`, `ubuntu02`, `ubuntu03`, etc.\
+    It is recommended to elevate to `root` on ubuntu hosts with the command `sudo bash`.\
+    All ubuntu hosts have `gdb` pre-installed.\
+    There are ten ubuntu hosts on the network, these hosts are all meant to be running the following processes:
+
+    |process|port|
+    |-----------|--------|
+    |vsftpd|21|
+    |ssh|22|
+    |apache2|80|
+    |http_dev_server|5000|
+    |velociraptor_client|8000|
+
+    Hosts are also running `tail -f /dev/null`.
+    This is only for keeping the docker container alive and is not part of the challenge in any other way.
+
+    ## Tokens
+
+    - There are 9 different types of malware on the network. Each piece of malicious software needs to be further examined to find the token within.
+        - Tokens can be found in any order.
+        - Use velociraptor to find anomalies throughout the network.
+        - Use tools like `strings`, `objdump`, and `gdb` to extract tokens from malware.
+        - If you discover a valid token hidden in an artifact, that artifact is malicious and needs to be remediated.
+        - Most of these tokens do not require advanced forensics, however they are great in number, and time is scarce.
+
+    - Token 1: Examine running processes to determine if they are what they claim to be.
+    - Token 2: Investigate the integrity of process dependencies.
+    - Token 3: Look deeper into running processes to discover hidden malware.
+    - Token 4: Analyze hosts for common persistence mechanisms.
+    - Token 5: Search for attacker artifacts on disk and trace them back to their source.
+    - Token 6: Examine host system records for indicators of compromise.
+    - Token 7: Verify the integrity of the tools you're using to investigate.
+    - Token 8: Identify the source of suspicious network connections. 
+    - Token 9: Find the trigger mechanism that opens a malicious backdoor.
+    - Token 10: Remove all presence of your attackers and restore all hosts to a healthy state. Once all hosts are restored, run the grader script at `http://grader` to get the final token. 
+
+    ## System and Tool Credentials
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |kali|user|password|
+    |ubuntu01 - ubuntu10|user|password|
+    |https://velociraptor:8889|admin|admin|
+
+  icon: "TbShield"
+  summary: |
+    You've recieved reports that your agency's network has been breached. 
+    Utilize Velociraptor to perform incident response and digital forensics across a number of compromised hosts.
+  
+  tags:
+    - season:pc7
+    - track:defense
+    - round:finals
+    - role:incident-response
+    - role:forensics
+    - role:defensive-cybersecurity
+    - topics:forensics
+    - topics:reverse-engineering
+  variables:
+    token1:
+      template: "fake.bothify('PCCC{token_1_vsftp_?####?}')"
+      default: &token1 "PCCC{token_1_vsftp}"
+    token2:
+      template: "fake.bothify('PCCC{token_2_apache_mod_?####?}')"
+      default: &token2 "PCCC{token_2_apache_mod}"
+    token3:
+      template: "fake.bothify('PCCC{token_3_meminject_?####?}')"
+      default: &token3 "PCCC{token_3_meminject}"
+    token4:
+      template: "fake.bothify('PCCC{token_4_evil_?####?}')"
+      default: &token4 "PCCC{token_4_evil}"
+    token5:
+      template: "fake.bothify('PCCC{token_5_login_?####?}')"
+      default: &token5 "PCCC{token_5_login}"
+    token6:
+      template: "fake.bothify('PCCC{token_6_crypt_?####?}')"
+      default: &token6 "PCCC{token_6_crypt}"
+    token7:
+      template: "fake.bothify('PCCC{token_7_velociraptor_client_a7831j}')"
+      default: &token7 "PCCC{token_7_velociraptor_client}"
+    token8:
+      template: "fake.bothify('PCCC{token_8_watchdog_?####?}')"
+      default: &token8 "PCCC{token_8_watchdog}"
+    token9:
+      template: "fake.bothify('PCCC{token_9_grep_lib_?####?}')"
+      default: &token9 "PCCC{token_9_grep_lib}"
+    token10:
+      template: "fake.bothify('PCCC{token_10_remediation_grader_?####?}')"
+      default: &token10 "PCCC{token_10_remediation_grader}"
+  
+  questions:
+    - name: "Question 1"
+      body: |
+        Examine running processes to determine if they are what they claim to be.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 567 #10%
+      answer: *token1
+      max_attempts: 3
+    - name: "Question 2"
+      body: |
+        Investigate the integrity of process dependencies.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 567 #10%
+      answer: *token2
+      max_attempts: 3
+    - name: "Question 3"
+      body: |
+        Look deeper into running processes to discover hidden malware.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 567 #10%
+      answer: *token3
+      max_attempts: 3
+    - name: "Question 4"
+      body: |
+        Analyze hosts for common persistence mechanisms.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 567 #10%
+      answer: *token4
+      max_attempts: 3
+    - name: "Question 5"
+      body: |
+        Search for attacker artifacts on disk and trace them back to their source.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 567 #10%
+      answer: *token5
+      max_attempts: 3
+    - name: "Question 6"
+      body: |
+        Examine host system records for indicators of compromise.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 567 #10%
+      answer: *token6
+      max_attempts: 3
+    - name: "Question 7"
+      body: |
+        Verify the integrity of the tools you're using to investigate.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 567 #10%
+      answer: PCCC{token_7_velociraptor_client_a7831j}
+      max_attempts: 3
+    - name: "Question 8"
+      body: |
+        Identify the source of suspicious network connections.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 567 #10%
+      answer: *token8
+      max_attempts: 3
+    - name: "Question 9"
+      body: |
+        Find the trigger mechanism that opens a malicious backdoor.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 567 #10%
+      answer: *token9
+      max_attempts: 3
+    - name: "Question 10"
+      body: |
+        Remove all presence of your attackers and restore all hosts to a healthy state. 
+        Once all hosts are restored, run the grader script at http://grader to get the final token. 
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 567 #10%
+      answer: *token10
+      max_attempts: 3
+
+services:
+  ubuntu01:
+    build: ./ubuntu
+    hostname: ubuntu01
+    environment:
+      var: "1"
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+      TOKEN5: *token5
+      TOKEN6: *token6
+      TOKEN7: *token7
+      TOKEN8: *token8
+      TOKEN9: *token9
+    networks:
+      - competitor_net
+    cap_add:
+      - SYS_PTRACE
+      - NET_ADMIN
+      
+  
+  ubuntu02:
+    build: ./ubuntu
+    hostname: ubuntu02
+    environment:
+      var: "2"
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+      TOKEN5: *token5
+      TOKEN6: *token6
+      TOKEN7: *token7
+      TOKEN8: *token8
+      TOKEN9: *token9
+    networks:
+      - competitor_net
+    cap_add:
+      - SYS_PTRACE
+      - NET_ADMIN
+      
+
+  ubuntu03:
+    build: ./ubuntu
+    hostname: ubuntu03
+    environment:
+      var: "3"
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+      TOKEN5: *token5
+      TOKEN6: *token6
+      TOKEN7: *token7
+      TOKEN8: *token8
+      TOKEN9: *token9
+    networks:
+      - competitor_net
+    cap_add:
+      - SYS_PTRACE
+      - NET_ADMIN
+      
+
+  ubuntu04:
+    build: ./ubuntu
+    hostname: ubuntu04
+    environment:
+      var: "4"
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+      TOKEN5: *token5
+      TOKEN6: *token6
+      TOKEN7: *token7
+      TOKEN8: *token8
+      TOKEN9: *token9
+    networks:
+      - competitor_net
+    cap_add:
+      - SYS_PTRACE
+      - NET_ADMIN
+      
+
+  ubuntu05:
+    build: ./ubuntu
+    hostname: ubuntu05
+    environment:
+      var: "5"
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+      TOKEN5: *token5
+      TOKEN6: *token6
+      TOKEN7: *token7
+      TOKEN8: *token8
+      TOKEN9: *token9
+    networks:
+      - competitor_net
+    cap_add:
+      - SYS_PTRACE
+      - NET_ADMIN
+      
+
+  ubuntu06:
+    build: ./ubuntu
+    hostname: ubuntu06
+    environment:
+      var: "6"
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+      TOKEN5: *token5
+      TOKEN6: *token6
+      TOKEN7: *token7
+      TOKEN8: *token8
+      TOKEN9: *token9
+    networks:
+      - competitor_net
+    cap_add:
+      - SYS_PTRACE
+      - NET_ADMIN
+      
+  
+  ubuntu07:
+    build: ./ubuntu
+    hostname: ubuntu07
+    environment:
+      var: "7"
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+      TOKEN5: *token5
+      TOKEN6: *token6
+      TOKEN7: *token7
+      TOKEN8: *token8
+      TOKEN9: *token9
+    networks:
+      - competitor_net
+    cap_add:
+      - SYS_PTRACE
+      - NET_ADMIN
+      
+  
+  ubuntu08:
+    build: ./ubuntu
+    hostname: ubuntu08
+    environment:
+      var: "8"
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+      TOKEN5: *token5
+      TOKEN6: *token6
+      TOKEN7: *token7
+      TOKEN8: *token8
+      TOKEN9: *token9
+    networks:
+      - competitor_net
+    cap_add:
+      - SYS_PTRACE
+      - NET_ADMIN
+      
+
+  ubuntu09:
+    build: ./ubuntu
+    hostname: ubuntu09
+    environment:
+      var: "9"
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+      TOKEN5: *token5
+      TOKEN6: *token6
+      TOKEN7: *token7
+      TOKEN8: *token8
+      TOKEN9: *token9
+    networks:
+      - competitor_net
+    cap_add:
+      - SYS_PTRACE
+      - NET_ADMIN
+    
+  ubuntu10:
+    build: ./ubuntu
+    hostname: ubuntu10
+    environment:
+      var: "10"
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+      TOKEN5: *token5
+      TOKEN6: *token6
+      TOKEN7: *token7
+      TOKEN8: *token8
+      TOKEN9: *token9
+    networks:
+      - competitor_net
+    cap_add:
+      - SYS_PTRACE
+      - NET_ADMIN
+
+  attacker:
+    build: ./attacker
+    hostname: attacker
+    networks:
+      - competitor_net 
+    cap_add:
+      - NET_ADMIN
+
+  grader:
+    build: ./grader
+    hostname: grader
+    environment:
+      TOKEN10: *token10
+    networks:
+      - competitor_net
+      
+  velociraptor:
+    build: ./velociraptor
+    hostname: velociraptor
+    mem_limit: 1g
+    environment:
+      - VELOX_USER=admin
+      - VELOX_PASSWORD=admin
+      - VELOX_ROLE=administrator
+      - VELOX_SERVER_URL=https://velociraptor:8000/
+      - VELOX_FRONTEND_HOSTNAME=velociraptor
+    networks:
+      - competitor_net
+    # ports:
+    #   - "8000:8000" #frontend
+    #   - "8001:8001" #api
+    #   - "8889:8889" #admin ui - login/interface page
+
+networks:
+  competitor_net:
+    internal: true
+    #external: true

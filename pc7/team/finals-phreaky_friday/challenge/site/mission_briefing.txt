@@ -1,0 +1,33 @@
+PHREAKY FRIDAY — MISSION BRIEFING
+
+RULES
+-----
+- All artifacts are synthetic and provided in the evidence package: audio files, PCAPs representing ficitional voice protocols, and multi-format audio bundles.
+- Use only permitted tools (PCCC) however, we recommend the following: wireshark/tshark, audacity, sox, ffmpeg, python (numpy/scipy/matplotlib), scapy.
+- All tokens can be solved independently however, going in order will provide the opportunity to build routines that will shorten your reverse engineering operations in later tokens.
+
+OBJECTIVES (high level)
+-----------------------
+Token 1 — WHISPER TRACE 
+ - Reverse engineer the WHISPER fictional protocol in t1_whisper_trace.pcap
+ - Extract payload fragments by sequence number
+ - Decode the payload stream and extract an LSB audio fragment that contains ASCII token text
+
+Token 2 — CLAMSTREAM 
+ - Find CLAMSTREAM frame boundaries in t2_clamstream.bin
+ - Discover per-frame XOR mask and apply
+
+Token 3 — BFSK 
+  - Reverse the BFSK protocol used to harbor the third token in this challenge (t3_snippet.wav); use the Spec file as your guide to understanding its power.
+
+Token 4 — HUSHRTP
+ - From t4_hushr.pcap extract clearhandshake nonces
+ - Derive session key via KDF hint
+ - Decrypt an encrypted payload and demodulate amplitude-modulated base32 audio
+
+Token 5 — QUARTZ 
+ - Analyze the QUARTZ protocol via two voice artifacts
+ - Extract metadata hints and LSB payloads
+ - Build spectrogram OCR mapping and compute final CRC-protected token string
+
+GOOD LUCK AGENT.
