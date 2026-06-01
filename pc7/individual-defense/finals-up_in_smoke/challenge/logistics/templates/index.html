@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="grid">
+    <div class="card" style="grid-column: span 7">
+      <h2>Custody Reassignment</h2>
+      <p class="small">
+        This gateway will accept a <b>signed</b> evidence bundle to reroute
+        <span class="pill mono">{{trailer}}</span> to an approved safehouse.
+      </p>
+
+      <div class="kv mono">
+        <div class="k">Verifier key</div><div><a class="mono" href="/pubkey.pem">/pubkey.pem</a></div>
+        <div class="k">Endpoint</div><div><span class="pill mono">POST /api/v1/reassign</span></div>
+        <div class="k">Signature header</div><div><span class="pill mono">X-Signature: &lt;base64&gt;</span></div>
+      </div>
+
+      <p class="small">
+        The signature is verified over the <b>raw request body bytes</b> using the custody public key.
+      </p>
+
+      {% if hint_level|int >= 2 %}
+      <h3>Example Shape</h3>
+      <pre class="mono">POST /api/v1/reassign
+X-Signature: &lt;base64(signature)&gt;
+
+{"id":"TRUCK-777","dest":"SAFEHOUSE-ALPHA","token1":"...","token2":"...","token3":"..."}</pre>
+      {% endif %}
+
+      <p class="small">
+        If the evidence is correct and the signature validates, the reroute confirmation will include TOKEN4.
+      </p>
+    </div>
+
+    <div class="card" style="grid-column: span 5">
+      <h2>Safehouses</h2>
+      <ul class="small mono">
+        {% for s in safehouses %}
+          <li>{{ s }}</li>
+        {% endfor %}
+      </ul>
+
+      <p class="small">
+        Excessive request rates will be throttled.
+      </p>
+    </div>
+  </div>
+{% endblock %}

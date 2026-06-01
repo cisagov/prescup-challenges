@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="card">
+    <h2>Notes For Operators</h2>
+    <p class="small">
+      The beacon is an old roadside standard used by contractors to bring an ELD into a maintenance state.
+      It is <b>not encrypted</b> and relies on audio + proprietary framing.
+    </p>
+
+    <h3>Framing</h3>
+    <div class="kv mono">
+      <div class="k">Sample rate</div><div>44.1 kHz</div>
+      <div class="k">Preamble</div><div>1500 Hz tone repeated for synchronization</div>
+      <div class="k">Symbol</div><div>40 ms tone + 10 ms silence</div>
+      <div class="k">Alphabet</div><div>6 symbols (base-6)</div>
+      <div class="k">Output</div><div>12-character base-36 code (+ 1 checksum symbol)</div>
+    </div>
+
+    <h3>Tone Alphabet</h3>
+    <table class="mono">
+      <tr><th>Tone</th><th>Symbol</th><th>Base-6 digit</th></tr>
+      <tr><td>700 Hz</td><td>A</td><td>0</td></tr>
+      <tr><td>900 Hz</td><td>B</td><td>1</td></tr>
+      <tr><td>1100 Hz</td><td>C</td><td>2</td></tr>
+      <tr><td>1300 Hz</td><td>D</td><td>3</td></tr>
+      <tr><td>1700 Hz</td><td>E</td><td>4</td></tr>
+      <tr><td>1900 Hz</td><td>F</td><td>5</td></tr>
+    </table>
+
+    <h3>Emergency Notes for decoding operations</h3>
+    <p class="small">
+      Treat the payload as base-6 digits. Two digits form a value from 0–35, which maps naturally into base-36
+      (<span class="mono">0–9A–Z</span>). The final symbol is a checksum and can be ignored once you have a working unlock code.
+    </p>
+  </div>
+{% endblock %}

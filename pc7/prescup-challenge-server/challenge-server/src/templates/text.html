@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% set title='challenge.pccc - Questions' %}
+{% block content %}
+<h1>Enter the text for each field</h1>
+
+<form method="POST" enctype="multipart/form-data" action="{{ url_for('grade') }}">
+    {% for key, value in parts.items() %}
+            <h3>{{ value['text'] }}</h3>
+            <input type="text" name="{{ key }}" > 
+    {% endfor %}
+    <br>
+    <br>
+    <input class="btn btn-default" type="submit" value="Submit"> 
+</form>
+<br>
+<br>
+<div class='center'>
+    <p>If this challenge has files to download, you can access them <a href="{{ url_for('.list_files') }}">here</a> </p>
+</div>
+{% endblock %}

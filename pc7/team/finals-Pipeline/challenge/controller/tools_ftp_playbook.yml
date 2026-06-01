@@ -1,0 +1,7 @@
+- name: Download tools from fileserver
+  hosts: all
+  vars:
+    ansible_ssh_common_args: "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+  tasks:
+    - name: Run curl ftp command
+      ansible.builtin.shell: "curl -u ftpuser:ftpeaceout ftp://fileserver/tools.zip -o /home/ops-user/tools.zip"

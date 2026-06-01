@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title or "CB Hub" }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="brand">
+        <span class="badge">CB-HUB</span>
+        <div>
+          <div style="font-weight:800;letter-spacing:.02em">Roadside Audio Relay</div>
+          <div class="small mono">recordings: http/8080</div>
+        </div>
+      </div>
+      <div class="nav">
+        {% if hint_level|int >= 3 %}
+          <a href="/docs/protocol">📝 Protocol Notes</a>
+        {% endif %}
+        <a href="http://logistics.local:8443">💻 Logistics Console</a>
+        <a href="http://eld.local:8080/">💽 ELD Console</a>
+      </div>
+    </div>
+
+    <div class="container">
+      {% block content %}{% endblock %}
+      <footer class="small">CB Relay Cache · Roadside Provisioning Agent</footer>
+    </div>
+  </body>
+</html>

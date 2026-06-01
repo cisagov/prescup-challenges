@@ -1,0 +1,19 @@
+cluster.name: ghost-stories
+node.name: elasticsearch
+
+# Single-node mode — no cluster discovery overhead.
+discovery.type: single-node
+
+# Security off — this is a read-only forensic log store.
+xpack.security.enabled: false
+
+# Disable everything we don't need. Each of these loads modules,
+# creates templates, and registers ILM policies on first boot.
+xpack.ml.enabled: false
+xpack.watcher.enabled: false
+xpack.monitoring.collection.enabled: false
+xpack.profiling.enabled: false
+ingest.geoip.downloader.enabled: false
+
+# Reduce ILM overhead — we have static indices, no rollover.
+indices.lifecycle.history_index_enabled: false

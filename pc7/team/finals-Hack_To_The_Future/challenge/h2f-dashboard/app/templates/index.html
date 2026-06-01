@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>H2F MISSION CONSOLE</title>
+  <link rel="stylesheet" href="/static/dashboard.css?v=2">
+</head>
+
+<body>
+  <div class="bg">
+    <div id="bgLayer" class="bg__layer bg__layer--prehistoric" aria-hidden="true"></div>
+    <div class="bg__vignette" aria-hidden="true"></div>
+  </div>
+
+  <main class="shell">
+    <header class="topbar">
+      <div class="topbar__left">
+        <div class="brand">
+          <div class="brand__title">//// HACK TO THE FUTURE ////</div>
+          <div class="brand__sub">Temporal Mission Console</div>
+        </div>
+      </div>
+
+      <div class="topbar__right">
+        <div class="status">
+          <div class="status__dot"></div>
+          <div class="status__text">TIMELINES STABLE</div>
+        </div>
+        <div class="clock" id="clock">--:--:--</div>
+      </div>
+    </header>
+
+    <section class="panel">
+      <aside class="menu" role="tablist" aria-label="Time eras">
+        {% for era in eras %}
+        <button
+          class="menu__item {% if era == initial_era %}is-active{% endif %}"
+          role="tab"
+          aria-selected="{% if era == initial_era %}true{% else %}false{% endif %}"
+          aria-controls="content"
+          data-era="{{ era }}"
+        >
+          <span class="blade__inner">
+            <span class="menu__sigil" aria-hidden="true"></span>
+            <span class="menu__label">{{ titles[era] }}</span>
+            <span class="menu__hint">OPEN</span>
+          </span>
+        </button>
+        {% endfor %}
+
+        <div class="menu__footer">
+	  <div class="menu__meta"><br /><br /><br />
+            <div class="menu__metaTitle">NAVIGATION</div>
+            <div class="menu__metaBody">Use mouse or arrow keys • Enter to open</div>
+          </div>
+        </div>
+      </aside>
+
+      <article class="content" id="content" role="tabpanel" aria-live="polite">
+        <div class="content__header">
+          <div class="content__kicker">MISSION BRIEF</div>
+          <h1 class="content__title" id="contentTitle">{{ titles[initial_era] }}</h1>
+          <div class="content__rule"></div>
+        </div>
+
+        <div class="content__body" id="contentBody">
+          {{ initial_html | safe }}
+        </div>
+      </article>
+    </section>
+
+    <footer class="bottombar">
+      <div class="bottombar__left">
+        <span class="kbd">↑</span><span class="kbd">↓</span> select
+        <span class="sep">•</span>
+        <span class="kbd">Enter</span> open
+        <span class="sep">•</span>
+        <span class="kbd">Esc</span> reset
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    window.__INITIAL_ERA__ = "{{ initial_era }}";
+  </script>
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>

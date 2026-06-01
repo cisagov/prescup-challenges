@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="panel">
+  <h1>HTTP Maintenance Relay <span class="detail-pill">{{ detail_mode }}</span></h1>
+  <p class="muted">Submit a trusted first hop under the dashboard maintenance namespace, the route key, and an HMAC of the full target URL.</p>
+
+  <form method="post">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+
+    <label for="target">Target URL</label>
+    <input id="target" name="target" value="{{ target }}" placeholder="http://sp-dashboard.ninja:3000/maintenance/jump?next=http%3A%2F%2F127.0.0.1%3A8080%2Finternal%2Fbrief%3Frk%3D...">
+
+    <label for="route_key">Route key</label>
+    <input id="route_key" name="route_key" value="{{ route_key }}">
+
+    <label for="sig">Relay signature</label>
+    <input id="sig" name="sig" value="{{ sig }}" placeholder="hex HMAC-SHA256 of the full target URL">
+
+    <div style="margin-top: 18px;">
+      <button type="submit">Dispatch request</button>
+      <a class="button secondary" href="{{ url_for('dashboard') }}">Back</a>
+    </div>
+  </form>
+
+  {% if detail %}
+  <div class="panel" style="margin-top: 22px;">
+    <h2>Diagnostic detail</h2>
+    <pre>{{ detail | tojson(indent=2) }}</pre>
+  </div>
+  {% endif %}
+
+  {% if status_code is not none %}
+  <div class="panel" style="margin-top: 22px;">
+    <h2>Relay Result</h2>
+    <p>Status: <strong>{{ status_code }}</strong></p>
+    <pre>{{ result }}</pre>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

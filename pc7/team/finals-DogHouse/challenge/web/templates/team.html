@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Meet the Team</h1>
+  <div class="meta">ctf.local employees</div>
+  <div class="box">
+    <ul class="team-list">
+      {% for name, role in team %}
+        <li><strong>{{ name }}</strong> — {{ role }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

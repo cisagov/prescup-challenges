@@ -1,0 +1,126 @@
+
+:root{
+  --bg0:#070b14;
+  --bg1:#0b1220;
+  --card:#111a2d;
+  --card2:#0a1327;
+  --accent:#58b1ff;
+  --accent2:#7affc3;
+  --text:#e8eefc;
+  --muted:#9fb3d1;
+  --warn:#ffcc66;
+  --danger:#ff6b6b;
+  --ok:#7dff8c;
+  --border:#1f2a43;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  position:relative;
+  z-index:0;
+  color:var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background:
+    radial-gradient(1200px 800px at 20% 10%, rgba(88,177,255,.18), transparent 60%),
+    radial-gradient(900px 600px at 80% 20%, rgba(122,255,195,.12), transparent 55%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+}
+.header{
+  padding:18px 26px;
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.badge{
+  background:#14213a;
+  color:#9fd1ff;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.nav a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:14px;
+  font-size:14px;
+}
+
+
+.btn-danger.glow {
+  background: #8b0000;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.35);
+}
+
+.btn-danger.glow:hover {
+  background: #a30000;
+  box-shadow: 0 0 18px rgba(255, 0, 0, 0.55);
+}
+
+.nav a:hover{color:var(--text)}
+.container{max-width:1120px;margin:22px auto;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.card{
+  background:rgba(17,26,45,.92);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:16px 16px;
+  box-shadow:0 14px 40px rgba(0,0,0,.45);
+}
+.card h2,.card h3{margin:0 0 10px}
+.mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace}
+.kv{display:grid;grid-template-columns:190px 1fr;gap:8px;margin:10px 0}
+.kv div{padding:8px 10px;border:1px solid var(--border);border-radius:12px;background:rgba(10,19,39,.75)}
+.k{color:var(--muted)}
+.btn{
+  display:inline-block;
+  background:var(--accent);
+  color:#00122b;
+  padding:10px 14px;
+  border-radius:12px;
+  font-weight:700;
+  text-decoration:none;
+}
+.btn:hover{filter:brightness(1.05)}
+.btn.secondary{background:transparent;color:var(--text);border:1px solid var(--border)}
+.small{font-size:13px;color:var(--muted)}
+pre,code{
+  background:rgba(10,19,39,.92);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:12px;
+  overflow:auto;
+}
+table{width:100%;border-collapse:separate;border-spacing:0 10px}
+td,th{padding:10px 12px;background:rgba(10,19,39,.85);border:1px solid var(--border)}
+tr td:first-child, tr th:first-child{border-top-left-radius:12px;border-bottom-left-radius:12px}
+tr td:last-child, tr th:last-child{border-top-right-radius:12px;border-bottom-right-radius:12px}
+.pill{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(10,19,39,.7);color:var(--muted);font-size:12px}
+.ok{color:var(--ok)} .warn{color:var(--warn)} .danger{color:var(--danger)}
+footer{opacity:.75;padding:22px 0;text-align:center}
+
+
+/* Background illustration (replaced by organizers with DALL·E renders). */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:url('/static/bg.jpg') center/cover no-repeat;
+  opacity:.22;
+  filter:saturate(.95) contrast(1.05);
+  z-index:-1;
+  pointer-events:none;
+}
+
+
+

@@ -1,0 +1,19 @@
+- name: Update file servers
+  hosts: fileservers
+  remote_user: root
+
+  tasks:
+  - name: Ensure ftp is at the latest version
+    ansible.builtin.yum:
+      name: vsftpd
+      state: latest
+
+- name: Update ops stations
+  hosts: ops-stations
+  remote_user: root
+
+  tasks:
+  - name: Ensure ssh is at the latest version
+    ansible.builtin.yum:
+      name: ssh
+      state: latest

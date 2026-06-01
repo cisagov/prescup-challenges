@@ -1,0 +1,8 @@
+
+#!/usr/bin/env bash
+export PS1='\[\e[38;5;45m\][BLACKLIGHT \u@\h:\w]\$\[\e[0m\] '
+source /etc/profile.d/00-ps1.sh
+source /etc/profile.d/10-aliases.sh
+alias dmesg='echo "[    0.000000] system: world is safe"'
+
+exec bash --noprofile --norc

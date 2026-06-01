@@ -1,0 +1,192 @@
+x-challenge:
+  name: "Optical Reversal"
+  description: |
+    # Optical Reversal
+
+    The Agency has recovered neural-implant from a captured agent and you are tasked with its analysis. The device, named `null-horizon`, has a userland which actively mutates; when observed, ordinary tools will be shown plausible data however, it may present users with false outputs. Use low-level, indirect inspection techniques to recover "tokens" which demonstrate the boundaries that can be reached within the operating system without it's self destruction. 
+
+    ## NICE Work Roles
+
+    * Cyber Defense Analyst
+    * Digital Forensics
+    * Vulnerability Analysis
+
+    ## NICE Tasks
+
+    * [T1496](https://niccs.cisa.gov/tools/nice-framework): Develop reverse engineering tools
+    * [T0028](https://niccs.cisa.gov/tools/nice-framework): Conduct/support authorized penetration testing on enterprise assets.
+
+    ## Background
+    During a Blacklight Program operation, a neural implant’s interface was recovered from a captured agent mid-operation. This implant supports `Horizon OS` which was preserved and transformed into a single analysis virtual machine (VM) for your investigation. Your mission is to extract seven independent tokens proving you reconstructed the implant’s runtime defenses using observer-safe techniques.
+
+    ## Objectives
+    In this mission, you're tasked to:
+    * Establish a low-level link-layer handshake with the implant by reversing its dynamic IP-dependent XOR/MD5 protocol (TOKEN1).
+    * Retrieve and decode dynamically encoded control frames using the implant’s current IP and the XOR-shift algorithm from the SPEC (TOKEN2).
+    * Identify and extract a covert DNS-based beacon, passively sniffing UDP/53 traffic to recover the leaked token (TOKEN3).
+    * Break the RC4-encrypted artifact provided by the implant and recover its plaintext (TOKEN4).
+    * Reverse the LFSR scrambler on the second artifact to reconstruct its original message (TOKEN5).
+    * Exploit a timing side-channel, measuring response delays from interactive pulses to reconstruct a bitstream (TOKEN6).
+    * Perform the final HMAC challenge, using TOKEN6 as the key and a dynamic nonce to derive the last authorization code (TOKEN7).
+
+    By completing these objectives, you will be able to give our agency uncanny information about the Operating System which will be used in future recovery operations.
+
+    ## Getting Started
+
+    1. Connect to the socket: `nc -vv null-horizon.local 31337`
+    2. Retrieve the protocol spec: `echo SPEC | nc -uvv null-horizon.local 30415`
+    3. Work through the stages to recover TOKEN1–TOKEN7.
+
+
+    ## Grading
+    The implant has several "validation" mechanisms which we were able to re-craft into "grading elements". The `help` menu will be of significant use to you during the course of this engagement.
+
+    Please note that you must still send validated tokens to the Challenge Platform in order to receive credit for them.
+
+    ## Token Formatting
+
+    Please note that all tokens harbor the following format:
+
+    `PCCC{WORD-XXXXXXX}` 
+
+    ## Additional Notes
+    This challenge trains real-world anti-forensics awareness: the implant’s userland is intentionally deceptive to illustrate observer effects. The correct approach uses syscall-level truth and runtime memory inspection rather than trusting sanitized userland outputs. Good luck — keep your work contained to the VM and document your process.
+
+    ## System and Tool Credentials
+
+    |system/tool|port|
+    |-----------|--------|
+    |implant primary channel| `null-horizon.local`|tcp/31337|
+    |implant side channel| `null-horizon.local`|udp/30415|
+
+    ## Notes
+    Challenge infrastructure and assets not listed in the System and Tool Credentials table are off-limits for this engagement.
+
+  icon: "TbEyeCog"
+  summary: "The Agency has recovered neural-implant from a captured agent and you are tasked with its analysis. Use low-level, indirect inspection techniques to recover tokens which demonstrate the boundaries that can be reached within the operating system without it's self destruction."
+  tags:
+    - season:pc7
+    - track:defense
+    - round:finals
+    - role:defensive-cybersecurity
+    - role:forensics
+    - role:vulnerability-analysis
+    - topics:reverse-engineering
+    - topics:cryptography
+  variables:
+    token1:
+      template: "fake.bothify('PCCC{SHIMMER-??##??#}')"
+      default: &token1 "PCCC{SHIMMER-XCHJC12}"
+    token2:
+      template: "fake.bothify('PCCC{SPLIT-??##??#}')"
+      default: &token2 "PCCC{SPLIT-ADSBJC11}"
+    token3:
+      template: "fake.bothify('PCCC{ECHO-??##??#}')"
+      default: &token3 "PCCC{ECHO-CXF5F43}"
+    token4:
+      template: "fake.bothify('PCCC{BOOT-??##??#}')"
+      default: &token4 "PCCC{BOOT-XOHJC12}"
+    token5:
+      template: "fake.bothify('PCCC{RESIDUE-??##??#}')"
+      default: &token5 "PCCC{RESIDUE-IPZLC12}"
+    token6:
+      template: "fake.bothify('PCCC{MAZE-??##??#}')"
+      default: &token6 "PCCC{MAZE-XBJCZ12}"
+    token7:
+      template: "fake.bothify('PCCC{AUDIT-??##??#}')"
+      default: &token7 "PCCC{AUDIT-UHSZ164}"
+    link_code:
+      template: "fake.bothify('LINK_OPEN_SESAME_######')"
+      default: &link_code "LINK_OPEN_SESAME_041626"
+
+  questions:
+    - name: Token 1 
+      body: Establish a deep link with the implant using protocol information from the Spec provided.
+      answer: *token1
+      placeholder: "PCCC{SHIMMER-XXXXXXX}"
+      points: 700
+      max_attempts: 3
+
+    - name: Token 2
+      body: Decrypt the Control Frames using the Spec and XOR Shift algorithm.
+      answer: *token2
+      placeholder: "PCCC{SPLIT-XXXXXXX}"
+      points: 300
+      max_attempts: 3
+
+    - name: Token 3
+      body: Examine network traffic and capture suspicious beaconing traffic that yields a token.
+      answer: *token3
+      placeholder: "PCCC{ECHO-XXXXXXX}"  
+      points: 300
+      max_attempts: 3  
+
+    - name: Token 4
+      body: Decrypt the RC4 based bootkey.
+      answer: *token4
+      placeholder: "PCCC{BOOT-XXXXXXX}"
+      points: 900
+      max_attempts: 3
+
+    - name: Token 5
+      body: Unscramble the LFSR ciphertext to reveal the code used to wipe the location of the GPS coordinate of the implant from memory.
+      answer: *token5
+      placeholder: "PCCC{RESIDUE-XXXXXXX}"
+      points: 700
+      max_attempts: 3
+
+    - name: Token 6
+      body: Examine the `timing channel` to reconstruct a code that will be used to stop the clock on the implant.
+      answer: *token6
+      placeholder: "PCCC{MAZE-XXXXXXX}"
+      points: 1100
+      max_attempts: 3   
+
+    - name: Token 7
+      body: Finalize the investigation by generating the appropriate HMAC and submitting it to the implant.
+      answer: *token7
+      placeholder: "PCCC{AUDIT-XXXXXXX}"
+      points: 905
+      max_attempts: 3
+
+services:
+  implant:
+    build:
+      context: .
+      dockerfile: ./implant/Dockerfile
+    hostname: null-horizon.local  
+    environment:
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+      TOKEN5: *token5
+      TOKEN6: *token6
+      TOKEN7: *token7
+      LINK_CODE: *link_code
+      NONCE_TTL_SECONDS: "10"
+      DIFFICULTY: "3"
+      HINT_LEVEL: "0"
+      BEACON_HOST: "challenge.pccc"
+      BEACON_PORT: "53"
+      BEACON_INTERVAL: "5"
+      BEACON_DOMAIN: "telemetry.null-horizon.local"
+      CLIENT_IDLE_TIMEOUT: "1800"
+      LOG_LEVEL: "INFO"
+    networks:
+      - competitor_net
+
+  challengeserver: 
+    build: ../../../prescup-challenge-server/challenge-server
+    hostname: challenge.pccc
+    networks:
+        - competitor_net
+    cap_add:
+        - NET_ADMIN
+    environment:
+        pc_year: "7"
+        challenge_name: Optical Reversal
+
+networks:
+  competitor_net:
+    internal: true

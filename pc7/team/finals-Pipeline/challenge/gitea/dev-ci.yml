@@ -1,0 +1,22 @@
+name: variable-check-job
+
+on:
+  schedule:
+    - cron: "* * * * *"   # every minute
+  workflow_dispatch: {}
+
+jobs:
+  varcheck:
+    runs-on: shared
+    steps:
+      - name: Check for Dev Variables
+        env:
+          DEV_USER: ${{ secrets.DEV_USER }}
+          DEV_PASS: ${{ secrets.DEV_PASS }}
+          DEV_PAT: ${{ secrets.DEV_PAT }}
+          TOKEN2: ${{ secrets.TOKEN2 }}
+        run: |
+          echo "Check if correct user is running and dev vars are passed in"
+          bash -c '/home/runner/var_check.sh'
+          sleep 5
+          echo "Variable check complete."

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% set title='challenge.pccc - Grade' %}
+{% block content %}
+    <!-- This centers things on the page -->
+    <style>
+        div.center {
+            text-align: center;
+        }
+    </style>
+
+    <!-- html page -->
+    <div class='center'>
+    <h3 id="grading-header">
+    Grading Page
+    </h3>
+        <!-- Grade button form -->
+        <form action='/grade' method="GET">
+            <a id=grade><button id="grading-button" class='btn btn-default' >
+            Grade Challenge
+            </button></a>
+        </form>
+    </div>
+
+    <div class='center'>
+        <p>If this challenge has files to download, you can access them <a href="{{ url_for('.list_files') }}">here</a> </p>
+    </div>
+{% endblock %}
+

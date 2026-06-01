@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>sp-dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      color: #d6d6d6;
+      font-family: "JetBrains Mono", monospace;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Kasuni Mask */
+    .mask {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 58vh;
+      transform: translate(-50%, -50%);
+      mask-image: linear-gradient(
+        to left,
+        rgba(0,0,0,1) 55%,
+        rgba(0,0,0,0) 100%
+      );
+      -webkit-mask-image: linear-gradient(
+        to left,
+        rgba(0,0,0,1) 55%,
+        rgba(0,0,0,0) 100%
+      );
+      opacity: 0.92;
+      pointer-events: none;
+    }
+
+    /* Top Navigation */
+    .nav {
+      position: absolute;
+      top: 28px;
+      right: 48px;
+      display: flex;
+      gap: 32px;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+    }
+
+    .nav a {
+      color: #a0a0a0;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+    }
+
+    .nav a:hover {
+      color: #ffffff;
+      border-bottom: 1px solid #444;
+    }
+
+    /* Telemetry Panel */
+    .telemetry {
+      position: absolute;
+      right: 6%;
+      bottom: 14%;
+      text-align: left;
+      font-size: 13px;
+      line-height: 1.7;
+      opacity: 0.88;
+      max-width: 42%;
+    }
+
+    .telemetry span {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .telemetry .dim {
+      color: #7a7a7a;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Navigation -->
+    <div class="nav">
+      <a href="/mission">MISSION</a>
+      <a href="/evidence">EVIDENCE</a>
+    </div>
+
+    <!-- Kasuni Mask -->
+    <img src="/static/katsuni.png" class="mask" alt="kasuni-mask">
+
+    <!-- Telemetry / Data -->
+    <div class="telemetry">
+      <div class="telemetry-line dim">proto.coap</div>
+      <div class="telemetry-line">proxy.uri        coap://127.0.0.1/.well-known/core</div>
+      <div class="telemetry-line">frame.id         4421</div>
+      <div class="telemetry-line">payload.length  128</div>
+      <div class="telemetry-line">encoding         unknown</div>
+      <div class="telemetry-line">entropy          high</div>
+      <div class="telemetry-line dim">timestamp       2026-03-14T22:41:09Z</div>
+    </div>
+
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+log:
+  level: info
+
+runner:
+  file: .runner
+
+cache:
+  enabled: false
+
+container:
+  network: ""
+  privileged: false
+  options: []
+  workdir_parent: "/tmp/act"

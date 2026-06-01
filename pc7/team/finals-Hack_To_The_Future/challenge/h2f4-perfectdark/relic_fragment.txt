@@ -1,0 +1,4 @@
+FARSIGHT_LATTICE_V1
+BASE_KEY=0xA5
+CIPHERTEXT=e1 7e 66 fc 3d 7e 47 16 da 3d 04 61 86 b2 f2 1b 31 e4 3d e1 07 8b
+SHUTDOWN REQUIREMENT: /opt/farsight/inbox/shutdown_phrase.txt

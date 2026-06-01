@@ -1,0 +1,9 @@
+log:
+  level: error
+
+runner:
+  file: .runner
+  capacity: 1
+
+cache:
+  enabled: false

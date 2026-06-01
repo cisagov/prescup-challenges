@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% set title='challenge.pccc - Grading' %}
+{% block content %}
+    <div class='center'>
+        <h1 id="grading-in-progress-header">Your challenge is being graded</h1>
+        <p>There are no results from your grading attempt at {{submit_time}} yet. </p>
+        <p>Click the button below to see if your results are ready</p>
+        <form action='/grade' method="GET">
+            <a id=grade><button class='btn btn-default'>Refresh</button></a>
+        </form>
+{% endblock %}

@@ -1,0 +1,309 @@
+x-challenge:
+  name: "Hack To The Future"
+  description: |
+    # Hack to the Future
+
+    🔫 Time is fracturing. Complete a variety of missions requiring a wide variety of web, forensics, service and binary exploitation skills in different time periods to restore the timeline.
+
+    **NICE Roles**
+
+    - [Cyber Defense Analyst](https://niccs.cisa.gov/tools/nice-framework/) 
+    - [Digital Forensics](https://niccs.cisa.gov/tools/nice-framework/)
+    - [Exploitation Analysis](https://niccs.cisa.gov/tools/nice-framework/)
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework/)
+
+    **NICE Tasks**
+
+    - [T1207](https://niccs.cisa.gov/tools/nice-framework): Collect documentary or physical evidence of cyber intrusion incidents —
+    - [T1199](https://niccs.cisa.gov/tools/nice-framework): Identify digital evidence for analysis 
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework): Identify vulnerabilities
+    - [T1607](https://niccs.cisa.gov/tools/nice-framework): Recover information from forensic data sources
+    - [T1091](https://niccs.cisa.gov/tools/nice-framework) Perform authorized penetration testing on enterprise network assets
+    - [T1210](https://niccs.cisa.gov/tools/nice-framework): Perform reverse engineering of malicious software
+
+
+    ## Getting Started
+    Hosts follow the format `{hostname}.{period}.pccc`, where periods are:
+    - `pre` (prehistoric)
+    - `med` (medieval)
+    - `mod` (modern)
+    - `fut` (future)
+
+    **Prehistoric**
+
+    Your partner **Agent404** is trapped due to a malfunctioning time device at `time_device.pre.pccc`.  You are **Agent127**.
+
+    - Download the CA cert: `https://watch_agent127.pre.pccc/ca.crt`
+    - Access your watch: `https://watch_agent127.pre.pccc`
+    - Help Agent404 successfully reach `/escape` to receive the token.
+
+    **Medieval**
+
+    A spy hid critical data inside a locked safe on Gwinneth Island (1104).
+
+    - Safe location: `http://safe:5000`
+    - Crack the code using hidden techniques to retrieve the token.
+
+    **Modern**
+
+    A businessman believes signals from alternate timelines can be captured. His server provides a persistence vector.
+
+    - SSH into `ubuntu.mod.pccc` (`user:password`)
+    - Target process: `server` on port `8888`
+    - Inject **raw shellcode** (no shared libraries) to:
+      - Preserve server functionality
+      - Open a bind shell on port `8080`
+      - Accept an `ncat` connection from `grader.mod.pccc`
+
+    Server details:
+    - Binary: `/time-bandwidths/server`
+    - Restart if needed: `cd /time-bandwidths; /time-bandwidths/server &`. 
+    - Please note: the server must be run from within the `/time-bandwidths/` directory (you must `cd` to `/time-bandwidths` before executing the server). 
+    - Test page: `http://ubuntu.mod.pccc:8888/welcome.txt`
+
+    Run the grader at `http://grader.mod.pccc` to receive the token.
+
+    *NOTE: Crashing or breaking the server invalidates grading.*
+
+    **Future**
+
+    No starting hints are provided. Your mission is to forensically **identify, validate, and eliminate the imprint**. Evidence may be adaptive, misleading, or hostile to inspection. Success requires correlating multiple artifacts and confirming the imprint before neutralization.
+
+    `SSH` into and investigate `perfectdark.fut.pccc` to recover the final token.
+
+    ## Mission Console (Dashboard)
+
+    To access the `temporal mission console`, navigate to `http://dashboard.pccc:8080`. This dashboard may provide you with additional information that could prove pivotal in accelerating your rate of success in each timeline.
+
+    ## Tokens
+
+    There are four tokens to retrieve — one from each time period. The tokens can be completed in any order; each era has its own storyline.
+
+    ### Formatting
+    Please note that, unless otherwise specified, tokens are formatted with `PCCC{TOKEN STRING}` where `TOKEN STRING` can be any mix of letters, numbers, or symbols.
+
+    ### Additional Information About Token 3 (Mod)
+    Token 3 (`modern`) requires a grading check at `http://grader.mod.pccc`.
+
+    ## System and Tool Credentials
+
+    |timeline|system/tool|location|username|password|
+    |-----------|--------|---------|--------|-------|
+    |N/A|kali-VNC|N/A|all|user|password|
+    |N/A|dashboard|`http://dashboard.pccc:8080`|N/A|N/A|
+    |prehistoric|watch|`https://watch_agent127.pre.pccc`|pre-historic|Agent127|password|
+    |medieval|safe|`safe.med.pccc:5000`|N/A|N/A|
+    |modern|grader|`http://grader.mod.pccc`|N/A|N/A|
+    |modern|ubuntu|`ubuntu.mod.pccc:8888`|user|password|
+    |future|perfect dark|`perfectdark.fut.pccc:22`|jack.dark|password|
+
+  icon: "TbAperture"
+  summary: "Complete missions across four eras—**prehistoric, medieval, modern, and future**—using web, forensics, and binary exploitation skills to restore the timeline. Each era contains **one token**, retrievable in any order."
+  tags:
+    - season:pc7
+    - track:teams
+    - round:finals
+    - role:defensive-cybersecurity
+    - role:forensics
+    - role:exploitation-analyst
+    - role:vulnerability-analysis
+    - topics:web
+    - topics:forensics
+    - topics:reverse-engineering
+  variables:
+    # Prehistoric Token
+    token1:
+      template: "fake.bothify('PCCC{Out_of_the_fire-#??#?#}')"
+      default: &token1 "PCCC{Out_of_the_fire-FINALS}"
+    
+    # Medieval Token
+    token2:
+      template: "fake.bothify('PCCC{Safe_and_sound-?#?#??}')"
+      default: &token2 "PCCC{Safe_and_sound-FINALS}"
+    
+    # Modern Token
+    token3:
+      template: "fake.bothify('PCCC{linux_process_injection-#??#?#}')"
+      default: &token3 "PCCC{linux_process_injection-FINALS}"
+    
+    # Future Token
+    token4:
+      template: "fake.bothify('PCCC{N64-PD-?#?#??}')"
+      default: &token4 "PCCC{N64-PD-FINALS}"
+    
+  questions:
+    - name: Token 1 - Pre-historic
+      body: Receive this token as a reward for helping your partner `/escape`.
+      answer: *token1
+      points: 1500 # ~20% of 7200
+      placeholder: PCCC{XXX_XXX_XXX_XXX-YYYYYY}
+      max_attempts: 3
+
+    - name: Token 2 - Medieval
+      body: Recover this token from `http://safe.med.pccc:5000`.
+      answer: *token2
+      points: 1900 # ~26% of 7200
+      placeholder: PCCC{XXX_XXX_XXXXX-YYYYYY}"
+      max_attempts: 3
+
+    - name: Token 3 - Modern
+      body: Receive this token by running and passing the grading check at `http://grader.mod.pccc`.
+      answer: *token3
+      placeholder: PCCC{XXXXX_XXXXXX_XXXXXXXXX-YYYYY}
+      points: 1900 # ~26% of 7200
+      max_attempts: 3
+
+    - name: Token 4 - Perfect Dark
+      body: Find the `lattice decoder`, discover the `shutdown` phrase, and execute the binary to destroy the `Farsight XR20`.
+      answer: *token4
+      placeholder:  PCCC{XXX-XX-XXXXXX}
+      points: 1900 # ~26% of 7200
+      max_attempts: 3
+
+services:
+
+  #########################################
+  # TOKEN 1 Services (KD) - Caveman Era) #
+  #######################################
+
+  time_anchor:
+    build: ./h2f1-prehistoric/time_anchor
+    hostname: time_anchor.pre.pccc
+    environment:
+      - HOST=time_anchor.pre.pccc
+      - PARTNER_PASSWORD=0HIca04GzISXUGiwVGMdwzoSi
+      - PARTNER_WATCH=watch_agent404.pre.pccc
+      - PLAYER_WATCH=watch_agent127.pre.pccc
+    networks: 
+      - competitor_net 
+      - platform_net
+
+  time_device:
+    build: ./h2f1-prehistoric/time_device
+    hostname: time_device.pre.pccc
+    environment:
+      HOST: time_device.pre.pccc
+      PREHISTORIC_TOKEN: *token1
+    networks: 
+      - competitor_net 
+      - platform_net
+
+  watch_agent127:
+    build: ./h2f1-prehistoric/watch
+    hostname: watch_agent127.pre.pccc
+    environment:
+      - HOST=watch_agent127.pre.pccc
+      - AGENT_ID=Agent127
+      - CLIENT_ID=watch127
+    networks: 
+      - competitor_net 
+      - platform_net
+
+  watch_agent404:
+    build: ./h2f1-prehistoric/watch
+    hostname: watch_agent404.pre.pccc
+    environment:
+      - HOST=watch_agent404.pre.pccc
+      - AGENT_ID=Agent404
+      - PARTNER_PASSWORD=0HIca04GzISXUGiwVGMdwzoSi
+      - CLIENT_ID=watch404
+    networks: 
+      - competitor_net 
+      - platform_net
+
+  prehistoric_ca:
+    build: ./h2f1-prehistoric/ca
+    hostname: ca.pre.pccc
+    networks: 
+      - platform_net
+
+  #############################################
+  # TOKEN 2 Services (JLB) - Medieval (Safe) #
+  ###########################################     
+
+  safe:
+    build: ./h2f2-safe
+    hostname: safe.med.pccc
+    environment:
+      FLAG: *token2 # Previously "TESTINGFLAG123"
+    networks:
+      - competitor_net
+
+  ####################################################
+  # TOKEN 3 Services (MM) - Modern (Time Bandwiths) #
+  ##################################################
+
+  ubuntu-modern:
+    build: ./h2f3-time-bandwidths/ubuntu-modern
+    hostname: ubuntu.mod.pccc
+    cap_add:
+      - SYS_PTRACE
+    networks:
+      - competitor_net
+
+  grader-modern:
+    build: ./h2f3-time-bandwidths/grader-modern
+    hostname: grader.mod.pccc
+    environment:
+      TOKEN3: *token3 
+    networks:
+      - competitor_net
+
+
+  ##################################################
+  # TOKEN 4 Services (AC) - Future (Perfect Dark) #
+  ################################################
+
+  perfectdark:
+    build:
+      context: ./h2f4-perfectdark
+      dockerfile: Dockerfile
+    hostname: perfectdark.fut.pccc
+    environment:
+      TOKEN4: *token4 
+    networks:
+      - competitor_net
+
+  # Health Check for TOKEN 4
+  perfectdark_health:
+    build:
+      context: ./h2f4-perfectdark/healthcheck
+      dockerfile: Dockerfile
+    hostname: perfectdark-health.fut.pccc
+    environment:
+      TARGET_HOST: perfectdark.fut.pccc
+    networks:
+      - competitor_net
+
+  ####################################################
+  # DASHBOARD (AC) - Extended Descriptions Server   #
+  ##################################################
+
+  dashboard:
+    build: 
+      context: ./h2f-dashboard
+      dockerfile: Dockerfile
+    hostname: dashboard.pccc
+    networks:
+      - competitor_net
+
+  #########################
+  # H2F Naming Extension #
+  ########################    
+
+  challengeserver: 
+    build: ../../../prescup-challenge-server/challenge-server
+    hostname: challenge.pccc
+    networks:
+        - competitor_net
+    cap_add:
+        - NET_ADMIN
+    environment:
+        pc_year: "7"
+        challenge_name: Hack To The Future
+
+
+networks:
+  competitor_net:
+    internal: true 
+  platform_net:

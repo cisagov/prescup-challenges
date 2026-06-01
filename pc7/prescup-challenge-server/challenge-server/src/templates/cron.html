@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% set title='challenge.pccc - Grading' %}
+    {% block content %}
+    <div class='center'>
+        {% if submit_time != 'Never' %}
+            {% if limit != 0 %}
+                <h1 id="cron-header-in-progress" data-name="{{interval}}" data-other="{{other}}">Your challenge is being graded every {{ interval }} seconds.</h1>
+            {% else %} 
+                <h1 id="cron-header-exhausted">Your challenge grading attempts have been exhausted. The challenge will not be graded again.</h1>
+                <p>Your challenge was last graded at {{ submit_time }}.</p>
+            {% endif %}
+        {% else %}
+            <h1 id="cron-header-delayed">Challenge grading is being delayed. Check back for your results later.</h1>
+        {% endif %}
+
+        {% if results %}
+            {% for key, value in results.items() %}
+                <h2>{{ parts[key]['text'] }}</h2>
+                <p>{{ value }}</p>
+                <p>Token: {{ tokens[key] }}</p>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class='center'>
+        <p>If this challenge has files to download, you can access them <a href="{{ url_for('.list_files') }}">here</a> </p>
+    </div>
+    {% endblock %}

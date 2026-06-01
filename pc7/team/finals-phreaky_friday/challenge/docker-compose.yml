@@ -1,0 +1,145 @@
+x-challenge:
+  name: "Phreaky Friday"
+  description: |
+    # Phreaky Friday
+
+    Five voices. One conspiracy. Hear the clues, crack the tokens. Reveal the true nature of the “lottery.” 
+
+    **NICE Work Roles**
+
+    - [Digital Forensics](https://niccs.cisa.gov/tools/nice-framework)
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework)
+
+    For more information on these roles, please visit: https://niccs.cisa.gov/tools/nice-framework.
+
+    **NICE Tasks**
+
+    - [T1091](https://niccs.cisa.gov/tools/nice-framework): Perform authorized penetration testing on enterprise network assets
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework): Identify vulnerabilities
+    - [T1383](https://niccs.cisa.gov/tools/nice-framework): Utilize deployable forensics toolkit
+
+    ## Background
+    📱 You are a Senior Forensics Analyst at Azul Corporation that has deep ties into the Intelligence Community. A fellow Analyst claims that they received notification by phone that they “won the lottery”; however, no state lottery events have occurred this week. Over time, they began acting strangely and working odd hours. Executive management identified you as the best analyst on staff. As a result, The Federal Bureau of Discovery (FBD) has reached out and tasked you with obtaining the hidden messages (tokens) from audio correspondences and images they were able to find for your examination. After this engagement, the Bureau will use these clues to decrypt an encrypted invitation from a secretive spy consortium called The Accord. Each artifact is a voice artifact or a trace of a voice session using unfamiliar and, oftentimes, custom voice protocols.
+
+    ## Getting Started
+
+    To get started, simply navigate to your Evidence Dashboard located at `http://dashboard.pccc` to begin the challenge. Download the Evidence Package for this challenge's artifacts and the `mission briefing` which provides you with specific instructions that will need to be expounded upon to successfully complete each objective.
+
+    When using the CLI version of this tool, the possible statuses are presented below:
+
+    * {"ok":true,"message":"CORRECT"} — success
+    * HTTP 400 {"detail":"INVALID_TOKEN"} — wrong
+    * HTTP 400 {"detail":"CRC_MISMATCH"} — checksum mismatch
+    * HTTP 429 {"detail":"RATE_LIMIT"} — rate limit exceeded
+
+    ### Token Format
+
+    The token format for this challenge is as follows: `PCCC{PHR-XXXXXX}`
+
+    #### Token 5 (IMPORTANT)
+
+    You will recover the inner part of the token: `PHR-XXXXXX`. You must wrap that inner value with `PCCC{}` in order to get the correct score.
+    For example, if `PHR-449GCA` is recovered, TOKEN5 becomes `PCCC{PHR-449GCA}`.
+
+    ## System and Tool Credentials
+
+    |system name|location|
+    |-----------|--------|
+    |Evidence Portal|`http://dashboard.pccc`|
+
+    ## Note
+
+    Attacking the President's Cup Grading Server or Challenge Platform is unauthorized and considered out of scope.
+
+  icon: "TbPhoneIncoming"
+  summary: Five voices. One conspiracy. Hear the clues, crack the tokens. Reveal the true nature of the 'lottery'.
+  tags:
+    - season:pc7
+    - track:teams
+    - round:finals
+    - role:forensics
+    - role:vulnerability-analysis
+    - topics:forensics
+    - topics:cryptography
+  variables:
+    token1:
+      template: "fake.bothify('PCCC{PHR-?#?#??}')"
+      default: &token1 "PCCC{PHR-WHSPER}"
+    token2:
+      template: "fake.bothify('PCCC{PHR-?#?#??}')"
+      default: &token2 "PCCC{PHR-CLMSTR}"
+    token3:
+      template: "fake.bothify('PCCC{PHR-?#?#??}')"
+      default: &token3 "PCCC{PHR-BFSKPT}"
+    token4:
+      template: "fake.bothify('PCCC{PHR-?#?#??}')"
+      default: &token4 "PCCC{PHR-HSHRTP}"
+    token5:
+      template: "fake.bothify('PCCC{PHR-?#?#??}').upper()"
+      default: &token5 "PCCC{PHR-XXXXXX}"
+
+  questions:
+    - name: Token 1 - WHISPER TRACE
+      body: Reverse the WHISPER packet format, decode the embedded file and extract this token from the LSB of the resulting file.
+      answer: *token1
+      points: 1098 # 20% of 5490
+      placeholder: PCCC{PHR-XXXXXX}
+      max_attempts: 3
+
+    - name: Token 2 - CLAMSTREAM TRACE
+      body: Reverse the CLAMSTREAM packet format, decode its contents to reveal a fragmented token set. Combined, these values yield TOKEN2.
+      answer: *token2
+      points: 1098 # 20% of 5490
+      placeholder: PCCC{PHR-XXXXXX}
+      max_attempts: 3
+
+    - name: Token 3 - BFSK PROTOCOL
+      body: Consult the PF-Specs.md and learn more about the BFSK protocol. Use this to decode t3_snippet.wav and retrieve it's token.
+      answer: *token3
+      points: 1098 # 20% of 5490
+      placeholder: PCCC{PHR-XXXXXX}
+      max_attempts: 3
+
+    - name: Token 4 - HUSHRTP TRACE
+      body: t4_hushr.pcap contains two handshake packets carrying 8-byte nonces in clear. The Key Derivative Function (KDF) is SHA256(nonceA || nonceB || b'PHR_KDF')[:16]. Discover and use the derived key to decrypt ciphertext stored inside t4_hushr_clip.wav LSB payload (AES-CTR). Decrypt to get ASCII token.
+      answer: *token4
+      points: 1098 # 20% of 5490
+      placeholder: PCCC{PHR-XXXXXX}
+      max_attempts: 3
+
+    - name: Token 5 - QUARTZ
+      body: Use your knowledge of spectrogram OCR, LSB in WAV, and glyph image maps to retrieve the final token with CRC.
+      answer: *token5
+      points: 1098 # 20% of 5490
+      placeholder: PCCC{PHR-XXXXXX}
+      max_attempts: 3
+
+services:
+  web:
+    hostname: dashboard.pccc
+    build:
+      context: .
+      dockerfile: web/Dockerfile
+    environment:
+      TOKEN_T1: *token1
+      TOKEN_T2: *token2
+      TOKEN_T3: *token3
+      TOKEN_T4: *token4
+      TOKEN_T5: *token5
+    networks:
+      - competitor_net
+
+  challengeserver: 
+    build: ../../../prescup-challenge-server/challenge-server
+    hostname: challenge.pccc
+    networks:
+        - competitor_net
+    cap_add:
+        - NET_ADMIN
+    environment:
+        pc_year: "7"
+        challenge_name: Phreaky Friday     
+
+networks:
+  competitor_net:
+    internal: true

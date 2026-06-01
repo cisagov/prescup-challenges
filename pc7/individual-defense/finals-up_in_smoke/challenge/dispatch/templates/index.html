@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="grid">
+    <div class="card" style="grid-column: span 8">
+      <h2>Situation</h2>
+      <p class="small">
+        Trailer <span class="pill mono">TRUCK-777</span> dropped off the radar after a weighstation event.
+        Systems are still online and as custody controls were designed for trusted networks this poses a problem.
+      </p>
+      <div class="kv mono">
+        <div class="k">Rule of engagement</div><div>Recover custody evidence. Do not brute force your way to recovery; correlate artifacts.</div>
+        <div class="k">Primary objective</div><div>Reassign <span class="pill mono">TRUCK-777</span> to a Safehouse route.</div>
+        <div class="k">Success condition</div><div>Collect TOKEN1 → TOKEN4 (in order), then submit the reassignment to Logistics portal.</div>
+      </div>
+
+      {% if hint_level >= 2 %}
+      <p class="small">
+        Hint level {{hint_level}}: You will need three kinds of evidence: <b>network</b>, <b>audio</b>, and <b>firmware</b>.
+      </p>
+      {% endif %}
+    </div>
+
+    <div class="card" style="grid-column: span 4">
+      <h2>System Topology</h2>
+      <table class="mono">
+        <tr><th>Host</th><th>Proto</th><th>Port</th></tr>
+        {% for h,proto,port,desc in hosts %}
+          <tr><td>{{h}}</td><td>{{proto}}</td><td>{{port}}</td></tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="card" style="grid-column: span 12">
+      <h2>Evidence Index</h2>
+      <div class="grid">
+        <div class="card" style="grid-column: span 4">
+          <h3>Yard Telemetry Capture</h3>
+          <p class="small">Network traffic captured from the yard gate controller during recent trailer access operations. Required to verify seal closure prior to extraction. Packet capture containing vendor channel traffic from the yard gate controller.</p>
+          <a class="btn" href="http://yard_gate.local:8080/yard/telemetry/capture">Download capture</a>
+        </div>
+        <div class="card" style="grid-column: span 4">
+          <h3>CB Handshake Beacon</h3>
+          <p class="small">Analog handshake recording used to provision an ELD maintenance unlock code.</p>
+          <a class="btn" href="http://cbhub.local:8080/recordings/handshake.wav">Download audio</a>
+        </div>
+        <div class="card" style="grid-column: span 4">
+          <h3>ELD Firmware Snapshot</h3>
+          <p class="small">Firmware library used by the ELD ingestion pipeline (analyze locally).</p>
+          <a class="btn" href="http://eld.local:8080/firmware/libboot.so">Download firmware</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
