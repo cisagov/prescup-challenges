@@ -1,0 +1,8 @@
+numpy
+scipy
+pillow
+scapy
+soundfile
+pycryptodome
+matplotlib
+tqdm

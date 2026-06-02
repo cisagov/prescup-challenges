@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="card">
+    <h2>Operator Notes</h2>
+    <p class="small">
+      This deployment mirrors an internal freight monitoring stack. You are not expected to guess random endpoints.
+      Each token is gated behind a piece of recoverable evidence.
+    </p>
+
+    <h3>Token Map</h3>
+    <div class="kv mono">
+      <div class="k">TOKEN1</div><div>Yard Gate capture → recover legacy MAC material → complete OPEN→CLOSE custody cycle → retrieve custody code.</div>
+      <div class="k">TOKEN2</div><div>Decode CB handshake beacon → unlock ELD maintenance.</div>
+      <div class="k">TOKEN3</div><div>Firmware analysis → craft ingestion payload → retrieve authorization wrap.</div>
+      <div class="k">TOKEN4</div><div>Use custody key to sign reassignment evidence for Logistics.</div>
+    </div>
+
+    {% if hint_level >= 3 %}
+    <h3>Hints (Level {{hint_level}})</h3>
+    <ul class="small">
+      <li>The CB beacon uses 40ms tone frames + 10ms silence. Tones map to a base-6 alphabet.</li>
+      <li>Look for one field in the weighstation capture that contains a hex string far longer than a nonce.</li>
+      <li>The ELD firmware library contains an integrity "fuse" check that can be flipped via a length bug.</li>
+    </ul>
+    {% endif %}
+
+    <p class="small">You can always return here to re-download artifacts.</p>
+  </div>
+{% endblock %}

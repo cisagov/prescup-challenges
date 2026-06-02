@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Send us your service request</h1>
+  <div class="box">
+    <p>Please upload a PDF describing your service request.</p>
+    <form method="post" enctype="multipart/form-data">
+      <label for="file">Upload PDF here</label><br>
+      <input type="file" id="file" name="file" accept="application/pdf"><br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+{% endblock %}

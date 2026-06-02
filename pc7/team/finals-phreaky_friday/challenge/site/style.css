@@ -1,0 +1,19 @@
+:root{
+  --bg:#071019; --card:#0b2530; --accent:#00e6a8; --muted:#9fb9c0;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#041219);color:#dff5ef}
+.hero{padding:56px 0 40px;text-align:center;background:radial-gradient(1000px 400px at 50% -10%, rgba(0,230,168,0.15), rgba(0,0,0,0) 70%)}
+.hero-inner{display:inline-block;padding:28px 36px;border-radius:14px;background:rgba(0,0,0,0.25);backdrop-filter:blur(4px)}
+.logo{width:72px;height:auto;margin-bottom:12px}
+h1{margin:6px 0 6px;font-size:34px;letter-spacing:0.3px}
+.subtitle{margin:4px 0 18px;color:var(--muted)}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;background:var(--accent);color:#022226;text-decoration:none;font-weight:700}
+.btn-alt{background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--accent)}
+.content{max-width:1100px;margin:28px auto;padding:0 16px}
+.card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02)); padding:18px;border-radius:12px;margin-bottom:18px;box-shadow:0 6px 30px rgba(2,20,24,0.5)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card h2,h3{margin:0 0 8px}
+.foot{margin-top:12px;color:var(--muted);font-size:13px;text-align:center}
+code{background:rgba(255,255,255,0.06);padding:2px 6px;border-radius:4px}

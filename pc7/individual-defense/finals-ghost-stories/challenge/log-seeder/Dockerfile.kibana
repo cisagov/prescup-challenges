@@ -1,0 +1,13 @@
+# Kibana wrapper — points at the elasticsearch service inside the
+# challenge stack. Version pinned to match the Elasticsearch image.
+#
+# A custom kibana.yml is baked in to bypass the 8.x enrollment wizard
+# (the stock image shows "Configure Elastic to get started" without it).
+
+FROM docker.elastic.co/kibana/kibana:7.17.29
+
+COPY kibana.yml /usr/share/kibana/config/kibana.yml
+
+# Customization (saved searches, dashboards, index pattern preloads)
+# happens via the log-seeder service writing to Kibana's saved-objects
+# API after first boot.

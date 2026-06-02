@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="panel" style="max-width: 480px; margin: 40px auto;">
+  <h1 style="white-space: pre-line;">{{ banner }}</h1>
+  <p class="muted">Authorized operators only. Trusted relays, bridge diagnostics, and internal brief tooling are restricted.</p>
+  <form method="post">
+    <label for="username">Username</label>
+    <input id="username" name="username" autocomplete="username" required>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+    <div style="margin-top: 18px;">
+      <button type="submit">Sign in</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title or "Logistics" }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="brand">
+        <span class="badge">LOGISTICS</span>
+        <div>
+          <div style="font-weight:800;letter-spacing:.02em">Custody Reassignment</div>
+          <div class="small mono">http/8443</div>
+        </div>
+      </div>
+      <div class="nav">
+        <a href="http://cbhub.local:8080/">📻 CB Hub</a>
+        <a href="http://eld.local:8080/">💽 ELD Console</a>
+        <a href="http://dispatch.local:8080/">🔙 Dispatch Console</a>
+      </div>
+    </div>
+    <div class="container">
+      {% block content %}{% endblock %}
+      <footer class="small">Custody operations gateway · signature required</footer>
+    </div>
+  </body>
+</html>

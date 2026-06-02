@@ -1,0 +1,136 @@
+# Complete Challenge Specification Example
+x-challenge:
+  # Required: Name of the challenge displayed to participants
+  name: "Wargames"
+
+  # Required: Detailed description shown to participants
+  description: |
+    # Wargames
+
+    `W.O.P.R. > A STRANGE GAME. THE ONLY WINNING MOVE IS NOT TO PLAY. HOW ABOUT A NICE GAME OF CHESS?`
+
+    Put your binary exploitation to the test and teach `Joshua` a final lesson in futility. 
+
+    **NICE Work Roles**
+
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework)
+    - [Exploitation Analysis](https://niccs.cisa.gov/tools/nice-framework)
+
+    **NICE Tasks**
+
+    - [T1359](https://niccs.cisa.gov/tools/nice-framework): Perform penetration testing.
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework): Identify vulnerabilities.
+
+    ## Background
+
+    The `War Operation Plan Response` system has been compromised! The missile system is set to launch, and not even the best hackers in the world have a solution to stop it. There's where you come in: just an unwitting high-school student, you've somehow gained access with the password `Joshua`. Disable `WOPR` before the system can launch the missiles!
+
+    ## Getting Started
+
+    Using the provided Kali machine, access `wopr.pccc` port `1337` to begin playing a game of `Global Thermonuclear War`. You can also visit `http://wopr.pccc` to download artifacts for the challenge. 
+
+    ## Tokens
+
+    The tokens are formatted as `PCCC{some_words_here}`.
+
+    No grading checks are required; all tokens are received directly from `wopr.pccc`.
+
+    1. Identify the address of the `printToken` function, and submit it to a hidden feature on `WOPR/Joshua` (`wopr.pccc`) for this token.
+    2. This token can be retrieved by executing `printToken`.
+    3. Retrieve this token from the `/app` directory.
+
+    ## System and Tool Credentials
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |kali-VNC|user|password|
+
+  # Optional: Tabler icon name with Tb prefix
+  icon: "TbRadioactive"
+
+  # Optional: Challenge summary/overview
+  summary: |
+    W.O.P.R. > A STRANGE GAME. THE ONLY WINNING MOVE IS NOT TO PLAY. HOW ABOUT A NICE GAME OF CHESS?
+
+    Put your binary exploitation to the test and teach `Joshua` a final lesson in futility. 
+
+  # Optional: Template definitions for reusable values
+  templates:
+    # Define reusable templates with anchors
+    leakToken-flag: &leakToken-flag_template "fake.bothify('PCCC{winning_move_is_dont_play_####}')"
+    functionToken-flag: &functionToken-flag_template "fake.bothify('PCCC{most_important_lesson_futility_####}')"
+    systemToken-flag: &systemToken-flag_template "fake.bothify('PCCC{huh_you_played_and_won_####}')"
+
+  tags:
+    - season:pc7
+    - track:offense
+    - round:finals
+    - role:vulnerability-analysis
+    - role:exploitation-analyst
+    - topics:reverse-engineering
+  variables:
+    auto_leakToken-flag:
+      template: *leakToken-flag_template
+      default: &auto_leakToken-flag_default "PCCC{winning_move_is_dont_play}"
+    auto_functionToken-flag:
+      template: *functionToken-flag_template
+      default: &auto_functionToken-flag_default "PCCC{most_important_lesson_futility}"
+    auto_systemToken-flag:
+      template: *systemToken-flag_template
+      default: &auto_systemToken-flag_default "PCCC{huh_you_played_and_won}"
+
+  questions:
+  - name: Question 1
+    body: Enter the token received from providing the address of the `printToken` function to the hidden feature on `wopr.pccc`.
+    placeholder: "PCCC{???????_????_??_????_????_####}"
+    points: 1593 # 30% total 5310
+    answer: *auto_leakToken-flag_default
+    max_attempts: '3'
+  - name: Question 2
+    body: Enter the token received by executing the `printToken` function.
+    placeholder: "PCCC{????_?????????_??????_????????_####}"
+    points: 1593 # 30% total 5310
+    answer: *auto_functionToken-flag_default
+    max_attempts: '3'
+  - name: Question 3
+    body: Enter the token found in the `/app` directory.
+    placeholder: "PCCC{???_???_??????_???_???_####}"
+    points: 2124 # 40% total 5310
+    answer: *auto_systemToken-flag_default
+    max_attempts: '3'
+
+services:
+  server:
+    build: ./server
+    hostname: wopr.pccc
+    networks:
+    - competitor_net
+          # aliases:
+          # - wopr.pccc
+          # - joshua.pccc
+    environment:
+      leakToken: *auto_leakToken-flag_default
+      functionToken: *auto_functionToken-flag_default
+      systemToken: *auto_systemToken-flag_default
+  challengeserver: 
+    build: ../../../prescup-challenge-server/challenge-server
+    hostname: challenge.pccc
+    networks:
+        - competitor_net
+    cap_add:
+        - NET_ADMIN
+    environment:
+        pc_year: "7"
+        challenge_name: Wargames
+        HOSTS_JSON: >-
+                {
+                    "pccc": [
+                        { "container": "server", "hostname": "wopr", "aliases": ["joshua"] }
+                    ]
+                }
+
+networks:
+  competitor_net:
+    external: true
+    internal: true
+

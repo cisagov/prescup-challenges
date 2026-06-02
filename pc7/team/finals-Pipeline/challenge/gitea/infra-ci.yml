@@ -1,0 +1,31 @@
+name: infra-download
+
+on:
+  schedule:
+    - cron: "* * * * *"   # every minute
+  workflow_dispatch: {}
+
+jobs:
+  download:
+    runs-on: infra
+    steps:
+      - name: Prepare workspace
+        run: |
+          rm -rf dev
+          mkdir -p .terraform.d/plugins
+
+      - name: Clone dev repo
+        env:
+          DEV_PAT: ${{ secrets.DEV_PAT }}
+        run: |
+          git -c http.extraHeader="Authorization: token $DEV_PAT" clone http://gitea:8080/root/dev.git dev
+
+      - name: Copy terraform files
+        run: |
+          cp -R dev/providers/. .terraform.d/plugins/
+          cp dev/consumers/main.tf ./main.tf
+
+      - name: Terraform init/plan
+        run: |
+          terraform init -plugin-dir='.terraform.d/plugins'
+          terraform plan

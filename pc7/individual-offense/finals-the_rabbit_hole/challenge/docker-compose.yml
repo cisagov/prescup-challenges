@@ -1,0 +1,184 @@
+x-challenge:
+  name: "The Rabbit Hole"
+  description: |
+    # The Rabbit Hole
+
+    This challenge involves a chain of machines for you to break into, each one more difficult than the last.
+
+    **NICE Work Roles**
+
+    - [Exploitation Analyst](https://niccs.cisa.gov/tools/nice-framework/)
+
+    **NICE Tasks**
+
+    - [T1595](https://niccs.cisa.gov/tools/nice-framework/): Weaken Encryption
+    - [T1190](https://niccs.cisa.gov/tools/nice-framework/): Exploit Public-Facing Application
+    - [T1600](https://niccs.cisa.gov/tools/nice-framework/): Weaken Encryption
+
+    ## Background
+
+    You have been given the task of breaking into several machines in a sequence. Your job is to find any other machines and break into them and gather any tokens you can find. Some of the challenges have inserted hints for you to read to determine what to do next.
+
+    ## Getting Started
+
+    You have been given credentials to the `starter` machine. Each machine you gain access to will have very limited resources and tools for you to work with. Good Luck.
+
+
+    ## System and Tool Credentials
+
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |`starter`|user|password|
+    |`easybox`|||
+    |`mediumbox`|||
+    |`hardbox`|||
+    |`elitebox`|||
+    |`masterbox`|||
+
+
+
+  summary: |
+    This challenge involves a chain of machines for you to break into, each one more difficult than the last.
+
+  templates:
+    easy_flag: &easy_template "fake.bothify('PCCC{easy_??_####}', letters='ABCDEF0123456789')"
+    medium_flag: &medium_template "fake.bothify('PCCC{medium_??_####}', letters='ABCDEF0123456789')"
+    hard_flag: &hard_template "fake.bothify('PCCC{hard_??_####}', letters='ABCDEF0123456789')"
+    elite_flag: &elite_template "fake.bothify('PCCC{elite_??_####}', letters='ABCDEF0123456789')"
+    master_flag: &master_template "fake.bothify('PCCC{master_??_####}', letters='ABCDEF0123456789')"
+
+  tags:
+    - season:pc7
+    - track:offense
+    - round:finals
+    - role:exploitation-analyst
+    - topics:web
+    - topics:cryptography
+  variables:
+    
+    easy_flag:
+      template: *easy_template
+      default: &easy_template_default "PCCC{easy_Satisfied}"
+
+    medium_flag:
+      template: *medium_template
+      default: &medium_template_default "PCCC{medium_Satisfied}"
+    
+    hard_flag:
+      template: *hard_template
+      default: &hard_template_default "PCCC{hard_Satisfied}"
+
+    elite_flag:
+      template: *elite_template
+      default: &elite_template_default "PCCC{elite_Satisfied}"
+
+    master_flag:
+      template: *master_template
+      default: &master_template_default "PCCC{master_Satisfied}"
+
+  #total points 5490
+  questions:
+    - name: "Box 1"
+      body: "What is the token given by the easy box?"
+      placeholder: "PCCC{token_value}"
+      points: 549 #10%
+      answer: *easy_template_default
+      max_attempts: 3
+
+    - name: "Box 2"
+      body: "What is the token given by the medium box?"
+      placeholder: "PCCC{token_value}"
+      points: 549 #10%
+      answer: *medium_template_default
+      max_attempts: 3
+      
+    - name: "Box 3"
+      body: "What is the value given by the hard box?"
+      placeholder: "PCCC{token_value}"
+      points: 1098 # 20%
+      answer: *hard_template_default
+      max_attempts: 3
+
+    - name: "Box 4"
+      body: "What is the value given by the elite box?"
+      placeholder: "PCCC{token_value}"
+      points: 1647 # 30%
+      answer: *elite_template_default
+      max_attempts: 3
+
+    - name: "Box 5"
+      body: "What is the value given by the master box?"
+      placeholder: "PCCC{token_value}"
+      points: 1647 # 30%
+      answer: *master_template_default
+      max_attempts: 3
+
+services:
+  starter:
+    build: ./starter
+    hostname: starter
+    networks:
+      - competitor_net
+      - easy_net
+
+  easy_box:
+    build: ./easybox
+    hostname: easybox
+    networks:
+      - easy_net
+      - medium_net
+    environment:
+      easytoken: *easy_template_default
+
+  medium_box:
+    build: ./mediumbox
+    hostname: mediumbox
+    networks:
+      - medium_net
+      - hard_net
+    environment:
+      mediumtoken: *medium_template_default
+      
+  hard_box:
+    build: ./hardbox
+    hostname: hardbox
+    networks:
+      - hard_net
+      - elite_net
+      - master_net
+    environment:
+      hardtoken: *hard_template_default
+
+  elite_box:
+    build: ./elitebox
+    hostname: elitebox
+    networks:
+      - elite_net
+    environment:
+      elitetoken: *elite_template_default
+ 
+  master_box:
+    build: ./masterbox
+    hostname: masterbox
+    networks:
+      - master_net
+    environment:
+      mastertoken: *master_template_default
+
+
+networks:
+  competitor_net:
+
+    internal: true # production
+    # external: true  # Uncomment for local dev.
+  easy_net:
+    internal: true
+  medium_net:
+    internal: true
+  hard_net:
+    internal: true
+  elite_net:
+    internal: true
+  master_net:
+    internal: true

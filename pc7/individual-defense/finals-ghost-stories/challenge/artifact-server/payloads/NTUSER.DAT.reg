@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; Excerpt from NTUSER.DAT (HKCU) recovered from eng-bell-04.
+; Extracted via `reg export HKCU\Software\Microsoft\Windows\CurrentVersion\Run`
+; on 2026-05-12 at 03:08:11Z during the imaging step.
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run]
+"OneDrive"="\"C:\\Users\\jhowell\\AppData\\Local\\Microsoft\\OneDrive\\OneDrive.exe\" /background"
+"Teams"="C:\\Users\\jhowell\\AppData\\Local\\Microsoft\\Teams\\Update.exe --processStart \"Teams.exe\" --process-start-args \"--system-initiated\""
+"SystemServices"="wscript.exe \"%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\SystemServices.vbs\""
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce]

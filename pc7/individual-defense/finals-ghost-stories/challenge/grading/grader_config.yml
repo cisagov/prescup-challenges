@@ -1,0 +1,54 @@
+# Operation Ghost Stories — challenge-server config.
+#
+# Tokens 1, 2, 4 are static-answer checks (SHA256 / canonical text).
+# Token 3 is a structured-evidence check (JSON payload) with rate-limit.
+# Token 5 is in-band, returned by the c2-replay listener on a valid
+#   challenge-response handshake. The grader does not score Token 5
+#   directly — its question text directs the competitor to the handler.
+
+startup:
+  scripts: []
+
+required_services:
+  - host: kibana.pccc
+    port: 5601
+    path: /api/status
+    type: web
+    block_startup_scripts: false
+  - host: artifacts.pccc
+    port: 80
+    path: /
+    type: web
+    block_startup_scripts: false
+  - host: sandbox.pccc
+    port: 8888
+    path: /api
+    type: web
+    block_startup_scripts: false
+  - host: handler.pccc
+    port: 41243
+    type: socket
+    block_startup_scripts: false
+
+hosted_files:
+  enabled: true
+
+grading:
+  enabled: true
+  mode: text
+  grading_script: grading.py
+  rate_limit: 2
+  token_location: guestinfo
+  parts:
+    assetIdentification:
+      token_name: TOKEN1
+      text: "Asset Identification: Submit the SHA256 of the dropper that initiated the compromise."
+    defensiveEvasion:
+      token_name: TOKEN2
+      text: "Defensive Evasion: Submit the canonical PowerShell command the asset used to suppress host monitoring before deploying the implant."
+    deadDropEnumeration:
+      token_name: TOKEN3
+      text: 'Dead-Drop Enumeration: Submit the full persistence set as JSON, e.g. {"run_key": "...", "startup": "...", "scheduled_task": "...", "wmi_consumer": "..."}'
+    handlersInstructions:
+      token_name: TOKEN4
+      text: "Handler''s Instructions: Submit the SHA256 of the decoded svc.py implant after recovering it from the dropper."

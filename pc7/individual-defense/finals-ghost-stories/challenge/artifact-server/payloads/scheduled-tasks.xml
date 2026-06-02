@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<!-- Exported scheduled tasks from eng-bell-04 (2026-05-12 03:08:22Z) -->
+<Tasks>
+  <!-- Standard Windows maintenance tasks -->
+  <Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+    <RegistrationInfo>
+      <Date>2024-11-15T10:00:00.0000000</Date>
+      <Author>Microsoft Corporation</Author>
+      <Description>Windows Disk Cleanup scheduled maintenance.</Description>
+      <URI>\Microsoft\Windows\DiskCleanup\SilentCleanup</URI>
+    </RegistrationInfo>
+    <Triggers>
+      <CalendarTrigger>
+        <Enabled>true</Enabled>
+        <StartBoundary>2024-11-15T03:00:00</StartBoundary>
+        <ScheduleByWeek><DaysOfWeek><Sunday /></DaysOfWeek><WeeksInterval>1</WeeksInterval></ScheduleByWeek>
+      </CalendarTrigger>
+    </Triggers>
+    <Principals>
+      <Principal id="Author">
+        <UserId>S-1-5-18</UserId>
+        <RunLevel>HighestAvailable</RunLevel>
+      </Principal>
+    </Principals>
+    <Settings>
+      <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+      <DisallowStartIfOnBatteries>true</DisallowStartIfOnBatteries>
+      <StopIfGoingOnBatteries>true</StopIfGoingOnBatteries>
+      <AllowHardTerminate>true</AllowHardTerminate>
+      <StartWhenAvailable>true</StartWhenAvailable>
+      <Enabled>true</Enabled>
+      <Hidden>false</Hidden>
+      <RunOnlyIfIdle>false</RunOnlyIfIdle>
+      <WakeToRun>false</WakeToRun>
+      <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>
+      <Priority>5</Priority>
+    </Settings>
+    <Actions Context="Author">
+      <Exec>
+        <Command>%SystemRoot%\System32\cleanmgr.exe</Command>
+        <Arguments>/autoclean /d C:</Arguments>
+      </Exec>
+    </Actions>
+  </Task>
+
+  <Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+    <RegistrationInfo>
+      <Date>2025-01-08T14:32:00.0000000</Date>
+      <Author>Skyloom Aerospace IT</Author>
+      <Description>Quarterly certificate store update for internal PKI.</Description>
+      <URI>\Skyloom\CertStoreRefresh</URI>
+    </RegistrationInfo>
+    <Triggers>
+      <CalendarTrigger>
+        <Enabled>true</Enabled>
+        <StartBoundary>2025-01-08T02:00:00</StartBoundary>
+        <ScheduleByDay><DaysInterval>90</DaysInterval></ScheduleByDay>
+      </CalendarTrigger>
+    </Triggers>
+    <Principals>
+      <Principal id="Author">
+        <UserId>S-1-5-18</UserId>
+        <RunLevel>HighestAvailable</RunLevel>
+      </Principal>
+    </Principals>
+    <Settings>
+      <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+      <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+      <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
+      <AllowHardTerminate>true</AllowHardTerminate>
+      <StartWhenAvailable>true</StartWhenAvailable>
+      <Enabled>true</Enabled>
+      <Hidden>false</Hidden>
+      <RunOnlyIfIdle>false</RunOnlyIfIdle>
+      <WakeToRun>false</WakeToRun>
+      <ExecutionTimeLimit>PT30M</ExecutionTimeLimit>
+      <Priority>7</Priority>
+    </Settings>
+    <Actions Context="Author">
+      <Exec>
+        <Command>certutil.exe</Command>
+        <Arguments>-generateSSTFromWU roots.sst</Arguments>
+      </Exec>
+    </Actions>
+  </Task>
+
+  <!-- Malicious task planted by the asset -->
+  <Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+    <RegistrationInfo>
+      <Date>2026-04-22T03:14:11.0000000</Date>
+      <Author>NT AUTHORITY\SYSTEM</Author>
+      <Description>SystemServices background check (per IT distribution).</Description>
+      <URI>\Microsoft\Windows\WindowsUpdate\SystemServicesCheck</URI>
+    </RegistrationInfo>
+    <Triggers>
+      <LogonTrigger>
+        <Enabled>true</Enabled>
+        <UserId>EngBell04\jhowell</UserId>
+        <Delay>PT45S</Delay>
+      </LogonTrigger>
+      <BootTrigger>
+        <Enabled>true</Enabled>
+        <Delay>PT90S</Delay>
+      </BootTrigger>
+    </Triggers>
+    <Principals>
+      <Principal id="Author">
+        <UserId>S-1-5-21-1004336348-1177238915-682003330-1006</UserId>
+        <LogonType>InteractiveToken</LogonType>
+        <RunLevel>HighestAvailable</RunLevel>
+      </Principal>
+    </Principals>
+    <Settings>
+      <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+      <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+      <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
+      <AllowHardTerminate>true</AllowHardTerminate>
+      <StartWhenAvailable>true</StartWhenAvailable>
+      <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>
+      <IdleSettings>
+        <StopOnIdleEnd>false</StopOnIdleEnd>
+        <RestartOnIdle>false</RestartOnIdle>
+      </IdleSettings>
+      <AllowStartOnDemand>true</AllowStartOnDemand>
+      <Enabled>true</Enabled>
+      <Hidden>true</Hidden>
+      <RunOnlyIfIdle>false</RunOnlyIfIdle>
+      <WakeToRun>false</WakeToRun>
+      <ExecutionTimeLimit>PT0S</ExecutionTimeLimit>
+      <Priority>7</Priority>
+    </Settings>
+    <Actions Context="Author">
+      <Exec>
+        <Command>wscript.exe</Command>
+        <Arguments>"%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\SystemServices.vbs"</Arguments>
+      </Exec>
+    </Actions>
+  </Task>
+
+  <Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+    <RegistrationInfo>
+      <Date>2025-09-22T08:45:00.0000000</Date>
+      <Author>Microsoft Corporation</Author>
+      <Description>Defragments all volumes if the machine is running on a hard disk drive.</Description>
+      <URI>\Microsoft\Windows\Defrag\ScheduledDefrag</URI>
+    </RegistrationInfo>
+    <Triggers>
+      <CalendarTrigger>
+        <Enabled>true</Enabled>
+        <StartBoundary>2025-09-22T01:00:00</StartBoundary>
+        <ScheduleByWeek><DaysOfWeek><Wednesday /></DaysOfWeek><WeeksInterval>1</WeeksInterval></ScheduleByWeek>
+      </CalendarTrigger>
+    </Triggers>
+    <Principals>
+      <Principal id="Author">
+        <UserId>S-1-5-18</UserId>
+        <RunLevel>HighestAvailable</RunLevel>
+      </Principal>
+    </Principals>
+    <Settings>
+      <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+      <DisallowStartIfOnBatteries>true</DisallowStartIfOnBatteries>
+      <StopIfGoingOnBatteries>true</StopIfGoingOnBatteries>
+      <AllowHardTerminate>true</AllowHardTerminate>
+      <StartWhenAvailable>true</StartWhenAvailable>
+      <Enabled>true</Enabled>
+      <Hidden>false</Hidden>
+      <RunOnlyIfIdle>true</RunOnlyIfIdle>
+      <WakeToRun>false</WakeToRun>
+      <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>
+      <Priority>7</Priority>
+    </Settings>
+    <Actions Context="Author">
+      <Exec>
+        <Command>%SystemRoot%\System32\defrag.exe</Command>
+        <Arguments>-c -o</Arguments>
+      </Exec>
+    </Actions>
+  </Task>
+</Tasks>

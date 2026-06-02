@@ -1,0 +1,23 @@
+dn: olcDatabase={1}mdb,cn=config
+changetype: modify
+replace: olcAccess
+olcAccess: {0}to attrs=userPassword
+  by self write
+  by anonymous auth
+  by dn.base="cn=admin,dc=ctf,dc=local" write
+  by * none
+olcAccess: {1}to attrs=shadowLastChange
+  by self write
+  by dn.base="cn=admin,dc=ctf,dc=local" write
+  by * none
+# Root DSE is readable
+olcAccess: {2}to dn.base=""
+  by * read
+# Make the BASE entry itself visible to anonymous (prevents "No such object")
+olcAccess: {3}to dn.base="dc=ctf,dc=local"
+  by dn.base="cn=admin,dc=ctf,dc=local" write
+  by * read
+# Everything under the suffix is world-readable; admin can write
+olcAccess: {4}to dn.subtree="dc=ctf,dc=local"
+  by dn.base="cn=admin,dc=ctf,dc=local" write
+  by * read

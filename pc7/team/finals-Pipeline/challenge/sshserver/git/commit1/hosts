@@ -1,0 +1,5 @@
+gitlab.devops.local
+
+[fileservers]
+devtools.devops.local
+opstools.devops.local

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="grid">
+    <div class="card" style="grid-column: span 7">
+      <h2>Maintenance State</h2>
+      <div class="kv mono">
+        <div class="k">Trailer</div><div>{{ trailer }}</div>
+        <div class="k">Maintenance</div>
+        <div>
+          {% if unlocked %}
+            <span class="ok">UNLOCKED</span>
+          {% else %}
+            <span class="warn">LOCKED</span>
+          {% endif %}
+        </div>
+        <div class="k">Authorization</div>
+        <div>
+          {% if released %}
+            <span class="ok">RELEASED</span>
+          {% else %}
+            <span class="warn">SEALED</span>
+          {% endif %}
+        </div>
+      </div>
+
+      <p class="small">
+        This unit exposes a maintenance API used during roadside provisioning.
+        Correct maintenance unlock requires <b>two</b> pieces of evidence:
+        a CB-derived code and a custody gate code.
+      </p>
+
+      <h3>Unlock</h3>
+      <pre class="mono">POST /api/v1/unlock
+{"code":"<12-char>","gate_code":"<custody code>"}</pre>
+
+      <h3>Ingest</h3>
+      <pre class="mono">POST /api/v1/ingest
+{"payload_b64":"<base64 bytes>"}</pre>
+
+      <p class="small">
+        If authorization is released, the ingest response will include a wrapped token and a custody signing key.
+      </p>
+    </div>
+
+    <div class="card" style="grid-column: span 5">
+      <h2>Firmware Snapshot</h2>
+      <p class="small">
+        The ingest path uses a vendor library shipped here as <span class="pill mono">libboot.so</span>.
+      </p>
+      <a class="btn" href="/firmware/libboot.so">Download libboot.so</a>
+
+      <p class="small" style="margin-top:12px">
+        Serial console: <span class="pill mono">tcp/2323</span>
+      </p>
+      <pre class="mono">nc eld.local 2323</pre>
+
+      <p class="small">Excessive request rates will be throttled.</p>
+    </div>
+  </div>
+{% endblock %}

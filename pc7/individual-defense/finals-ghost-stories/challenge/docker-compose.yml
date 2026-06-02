@@ -1,0 +1,263 @@
+x-challenge:
+  name: "Operation Ghost Stories"
+  icon: TbGhost
+  summary: >
+    Reconstruct a long-running implant compromise from Sysmon, registry, WMI,
+    and recovered payloads. Enumerate every dead drop, deobfuscate the
+    handler's instructions, and replay the courier-channel activation phrase.
+  description: |
+    # Operation Ghost Stories
+
+    A long-running asset went quiet. The evidence didn't.
+
+    **NICE Work Roles:**
+    - [Incident Response](https://niccs.cisa.gov/tools/nice-framework)
+    - [Digital Forensics](https://niccs.cisa.gov/tools/nice-framework)
+    - [Threat Analysis](https://niccs.cisa.gov/tools/nice-framework)
+
+    ## Background
+
+    Skyloom Aerospace runs classified airframe research for the US Navy out
+    of a Bellevue, WA campus. At 02:17 local, the overnight SOC analyst on
+    console caught a chain of suspicious child processes spawning off
+    `cmd.exe` on an engineering workstation — `eng-bell-04` — followed by a
+    sustained outbound TCP connection to a public tunneling service. By the
+    time the on-call lead pulled the cable at 02:34, the implant had been
+    on the box for an unknown amount of time and had executed at least
+    seventeen distinct PowerShell child commands.
+
+    The host was imaged before reboot. The artifact set on `artifacts.pccc`
+    contains:
+
+    - Sysmon and PowerShell EVTX logs (already shipped to Elasticsearch)
+    - Registry hive exports (`SOFTWARE`, `NTUSER.DAT`)
+    - A WMI repository snapshot and scheduled-task XML exports
+    - Two recovered files: an obfuscated batch script and a Python implant
+    - A PCAP of the outbound C2 traffic
+
+    The implant's behavior reads like classic tradecraft — multiple
+    redundant footholds in case any single one is burned, anti-surveillance
+    checks before talking to its handler, and a challenge-response
+    "activation phrase" before the courier channel will accept commands.
+    The Bureau code-named its 2010 investigation of a similar deep-cover
+    network *Operation Ghost Stories*. Your job is the same one
+    Counterintelligence (CI) had then: identify the asset, walk every
+    dead drop they left behind,
+    recover their handler's instructions, and determine what was passed
+    before the line went dead.
+
+    ## Getting Started
+
+    Use the provided Kali host to investigate. All systems and access
+    details are listed in the **Systems and Tools** table below.
+
+    The artifact server is read-only. The sandbox is the only place you
+    should execute recovered code; do not run `install_obf.bat` or `svc.py`
+    outside it.
+
+    > **Note:** Kibana and its backing log store may take up to 5 minutes
+    > to become available after the challenge starts. The artifact server,
+    > sandbox, and handler are available immediately — begin your
+    > investigation there while the logs finish loading.
+
+    ## Tokens
+
+    Tokens are formatted as `PCCC{GS-T?-????????}`.
+
+    1. **Asset identification.** Recover the SHA256 of the dropper that
+       initiated the compromise. Submit the resulting token.
+    2. **Defensive evasion.** The asset disabled monitoring before deploying
+       the implant. Identify the full PowerShell command used to disable
+       monitoring and submit it to `challenge.pccc`.
+    3. **Dead-drop enumeration.** The asset established multiple
+       independent footholds on the host. Enumerate every one and submit
+       structured evidence (mechanism type + identifier) to
+       `challenge.pccc`. The token is awarded once the full set is verified.
+    4. **Handler's instructions.** The dropper carries an embedded payload
+       that is extracted at runtime via a self-referential routine.
+       Reproduce the extraction in the sandbox and submit the SHA256 of the
+       decoded Python implant.
+    5. **Courier intercept.** The implant authenticates to its handler with
+       a challenge-response. Replicate the activation phrase against
+       `handler.pccc:41243` and recover the token returned by the listener.
+
+    ## Rules
+
+    - All execution of recovered samples must happen inside the sandbox
+      container. The recovered batch script has been declawed (destructive
+      commands replaced with marker strings), but treat it as live malware.
+    - The artifact server is read-only — do not attempt to modify hosted
+      files.
+    - Token 3's grading endpoint rate-limits submissions; structured
+      evidence is required.
+
+    ## Systems and Tools
+
+    | System | URL / Access | Username | Password | Purpose |
+    |---|---|---|---|---|
+    | Kali workstation | Desktop (VNC) | user | password | Primary investigation host |
+    | Challenge progress | `http://challenge.pccc/` | — | — | Token submission, evidence downloads |
+    | Kibana | `http://kibana.pccc:5601` | — | — | Sysmon / PowerShell log search |
+    | Artifact server | `http://artifacts.pccc/` | — | — | Registry hives, WMI snapshot, scheduled-task XML, recovered files, PCAP |
+    | Analysis sandbox | `http://sandbox.pccc:8888` | — | — | Jupyter with Volatility 3, regipy, python-evtx |
+    | Handler channel replay | `tcp://handler.pccc:41243` | — | — | Captured replay of the C2 listener; use for Token 5 |
+
+    ## Note
+
+    Attacking or unauthorized access to `challenge.pccc` is forbidden. You
+    may only use the provided web page to view challenge progress and
+    download any challenge artifacts that are provided.
+  tags:
+    - track:defense
+    - role:incident-response
+    - role:forensics
+    - role:malware-analysis
+    - season:pc7
+    - round:finals
+    - topics:forensics
+    - topics:reverse-engineering
+    - difficulty:hard
+
+  templates:
+    regular-flag: &regular-flag "fake.bothify('PCCC{GS-T?-??##??##}')"
+
+  variables:
+    token1:
+      template: *regular-flag
+      default: &token1 "PCCC{GS-T1-as42cf91}"
+    token2:
+      template: *regular-flag
+      default: &token2 "PCCC{GS-T2-ev87mp34}"
+    token3:
+      template: *regular-flag
+      default: &token3 "PCCC{GS-T3-dr59qk08}"
+    token4:
+      template: *regular-flag
+      default: &token4 "PCCC{GS-T4-pa31vw76}"
+    token5:
+      template: *regular-flag
+      default: &token5 "PCCC{GS-T5-ci64hz23}"
+
+  questions:
+    - name: "Asset Identification"
+      body: "Recover the SHA256 of the dropper that initiated the compromise. Enter the token received from `challenge.pccc` after submitting the correct hash."
+      placeholder: "PCCC{GS-T?-????????}"
+      points: 600
+      answer: *token1
+      max_attempts: 3
+    - name: "Defensive Evasion"
+      body: "Identify the full PowerShell command the asset used to disable monitoring before deploying the implant. Enter the token received from `challenge.pccc` after submitting the answer."
+      placeholder: "PCCC{GS-T?-????????}"
+      points: 600
+      answer: *token2
+      max_attempts: 3
+    - name: "Dead-Drop Enumeration"
+      body: "Enumerate every persistence mechanism the asset established on the host. Submit the full set (mechanism type + identifier) as structured evidence to `challenge.pccc`. The token is released once all entries are verified."
+      placeholder: "PCCC{GS-T?-????????}"
+      points: 1300
+      answer: *token3
+      max_attempts: 3
+    - name: "Handler's Instructions"
+      body: "Reproduce the dropper's self-referential extraction routine inside the sandbox to recover the embedded Python implant. Submit the SHA256 of the decoded payload to `challenge.pccc`."
+      placeholder: "PCCC{GS-T?-????????}"
+      points: 1100
+      answer: *token4
+      max_attempts: 3
+    - name: "Courier Intercept"
+      body: "Replicate the implant's challenge-response activation phrase against the captured handler listener at `handler.pccc:41243`. Recover the token returned on a successful handshake."
+      placeholder: "PCCC{GS-T?-????????}"
+      points: 1400
+      answer: *token5
+      max_attempts: 3
+
+networks:
+  competitor_net:
+    # external: true
+    internal: true   # uncomment for CTF-NG production deployment
+  platform_net:
+    internal: true
+
+services:
+  # Challenge server (prescup) — publishes DNS for *.pccc, hosts evidence
+  # files, surfaces Kali-panel integration, and runs grading for tokens 1-4.
+  # Token 5 is in-band (returned by the c2-replay listener on successful
+  # handshake). Token 3's grading checks structured evidence and rate-limits.
+  challengeserver:
+    build:
+      context: ./grading
+      dockerfile: Dockerfile
+    hostname: challenge.pccc
+    mem_limit: 512m
+    networks:
+      - competitor_net
+      - platform_net
+    cap_add:
+      - NET_ADMIN
+    environment:
+      pc_year: "7"
+      challenge_name: Operation Ghost Stories
+      TOKEN1: *token1
+      TOKEN2: *token2
+      TOKEN3: *token3
+      TOKEN4: *token4
+
+  elasticsearch:
+    build:
+      context: ./log-seeder
+      dockerfile: Dockerfile.elasticsearch
+    hostname: elasticsearch
+    mem_limit: 2g
+    networks:
+      - platform_net
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      xpack.ml.enabled: "false"
+      xpack.monitoring.collection.enabled: "false"
+      cluster.deprecation_indexing.enabled: "false"
+      ingest.geoip.downloader.enabled: "false"
+      ES_JAVA_OPTS: "-Xms768m -Xmx768m"
+
+  kibana:
+    build:
+      context: ./log-seeder
+      dockerfile: Dockerfile.kibana
+    hostname: kibana.pccc
+    mem_limit: 768m
+    networks:
+      - competitor_net
+      - platform_net
+    environment:
+      ELASTICSEARCH_HOSTS: "http://elasticsearch:9200"
+      NODE_OPTIONS: "--max-old-space-size=512"
+
+  artifact-server:
+    build:
+      context: ./artifact-server
+      dockerfile: Dockerfile
+    hostname: artifacts.pccc
+    mem_limit: 128m
+    networks:
+      - competitor_net
+
+  sandbox:
+    build:
+      context: ./sandbox
+      dockerfile: Dockerfile
+    hostname: sandbox.pccc
+    mem_limit: 2g
+    networks:
+      - competitor_net
+
+  c2-replay:
+    build:
+      context: ./c2-replay
+      dockerfile: Dockerfile
+    hostname: handler.pccc
+    mem_limit: 64m
+    networks:
+      - competitor_net
+    environment:
+      TOKEN5: *token5
+      HANDLER_PASSWORD: "changeme123"
+      HANDLER_PORT: "41243"

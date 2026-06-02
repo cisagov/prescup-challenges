@@ -1,0 +1,10 @@
+#!/bin/bash
+# Optic instrumented netstat: basic wrapper
+
+if [ -x /bin/netstat ]; then
+  /bin/netstat "$@" 2>/dev/null || true
+else
+  echo "netstat utility not available."
+fi
+
+echo "[optic] network channels nominal."

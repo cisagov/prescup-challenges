@@ -1,0 +1,227 @@
+x-challenge:
+  name: "Pipeline"
+  description: |
+    # Pipeline
+
+    You have made your way into an enemy agency's DevOps network. Compromise their ops stations with our agency's custom backdoor and gain access to their fileserver to analyze their ransomware.
+
+    **NICE Work Roles**
+
+    - [Vulnerability Analysis](https://niccs.cisa.gov/tools/nice-framework/)
+    - [Exploitation Analysis](https://niccs.cisa.gov/tools/nice-framework/)
+
+    **NICE Tasks**
+
+    - [T1359](https://niccs.cisa.gov/tools/nice-framework/): Perform penetration testing
+    - [T1118](https://niccs.cisa.gov/tools/nice-framework/): Identify vulnerabilities
+
+    ## Background
+
+    You belong to a spy agency and have found ssh credentials to a server belonging to an enemy agency's organization. Use the credentials to access the sshserver. Then exploit the agency's CI/CD and automation technologies to work your way deeper into the network and install your agency's custom backdoor on the enemy ops stations. Finally, gain access to their fileserver and extract their malware for further analysis.
+
+    ## Getting Started
+
+    - Use the provided kali machine to login to the `sshserver` with the following creds `user1:password1`.
+    - Examine the `sshserver` to make your way deeper into the network.
+    - Browse to `http://grader` to download `custom_backdoor` and run the grader check when necessary.
+      - `custom_backdoor` can be used to open a bind shell on `port 4444`. This bind shell can be accessed via a simple `nc` connection.
+      - `grader` can be accessed from both the `kali` network and the internal network accessible from `sshserver`.
+    - `/home/user/tf-go-mod/go.mod` is a go module with terraform libraries pre-installed. 
+      - Building with this mod will result in a go binary called `tf-go`.
+
+    ## Tokens
+
+    - Token 1: Survey the `sshserver` for useful information.
+    - Token 2: Compromise the `CI/CD` pipeline to escalate your privileges.
+    - Token 3: Take advantage of the `infra runner (controller)` to extend your access deeper into the network.
+      - The token will be in `/tmp/token3.txt` on the `infra runner`.
+    - Token 4: The `ansibleadm` user periodically runs ansible tasks. Use these tasks to deploy and execute the `custom_backdoor` on managed nodes.
+      - **Important**: Once you have executed `custom_backdoor` on the managed nodes, run the grader check at `http://grader`. Do not modify or remove any pre-existing Ansible tasks. Only append your changes, or the grader check will fail.
+    - Token 5: Gain access to the `fileserver` and extract the `xcryptzor` binary. Analyze the file to find the token.  
+
+
+    ## System and Tool Credentials
+
+    |system/tool|username|password|
+    |-----------|--------|--------|
+    |kali|user|password|
+    |sshserver|user1|password1|
+    |`http://grader`|N/A|N/A|
+
+  icon: "TbBrandGit"
+  summary: |
+    You have made your way into an enemy agency's DevOps network. 
+    Compromise their ops stations with our agency's custom backdoor and gain access to their fileserver to analyze their ransomware.
+  
+  tags:
+    - season:pc7
+    - track:teams
+    - round:finals
+    - role:vulnerability-analysis
+    - role:exploitation-analyst
+    - topics:reverse-engineering
+  variables:
+    token1:
+      template: "fake.bothify('PCCC{Token_in_Vault_#?#?#?}')"
+      default: &token1 "PCCC{Token_in_Vault}"
+    token2:
+      template: "fake.bothify('PCCC{dev_workflow_token_#?#?#?}')"
+      default: &token2 "PCCC{dev_workflow_token}"
+    token3:
+      template: "fake.bothify('PCCC{infra_runner_controller_token_#?#?#?}')"
+      default: &token3 "PCCC{infra_runner_controller_token}"
+    token4:
+      template: "fake.bothify('PCCC{playbook_overwrite_token_#?#?#?}')"
+      default: &token4 "PCCC{playbook_overwrite_token}"
+    token5:
+      template: "fake.bothify('PCCC{crypt_key_token_#?#?#?}')"
+      default: &token5 "PCCC{crypt_key_token}"
+  
+  questions:
+    - name: "Question 1"
+      body: |
+        Survey the `sshserver` for useful information.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 567 #10%
+      answer: *token1
+      max_attempts: 3
+    - name: "Question 2"
+      body: |
+        Compromise the `CI/CD` pipeline to escalate your privileges.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 1134 #20%
+      answer: *token2
+      max_attempts: 3
+    - name: "Question 3"
+      body: |
+        Take advantage of the `infra runner (controller)` to extend your access deeper into the network
+        The token will be in `/tmp/token3.txt` on the infra runner.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 1701 #30%
+      answer: *token3
+      max_attempts: 3
+    - name: "Question 4"
+      body: |
+        The `ansibleadm` user periodically runs ansible tasks. Use these tasks to deploy and execute the `custom_backdoor` on managed nodes.
+        Once you have executed `custom_backdoor` on the managed nodes, run the grader check at `http://grader`. Be sure not to alter any pre-existing ansible tasks or the grader check will fail.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 1134 #20%
+      answer: *token4
+      max_attempts: 3
+    - name: "Question 5"
+      body: |
+        Gain access to the `fileserver` and extract the `xcryptzor` binary. Analyze the file to find the token.
+      placeholder: "PCCC{WORDS_HERE}"
+      points: 1134 #20%
+      answer: *token5
+      max_attempts: 3
+
+
+services:
+  sshserver:
+    build: ./sshserver
+    hostname: sshserver
+    environment:
+      TOKEN1: *token1
+    networks:
+      - competitor_net
+      - lab_net
+
+  gitea:
+    build: ./gitea
+    hostname: gitea
+    mem_limit: 512m
+    environment:
+      # Admin/user bootstrap
+      ADMIN_USER: "root"
+      ADMIN_PASS: "2214ee7c0356b287bbe4c6ba3401241f"
+      ADMIN_EMAIL: "root@devops.local"
+
+      TEST_USER: "test-user"
+      TEST_PASS: "gityourmoneyup"
+      TEST_EMAIL: "test-user@devops.local"
+
+      DEV_USER: "dev-user"
+      DEV_PASS: "a8e1225c2959bf02578ecc8d0e4a0798"
+      DEV_EMAIL: "dev@devops.local"
+
+      TOKEN2: *token2
+
+      # Gitea server URLs
+      GITEA_ROOT_URL: "http://gitea:8080/"
+      GITEA_SSH_DOMAIN: "gitea"
+      GITEA_SSH_PORT: "22"
+    networks:
+      - lab_net
+
+  git-runner:
+    build: ./git-runner
+    hostname: git-runner
+    environment:
+      GITEA_INSTANCE_URL: "http://gitea:8080"
+      RUNNER_NAME: "shared-runner"
+      RUNNER_LABELS: "shared:host"
+      GITEA_ADMIN_USER: "root"
+      EPHEMERAL: "0"
+    networks:
+      - lab_net
+
+  controller:
+    build: ./controller
+    hostname: controller
+    mem_limit: 1g
+    environment:
+      TOKEN3: *token3
+      GITEA_INSTANCE_URL: "http://gitea:8080"
+      RUNNER_NAME: "controller"
+      RUNNER_LABELS: "infra:host"
+      GITEA_ADMIN_USER: "root"
+      GITEA_REPO: infra
+      EPHEMERAL: "0"
+    networks:
+      - lab_net
+      - ops_net
+
+  ops1:
+    build: ./ops1
+    hostname: ops1
+    networks:
+      - ops_net
+
+  ops2:
+    build: ./ops2
+    hostname: ops2
+    networks:
+      - ops_net
+
+  ops3:
+    build: ./ops3
+    hostname: ops3
+    networks:
+      - ops_net
+
+  fileserver:
+    build: ./fileserver
+    hostname: fileserver
+    environment:
+      TOKEN5: *token5
+    networks:
+      - ops_net
+
+  grader:
+    build: ./grader
+    hostname: grader
+    environment:
+      TOKEN4: *token4
+    networks:
+      - competitor_net
+      - ops_net
+
+networks:
+  competitor_net:
+    internal: true
+    #external: true
+  lab_net:
+    internal: true
+  ops_net:
+    internal: true

@@ -1,0 +1,33 @@
+APP_NAME = Pipeline
+RUN_MODE = prod
+
+[server]
+PROTOCOL           = http
+DOMAIN             = gitea
+ROOT_URL           = http://gitea/
+HTTP_PORT          = 8080
+SSH_DOMAIN         = gitea
+SSH_PORT           = 22
+START_SSH_SERVER   = true
+OFFLINE_MODE       = true
+
+[database]
+DB_TYPE  = sqlite3
+PATH     = /data/gitea/gitea.db
+
+[security]
+INSTALL_LOCK = true
+
+[service]
+DISABLE_REGISTRATION = true
+REQUIRE_SIGNIN_VIEW  = false
+
+[actions]
+ENABLED = true
+
+[indexer]
+REPO_INDEXER_ENABLED = false
+ISSUE_INDEXER_TYPE   = bleve
+
+[lfs]
+START_SERVER = false

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title or "Dispatch" }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="brand">
+        <span class="badge">UP IN SMOKE</span>
+        <div>
+          <div style="font-weight:800;letter-spacing:.02em">Cold Route Dispatch</div>
+          <div class="small">WARNING: Incident Response Uplink Interface · For Internal Use Only</div>
+        </div>
+      </div>
+      <div class="nav">
+        {% if hint_level|int >= 2 %}
+          <a href="/docs">📝 Operator Notes</a>
+        {% endif %}
+        <a href="http://cbhub.local:8080/">📻 CB Hub</a>
+        <a href="http://logistics.local:8443">💻 Logistics Console</a>
+        <a href="http://eld.local:8080/">💽 ELD Console</a>
+      </div>
+    </div>
+
+    <div class="container">
+      {% block content %}{% endblock %}
+      <footer class="small">Nebula Freight Systems — Dispatch Console</footer>
+    </div>
+  </body>
+</html>

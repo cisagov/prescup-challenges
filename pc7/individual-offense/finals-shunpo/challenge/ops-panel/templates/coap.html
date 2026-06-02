@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="panel">
+  <h1>Constrained CoAP Bridge <span class="detail-pill">{{ detail_mode }}</span></h1>
+  <p class="muted">Submit a telemetry namespace CoAP URI, the route key, the bridge ticket, and an HMAC of <code>bridge_ticket|route_key|full target URI</code>.</p>
+
+  <form method="post">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+
+    <label for="target">Target URI</label>
+    <input id="target" name="target" value="{{ target }}" placeholder="coap://sp-coap.ninja/telemetry/pulse?ticket=...&rk=...&ts=...">
+
+    <label for="route_key">Route key</label>
+    <input id="route_key" name="route_key" value="{{ route_key }}">
+
+    <label for="ticket">Bridge ticket</label>
+    <input id="ticket" name="ticket" value="{{ ticket }}">
+
+    <label for="sig">Bridge signature</label>
+    <input id="sig" name="sig" value="{{ sig }}" placeholder="hex HMAC-SHA256 of bridge_ticket|route_key|full target URI">
+
+    <div style="margin-top: 18px;">
+      <button type="submit">Dispatch bridge request</button>
+      <a class="button secondary" href="{{ url_for('dashboard') }}">Back</a>
+    </div>
+  </form>
+
+  {% if detail %}
+  <div class="panel" style="margin-top: 22px;">
+    <h2>Bridge Detail</h2>
+    <pre>{{ detail | tojson(indent=2) }}</pre>
+  </div>
+  {% endif %}
+
+  {% if status_code is not none %}
+  <div class="panel" style="margin-top: 22px;">
+    <h2>Bridge Result</h2>
+    <p>Status: <strong>{{ status_code }}</strong></p>
+    <pre>{{ result }}</pre>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

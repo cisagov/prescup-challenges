@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="feed-header">
+  <div class="feed-title">Emergency camera feed</div>
+  <div class="rec"><span class="rec-dot"></span><span>REC</span></div>
+</div>
+
+<div class="feed-box">
+  <img src="{{ url_for('static', filename=image) }}" alt="Emergency camera feed (fire)" />
+</div>
+
+<div class="meta" aria-label="Time travel metadata">
+  <div class="meta-row">
+    <span>Era</span>
+    <strong>Prehistoric · 12,043 BC</strong>
+  </div>
+  <div class="meta-row">
+    <span>Coordinates</span>
+    <strong>{{ coords }}</strong>
+  </div>
+  <div class="meta-row">
+    <span>Temporal Drift</span>
+    <strong>± 0.003 s</strong>
+  </div>
+</div>
+
+<div class="actions">
+  <a href="/dm" class="btn btn-primary btn-watch w-100">Inter-timensional Chat</a>
+  <a href="/escape" class="btn btn-danger btn-watch w-100">Emergency Time Extract</a>
+</div>
+
+{% endblock %}

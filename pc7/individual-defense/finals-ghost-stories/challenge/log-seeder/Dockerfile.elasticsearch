@@ -1,0 +1,18 @@
+# Elasticsearch — pre-seeded with Sysmon + PowerShell event indices.
+#
+# The data directory is baked in so ES starts with indices already
+# populated. No log-seeder service needed at runtime. This cuts
+# startup from ~5 min (cold ES + bulk ingest) to ~90s (open shards).
+#
+# All x-pack features we don't need are disabled via env vars in
+# compose (the ES Docker entrypoint overwrites elasticsearch.yml,
+# so baked config files don't work — env vars are the only path).
+#
+# To re-seed: run ES locally with security disabled, bulk-load the
+# NDJSON events, docker cp the data directory out, replace es-data-raw/.
+
+FROM docker.elastic.co/elasticsearch/elasticsearch:7.17.29
+
+# Pre-seeded data (sysmon-eng-bell-04 + powershell-eng-bell-04 indices).
+# Ownership must match the elasticsearch user (uid 1000) inside the image.
+COPY --chown=1000:0 es-data-raw/ /usr/share/elasticsearch/data/

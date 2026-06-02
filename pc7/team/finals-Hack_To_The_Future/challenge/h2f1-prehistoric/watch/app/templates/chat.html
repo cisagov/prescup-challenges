@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="watch d-flex flex-column">
+
+    <div class="panel mb-2">
+        <strong>Inter-timensional Chat</strong><br>
+    </div>
+
+    <div id="chatPanel" class="panel chat-scroll mb-2" style="padding: 10px;">
+        <div id="chatList" class="chat">
+            {# messages is expected to be a list of dicts: { username, message } #}
+            {% if messages and messages|length > 0 %}
+                {% for m in messages %}
+                    {% set uname = (m.username if m.username is defined else m["username"]) %}
+                    {% set body  = (m.message  if m.message  is defined else m["message"]) %}
+
+                    {# Force layout: Agent127 on right, everything else on left (Agent404) #}
+                    {% if uname == "Agent127" %}
+                        <div class="msg msg-sent">
+                            <div class="bubble">{{ body }}</div>
+                            <div class="meta">Agent127</div>
+                        </div>
+                    {% else %}
+                        <div class="msg msg-recv">
+                            <div class="bubble">{{ body }}</div>
+                            <div class="meta">Agent404</div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <div class="text-muted" style="padding: 6px 2px;">
+                    No messages yet.
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <form class="panel d-flex gap-2" method="POST" action="/dm">
+        <textarea class="form-control" name="message" rows="2" placeholder="Enter message…" style="resize: none;" required></textarea>
+
+        <button class="btn btn-primary btn-watch" type="submit">Send</button>
+    </form>
+
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(() => {
+  const DM_API_URL = "/dm_api";
+  const chatList = document.getElementById("chatList");
+  const chatPanel = document.getElementById("chatPanel");
+
+  let lastSig = null;
+  let firstRender = true; 
+
+  function escapeHtml(s) {
+    return String(s)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  // Turn URLs into <a> links, but only after escaping everything.
+  function linkifyEscaped(escapedText) {
+    // escapedText is already HTML-escaped; we can safely inject <a> tags around URL substrings.
+    const urlRe = /https?:\/\/[^\s<>"')]+/g;
+    return escapedText.replace(urlRe, (url) => {
+      // url is already escaped-safe (it came from escapedText), but we still use it as both href and label.
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="chat-link">${url}</a>`;
+    });
+  }
+
+  function renderAll(messages) {
+    if (!Array.isArray(messages) || messages.length === 0) {
+      chatList.innerHTML = `<div class="text-muted" style="padding: 6px 2px;">No messages yet.</div>`;
+      return;
+    }
+
+    if (firstRender) {
+      chatPanel.scrollTop = chatPanel.scrollHeight;
+      firstRender = false;
+    }
+
+    let html = "";
+    for (const m of messages) {
+      const uname = (m && (m.username ?? m["username"]) ? String(m.username ?? m["username"]) : "").trim();
+      const body  = (m && (m.message  ?? m["message"])  ? String(m.message  ?? m["message"])  : "");
+
+      const safe = linkifyEscaped(escapeHtml(body)).replaceAll("\n", "<br>");
+
+      if (uname === "Agent127") {
+        html += `
+          <div class="msg msg-sent">
+            <div class="bubble">${safe}</div>
+            <div class="meta">Agent127</div>
+          </div>
+        `;
+      } else {
+        html += `
+          <div class="msg msg-recv">
+            <div class="bubble">${safe}</div>
+            <div class="meta">Agent404</div>
+          </div>
+        `;
+      }
+    }
+    chatList.innerHTML = html;
+  }
+
+  async function refresh() {
+    try {
+      const res = await fetch(DM_API_URL, { credentials: "same-origin" });
+      if (!res.ok) return;
+
+      const data = await res.json();
+
+      const sig = JSON.stringify(data);
+      if (sig === lastSig) return;
+      lastSig = sig;
+
+      const nearBottom = (chatPanel.scrollTop + chatPanel.clientHeight) >= (chatPanel.scrollHeight - 30);
+
+      renderAll(data);
+
+      if (nearBottom) {
+        chatPanel.scrollTop = chatPanel.scrollHeight;
+      }
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  refresh();
+  setInterval(refresh, 30_000);
+})();
+</script>
+{% endblock %}

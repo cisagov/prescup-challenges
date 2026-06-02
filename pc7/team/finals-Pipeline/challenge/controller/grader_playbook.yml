@@ -1,0 +1,22 @@
+- name : Grader Playbook
+  hosts: ops
+  gather_facts: no
+  become: true
+  vars_files:
+    - /opt/playbooks/vault.yml
+  vars:
+    ansible_become_password: "{{ ops_pass }}"
+    ansible_ssh_common_args: "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+  tasks:
+    - name: Send grader script to controller
+      ansible.builtin.copy:
+        src: /home/ansibleadm/md5_grader.sh
+        dest: /tmp/md5_grader.sh
+        mode: '0755'
+    - name: Run grader on each host
+      ansible.builtin.shell: /tmp/md5_grader.sh
+      register: result
+      changed_when: false
+      failed_when: result.rc != 0
+    - name: remove md5_grader.sh
+      ansible.builtin.shell: "rm -f /tmp/md5_grader.sh"

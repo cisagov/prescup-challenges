@@ -1,0 +1,26 @@
+dn: ou=groups,dc=ctf,dc=local
+objectClass: organizationalUnit
+ou: groups
+
+# posix groups for users (optional but useful for sssd mapping)
+dn: cn=users,ou=groups,dc=ctf,dc=local
+objectClass: posixGroup
+cn: users
+gidNumber: 1101
+memberUid: bsmith   
+memberUid: ajennings
+memberUid: jwilliams
+memberUid: etaylor
+memberUid: rjones
+
+dn: cn=admins,ou=groups,dc=ctf,dc=local
+objectClass: posixGroup
+cn: admins
+gidNumber: 1100
+memberUid: admin
+
+dn: cn=causers,ou=groups,dc=ctf,dc=local
+objectClass: posixGroup
+cn: causers
+gidNumber: 1106
+memberUid: causer

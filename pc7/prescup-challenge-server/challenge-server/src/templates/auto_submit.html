@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% set title='challenge.pccc - Automatic Submission' %}
+{% block content %}
+    <div class='center'>
+        <h1>Your submission has been automatically recorded. No further action needed on your part.</h1>
+        <p>Last submission was at {{ submit_time }}</p>
+
+    <!-- This is the Regrade button -->
+    <form action="{{ url_for('home') }}" method="GET">
+        <a id=regrade><button class='btn btn-default' >Re-Grade Challenge</button></a>
+    </form>
+{% endblock %}

@@ -1,0 +1,10 @@
+gitlab.devops.local
+
+[fileservers]
+devtools.devops.local
+opstools.devops.local
+
+[ops-stations]
+ops1.devops.local
+ops2.devops.local
+ops3.devops.local

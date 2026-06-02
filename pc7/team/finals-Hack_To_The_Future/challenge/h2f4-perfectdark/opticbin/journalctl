@@ -1,0 +1,6 @@
+#!/bin/bash
+# Optic journal view shim
+
+echo "-- optic journal relay --"
+echo "[optic] no anomalous security events recorded."
+exit 0

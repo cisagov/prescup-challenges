@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="panel">
+  <h1>Operations Dashboard <span class="detail-pill">response detail: {{ detail_mode }}</span></h1>
+  <p class="muted">Recovered credentials unlock a trusted HTTP maintenance relay and a constrained CoAP bridge. Both require the route key. Signatures are derived from the internal signing material.</p>
+
+  <div class="grid" style="margin-top: 18px;">
+    <div class="panel">
+      <h2>HTTP maintenance relay</h2>
+      <p class="muted">Trusted first hop hosts:</p>
+      <pre>{{ trusted_hosts|join(", ") }}</pre>
+      <p class="muted">The relay follows redirects after the first hop is validated.</p>
+      <a class="button" href="{{ url_for('relay') }}">Open HTTP relay</a>
+    </div>
+    <div class="panel">
+      <h2>Internal brief binding</h2>
+      <p class="muted">Loopback-only service:</p>
+      <pre>http://{{ internal_host }}:{{ internal_port }}/internal/brief?rk=...&ts=...&nonce=...&sig=...</pre>
+      <p class="muted">The internal signature is HMAC-SHA256 over <code>route_key:timestamp:nonce</code>.</p>
+    </div>
+    <div class="panel">
+      <h2>Constrained CoAP bridge</h2>
+      <p class="muted">The bridge accepts telemetry namespace targets and requires a bridge ticket after relay restoration.</p>
+      <a class="button" href="{{ url_for('coap') }}">Open CoAP bridge</a>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:18px;">
+    <h2>Response detail</h2>
+    <p class="muted">Raise response detail when you want redirect chains, signature message formats, and bridge translation metadata reflected in relay responses.</p>
+    <form method="post" action="{{ url_for('detail_mode_toggle') }}">
+      <input type="hidden" name="csrf" value="{{ csrf }}">
+      <input type="hidden" name="next" value="{{ url_for('dashboard') }}">
+      <button type="submit" name="mode" value="standard" class="button secondary">Standard</button>
+      <button type="submit" name="mode" value="extended" class="button warning">Extended</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

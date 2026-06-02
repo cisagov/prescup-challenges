@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% set title='challenge.pccc - Files' %}
+<h2>Download a file</h2>
+
+{% block content %}
+<div class='left'>
+    {% for filename, path in files.items() %}
+        <a href="{{ url_for('.get_file', path=filename) }}">{{filename}}</a><br>
+    {% endfor %}
+</div>
+{% endblock %}

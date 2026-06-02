@@ -1,0 +1,32 @@
+{
+  "export_metadata": {
+    "host": "eng-bell-04",
+    "exported_at": "2026-05-12T03:08:42Z",
+    "extracted_by": "IR triage / Get-WmiObject -Namespace root\\subscription -List",
+    "namespace": "root\\subscription"
+  },
+  "filters": [
+    {
+      "class": "__EventFilter",
+      "name": "WindowsHealthFilter",
+      "event_namespace": "root\\cimv2",
+      "query_language": "WQL",
+      "query": "SELECT * FROM __InstanceModificationEvent WITHIN 60 WHERE TargetInstance ISA 'Win32_PerfFormattedData_PerfOS_System'"
+    }
+  ],
+  "consumers": [
+    {
+      "class": "CommandLineEventConsumer",
+      "name": "WindowsHealthMonitor",
+      "command_line_template": "wscript.exe \"%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\SystemServices.vbs\"",
+      "run_interactively": false
+    }
+  ],
+  "bindings": [
+    {
+      "class": "__FilterToConsumerBinding",
+      "filter": "__EventFilter.Name=\"WindowsHealthFilter\"",
+      "consumer": "CommandLineEventConsumer.Name=\"WindowsHealthMonitor\""
+    }
+  ]
+}
