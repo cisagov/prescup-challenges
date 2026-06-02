@@ -170,7 +170,7 @@ The easiest way to do this will be to just generate our own SSH key, and place t
 
 Next, we need to copy the key over to the server. Copy the contents of the public key either by opening the file manually, or using `xclip`: `cat ~/.ssh/id_ed25519.pub | xclip -selection clipboard`. 
 
-Now, on the reverse shell running on the media workstation, append the key to the authorized list: `echo "Paste_key_here" >> /home/user/.ssh/.authorized_keys`. Note the use of `>>` to append, instead of overwriting.
+Now, on the reverse shell running on the media workstation, append the key to the authorized list: `echo "Paste_key_here" >> /home/user/.ssh/authorized_keys`. Note the use of `>>` to append, instead of overwriting.
 
 You can now use `ssh` to directly connect to the media workstation, either via IP address, or using the hostname: `ssh user@media-workstation.pccc`. Note I will use hostnames where possible to limit needing to change commands to contain the right IP addresses, but when worked through normally, it is more likely IP addresses will be used as extracting the hostnames would require extra work. 
 
