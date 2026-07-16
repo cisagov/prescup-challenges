@@ -1,5 +1,12 @@
 x-challenge:
   name: "The Iron Shell"
+  tags:
+    - season:pc7
+    - track:offense
+    - round:1
+    - role:exploitation-analyst
+    - role:penetration-testing
+    - topics:web
   icon: "TbBrandPowershell"
   description: |
     # The Iron Shell

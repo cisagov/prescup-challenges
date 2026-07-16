@@ -60,7 +60,8 @@ gidNumber: 1101
 homeDirectory: /home/jwilliams
 loginShell: /bin/bash
 mail: jwilliams@ctf.local
-userPassword: {SSHA}j56c72/EbwrRnZjSnm6hY8ahIp9viJNU
+userPassword: {SSHA}3nnoCmhEXqAfx64NKKX54WJqaOqKIu5q
+#userPassword: {SSHA}j56c72/EbwrRnZjSnm6hY8ahIp9viJNU
 
 dn: uid=esmith,ou=people,dc=ctf,dc=local
 objectClass: inetOrgPerson

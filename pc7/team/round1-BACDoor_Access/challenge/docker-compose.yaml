@@ -2,6 +2,13 @@
 x-challenge:
   # Required: Name of the challenge displayed to participants
   name: "BACDoor Access"
+  tags:
+    - season:pc7
+    - track:teams
+    - round:1
+    - role:exploitation-analyst
+    - role:penetration-testing
+    - topics:ics-ot
   
   # Required: Detailed description shown to participants
   summary: |

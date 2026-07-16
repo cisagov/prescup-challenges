@@ -1,5 +1,13 @@
 x-challenge:
   name: "Training Day"
+  tags:
+    - season:pc7
+    - track:defense
+    - round:1
+    - role:forensics
+    - role:defensive-cybersecurity
+    - topics:forensics
+    - topics:reverse-engineering
   description: |
     # Training Day
 

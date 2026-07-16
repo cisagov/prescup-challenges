@@ -1,5 +1,13 @@
 x-challenge:
   name: "Purple Road"
+  tags:
+    - season:pc7
+    - track:teams
+    - round:1
+    - role:exploitation-analyst
+    - role:defensive-cybersecurity
+    - topics:web
+    - topics:forensics
   description: |
     # The Purple Road
 

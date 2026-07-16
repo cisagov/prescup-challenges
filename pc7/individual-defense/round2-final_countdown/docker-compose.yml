@@ -51,12 +51,13 @@ x-challenge:
     url_flag: &url_template "fake.bothify('PCCC{url_??_####}', letters='ABCDEF0123456789')"
 
   tags:
-    - "forensics"
-    - "log-analysis"
-    - "vulnerability-management"
-    - "individual-defense"
-    - "round2"
-    - "pc7"
+    - season:pc7
+    - track:defense
+    - round:2
+    - role:incident-response
+    - role:forensics
+    - role:vulnerability-analysis
+    - topics:forensics
 
   variables:
     

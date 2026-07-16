@@ -1,5 +1,12 @@
 x-challenge:
   name: "Code Osiris"
+  tags:
+    - season:pc7
+    - track:offense
+    - round:1
+    - role:exploitation-analyst
+    - role:penetration-testing
+    - topics:reverse-engineering
   description: |
     # Code Osiris
 

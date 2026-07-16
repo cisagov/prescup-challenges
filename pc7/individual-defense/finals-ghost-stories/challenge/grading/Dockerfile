@@ -1,4 +1,4 @@
-FROM TBD.dkr.ecr.us-east-1.amazonaws.com/pc7/challenge-server
+FROM pccc/challenge-server:base
 
 # Operation Ghost Stories — challenge-server build context.
 # Tokens 1, 2, 4 are awarded by static-answer grading scripts.

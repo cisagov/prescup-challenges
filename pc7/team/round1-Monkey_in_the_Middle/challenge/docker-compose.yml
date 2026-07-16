@@ -2,6 +2,13 @@
 x-challenge:
   # Required: Name of the challenge displayed to participants
   name: "Monkey in the Middle"
+  tags:
+    - season:pc7
+    - track:teams
+    - round:1
+    - role:exploitation-analyst
+    - role:penetration-testing
+    - topics:web
   
   # Required: Detailed description shown to participants
   description: |

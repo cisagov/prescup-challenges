@@ -2,6 +2,13 @@
 x-challenge:
   # Required: Name of the challenge displayed to participants
   name: "Bank On It"
+  tags:
+    - season:pc7
+    - track:offense
+    - round:1
+    - role:exploitation-analyst
+    - role:penetration-testing
+    - topics:web
   
   # Required: Detailed description shown to participants
   description: |

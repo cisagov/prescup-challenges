@@ -57,12 +57,13 @@ x-challenge:
   summary: "Examine flaws, pivot privileges, and extract all four tokens before the digital trail goes cold. Expect protocol oddities and agency-grade misdirection. Good luck, agent." 
 
   tags:
-    - individual-defense
-    - round2
-    - web
-    - forensics
-    - exploitation
-    - pc7
+    - season:pc7
+    - track:defense
+    - round:2
+    - role:forensics
+    - role:exploitation-analyst
+    - topics:web
+    - topics:forensics
     
   variables:
     token1:

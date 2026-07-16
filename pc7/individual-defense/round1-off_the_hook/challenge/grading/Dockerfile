@@ -1,4 +1,4 @@
-FROM TBD.dkr.ecr.us-east-1.amazonaws.com/pc7/challenge-server
+FROM pccc/challenge-server:base
 
 # Install anything you need like installing ssh and adding keys, installing python packages, etc.
 RUN pip install pyyaml requests

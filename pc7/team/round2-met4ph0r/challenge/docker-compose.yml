@@ -77,13 +77,13 @@ x-challenge:
   summary: PeanutCo’s shell has cracked — retrace the breach across its wiki and blog systems before the damage goes fully nuts.
 
   tags:
-    - "web"
-    - "reverse-engineering"
-    - "privilege-escalation"
-    - "medium"
-    - "pc7" 
-    - "round2"
-    - "team"
+    - season:pc7
+    - track:teams
+    - round:2
+    - role:exploitation-analyst
+    - role:penetration-testing
+    - topics:web
+    - topics:reverse-engineering
 
   # Variable definitions
   variables:

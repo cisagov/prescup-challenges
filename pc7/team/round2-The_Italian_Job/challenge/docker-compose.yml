@@ -1,6 +1,14 @@
 x-challenge:
   # Required: Name of the challenge displayed to participants
   name: "The Italian Job"
+  tags:
+    - season:pc7
+    - track:teams
+    - round:2
+    - role:exploitation-analyst
+    - role:penetration-testing
+    - topics:web
+    - topics:ics-ot
   summary: |
     "It is a work of genius. Just think of it. A city in chaos, a smash-and-grab raid, and four million dollars through a traffic jam." Hack into a traffic management center to set up a green-light getaway in this mix up of the 1969 and 2003 movies. 
 

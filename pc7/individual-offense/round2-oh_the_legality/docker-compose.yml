@@ -1,5 +1,12 @@
 x-challenge:
   name: "Oh The Legality"
+  tags:
+    - season:pc7
+    - track:offense
+    - round:2
+    - role:exploitation-analyst
+    - role:penetration-testing
+    - topics:web
   description: |
     # Oh The Legality
 

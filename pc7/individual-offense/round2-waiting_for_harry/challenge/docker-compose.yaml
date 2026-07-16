@@ -55,13 +55,14 @@ x-challenge:
   summary: "We're just sitting here, waiting for Harry"
 
   tags:
-    - individual-offense
-    - round2
-    - web
-    - reverse-engineering
-    - forensics
-    - exploitation
-    - pc7
+    - season:pc7
+    - track:offense
+    - round:2
+    - role:exploitation-analyst
+    - role:vulnerability-analysis
+    - topics:web
+    - topics:reverse-engineering
+    - topics:forensics
     
   variables:
     game:

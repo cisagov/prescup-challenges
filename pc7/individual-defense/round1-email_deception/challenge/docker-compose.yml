@@ -1,5 +1,12 @@
 x-challenge:
   name: "Email Deception"
+  tags:
+    - season:pc7
+    - track:defense
+    - round:1
+    - role:incident-response
+    - role:defensive-cybersecurity
+    - topics:forensics
   icon: "TbMail"
   description: |
     # Email Deception

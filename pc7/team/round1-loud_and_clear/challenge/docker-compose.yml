@@ -1,5 +1,12 @@
 x-challenge:
   name: "Loud and Clear Final"
+  tags:
+    - season:pc7
+    - track:teams
+    - round:1
+    - role:vulnerability-analysis
+    - role:penetration-testing
+    - topics:web
   description: |
     # Loud and Clear
 

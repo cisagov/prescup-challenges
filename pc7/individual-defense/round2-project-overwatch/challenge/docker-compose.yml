@@ -79,10 +79,11 @@ x-challenge:
     flag_5: &flag5_template "fake.bothify('PCCC{fly_??_####}')"
 
   tags:
-    - individual-defense
-    - round2
-    - forensics
-    - pc7
+    - season:pc7
+    - track:defense
+    - round:2
+    - role:forensics
+    - topics:forensics
 
   variables:
     flag_1:
@@ -136,9 +137,8 @@ x-challenge:
 services:
   shadow-target:
     hostname: shadow-target
-    build: 
+    build:
       context: ./shadow-target
-    image: 253388214223.dkr.ecr.us-east-1.amazonaws.com/pc7/z01-round2-project-overwatch-shadow-target
     environment:
       TOKEN1: *flag1_default
       TOKEN2: *flag2_default
@@ -149,9 +149,8 @@ services:
       - target1_net
   
   exfil:
-    build: 
+    build:
       context: ./exfil
-    image: 253388214223.dkr.ecr.us-east-1.amazonaws.com/pc7/z01-round2-project-overwatch-exfil
     hostname: exfil
     environment:
       DST_HOST: shadow-target

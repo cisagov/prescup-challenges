@@ -1,5 +1,12 @@
 x-challenge:
   name: "Arecibo"
+  tags:
+    - season:pc7
+    - track:teams
+    - round:1
+    - role:exploitation-analyst
+    - role:vulnerability-analysis
+    - topics:ics-ot
   description: |
     # Arecibo
 

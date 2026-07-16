@@ -82,14 +82,14 @@ x-challenge:
     A rogue device with nuclear codes. A custom protocol. Four tokens hidden in stateful chaos. Trust nothing — not even the interface.
 
   tags:
-    - "reverse engineering"
-    - "network protocol analysis"
-    - "cryptography"
-    - "timing attack"
-    - "forensics"
-    - "pc7"
-    - "team"
-    - "round2"
+    - season:pc7
+    - track:teams
+    - round:2
+    - role:forensics
+    - role:exploitation-analyst
+    - topics:reverse-engineering
+    - topics:cryptography
+    - topics:forensics
 
   variables:
     token1:

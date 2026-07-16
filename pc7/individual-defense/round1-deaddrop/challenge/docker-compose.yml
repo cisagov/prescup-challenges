@@ -1,5 +1,13 @@
 x-challenge:
   name: "DEAD DROP"
+  tags:
+    - season:pc7
+    - track:defense
+    - round:1
+    - role:forensics
+    - role:incident-response
+    - topics:forensics
+    - topics:cryptography
   description: |
     # DEAD DROP
 

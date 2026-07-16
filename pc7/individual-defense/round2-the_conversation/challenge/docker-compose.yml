@@ -40,13 +40,13 @@ x-challenge:
   summary: "Analyze emails to identify an email with a malicious attachment and reverse-engineer the malware."
 
   tags:
-    - "forensics"
-    - "malware-analysis"
-    - "email-analysis"
-    - "reverse-engineering"
-    - "pc7"
-    - "round2"
-    - "individual-defense"
+    - season:pc7
+    - track:defense
+    - round:2
+    - role:forensics
+    - role:malware-analysis
+    - topics:forensics
+    - topics:reverse-engineering
 
   variables:
     messageId:

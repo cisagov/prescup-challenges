@@ -60,12 +60,12 @@ x-challenge:
     tokenIndex-flag: &tokenIndex-flag_template "fake.bothify('PCCC{Hello_From_The_Devs_####}')"
 
   tags:
-    - individual-offense
-    - round2
-    - forensics
-    - exploitation
-    - web
-    - pc7
+    - season:pc7
+    - track:offense
+    - round:2
+    - role:exploitation-analyst
+    - topics:web
+    - topics:forensics
   
   # # Optional: Variable definitions with templates and defaults
   variables:

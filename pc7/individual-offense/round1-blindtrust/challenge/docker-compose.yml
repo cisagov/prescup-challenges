@@ -1,5 +1,12 @@
 x-challenge:
   name: "Blind Trust"
+  tags:
+    - season:pc7
+    - track:offense
+    - round:1
+    - role:exploitation-analyst
+    - role:vulnerability-analysis
+    - topics:web
   description: |
     # Blind Trust
 

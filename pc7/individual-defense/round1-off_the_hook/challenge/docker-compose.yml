@@ -2,6 +2,13 @@
 x-challenge:
   # Required: Name of the challenge displayed to participants
   name: "Off the Hook"
+  tags:
+    - season:pc7
+    - track:defense
+    - round:1
+    - role:incident-response
+    - role:defensive-cybersecurity
+    - topics:web
   
   # Required: Detailed description shown to participants
   description: |

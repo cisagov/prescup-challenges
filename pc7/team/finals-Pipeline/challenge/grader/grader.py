@@ -12,10 +12,10 @@ HTML_FORM = """
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CTF Grader</title>
+  <title>Grader</title>
 </head>
 <body>
-  <h1>CTF Grader</h1>
+  <h1>Grader</h1>
 
   <br><hr><br>
   <button id="graderBtn" onclick="runCheck('/check')">Run Grader</button>

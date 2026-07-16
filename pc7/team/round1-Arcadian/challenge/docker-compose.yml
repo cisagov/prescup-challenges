@@ -1,5 +1,13 @@
 x-challenge:
   name: "Arcadian"
+  tags:
+    - season:pc7
+    - track:teams
+    - round:1
+    - role:exploitation-analyst
+    - role:vulnerability-analysis
+    - topics:reverse-engineering
+    - topics:cryptography
   description: |
     # Arcadian
 

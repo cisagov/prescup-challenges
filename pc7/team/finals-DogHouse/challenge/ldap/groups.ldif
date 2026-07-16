@@ -7,10 +7,10 @@ dn: cn=users,ou=groups,dc=ctf,dc=local
 objectClass: posixGroup
 cn: users
 gidNumber: 1101
-memberUid: bsmith   
+memberUid: btaylor 
 memberUid: ajennings
 memberUid: jwilliams
-memberUid: etaylor
+memberUid: esmith
 memberUid: rjones
 
 dn: cn=admins,ou=groups,dc=ctf,dc=local

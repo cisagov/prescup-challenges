@@ -42,12 +42,13 @@ x-challenge:
   icon: "TbPlaneTilt"
 
   tags:
-    - "binary-analysis"
-    - "cryptography"
-    - "forensics"
-    - "pc7"
-    - "round2"
-    - "team"
+    - season:pc7
+    - track:teams
+    - round:2
+    - role:forensics
+    - topics:reverse-engineering
+    - topics:cryptography
+    - topics:forensics
 
 
   summary: >
